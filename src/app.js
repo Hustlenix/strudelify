@@ -322,7 +322,7 @@ function openSaveDialog(id) {
       persist();openSaveDialog(id);render();
     },''));
   });
-  $('save-dialog').showModal();
+  if (!$('save-dialog').open) $('save-dialog').showModal();
 }
 function createPlaylist(name) {
   const clean=name.trim().slice(0,48);
@@ -335,6 +335,7 @@ function createPlaylist(name) {
   session.view='playlist:'+p.id;
   persist();render();toast('Playlist created.');
 }
+document.querySelector('.brand').addEventListener('click',event=>{event.preventDefault();session.view='home';session.query='';$('search').value='';render();});
 document.querySelectorAll('[data-view]').forEach(el=>el.addEventListener('click',()=>{
   session.view=el.dataset.view;session.query='';$('search').value='';render();
 }));
@@ -343,7 +344,7 @@ $('search').addEventListener('input',event=>{
   if(session.query.trim()&&session.view==='home')session.view='search';
   render();
 });
-$('add-playlist').addEventListener('click',()=>{$('playlist-name').value='';$('playlist-dialog').showModal();});
+$('add-playlist').addEventListener('click',()=>{session.saveTarget=null;$('playlist-name').value='';$('playlist-dialog').showModal();});
 $('playlist-dialog').addEventListener('close',()=>{if($('playlist-dialog').returnValue==='create')createPlaylist($('playlist-name').value);});
 $('close-save').addEventListener('click',()=>$('save-dialog').close());
 $('import-audio').addEventListener('click',()=>$('local-files').click());
