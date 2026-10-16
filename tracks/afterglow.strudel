@@ -1,0 +1,11 @@
+// A slow, warm loop built for the last light of the day.
+setcps(78/60/4)
+
+$: note("<c3 e3 g3 a3>").slow(2)
+  .s("triangle").lpf(1600).gain(.2).room(.65)
+
+$: note("<c2 ~ g2 ~ a2 ~ f2 ~>")
+  .s("sine").lpf(430).gain(.3)
+
+$: note("~ c4 ~ e4 ~ g4 ~ e4")
+  .s("sine").gain(.14).delay(.25).room(.4)

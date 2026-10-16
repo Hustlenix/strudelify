@@ -1,0 +1,11 @@
+// A gentle repeating shape with room to breathe.
+setcps(68/60/4)
+
+$: note("<a3 c4 e4 g4>").slow(2)
+  .s("sine").lpf(1300).gain(.2).room(.8)
+
+$: note("a2 ~ e3 ~ g2 ~ d3 ~")
+  .s("triangle").lpf(520).gain(.18).room(.6)
+
+$: note("~ e5 ~ ~ c5 ~ b4 ~")
+  .s("triangle").gain(.1).delay(.35).room(.8)

@@ -1,0 +1,11 @@
+// A clipped little synth loop with an offbeat reply.
+setcps(112/60/4)
+
+$: note("c2 ~ ~ c2 ~ g1 ~ ~")
+  .s("sawtooth").lpf(220).gain(.2)
+
+$: note("~ e4 ~ g4 ~ e4 b3 ~")
+  .s("square").lpf(1900).gain(.07).room(.2)
+
+$: note("c5 ~ ~ ~ g4 ~ e4 ~")
+  .s("triangle").gain(.12).delay(.12)

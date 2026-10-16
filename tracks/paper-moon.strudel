@@ -1,0 +1,11 @@
+// Dusty keys and a melody that keeps moving.
+setcps(86/60/4)
+
+$: note("<[d3,f3,a3] [bb2,d3,f3] [g2,bb2,d3] [c3,e3,g3]>")
+  .s("triangle").lpf(1450).gain(.16).room(.55)
+
+$: note("d2 ~ ~ a2 ~ ~ c2 ~")
+  .s("sine").lpf(330).gain(.29)
+
+$: note("a4 ~ f4 ~ d4 f4 ~ c5")
+  .s("sine").gain(.13).room(.7).delay(.2)

@@ -1,0 +1,11 @@
+// A small pulse for the ride across town.
+setcps(104/60/4)
+
+$: note("c2 ~ c2 ~ g1 ~ c2 ~")
+  .s("sine").lpf(180).gain(.34)
+
+$: note("~ g3 ~ ~ ~ g3 ~ d4")
+  .s("triangle").lpf(1200).gain(.18).room(.25)
+
+$: note("c5 ~ e5 g5 ~ e5 ~ d5")
+  .s("square").lpf(2400).gain(.055).delay(.18)
