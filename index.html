@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Strudelify — your listening library, powered by live-coded music.">
+  <title>Strudelify — listen differently</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/@strudel/web@1.0.3" defer></script>
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Strudelify home"><span class="brand-glyph">◉</span><span>strudelify<span class="brand-dot">.</span></span></a>
+      <nav class="main-nav" aria-label="Pages">
+        <button type="button" class="nav-item active" data-view="home" aria-current="page"><span aria-hidden="true">⌂</span> Home</button>
+        <button type="button" class="nav-item" data-view="search"><span aria-hidden="true">⌕</span> Search</button>
+        <button type="button" class="nav-item" data-view="library"><span aria-hidden="true">▤</span> Your library</button>
+        <button type="button" class="nav-item" data-view="liked"><span aria-hidden="true">♡</span> Liked songs</button>
+      </nav>
+      <div class="sidebar-section">
+        <div class="section-eyebrow"><span>YOUR PLAYLISTS</span><button id="add-playlist" type="button" class="icon-button" title="Create playlist" aria-label="Create playlist">＋</button></div>
+        <div id="playlist-nav" class="playlist-nav"></div>
+      </div>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span>Music you can rewrite.</span></div>
+    </aside>
+
+    <main class="main" id="main">
+      <div class="main-topbar">
+        <div class="header-label">THE CODE IS THE MUSIC</div>
+        <label class="search-box" for="search">
+          <span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search songs or artists…" autocomplete="off" aria-label="Search songs or artists">
+          <kbd>/</kbd>
+        </label>
+        <button id="open-queue" class="quiet-button" type="button" aria-controls="queue-drawer">Queue <span aria-hidden="true">≡</span></button>
+      </div>
+      <div class="content">
+        <section id="hero" class="hero" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <div class="kicker">YOUR MUSIC, RECOMPOSED</div>
+            <h1 id="hero-title">Listen to the<br><em>source code.</em></h1>
+            <p>Part music library, part live instrument. Every track is something you can open, play and change.</p>
+            <div class="hero-actions"><button class="primary-button" id="hero-play" type="button">▶ &nbsp; Play a study</button><button class="outline-button" id="hero-code" type="button">{ } &nbsp; Explore code</button></div>
+          </div>
+          <div class="hero-art" aria-hidden="true"><div class="record"><span class="record-inner"><span class="record-core">s.</span></span></div></div>
+        </section>
+
+        <section class="collection" aria-label="Your songs">
+          <div class="collection-heading">
+            <div><div class="kicker" id="view-kicker">YOUR STARTING POINT</div><h2 id="view-title">Made for your ears</h2><p class="section-subtitle" id="view-subtitle">Eight instrumental studies. Your original reference files stay on your device.</p></div>
+            <button id="import-audio" class="outline-button small" type="button">↥ &nbsp; Add local recordings</button>
+            <input id="local-files" type="file" accept="audio/*,.mp3" multiple hidden>
+          </div>
+          <div class="playlist-cards" id="playlist-cards"></div>
+          <div class="table-wrap">
+            <table class="track-table">
+              <thead><tr><th class="number-col">#</th><th>Title</th><th class="genre-col">Sound</th><th class="tempo-col">BPM</th><th class="options-col">Actions</th></tr></thead>
+              <tbody id="tracks"></tbody>
+            </table>
+            <div id="no-results" class="empty hidden">Nothing matches that search. Try another artist or title.</div>
+          </div>
+        </section>
+        <footer class="site-footer">An independent project. Not affiliated with Spotify or Strudel. <a href="https://strudel.cc/" target="_blank" rel="noreferrer">Powered by Strudel ↗</a> · <a href="https://github.com/Hustlenix/strudelify" target="_blank" rel="noreferrer">Source code ↗</a></footer>
+      </div>
+    </main>
+
+    <aside class="studio" id="studio" aria-label="Code studio">
+      <div class="studio-header"><div><span class="kicker">UNDER THE HOOD</span><h2>Live code studio</h2></div><button id="close-studio" class="icon-button" type="button" aria-label="Close code studio">✕</button></div>
+      <p class="studio-caption" id="studio-track">Select a track to inspect its arrangement.</p>
+      <div class="studio-meta"><span class="study-pill">INSTRUMENTAL STUDY</span><span id="studio-bpm"></span></div>
+      <label class="sr-only" for="code-editor">Strudel source code</label>
+      <textarea id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editable Strudel source code"></textarea>
+      <div class="studio-actions"><button type="button" id="run-code" class="primary-button">▶ Run code</button><button type="button" id="copy-code" class="outline-button small">Copy</button><button type="button" id="reset-code" class="outline-button small">Reset</button></div>
+      <a id="open-strudel" class="studio-link" href="https://strudel.cc/" target="_blank" rel="noreferrer">Open this pattern in Strudel ↗</a>
+      <p class="help-text">These are original sketches, not verified note-for-note transcriptions or the original vocals. Running code needs internet access.</p>
+    </aside>
+
+    <aside class="drawer hidden" id="queue-drawer" aria-label="Play queue">
+      <div class="drawer-title"><h2>Up next</h2><button type="button" class="icon-button" id="close-queue" aria-label="Close queue">✕</button></div>
+      <div id="queue-items"></div>
+    </aside>
+  </div>
+
+  <footer class="player" aria-label="Music player">
+    <div class="now-playing"><div class="mini-cover" id="current-cover" aria-hidden="true">◉</div><div class="now-text"><strong id="current-title">Choose a song</strong><span id="current-artist">Your listening starts here</span></div><button type="button" id="like-current" class="icon-button heart" title="Like track" aria-label="Like current track">♡</button></div>
+    <div class="transport"><div class="transport-actions"><button type="button" class="icon-button" id="shuffle" title="Shuffle" aria-label="Toggle shuffle">⇄</button><button type="button" class="icon-button" id="previous" title="Previous track" aria-label="Previous track">⏮</button><button type="button" class="play-button" id="play" aria-label="Play">▶</button><button type="button" class="icon-button" id="next" title="Next track" aria-label="Next track">⏭</button><button type="button" class="icon-button" id="repeat" title="Repeat" aria-label="Toggle repeat">↻</button></div>
+    <div class="progress-row"><span id="elapsed">LIVE</span><div class="progress-track" aria-hidden="true"><div id="progress-fill"></div></div><span id="duration">∞</span></div></div>
+    <div class="player-tools"><label class="mode-select">Source <select id="source-mode" aria-label="Playback source"><option value="strudel">Strudel</option><option value="local">Local file</option></select></label><button type="button" id="toggle-studio" class="code-toggle">⌘ &nbsp; Code</button><label class="volume" title="Local-file volume only"><span aria-hidden="true">◖</span><input id="volume" aria-label="Local file volume" type="range" min="0" max="100" value="65"></label></div>
+  </footer>
+
+  <dialog id="playlist-dialog" aria-labelledby="playlist-dialog-title"><form method="dialog"><h2 id="playlist-dialog-title">Create playlist</h2><p>Give your collection a name.</p><label for="playlist-name">Playlist name</label><input id="playlist-name" name="playlist-name" maxlength="48" required placeholder="Late night loops"><div class="dialog-actions"><button value="cancel" type="submit" class="outline-button small">Cancel</button><button value="create" type="submit" class="primary-button">Create</button></div></form></dialog>
+  <dialog id="save-dialog" aria-labelledby="save-dialog-title"><div><h2 id="save-dialog-title">Add to playlist</h2><div id="save-list"></div><button type="button" id="close-save" class="outline-button small">Done</button></div></dialog>
+  <audio id="local-player" preload="metadata"></audio>
+  <div role="status" aria-live="polite" class="toast" id="toast"></div>
+</body>
+</html>
