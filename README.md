@@ -22,13 +22,21 @@ GitHub Pages can host the same files directly. There is no build step, framework
 
 Strudelify also has a **Create track** editor. Saved patterns are kept in this browser's local storage.
 
-## What works in this first version
+## Interface and features
+
+The interface follows the measured layout reference in [design.md](design.md): a 64px global navigation bar, a resizable library, independently scrolling content shelves, and a 72px desktop player. The original vector covers in `assets/covers/` are included locally.
 
 - Browse and search a small demo library.
 - Play and stop Strudel compositions with the shared bottom player.
 - Inspect, edit, copy, and save patterns.
 - Save custom tracks and liked songs in local browser storage.
 - Responsive layout for desktop and mobile.
+- Collapse the library or resize it with the separator (drag, or use Left/Right arrow keys).
+- Browse live search suggestions, recent listening, and tracks made on this device.
+- Open the play queue and choose another pattern.
+- View track details, disclose the source code, and copy it from the options menu.
+
+The phone layout uses bottom navigation and a compact player. Live patterns have no fixed duration, so the transport displays live playback status instead of a simulated seek bar.
 
 This is a music player for live-generated Strudel patterns. It does not stream commercial recordings or use Spotify's catalog.
 

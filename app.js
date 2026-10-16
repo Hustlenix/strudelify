@@ -34,6 +34,14 @@ const state = {
 };
 let enginePromise;
 const codeCache = new Map();
+const coverNames = ['afterglow', 'greenline', 'paper-moon', 'soft-focus', 'tiny-hours', 'wide-awake'];
+function icon(name) {
+  const filled = ['play', 'pause', 'stop', 'previous', 'next'].includes(name);
+  return `<svg class="icon${filled ? ' fill' : ''}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+}
+function coverUrl(track) { return `assets/covers/${coverNames[((track.palette || 1) - 1) % coverNames.length]}.svg`; }
+function coverImage(track) { return `<img src="${coverUrl(track)}" alt="" loading="lazy" decoding="async">`; }
+
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
@@ -52,7 +60,7 @@ function allTracks() { return [...state.custom, ...tracks]; }
 function getTrack(id) { return allTracks().find(track => track.id === id); }
 function artStyle(track) { return `background:${palettes[((track.palette || 1) - 1) % palettes.length]}`; }
 function artMarkup(track, className = 'row-art') {
-  return `<span class="${className}" style="${artStyle(track)}" aria-hidden="true">꩜</span>`;
+  return `<span class="${className}" style="${artStyle(track)}" aria-hidden="true">${coverImage(track)}</span>`;
 }
 function showToast(message) {
   const toast = $('#toast');
@@ -64,7 +72,7 @@ function showToast(message) {
 function setStatus(message, playing = state.playing) {
   $('#playerStatus').textContent = message;
   $('#playerBar').classList.toggle('is-playing', playing);
-  $('#mainPlayButton').textContent = playing ? 'Ⅱ' : '▶';
+  $('#mainPlayButton').innerHTML = icon(playing ? 'pause' : 'play');
   $('#mainPlayButton').setAttribute('aria-label', playing ? 'Stop current pattern' : 'Play current pattern');
   $('#mainPlayButton').title = playing ? 'Stop current pattern' : 'Play current pattern';
 }
@@ -132,69 +140,56 @@ function renderPlayer() {
   const track = state.current;
   $('#nowTitle').textContent = track?.title || 'Choose a track';
   $('#nowArtist').textContent = track?.artist || 'Your next loop is waiting';
-  $('#playerArt').style.background = track ? palettes[((track.palette || 1) - 1) % palettes.length] : palettes[0];
+  $('#playerArt').innerHTML = coverImage(track || tracks[0]);
   $('#likeButton').disabled = !track;
   $('#likeButton').classList.toggle('liked', !!track && state.liked.includes(track.id));
-  $('#likeButton').textContent = track && state.liked.includes(track.id) ? '♥' : '♡';
+  $('#likeButton').innerHTML = icon('heart');
   $('#codeButton').disabled = !track;
+  renderQueue();
   $('#mainPlayButton').disabled = !track || state.loading;
   setStatus(state.loading ? 'Waking the synth…' : state.playing ? 'Playing live pattern' : track ? 'Pattern stopped' : 'Ready when you are', state.playing);
 }
 function renderPlaylistNav() {
-  const items = [
-    { name: 'All patterns', symbol: '▧', filter: '' },
-    ...groups.map(group => ({ name: group.name, symbol: group.symbol, filter: group.name })),
-    { name: 'Liked tracks', symbol: '♡', liked: true },
-  ];
-  $('#playlistList').innerHTML = items.map((item, index) => `
-    <button class="playlist-link" data-group="${escapeHtml(item.filter || '')}" data-liked-nav="${item.liked ? 'true' : 'false'}">
-      <span class="playlist-art" style="background:${item.liked ? 'linear-gradient(140deg,#7da86e,#394c38)' : palettes[(index + 1) % palettes.length]}">${escapeHtml(item.symbol)}</span>
-      <span>${escapeHtml(item.name)}</span>
-    </button>`).join('');
+  const items = [{ name: 'All patterns', filter: '', palette: 1 }, ...groups.map(g => ({...g, filter:g.name})), {name:'Liked tracks', liked:true, palette:3}];
+  $('#playlistList').innerHTML = items.map(item => `<button class="playlist-link" data-group="${escapeHtml(item.filter || '')}" data-liked-nav="${!!item.liked}" title="${escapeHtml(item.name)}"><span class="playlist-art" style="background:#45337d">${item.liked ? icon('heart') : coverImage(item)}</span><span class="playlist-copy"><strong>${escapeHtml(item.name)}</strong><small>${item.liked ? 'Collection · Saved by you' : 'Collection · Strudelify'}</small></span></button>`).join('');
 }
 function rowMarkup(track, index) {
   const active = state.current?.id === track.id;
   const liked = state.liked.includes(track.id);
   return `<div class="track-row${active && state.playing ? ' playing' : ''}" data-track-id="${escapeHtml(track.id)}">
     <span class="row-number">${String(index + 1).padStart(2, '0')}</span>
-    <button class="row-play" data-action="play" aria-label="${active && state.playing ? 'Stop' : 'Play'} ${escapeHtml(track.title)}">${active && state.playing ? 'Ⅱ' : '▶'}</button>
+    <button class="row-play" data-action="play" aria-label="${active && state.playing ? 'Stop' : 'Play'} ${escapeHtml(track.title)}">${icon(active && state.playing ? 'pause' : 'play')}</button>
     <div class="row-track" data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}">
       ${artMarkup(track)}<span class="row-title"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.artist)}</span></span>
     </div>
     <span class="row-mood">${escapeHtml(track.mood || (track.created ? 'Your pattern' : 'Live-coded'))}</span>
     <span class="row-loop">${escapeHtml(track.loop || '∞ loop')}</span>
-    <button class="row-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${liked ? '♥' : '♡'}</button>
+    <button class="row-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${icon('heart')}</button>
   </div>`;
-}
-function quickPickMarkup(track) {
-  return `<button class="quick-pick" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">
-    ${artMarkup(track, 'quick-pick-art')}<span class="quick-pick-copy"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.artist)}</span></span>
-    <span class="quick-pick-play" aria-hidden="true">▶</span></button>`;
 }
 function cardMarkup(track) {
   const liked = state.liked.includes(track.id);
   return `<article class="track-card" data-track-id="${escapeHtml(track.id)}">
-    <button class="card-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${liked ? '♥' : '♡'}</button>
-    <div class="track-card-art" style="${artStyle(track)}" data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}">꩜</div>
-    <button class="card-play" data-action="play" aria-label="Play ${escapeHtml(track.title)}">▶</button>
-    <div class="track-card-copy" data-action="open" role="button" tabindex="0"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.artist)}</span><p>${escapeHtml(track.mood || 'Your own live-coded pattern')}</p></div>
+    <button class="card-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${icon('heart')}</button>
+    <div data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}">${artMarkup(track, 'track-card-art')}</div>
+    <button class="card-play" data-action="play" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button>
+    <div class="track-card-copy" data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.mood || track.artist)}</span></div>
   </article>`;
 }
+let homeFilter = 'all';
 function renderHome() {
-  const hour = new Date().getHours();
-  $('#greetingTitle').textContent = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
-  const recentTracks = state.recent.map(getTrack).filter(Boolean);
-  const quickPicks = [...new Map([...recentTracks, ...allTracks()].map(track => [track.id, track])).values()].slice(0, 6);
-  $('#quickPickGrid').innerHTML = quickPicks.map(quickPickMarkup).join('');
-  $('#quickPicksEyebrow').textContent = recentTracks.length ? 'Your recent listening' : 'A few places to start';
-  $('#quickPicksTitle').textContent = recentTracks.length ? 'Jump back in' : 'Quick picks';
-  $('#featureGrid').innerHTML = groups.map(group => `
-    <button class="feature-card" data-group="${escapeHtml(group.name)}" aria-label="Play ${escapeHtml(group.name)} collection">
-      <span class="feature-art" style="background:${palettes[group.palette - 1]}">${escapeHtml(group.symbol)}</span>
-      <span class="feature-info"><strong>${escapeHtml(group.name)}</strong><span>${escapeHtml(group.note)}</span></span>
-      <span class="feature-play">▶</span>
-    </button>`).join('');
+  const recent = state.recent.map(getTrack).filter(Boolean);
+  const list = homeFilter === 'created' ? state.custom : homeFilter === 'recent' ? recent : [...new Map([...recent, ...allTracks()].map(t => [t.id,t])).values()];
+  $('#quickPicksTitle').textContent = homeFilter === 'created' ? 'Made by you' : homeFilter === 'recent' || recent.length ? 'Jump back in' : 'Start listening';
+  $('#quickPickGrid').innerHTML = list.slice(0,8).map(cardMarkup).join('');
+  $('#emptyHome').classList.toggle('hidden', list.length > 0);
+  $('#gettingStarted').classList.toggle('hidden', homeFilter !== 'all');
+  $('#homeTop').classList.toggle('single-shelf', homeFilter !== 'all');
+  $('#featureGrid').innerHTML = groups.map(group => `<button class="feature-card" data-group="${escapeHtml(group.name)}" aria-label="Browse ${escapeHtml(group.name)} collection"><span class="feature-art">${coverImage(group)}</span><span class="feature-info"><strong>${escapeHtml(group.name)}</strong><span>${escapeHtml(group.note)}</span></span><span class="feature-play" aria-hidden="true">${icon('play')}</span></button>`).join('');
   $('#homeTrackList').innerHTML = allTracks().map(rowMarkup).join('');
+}
+function renderQueue() {
+  $('#queueList').innerHTML = allTracks().map(track => `<button class="queue-track" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${artMarkup(track)}<span style="${state.current?.id === track.id ? 'color:var(--accent)' : ''}">${escapeHtml(track.title)}<small>${escapeHtml(track.artist)}</small></span></button>`).join('');
 }
 function searchResults(query = '', group = '') {
   const normalized = query.trim().toLowerCase();
@@ -232,7 +227,9 @@ function setView(name, push = true) {
   for (const view of views) $(`#${view}View`).classList.toggle('hidden', view !== name);
   $$('.nav-link').forEach(button => button.classList.toggle('active', button.dataset.view === (name === 'track' ? 'library' : name)));
   if (push && location.hash !== `#${name}`) history.pushState({ view: name }, '', `#${name}`);
-  if (name === 'search') { renderSearch(); }
+  $('#homeFilters').classList.toggle('hidden', name !== 'home');
+  hideSuggestions();
+  if (name === 'search') { renderSearch(); $('#searchInput').focus({preventScroll:true}); }
   if (name === 'library') renderLibrary();
   $('#mainArea').scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -240,14 +237,11 @@ async function openTrack(id) {
   const track = getTrack(id);
   if (!track) return;
   setView('track');
-  const detail = $('#trackDetail');
-  detail.innerHTML = `<div class="detail-hero">
-    <div class="detail-art" style="${artStyle(track)}">꩜</div>
-    <div class="detail-copy"><div class="eyebrow">Live-coded pattern</div><h1>${escapeHtml(track.title)}</h1><p>${escapeHtml(track.artist)} · ${escapeHtml(track.mood || 'Your own pattern')} · ${escapeHtml(track.loop || '∞ loop')}</p>
-    <button class="button button-primary" data-action="play" data-track-id="${escapeHtml(track.id)}">▶ Play pattern</button>
-    <button class="button button-quiet" data-action="copy" data-track-id="${escapeHtml(track.id)}">Copy code</button></div>
-  </div><section class="section-block"><div class="section-heading"><div><div class="eyebrow">The instrument is the source</div><h2>Strudel code</h2></div></div>
-    <div class="code-panel"><div class="code-panel-heading"><span>${escapeHtml(track.id)}.strudel</span><span>LIVE PATTERN</span></div><pre id="detailCode">Loading the pattern…</pre></div></section>`;
+  history.replaceState({view:'track', trackId:id}, '', '#track');
+  $('#trackDetail').innerHTML = `<div class="detail-hero">${artMarkup(track,'detail-art')}<div class="detail-copy"><div class="eyebrow">Live-coded pattern</div><h1>${escapeHtml(track.title)}</h1><p><strong>${escapeHtml(track.artist)}</strong> · ${escapeHtml(track.mood || 'Your pattern')} · ${escapeHtml(track.loop || 'Infinite loop')}</p></div></div>
+  <div class="detail-actions"><button class="detail-play" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button><button class="icon-button${state.liked.includes(track.id) ? ' liked' : ''}" data-action="like" data-track-id="${escapeHtml(track.id)}" aria-label="Like ${escapeHtml(track.title)}">${icon('heart')}</button><button class="button button-quiet" data-show-code>View code</button><div style="position:relative"><button class="icon-button" data-track-menu aria-label="More options" aria-expanded="false">${icon('more')}</button><div class="detail-menu hidden" role="menu"><button role="menuitem" data-action="copy" data-track-id="${escapeHtml(track.id)}">Copy Strudel code</button></div></div></div>
+  <details class="code-details" id="patternCode"><summary>Inside the pattern</summary><div class="code-panel"><div class="code-panel-heading"><span>${escapeHtml(track.id)}.strudel</span><span>LIVE PATTERN</span></div><pre id="detailCode">Loading pattern…</pre></div></details>
+  <section class="section-block"><div class="section-heading"><h2>More to discover</h2></div><div class="shelf-grid">${allTracks().filter(t=>t.id!==track.id).map(cardMarkup).join('')}</div></section>`;
   try { $('#detailCode').textContent = await getCode(track); }
   catch (error) { $('#detailCode').textContent = error.message; }
 }
@@ -289,7 +283,14 @@ function handleAction(event) {
   const id = actionTarget.dataset.trackId || actionTarget.closest('[data-track-id]')?.dataset.trackId;
   const track = getTrack(id);
   if (actionTarget.dataset.action === 'play') { event.stopPropagation(); playTrack(track); }
-  else if (actionTarget.dataset.action === 'like') { event.stopPropagation(); likeTrack(track); }
+  else if (actionTarget.dataset.action === 'like') {
+    event.stopPropagation(); likeTrack(track);
+    if (track) {
+      const liked = state.liked.includes(track.id);
+      actionTarget.classList.toggle('liked', liked);
+      actionTarget.setAttribute('aria-label', `${liked ? 'Unlike' : 'Like'} ${track.title}`);
+    }
+  }
   else if (actionTarget.dataset.action === 'open' && track) openTrack(track.id);
   else if (actionTarget.dataset.action === 'copy' && track) copyTrackCode(track);
 }
@@ -298,7 +299,7 @@ document.addEventListener('click', event => {
   const viewButton = event.target.closest('[data-view]');
   if (viewButton) { setView(viewButton.dataset.view); return; }
   const likedNavigation = event.target.closest('[data-liked-nav="true"]');
-  if (likedNavigation) { state.libraryFilter = 'liked'; $$('.filter-chip').forEach(item => { const active = item.dataset.libraryFilter === 'liked'; item.classList.toggle('selected', active); item.setAttribute('aria-selected', String(active)); }); setView('library'); return; }
+  if (likedNavigation) { state.libraryFilter = 'liked'; $$('[data-library-filter]').forEach(item => { const active = item.dataset.libraryFilter === 'liked'; item.classList.toggle('selected', active); item.setAttribute('aria-selected', String(active)); }); setView('library'); return; }
   const groupButton = event.target.closest('[data-group]');
   if (groupButton) {
     state.groupFilter = groupButton.dataset.group || '';
@@ -310,10 +311,11 @@ document.addEventListener('click', event => {
   handleAction(event);
 });
 document.addEventListener('keydown', event => {
-  if (event.key === 'Enter' && event.target.matches('[data-action="open"]')) {
+  if (['Enter', ' '].includes(event.key) && event.target.matches('[data-action="open"]')) {
     event.preventDefault();
     const id = event.target.closest('[data-track-id]')?.dataset.trackId;
     if (id) openTrack(id);
+    return;
   }
   if (event.key === '/' && !/input|textarea/i.test(document.activeElement.tagName) && !$('#editorDialog').open) {
     event.preventDefault(); setView('search'); $('#searchInput').focus();
@@ -328,11 +330,13 @@ $('#searchInput').addEventListener('input', event => {
   state.groupFilter = '';
   setView('search');
   renderSearch();
+  showSuggestions();
 });
 $('#searchPageInput').addEventListener('input', () => { $('#searchInput').value = $('#searchPageInput').value; state.groupFilter = ''; renderSearch(); });
 $('#newTrackButton').addEventListener('click', () => openEditor());
 $('#libraryCreateButton').addEventListener('click', () => openEditor());
 $('#heroPlayButton').addEventListener('click', () => playRandom());
+$('#starterPlayButton').addEventListener('click', () => playRandom());
 $('#mainPlayButton').addEventListener('click', () => state.playing ? stopTrack() : state.current ? playTrack(state.current) : playRandom());
 $('#stopButton').addEventListener('click', stopTrack);
 $('#previousButton').addEventListener('click', () => {
@@ -345,7 +349,7 @@ $('#nextButton').addEventListener('click', () => {
 });
 $('#shuffleButton').addEventListener('click', () => { $('#shuffleButton').classList.toggle('active'); playRandom(); });
 $('#likeButton').addEventListener('click', () => likeTrack(state.current));
-$('#codeButton').addEventListener('click', () => state.current && openTrack(state.current.id));
+$('#codeButton').addEventListener('click', async () => { if(state.current) { await openTrack(state.current.id); $('#patternCode').open=true; } });
 $('#trackBackButton').addEventListener('click', () => setView('search'));
 $('#backButton').addEventListener('click', () => history.back());
 $('#forwardButton').addEventListener('click', () => history.forward());
@@ -381,10 +385,47 @@ $('#editorForm').addEventListener('submit', event => {
 $('#editorDialog').addEventListener('close', () => {
   if ($('#editorDialog').returnValue !== 'save' && !state.playing && window.hush) window.hush();
 });
-window.addEventListener('popstate', event => setView(event.state?.view || location.hash.slice(1) || 'home', false));
+window.addEventListener('popstate', event => { if(event.state?.view === 'track' && event.state.trackId) openTrack(event.state.trackId); else setView(event.state?.view || location.hash.slice(1) || 'home', false); });
 
+document.querySelector('a[href="#mainArea"]').addEventListener('click', event => { event.preventDefault(); $('#mainArea').focus(); });
+document.addEventListener('keydown', event => { if(event.key==='Escape'){hideSuggestions();$$('.detail-menu').forEach(menu=>menu.classList.add('hidden'));$$('[data-track-menu]').forEach(button=>button.setAttribute('aria-expanded','false'));} });
+document.querySelector('[data-close-editor]').addEventListener('click', () => $('#editorDialog').close('cancel'));
+$('#createHeaderButton').addEventListener('click', () => openEditor());
+$('#librarySearchButton').addEventListener('click', () => { setView('search'); $('#searchInput').focus(); });
+$('#clearSearchButton').addEventListener('click', () => { $('#searchInput').value=''; $('#searchPageInput').value=''; renderSearch(); hideSuggestions(); $('#clearSearchButton').classList.add('hidden'); $('#searchInput').focus(); });
+$$('[data-home-filter]').forEach(button => button.addEventListener('click', () => { homeFilter=button.dataset.homeFilter; $$('[data-home-filter]').forEach(b=>{b.classList.toggle('selected',b===button); b.setAttribute('aria-pressed',String(b===button));}); renderHome(); }));
+$$('[data-toggle-queue]').forEach(button=>button.addEventListener('click',()=>{ const open=$('#appShell').classList.toggle('queue-open'); $$('[data-toggle-queue]').forEach(b=>b.setAttribute('aria-expanded',String(open))); }));
+$('#collapseSidebarButton').addEventListener('click',()=>{ const collapsed=$('#appShell').classList.toggle('library-collapsed'); $('#appShell').style.removeProperty('--library-width'); const label=collapsed?'Expand your library':'Collapse your library'; $('#collapseSidebarButton').setAttribute('aria-expanded',String(!collapsed)); $('#collapseSidebarButton').setAttribute('aria-label',label); $('#collapseSidebarButton').title=label; });
+let libraryWidth = 280;
+const resizer=$('#libraryResizer');
+function resizeLibrary(width) { libraryWidth=Math.max(220,Math.min(420,width)); $('#appShell').classList.remove('library-collapsed'); $('#appShell').style.setProperty('--library-width',libraryWidth+'px'); resizer.setAttribute('aria-valuenow',String(libraryWidth)); $('#collapseSidebarButton').setAttribute('aria-expanded','true'); $('#collapseSidebarButton').setAttribute('aria-label','Collapse your library'); $('#collapseSidebarButton').title='Collapse your library'; }
+resizer.addEventListener('pointerdown',e=>{ if(e.button!==0)return; resizer.setPointerCapture(e.pointerId); resizer.dataset.dragging='true'; });
+resizer.addEventListener('pointermove',e=>{if(resizer.dataset.dragging==='true')resizeLibrary(e.clientX-8);});
+resizer.addEventListener('pointerup',()=>delete resizer.dataset.dragging);
+resizer.addEventListener('lostpointercapture',()=>delete resizer.dataset.dragging);
+resizer.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();resizeLibrary(libraryWidth+(e.key==='ArrowLeft'?-10:10));}});
+function hideSuggestions(){ $('#searchSuggestions').classList.add('hidden'); $('#searchInput').setAttribute('aria-expanded','false'); }
+function showSuggestions(){
+  const query=$('#searchInput').value.trim();
+  $('#clearSearchButton').classList.toggle('hidden',!query);
+  if(!query){hideSuggestions();return;}
+  const result=searchResults(query).slice(0,5);
+  $('#searchSuggestions').innerHTML='<div class="suggestion-heading">Patterns</div>'+result.map(track=>`<button class="suggestion" data-action="open" data-track-id="${escapeHtml(track.id)}">${artMarkup(track)}<span><strong>${escapeHtml(track.title)}</strong><small>${escapeHtml(track.artist)}</small></span></button>`).join('')+`<button class="suggestion-all" data-view="search">Show all results for “${escapeHtml(query)}”</button>`;
+  $('#searchSuggestions').classList.remove('hidden'); $('#searchInput').setAttribute('aria-expanded','true');
+}
+$('#searchInput').addEventListener('focus',showSuggestions);
+$('#searchInput').addEventListener('keydown',e=>{if(e.key==='Escape')hideSuggestions();if(e.key==='Enter'){hideSuggestions();$('#mainArea').focus();}if(e.key==='ArrowDown'){e.preventDefault();$('#searchSuggestions button')?.focus();}});
+$('#searchSuggestions').addEventListener('keydown',e=>{const buttons=$$('button',$('#searchSuggestions')),i=buttons.indexOf(document.activeElement);if(e.key==='Escape'){hideSuggestions();$('#searchInput').focus();hideSuggestions();}else if(['ArrowDown','ArrowUp'].includes(e.key)){e.preventDefault();buttons[(i+(e.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length]?.focus();}});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.search-wrap'))hideSuggestions();
+  if(e.target.closest('[data-show-code]')){ $('#patternCode').open=!$('#patternCode').open; }
+  const trigger=e.target.closest('[data-track-menu]');
+  if(trigger){const menu=trigger.nextElementSibling;menu.classList.toggle('hidden');trigger.setAttribute('aria-expanded',String(!menu.classList.contains('hidden')));}
+  else $$('.detail-menu').forEach(menu=>menu.classList.add('hidden'));
+});
 renderPlaylistNav();
 renderHome();
 renderPlayer();
 if (!location.hash) history.replaceState({ view: 'home' }, '', '#home');
+else if (location.hash === '#track' && history.state?.trackId) openTrack(history.state.trackId);
 else setView(location.hash.slice(1), false);
