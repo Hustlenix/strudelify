@@ -1,0 +1,11 @@
+{
+  "name": "strudelify",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A browser-first listening interface for editable Strudel music",
+  "scripts": {
+    "test": "node --check src/tracks.js && node --check src/app.js && node --test tests/*.test.mjs",
+    "serve": "python -m http.server 4173"
+  }
+}
