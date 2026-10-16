@@ -24,7 +24,7 @@
         <button class="nav-link" data-view="library"><span class="nav-icon">▤</span>Your library</button>
       </nav>
       <div class="library-heading">
-        <span>YOUR COLLECTION</span>
+        <span>YOUR LIBRARY</span>
         <button id="newTrackButton" class="icon-button add-button" aria-label="Create a track" title="Create a track">＋</button>
       </div>
       <div class="playlist-list" id="playlistList"></div>
@@ -49,40 +49,38 @@
       </header>
 
       <section class="content-view" id="homeView">
-        <section class="hero">
-          <div class="hero-copy">
-            <div class="eyebrow"><span class="eyebrow-line"></span> A new kind of listening</div>
-            <h1>Your music,<br><em>in rotation.</em></h1>
-            <p>A little library of live-coded tracks. Pick a pattern, press play, and let Strudel make the sound.</p>
-            <div class="hero-actions">
-              <button class="button button-primary" id="heroPlayButton"><span class="play-glyph">▶</span> Start listening</button>
-              <button class="button button-quiet" id="exploreButton">Explore the library <span aria-hidden="true">↗</span></button>
-            </div>
+        <div class="home-welcome">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> Your listening space</div>
+            <h1 id="greetingTitle">Good evening</h1>
+            <p>Pick a pattern, find a mood, and let it run.</p>
           </div>
-          <div class="hero-art" aria-label="Abstract artwork of a glowing sound pattern">
-            <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-orbit orbit-three"></div>
-            <div class="art-disc"><div class="art-core"><span>꩜</span></div></div>
-            <div class="art-label">PATTERN<br>001</div>
-            <div class="art-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <button class="button button-primary welcome-create" id="heroPlayButton"><span class="play-glyph">▶</span> Play something</button>
+        </div>
+
+        <section class="section-block quick-picks-section" aria-labelledby="quickPicksTitle">
+          <div class="section-heading">
+            <div><div class="eyebrow" id="quickPicksEyebrow">A few places to start</div><h2 id="quickPicksTitle">Quick picks</h2></div>
+            <button class="text-button" data-view="library">Open your library <span>→</span></button>
           </div>
-          <div class="hero-foot"><span>NO ALGORITHMS</span><span class="hero-foot-rule"></span><span>JUST GOOD PATTERNS</span></div>
+          <div class="quick-pick-grid" id="quickPickGrid"></div>
         </section>
 
         <section class="section-block">
           <div class="section-heading">
-            <div><div class="eyebrow">A good place to begin</div><h2>Made for the moment</h2></div>
-            <button class="text-button" data-view="library">See your library <span>→</span></button>
+            <div><div class="eyebrow">Choose a feeling</div><h2>Browse by mood</h2></div>
+            <button class="text-button" data-view="search">Explore all tracks <span>→</span></button>
           </div>
           <div class="feature-grid" id="featureGrid"></div>
         </section>
 
         <section class="section-block tracks-section">
           <div class="section-heading">
-            <div><div class="eyebrow">The current rotation</div><h2>Tracks to try</h2></div>
+            <div><div class="eyebrow">The full collection</div><h2>All tracks</h2></div>
             <button class="text-button" data-view="search">Browse all <span>→</span></button>
           </div>
           <div class="track-table-wrap">
-            <div class="track-table-head"><span>#</span><span>Track</span><span>Character</span><span class="duration-col">Loop</span><span></span></div>
+            <div class="track-table-head"><span>#</span><span>Track</span><span>Mood</span><span class="duration-col">Tempo</span><span></span></div>
             <div id="homeTrackList" class="track-table"></div>
           </div>
         </section>

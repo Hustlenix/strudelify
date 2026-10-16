@@ -27,6 +27,7 @@ const state = {
   loading: false,
   liked: readStorage('strudelify-liked', []),
   custom: readStorage('strudelify-custom', []),
+  recent: readStorage('strudelify-recent', []),
   libraryFilter: 'all',
   groupFilter: '',
   toastTimer: 0,
@@ -107,6 +108,8 @@ async function playTrack(track) {
     const error = getEvalError(repl);
     if (error) throw error;
     state.playing = true;
+    state.recent = [track.id, ...state.recent.filter(id => id !== track.id)].slice(0, 6);
+    saveStorage('strudelify-recent', state.recent);
     setStatus('Playing live pattern', true);
     renderPlayer();
     renderAllLists();
@@ -163,6 +166,11 @@ function rowMarkup(track, index) {
     <button class="row-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${liked ? '♥' : '♡'}</button>
   </div>`;
 }
+function quickPickMarkup(track) {
+  return `<button class="quick-pick" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">
+    ${artMarkup(track, 'quick-pick-art')}<span class="quick-pick-copy"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.artist)}</span></span>
+    <span class="quick-pick-play" aria-hidden="true">▶</span></button>`;
+}
 function cardMarkup(track) {
   const liked = state.liked.includes(track.id);
   return `<article class="track-card" data-track-id="${escapeHtml(track.id)}">
@@ -173,13 +181,20 @@ function cardMarkup(track) {
   </article>`;
 }
 function renderHome() {
+  const hour = new Date().getHours();
+  $('#greetingTitle').textContent = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
+  const recentTracks = state.recent.map(getTrack).filter(Boolean);
+  const quickPicks = [...new Map([...recentTracks, ...allTracks()].map(track => [track.id, track])).values()].slice(0, 6);
+  $('#quickPickGrid').innerHTML = quickPicks.map(quickPickMarkup).join('');
+  $('#quickPicksEyebrow').textContent = recentTracks.length ? 'Your recent listening' : 'A few places to start';
+  $('#quickPicksTitle').textContent = recentTracks.length ? 'Jump back in' : 'Quick picks';
   $('#featureGrid').innerHTML = groups.map(group => `
     <button class="feature-card" data-group="${escapeHtml(group.name)}" aria-label="Play ${escapeHtml(group.name)} collection">
       <span class="feature-art" style="background:${palettes[group.palette - 1]}">${escapeHtml(group.symbol)}</span>
       <span class="feature-info"><strong>${escapeHtml(group.name)}</strong><span>${escapeHtml(group.note)}</span></span>
       <span class="feature-play">▶</span>
     </button>`).join('');
-  $('#homeTrackList').innerHTML = tracks.slice(0, 5).map(rowMarkup).join('');
+  $('#homeTrackList').innerHTML = allTracks().map(rowMarkup).join('');
 }
 function searchResults(query = '', group = '') {
   const normalized = query.trim().toLowerCase();
@@ -317,13 +332,12 @@ $('#searchInput').addEventListener('input', event => {
 $('#searchPageInput').addEventListener('input', () => { $('#searchInput').value = $('#searchPageInput').value; state.groupFilter = ''; renderSearch(); });
 $('#newTrackButton').addEventListener('click', () => openEditor());
 $('#libraryCreateButton').addEventListener('click', () => openEditor());
-$('#exploreButton').addEventListener('click', () => setView('search'));
 $('#heroPlayButton').addEventListener('click', () => playRandom());
 $('#mainPlayButton').addEventListener('click', () => state.playing ? stopTrack() : state.current ? playTrack(state.current) : playRandom());
 $('#stopButton').addEventListener('click', stopTrack);
 $('#previousButton').addEventListener('click', () => {
   const list = allTracks(); const index = list.findIndex(track => track.id === state.current?.id);
-  playTrack(list[(index - 1 + list.length) % list.length]);
+  playTrack(index < 0 ? list[0] : list[(index - 1 + list.length) % list.length]);
 });
 $('#nextButton').addEventListener('click', () => {
   const list = allTracks(); const index = list.findIndex(track => track.id === state.current?.id);
