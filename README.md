@@ -37,3 +37,9 @@ This is a music player for live-generated Strudel patterns. It does not stream c
 The page loads the pinned `@strudel/web` 1.2.6 browser bundle from [unpkg](https://unpkg.com/@strudel/web@1.2.6). Strudel's project guide describes using this package with a custom HTML interface and explains its AGPL-3.0 licensing requirements: [Using Strudel in your Project](https://strudel.cc/technical-manual/project-start/). This repository publishes the complete app source alongside the integration. See the upstream package and license before redistributing a modified runtime.
 
 The app itself is released under the repository's MIT license. Demo compositions in `tracks/` are original examples for this project.
+
+## Your eight-song starter collection
+
+The library also includes eight labelled **instrumental studies**, in the original requested order: Babydoll, Without Me, Everyday Normal Guy 2, Sailor Song, Can't Tell Me Nothing, Love Me Not, I Thought I Saw Your Face Today, and Lonely. They are not official recordings, and have not been verified as faithful cover versions. Their source files live in `tracks/` so the editor and player can load them independently. The original six Strudelify compositions remain available.
+
+To make the studies into recognizable section-by-section instrumental covers, they still need listening-based transcription and musical review. Commercial audio is deliberately not included in this public repository.
