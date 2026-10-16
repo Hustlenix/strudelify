@@ -1,0 +1,9 @@
+/* Instrumental study only. Not a verified transcription or original recording. */
+// Strudelify listening sketch — editable live music
+// This is not the original master recording or a verified transcription.
+stack(
+  s("bd ~ [~ bd] ~, ~ sd ~ sd, hh*8").gain(.33),
+  note("c2 [c2 g1] bb1 [bb1 g1]").s("sawtooth").lpf(410).gain(.24),
+  note("<[c4,eb4,g4] [bb3,d4,f4] [ab3,c4,eb4] [g3,b3,d4]>").s("triangle").attack(.04).release(.45).gain(.17).room(.18),
+  note("g4 bb4 ab4 [eb4 d4]").s("sawtooth").decay(.27).sustain(0).gain(.15).room(.24)
+).cpm(80/4)

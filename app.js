@@ -1,4 +1,12 @@
 const tracks = [
+  { id: 'babydoll', title: 'Babydoll (Study)', artist: 'Strudelify · Dominic Fike reference', mood: 'Soft guitar study', loop: '83 BPM', codeUrl: 'tracks/babydoll.strudel', group: 'Soft focus', palette: 4 },
+  { id: 'without-me', title: 'Without Me (Study)', artist: 'Strudelify · Eminem reference', mood: 'Punchy synth study', loop: '112 BPM', codeUrl: 'tracks/without-me.strudel', group: 'Night motion', palette: 2 },
+  { id: 'normal-guy-2', title: 'Everyday Normal Guy 2 (Study)', artist: 'Strudelify · Jon Lajoie reference', mood: 'Minimal rap study', loop: '90 BPM', codeUrl: 'tracks/normal-guy-2.strudel', group: 'Slow burn', palette: 3 },
+  { id: 'sailor-song', title: 'Sailor Song (Study)', artist: 'Strudelify · Gigi Perez reference', mood: 'Intimate folk study', loop: '96 BPM', codeUrl: 'tracks/sailor-song.strudel', group: 'Soft focus', palette: 4 },
+  { id: 'cant-tell-me-nothing', title: 'Can\'t Tell Me Nothing (Study)', artist: 'Strudelify · Kanye West reference', mood: 'Spacious hip-hop study', loop: '80 BPM', codeUrl: 'tracks/cant-tell-me-nothing.strudel', group: 'Slow burn', palette: 3 },
+  { id: 'love-me-not', title: 'Love Me Not (Study)', artist: 'Strudelify · Ravyn Lenae reference', mood: 'Airy R&B study', loop: '112 BPM', codeUrl: 'tracks/love-me-not.strudel', group: 'Night motion', palette: 2 },
+  { id: 'i-thought-i-saw-your-face', title: 'I Thought I Saw Your Face Today (Study)', artist: 'Strudelify · She & Him reference', mood: 'Vintage pop study', loop: '78 BPM', codeUrl: 'tracks/i-thought-i-saw-your-face.strudel', group: 'Soft focus', palette: 4 },
+  { id: 'lonely', title: 'Lonely (Study)', artist: 'Strudelify · Akon reference', mood: 'Melodic R&B study', loop: '90 BPM', codeUrl: 'tracks/lonely.strudel', group: 'Slow burn', palette: 3 },
   { id: 'afterglow', title: 'Afterglow', artist: 'Strudelify', mood: 'Warm ambient', loop: '78 BPM', codeUrl: 'tracks/afterglow.strudel', group: 'Soft focus', palette: 1 },
   { id: 'greenline', title: 'Greenline', artist: 'Strudelify', mood: 'Night motion', loop: '104 BPM', codeUrl: 'tracks/greenline.strudel', group: 'Night motion', palette: 2 },
   { id: 'paper-moon', title: 'Paper Moon', artist: 'Strudelify', mood: 'Dusty keys', loop: '86 BPM', codeUrl: 'tracks/paper-moon.strudel', group: 'Slow burn', palette: 3 },
