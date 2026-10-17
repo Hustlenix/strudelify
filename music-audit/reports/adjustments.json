@@ -52,5 +52,41 @@
     "after_sha256": "caa4266c9b07beda345b6a248bcafc07e6f0f99df77c80ad9bc4a3d76900e2ef",
     "change": "Existing pitched layers transposed -1 semitones; duration-weighted pitch-class cosine 0.61663 -> 0.76628 against source [16, 80]. Relative-mode/root evidence used for 05/08 instead of blindly taking the highest cosine. This does not certify melody/chord order.",
     "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "01-babydoll",
+    "phase": "tempo",
+    "attempt": 1,
+    "before_sha256": "85f17275d9af91a26bdc7c2328b925215bab8a148e38ebcc489ab0a72d9acc6d",
+    "after_sha256": "59111375d82273dc1ef7a0d49433023a6e0ed74c81002088ef97ce86f1f2c72e",
+    "change": "Cycle tempo 93 -> 84.05 BPM; reference periodicities [{'bpm': 84.05, 'periodicity': 0.5635}, {'bpm': 168.05, 'periodicity': 0.522}]. Retained four-beat cycle convention; meter/downbeat and She & Him tempo drift remain review items.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "06-love-me-not",
+    "phase": "tempo",
+    "attempt": 1,
+    "before_sha256": "9ac27c551495acdaac10221d2197a3f04eed3fae9f0314d59ffd83435edc2bea",
+    "after_sha256": "1294c033a51ed1803b106f0b1fb7fd3547d1d397e4ded0e6c7dfc06516ef02bd",
+    "change": "Cycle tempo 93 -> 114 BPM; reference periodicities [{'bpm': 57.0, 'periodicity': 0.387}, {'bpm': 114.0, 'periodicity': 0.3688}]. Retained four-beat cycle convention; meter/downbeat and She & Him tempo drift remain review items.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "phase": "tempo",
+    "attempt": 1,
+    "before_sha256": "08741a9a56ec569aa3c2f37f4b24aaee4368e8de206337d653c8f2404e54bf1b",
+    "after_sha256": "63805fffa743bbd4125c6a1524972b3326d3421465815f725feb069207b53b9b",
+    "change": "Cycle tempo 116 -> 78 BPM; reference periodicities [{'bpm': 77.45, 'periodicity': 0.2698}, {'bpm': 155.4, 'periodicity': 0.2658}]. Retained four-beat cycle convention; meter/downbeat and She & Him tempo drift remain review items.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "08-lonely",
+    "phase": "groove",
+    "attempt": 1,
+    "before_sha256": "caa4266c9b07beda345b6a248bcafc07e6f0f99df77c80ad9bc4a3d76900e2ef",
+    "after_sha256": "5e26d61b6716f40e1c99d7bd326b8c93888374009f5d4958fb7ab8b4ad753dc1",
+    "change": "Removed accidental ninth subdivision in final kick cycle; both kicks now lie on the same eighth grid as the other cycles. This is a consistency repair, not a certified source kick transcription.",
+    "decision": "retain for comparison; listening approval pending"
   }
 ]

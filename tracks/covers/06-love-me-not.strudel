@@ -4,7 +4,7 @@
 // Music audit: +4 semitone tonal correction; see music-audit/reports/adjustments.json
 // Instrumental rendition — no lyrics, just the dreamy drift.
 
-setcps(93/60/4)
+setcps(114/60/4)
 
 // melody — airy
 $: cat(

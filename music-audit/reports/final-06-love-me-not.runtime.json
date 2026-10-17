@@ -18916,7 +18916,4338 @@
           }
         }
       ]
+    },
+    {
+      "start": 83,
+      "end": 84,
+      "events": [
+        {
+          "begin": 83.25,
+          "end": 83.375,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 83.375,
+          "end": 83.5,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 83.5,
+          "end": 83.625,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 83.625,
+          "end": 83.75,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 83,
+          "end": 84,
+          "value": {
+            "note": "g3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 83,
+          "end": 84,
+          "value": {
+            "note": "b3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 83,
+          "end": 84,
+          "value": {
+            "note": "d4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 83,
+          "end": 83.5,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 83.5,
+          "end": 84,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 83,
+          "end": 83.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 83.5,
+          "end": 83.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 83.875,
+          "end": 84,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 83.25,
+          "end": 83.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 83.75,
+          "end": 83.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 83,
+          "end": 83.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 83.125,
+          "end": 83.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 83.25,
+          "end": 83.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 83.375,
+          "end": 83.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 83.5,
+          "end": 83.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 83.625,
+          "end": 83.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 83.75,
+          "end": 83.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 83.875,
+          "end": 84,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 84,
+      "end": 85,
+      "events": [
+        {
+          "begin": 84.25,
+          "end": 84.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 84.375,
+          "end": 84.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 84.5,
+          "end": 84.75,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 84.75,
+          "end": 85,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 84,
+          "end": 85,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 84,
+          "end": 85,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 84,
+          "end": 85,
+          "value": {
+            "note": "g4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 84,
+          "end": 84.5,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 84.5,
+          "end": 85,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 84,
+          "end": 84.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 84.5,
+          "end": 84.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 84.25,
+          "end": 84.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 84.75,
+          "end": 84.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 84,
+          "end": 84.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 84.125,
+          "end": 84.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 84.25,
+          "end": 84.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 84.375,
+          "end": 84.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 84.5,
+          "end": 84.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 84.625,
+          "end": 84.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 84.75,
+          "end": 84.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 84.875,
+          "end": 85,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 85,
+      "end": 86,
+      "events": [
+        {
+          "begin": 85.125,
+          "end": 85.25,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 85.25,
+          "end": 85.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 85.375,
+          "end": 85.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 85,
+          "end": 86,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 85,
+          "end": 86,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 85,
+          "end": 86,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 85,
+          "end": 85.5,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 85.5,
+          "end": 86,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 85,
+          "end": 85.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 85.5,
+          "end": 85.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 85.25,
+          "end": 85.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 85.75,
+          "end": 85.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 85,
+          "end": 85.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 85.125,
+          "end": 85.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 85.25,
+          "end": 85.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 85.375,
+          "end": 85.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 85.5,
+          "end": 85.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 85.625,
+          "end": 85.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 85.75,
+          "end": 85.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 85.875,
+          "end": 86,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 86,
+      "end": 87,
+      "events": [
+        {
+          "begin": 86,
+          "end": 86.25,
+          "value": {
+            "note": "f5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 86.25,
+          "end": 86.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 86.375,
+          "end": 86.5,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 86.5,
+          "end": 87,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 86,
+          "end": 87,
+          "value": {
+            "note": "f3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 86,
+          "end": 87,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 86,
+          "end": 87,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 86,
+          "end": 86.5,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 86.5,
+          "end": 87,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 86,
+          "end": 86.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 86.5,
+          "end": 86.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 86.25,
+          "end": 86.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 86.75,
+          "end": 86.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 86,
+          "end": 86.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 86.125,
+          "end": 86.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 86.25,
+          "end": 86.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 86.375,
+          "end": 86.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 86.5,
+          "end": 86.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 86.625,
+          "end": 86.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 86.75,
+          "end": 86.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 86.875,
+          "end": 87,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 87,
+      "end": 88,
+      "events": [
+        {
+          "begin": 87.25,
+          "end": 87.375,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 87.375,
+          "end": 87.5,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 87.5,
+          "end": 87.625,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 87.625,
+          "end": 87.75,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 87,
+          "end": 88,
+          "value": {
+            "note": "g3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 87,
+          "end": 88,
+          "value": {
+            "note": "b3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 87,
+          "end": 88,
+          "value": {
+            "note": "d4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 87,
+          "end": 87.5,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 87.5,
+          "end": 88,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 87,
+          "end": 87.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 87.5,
+          "end": 87.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 87.875,
+          "end": 88,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 87.25,
+          "end": 87.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 87.75,
+          "end": 87.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 87,
+          "end": 87.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 87.125,
+          "end": 87.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 87.25,
+          "end": 87.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 87.375,
+          "end": 87.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 87.5,
+          "end": 87.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 87.625,
+          "end": 87.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 87.75,
+          "end": 87.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 87.875,
+          "end": 88,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 88,
+      "end": 89,
+      "events": [
+        {
+          "begin": 88.25,
+          "end": 88.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 88.375,
+          "end": 88.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 88.5,
+          "end": 88.75,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 88.75,
+          "end": 89,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 88,
+          "end": 89,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 88,
+          "end": 89,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 88,
+          "end": 89,
+          "value": {
+            "note": "g4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 88,
+          "end": 88.5,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 88.5,
+          "end": 89,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 88,
+          "end": 88.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 88.5,
+          "end": 88.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 88.25,
+          "end": 88.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 88.75,
+          "end": 88.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 88,
+          "end": 88.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 88.125,
+          "end": 88.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 88.25,
+          "end": 88.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 88.375,
+          "end": 88.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 88.5,
+          "end": 88.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 88.625,
+          "end": 88.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 88.75,
+          "end": 88.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 88.875,
+          "end": 89,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 89,
+      "end": 90,
+      "events": [
+        {
+          "begin": 89.125,
+          "end": 89.25,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 89.25,
+          "end": 89.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 89.375,
+          "end": 89.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 89,
+          "end": 90,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 89,
+          "end": 90,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 89,
+          "end": 90,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.5,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 90,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 89.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 89.25,
+          "end": 89.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 89.75,
+          "end": 89.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 89.125,
+          "end": 89.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 89.25,
+          "end": 89.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 89.375,
+          "end": 89.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 89.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 89.625,
+          "end": 89.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 89.75,
+          "end": 89.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 89.875,
+          "end": 90,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 90,
+      "end": 91,
+      "events": [
+        {
+          "begin": 90,
+          "end": 90.25,
+          "value": {
+            "note": "f5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 90.25,
+          "end": 90.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 90.375,
+          "end": 90.5,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 91,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 90,
+          "end": 91,
+          "value": {
+            "note": "f3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 90,
+          "end": 91,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 90,
+          "end": 91,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.5,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 91,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 90.25,
+          "end": 90.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 90.75,
+          "end": 90.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 90.125,
+          "end": 90.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 90.25,
+          "end": 90.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 90.375,
+          "end": 90.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 90.625,
+          "end": 90.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 90.75,
+          "end": 90.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 90.875,
+          "end": 91,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 91,
+      "end": 92,
+      "events": [
+        {
+          "begin": 91.25,
+          "end": 91.375,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 91.375,
+          "end": 91.5,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 91.5,
+          "end": 91.625,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 91.625,
+          "end": 91.75,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 91,
+          "end": 92,
+          "value": {
+            "note": "g3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 91,
+          "end": 92,
+          "value": {
+            "note": "b3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 91,
+          "end": 92,
+          "value": {
+            "note": "d4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 91,
+          "end": 91.5,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 91.5,
+          "end": 92,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 91,
+          "end": 91.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 91.5,
+          "end": 91.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 91.875,
+          "end": 92,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 91.25,
+          "end": 91.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 91.75,
+          "end": 91.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 91,
+          "end": 91.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 91.125,
+          "end": 91.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 91.25,
+          "end": 91.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 91.375,
+          "end": 91.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 91.5,
+          "end": 91.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 91.625,
+          "end": 91.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 91.75,
+          "end": 91.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 91.875,
+          "end": 92,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 92,
+      "end": 93,
+      "events": [
+        {
+          "begin": 92.25,
+          "end": 92.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 92.375,
+          "end": 92.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 92.5,
+          "end": 92.75,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 92.75,
+          "end": 93,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 92,
+          "end": 93,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 92,
+          "end": 93,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 92,
+          "end": 93,
+          "value": {
+            "note": "g4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 92,
+          "end": 92.5,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 92.5,
+          "end": 93,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 92,
+          "end": 92.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 92.5,
+          "end": 92.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 92.25,
+          "end": 92.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 92.75,
+          "end": 92.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 92,
+          "end": 92.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 92.125,
+          "end": 92.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 92.25,
+          "end": 92.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 92.375,
+          "end": 92.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 92.5,
+          "end": 92.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 92.625,
+          "end": 92.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 92.75,
+          "end": 92.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 92.875,
+          "end": 93,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 93,
+      "end": 94,
+      "events": [
+        {
+          "begin": 93.125,
+          "end": 93.25,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 93.25,
+          "end": 93.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 93.375,
+          "end": 93.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 93,
+          "end": 94,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 93,
+          "end": 94,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 93,
+          "end": 94,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 93,
+          "end": 93.5,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 93.5,
+          "end": 94,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 93,
+          "end": 93.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 93.5,
+          "end": 93.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 93.25,
+          "end": 93.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 93.75,
+          "end": 93.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 93,
+          "end": 93.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 93.125,
+          "end": 93.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 93.25,
+          "end": 93.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 93.375,
+          "end": 93.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 93.5,
+          "end": 93.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 93.625,
+          "end": 93.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 93.75,
+          "end": 93.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 93.875,
+          "end": 94,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 94,
+      "end": 95,
+      "events": [
+        {
+          "begin": 94,
+          "end": 94.25,
+          "value": {
+            "note": "f5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 94.25,
+          "end": 94.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 94.375,
+          "end": 94.5,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 94.5,
+          "end": 95,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 94,
+          "end": 95,
+          "value": {
+            "note": "f3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 94,
+          "end": 95,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 94,
+          "end": 95,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 94,
+          "end": 94.5,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 94.5,
+          "end": 95,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 94,
+          "end": 94.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 94.5,
+          "end": 94.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 94.25,
+          "end": 94.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 94.75,
+          "end": 94.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 94,
+          "end": 94.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 94.125,
+          "end": 94.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 94.25,
+          "end": 94.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 94.375,
+          "end": 94.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 94.5,
+          "end": 94.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 94.625,
+          "end": 94.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 94.75,
+          "end": 94.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 94.875,
+          "end": 95,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 95,
+      "end": 96,
+      "events": [
+        {
+          "begin": 95.25,
+          "end": 95.375,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 95.375,
+          "end": 95.5,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 95.5,
+          "end": 95.625,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 95.625,
+          "end": 95.75,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 95,
+          "end": 96,
+          "value": {
+            "note": "g3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 95,
+          "end": 96,
+          "value": {
+            "note": "b3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 95,
+          "end": 96,
+          "value": {
+            "note": "d4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 95,
+          "end": 95.5,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 95.5,
+          "end": 96,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 95,
+          "end": 95.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 95.5,
+          "end": 95.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 95.875,
+          "end": 96,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 95.25,
+          "end": 95.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 95.75,
+          "end": 95.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 95,
+          "end": 95.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 95.125,
+          "end": 95.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 95.25,
+          "end": 95.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 95.375,
+          "end": 95.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 95.5,
+          "end": 95.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 95.625,
+          "end": 95.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 95.75,
+          "end": 95.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 95.875,
+          "end": 96,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 96,
+      "end": 97,
+      "events": [
+        {
+          "begin": 96.25,
+          "end": 96.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 96.375,
+          "end": 96.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 96.5,
+          "end": 96.75,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 96.75,
+          "end": 97,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 96,
+          "end": 97,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 96,
+          "end": 97,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 96,
+          "end": 97,
+          "value": {
+            "note": "g4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 96,
+          "end": 96.5,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 96.5,
+          "end": 97,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 96,
+          "end": 96.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 96.5,
+          "end": 96.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 96.25,
+          "end": 96.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 96.75,
+          "end": 96.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 96,
+          "end": 96.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 96.125,
+          "end": 96.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 96.25,
+          "end": 96.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 96.375,
+          "end": 96.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 96.5,
+          "end": 96.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 96.625,
+          "end": 96.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 96.75,
+          "end": 96.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 96.875,
+          "end": 97,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 97,
+      "end": 98,
+      "events": [
+        {
+          "begin": 97.125,
+          "end": 97.25,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 97.25,
+          "end": 97.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 97.375,
+          "end": 97.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 97,
+          "end": 98,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 97,
+          "end": 98,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 97,
+          "end": 98,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 97,
+          "end": 97.5,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 97.5,
+          "end": 98,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 97,
+          "end": 97.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 97.5,
+          "end": 97.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 97.25,
+          "end": 97.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 97.75,
+          "end": 97.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 97,
+          "end": 97.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 97.125,
+          "end": 97.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 97.25,
+          "end": 97.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 97.375,
+          "end": 97.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 97.5,
+          "end": 97.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 97.625,
+          "end": 97.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 97.75,
+          "end": 97.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 97.875,
+          "end": 98,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 98,
+      "end": 99,
+      "events": [
+        {
+          "begin": 98,
+          "end": 98.25,
+          "value": {
+            "note": "f5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 98.25,
+          "end": 98.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 98.375,
+          "end": 98.5,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 98.5,
+          "end": 99,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 98,
+          "end": 99,
+          "value": {
+            "note": "f3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 98,
+          "end": 99,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 98,
+          "end": 99,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 98,
+          "end": 98.5,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 98.5,
+          "end": 99,
+          "value": {
+            "note": "f2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 98,
+          "end": 98.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 98.5,
+          "end": 98.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 98.25,
+          "end": 98.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 98.75,
+          "end": 98.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 98,
+          "end": 98.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 98.125,
+          "end": 98.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 98.25,
+          "end": 98.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 98.375,
+          "end": 98.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 98.5,
+          "end": 98.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 98.625,
+          "end": 98.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 98.75,
+          "end": 98.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 98.875,
+          "end": 99,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 99,
+      "end": 100,
+      "events": [
+        {
+          "begin": 99.25,
+          "end": 99.375,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 99.375,
+          "end": 99.5,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 99.5,
+          "end": 99.625,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 99.625,
+          "end": 99.75,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 99,
+          "end": 100,
+          "value": {
+            "note": "g3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 99,
+          "end": 100,
+          "value": {
+            "note": "b3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 99,
+          "end": 100,
+          "value": {
+            "note": "d4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 99,
+          "end": 99.5,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 99.5,
+          "end": 100,
+          "value": {
+            "note": "g2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 99,
+          "end": 99.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 99.5,
+          "end": 99.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 99.875,
+          "end": 100,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 99.25,
+          "end": 99.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 99.75,
+          "end": 99.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 99,
+          "end": 99.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 99.125,
+          "end": 99.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 99.25,
+          "end": 99.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 99.375,
+          "end": 99.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 99.5,
+          "end": 99.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 99.625,
+          "end": 99.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 99.75,
+          "end": 99.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 99.875,
+          "end": 100,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 100,
+      "end": 101,
+      "events": [
+        {
+          "begin": 100.25,
+          "end": 100.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 100.375,
+          "end": 100.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 100.5,
+          "end": 100.75,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 100.75,
+          "end": 101,
+          "value": {
+            "note": "c5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 100,
+          "end": 101,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 100,
+          "end": 101,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 100,
+          "end": 101,
+          "value": {
+            "note": "g4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 100,
+          "end": 100.5,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 100.5,
+          "end": 101,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 100,
+          "end": 100.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 100.5,
+          "end": 100.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 100.25,
+          "end": 100.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 100.75,
+          "end": 100.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 100,
+          "end": 100.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 100.125,
+          "end": 100.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 100.25,
+          "end": 100.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 100.375,
+          "end": 100.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 100.5,
+          "end": 100.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 100.625,
+          "end": 100.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 100.75,
+          "end": 100.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 100.875,
+          "end": 101,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
+    },
+    {
+      "start": 101,
+      "end": 102,
+      "events": [
+        {
+          "begin": 101.125,
+          "end": 101.25,
+          "value": {
+            "note": "d5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 101.25,
+          "end": 101.375,
+          "value": {
+            "note": "e5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 101.375,
+          "end": 101.5,
+          "value": {
+            "note": "g5",
+            "s": "sine",
+            "gain": 0.32,
+            "attack": 0.03,
+            "release": 0.5,
+            "room": 0.6,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 101,
+          "end": 102,
+          "value": {
+            "note": "a3",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 101,
+          "end": 102,
+          "value": {
+            "note": "c4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 101,
+          "end": 102,
+          "value": {
+            "note": "e4",
+            "s": "triangle",
+            "attack": 0.06,
+            "release": 0.5,
+            "gain": 0.16,
+            "room": 0.7,
+            "delay": 0.15
+          }
+        },
+        {
+          "begin": 101,
+          "end": 101.5,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 101.5,
+          "end": 102,
+          "value": {
+            "note": "a2",
+            "s": "sine",
+            "cutoff": 180,
+            "clip": 0.9,
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 101,
+          "end": 101.125,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 101.5,
+          "end": 101.625,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR808",
+            "gain": 0.6
+          }
+        },
+        {
+          "begin": 101.25,
+          "end": 101.375,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 101.75,
+          "end": 101.875,
+          "value": {
+            "s": "sd",
+            "bank": "RolandTR808",
+            "gain": 0.35,
+            "room": 0.35
+          }
+        },
+        {
+          "begin": 101,
+          "end": 101.125,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 101.125,
+          "end": 101.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 101.25,
+          "end": 101.375,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 101.375,
+          "end": 101.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 101.5,
+          "end": 101.625,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 101.625,
+          "end": 101.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 101.75,
+          "end": 101.875,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        },
+        {
+          "begin": 101.875,
+          "end": 102,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR808",
+            "gain": 0.13
+          }
+        }
+      ]
     }
   ],
-  "cps": 0.3875
+  "cps": 0.475
 }

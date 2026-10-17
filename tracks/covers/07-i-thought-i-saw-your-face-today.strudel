@@ -4,7 +4,7 @@
 // Music audit: +5 semitone tonal correction; see music-audit/reports/adjustments.json
 // Instrumental rendition — no lyrics, just the vintage bounce.
 
-setcps(116/60/4)
+setcps(78/60/4)
 
 // melody — sweet and doo-woppy
 $: cat(

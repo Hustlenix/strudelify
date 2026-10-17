@@ -3,7 +3,7 @@
 // audio: 01-babydoll.mp3
 // Instrumental rendition — no lyrics, just groove, chords and melody.
 
-setcps(93/60/4)
+setcps(84.05/60/4)
 
 // hook — melody
 $: cat(
