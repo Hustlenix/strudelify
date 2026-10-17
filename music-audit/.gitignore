@@ -1,0 +1,14 @@
+# Commercial reference recordings/excerpts are local and read-only source material.
+*.mp3
+*.m4a
+*.wav
+*.webm
+*.flac
+*.ogg
+*.npy
+*.npz
+node_modules/
+.venv/
+cache/
+__pycache__/
+artifacts/

@@ -1,0 +1,302 @@
+[
+  {
+    "check": "analysis/01-babydoll.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/01-babydoll.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/01-babydoll-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/01-babydoll-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/01-babydoll-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/01-babydoll-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "01-babydoll original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "01-babydoll diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Candidate-note diagnostic; not an album fidelity check"
+  },
+  {
+    "check": "analysis/02-without-me.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/02-without-me.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/02-without-me-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/02-without-me-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/02-without-me-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/02-without-me-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "02-without-me original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "02-without-me diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Candidate-note diagnostic; not an album fidelity check"
+  },
+  {
+    "check": "analysis/03-everyday-normal-guy-2.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/03-everyday-normal-guy-2.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/03-everyday-normal-guy-2-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/03-everyday-normal-guy-2-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/03-everyday-normal-guy-2-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/03-everyday-normal-guy-2-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "03-everyday-normal-guy-2 original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "03-everyday-normal-guy-2 diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Candidate-note diagnostic; not an album fidelity check"
+  },
+  {
+    "check": "analysis/04-sailor-song.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/04-sailor-song.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/04-sailor-song-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/04-sailor-song-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/04-sailor-song-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/04-sailor-song-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "04-sailor-song original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "04-sailor-song diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Candidate-note diagnostic; not an album fidelity check"
+  },
+  {
+    "check": "analysis/05-cant-tell-me-nothing.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/05-cant-tell-me-nothing.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/05-cant-tell-me-nothing-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/05-cant-tell-me-nothing-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/05-cant-tell-me-nothing-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/05-cant-tell-me-nothing-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "05-cant-tell-me-nothing original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "05-cant-tell-me-nothing diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Candidate-note diagnostic; not an album fidelity check"
+  },
+  {
+    "check": "analysis/06-love-me-not.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/06-love-me-not.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/06-love-me-not-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/06-love-me-not-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/06-love-me-not-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/06-love-me-not-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "06-love-me-not original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "06-love-me-not diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Expected silence: no valid low-register observations in first 16 seconds"
+  },
+  {
+    "check": "analysis/07-i-thought-i-saw-your-face-today.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/07-i-thought-i-saw-your-face-today.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/07-i-thought-i-saw-your-face-today-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/07-i-thought-i-saw-your-face-today-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/07-i-thought-i-saw-your-face-today-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/07-i-thought-i-saw-your-face-today-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "07-i-thought-i-saw-your-face-today original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "07-i-thought-i-saw-your-face-today diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Candidate-note diagnostic; not an album fidelity check"
+  },
+  {
+    "check": "analysis/08-lonely.md",
+    "status": "PASSED"
+  },
+  {
+    "check": "timelines/08-lonely.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/08-lonely-observations.json",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/08-lonely-probe.strudel",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/08-lonely-intro.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "transcriptions/08-lonely-anchor.wav",
+    "status": "PASSED"
+  },
+  {
+    "check": "08-lonely original unchanged",
+    "status": "PASSED"
+  },
+  {
+    "check": "08-lonely diagnostic probe real Strudel evaluation",
+    "status": "PASSED",
+    "note": "Candidate-note diagnostic; not an album fidelity check"
+  },
+  {
+    "check": "validation.json valid",
+    "status": "PASSED"
+  },
+  {
+    "check": "validation.json invalid-method",
+    "status": "PASSED"
+  },
+  {
+    "check": "validation.json invalid-syntax",
+    "status": "PASSED"
+  },
+  {
+    "check": "validation.json silence",
+    "status": "PASSED"
+  },
+  {
+    "check": "browser.json control-sine",
+    "status": "PASSED"
+  },
+  {
+    "check": "browser.json control-silence",
+    "status": "PASSED"
+  },
+  {
+    "check": "browser.json control-missing-sample",
+    "status": "PASSED"
+  },
+  {
+    "check": "browser.json control-missing-resource",
+    "status": "PASSED"
+  },
+  {
+    "check": "identity audio-comparison control",
+    "status": "PASSED"
+  }
+]

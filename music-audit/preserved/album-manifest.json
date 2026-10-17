@@ -1,0 +1,58 @@
+[
+  {
+    "id": "01-babydoll",
+    "artist": "Dominic Fike",
+    "title": "Babydoll",
+    "expected_filename": "01-babydoll.strudel",
+    "source_prefix": "Dominic Fike - Babydoll"
+  },
+  {
+    "id": "02-without-me",
+    "artist": "Eminem",
+    "title": "Without Me",
+    "expected_filename": "02-without-me.strudel",
+    "source_prefix": "Eminem - Without Me"
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "artist": "Jon Lajoie",
+    "title": "Everyday Normal Guy 2",
+    "expected_filename": "03-everyday-normal-guy-2.strudel",
+    "source_prefix": "Everyday Normal Guy 2"
+  },
+  {
+    "id": "04-sailor-song",
+    "artist": "Gigi Perez",
+    "title": "Sailor Song",
+    "expected_filename": "04-sailor-song.strudel",
+    "source_prefix": "Gigi Perez - Sailor Song"
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "artist": "Kanye West",
+    "title": "Can't Tell Me Nothing",
+    "expected_filename": "05-cant-tell-me-nothing.strudel",
+    "source_prefix": "Kanye West - Can"
+  },
+  {
+    "id": "06-love-me-not",
+    "artist": "Ravyn Lenae",
+    "title": "Love Me Not",
+    "expected_filename": "06-love-me-not.strudel",
+    "source_prefix": "Ravyn Lenae - Love Me Not"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "artist": "She & Him",
+    "title": "I Thought I Saw Your Face Today",
+    "expected_filename": "07-i-thought-i-saw-your-face-today.strudel",
+    "source_prefix": "She & Him - I Thought"
+  },
+  {
+    "id": "08-lonely",
+    "artist": "Akon",
+    "title": "Lonely",
+    "expected_filename": "08-lonely.strudel",
+    "source_prefix": "Akon - Lonely"
+  }
+]

@@ -1,0 +1,477 @@
+{
+  "generated_at": "2026-10-16T17:08:59.515Z",
+  "selftests": [
+    {
+      "id": "control-sine",
+      "expected": "PASSED",
+      "status": "PASSED",
+      "observed": {
+        "status": "PASSED",
+        "event_count": 192,
+        "sounds": [
+          "sine"
+        ],
+        "unknown_sounds": [],
+        "peak": 0.08040526509284973,
+        "rms": 0.026372938126134404,
+        "audio_context": "running",
+        "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+        "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\control-sine.webm",
+        "decoded_audio_metrics": {
+          "status": "MEASURED",
+          "duration_s": 6,
+          "peak_dbfs": -18.948383331298828,
+          "rms_dbfs": -28.556800842285156,
+          "samples_at_or_above_0dbfs": 0,
+          "silent_100ms_fraction_below_minus60db": 0,
+          "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+        },
+        "console_errors": [],
+        "failed_requests": []
+      }
+    },
+    {
+      "id": "control-silence",
+      "expected": "FAILED",
+      "status": "PASSED",
+      "observed": {
+        "status": "FAILED",
+        "event_count": 0,
+        "sounds": [],
+        "unknown_sounds": [],
+        "peak": 0,
+        "rms": 0,
+        "audio_context": "running",
+        "recording": null,
+        "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+        "console_errors": [],
+        "failed_requests": []
+      }
+    },
+    {
+      "id": "control-missing-sample",
+      "expected": "FAILED",
+      "status": "PASSED",
+      "observed": {
+        "status": "FAILED",
+        "event_count": 64,
+        "sounds": [
+          "audit_nonexistent_sample"
+        ],
+        "unknown_sounds": [
+          "audit_nonexistent_sample"
+        ],
+        "peak": 0,
+        "rms": 0,
+        "audio_context": "running",
+        "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+        "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\control-missing-sample.webm",
+        "decoded_audio_metrics": {
+          "status": "MEASURED",
+          "duration_s": 6,
+          "peak_dbfs": -240,
+          "rms_dbfs": -240,
+          "samples_at_or_above_0dbfs": 0,
+          "silent_100ms_fraction_below_minus60db": 1,
+          "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+        },
+        "console_errors": [],
+        "failed_requests": []
+      }
+    },
+    {
+      "id": "control-missing-resource",
+      "expected": "FAILED",
+      "status": "PASSED",
+      "observed": {
+        "status": "FAILED",
+        "event_count": 64,
+        "sounds": [
+          "audit_broken_resource"
+        ],
+        "unknown_sounds": [],
+        "peak": 0,
+        "rms": 0,
+        "audio_context": "running",
+        "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+        "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\control-missing-resource.webm",
+        "decoded_audio_metrics": {
+          "status": "MEASURED",
+          "duration_s": 6,
+          "peak_dbfs": -240,
+          "rms_dbfs": -240,
+          "samples_at_or_above_0dbfs": 0,
+          "silent_100ms_fraction_below_minus60db": 1,
+          "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+        },
+        "console_errors": [
+          {
+            "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "location": {
+              "url": "http://127.0.0.1:5173/missing.wav",
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          }
+        ],
+        "failed_requests": [
+          {
+            "url": "http://127.0.0.1:5173/missing.wav",
+            "status": 404
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "01-babydoll",
+      "status": "PASSED",
+      "event_count": 1472,
+      "sounds": [
+        "triangle",
+        "sawtooth",
+        "bd",
+        "sd",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.1576169729232788,
+      "rms": 0.032469423184752454,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\01-babydoll.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 6,
+        "peak_dbfs": -12.314318656921387,
+        "rms_dbfs": -26.768108367919922,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0.38333333333333336,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "02-without-me",
+      "status": "PASSED",
+      "event_count": 1792,
+      "sounds": [
+        "sawtooth",
+        "supersaw",
+        "bd",
+        "sd",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.15497155487537384,
+      "rms": 0.040598086465505084,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\02-without-me.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 6,
+        "peak_dbfs": -12.644838333129883,
+        "rms_dbfs": -24.846797943115234,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "status": "PASSED",
+      "event_count": 1472,
+      "sounds": [
+        "square",
+        "triangle",
+        "sawtooth",
+        "bd",
+        "sd",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.1557644158601761,
+      "rms": 0.039439109606169455,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\03-everyday-normal-guy-2.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 5.94,
+        "peak_dbfs": -12.657096862792969,
+        "rms_dbfs": -25.091400146484375,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0.1,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "04-sailor-song",
+      "status": "PASSED",
+      "event_count": 1365,
+      "sounds": [
+        "triangle",
+        "sawtooth",
+        "bd",
+        "sd",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.15203474462032318,
+      "rms": 0.04400315926741993,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\04-sailor-song.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 6,
+        "peak_dbfs": -11.842046737670898,
+        "rms_dbfs": -24.122089385986328,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0.03333333333333333,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "05-cant-tell-me-nothing",
+      "status": "PASSED",
+      "event_count": 1344,
+      "sounds": [
+        "supersaw",
+        "sawtooth",
+        "sine",
+        "bd",
+        "cp",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.33030402660369873,
+      "rms": 0.07467410861386112,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\05-cant-tell-me-nothing.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 6,
+        "peak_dbfs": -6.374432563781738,
+        "rms_dbfs": -19.581592559814453,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "06-love-me-not",
+      "status": "PASSED",
+      "event_count": 1344,
+      "sounds": [
+        "sine",
+        "triangle",
+        "bd",
+        "sd",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.19896896183490753,
+      "rms": 0.08183080559772488,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\06-love-me-not.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 6,
+        "peak_dbfs": -10.990500450134277,
+        "rms_dbfs": -18.782817840576172,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "status": "PASSED",
+      "event_count": 1504,
+      "sounds": [
+        "triangle",
+        "sawtooth",
+        "bd",
+        "sd",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.1408451497554779,
+      "rms": 0.03533985568639642,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\07-i-thought-i-saw-your-face-today.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 6,
+        "peak_dbfs": -13.432243347167969,
+        "rms_dbfs": -26.003253936767578,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0.1,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "08-lonely",
+      "status": "PASSED",
+      "event_count": 1152,
+      "sounds": [
+        "sine",
+        "triangle",
+        "sawtooth",
+        "bd",
+        "sd",
+        "hh"
+      ],
+      "unknown_sounds": [],
+      "peak": 0.1527605652809143,
+      "rms": 0.04325228498436919,
+      "audio_context": "running",
+      "coverage": "Six seconds of actual WebAudio output; event sampling through cycle 252. Full-track listening remains PENDING.",
+      "capture_file": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\08-lonely.webm",
+      "decoded_audio_metrics": {
+        "status": "MEASURED",
+        "duration_s": 6,
+        "peak_dbfs": -12.775126457214355,
+        "rms_dbfs": -24.27066421508789,
+        "samples_at_or_above_0dbfs": 0,
+        "silent_100ms_fraction_below_minus60db": 0.03333333333333333,
+        "limitation": "Decoded mono capture only; peak over 0dB is evidence to inspect, not proof of physical DAC clipping."
+      },
+      "console_errors": [],
+      "failed_requests": []
+    }
+  ],
+  "player": {
+    "status": "PASSED",
+    "media": [
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/01-babydoll.mp3",
+        "readyState": 4,
+        "currentTime": 1.422087,
+        "error": null,
+        "status": "PASSED"
+      },
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/02-without-me.mp3",
+        "readyState": 4,
+        "currentTime": 1.458752,
+        "error": null,
+        "status": "PASSED"
+      },
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/03-everyday-normal-guy-2.mp3",
+        "readyState": 4,
+        "currentTime": 1.454068,
+        "error": null,
+        "status": "PASSED"
+      },
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/04-sailor-song.mp3",
+        "readyState": 4,
+        "currentTime": 1.450004,
+        "error": null,
+        "status": "PASSED"
+      },
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/05-cant-tell-me-nothing.mp3",
+        "readyState": 4,
+        "currentTime": 1.452304,
+        "error": null,
+        "status": "PASSED"
+      },
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/06-love-me-not.mp3",
+        "readyState": 4,
+        "currentTime": 1.440498,
+        "error": null,
+        "status": "PASSED"
+      },
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/07-i-thought-i-saw-your-face-today.mp3",
+        "readyState": 4,
+        "currentTime": 1.456274,
+        "error": null,
+        "status": "PASSED"
+      },
+      {
+        "src": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/08-lonely.mp3",
+        "readyState": 4,
+        "currentTime": 1.442141,
+        "error": null,
+        "status": "PASSED"
+      }
+    ],
+    "order": [
+      {
+        "track": "Babydoll",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/01-babydoll.mp3",
+        "status": "PASSED"
+      },
+      {
+        "track": "Without Me",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/02-without-me.mp3",
+        "status": "PASSED"
+      },
+      {
+        "track": "Everyday Normal Guy 2",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/03-everyday-normal-guy-2.mp3",
+        "status": "PASSED"
+      },
+      {
+        "track": "Sailor Song",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/04-sailor-song.mp3",
+        "status": "PASSED"
+      },
+      {
+        "track": "Can't Tell Me Nothing",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/05-cant-tell-me-nothing.mp3",
+        "status": "PASSED"
+      },
+      {
+        "track": "Love Me Not",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/06-love-me-not.mp3",
+        "status": "PASSED"
+      },
+      {
+        "track": "I Thought I Saw Your Face Today",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/07-i-thought-i-saw-your-face-today.mp3",
+        "status": "PASSED"
+      },
+      {
+        "track": "Lonely",
+        "source": "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/08-lonely.mp3",
+        "status": "PASSED"
+      }
+    ],
+    "failures": [],
+    "local_file_request_notes": [
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/02-without-me.mp3",
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/04-sailor-song.mp3",
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/05-cant-tell-me-nothing.mp3",
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/06-love-me-not.mp3",
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/03-everyday-normal-guy-2.mp3",
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/07-i-thought-i-saw-your-face-today.mp3",
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/01-babydoll.mp3",
+      "file:///C:/Users/LalithReddy.b/Let_It_Happen/album/audio/08-lonely.mp3"
+    ]
+  }
+}

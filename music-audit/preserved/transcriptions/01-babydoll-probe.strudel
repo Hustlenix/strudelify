@@ -1,0 +1,4 @@
+// DIAGNOSTIC ONLY: one spectral peak candidate per second.
+// Not a melody/bass transcription or a cover. No listening verification.
+setcps(1)
+$: note("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ a3 c2 a2 c2 c2").slow(16).s("sine").gain(.1)

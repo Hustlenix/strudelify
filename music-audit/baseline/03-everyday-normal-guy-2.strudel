@@ -1,0 +1,28 @@
+// title: Everyday Normal Guy 2
+// artist: Jon Lajoie
+// audio: 03-everyday-normal-guy-2.mp3
+// Instrumental rendition — no lyrics, just the comfy loop.
+
+setcps(90/60/4)
+
+// goofy little lead
+$: cat(
+  note("a3@4 c4@4 a3@4 g3@4"),
+  note("e3@4 g3@4 a3@8"),
+  note("f3@4 a3@4 c4@4 a3@4"),
+  note("g3@4 e3@4 a3@8")
+).s("square").lpf(1400).gain(.2).attack(.02).release(.12).room(.25)
+
+// chords — Am G F G
+$: note("<[a3,c4,e4] [g3,b3,d4] [f3,a3,c4] [g3,b3,d4]>")
+  .s("triangle").attack(.06).release(.3).gain(.14).room(.3)
+
+// bass
+$: note("<a2*4 g2*4 f2*4 g2*4>").s("sawtooth").lpf(500).legato(.7).gain(.5)
+
+// drums — simple boom bap
+$: s("<[bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ bd]>").bank("RolandTR808").gain(.8)
+
+$: s("~ ~ sd ~ ~ ~ sd ~").bank("RolandTR808").gain(.45).room(.2)
+
+$: s("hh*8").bank("RolandTR808").gain(.18)

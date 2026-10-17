@@ -1,0 +1,410 @@
+[
+  {
+    "id": "01-babydoll",
+    "artist": "Dominic Fike",
+    "title": "Babydoll",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 0:48.114–0:58.114 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Check tracker 166.71 BPM, half-time 83.35, and strongest autocorrelation candidate 56.17; confirm A minor against A major, then correct bass roots and the low-margin chord candidates.",
+      "Build section contrasts from the measured timeline over 0–1:38.112; verify video pre/post-roll and assign verse/chorus labels by listening."
+    ]
+  },
+  {
+    "id": "02-without-me",
+    "artist": "Eminem",
+    "title": "Without Me",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 0:54.499–1:04.499 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Check tracker 112.35 BPM, half-time 56.17, and strongest autocorrelation candidate 112.35; confirm G minor against G major, then correct bass roots and the low-margin chord candidates.",
+      "Build section contrasts from the measured timeline over 0–4:57.624; verify video pre/post-roll and assign verse/chorus labels by listening."
+    ]
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "artist": "Jon Lajoie",
+    "title": "Everyday Normal Guy 2",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 1:50.628–2:00.628 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Check tracker 90.67 BPM, half-time 45.33, and strongest autocorrelation candidate 178.21; confirm D minor against A major, then correct bass roots and the low-margin chord candidates.",
+      "Build section contrasts from the measured timeline over 0–3:41.256; verify video pre/post-roll and assign verse/chorus labels by listening."
+    ]
+  },
+  {
+    "id": "04-sailor-song",
+    "artist": "Gigi Perez",
+    "title": "Sailor Song",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 0:24.148–0:34.148 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Check tracker 126.05 BPM, half-time 63.02, and strongest autocorrelation candidate 63.02; confirm B major against D# minor, then correct bass roots and the low-margin chord candidates.",
+      "Build section contrasts from the measured timeline over 0–3:29.533; use one identified local cycle, not the full 30-minute file."
+    ]
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "artist": "Kanye West",
+    "title": "Can't Tell Me Nothing",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 0:45.527–0:55.527 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Resolve the tempo disagreement before building a grid: onset autocorrelation favors about 79.51 BPM, while the default-prior beat tracker chose 107.67 BPM. Audition the approximately 80 BPM interpretation first. The supplied 107.67 BPM bar chart is hypothetical, not a validated harmonic rhythm.",
+      "Build section contrasts from the measured timeline over 0–4:31.704; verify video pre/post-roll and assign verse/chorus labels by listening."
+    ]
+  },
+  {
+    "id": "06-love-me-not",
+    "artist": "Ravyn Lenae",
+    "title": "Love Me Not",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 0:57.110–1:07.110 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Check tracker 114.84 BPM, half-time 57.42, and strongest autocorrelation candidate 56.79; confirm C major against A minor, then correct bass roots and the low-margin chord candidates.",
+      "Build section contrasts from the measured timeline over 0–3:33.067; use one identified local cycle, not the full 30-minute file."
+    ]
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "artist": "She & Him",
+    "title": "I Thought I Saw Your Face Today",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 0:00.023–0:10.023 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Check tracker 156.60 BPM, half-time 78.30, and strongest autocorrelation candidate 79.51; confirm G major against D major, then correct bass roots and the low-margin chord candidates.",
+      "Build section contrasts from the measured timeline over 0–2:50.400; verify video pre/post-roll and assign verse/chorus labels by listening."
+    ]
+  },
+  {
+    "id": "08-lonely",
+    "artist": "Akon",
+    "title": "Lonely",
+    "status": "PENDING",
+    "score_out_of_100": null,
+    "reason": "Album implementation absent at this audit snapshot; no perceptual comparison performed",
+    "rubric": [
+      {
+        "criterion": "Recognizable melody and motifs",
+        "weight": 25,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Harmony and bass accuracy",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Rhythm and groove",
+        "weight": 20,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Arrangement and song structure",
+        "weight": 15,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Instrumentation and timbre",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      },
+      {
+        "criterion": "Technical playback reliability",
+        "weight": 10,
+        "score": null,
+        "status": "PENDING"
+      }
+    ],
+    "top_three_reference_priorities": [
+      "Validate the main phrase at 1:08.782–1:18.782 against the anchor WAV; transcribe its contour and attack timing before choosing the lead sound.",
+      "Check tracker 90.67 BPM, half-time 45.33, and strongest autocorrelation candidate 90.67; confirm F minor against G# major, then correct bass roots and the low-margin chord candidates.",
+      "Build section contrasts from the measured timeline over 0–4:23.064; verify video pre/post-roll and assign verse/chorus labels by listening."
+    ]
+  }
+]

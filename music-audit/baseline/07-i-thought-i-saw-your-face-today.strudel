@@ -1,0 +1,32 @@
+// title: I Thought I Saw Your Face Today
+// artist: She & Him
+// audio: 07-i-thought-i-saw-your-face-today.mp3
+// Instrumental rendition — no lyrics, just the vintage bounce.
+
+setcps(116/60/4)
+
+// melody — sweet and doo-woppy
+$: cat(
+  note("~@4 d4@2 e4@2 f#4@4 e4@4"),
+  note("d4@8 ~@8"),
+  note("f#4@2 e4@2 d4@4 b3@4 c#4@4"),
+  note("d4@8 ~@8"),
+  note("b4@4 a4@2 g4@2 a4@4 b4@4"),
+  note("a4@8 ~@8"),
+  note("d5@2 c#5@2 b4@4 a4@4 g4@4"),
+  note("f#4@8 ~@8")
+).s("triangle").gain(.3).attack(.01).release(.28).room(.35).delay(.12)
+
+// chords — D Bm G A
+$: note("<[d3,f#3,a3] [b2,d3,f#3] [g3,b3,d4] [a3,c#4,e4]>")
+  .s("triangle").attack(.04).release(.3).gain(.14).room(.3)
+
+// bass
+$: note("<d2*4 b1*4 g2*4 a2*4>").s("sawtooth").lpf(460).legato(.7).gain(.45)
+
+// drums — vintage LinnDrum
+$: s("<[bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ bd]>").bank("LinnDrum").gain(.75)
+
+$: s("~ ~ sd ~ ~ ~ sd ~").bank("LinnDrum").gain(.45).room(.2)
+
+$: s("hh*8").bank("LinnDrum").gain(.2)

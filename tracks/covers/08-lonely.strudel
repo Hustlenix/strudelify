@@ -1,0 +1,28 @@
+// title: Lonely
+// artist: Akon
+// audio: 08-lonely.mp3
+// Instrumental rendition — no lyrics, just the sad whistle.
+
+setcps(90/60/4)
+
+// lead — mournful
+$: cat(
+  note("c#5@4 a4@4 f#4@8"),
+  note("~@4 f#4@2 g#4@2 a4@8"),
+  note("b4@4 a4@4 g#4@4 f#4@4"),
+  note("f#4@8 ~@8")
+).s("sine").gain(.34).attack(.05).release(.5).room(.5).delay(.3)
+
+// pad — F#m D Bm C#
+$: note("<[f#3,a3,c#4] [d3,f#3,a3] [b2,d3,f#3] [c#3,f3,g#3]>")
+  .s("triangle").attack(.15).release(.6).gain(.14).room(.5)
+
+// bass
+$: note("<f#2*2 d2*2 b1*2 c#2*2>").s("sawtooth").lpf(360).legato(.9).gain(.5)
+
+// drums — slow and soft
+$: s("<[bd ~ ~ ~ ~ ~ ~ ~] [bd ~ ~ ~ ~ ~ ~ ~] [bd ~ ~ ~ ~ ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~ ~]>").bank("RolandTR909").gain(.6)
+
+$: s("<[~ ~ ~ ~ ~ ~ sd ~] [~ ~ ~ ~ ~ ~ sd ~] [~ ~ ~ ~ ~ ~ sd ~] [~ ~ ~ ~ ~ ~ sd sd]>").bank("RolandTR909").gain(.3).room(.4)
+
+$: s("hh*8").bank("RolandTR909").gain(.1)

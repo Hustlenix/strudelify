@@ -1,0 +1,50 @@
+[
+  {
+    "track": "01-babydoll",
+    "source_sha256_before": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+    "source_sha256_after": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+    "unchanged": true
+  },
+  {
+    "track": "02-without-me",
+    "source_sha256_before": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+    "source_sha256_after": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+    "unchanged": true
+  },
+  {
+    "track": "03-everyday-normal-guy-2",
+    "source_sha256_before": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+    "source_sha256_after": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+    "unchanged": true
+  },
+  {
+    "track": "04-sailor-song",
+    "source_sha256_before": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+    "source_sha256_after": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+    "unchanged": true
+  },
+  {
+    "track": "05-cant-tell-me-nothing",
+    "source_sha256_before": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+    "source_sha256_after": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+    "unchanged": true
+  },
+  {
+    "track": "06-love-me-not",
+    "source_sha256_before": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+    "source_sha256_after": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+    "unchanged": true
+  },
+  {
+    "track": "07-i-thought-i-saw-your-face-today",
+    "source_sha256_before": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+    "source_sha256_after": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+    "unchanged": true
+  },
+  {
+    "track": "08-lonely",
+    "source_sha256_before": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+    "source_sha256_after": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+    "unchanged": true
+  }
+]

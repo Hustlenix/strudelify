@@ -1,0 +1,7138 @@
+{
+  "status": "PASSED",
+  "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+  "empty_windows": [],
+  "windows": [
+    {
+      "start": 0,
+      "end": 2.29,
+      "events": [
+        {
+          "begin": 0,
+          "end": 0.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 0.5,
+          "end": 1,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 0,
+          "end": 0.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 0.5,
+          "end": 1,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 0,
+          "end": 0.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 0.5,
+          "end": 1,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 1,
+          "end": 1.5,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 1.5,
+          "end": 2,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 1,
+          "end": 1.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 1.5,
+          "end": 2,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 1,
+          "end": 1.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 1.5,
+          "end": 2,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2,
+          "end": 2.29,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2,
+          "end": 2.29,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2,
+          "end": 2.29,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 0,
+          "end": 0.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 0.25,
+          "end": 0.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 0.5,
+          "end": 0.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 0.75,
+          "end": 1,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 1,
+          "end": 1.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 2,
+          "end": 2.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 2.25,
+          "end": 2.29,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 0,
+          "end": 0.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 0.375,
+          "end": 0.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 0.75,
+          "end": 0.875,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 1,
+          "end": 1.125,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 1.375,
+          "end": 1.5,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 1.75,
+          "end": 1.875,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 2,
+          "end": 2.125,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 0,
+          "end": 0.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 0.5,
+          "end": 0.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 1,
+          "end": 1.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 1.5,
+          "end": 1.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 2,
+          "end": 2.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 0.25,
+          "end": 0.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 1.25,
+          "end": 1.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 2.25,
+          "end": 2.29,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 0.75,
+          "end": 1,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 1.75,
+          "end": 2,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 0,
+          "end": 0.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 0.25,
+          "end": 0.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 0.5,
+          "end": 0.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 0.75,
+          "end": 1,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 1,
+          "end": 1.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 1.25,
+          "end": 1.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 1.5,
+          "end": 1.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 1.75,
+          "end": 2,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 2,
+          "end": 2.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 2.25,
+          "end": 2.29,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 2.29,
+      "end": 4.956666666666667,
+      "events": [
+        {
+          "begin": 4,
+          "end": 4.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 4.5,
+          "end": 4.956666666666667,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 4,
+          "end": 4.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 4.5,
+          "end": 4.956666666666667,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 4,
+          "end": 4.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 4.5,
+          "end": 4.956666666666667,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2.29,
+          "end": 2.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2.5,
+          "end": 3,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2.29,
+          "end": 2.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2.5,
+          "end": 3,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2.29,
+          "end": 2.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2.5,
+          "end": 3,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 3,
+          "end": 3.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 3.5,
+          "end": 4,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 3,
+          "end": 3.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 3.5,
+          "end": 4,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 3,
+          "end": 3.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 3.5,
+          "end": 4,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 2.29,
+          "end": 2.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 2.5,
+          "end": 2.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 2.75,
+          "end": 3,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 3,
+          "end": 3.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 3.75,
+          "end": 4,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 4,
+          "end": 4.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 4.25,
+          "end": 4.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 4.5,
+          "end": 4.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 4.75,
+          "end": 4.956666666666667,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 4,
+          "end": 4.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 4.375,
+          "end": 4.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 4.75,
+          "end": 4.875,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 2.375,
+          "end": 2.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 2.75,
+          "end": 2.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 3,
+          "end": 3.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 3.375,
+          "end": 3.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 3.75,
+          "end": 3.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 4,
+          "end": 4.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 4.5,
+          "end": 4.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 2.5,
+          "end": 2.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 3,
+          "end": 3.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 3.5,
+          "end": 3.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 3.75,
+          "end": 4,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 2.29,
+          "end": 2.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 3.25,
+          "end": 3.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 4.25,
+          "end": 4.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 2.75,
+          "end": 3,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 3.75,
+          "end": 4,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 4.75,
+          "end": 4.956666666666667,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 2.29,
+          "end": 2.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 2.5,
+          "end": 2.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 2.75,
+          "end": 3,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 3,
+          "end": 3.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 3.25,
+          "end": 3.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 3.5,
+          "end": 3.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 3.75,
+          "end": 4,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 4,
+          "end": 4.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 4.25,
+          "end": 4.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 4.5,
+          "end": 4.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 4.75,
+          "end": 4.956666666666667,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 14.489999999999998,
+      "end": 17.156666666666666,
+      "events": [
+        {
+          "begin": 16,
+          "end": 16.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 16.5,
+          "end": 17,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 16,
+          "end": 16.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 16.5,
+          "end": 17,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 16,
+          "end": 16.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 16.5,
+          "end": 17,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 17,
+          "end": 17.156666666666666,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 17,
+          "end": 17.156666666666666,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 17,
+          "end": 17.156666666666666,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 14.49,
+          "end": 14.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 14.5,
+          "end": 15,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 14.49,
+          "end": 14.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 14.5,
+          "end": 15,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 14.49,
+          "end": 14.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 14.5,
+          "end": 15,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 15,
+          "end": 15.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 15.5,
+          "end": 16,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 15,
+          "end": 15.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 15.5,
+          "end": 16,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 15,
+          "end": 15.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 15.5,
+          "end": 16,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 14.49,
+          "end": 14.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 14.5,
+          "end": 14.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 14.75,
+          "end": 15,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 15,
+          "end": 15.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 15.75,
+          "end": 16,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 16,
+          "end": 16.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 16.25,
+          "end": 16.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 16.5,
+          "end": 16.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 16.75,
+          "end": 17,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 17,
+          "end": 17.156666666666666,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 16,
+          "end": 16.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 16.375,
+          "end": 16.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 16.75,
+          "end": 16.875,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 17,
+          "end": 17.125,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 14.49,
+          "end": 14.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 14.75,
+          "end": 14.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 15,
+          "end": 15.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 15.375,
+          "end": 15.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 15.75,
+          "end": 15.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 16,
+          "end": 16.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 16.5,
+          "end": 16.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 17,
+          "end": 17.156666666666666,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 14.5,
+          "end": 14.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 15,
+          "end": 15.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 15.5,
+          "end": 15.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 15.75,
+          "end": 16,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 14.49,
+          "end": 14.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 15.25,
+          "end": 15.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 16.25,
+          "end": 16.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 14.75,
+          "end": 15,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 15.75,
+          "end": 16,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 16.75,
+          "end": 17,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 14.49,
+          "end": 14.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 14.5,
+          "end": 14.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 14.75,
+          "end": 15,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 15,
+          "end": 15.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 15.25,
+          "end": 15.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 15.5,
+          "end": 15.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 15.75,
+          "end": 16,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 16,
+          "end": 16.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 16.25,
+          "end": 16.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 16.5,
+          "end": 16.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 16.75,
+          "end": 17,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 17,
+          "end": 17.156666666666666,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 22.013333333333335,
+      "end": 24.68,
+      "events": [
+        {
+          "begin": 24,
+          "end": 24.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 24.5,
+          "end": 24.68,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 24,
+          "end": 24.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 24.5,
+          "end": 24.68,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 24,
+          "end": 24.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 24.5,
+          "end": 24.68,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 22.013333333333332,
+          "end": 22.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 22.5,
+          "end": 23,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 22.013333333333332,
+          "end": 22.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 22.5,
+          "end": 23,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 22.013333333333332,
+          "end": 22.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 22.5,
+          "end": 23,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 23,
+          "end": 23.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 23.5,
+          "end": 24,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 23,
+          "end": 23.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 23.5,
+          "end": 24,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 23,
+          "end": 23.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 23.5,
+          "end": 24,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 22.013333333333332,
+          "end": 22.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 22.25,
+          "end": 22.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 22.5,
+          "end": 22.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 22.75,
+          "end": 23,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 23,
+          "end": 23.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 23.75,
+          "end": 24,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 24,
+          "end": 24.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 24.25,
+          "end": 24.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 24.5,
+          "end": 24.68,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 24,
+          "end": 24.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 24.375,
+          "end": 24.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 22.013333333333332,
+          "end": 22.125,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 22.375,
+          "end": 22.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 22.75,
+          "end": 22.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 23,
+          "end": 23.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 23.375,
+          "end": 23.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 23.75,
+          "end": 23.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 24,
+          "end": 24.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 24.5,
+          "end": 24.68,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 22.013333333333332,
+          "end": 22.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 22.5,
+          "end": 22.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 23,
+          "end": 23.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 23.5,
+          "end": 23.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 23.75,
+          "end": 24,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 22.25,
+          "end": 22.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 23.25,
+          "end": 23.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 24.25,
+          "end": 24.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 22.75,
+          "end": 23,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 23.75,
+          "end": 24,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 22.013333333333332,
+          "end": 22.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 22.25,
+          "end": 22.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 22.5,
+          "end": 22.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 22.75,
+          "end": 23,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 23,
+          "end": 23.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 23.25,
+          "end": 23.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 23.5,
+          "end": 23.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 23.75,
+          "end": 24,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 24,
+          "end": 24.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 24.25,
+          "end": 24.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 24.5,
+          "end": 24.68,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 37.739999999999995,
+      "end": 40.406666666666666,
+      "events": [
+        {
+          "begin": 40,
+          "end": 40.406666666666666,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 40,
+          "end": 40.406666666666666,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 40,
+          "end": 40.406666666666666,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 37.74,
+          "end": 38,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 37.74,
+          "end": 38,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 37.74,
+          "end": 38,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 38,
+          "end": 38.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 38.5,
+          "end": 39,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 38,
+          "end": 38.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 38.5,
+          "end": 39,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 38,
+          "end": 38.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 38.5,
+          "end": 39,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 39,
+          "end": 39.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 39.5,
+          "end": 40,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 39,
+          "end": 39.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 39.5,
+          "end": 40,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 39,
+          "end": 39.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 39.5,
+          "end": 40,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 38,
+          "end": 38.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 38.25,
+          "end": 38.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 38.5,
+          "end": 38.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 38.75,
+          "end": 39,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 39,
+          "end": 39.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 39.75,
+          "end": 40,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 40,
+          "end": 40.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 40.25,
+          "end": 40.406666666666666,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 40,
+          "end": 40.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 40.375,
+          "end": 40.406666666666666,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 37.75,
+          "end": 37.875,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 38,
+          "end": 38.125,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 38.375,
+          "end": 38.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 38.75,
+          "end": 38.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 39,
+          "end": 39.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 39.375,
+          "end": 39.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 39.75,
+          "end": 39.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 40,
+          "end": 40.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 37.74,
+          "end": 37.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 38,
+          "end": 38.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 38.5,
+          "end": 38.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 39,
+          "end": 39.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 39.5,
+          "end": 39.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 39.75,
+          "end": 40,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 38.25,
+          "end": 38.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 39.25,
+          "end": 39.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 40.25,
+          "end": 40.406666666666666,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 37.75,
+          "end": 38,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 38.75,
+          "end": 39,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 39.75,
+          "end": 40,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 37.74,
+          "end": 37.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 37.75,
+          "end": 38,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 38,
+          "end": 38.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 38.25,
+          "end": 38.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 38.5,
+          "end": 38.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 38.75,
+          "end": 39,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 39,
+          "end": 39.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 39.25,
+          "end": 39.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 39.5,
+          "end": 39.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 39.75,
+          "end": 40,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 40,
+          "end": 40.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 40.25,
+          "end": 40.406666666666666,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 45.51,
+      "end": 48.17666666666666,
+      "events": [
+        {
+          "begin": 48,
+          "end": 48.17666666666667,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 48,
+          "end": 48.17666666666667,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 48,
+          "end": 48.17666666666667,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 45.51,
+          "end": 46,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 45.51,
+          "end": 46,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 45.51,
+          "end": 46,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 46,
+          "end": 46.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 46.5,
+          "end": 47,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 46,
+          "end": 46.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 46.5,
+          "end": 47,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 46,
+          "end": 46.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 46.5,
+          "end": 47,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 47,
+          "end": 47.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 47.5,
+          "end": 48,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 47,
+          "end": 47.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 47.5,
+          "end": 48,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 47,
+          "end": 47.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 47.5,
+          "end": 48,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 46,
+          "end": 46.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 46.25,
+          "end": 46.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 46.5,
+          "end": 46.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 46.75,
+          "end": 47,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 47,
+          "end": 47.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 47.75,
+          "end": 48,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 48,
+          "end": 48.17666666666667,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 48,
+          "end": 48.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 45.75,
+          "end": 45.875,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 46,
+          "end": 46.125,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 46.375,
+          "end": 46.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 46.75,
+          "end": 46.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 47,
+          "end": 47.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 47.375,
+          "end": 47.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 47.75,
+          "end": 47.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 48,
+          "end": 48.17666666666667,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 45.51,
+          "end": 45.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 46,
+          "end": 46.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 46.5,
+          "end": 46.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 47,
+          "end": 47.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 47.5,
+          "end": 47.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 47.75,
+          "end": 48,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 46.25,
+          "end": 46.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 47.25,
+          "end": 47.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 45.75,
+          "end": 46,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 46.75,
+          "end": 47,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 47.75,
+          "end": 48,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 45.51,
+          "end": 45.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 45.75,
+          "end": 46,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 46,
+          "end": 46.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 46.25,
+          "end": 46.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 46.5,
+          "end": 46.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 46.75,
+          "end": 47,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 47,
+          "end": 47.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 47.25,
+          "end": 47.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 47.5,
+          "end": 47.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 47.75,
+          "end": 48,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 48,
+          "end": 48.17666666666667,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 50.156666666666666,
+      "end": 52.82333333333333,
+      "events": [
+        {
+          "begin": 52,
+          "end": 52.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 52.5,
+          "end": 52.82333333333333,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 52,
+          "end": 52.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 52.5,
+          "end": 52.82333333333333,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 52,
+          "end": 52.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 52.5,
+          "end": 52.82333333333333,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 50.156666666666666,
+          "end": 50.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 50.5,
+          "end": 51,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 50.156666666666666,
+          "end": 50.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 50.5,
+          "end": 51,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 50.156666666666666,
+          "end": 50.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 50.5,
+          "end": 51,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 51,
+          "end": 51.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 51.5,
+          "end": 52,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 51,
+          "end": 51.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 51.5,
+          "end": 52,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 51,
+          "end": 51.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 51.5,
+          "end": 52,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 50.156666666666666,
+          "end": 50.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 50.25,
+          "end": 50.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 50.5,
+          "end": 50.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 50.75,
+          "end": 51,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 51,
+          "end": 51.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 51.75,
+          "end": 52,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 52,
+          "end": 52.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 52.25,
+          "end": 52.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 52.5,
+          "end": 52.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 52.75,
+          "end": 52.82333333333333,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 52,
+          "end": 52.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 52.375,
+          "end": 52.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 52.75,
+          "end": 52.82333333333333,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 50.375,
+          "end": 50.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 50.75,
+          "end": 50.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 51,
+          "end": 51.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 51.375,
+          "end": 51.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 51.75,
+          "end": 51.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 52,
+          "end": 52.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 52.5,
+          "end": 52.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 50.156666666666666,
+          "end": 50.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 50.5,
+          "end": 50.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 51,
+          "end": 51.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 51.5,
+          "end": 51.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 51.75,
+          "end": 52,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 50.25,
+          "end": 50.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 51.25,
+          "end": 51.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 52.25,
+          "end": 52.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 50.75,
+          "end": 51,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 51.75,
+          "end": 52,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 52.75,
+          "end": 52.82333333333333,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 50.156666666666666,
+          "end": 50.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 50.25,
+          "end": 50.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 50.5,
+          "end": 50.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 50.75,
+          "end": 51,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 51,
+          "end": 51.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 51.25,
+          "end": 51.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 51.5,
+          "end": 51.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 51.75,
+          "end": 52,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 52,
+          "end": 52.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 52.25,
+          "end": 52.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 52.5,
+          "end": 52.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 52.75,
+          "end": 52.82333333333333,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 70.01666666666667,
+      "end": 72.68333333333334,
+      "events": [
+        {
+          "begin": 72,
+          "end": 72.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 72.5,
+          "end": 72.68333333333334,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 72,
+          "end": 72.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 72.5,
+          "end": 72.68333333333334,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 72,
+          "end": 72.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 72.5,
+          "end": 72.68333333333334,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 70.01666666666667,
+          "end": 70.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 70.5,
+          "end": 71,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 70.01666666666667,
+          "end": 70.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 70.5,
+          "end": 71,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 70.01666666666667,
+          "end": 70.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 70.5,
+          "end": 71,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 71,
+          "end": 71.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 71.5,
+          "end": 72,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 71,
+          "end": 71.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 71.5,
+          "end": 72,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 71,
+          "end": 71.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 71.5,
+          "end": 72,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 70.01666666666667,
+          "end": 70.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 70.25,
+          "end": 70.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 70.5,
+          "end": 70.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 70.75,
+          "end": 71,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 71,
+          "end": 71.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 71.75,
+          "end": 72,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 72,
+          "end": 72.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 72.25,
+          "end": 72.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 72.5,
+          "end": 72.68333333333334,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 72,
+          "end": 72.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 72.375,
+          "end": 72.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 70.01666666666667,
+          "end": 70.125,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 70.375,
+          "end": 70.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 70.75,
+          "end": 70.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 71,
+          "end": 71.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 71.375,
+          "end": 71.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 71.75,
+          "end": 71.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 72,
+          "end": 72.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 72.5,
+          "end": 72.68333333333334,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 70.01666666666667,
+          "end": 70.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 70.5,
+          "end": 70.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 71,
+          "end": 71.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 71.5,
+          "end": 71.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 71.75,
+          "end": 72,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 70.25,
+          "end": 70.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 71.25,
+          "end": 71.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 72.25,
+          "end": 72.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 70.75,
+          "end": 71,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 71.75,
+          "end": 72,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 70.01666666666667,
+          "end": 70.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 70.25,
+          "end": 70.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 70.5,
+          "end": 70.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 70.75,
+          "end": 71,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 71,
+          "end": 71.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 71.25,
+          "end": 71.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 71.5,
+          "end": 71.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 71.75,
+          "end": 72,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 72,
+          "end": 72.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 72.25,
+          "end": 72.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 72.5,
+          "end": 72.68333333333334,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 74.16333333333333,
+      "end": 76.83,
+      "events": [
+        {
+          "begin": 76,
+          "end": 76.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 76.5,
+          "end": 76.83,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 76,
+          "end": 76.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 76.5,
+          "end": 76.83,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 76,
+          "end": 76.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 76.5,
+          "end": 76.83,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 74.16333333333333,
+          "end": 74.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 74.5,
+          "end": 75,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 74.16333333333333,
+          "end": 74.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 74.5,
+          "end": 75,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 74.16333333333333,
+          "end": 74.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 74.5,
+          "end": 75,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 75,
+          "end": 75.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 75.5,
+          "end": 76,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 75,
+          "end": 75.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 75.5,
+          "end": 76,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 75,
+          "end": 75.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 75.5,
+          "end": 76,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 74.16333333333333,
+          "end": 74.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 74.25,
+          "end": 74.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 74.5,
+          "end": 74.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 74.75,
+          "end": 75,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 75,
+          "end": 75.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 75.75,
+          "end": 76,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 76,
+          "end": 76.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 76.25,
+          "end": 76.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 76.5,
+          "end": 76.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 76.75,
+          "end": 76.83,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 76,
+          "end": 76.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 76.375,
+          "end": 76.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 76.75,
+          "end": 76.83,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 74.375,
+          "end": 74.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 74.75,
+          "end": 74.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 75,
+          "end": 75.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 75.375,
+          "end": 75.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 75.75,
+          "end": 75.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 76,
+          "end": 76.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 76.5,
+          "end": 76.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 74.16333333333333,
+          "end": 74.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 74.5,
+          "end": 74.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 75,
+          "end": 75.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 75.5,
+          "end": 75.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 75.75,
+          "end": 76,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 74.25,
+          "end": 74.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 75.25,
+          "end": 75.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 76.25,
+          "end": 76.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 74.75,
+          "end": 75,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 75.75,
+          "end": 76,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 76.75,
+          "end": 76.83,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 74.16333333333333,
+          "end": 74.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 74.25,
+          "end": 74.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 74.5,
+          "end": 74.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 74.75,
+          "end": 75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 75,
+          "end": 75.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 75.25,
+          "end": 75.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 75.5,
+          "end": 75.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 75.75,
+          "end": 76,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 76,
+          "end": 76.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 76.25,
+          "end": 76.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 76.5,
+          "end": 76.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 76.75,
+          "end": 76.83,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 78.84,
+      "end": 81.50666666666666,
+      "events": [
+        {
+          "begin": 80,
+          "end": 80.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 80.5,
+          "end": 81,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 80,
+          "end": 80.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 80.5,
+          "end": 81,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 80,
+          "end": 80.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 80.5,
+          "end": 81,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 81,
+          "end": 81.5,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 81.5,
+          "end": 81.50666666666666,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 81,
+          "end": 81.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 81.5,
+          "end": 81.50666666666666,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 81,
+          "end": 81.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 81.5,
+          "end": 81.50666666666666,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 78.84,
+          "end": 79,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 78.84,
+          "end": 79,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 78.84,
+          "end": 79,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 79,
+          "end": 79.5,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 79.5,
+          "end": 80,
+          "value": {
+            "note": "e3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 79,
+          "end": 79.5,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 79.5,
+          "end": 80,
+          "value": {
+            "note": "g#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 79,
+          "end": 79.5,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 79.5,
+          "end": 80,
+          "value": {
+            "note": "b3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 78.84,
+          "end": 79,
+          "value": {
+            "note": "e5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 79,
+          "end": 79.5,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 79.75,
+          "end": 80,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 80,
+          "end": 80.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 80.25,
+          "end": 80.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 80.5,
+          "end": 80.75,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 80.75,
+          "end": 81,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 81,
+          "end": 81.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 80,
+          "end": 80.125,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 80.375,
+          "end": 80.5,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 80.75,
+          "end": 80.875,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 81,
+          "end": 81.125,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 81.375,
+          "end": 81.5,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 78.84,
+          "end": 78.875,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 79,
+          "end": 79.125,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 79.375,
+          "end": 79.5,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 79.75,
+          "end": 79.875,
+          "value": {
+            "note": "e1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 80,
+          "end": 80.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 80.5,
+          "end": 80.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 81,
+          "end": 81.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 81.5,
+          "end": 81.50666666666666,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 79,
+          "end": 79.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 79.5,
+          "end": 79.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 79.75,
+          "end": 80,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 79.25,
+          "end": 79.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 80.25,
+          "end": 80.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 81.25,
+          "end": 81.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 78.84,
+          "end": 79,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 79.75,
+          "end": 80,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 80.75,
+          "end": 81,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 78.84,
+          "end": 79,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 79,
+          "end": 79.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 79.25,
+          "end": 79.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 79.5,
+          "end": 79.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 79.75,
+          "end": 80,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 80,
+          "end": 80.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 80.25,
+          "end": 80.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 80.5,
+          "end": 80.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 80.75,
+          "end": 81,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 81,
+          "end": 81.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 81.25,
+          "end": 81.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 81.5,
+          "end": 81.50666666666666,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "start": 88.89999999999999,
+      "end": 90.56666666666666,
+      "events": [
+        {
+          "begin": 88.9,
+          "end": 89,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 88.9,
+          "end": 89,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 88.9,
+          "end": 89,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.5,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 90,
+          "value": {
+            "note": "d3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.5,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 90,
+          "value": {
+            "note": "f#3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 90,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.5,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.56666666666666,
+          "value": {
+            "note": "a3",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.5,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.56666666666666,
+          "value": {
+            "note": "c#4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.5,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.56666666666666,
+          "value": {
+            "note": "e4",
+            "s": "supersaw",
+            "cutoff": 1500,
+            "attack": 0.15,
+            "release": 0.7,
+            "gain": 0.2,
+            "room": 0.5
+          }
+        },
+        {
+          "begin": 88.9,
+          "end": 89,
+          "value": {
+            "note": "b4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.25,
+          "value": {
+            "note": "f#4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 90.25,
+          "end": 90.5,
+          "value": {
+            "note": "a4",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.56666666666666,
+          "value": {
+            "note": "c#5",
+            "s": "sawtooth",
+            "cutoff": 2200,
+            "gain": 0.26,
+            "attack": 0.02,
+            "release": 0.3,
+            "delay": 0.2
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.125,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 89.375,
+          "end": 89.5,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 89.75,
+          "end": 89.875,
+          "value": {
+            "note": "d1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.125,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 90.375,
+          "end": 90.5,
+          "value": {
+            "note": "a1",
+            "s": "sine",
+            "cutoff": 160,
+            "clip": 0.9,
+            "gain": 0.8
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 89.75,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.25,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.56666666666666,
+          "value": {
+            "s": "bd",
+            "bank": "RolandTR909",
+            "gain": 0.85
+          }
+        },
+        {
+          "begin": 89.25,
+          "end": 89.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 90.25,
+          "end": 90.5,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 88.9,
+          "end": 89,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 89.75,
+          "end": 90,
+          "value": {
+            "s": "cp",
+            "bank": "RolandTR909",
+            "gain": 0.4,
+            "room": 0.25
+          }
+        },
+        {
+          "begin": 88.9,
+          "end": 89,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 89,
+          "end": 89.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 89.25,
+          "end": 89.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 89.5,
+          "end": 89.75,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 89.75,
+          "end": 90,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 90,
+          "end": 90.25,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 90.25,
+          "end": 90.5,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        },
+        {
+          "begin": 90.5,
+          "end": 90.56666666666666,
+          "value": {
+            "s": "hh",
+            "bank": "RolandTR909",
+            "gain": 0.18
+          }
+        }
+      ]
+    }
+  ],
+  "cps": 0.3333333333333333
+}

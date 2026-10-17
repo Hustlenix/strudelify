@@ -1,0 +1,5 @@
+// DIAGNOSTIC ONLY: one spectral peak candidate per second.
+// Not a melody/bass transcription or a cover. No listening verification.
+// EXPECTED SILENCE: detector found no usable low-register candidates in the first 16 seconds.
+setcps(1)
+$: note("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~").slow(16).s("sine").gain(.1)

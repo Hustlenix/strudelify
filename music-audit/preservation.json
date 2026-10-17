@@ -1,0 +1,673 @@
+{
+  "evidence": [
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\.gitignore",
+      "preserved": "preserved\\.gitignore",
+      "sha256": "a82553698441a392c134b724b5786338faba126d55f2497ba6f9cdb1de2203e9"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\album-manifest.json",
+      "preserved": "preserved\\album-manifest.json",
+      "sha256": "ee6c3167bba0ab56aa510cce3b53458f9cc4d43560031306f72d397fb113df0c"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analyze.py",
+      "preserved": "preserved\\analyze.py",
+      "sha256": "6bb9b567c791cbe2b327863573058fff1802ae3e1cf6e02121650526be1de691"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\build_reports.py",
+      "preserved": "preserved\\build_reports.py",
+      "sha256": "1669f12293b2e7406b653651cd2122e00985ba711fdd44320151650e26f8d053"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\finalize.py",
+      "preserved": "preserved\\finalize.py",
+      "sha256": "132fb30be36405a3af23452906363732f29d9825288e354bf5713a78e6d23945"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\INTEGRATION_GUIDE.md",
+      "preserved": "preserved\\INTEGRATION_GUIDE.md",
+      "sha256": "43caf380e9d565c3cb5211786a15a63f88529c42578f5cb501581c19c2061cd8"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\package-lock.json",
+      "preserved": "preserved\\package-lock.json",
+      "sha256": "6d6316b6062295ae416101eee6467f2c64f64ee780200f93b70ebbe0d3ac41a2"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\package.json",
+      "preserved": "preserved\\package.json",
+      "sha256": "e1f974cfcddb3eeef87a6a7dccb7f9103a2699d03ce6e07c30fb362c2cd11c2a"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\README.md",
+      "preserved": "preserved\\README.md",
+      "sha256": "08712687b77bac1bc8f8b27962ea8cb2255d668828582237d27416e104c0375c"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\requirements.lock.txt",
+      "preserved": "preserved\\requirements.lock.txt",
+      "sha256": "2a33769bebd89915a35d0bda726e2afcd68d53db455f25e3a9d97f52b06cfd3d"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\requirements.txt",
+      "preserved": "preserved\\requirements.txt",
+      "sha256": "e1469f6b3405afa14922d34a91d2a04d89b23813f0d6a2167de175f98427503b"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\01-babydoll.md",
+      "preserved": "preserved\\analysis\\01-babydoll.md",
+      "sha256": "fdf7ce85eb03f46ae1768845898e9447b5f741947d4a6b60cc144c2e5d932807"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\02-without-me.md",
+      "preserved": "preserved\\analysis\\02-without-me.md",
+      "sha256": "5dc8f31a15e0a6eb0e4342c62b3eb22a1f4c7c036cee5ba541cab3bef1c6f7d3"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\03-everyday-normal-guy-2.md",
+      "preserved": "preserved\\analysis\\03-everyday-normal-guy-2.md",
+      "sha256": "ad4e058afadc737d47d7091316d17f8a58f41b7d3f8ea0c985248adc104a5d79"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\04-sailor-song.md",
+      "preserved": "preserved\\analysis\\04-sailor-song.md",
+      "sha256": "1728e78997244a5a83ec325449326a3f8c23cbcc215b1fa7954cef35a44e65ec"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\05-cant-tell-me-nothing.md",
+      "preserved": "preserved\\analysis\\05-cant-tell-me-nothing.md",
+      "sha256": "63f562d7417bcb9111357cb674451f219d35dd6b93ee18456e0704abbf5a3fac"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\06-love-me-not.md",
+      "preserved": "preserved\\analysis\\06-love-me-not.md",
+      "sha256": "196be5ce349d4c32700e79a9fe395799aa499b14f2a2e3086d7ca83c6298f11a"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\07-i-thought-i-saw-your-face-today.md",
+      "preserved": "preserved\\analysis\\07-i-thought-i-saw-your-face-today.md",
+      "sha256": "91a20712d2ed62e74b3252c798eeac524a29b3d02cf7c185501686ab5b89c4f2"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\analysis\\08-lonely.md",
+      "preserved": "preserved\\analysis\\08-lonely.md",
+      "sha256": "0e035bae367e9fecb21ab3343581748d06bbe933e4e7b10034f3108e633a7cb0"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\01-babydoll-full-record-profile.json",
+      "preserved": "preserved\\reports\\01-babydoll-full-record-profile.json",
+      "sha256": "763d6044d386f1ff59d33dfb886ab1c99c8452d3e607c8900c2fd00e490489b4"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\01-babydoll-probe.runtime.json",
+      "preserved": "preserved\\reports\\01-babydoll-probe.runtime.json",
+      "sha256": "8f42f6c6e6c9913a57e91b385ddf2617650dc42ece531fdf0f340b69d53129f4"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\01-babydoll.runtime.json",
+      "preserved": "preserved\\reports\\01-babydoll.runtime.json",
+      "sha256": "494a0002ccb52b21ab3c53cf7e563e7834dc44f818f2e817bda3cfedd6f54e9b"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\01-babydoll.webm",
+      "preserved": "preserved\\reports\\01-babydoll.webm",
+      "sha256": "2b5dc95004a5262cd74001284c6c30fdc7cca45bcfa7187e32867870764749fb"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\02-without-me-full-record-profile.json",
+      "preserved": "preserved\\reports\\02-without-me-full-record-profile.json",
+      "sha256": "2ad153e29520855dd208622c55b19d69ec53870f2a937ad9261db9d76b694f18"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\02-without-me-probe.runtime.json",
+      "preserved": "preserved\\reports\\02-without-me-probe.runtime.json",
+      "sha256": "7d4136581a194e23f8dbbbc90333618dbb7cd0c6f3ec3a066f3e35069a111f10"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\02-without-me.runtime.json",
+      "preserved": "preserved\\reports\\02-without-me.runtime.json",
+      "sha256": "866a5841eac8425808cc41c7ce90d8c950236f02e349145b28e0c373a4fd41ae"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\02-without-me.webm",
+      "preserved": "preserved\\reports\\02-without-me.webm",
+      "sha256": "631b8d525569a33a60edce3226d0dce5efe6c6a8d3c6ca611a64d5c8f4f83cb2"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\03-everyday-normal-guy-2-full-record-profile.json",
+      "preserved": "preserved\\reports\\03-everyday-normal-guy-2-full-record-profile.json",
+      "sha256": "27af192d844c4bbe16d63799faf532664a0c90fd94908f1ee7c7af7fafd3f47d"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\03-everyday-normal-guy-2-probe.runtime.json",
+      "preserved": "preserved\\reports\\03-everyday-normal-guy-2-probe.runtime.json",
+      "sha256": "f3ba7045a3ee866d376901b215f265c25545ef300a9cedd3471abc3c0b6991b5"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\03-everyday-normal-guy-2.runtime.json",
+      "preserved": "preserved\\reports\\03-everyday-normal-guy-2.runtime.json",
+      "sha256": "a4a2791b1fd5a2df97a3b30c8e6b290d151b140ee62a2c63462365b8d26fd25a"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\03-everyday-normal-guy-2.webm",
+      "preserved": "preserved\\reports\\03-everyday-normal-guy-2.webm",
+      "sha256": "f5f70c91bb61259e58c8cd45b411596a7774cfe791946687c9baaaf9cadb806a"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\04-sailor-song-full-record-profile.json",
+      "preserved": "preserved\\reports\\04-sailor-song-full-record-profile.json",
+      "sha256": "726e2cd16b680a587660a227b6ed12a4a002580aa4b1f01404f37ce1fa07e464"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\04-sailor-song-probe.runtime.json",
+      "preserved": "preserved\\reports\\04-sailor-song-probe.runtime.json",
+      "sha256": "a1c65041502ab7b10dadc3b2942ba1bc9ba4cd4cb9f5f4b63123ac3c670dec53"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\04-sailor-song.runtime.json",
+      "preserved": "preserved\\reports\\04-sailor-song.runtime.json",
+      "sha256": "ef6ee203d727f4a13d3f162ed22534b8ef00716ad32a644ad8c9637691d7b226"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\04-sailor-song.webm",
+      "preserved": "preserved\\reports\\04-sailor-song.webm",
+      "sha256": "11b8b1b54746f8fc895d833df104ac0df4a690ea827f7168bba4ada857e7d95e"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\05-cant-tell-me-nothing-full-record-profile.json",
+      "preserved": "preserved\\reports\\05-cant-tell-me-nothing-full-record-profile.json",
+      "sha256": "9fc8ac35febe351a4fde9987746d655a38a202dcd3419c8095aebfe80c827fe7"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\05-cant-tell-me-nothing-probe.runtime.json",
+      "preserved": "preserved\\reports\\05-cant-tell-me-nothing-probe.runtime.json",
+      "sha256": "d60d6491f38a6ff41cd3bdec5526e94ef6310892d117cf1d8c6eac23ca85157d"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\05-cant-tell-me-nothing.runtime.json",
+      "preserved": "preserved\\reports\\05-cant-tell-me-nothing.runtime.json",
+      "sha256": "898e9b1fae5f4bb0cd8fe19d02df4ea396f67856be01953831d28f8bc5d4d965"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\05-cant-tell-me-nothing.webm",
+      "preserved": "preserved\\reports\\05-cant-tell-me-nothing.webm",
+      "sha256": "a447c405ec0de97d2dbb2611dbdb216186957e205dd8d1bc7ed585c6a8577b5c"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\06-love-me-not-full-record-profile.json",
+      "preserved": "preserved\\reports\\06-love-me-not-full-record-profile.json",
+      "sha256": "34ddff5a9501146eb1a42c7fc5afdfd9575ff2c04737e762103662c6f354474a"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\06-love-me-not-probe.runtime.json",
+      "preserved": "preserved\\reports\\06-love-me-not-probe.runtime.json",
+      "sha256": "402779a870168f7130b234437b4dc21968e860738e241e87a274b52961fba311"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\06-love-me-not.runtime.json",
+      "preserved": "preserved\\reports\\06-love-me-not.runtime.json",
+      "sha256": "d953dddf11e8ea48e8488bbcd7d2a6d3803b30ab84d375ecf82834793d25f49b"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\06-love-me-not.webm",
+      "preserved": "preserved\\reports\\06-love-me-not.webm",
+      "sha256": "21b77dbd692ca03deb9fb477bacb540d2ed383990b73cae17488859e3ce85a26"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\07-i-thought-i-saw-your-face-today-full-record-profile.json",
+      "preserved": "preserved\\reports\\07-i-thought-i-saw-your-face-today-full-record-profile.json",
+      "sha256": "12a8b8e234e0d9ba1bf116a05893b577c01682ba3f778da434d747811349fc78"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\07-i-thought-i-saw-your-face-today-probe.runtime.json",
+      "preserved": "preserved\\reports\\07-i-thought-i-saw-your-face-today-probe.runtime.json",
+      "sha256": "e72d2179e6ba9f08930a68bec49594b09ce35186e4a40c481e6a16e9cea31b67"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\07-i-thought-i-saw-your-face-today.runtime.json",
+      "preserved": "preserved\\reports\\07-i-thought-i-saw-your-face-today.runtime.json",
+      "sha256": "b22ea5e92735177b923aa13bbc3c87f392d66bf1864e0bbde485b944e486f8dc"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\07-i-thought-i-saw-your-face-today.webm",
+      "preserved": "preserved\\reports\\07-i-thought-i-saw-your-face-today.webm",
+      "sha256": "38b6421576e77c6a73ba9c5614382a6fba5d8676edb271a781b6ea18777c5ac2"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\08-lonely-full-record-profile.json",
+      "preserved": "preserved\\reports\\08-lonely-full-record-profile.json",
+      "sha256": "b4688c88b5db3e46c0917827b4532ae8e3a9830bad6e5b5349826bb984ea2c45"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\08-lonely-probe.runtime.json",
+      "preserved": "preserved\\reports\\08-lonely-probe.runtime.json",
+      "sha256": "eebdb0c4add701f5f5a4d6567ce1d39d410f7a2d0b53a62475e9e390eb5d39b5"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\08-lonely.runtime.json",
+      "preserved": "preserved\\reports\\08-lonely.runtime.json",
+      "sha256": "4d873346a6819337aa7542626dd1b0ec893d93b4817ffc1412a2bd93a6c2e3c6"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\08-lonely.webm",
+      "preserved": "preserved\\reports\\08-lonely.webm",
+      "sha256": "10eb4e5ceb52273137583ad8549e56dece54df512582bd9106bc1d0a49cdad98"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\AUDIT_STATUS.md",
+      "preserved": "preserved\\reports\\AUDIT_STATUS.md",
+      "sha256": "f0d09044a8664d4e177c5c0f4ca60d41005d5f5b2ea1b9f05c31d668aa69211c"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\browser.json",
+      "preserved": "preserved\\reports\\browser.json",
+      "sha256": "8773ce7efae9c314dcea2d4e2a2f4aa87f2c377948a54ba18fe2d095b1b244c3"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\comparison-selftest.json",
+      "preserved": "preserved\\reports\\comparison-selftest.json",
+      "sha256": "84f0b374a767312529059c8f9723721be70db08a6046d201ba898b620c3ff922"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\control-missing-resource.webm",
+      "preserved": "preserved\\reports\\control-missing-resource.webm",
+      "sha256": "7ab76f068fb55a47e3f9d71fd29a8018872c5e957f9ddd32a08680ab5681376f"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\control-missing-sample.webm",
+      "preserved": "preserved\\reports\\control-missing-sample.webm",
+      "sha256": "1cc916186c6e82a0a971b9cec8c1ba1b47d2efbb9d2452dd5aec4abd460dae34"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\control-sine.webm",
+      "preserved": "preserved\\reports\\control-sine.webm",
+      "sha256": "be31b95b35038f16c17c9b090103470c3e000e094f32d6b3f44228b3f3c98dd1"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\delivery-checks.json",
+      "preserved": "preserved\\reports\\delivery-checks.json",
+      "sha256": "f779934704c925604f6c44d5e712a44923bd01fba00ccc6ce0b703ffb28541bb"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\fidelity.json",
+      "preserved": "preserved\\reports\\fidelity.json",
+      "sha256": "7d832cc71a4bedbdd3456541f0df0052538e817151aa031df142ca0515e1727e"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\FIDELITY.md",
+      "preserved": "preserved\\reports\\FIDELITY.md",
+      "sha256": "d2cc01cfbd493da331bbdd60bcda6c809f6613232476de4f9d7f7ffd19621d15"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\long-record-identification.json",
+      "preserved": "preserved\\reports\\long-record-identification.json",
+      "sha256": "03f3aa6ab0992c0e4053f28725465d872528c9acc84e27c222e4bc00947b9b64"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\REFERENCE_SUMMARY.md",
+      "preserved": "preserved\\reports\\REFERENCE_SUMMARY.md",
+      "sha256": "0a78fd56627668f918b1c1a386426b7820594bb31051805c747e25402385d00e"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\selftest-invalid-method.runtime.json",
+      "preserved": "preserved\\reports\\selftest-invalid-method.runtime.json",
+      "sha256": "59e5624b12c4430b901a6a60c484adcea7143d6bb293449fa28946bf5f54a093"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\selftest-invalid-syntax.runtime.json",
+      "preserved": "preserved\\reports\\selftest-invalid-syntax.runtime.json",
+      "sha256": "a9428b793028ae242012657939914b4863ff7ac4012f1024d7407fea067ddb44"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\selftest-silence.runtime.json",
+      "preserved": "preserved\\reports\\selftest-silence.runtime.json",
+      "sha256": "ee869e807576f6b84e6ae6450275258897158ba04b1341868f8542a98b23ccf9"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\selftest-valid.runtime.json",
+      "preserved": "preserved\\reports\\selftest-valid.runtime.json",
+      "sha256": "4a1fce61d830932048466cea45e7be1869d48606b46026c974e734ca2b830b09"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\source-integrity.json",
+      "preserved": "preserved\\reports\\source-integrity.json",
+      "sha256": "98d18bbe8dc9521a1cf202a546cc8277b700810fd6386cca372ab97a9d5b854b"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\validation.json",
+      "preserved": "preserved\\reports\\validation.json",
+      "sha256": "42af65c1f52c3e57fba89b7c2e8abc6fac3726dfb49eca95dd31e31bb782e373"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\reports\\VALIDATION.md",
+      "preserved": "preserved\\reports\\VALIDATION.md",
+      "sha256": "6fd1f51e4b2fc6e84566ad2f6de48c5cf14939aae75a8c26894c390457add2d8"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\browser.mjs",
+      "preserved": "preserved\\tests\\browser.mjs",
+      "sha256": "568a6699a7904d3e6d1b701e1d7457d6ed1ee17b6335dc1d1f79d1908a8b0d1e"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\check_delivery.py",
+      "preserved": "preserved\\tests\\check_delivery.py",
+      "sha256": "e156d9bee41c55bee9480976c4975b5986f9592be68732d3fe09e722be9ca0e4"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\compare_audio.py",
+      "preserved": "preserved\\tests\\compare_audio.py",
+      "sha256": "ab8d6e98a93003d91c9dd6bf8394019da5b1ef5477076c20b304fc5889cfa5a3"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\esm-loader.mjs",
+      "preserved": "preserved\\tests\\esm-loader.mjs",
+      "sha256": "b3f45ad1bbf4d547654c1f6fa89df0a3e738f7db77596e0539883496ddb475f2"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\harness.html",
+      "preserved": "preserved\\tests\\harness.html",
+      "sha256": "a53a657496f7ba6b3fb4c41a74b1b33462249716493270d18b7e7472e0172f49"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\harness.mjs",
+      "preserved": "preserved\\tests\\harness.mjs",
+      "sha256": "490b9965cf78c83287835169cfcd85ad009b5e7e8ea43d62470b3931d70c701a"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\investigate_long.py",
+      "preserved": "preserved\\tests\\investigate_long.py",
+      "sha256": "85c617af46a162a5513f808af7edc1fc1ab7dfb354ffb9d4b492cbd4a0e52763"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\render_metrics.py",
+      "preserved": "preserved\\tests\\render_metrics.py",
+      "sha256": "c659b875d7cd511fe5749ff7d3ac6b21e03e50952a4bb25c8a909945c471b1ba"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\runtime-worker.mjs",
+      "preserved": "preserved\\tests\\runtime-worker.mjs",
+      "sha256": "5fbab8dff0f766034b8b82917b80fb899c30049fc89ce2022090a6cd3fd4de57"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\tests\\validate.mjs",
+      "preserved": "preserved\\tests\\validate.mjs",
+      "sha256": "e8d6c67bf983e40af06f78bbf5aabf3eb4b7e39947b0d3c8756ae5e1441fee8d"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\01-babydoll.json",
+      "preserved": "preserved\\timelines\\01-babydoll.json",
+      "sha256": "bfe48f61a546549e901b912f15bb0a85b18b19472572cf6a672e4405e6c5fd9e"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\02-without-me.json",
+      "preserved": "preserved\\timelines\\02-without-me.json",
+      "sha256": "f9c3a23eae9e481b2fc7bd5ec52dcc6b17cc5e30f61f756e2f8a23f90e725dcf"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\03-everyday-normal-guy-2.json",
+      "preserved": "preserved\\timelines\\03-everyday-normal-guy-2.json",
+      "sha256": "c7a37c29f618d4fc48171ef8b2a7a2bba677dc7cf6d14a8d9e63ed3b1987e24e"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\04-sailor-song.json",
+      "preserved": "preserved\\timelines\\04-sailor-song.json",
+      "sha256": "db746b53a8146907254b44d5d72b2ffa743a99fbbf22fed690d6d19c37918355"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\05-cant-tell-me-nothing.json",
+      "preserved": "preserved\\timelines\\05-cant-tell-me-nothing.json",
+      "sha256": "8a01e1343bdd53a50ad347ae43504d7be3c19926c823e3e261bcc3f9b9ef5d4b"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\06-love-me-not.json",
+      "preserved": "preserved\\timelines\\06-love-me-not.json",
+      "sha256": "13b7c8a829dc1422e5527e4d0027e68d3eeea4d7cefc8eb5e85125b0f50dca18"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\07-i-thought-i-saw-your-face-today.json",
+      "preserved": "preserved\\timelines\\07-i-thought-i-saw-your-face-today.json",
+      "sha256": "54d158312ecc2b7742fd95d464b7d0ea6b6a469e1b2d2e3239915a74f908c413"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\timelines\\08-lonely.json",
+      "preserved": "preserved\\timelines\\08-lonely.json",
+      "sha256": "2139b96d74b8c7164a3defef13a3bf2b340c5321ac765fa06e96ecd4b0d4f6b2"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\01-babydoll-anchor.wav",
+      "preserved": "preserved\\transcriptions\\01-babydoll-anchor.wav",
+      "sha256": "8811b65de82c28214c0e37cfb44976cace8df0a512f76e3833ec940fdb58b724"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\01-babydoll-intro.wav",
+      "preserved": "preserved\\transcriptions\\01-babydoll-intro.wav",
+      "sha256": "6f7b3787075211182f8a4133a2a8e665a4324c24c889e332b73762f19da267f5"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\01-babydoll-observations.json",
+      "preserved": "preserved\\transcriptions\\01-babydoll-observations.json",
+      "sha256": "a6ae3c6f24165dd64adb3d121a65525f01ecb00c7a4995b746756d8add08e4fc"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\01-babydoll-probe.strudel",
+      "preserved": "preserved\\transcriptions\\01-babydoll-probe.strudel",
+      "sha256": "0a5ac307ebe1aa1b769f577f67d10431feec90c7b98f1aa683ee9131207266fd"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\02-without-me-anchor.wav",
+      "preserved": "preserved\\transcriptions\\02-without-me-anchor.wav",
+      "sha256": "fe513313228f5f3b5b514f957f4569173a4c395bd2b280b23af1a957e0c7a948"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\02-without-me-intro.wav",
+      "preserved": "preserved\\transcriptions\\02-without-me-intro.wav",
+      "sha256": "8e6c17db9c70a7103f919a9f9c131bdde34e78f35f41dc0a1504cc0943f91120"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\02-without-me-observations.json",
+      "preserved": "preserved\\transcriptions\\02-without-me-observations.json",
+      "sha256": "f741c34e9963eb175c2c629d19daca3cf3b879d187b1fd71e20cb4ecc9001328"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\02-without-me-probe.strudel",
+      "preserved": "preserved\\transcriptions\\02-without-me-probe.strudel",
+      "sha256": "ee7cd2d522d8d2e68a3041be32a22e328e2a322449f3bb01d3e0359e1ce6a1cc"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\03-everyday-normal-guy-2-anchor.wav",
+      "preserved": "preserved\\transcriptions\\03-everyday-normal-guy-2-anchor.wav",
+      "sha256": "e52b496219015cafd3e4800847cc60fac43cb85670c961b47c2017c914e7f048"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\03-everyday-normal-guy-2-intro.wav",
+      "preserved": "preserved\\transcriptions\\03-everyday-normal-guy-2-intro.wav",
+      "sha256": "ded7d85ebd9bbb76ef0bda4bf8922e3beedcd1255fd7dfd066502639e5bb80a3"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\03-everyday-normal-guy-2-observations.json",
+      "preserved": "preserved\\transcriptions\\03-everyday-normal-guy-2-observations.json",
+      "sha256": "1e1f8aed930d720ffd5334e75ac7b479c64089528d48480d600129752093df90"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\03-everyday-normal-guy-2-probe.strudel",
+      "preserved": "preserved\\transcriptions\\03-everyday-normal-guy-2-probe.strudel",
+      "sha256": "ddb5ad56f66a7f9798603cd329d6eed9355e457e216c01ee6c26fd7de46fd012"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\04-sailor-song-anchor.wav",
+      "preserved": "preserved\\transcriptions\\04-sailor-song-anchor.wav",
+      "sha256": "5cce4c20f8ad35fe654e20482f117905e400195ad745259f064bb600d396608d"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\04-sailor-song-intro.wav",
+      "preserved": "preserved\\transcriptions\\04-sailor-song-intro.wav",
+      "sha256": "0ba22f4bba1ea2962fb4e963ea0904e925863cfb7d4d9a595dd225eac348477a"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\04-sailor-song-observations.json",
+      "preserved": "preserved\\transcriptions\\04-sailor-song-observations.json",
+      "sha256": "cd53aa9e0ec72c976ea06082b2da3564ae97a8080ea0cc70722dbcc851103157"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\04-sailor-song-probe.strudel",
+      "preserved": "preserved\\transcriptions\\04-sailor-song-probe.strudel",
+      "sha256": "bbdceb723de89b434cb2342305799678ebe96a504c4c92f24841d06a35f5e30e"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\05-cant-tell-me-nothing-anchor.wav",
+      "preserved": "preserved\\transcriptions\\05-cant-tell-me-nothing-anchor.wav",
+      "sha256": "567b4dcd007d65bb6b08544e415657bef9186b0327c1a1386b50a0771592e463"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\05-cant-tell-me-nothing-intro.wav",
+      "preserved": "preserved\\transcriptions\\05-cant-tell-me-nothing-intro.wav",
+      "sha256": "26d59f041d414f1024c159f0e073267663575888a9d1689429a5c471f4e66e84"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\05-cant-tell-me-nothing-observations.json",
+      "preserved": "preserved\\transcriptions\\05-cant-tell-me-nothing-observations.json",
+      "sha256": "71021505e2df442d26e9a7468175e43311ed0f7e60330f71378383e43a102472"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\05-cant-tell-me-nothing-probe.strudel",
+      "preserved": "preserved\\transcriptions\\05-cant-tell-me-nothing-probe.strudel",
+      "sha256": "3f0d9c69788291ba9b6e50aa5d67382d4102da1b9412bca25856d2ffffaf6564"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\06-love-me-not-anchor.wav",
+      "preserved": "preserved\\transcriptions\\06-love-me-not-anchor.wav",
+      "sha256": "3a19597d36f60a97a926289dd306f54172e2a4be6a7ad17d19fc884644ea1e97"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\06-love-me-not-intro.wav",
+      "preserved": "preserved\\transcriptions\\06-love-me-not-intro.wav",
+      "sha256": "79e9a69102fbba8059bb99502837e6b08780f7146ec845b55f5533c2fa8c445f"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\06-love-me-not-observations.json",
+      "preserved": "preserved\\transcriptions\\06-love-me-not-observations.json",
+      "sha256": "f5ec996330560151174d11c5997ee3257377aac9eb0e2a5f4b8a82aebe0a2931"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\06-love-me-not-probe.strudel",
+      "preserved": "preserved\\transcriptions\\06-love-me-not-probe.strudel",
+      "sha256": "0f21eaa21e993207b3b59863fa49232c8eabf4b6458481527efb11605a3c14f0"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\07-i-thought-i-saw-your-face-today-anchor.wav",
+      "preserved": "preserved\\transcriptions\\07-i-thought-i-saw-your-face-today-anchor.wav",
+      "sha256": "a3d0067b63e651fb3b4d1c836f246a523fcfa385ca8d403016c5dba2fb340066"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\07-i-thought-i-saw-your-face-today-intro.wav",
+      "preserved": "preserved\\transcriptions\\07-i-thought-i-saw-your-face-today-intro.wav",
+      "sha256": "33b602804a4e493a8bcfc5a3f5c74e4ff47348e28c00a34d45ce114112519f30"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\07-i-thought-i-saw-your-face-today-observations.json",
+      "preserved": "preserved\\transcriptions\\07-i-thought-i-saw-your-face-today-observations.json",
+      "sha256": "58cc01fbfededbd0267b8c86cbbd54f2829682341178b53c861bdd855af01a4c"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\07-i-thought-i-saw-your-face-today-probe.strudel",
+      "preserved": "preserved\\transcriptions\\07-i-thought-i-saw-your-face-today-probe.strudel",
+      "sha256": "29a5e4a6909974beccfffadde07e19fa41846ae00844ab883b14dac759711324"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\08-lonely-anchor.wav",
+      "preserved": "preserved\\transcriptions\\08-lonely-anchor.wav",
+      "sha256": "39d6bb3676abda5ee0a763068c3c25280dadd426ad253cfbd6d06597c312f4cd"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\08-lonely-intro.wav",
+      "preserved": "preserved\\transcriptions\\08-lonely-intro.wav",
+      "sha256": "09c47c19ec670923c613367b38fc36ecc96569de4e9949c8e7b604bf6b4510a0"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\08-lonely-observations.json",
+      "preserved": "preserved\\transcriptions\\08-lonely-observations.json",
+      "sha256": "b5e6b1c6c9dfaeb5e28e48f951f1880a55bbfe82f358786179b5ee3a4ea25ba1"
+    },
+    {
+      "source": "C:\\Users\\LalithReddy.b\\.codex\\Let_It_Happen\\strudel-album-audit\\transcriptions\\08-lonely-probe.strudel",
+      "preserved": "preserved\\transcriptions\\08-lonely-probe.strudel",
+      "sha256": "67472488ce060a7a37796a9192a8d412d16e93d15cae920f4512646d847a364c"
+    }
+  ],
+  "arrangements": [
+    {
+      "id": "01-babydoll",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\01-babydoll.strudel",
+      "album_sha256": "85f17275d9af91a26bdc7c2328b925215bab8a148e38ebcc489ab0a72d9acc6d",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\01-babydoll.strudel",
+      "application_sha256": "85f17275d9af91a26bdc7c2328b925215bab8a148e38ebcc489ab0a72d9acc6d",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    },
+    {
+      "id": "02-without-me",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\02-without-me.strudel",
+      "album_sha256": "f1c6cbc9ea8caa956dff40ec76f42642bb19efaeb54e2f42d1a5e65c80fe9fb1",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\02-without-me.strudel",
+      "application_sha256": "f1c6cbc9ea8caa956dff40ec76f42642bb19efaeb54e2f42d1a5e65c80fe9fb1",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\03-everyday-normal-guy-2.strudel",
+      "album_sha256": "4ffbb0a09192460e86e934a04869fec9367dd0f2dd3e70acc7610728f6b07fce",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\03-everyday-normal-guy-2.strudel",
+      "application_sha256": "4ffbb0a09192460e86e934a04869fec9367dd0f2dd3e70acc7610728f6b07fce",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    },
+    {
+      "id": "04-sailor-song",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\04-sailor-song.strudel",
+      "album_sha256": "eff1af38ca9864184bc7b6609752bed68483e792e6f8ce62245877e3a6d28ecd",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\04-sailor-song.strudel",
+      "application_sha256": "eff1af38ca9864184bc7b6609752bed68483e792e6f8ce62245877e3a6d28ecd",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    },
+    {
+      "id": "05-cant-tell-me-nothing",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\05-cant-tell-me-nothing.strudel",
+      "album_sha256": "56cfcc6658bd870ac91d8596f40007f371e635d16997d3873db07ff94613bebe",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\05-cant-tell-me-nothing.strudel",
+      "application_sha256": "56cfcc6658bd870ac91d8596f40007f371e635d16997d3873db07ff94613bebe",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    },
+    {
+      "id": "06-love-me-not",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\06-love-me-not.strudel",
+      "album_sha256": "20974507db578690cd6b8c964a29f4249889a62e2ff3c7881895fd9da7d564ee",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\06-love-me-not.strudel",
+      "application_sha256": "20974507db578690cd6b8c964a29f4249889a62e2ff3c7881895fd9da7d564ee",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    },
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\07-i-thought-i-saw-your-face-today.strudel",
+      "album_sha256": "234ae2ac31d7ab7a2225fdfdb311c53bf0a22a684091af0489f4fef96a5afc1c",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\07-i-thought-i-saw-your-face-today.strudel",
+      "application_sha256": "234ae2ac31d7ab7a2225fdfdb311c53bf0a22a684091af0489f4fef96a5afc1c",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    },
+    {
+      "id": "08-lonely",
+      "album_source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\strudel\\08-lonely.strudel",
+      "album_sha256": "d48b3f85c1d10a08ceb20c71dd89365b3bd334cf674537b8ac82cc7ba8d4fc8e",
+      "application_source": "C:\\Users\\LalithReddy.b\\strudelify\\tracks\\08-lonely.strudel",
+      "application_sha256": "d48b3f85c1d10a08ceb20c71dd89365b3bd334cf674537b8ac82cc7ba8d4fc8e",
+      "identical": true,
+      "selected": "album baseline; no fidelity approval inferred"
+    }
+  ]
+}

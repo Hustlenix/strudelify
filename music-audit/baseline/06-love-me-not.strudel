@@ -1,0 +1,28 @@
+// title: Love Me Not
+// artist: Ravyn Lenae
+// audio: 06-love-me-not.mp3
+// Instrumental rendition — no lyrics, just the dreamy drift.
+
+setcps(93/60/4)
+
+// melody — airy
+$: cat(
+  note("~@4 c5@2 eb5@2 c5@4 ab4@4"),
+  note("~@2 bb4@2 c5@2 eb5@2 ~@8"),
+  note("db5@4 c5@2 bb4@2 ab4@8"),
+  note("~@4 eb5@2 c5@2 bb4@2 ab4@2 ~@4")
+).s("sine").gain(.32).attack(.03).release(.5).room(.6).delay(.2)
+
+// chords — Ab Fm Db Eb
+$: note("<[ab3,c4,eb4] [f3,ab3,c4] [db3,f3,ab3] [eb3,g3,bb3]>")
+  .s("triangle").attack(.06).release(.5).gain(.16).room(.7).delay(.15)
+
+// bass
+$: note("<ab1*2 f2*2 db2*2 eb2*2>").s("sine").lpf(180).legato(.9).gain(.6)
+
+// drums — soft
+$: s("<[bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ bd]>").bank("RolandTR808").gain(.6)
+
+$: s("~ ~ sd ~ ~ ~ sd ~").bank("RolandTR808").gain(.35).room(.35)
+
+$: s("hh*8").bank("RolandTR808").gain(.13)

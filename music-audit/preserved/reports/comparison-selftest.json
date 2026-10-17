@@ -1,0 +1,24 @@
+{
+  "status": "SUPPORTING_MEASUREMENT",
+  "perceptual_similarity": "UNVERIFIED; listening required",
+  "source_window_s": [
+    0,
+    10.0
+  ],
+  "render_window_s": [
+    0,
+    10.0
+  ],
+  "reference_tempo_estimate": 84.72079918032787,
+  "render_tempo_estimate": 84.72079918032787,
+  "tempo_difference_bpm": 0.0,
+  "chroma_dtw_mean_cost": 3.40021900813273e-17,
+  "reference_peak_dbfs": -0.7083542346954346,
+  "render_peak_dbfs": -0.7083542346954346,
+  "render_samples_at_or_above_0dbfs": 0,
+  "limitations": [
+    "DTW tolerates timing distortion; low cost is not proof of accurate rhythm or melody.",
+    "Global tempo on short clips is ambiguous.",
+    "Use explicitly corresponding intervals; automatic full-song alignment is not implemented."
+  ]
+}

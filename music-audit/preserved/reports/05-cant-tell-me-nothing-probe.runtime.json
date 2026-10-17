@@ -1,0 +1,213 @@
+{
+  "status": "PASSED",
+  "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+  "empty_windows": [
+    {
+      "start": 0,
+      "end": 1
+    },
+    {
+      "start": 1,
+      "end": 2
+    },
+    {
+      "start": 2,
+      "end": 3
+    },
+    {
+      "start": 3,
+      "end": 4
+    },
+    {
+      "start": 4,
+      "end": 5
+    },
+    {
+      "start": 5,
+      "end": 6
+    }
+  ],
+  "windows": [
+    {
+      "start": 0,
+      "end": 1,
+      "events": []
+    },
+    {
+      "start": 1,
+      "end": 2,
+      "events": []
+    },
+    {
+      "start": 2,
+      "end": 3,
+      "events": []
+    },
+    {
+      "start": 3,
+      "end": 4,
+      "events": []
+    },
+    {
+      "start": 4,
+      "end": 5,
+      "events": []
+    },
+    {
+      "start": 5,
+      "end": 6,
+      "events": []
+    },
+    {
+      "start": 6,
+      "end": 7,
+      "events": [
+        {
+          "begin": 6,
+          "end": 7,
+          "value": {
+            "note": "g#1",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 7,
+      "end": 8,
+      "events": [
+        {
+          "begin": 7,
+          "end": 8,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 8,
+      "end": 9,
+      "events": [
+        {
+          "begin": 8,
+          "end": 9,
+          "value": {
+            "note": "d#2",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 9,
+      "end": 10,
+      "events": [
+        {
+          "begin": 9,
+          "end": 10,
+          "value": {
+            "note": "d#2",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 10,
+      "end": 11,
+      "events": [
+        {
+          "begin": 10,
+          "end": 11,
+          "value": {
+            "note": "f#1",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 11,
+      "end": 12,
+      "events": [
+        {
+          "begin": 11,
+          "end": 12,
+          "value": {
+            "note": "f1",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 12,
+      "end": 13,
+      "events": [
+        {
+          "begin": 12,
+          "end": 13,
+          "value": {
+            "note": "d2",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 13,
+      "end": 14,
+      "events": [
+        {
+          "begin": 13,
+          "end": 14,
+          "value": {
+            "note": "c2",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 14,
+      "end": 15,
+      "events": [
+        {
+          "begin": 14,
+          "end": 15,
+          "value": {
+            "note": "d#2",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "start": 15,
+      "end": 16,
+      "events": [
+        {
+          "begin": 15,
+          "end": 16,
+          "value": {
+            "note": "g1",
+            "s": "sine",
+            "gain": 0.1
+          }
+        }
+      ]
+    }
+  ],
+  "cps": 1
+}
