@@ -1,0 +1,379 @@
+{
+  "generated_at": "2026-10-17T03:42:36.625Z",
+  "mode": "baseline",
+  "seconds": 24,
+  "runtime_version": "@strudel/web 1.2.6",
+  "tracks": [
+    {
+      "id": "01-babydoll",
+      "sha256": "85f17275d9af91a26bdc7c2328b925215bab8a148e38ebcc489ab0a72d9acc6d",
+      "status": "PASSED",
+      "sounds": [
+        "triangle",
+        "sawtooth",
+        "RolandTR909_bd",
+        "RolandTR909_sd",
+        "RolandTR909_hh"
+      ],
+      "unknown_sounds": [],
+      "assets": [
+        {
+          "sound": "triangle",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "sawtooth",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "RolandTR909_bd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-04.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR909_sd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/naredrum.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd04.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd05.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd06.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd07.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd08.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd09.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd10.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd11.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd12.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd13.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd14.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd15.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR909_hh",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh04.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        }
+      ],
+      "peak": 0.9533844590187073,
+      "rms": 0.13045731861257076,
+      "samples_at_or_above_0dbfs": 0,
+      "frames": 1155072,
+      "sample_rate": 48000,
+      "channels": 2,
+      "scheduler_error": null,
+      "coverage": "24 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+      "pcm_file": "artifacts/baseline-01-babydoll.f32",
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "02-without-me",
+      "sha256": "f1c6cbc9ea8caa956dff40ec76f42642bb19efaeb54e2f42d1a5e65c80fe9fb1",
+      "status": "PASSED",
+      "sounds": [
+        "sawtooth",
+        "supersaw",
+        "RolandTR909_bd",
+        "RolandTR909_sd",
+        "RolandTR909_hh"
+      ],
+      "unknown_sounds": [],
+      "assets": [
+        {
+          "sound": "sawtooth",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "supersaw",
+          "data": {
+            "prebake": true,
+            "type": "synth"
+          }
+        },
+        {
+          "sound": "RolandTR909_bd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-04.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR909_sd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/naredrum.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd04.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd05.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd06.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd07.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd08.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd09.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd10.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd11.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd12.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd13.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd14.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd15.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR909_hh",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh04.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        }
+      ],
+      "peak": 1.1088314056396484,
+      "rms": 0.1339959171734642,
+      "samples_at_or_above_0dbfs": 14,
+      "frames": 1155072,
+      "sample_rate": 48000,
+      "channels": 2,
+      "scheduler_error": null,
+      "coverage": "24 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+      "pcm_file": "artifacts/baseline-02-without-me.f32",
+      "console_errors": [],
+      "failed_requests": []
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "sha256": "4ffbb0a09192460e86e934a04869fec9367dd0f2dd3e70acc7610728f6b07fce",
+      "status": "PASSED",
+      "sounds": [
+        "square",
+        "triangle",
+        "sawtooth",
+        "RolandTR808_bd",
+        "RolandTR808_sd",
+        "RolandTR808_hh"
+      ],
+      "unknown_sounds": [],
+      "assets": [
+        {
+          "sound": "square",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "triangle",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "sawtooth",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "RolandTR808_bd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD0000.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD0010.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD0025.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD0050.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD0075.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD1000.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD1010.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD1025.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD1050.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD1075.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD2500.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD2510.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD2525.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD2550.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD2575.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD5000.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD5010.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD5025.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD5050.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD5075.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD7500.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD7510.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD7525.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD7550.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-bd/BD7575.WAV"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR808_sd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD0000.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD0010.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD0025.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD0050.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD0075.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD1000.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD1010.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD1025.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD1050.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD1075.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD2500.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD2510.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD2525.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD2550.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD2575.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD5000.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD5010.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD5025.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD5050.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD5075.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD7500.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD7510.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD7525.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD7550.WAV",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-sd/SD7575.WAV"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR808_hh",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR808/rolandtr808-hh/CH.WAV"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        }
+      ],
+      "peak": 0.5441144704818726,
+      "rms": 0.08535901642571044,
+      "samples_at_or_above_0dbfs": 0,
+      "frames": 1155072,
+      "sample_rate": 48000,
+      "channels": 2,
+      "scheduler_error": null,
+      "coverage": "24 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+      "pcm_file": "artifacts/baseline-03-everyday-normal-guy-2.f32",
+      "console_errors": [],
+      "failed_requests": []
+    }
+  ],
+  "controls": [
+    {
+      "id": "control-sine",
+      "status": "PASSED",
+      "expected": "PASSED",
+      "observed": {
+        "status": "PASSED",
+        "sounds": [
+          "sine"
+        ],
+        "unknown_sounds": [],
+        "assets": [
+          {
+            "sound": "sine",
+            "data": {
+              "type": "synth",
+              "prebake": true
+            }
+          }
+        ],
+        "peak": 0.0647619292140007,
+        "rms": 0.022251107586165417,
+        "samples_at_or_above_0dbfs": 0,
+        "frames": 143360,
+        "sample_rate": 48000,
+        "channels": 2,
+        "scheduler_error": null,
+        "coverage": "3 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+        "pcm_file": "artifacts/baseline-control-sine.f32",
+        "console_errors": [],
+        "failed_requests": []
+      }
+    },
+    {
+      "id": "control-missing-bank",
+      "status": "PASSED",
+      "expected": "FAILED",
+      "observed": {
+        "status": "FAILED",
+        "sounds": [
+          "audit_missing_bank_bd"
+        ],
+        "unknown_sounds": [
+          "audit_missing_bank_bd"
+        ],
+        "reason": "Fully qualified bank/sample absent from registry",
+        "console_errors": [],
+        "failed_requests": []
+      }
+    },
+    {
+      "id": "control-silence",
+      "status": "PASSED",
+      "expected": "FAILED",
+      "observed": {
+        "status": "FAILED",
+        "reason": "No PCM tap",
+        "console_errors": [],
+        "failed_requests": []
+      }
+    }
+  ],
+  "scope": "Isolated music harness only; no player/application files touched."
+}

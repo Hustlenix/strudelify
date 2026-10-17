@@ -1,0 +1,51 @@
+{
+  "id": "02-without-me",
+  "source_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+  "interval_s": [
+    14.5,
+    31.65
+  ],
+  "method": "Basic Pitch 0.4.0 ONNX CPU, onset .6 frame .4 min140ms, no melodia trick",
+  "status": "MACHINE_CANDIDATES_NOT_LISTENING_REVIEWED",
+  "limitations": [
+    "Full mix, not isolated instruments. False positives, octave errors and omissions possible.",
+    "No machine note is accepted as a correct lead solely because it was detected."
+  ],
+  "notes": [
+    {
+      "start_s": 18.5777,
+      "end_s": 18.984,
+      "midi": 38,
+      "note": "D2",
+      "activation": 0.467
+    },
+    {
+      "start_s": 19.6226,
+      "end_s": 19.9244,
+      "midi": 31,
+      "note": "G1",
+      "activation": 0.4255
+    },
+    {
+      "start_s": 22.8643,
+      "end_s": 23.0849,
+      "midi": 38,
+      "note": "D2",
+      "activation": 0.441
+    },
+    {
+      "start_s": 23.0849,
+      "end_s": 23.2474,
+      "midi": 38,
+      "note": "D2",
+      "activation": 0.5186
+    },
+    {
+      "start_s": 27.1045,
+      "end_s": 27.5341,
+      "midi": 38,
+      "note": "D2",
+      "activation": 0.4534
+    }
+  ]
+}

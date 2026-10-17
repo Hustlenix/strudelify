@@ -1,24 +1,25 @@
 // title: Without Me
 // artist: Eminem
 // audio: 02-without-me.mp3
+// Music audit: +2 semitone tonal correction; see music-audit/reports/adjustments.json
 // Instrumental rendition — no lyrics, just the riff, bass and drums.
 
 setcps(112/60/4)
 
 // riff — the hook
 $: cat(
-  note("f4@2 ab4@2 c5@2 ab4@2 f4@4 ~@4"),
-  note("f4@2 ab4@2 f4@2 eb4@2 f4@8"),
-  note("f4@2 ab4@2 c5@2 db5@2 c5@4 ab4@4"),
-  note("~@4 ab4@2 f4@2 eb4@2 f4@2 ~@4")
+  note("g4@2 a#4@2 d5@2 a#4@2 g4@4 ~@4"),
+  note("g4@2 a#4@2 g4@2 f4@2 g4@8"),
+  note("g4@2 a#4@2 d5@2 d#5@2 d5@4 a#4@4"),
+  note("~@4 a#4@2 g4@2 f4@2 g4@2 ~@4")
 ).s("sawtooth").lpf(1500).gain(.32).attack(.01).release(.12).phaser(1)
 
-// chords — Fm Db Eb Cm
-$: note("<[f3,ab3,c4] [db3,f3,ab3] [eb3,g3,bb3] [c3,eb3,g3]>")
+// chords — baseline voicing sequence retained; harmonic changes still require review.
+$: note("<[g3,a#3,d4] [d#3,g3,a#3] [f3,a3,c4] [d3,f3,a3]>")
   .s("supersaw").lpf(900).attack(.03).release(.2).gain(.18).room(.3)
 
 // bass — driving eighths
-$: note("<f2*8 db2*8 eb2*8 c2*8>").s("sawtooth").lpf(420).legato(.65).gain(.5)
+$: note("<g2*8 d#2*8 f2*8 d2*8>").s("sawtooth").lpf(420).legato(.65).gain(.5)
 
 // drums
 $: s("<[bd ~ bd ~] [bd ~ bd ~] [bd ~ bd ~] [bd ~ bd bd]>").bank("RolandTR909").gain(.75)

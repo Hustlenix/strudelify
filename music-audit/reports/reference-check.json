@@ -1,0 +1,1018 @@
+[
+  {
+    "id": "01-babydoll",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\01-babydoll.mp3",
+    "source_sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16,
+      80
+    ],
+    "chroma": [
+      0.22293426096439362,
+      0.15822596848011017,
+      0.22546222805976868,
+      0.19857147336006165,
+      0.2939281761646271,
+      0.2734763026237488,
+      0.20903263986110687,
+      0.4159856140613556,
+      0.3097587525844574,
+      0.4561561346054077,
+      0.20882543921470642,
+      0.1689387708902359
+    ],
+    "baseline_chroma": [
+      5.262875,
+      0.0,
+      15.082750000000006,
+      0.0,
+      12.414125000000007,
+      0.0,
+      5.975000000000001,
+      15.353750000000003,
+      0.0,
+      6.839500000000001,
+      0.0,
+      11.807125000000003
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.80847
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.75978
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.74301
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.72456
+      },
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.71182
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.71038
+      },
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.66338
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.65626
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.62703
+      },
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.59208
+      },
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.56021
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.53736
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 84.05,
+        "periodicity": 0.5635
+      },
+      {
+        "bpm": 168.05,
+        "periodicity": 0.522
+      },
+      {
+        "bpm": 56.0,
+        "periodicity": 0.5147
+      },
+      {
+        "bpm": 111.75,
+        "periodicity": 0.4465
+      },
+      {
+        "bpm": 67.15,
+        "periodicity": 0.4355
+      },
+      {
+        "bpm": 63.05,
+        "periodicity": 0.3612
+      },
+      {
+        "bpm": 101.85,
+        "periodicity": 0.3514
+      },
+      {
+        "bpm": 125.05,
+        "periodicity": 0.349
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  },
+  {
+    "id": "02-without-me",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\02-without-me.mp3",
+    "source_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16,
+      80
+    ],
+    "chroma": [
+      0.09022936224937439,
+      0.11685207486152649,
+      0.28474417328834534,
+      0.19735924899578094,
+      0.07782155275344849,
+      0.07642436027526855,
+      0.2907222807407379,
+      0.8099783658981323,
+      0.29919546842575073,
+      0.1266530454158783,
+      0.07666889578104019,
+      0.0725269615650177
+    ],
+    "baseline_chroma": [
+      34.688999999999965,
+      21.748333333333324,
+      0.0,
+      31.54433333333331,
+      0.0,
+      45.84499999999994,
+      0.0,
+      19.289333333333317,
+      28.41466666666664,
+      0.0,
+      9.629999999999992,
+      0.0
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.7573
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.67788
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.59954
+      },
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.58987
+      },
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.54265
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.51503
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.46174
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.46165
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.42766
+      },
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.37857
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.37846
+      },
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.36951
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 56.15,
+        "periodicity": 1.2458
+      },
+      {
+        "bpm": 112.35,
+        "periodicity": 1.2012
+      },
+      {
+        "bpm": 74.9,
+        "periodicity": 1.052
+      },
+      {
+        "bpm": 89.85,
+        "periodicity": 0.6694
+      },
+      {
+        "bpm": 64.2,
+        "periodicity": 0.6658
+      },
+      {
+        "bpm": 149.8,
+        "periodicity": 0.6651
+      },
+      {
+        "bpm": 83.8,
+        "periodicity": 0.6346
+      },
+      {
+        "bpm": 168.55,
+        "periodicity": 0.6326
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\03-everyday-normal-guy-2.mp3",
+    "source_sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16,
+      80
+    ],
+    "chroma": [
+      0.12362556904554367,
+      0.2509353756904602,
+      0.4252559542655945,
+      0.19138745963573456,
+      0.18654754757881165,
+      0.2690295875072479,
+      0.12689153850078583,
+      0.1912699043750763,
+      0.4028283953666687,
+      0.6690928339958191,
+      0.5024828314781189,
+      0.17873018980026245
+    ],
+    "baseline_chroma": [
+      6.327500000000004,
+      0.0,
+      5.7862499999999955,
+      0.0,
+      4.36375,
+      4.638750000000002,
+      0.0,
+      13.63999999999999,
+      0.0,
+      13.776250000000012,
+      0.0,
+      5.7862499999999955
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.68664
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.6834
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.66174
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.63256
+      },
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.62765
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.62031
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.58461
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.56276
+      },
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.54863
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.54441
+      },
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.51835
+      },
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.51809
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 179.75,
+        "periodicity": 0.8141
+      },
+      {
+        "bpm": 89.9,
+        "periodicity": 0.7989
+      },
+      {
+        "bpm": 60.05,
+        "periodicity": 0.7803
+      },
+      {
+        "bpm": 120.15,
+        "periodicity": 0.6297
+      },
+      {
+        "bpm": 72.0,
+        "periodicity": 0.6223
+      },
+      {
+        "bpm": 143.55,
+        "periodicity": 0.5513
+      },
+      {
+        "bpm": 134.8,
+        "periodicity": 0.5483
+      },
+      {
+        "bpm": 67.4,
+        "periodicity": 0.5469
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  },
+  {
+    "id": "04-sailor-song",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\04-sailor-song.mp3",
+    "source_sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16,
+      80
+    ],
+    "chroma": [
+      0.16974356770515442,
+      0.06296417117118835,
+      0.11569321155548096,
+      0.4519883394241333,
+      0.1802835613489151,
+      0.09690183401107788,
+      0.2791612446308136,
+      0.16943907737731934,
+      0.3341526389122009,
+      0.11673810333013535,
+      0.34406694769859314,
+      0.716886579990387
+    ],
+    "baseline_chroma": [
+      0.0,
+      20.826666666666682,
+      0.0,
+      24.09666666666667,
+      0.0,
+      6.0,
+      36.236666666666686,
+      0.0,
+      7.25,
+      0.0,
+      19.840000000000014,
+      17.269999999999996
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.90811
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.74272
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.63654
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.60649
+      },
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.56789
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.54323
+      },
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.53079
+      },
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.5104
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.47654
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.41967
+      },
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.38167
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.3403
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 94.85,
+        "periodicity": 0.1497
+      },
+      {
+        "bpm": 189.65,
+        "periodicity": 0.146
+      },
+      {
+        "bpm": 63.4,
+        "periodicity": 0.1432
+      },
+      {
+        "bpm": 126.05,
+        "periodicity": 0.1332
+      },
+      {
+        "bpm": 76.0,
+        "periodicity": 0.1284
+      },
+      {
+        "bpm": 58.4,
+        "periodicity": 0.1209
+      },
+      {
+        "bpm": 69.4,
+        "periodicity": 0.1189
+      },
+      {
+        "bpm": 71.15,
+        "periodicity": 0.1188
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\05-cant-tell-me-nothing.mp3",
+    "source_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16,
+      80
+    ],
+    "chroma": [
+      0.2920399308204651,
+      0.11553109437227249,
+      0.21204617619514465,
+      0.2980543375015259,
+      0.27830979228019714,
+      0.4265255928039551,
+      0.2382020354270935,
+      0.3135077655315399,
+      0.22432281076908112,
+      0.1484525054693222,
+      0.12847661972045898,
+      0.20415852963924408
+    ],
+    "baseline_chroma": [
+      0.0,
+      23.97333333333333,
+      4.788333333333327,
+      0.0,
+      22.421666666666667,
+      0.0,
+      18.081666666666663,
+      0.0,
+      9.0,
+      27.544999999999987,
+      0.0,
+      12.45999999999999
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.75392
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.75012
+      },
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.74166
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.71327
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.69725
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.66157
+      },
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.65085
+      },
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.60133
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.60081
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.58147
+      },
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.56643
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.52966
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 80.1,
+        "periodicity": 0.2971
+      },
+      {
+        "bpm": 160.25,
+        "periodicity": 0.274
+      },
+      {
+        "bpm": 106.55,
+        "periodicity": 0.2563
+      },
+      {
+        "bpm": 64.0,
+        "periodicity": 0.2531
+      },
+      {
+        "bpm": 60.1,
+        "periodicity": 0.2529
+      },
+      {
+        "bpm": 119.25,
+        "periodicity": 0.2514
+      },
+      {
+        "bpm": 67.35,
+        "periodicity": 0.2423
+      },
+      {
+        "bpm": 98.45,
+        "periodicity": 0.2421
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  },
+  {
+    "id": "06-love-me-not",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\06-love-me-not.mp3",
+    "source_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16.67,
+      80.67
+    ],
+    "chroma": [
+      0.5031365156173706,
+      0.25024789571762085,
+      0.31235942244529724,
+      0.2523800730705261,
+      0.42243513464927673,
+      0.4002216160297394,
+      0.18499834835529327,
+      0.2846907377243042,
+      0.21436013281345367,
+      0.2651526927947998,
+      0.1670534610748291,
+      0.21311932802200317
+    ],
+    "baseline_chroma": [
+      15.639124999999996,
+      10.979874999999984,
+      0.0,
+      19.441875,
+      0.0,
+      14.43849999999998,
+      0.0,
+      5.334999999999999,
+      28.086374999999983,
+      0.0,
+      7.154999999999996,
+      0.0
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.83851
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.79283
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.70659
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.6651
+      },
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.64778
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.64076
+      },
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.63231
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.62761
+      },
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.60633
+      },
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.58433
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.53021
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.49439
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 57.0,
+        "periodicity": 0.387
+      },
+      {
+        "bpm": 114.0,
+        "periodicity": 0.3688
+      },
+      {
+        "bpm": 76.0,
+        "periodicity": 0.3451
+      },
+      {
+        "bpm": 91.1,
+        "periodicity": 0.2496
+      },
+      {
+        "bpm": 152.0,
+        "periodicity": 0.2495
+      },
+      {
+        "bpm": 65.2,
+        "periodicity": 0.2468
+      },
+      {
+        "bpm": 84.25,
+        "periodicity": 0.2353
+      },
+      {
+        "bpm": 179.75,
+        "periodicity": 0.2309
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\07-i-thought-i-saw-your-face-today.mp3",
+    "source_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16,
+      80
+    ],
+    "chroma": [
+      0.24411369860172272,
+      0.1323353797197342,
+      0.3230588436126709,
+      0.18444882333278656,
+      0.2544209361076355,
+      0.09932868182659149,
+      0.2564319968223572,
+      0.48106107115745544,
+      0.22869320213794708,
+      0.41784605383872986,
+      0.197513148188591,
+      0.40754052996635437
+    ],
+    "baseline_chroma": [
+      0.0,
+      4.491666666666669,
+      22.843333333333337,
+      0.0,
+      5.741666666666669,
+      0.0,
+      12.599333333333336,
+      8.228666666666676,
+      0.0,
+      13.858333333333338,
+      0.0,
+      15.283666666666669
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.84968
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.80994
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.74473
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.69794
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.63404
+      },
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.62512
+      },
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.62499
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.60467
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.58379
+      },
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.51214
+      },
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.47385
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.41646
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 77.45,
+        "periodicity": 0.2698
+      },
+      {
+        "bpm": 155.4,
+        "periodicity": 0.2658
+      },
+      {
+        "bpm": 103.35,
+        "periodicity": 0.1909
+      },
+      {
+        "bpm": 61.9,
+        "periodicity": 0.1841
+      },
+      {
+        "bpm": 116.6,
+        "periodicity": 0.1651
+      },
+      {
+        "bpm": 58.05,
+        "periodicity": 0.1647
+      },
+      {
+        "bpm": 118.35,
+        "periodicity": 0.1644
+      },
+      {
+        "bpm": 121.6,
+        "periodicity": 0.1634
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  },
+  {
+    "id": "08-lonely",
+    "source": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\08-lonely.mp3",
+    "source_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+    "matches_original_audit": true,
+    "reference_interval_s": [
+      16,
+      80
+    ],
+    "chroma": [
+      0.3433527648448944,
+      0.2823540270328522,
+      0.18580679595470428,
+      0.29852238297462463,
+      0.19562458992004395,
+      0.28398340940475464,
+      0.25830909609794617,
+      0.2245696783065796,
+      0.41153231263160706,
+      0.16976581513881683,
+      0.20390008389949799,
+      0.15646342933177948
+    ],
+    "baseline_chroma": [
+      0.0,
+      19.19000000000001,
+      17.741249999999987,
+      0.0,
+      0.0,
+      5.630000000000007,
+      33.56249999999998,
+      0.0,
+      8.012500000000006,
+      17.663749999999983,
+      0.0,
+      12.153750000000002
+    ],
+    "transpose_candidates": [
+      {
+        "semitones": 6,
+        "pitch_class_cosine": 0.77651
+      },
+      {
+        "semitones": -1,
+        "pitch_class_cosine": 0.76628
+      },
+      {
+        "semitones": 2,
+        "pitch_class_cosine": 0.72833
+      },
+      {
+        "semitones": -5,
+        "pitch_class_cosine": 0.7102
+      },
+      {
+        "semitones": -3,
+        "pitch_class_cosine": 0.67136
+      },
+      {
+        "semitones": 4,
+        "pitch_class_cosine": 0.66239
+      },
+      {
+        "semitones": 0,
+        "pitch_class_cosine": 0.61663
+      },
+      {
+        "semitones": 1,
+        "pitch_class_cosine": 0.61225
+      },
+      {
+        "semitones": 3,
+        "pitch_class_cosine": 0.59854
+      },
+      {
+        "semitones": -2,
+        "pitch_class_cosine": 0.57713
+      },
+      {
+        "semitones": -4,
+        "pitch_class_cosine": 0.54478
+      },
+      {
+        "semitones": 5,
+        "pitch_class_cosine": 0.52773
+      }
+    ],
+    "tempo_candidates": [
+      {
+        "bpm": 90.15,
+        "periodicity": 0.4296
+      },
+      {
+        "bpm": 179.75,
+        "periodicity": 0.349
+      },
+      {
+        "bpm": 60.1,
+        "periodicity": 0.3485
+      },
+      {
+        "bpm": 67.7,
+        "periodicity": 0.295
+      },
+      {
+        "bpm": 134.85,
+        "periodicity": 0.2875
+      },
+      {
+        "bpm": 120.15,
+        "periodicity": 0.2791
+      },
+      {
+        "bpm": 72.05,
+        "periodicity": 0.2779
+      },
+      {
+        "bpm": 76.0,
+        "periodicity": 0.2417
+      }
+    ],
+    "limitations": [
+      "Pitch-class fit cannot validate melody order, individual chord changes, rhythm or instrument identity.",
+      "A transpose preserves the old contour; it does not certify that contour.",
+      "Periodicity has half/double/triplet alternatives. No meter is inferred."
+    ]
+  }
+]

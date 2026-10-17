@@ -1,0 +1,56 @@
+[
+  {
+    "id": "02-without-me",
+    "phase": "pitch",
+    "attempt": 1,
+    "before_sha256": "f1c6cbc9ea8caa956dff40ec76f42642bb19efaeb54e2f42d1a5e65c80fe9fb1",
+    "after_sha256": "1528fbfdd9e0f863ed27cd3c350c0dbf69d52d60aa9afc3180a7da5fdc327fb5",
+    "change": "Existing pitched layers transposed +2 semitones; duration-weighted pitch-class cosine 0.51503 -> 0.75730 against source [16, 80]. Relative-mode/root evidence used for 05/08 instead of blindly taking the highest cosine. This does not certify melody/chord order.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "04-sailor-song",
+    "phase": "pitch",
+    "attempt": 1,
+    "before_sha256": "eff1af38ca9864184bc7b6609752bed68483e792e6f8ce62245877e3a6d28ecd",
+    "after_sha256": "f592665e27ce8dafedf2b4bb0ce437c01f3ee1e5fc42b9016354f5ecc7431a53",
+    "change": "Existing pitched layers transposed +5 semitones; duration-weighted pitch-class cosine 0.74272 -> 0.90811 against source [16, 80]. Relative-mode/root evidence used for 05/08 instead of blindly taking the highest cosine. This does not certify melody/chord order.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "phase": "pitch",
+    "attempt": 1,
+    "before_sha256": "56cfcc6658bd870ac91d8596f40007f371e635d16997d3873db07ff94613bebe",
+    "after_sha256": "aa445042af4c8a685d9d76b07fe0d71a12fbaa217445cdb7de8b181297f628b1",
+    "change": "Existing pitched layers transposed -1 semitones; duration-weighted pitch-class cosine 0.52966 -> 0.75012 against source [16, 80]. Relative-mode/root evidence used for 05/08 instead of blindly taking the highest cosine. This does not certify melody/chord order.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "06-love-me-not",
+    "phase": "pitch",
+    "attempt": 1,
+    "before_sha256": "20974507db578690cd6b8c964a29f4249889a62e2ff3c7881895fd9da7d564ee",
+    "after_sha256": "9ac27c551495acdaac10221d2197a3f04eed3fae9f0314d59ffd83435edc2bea",
+    "change": "Existing pitched layers transposed +4 semitones; duration-weighted pitch-class cosine 0.66510 -> 0.83851 against source [16.67, 80.67]. Relative-mode/root evidence used for 05/08 instead of blindly taking the highest cosine. This does not certify melody/chord order.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "phase": "pitch",
+    "attempt": 1,
+    "before_sha256": "234ae2ac31d7ab7a2225fdfdb311c53bf0a22a684091af0489f4fef96a5afc1c",
+    "after_sha256": "08741a9a56ec569aa3c2f37f4b24aaee4368e8de206337d653c8f2404e54bf1b",
+    "change": "Existing pitched layers transposed +5 semitones; duration-weighted pitch-class cosine 0.80994 -> 0.84968 against source [16, 80]. Relative-mode/root evidence used for 05/08 instead of blindly taking the highest cosine. This does not certify melody/chord order.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "08-lonely",
+    "phase": "pitch",
+    "attempt": 1,
+    "before_sha256": "d48b3f85c1d10a08ceb20c71dd89365b3bd334cf674537b8ac82cc7ba8d4fc8e",
+    "after_sha256": "caa4266c9b07beda345b6a248bcafc07e6f0f99df77c80ad9bc4a3d76900e2ef",
+    "change": "Existing pitched layers transposed -1 semitones; duration-weighted pitch-class cosine 0.61663 -> 0.76628 against source [16, 80]. Relative-mode/root evidence used for 05/08 instead of blindly taking the highest cosine. This does not certify melody/chord order.",
+    "decision": "retain for comparison; listening approval pending"
+  }
+]

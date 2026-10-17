@@ -1,0 +1,158 @@
+{
+  "generated_at": "2026-10-17T03:44:30.727Z",
+  "mode": "final",
+  "runtime_version": "1.2.6",
+  "selftests": [
+    {
+      "name": "valid",
+      "expected": "PASSED",
+      "actual": "PASSED",
+      "status": "PASSED",
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check"
+    },
+    {
+      "name": "invalid-method",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "status": "PASSED",
+      "reason": "note(...).auditInventedMethod is not a function"
+    },
+    {
+      "name": "invalid-syntax",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "status": "PASSED",
+      "reason": "Unexpected token (1:5)"
+    },
+    {
+      "name": "silence",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "status": "PASSED",
+      "reason": "No events in requested windows"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "01-babydoll",
+      "artist": "Dominic Fike",
+      "title": "Babydoll",
+      "expected_filename": "01-babydoll.strudel",
+      "source_prefix": "Dominic Fike - Babydoll",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\01-babydoll.strudel",
+      "sha256": "85f17275d9af91a26bdc7c2328b925215bab8a148e38ebcc489ab0a72d9acc6d",
+      "bpm": 93,
+      "status": "PASSED",
+      "runtime_report": "final-01-babydoll.runtime.json",
+      "event_count": 951,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    },
+    {
+      "id": "02-without-me",
+      "artist": "Eminem",
+      "title": "Without Me",
+      "expected_filename": "02-without-me.strudel",
+      "source_prefix": "Eminem - Without Me",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\02-without-me.strudel",
+      "sha256": "8923ca7a19f38bce9257550e650b09ce0052714e14629b9bb3c28f2cce88f683",
+      "bpm": 112,
+      "status": "PASSED",
+      "runtime_report": "final-02-without-me.runtime.json",
+      "event_count": 3961,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "artist": "Jon Lajoie",
+      "title": "Everyday Normal Guy 2",
+      "expected_filename": "03-everyday-normal-guy-2.strudel",
+      "source_prefix": "Everyday Normal Guy 2",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\03-everyday-normal-guy-2.strudel",
+      "sha256": "4ffbb0a09192460e86e934a04869fec9367dd0f2dd3e70acc7610728f6b07fce",
+      "bpm": 90,
+      "status": "PASSED",
+      "runtime_report": "final-03-everyday-normal-guy-2.runtime.json",
+      "event_count": 1888,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    },
+    {
+      "id": "04-sailor-song",
+      "artist": "Gigi Perez",
+      "title": "Sailor Song",
+      "expected_filename": "04-sailor-song.strudel",
+      "source_prefix": "Gigi Perez - Sailor Song",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\04-sailor-song.strudel",
+      "sha256": "93258847415c3218ccaa567815609eb3aeda7946b15ea2b95395a6f416213b89",
+      "bpm": 80,
+      "status": "PASSED",
+      "runtime_report": "final-04-sailor-song.runtime.json",
+      "event_count": 1528,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    },
+    {
+      "id": "05-cant-tell-me-nothing",
+      "artist": "Kanye West",
+      "title": "Can't Tell Me Nothing",
+      "expected_filename": "05-cant-tell-me-nothing.strudel",
+      "source_prefix": "Kanye West - Can",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\05-cant-tell-me-nothing.strudel",
+      "sha256": "5913127408debea1dcaf4c78536d97f48c197a5472ed0ee3a97bb74faf7dc383",
+      "bpm": 80,
+      "status": "PASSED",
+      "runtime_report": "final-05-cant-tell-me-nothing.runtime.json",
+      "event_count": 1820,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    },
+    {
+      "id": "06-love-me-not",
+      "artist": "Ravyn Lenae",
+      "title": "Love Me Not",
+      "expected_filename": "06-love-me-not.strudel",
+      "source_prefix": "Ravyn Lenae - Love Me Not",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\06-love-me-not.strudel",
+      "sha256": "4a51dc862e8c842de21eab5395013d869d776dffe41dbdef8d9466921b221948",
+      "bpm": 93,
+      "status": "PASSED",
+      "runtime_report": "final-06-love-me-not.runtime.json",
+      "event_count": 1742,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    },
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "artist": "She & Him",
+      "title": "I Thought I Saw Your Face Today",
+      "expected_filename": "07-i-thought-i-saw-your-face-today.strudel",
+      "source_prefix": "She & Him - I Thought",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\07-i-thought-i-saw-your-face-today.strudel",
+      "sha256": "27ef4b272e5dc53a74a0703bc12b1308d66c7ebf2f6404a3b05e9f00d36e3c53",
+      "bpm": 116,
+      "status": "PASSED",
+      "runtime_report": "final-07-i-thought-i-saw-your-face-today.runtime.json",
+      "event_count": 1837,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    },
+    {
+      "id": "08-lonely",
+      "artist": "Akon",
+      "title": "Lonely",
+      "expected_filename": "08-lonely.strudel",
+      "source_prefix": "Akon - Lonely",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\08-lonely.strudel",
+      "sha256": "25e5887207c16d68e91ba6597ff60e6731ce955a183bc100f03480adce4e2f6e",
+      "bpm": 90,
+      "status": "PASSED",
+      "runtime_report": "final-08-lonely.runtime.json",
+      "event_count": 1807,
+      "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
+      "empty_windows": []
+    }
+  ],
+  "scope": "Music patterns only; every cycle over the usable reference duration. No application or player tested."
+}
