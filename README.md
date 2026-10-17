@@ -1,4 +1,5 @@
 # Strudelify
+<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/0fe97c3c-edde-46a8-ae17-3c1ac30accae" />
 
 **WHOLE SPOTIFY IN STRUDEL, CAUSE WHY NOTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT?** 
 My project: Strudelify is a small static music player, so you can play this and sing yourself, kinda boring. both for me and you, because it was soo tuff analysing the beats and coding it😭
