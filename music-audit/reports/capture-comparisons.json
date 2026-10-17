@@ -1,0 +1,163 @@
+[
+  {
+    "id": "01-babydoll",
+    "source_interval_s": [
+      16,
+      80
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.0
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.83336,
+    "candidate_harmonic_pitch_class_cosine": 0.85429,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment.",
+    "bounded_opening": {
+      "source_interval_s": [
+        0,
+        4.37
+      ],
+      "baseline_render_interval_s": [
+        0,
+        4.37
+      ],
+      "candidate_render_interval_s": [
+        0,
+        4.37
+      ],
+      "baseline_cosine": 0.64859,
+      "candidate_cosine": 0.8639,
+      "limitation": "Source-derived note selection is not independent blind transcription validation. Does not assess articulation or timbre likeness."
+    }
+  },
+  {
+    "id": "02-without-me",
+    "source_interval_s": [
+      16,
+      80
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.0
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.56519,
+    "candidate_harmonic_pitch_class_cosine": 0.79514,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment."
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "source_interval_s": [
+      16,
+      80
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.08533333333333
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.84317,
+    "candidate_harmonic_pitch_class_cosine": 0.85032,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment."
+  },
+  {
+    "id": "04-sailor-song",
+    "source_interval_s": [
+      16,
+      80
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.08533333333333
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.80288,
+    "candidate_harmonic_pitch_class_cosine": 0.9424,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment."
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "source_interval_s": [
+      16,
+      80
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.0
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.70442,
+    "candidate_harmonic_pitch_class_cosine": 0.84535,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment."
+  },
+  {
+    "id": "06-love-me-not",
+    "source_interval_s": [
+      16.67,
+      80.67
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.0
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.81209,
+    "candidate_harmonic_pitch_class_cosine": 0.94184,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment."
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "source_interval_s": [
+      16,
+      80
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.08533333333333
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.86073,
+    "candidate_harmonic_pitch_class_cosine": 0.96026,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment."
+  },
+  {
+    "id": "08-lonely",
+    "source_interval_s": [
+      16,
+      80
+    ],
+    "baseline_render_interval_s": [
+      0,
+      24.064
+    ],
+    "candidate_render_interval_s": [
+      0,
+      32.08533333333333
+    ],
+    "baseline_harmonic_pitch_class_cosine": 0.68807,
+    "candidate_harmonic_pitch_class_cosine": 0.82007,
+    "interpretation": "Aggregate harmonic pitch classes only; unequal render durations and different loop/source phase. Not an aligned motif, chord or perceptual fidelity assessment."
+  }
+]

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-17T03:51:16.371Z",
+  "generated_at": "2026-10-17T03:58:05.369Z",
   "mode": "final",
   "seconds": 32,
   "runtime_version": "@strudel/web 1.2.6",
   "tracks": [
     {
       "id": "01-babydoll",
-      "sha256": "c066a3ae20105bccd87246ee439e53efe68428c276e982e2c510901cf61b66dd",
-      "status": "FAILED",
+      "sha256": "8c7bc8bba1364453509e47aab508a637b46764dfd02066b70530f8d79b07985d",
+      "status": "PASSED",
       "sounds": [
         "triangle",
         "sawtooth",
@@ -83,28 +83,23 @@
           }
         }
       ],
-      "peak": 0.7228485345840454,
-      "rms": 0.09101247818762319,
+      "peak": 0.7242861986160278,
+      "rms": 0.07522825192582609,
       "samples_at_or_above_0dbfs": 0,
-      "frames": 1171456,
+      "frames": 1536000,
       "sample_rate": 48000,
       "channels": 2,
       "scheduler_error": null,
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-01-babydoll.f32",
-      "console_errors": [
-        "WebSocket connection to 'ws://127.0.0.1:5173/' failed: Error in connection establishment: net::ERR_NETWORK_IO_SUSPENDED"
-      ],
-      "failed_requests": [
-        {
-          "url": "http://127.0.0.1:5173/tests/capture.html",
-          "reason": "net::ERR_ABORTED"
-        }
-      ]
+      "console_errors": [],
+      "failed_requests": [],
+      "capture_duration_s": 32,
+      "capture_duration_valid": true
     },
     {
       "id": "02-without-me",
-      "sha256": "321ea831f9836958aaded3097af774dfcb5090eca81dc6298494f46e71549fd1",
+      "sha256": "334d3bfb80acf927df2a45ede55325eba1f1fc9be0e00d6dca4e1212b0e9c02e",
       "status": "PASSED",
       "sounds": [
         "sawtooth",
@@ -181,8 +176,8 @@
           }
         }
       ],
-      "peak": 0.6814139485359192,
-      "rms": 0.08311376398682423,
+      "peak": 0.6655663847923279,
+      "rms": 0.06948807012817598,
       "samples_at_or_above_0dbfs": 0,
       "frames": 1536000,
       "sample_rate": 48000,
@@ -191,11 +186,13 @@
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-02-without-me.f32",
       "console_errors": [],
-      "failed_requests": []
+      "failed_requests": [],
+      "capture_duration_s": 32,
+      "capture_duration_valid": true
     },
     {
       "id": "03-everyday-normal-guy-2",
-      "sha256": "4ffbb0a09192460e86e934a04869fec9367dd0f2dd3e70acc7610728f6b07fce",
+      "sha256": "b09ac107f893054cef6170c3e21a87aa50ac8fa694670949ddf1774e5c6ea96e",
       "status": "PASSED",
       "sounds": [
         "square",
@@ -307,8 +304,8 @@
           }
         }
       ],
-      "peak": 0.5399664640426636,
-      "rms": 0.0830244184318045,
+      "peak": 0.5282317996025085,
+      "rms": 0.0672327605060849,
       "samples_at_or_above_0dbfs": 0,
       "frames": 1540096,
       "sample_rate": 48000,
@@ -317,11 +314,13 @@
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-03-everyday-normal-guy-2.f32",
       "console_errors": [],
-      "failed_requests": []
+      "failed_requests": [],
+      "capture_duration_s": 32.08533333333333,
+      "capture_duration_valid": true
     },
     {
       "id": "04-sailor-song",
-      "sha256": "941050f2e04f3269a1c1198270a422086a3c727ca582c282510842c2fdd8432e",
+      "sha256": "500d15292a7b68fd7e38d2b11194c8b8907b104a962a750015ff3fbc0c90cc22",
       "status": "PASSED",
       "sounds": [
         "triangle",
@@ -398,8 +397,8 @@
           }
         }
       ],
-      "peak": 0.750205934047699,
-      "rms": 0.09021386688741836,
+      "peak": 0.6509133577346802,
+      "rms": 0.05954876207155286,
       "samples_at_or_above_0dbfs": 0,
       "frames": 1540096,
       "sample_rate": 48000,
@@ -408,11 +407,13 @@
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-04-sailor-song.f32",
       "console_errors": [],
-      "failed_requests": []
+      "failed_requests": [],
+      "capture_duration_s": 32.08533333333333,
+      "capture_duration_valid": true
     },
     {
       "id": "05-cant-tell-me-nothing",
-      "sha256": "86a12310b963053fa1ea73f09dbc26dc678837b253f8de1e78f59ea7fb77e9f8",
+      "sha256": "47b6ec60d0a429023ea9d65589f247c3f1dae16fc2aa3b0700c9e0e16fb39273",
       "status": "PASSED",
       "sounds": [
         "supersaw",
@@ -486,8 +487,8 @@
           }
         }
       ],
-      "peak": 0.6952177882194519,
-      "rms": 0.07849737964403684,
+      "peak": 0.6626041531562805,
+      "rms": 0.06883759013159732,
       "samples_at_or_above_0dbfs": 0,
       "frames": 1536000,
       "sample_rate": 48000,
@@ -496,11 +497,13 @@
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-05-cant-tell-me-nothing.f32",
       "console_errors": [],
-      "failed_requests": []
+      "failed_requests": [],
+      "capture_duration_s": 32,
+      "capture_duration_valid": true
     },
     {
       "id": "06-love-me-not",
-      "sha256": "9b77c32f0ec542e02cafa886678b954752678b0f2f11478d8cc3d5c8340c2deb",
+      "sha256": "2e5012e1f7df2a2274b471f9118887eae2edfd9d095f57539c6086efe6115660",
       "status": "PASSED",
       "sounds": [
         "sine",
@@ -604,8 +607,8 @@
           }
         }
       ],
-      "peak": 0.5529109835624695,
-      "rms": 0.12460607179718332,
+      "peak": 0.4940805435180664,
+      "rms": 0.07938032616932914,
       "samples_at_or_above_0dbfs": 0,
       "frames": 1536000,
       "sample_rate": 48000,
@@ -614,11 +617,13 @@
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-06-love-me-not.f32",
       "console_errors": [],
-      "failed_requests": []
+      "failed_requests": [],
+      "capture_duration_s": 32,
+      "capture_duration_valid": true
     },
     {
       "id": "07-i-thought-i-saw-your-face-today",
-      "sha256": "66342f2929dc1890f865dd6e4fc7535f714664a893e7b23e9c8397718d447469",
+      "sha256": "96810dbc3de0c55026528ee69de27e0a0bea755c37aa564ae0f7626cf16f9934",
       "status": "PASSED",
       "sounds": [
         "triangle",
@@ -678,8 +683,8 @@
           }
         }
       ],
-      "peak": 0.6940222382545471,
-      "rms": 0.07127909796677913,
+      "peak": 0.5918725728988647,
+      "rms": 0.05792680912205889,
       "samples_at_or_above_0dbfs": 0,
       "frames": 1540096,
       "sample_rate": 48000,
@@ -688,11 +693,13 @@
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-07-i-thought-i-saw-your-face-today.f32",
       "console_errors": [],
-      "failed_requests": []
+      "failed_requests": [],
+      "capture_duration_s": 32.08533333333333,
+      "capture_duration_valid": true
     },
     {
       "id": "08-lonely",
-      "sha256": "05d41b7e25013697df335393d0828387f4d173bf7598e72ca2dd28990a2136ce",
+      "sha256": "b93ed42c57b6eee17373d01a1b0d2bca18a7d86964fe52d974876c0232d347f1",
       "status": "PASSED",
       "sounds": [
         "sine",
@@ -777,8 +784,8 @@
           }
         }
       ],
-      "peak": 0.6663810014724731,
-      "rms": 0.09106312698777783,
+      "peak": 0.6493218541145325,
+      "rms": 0.07417122463933554,
       "samples_at_or_above_0dbfs": 0,
       "frames": 1540096,
       "sample_rate": 48000,
@@ -787,7 +794,9 @@
       "coverage": "32 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
       "pcm_file": "artifacts/final-08-lonely.f32",
       "console_errors": [],
-      "failed_requests": []
+      "failed_requests": [],
+      "capture_duration_s": 32.08533333333333,
+      "capture_duration_valid": true
     }
   ],
   "controls": [
@@ -810,8 +819,8 @@
             }
           }
         ],
-        "peak": 0.0647619292140007,
-        "rms": 0.022254122029288375,
+        "peak": 0.06476251780986786,
+        "rms": 0.026645002927914736,
         "samples_at_or_above_0dbfs": 0,
         "frames": 143360,
         "sample_rate": 48000,
@@ -820,7 +829,9 @@
         "coverage": "3 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
         "pcm_file": "artifacts/final-control-sine.f32",
         "console_errors": [],
-        "failed_requests": []
+        "failed_requests": [],
+        "capture_duration_s": 2.986666666666667,
+        "capture_duration_valid": true
       }
     },
     {
@@ -837,7 +848,9 @@
         ],
         "reason": "Fully qualified bank/sample absent from registry",
         "console_errors": [],
-        "failed_requests": []
+        "failed_requests": [],
+        "capture_duration_s": 0,
+        "capture_duration_valid": true
       }
     },
     {
@@ -848,7 +861,9 @@
         "status": "FAILED",
         "reason": "No PCM tap",
         "console_errors": [],
-        "failed_requests": []
+        "failed_requests": [],
+        "capture_duration_s": 0,
+        "capture_duration_valid": true
       }
     }
   ],
