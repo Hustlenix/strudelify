@@ -29,3 +29,34 @@ $: note("<[g2 ~ g2 ~ g2 ~ b2 d3] [d2 ~ d2 ~ d2 ~ a2 d3] [e2 ~ e2 ~ e2 ~ g2 b2] [
 $: s("<[bd ~ sd ~ bd ~ sd ~] [bd ~ sd ~ bd ~ [sd sd] ~]>").bank("RolandTR909").gain(.7)
 
 $: s("hh*8").bank("RolandTR909").gain(.16)
+
+// Measured mix headroom: baseline peak -0.41 dBFS; retain layer balance.
+all(p => p.withValue(v => ({...v, gain: (v.gain ?? 1) * 0.72})))
+
+// Bounded opening repair from the supplied recording, 0–4.37 s.
+// These measured D/F/A and C#/E voicings replace the unrelated G-major opening.
+// Source event times/pitches: music-audit/reports/01-babydoll-note-candidates.json.
+// Machine-assisted draft; instrument identity, omissions and later melody require listening.
+const openingVoicings = [[0.1858,0.8707,57],[0.1974,0.8359,62],[0.1974,0.8707,65],[1.2655,1.428,52],[1.2655,1.4861,61],[1.846,2.0214,57],[2.3233,2.509,52],[2.3233,2.4742,57],[2.3349,2.509,61],[3.0431,3.6816,57],[3.0431,3.7049,62],[3.0547,3.6816,65],[4.1125,4.3679,52],[4.1241,4.3679,61],[4.1241,4.2983,64]]
+$: new Pattern(state => openingVoicings.flatMap(([a,b,n]) => {
+  const whole = new TimeSpan(a * (84.05/240), b * (84.05/240))
+  const part = whole.intersection(state.span)
+  return part ? [new Hap(whole, part, {note:n, musicIntro:true})] : []
+})).s("triangle").lpf(2600).attack(.004).decay(.18).sustain(.12).release(.12).gain(.32)
+
+// Keep the source-derived opening clear of the old guessed bass/drum/lead layers.
+all(p => p.filterHaps(h => h.value.musicIntro || Number(h.whole.begin) >= 4.37 * (84.05/240)))
+
+// Measured macro-dynamics from the supplied recording; no inferred verse/chorus labels.
+// One-second RMS, three-second smoothing, square-root dynamic compression, gain <=1.
+// This follows source energy and ends the arrangement; it does not certify section orchestration.
+const sourceDynamics = [0.5785,0.5735,0.5968,0.6076,0.6274,0.6314,0.5943,0.6019,0.5931,0.6347,0.7472,0.8757,0.977,1.0,0.985,0.9794,0.9784,0.997,0.9693,0.957,0.9365,0.9291,0.9508,0.9676,0.9949,0.9842,1.0,1.0,0.9996,0.9216,0.8583,0.8025,0.8182,0.8954,0.9135,0.9411,0.9322,0.9574,0.9758,0.9996,0.9909,0.9565,0.8003,0.6821,0.6964,0.8604,0.9713,0.9772,0.9507,0.9579,0.9786,0.9927,0.9835,0.9819,0.963,0.9506,0.9513,0.952,0.9419,0.9747,0.9723,0.9601,0.9329,0.9548,0.9723,0.985,0.9777,0.9854,0.8879,0.8266,0.7367,0.7121,0.6723,0.7723,0.8921,0.9819,1.0,0.9841,0.9845,0.9843,0.9987,0.9607,0.9575,0.9314,0.9424,0.9503,0.9718,0.9886,0.9871,1.0,1.0,0.9857,0.9076,0.8486,0.8023,0.8054,0.7086,0.5331,0.2916]
+const sourceDuration = 98.112
+const musicCps = 0.35020833333333334
+const sourceLevelAt = seconds => {
+  const i = Math.max(0, Math.min(sourceDynamics.length - 1, Math.floor(seconds)))
+  const a = sourceDynamics[i], b = sourceDynamics[Math.min(i + 1, sourceDynamics.length - 1)]
+  return a + (b - a) * Math.max(0, Math.min(1, seconds - i))
+}
+all(p => p.filterHaps(h => Number(h.whole.begin) < sourceDuration * musicCps)
+  .withHap(h => h.withValue(v => ({...v, gain: (v.gain ?? 1) * sourceLevelAt(Number(h.whole.begin) / musicCps)}))))

@@ -1,0 +1,170 @@
+{
+  "id": "06-love-me-not",
+  "source_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+  "interval_s": [
+    17,
+    33
+  ],
+  "method": "Basic Pitch 0.4.0 ONNX CPU, onset .6 frame .4 min140ms, no melodia trick",
+  "status": "MACHINE_CANDIDATES_NOT_LISTENING_REVIEWED",
+  "limitations": [
+    "Full mix, not isolated instruments. False positives, octave errors and omissions possible.",
+    "No machine note is accepted as a correct lead solely because it was detected."
+  ],
+  "notes": [
+    {
+      "start_s": 17.0929,
+      "end_s": 17.2554,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.6008
+    },
+    {
+      "start_s": 17.3599,
+      "end_s": 18.5557,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.593
+    },
+    {
+      "start_s": 18.9156,
+      "end_s": 19.1375,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.537
+    },
+    {
+      "start_s": 20.2869,
+      "end_s": 20.67,
+      "midi": 36,
+      "note": "C2",
+      "activation": 0.5768
+    },
+    {
+      "start_s": 21.3331,
+      "end_s": 21.484,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.5957
+    },
+    {
+      "start_s": 21.5537,
+      "end_s": 22.7495,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.6225
+    },
+    {
+      "start_s": 23.1223,
+      "end_s": 23.3313,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4873
+    },
+    {
+      "start_s": 23.7144,
+      "end_s": 24.7825,
+      "midi": 36,
+      "note": "C2",
+      "activation": 0.6768
+    },
+    {
+      "start_s": 24.7941,
+      "end_s": 25.0857,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.498
+    },
+    {
+      "start_s": 25.2366,
+      "end_s": 25.4108,
+      "midi": 36,
+      "note": "C2",
+      "activation": 0.578
+    },
+    {
+      "start_s": 25.2366,
+      "end_s": 25.3875,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.3436
+    },
+    {
+      "start_s": 25.8171,
+      "end_s": 26.2699,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.6813
+    },
+    {
+      "start_s": 26.0261,
+      "end_s": 26.2699,
+      "midi": 64,
+      "note": "E4",
+      "activation": 0.3958
+    },
+    {
+      "start_s": 26.2699,
+      "end_s": 26.9317,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.5898
+    },
+    {
+      "start_s": 27.3509,
+      "end_s": 27.5483,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5468
+    },
+    {
+      "start_s": 28.4887,
+      "end_s": 29.1401,
+      "midi": 36,
+      "note": "C2",
+      "activation": 0.6285
+    },
+    {
+      "start_s": 28.966,
+      "end_s": 29.3259,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.5223
+    },
+    {
+      "start_s": 29.1517,
+      "end_s": 29.3143,
+      "midi": 36,
+      "note": "C2",
+      "activation": 0.4438
+    },
+    {
+      "start_s": 29.4304,
+      "end_s": 29.5813,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.3815
+    },
+    {
+      "start_s": 29.976,
+      "end_s": 31.1499,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.5633
+    },
+    {
+      "start_s": 31.5563,
+      "end_s": 31.742,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5456
+    },
+    {
+      "start_s": 32.0439,
+      "end_s": 32.8914,
+      "midi": 36,
+      "note": "C2",
+      "activation": 0.5465
+    }
+  ]
+}

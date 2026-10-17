@@ -4,7 +4,7 @@
 // Music audit: +5 semitone tonal correction; see music-audit/reports/adjustments.json
 // Instrumental rendition — no lyrics, just the gentle lilt.
 
-setcps(80/60/4)
+setcps(94.85/60/4)
 
 // melody — soft and lilting (6/8 feel)
 $: cat(
@@ -33,3 +33,20 @@ $: s("<[bd ~ ~ ~ ~ ~] [bd ~ ~ ~ ~ ~] [bd ~ ~ ~ ~ ~] [bd ~ ~ bd ~ ~]>").bank("Rol
 $: s("<[~ ~ ~ sd ~ ~] [~ ~ ~ sd ~ ~] [~ ~ ~ sd ~ ~] [~ ~ ~ sd ~ sd]>").bank("RolandTR909").gain(.3).room(.35)
 
 $: s("hh*6").bank("RolandTR909").gain(.09)
+
+// Measured mix headroom: baseline peak -1.55 dBFS; retain layer balance.
+all(p => p.withValue(v => ({...v, gain: (v.gain ?? 1) * 0.82})))
+
+// Measured macro-dynamics from the supplied recording; no inferred verse/chorus labels.
+// One-second RMS, three-second smoothing, square-root dynamic compression, gain <=1.
+// This follows source energy and ends the arrangement; it does not certify section orchestration.
+const sourceDynamics = [0.1425,0.157,0.176,0.1908,0.4301,0.5791,0.7058,0.742,0.7704,0.7996,0.7779,0.7558,0.7104,0.686,0.6895,0.6863,0.7147,0.7538,0.8248,0.8669,0.8424,0.8024,0.7464,0.7225,0.6693,0.6321,0.5884,0.5881,0.6061,0.5981,0.5857,0.5661,0.6025,0.6445,0.648,0.6411,0.6117,0.6256,0.6296,0.6579,0.6571,0.6355,0.6424,0.6332,0.6346,0.5952,0.6097,0.6174,0.604,0.5833,0.5995,0.6269,0.6792,0.6794,0.6606,0.617,0.6174,0.6376,0.618,0.6287,0.6248,0.6193,0.6006,0.6016,0.6647,0.7473,0.8094,0.8319,0.8155,0.7968,0.8113,0.8115,0.8104,0.7946,0.7821,0.8178,0.8258,0.8449,0.8246,0.8152,0.8161,0.8221,0.8215,0.818,0.7908,0.8172,0.8337,0.8607,0.8555,0.8218,0.8251,0.7967,0.8246,0.8066,0.799,0.7211,0.6169,0.5336,0.5063,0.5568,0.5586,0.5332,0.5121,0.5486,0.6161,0.7466,0.8228,0.891,0.896,0.8895,0.8979,0.8839,0.8848,0.8694,0.8392,0.8594,0.8641,0.8992,0.917,0.9244,0.9239,0.9096,0.9121,0.9058,0.8835,0.8788,0.8882,0.8987,0.9217,0.9121,0.926,0.9085,0.901,0.8938,0.8806,0.8975,0.8895,0.8948,0.9,0.9028,0.9293,0.9259,0.9312,0.9015,0.9115,0.9487,1.0,1.0,1.0,1.0,0.9924,0.9819,0.9777,0.9724,0.9604,0.9697,1.0,1.0,1.0,0.9999,0.999,0.9829,0.9817,0.963,0.9634,0.97,1.0,1.0,1.0,1.0,0.9956,0.9828,0.9481,0.9774,0.9671,0.9695,0.9515,0.9249,0.9094,0.8926,0.8922,0.8432,0.7539,0.6647,0.6632,0.6669,0.6388,0.5866,0.5684,0.5666,0.5195,0.5051,0.5013,0.5442,0.5419,0.5109,0.4975,0.4749,0.499,0.4994,0.4947,0.4769,0.4976,0.5237,0.5369,0.5027,0.4046,0.2788,0.0872,0.0548]
+const sourceDuration = 209.533
+const musicCps = 0.39520833333333333
+const sourceLevelAt = seconds => {
+  const i = Math.max(0, Math.min(sourceDynamics.length - 1, Math.floor(seconds)))
+  const a = sourceDynamics[i], b = sourceDynamics[Math.min(i + 1, sourceDynamics.length - 1)]
+  return a + (b - a) * Math.max(0, Math.min(1, seconds - i))
+}
+all(p => p.filterHaps(h => Number(h.whole.begin) < sourceDuration * musicCps)
+  .withHap(h => h.withValue(v => ({...v, gain: (v.gain ?? 1) * sourceLevelAt(Number(h.whole.begin) / musicCps)}))))

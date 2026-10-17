@@ -1,0 +1,58 @@
+{
+  "id": "05-cant-tell-me-nothing",
+  "source_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+  "interval_s": [
+    7,
+    19
+  ],
+  "method": "Basic Pitch 0.4.0 ONNX CPU, onset .6 frame .4 min140ms, no melodia trick",
+  "status": "MACHINE_CANDIDATES_NOT_LISTENING_REVIEWED",
+  "limitations": [
+    "Full mix, not isolated instruments. False positives, octave errors and omissions possible.",
+    "No machine note is accepted as a correct lead solely because it was detected."
+  ],
+  "notes": [
+    {
+      "start_s": 9.1259,
+      "end_s": 9.5323,
+      "midi": 39,
+      "note": "D#2",
+      "activation": 0.4862
+    },
+    {
+      "start_s": 11.3099,
+      "end_s": 11.6582,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.5395
+    },
+    {
+      "start_s": 13.5635,
+      "end_s": 14.2485,
+      "midi": 24,
+      "note": "C1",
+      "activation": 0.5036
+    },
+    {
+      "start_s": 14.5039,
+      "end_s": 14.7825,
+      "midi": 59,
+      "note": "B3",
+      "activation": 0.4479
+    },
+    {
+      "start_s": 16.8504,
+      "end_s": 17.8734,
+      "midi": 29,
+      "note": "F1",
+      "activation": 0.5576
+    },
+    {
+      "start_s": 18.0127,
+      "end_s": 18.5235,
+      "midi": 39,
+      "note": "D#2",
+      "activation": 0.5283
+    }
+  ]
+}

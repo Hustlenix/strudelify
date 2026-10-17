@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T03:45:25.497Z",
+  "generated_at": "2026-10-17T03:56:56.865Z",
   "mode": "final",
   "runtime_version": "1.2.6",
   "selftests": [
@@ -40,13 +40,15 @@
       "expected_filename": "01-babydoll.strudel",
       "source_prefix": "Dominic Fike - Babydoll",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\01-babydoll.strudel",
-      "sha256": "55d57e88701c4efc693bd02bf4addc28ff201f6287b5f7385edd0375bb190385",
+      "sha256": "8c7bc8bba1364453509e47aab508a637b46764dfd02066b70530f8d79b07985d",
       "bpm": 84.05,
       "status": "PASSED",
       "runtime_report": "final-01-babydoll.runtime.json",
-      "event_count": 853,
+      "event_count": 816,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     },
     {
       "id": "02-without-me",
@@ -55,13 +57,15 @@
       "expected_filename": "02-without-me.strudel",
       "source_prefix": "Eminem - Without Me",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\02-without-me.strudel",
-      "sha256": "8923ca7a19f38bce9257550e650b09ce0052714e14629b9bb3c28f2cce88f683",
+      "sha256": "334d3bfb80acf927df2a45ede55325eba1f1fc9be0e00d6dca4e1212b0e9c02e",
       "bpm": 112,
       "status": "PASSED",
       "runtime_report": "final-02-without-me.runtime.json",
       "event_count": 3961,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     },
     {
       "id": "03-everyday-normal-guy-2",
@@ -70,13 +74,15 @@
       "expected_filename": "03-everyday-normal-guy-2.strudel",
       "source_prefix": "Everyday Normal Guy 2",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\03-everyday-normal-guy-2.strudel",
-      "sha256": "4ffbb0a09192460e86e934a04869fec9367dd0f2dd3e70acc7610728f6b07fce",
+      "sha256": "b09ac107f893054cef6170c3e21a87aa50ac8fa694670949ddf1774e5c6ea96e",
       "bpm": 90,
       "status": "PASSED",
       "runtime_report": "final-03-everyday-normal-guy-2.runtime.json",
       "event_count": 1888,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     },
     {
       "id": "04-sailor-song",
@@ -85,13 +91,15 @@
       "expected_filename": "04-sailor-song.strudel",
       "source_prefix": "Gigi Perez - Sailor Song",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\04-sailor-song.strudel",
-      "sha256": "93258847415c3218ccaa567815609eb3aeda7946b15ea2b95395a6f416213b89",
-      "bpm": 80,
+      "sha256": "500d15292a7b68fd7e38d2b11194c8b8907b104a962a750015ff3fbc0c90cc22",
+      "bpm": 94.85,
       "status": "PASSED",
       "runtime_report": "final-04-sailor-song.runtime.json",
-      "event_count": 1528,
+      "event_count": 1811,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     },
     {
       "id": "05-cant-tell-me-nothing",
@@ -100,13 +108,15 @@
       "expected_filename": "05-cant-tell-me-nothing.strudel",
       "source_prefix": "Kanye West - Can",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\05-cant-tell-me-nothing.strudel",
-      "sha256": "5913127408debea1dcaf4c78536d97f48c197a5472ed0ee3a97bb74faf7dc383",
+      "sha256": "47b6ec60d0a429023ea9d65589f247c3f1dae16fc2aa3b0700c9e0e16fb39273",
       "bpm": 80,
       "status": "PASSED",
       "runtime_report": "final-05-cant-tell-me-nothing.runtime.json",
-      "event_count": 1820,
+      "event_count": 1816,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     },
     {
       "id": "06-love-me-not",
@@ -115,13 +125,15 @@
       "expected_filename": "06-love-me-not.strudel",
       "source_prefix": "Ravyn Lenae - Love Me Not",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\06-love-me-not.strudel",
-      "sha256": "9b77c32f0ec542e02cafa886678b954752678b0f2f11478d8cc3d5c8340c2deb",
+      "sha256": "2e5012e1f7df2a2274b471f9118887eae2edfd9d095f57539c6086efe6115660",
       "bpm": 114,
       "status": "PASSED",
       "runtime_report": "final-06-love-me-not.runtime.json",
-      "event_count": 2141,
+      "event_count": 2129,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     },
     {
       "id": "07-i-thought-i-saw-your-face-today",
@@ -130,13 +142,15 @@
       "expected_filename": "07-i-thought-i-saw-your-face-today.strudel",
       "source_prefix": "She & Him - I Thought",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\07-i-thought-i-saw-your-face-today.strudel",
-      "sha256": "73a723a0976dc46f123e373167b3fb7d00a062b11bcf12fa9421e4683a8433a4",
+      "sha256": "96810dbc3de0c55026528ee69de27e0a0bea755c37aa564ae0f7626cf16f9934",
       "bpm": 78,
       "status": "PASSED",
       "runtime_report": "final-07-i-thought-i-saw-your-face-today.runtime.json",
-      "event_count": 1239,
+      "event_count": 1230,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     },
     {
       "id": "08-lonely",
@@ -145,13 +159,15 @@
       "expected_filename": "08-lonely.strudel",
       "source_prefix": "Akon - Lonely",
       "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\08-lonely.strudel",
-      "sha256": "5f8c8e3b28450087d6b7eee702c4f0f3ab17170d480e6e6523ec596e397f1a6c",
+      "sha256": "b93ed42c57b6eee17373d01a1b0d2bca18a7d86964fe52d974876c0232d347f1",
       "bpm": 90,
       "status": "PASSED",
       "runtime_report": "final-08-lonely.runtime.json",
-      "event_count": 1807,
+      "event_count": 1803,
       "reason": "Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check",
-      "empty_windows": []
+      "empty_windows": [],
+      "levels_valid": true,
+      "ending_valid": true
     }
   ],
   "scope": "Music patterns only; every cycle over the usable reference duration. No application or player tested."

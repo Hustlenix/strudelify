@@ -1,0 +1,14 @@
+{
+  "id": "02-without-me",
+  "source_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+  "reference_interval_s": [
+    14.5,
+    31.65
+  ],
+  "part": "instrumental",
+  "method": "MDX Inst HQ3 (1.022 compensation), pYIN 75-1000 Hz, probability >= .8, within35cents, >=96ms; candidate sequence only",
+  "model_sha256": "317554b07fe1ea5279a77f2b1520a41ea4b93432560c4ffd08792c30fddf9adc",
+  "accepted_frame_fraction": 0.017723880597014924,
+  "status": "MEASURED_PITCH_CANDIDATES_NOT_CERTIFIED_MELODY",
+  "notes": []
+}

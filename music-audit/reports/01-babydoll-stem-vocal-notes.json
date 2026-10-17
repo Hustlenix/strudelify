@@ -1,0 +1,111 @@
+{
+  "id": "01-babydoll",
+  "source_sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+  "reference_interval_s": [
+    0.0,
+    24.0
+  ],
+  "part": "vocal",
+  "method": "MDX Inst HQ3 (1.022 compensation), pYIN 75-1000 Hz, probability >= .8, within35cents, >=96ms; candidate sequence only",
+  "model_sha256": "317554b07fe1ea5279a77f2b1520a41ea4b93432560c4ffd08792c30fddf9adc",
+  "accepted_frame_fraction": 0.11259160559626916,
+  "status": "MEASURED_PITCH_CANDIDATES_NOT_CERTIFIED_MELODY",
+  "notes": [
+    {
+      "start_s": 11.312,
+      "end_s": 11.504,
+      "midi": 57,
+      "note": "A3",
+      "mean_voicing_probability": 0.942,
+      "median_cents_deviation": 16.95
+    },
+    {
+      "start_s": 11.728,
+      "end_s": 12.256,
+      "midi": 57,
+      "note": "A3",
+      "mean_voicing_probability": 0.9133,
+      "median_cents_deviation": 16.95
+    },
+    {
+      "start_s": 12.544,
+      "end_s": 12.672,
+      "midi": 60,
+      "note": "C4",
+      "mean_voicing_probability": 0.929,
+      "median_cents_deviation": 6.95
+    },
+    {
+      "start_s": 13.152,
+      "end_s": 13.264,
+      "midi": 57,
+      "note": "A3",
+      "mean_voicing_probability": 0.8792,
+      "median_cents_deviation": 6.95
+    },
+    {
+      "start_s": 14.336,
+      "end_s": 14.592,
+      "midi": 60,
+      "note": "C4",
+      "mean_voicing_probability": 0.9406,
+      "median_cents_deviation": 6.95
+    },
+    {
+      "start_s": 14.928,
+      "end_s": 15.04,
+      "midi": 57,
+      "note": "A3",
+      "mean_voicing_probability": 0.9054,
+      "median_cents_deviation": 16.95
+    },
+    {
+      "start_s": 17.2,
+      "end_s": 17.312,
+      "midi": 60,
+      "note": "C4",
+      "mean_voicing_probability": 0.8727,
+      "median_cents_deviation": 6.95
+    },
+    {
+      "start_s": 19.088,
+      "end_s": 19.2,
+      "midi": 55,
+      "note": "G3",
+      "mean_voicing_probability": 0.9059,
+      "median_cents_deviation": -33.05
+    },
+    {
+      "start_s": 20.432,
+      "end_s": 20.832,
+      "midi": 67,
+      "note": "G4",
+      "mean_voicing_probability": 0.968,
+      "median_cents_deviation": 6.95
+    },
+    {
+      "start_s": 20.96,
+      "end_s": 21.056,
+      "midi": 57,
+      "note": "A3",
+      "mean_voicing_probability": 0.8987,
+      "median_cents_deviation": 21.95
+    },
+    {
+      "start_s": 22.752,
+      "end_s": 22.848,
+      "midi": 57,
+      "note": "A3",
+      "mean_voicing_probability": 0.868,
+      "median_cents_deviation": 11.95
+    },
+    {
+      "start_s": 23.216,
+      "end_s": 23.328,
+      "midi": 57,
+      "note": "A3",
+      "mean_voicing_probability": 0.8543,
+      "median_cents_deviation": -3.05
+    }
+  ]
+}

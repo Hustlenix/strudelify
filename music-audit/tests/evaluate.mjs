@@ -21,7 +21,11 @@ const tracks=manifest.map(t=>{
  const bpm=Number(code.match(/setcps\(\s*([\d.]+)/)?.[1]);
  const windows=Array.from({length:Math.ceil(end*bpm/240)},(_,i)=>({start:i,end:i+1}));
  const runtime=worker({code,windows},mode+'-'+t.id);
- return {...t,file,sha256:crypto.createHash('sha256').update(code).digest('hex'),bpm,status:runtime.status,runtime_report:mode+'-'+t.id+'.runtime.json',event_count:runtime.windows?.reduce((n,w)=>n+w.events.length,0),reason:runtime.reason,empty_windows:runtime.empty_windows};
+ const terminal=mode==='final'?worker({code,windows:[{start:end*bpm/240+1,end:end*bpm/240+2}]},'end-'+t.id):null;
+ const events=runtime.windows?.flatMap(w=>w.events)||[];
+ const levels_valid=events.every(e=>Number.isFinite(e.value.gain??1)&&(e.value.gain??1)>=0&&(e.value.gain??1)<=1);
+ const ending_valid=!terminal||terminal.windows?.every(w=>!w.events.length);
+ return {...t,file,sha256:crypto.createHash('sha256').update(code).digest('hex'),bpm,status:runtime.status==='PASSED'&&levels_valid&&ending_valid?'PASSED':'FAILED',runtime_report:mode+'-'+t.id+'.runtime.json',event_count:events.length,reason:runtime.reason,empty_windows:runtime.empty_windows,levels_valid,ending_valid};
 });
 const result={generated_at:new Date().toISOString(),mode,runtime_version:'1.2.6',selftests,tracks,scope:'Music patterns only; every cycle over the usable reference duration. No application or player tested.'};
 fs.writeFileSync(path.join(report,mode+'-validation.json'),JSON.stringify(result,null,2));

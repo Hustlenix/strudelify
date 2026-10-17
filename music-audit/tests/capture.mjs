@@ -5,7 +5,7 @@ const audit=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const mode=process.argv[2]||'final',seconds=Number(process.argv[3]||24),selection=process.argv.slice(4);
 const validation=JSON.parse(fs.readFileSync(path.join(audit,'reports',mode+'-validation.json'),'utf8'));
 const output={generated_at:new Date().toISOString(),mode,seconds,runtime_version:'@strudel/web 1.2.6',tracks:[],controls:[],scope:'Isolated music harness only; no player/application files touched.'};
-const server=await createServer({configFile:false,root:audit,cacheDir:path.join(audit,'cache/vite'),server:{host:'127.0.0.1',port:0,watch:{ignored:['**/cache/**','**/reports/**','**/artifacts/**','**/.venv/**']}},optimizeDeps:{include:['@strudel/web']}});
+const server=await createServer({configFile:false,root:audit,cacheDir:path.join(audit,'cache/vite'),server:{host:'127.0.0.1',port:0,watch:null,hmr:false},optimizeDeps:{include:['@strudel/web']}});
 let browser;
 try{
  await server.listen();const port=server.httpServer.address().port;
@@ -23,7 +23,10 @@ try{
    result=await page.evaluate(({code,seconds,preload})=>window.runAudit(code,seconds,preload),{...c,seconds:c.expected?3:seconds});
    if(result.pcm){const dest=path.join(audit,'artifacts',mode+'-'+c.id+'.f32');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,Buffer.from(result.pcm,'base64'));delete result.pcm;result.pcm_file=path.relative(audit,dest).replaceAll('\\','/');}
   }catch(e){result={status:'FAILED',reason:e.message};}
-  result.console_errors=errors;result.failed_requests=failedRequests;if(errors.length||failedRequests.length||result.scheduler_error)result.status='FAILED';
+  result.console_errors=errors;result.failed_requests=failedRequests;
+  result.capture_duration_s=result.frames&&result.sample_rate?result.frames/result.sample_rate:0;
+  result.capture_duration_valid=!result.frames||result.capture_duration_s>=(c.expected?3:seconds)*.95;
+  if(errors.length||failedRequests.length||result.scheduler_error||!result.capture_duration_valid)result.status='FAILED';
   if(c.expected)output.controls.push({id:c.id,status:result.status===c.expected?'PASSED':'FAILED',expected:c.expected,observed:result});else output.tracks.push({id:c.id,sha256:c.sha256,...result});
   await page.close();console.log(c.id,result.status,result.reason||'',result.peak??'');
   fs.writeFileSync(path.join(audit,'reports',mode+'-browser.json'),JSON.stringify(output,null,2));

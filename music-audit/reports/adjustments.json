@@ -88,5 +88,149 @@
     "after_sha256": "5e26d61b6716f40e1c99d7bd326b8c93888374009f5d4958fb7ab8b4ad753dc1",
     "change": "Removed accidental ninth subdivision in final kick cycle; both kicks now lie on the same eighth grid as the other cycles. This is a consistency repair, not a certified source kick transcription.",
     "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "01-babydoll",
+    "phase": "headroom",
+    "attempt": 1,
+    "before_sha256": "55d57e88701c4efc693bd02bf4addc28ff201f6287b5f7385edd0375bb190385",
+    "after_sha256": "c066a3ae20105bccd87246ee439e53efe68428c276e982e2c510901cf61b66dd",
+    "change": "Multiply existing layer gains by 0.72; measured baseline stereo peak 0.953384, 0 samples >=0dBFS in 24-second capture. Target below -3dBFS; final capture must confirm.",
+    "decision": "pending final PCM verification"
+  },
+  {
+    "id": "02-without-me",
+    "phase": "headroom",
+    "attempt": 1,
+    "before_sha256": "8923ca7a19f38bce9257550e650b09ce0052714e14629b9bb3c28f2cce88f683",
+    "after_sha256": "321ea831f9836958aaded3097af774dfcb5090eca81dc6298494f46e71549fd1",
+    "change": "Multiply existing layer gains by 0.62; measured baseline stereo peak 1.108831, 14 samples >=0dBFS in 24-second capture. Target below -3dBFS; final capture must confirm.",
+    "decision": "pending final PCM verification"
+  },
+  {
+    "id": "04-sailor-song",
+    "phase": "headroom",
+    "attempt": 1,
+    "before_sha256": "93258847415c3218ccaa567815609eb3aeda7946b15ea2b95395a6f416213b89",
+    "after_sha256": "941050f2e04f3269a1c1198270a422086a3c727ca582c282510842c2fdd8432e",
+    "change": "Multiply existing layer gains by 0.82; measured baseline stereo peak 0.836624, 0 samples >=0dBFS in 24-second capture. Target below -3dBFS; final capture must confirm.",
+    "decision": "pending final PCM verification"
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "phase": "headroom",
+    "attempt": 1,
+    "before_sha256": "5913127408debea1dcaf4c78536d97f48c197a5472ed0ee3a97bb74faf7dc383",
+    "after_sha256": "86a12310b963053fa1ea73f09dbc26dc678837b253f8de1e78f59ea7fb77e9f8",
+    "change": "Multiply existing layer gains by 0.55; measured baseline stereo peak 1.235484, 958 samples >=0dBFS in 24-second capture. Target below -3dBFS; final capture must confirm.",
+    "decision": "pending final PCM verification"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "phase": "headroom",
+    "attempt": 1,
+    "before_sha256": "73a723a0976dc46f123e373167b3fb7d00a062b11bcf12fa9421e4683a8433a4",
+    "after_sha256": "66342f2929dc1890f865dd6e4fc7535f714664a893e7b23e9c8397718d447469",
+    "change": "Multiply existing layer gains by 0.65; measured baseline stereo peak 1.057774, 8 samples >=0dBFS in 24-second capture. Target below -3dBFS; final capture must confirm.",
+    "decision": "pending final PCM verification"
+  },
+  {
+    "id": "08-lonely",
+    "phase": "headroom",
+    "attempt": 1,
+    "before_sha256": "5f8c8e3b28450087d6b7eee702c4f0f3ab17170d480e6e6523ec596e397f1a6c",
+    "after_sha256": "05d41b7e25013697df335393d0828387f4d173bf7598e72ca2dd28990a2136ce",
+    "change": "Multiply existing layer gains by 0.77; measured baseline stereo peak 0.890357, 0 samples >=0dBFS in 24-second capture. Target below -3dBFS; final capture must confirm.",
+    "decision": "pending final PCM verification"
+  },
+  {
+    "id": "01-babydoll",
+    "phase": "opening-voicings",
+    "attempt": 1,
+    "before_sha256": "9e95f0df4866a377221e23582293d581b85d1ef718231f8852f55acc7b196865",
+    "after_sha256": "9f9c77a78f5dc582ddc68b189d7cb5e7834baa03db2d8b6b00e9ca632366550c",
+    "change": "Replace only 0\u20134.37 s with measured opening note events (Basic Pitch >=.48, MIDI <=65); preserve original arrangement afterwards. Original G/D/Em/C opening contradicted repeated measured D/F/A and C#/E voicings. No missing pitches were filled by guesswork.",
+    "decision": "candidate; requires capture and source-window comparison; no listening approval"
+  },
+  {
+    "id": "04-sailor-song",
+    "phase": "tempo",
+    "attempt": 1,
+    "before_sha256": "04fb076d9d97df86f980eef374e2daf39a2889e7fe8cdbd89caa1ba882c0f55b",
+    "after_sha256": "537d53c1ce2e47dbfacde593b745a618b2efa087181db966c525b014e10f11ad",
+    "change": "Cycle tempo 80 -> 94.85 BPM; reference periodicities [{'bpm': 94.85, 'periodicity': 0.1497}, {'bpm': 189.65, 'periodicity': 0.146}]. Retained four-beat cycle convention; meter/downbeat and She & Him tempo drift remain review items.",
+    "decision": "retain for comparison; listening approval pending"
+  },
+  {
+    "id": "01-babydoll",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "bc50f32986c4dc368f76ee93dbfcf0502fdae52113a8c65e258645cf9ddf2594",
+    "after_sha256": "8c7bc8bba1364453509e47aab508a637b46764dfd02066b70530f8d79b07985d",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 98.112s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
+  },
+  {
+    "id": "02-without-me",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "321ea831f9836958aaded3097af774dfcb5090eca81dc6298494f46e71549fd1",
+    "after_sha256": "334d3bfb80acf927df2a45ede55325eba1f1fc9be0e00d6dca4e1212b0e9c02e",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 297.624s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "4ffbb0a09192460e86e934a04869fec9367dd0f2dd3e70acc7610728f6b07fce",
+    "after_sha256": "b09ac107f893054cef6170c3e21a87aa50ac8fa694670949ddf1774e5c6ea96e",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 221.256s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
+  },
+  {
+    "id": "04-sailor-song",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "d2b2e2c3dd3328777968df619d7fd2aae6d31a002309de098d1e0cab4eb36624",
+    "after_sha256": "500d15292a7b68fd7e38d2b11194c8b8907b104a962a750015ff3fbc0c90cc22",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 209.533s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "86a12310b963053fa1ea73f09dbc26dc678837b253f8de1e78f59ea7fb77e9f8",
+    "after_sha256": "47b6ec60d0a429023ea9d65589f247c3f1dae16fc2aa3b0700c9e0e16fb39273",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 271.704s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
+  },
+  {
+    "id": "06-love-me-not",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "9b77c32f0ec542e02cafa886678b954752678b0f2f11478d8cc3d5c8340c2deb",
+    "after_sha256": "2e5012e1f7df2a2274b471f9118887eae2edfd9d095f57539c6086efe6115660",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 213.067s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "66342f2929dc1890f865dd6e4fc7535f714664a893e7b23e9c8397718d447469",
+    "after_sha256": "96810dbc3de0c55026528ee69de27e0a0bea755c37aa564ae0f7626cf16f9934",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 170.4s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
+  },
+  {
+    "id": "08-lonely",
+    "phase": "dynamic-form",
+    "attempt": 1,
+    "before_sha256": "05d41b7e25013697df335393d0828387f4d173bf7598e72ca2dd28990a2136ce",
+    "after_sha256": "b93ed42c57b6eee17373d01a1b0d2bca18a7d86964fe52d974876c0232d347f1",
+    "change": "Source-derived macro-dynamic envelope and finite note onset cutoff at 263.064s; no invented semantic boundaries.",
+    "decision": "review candidate; node end/level checks and PCM capture required"
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "status": "FAILED",
+  "reason": "No events in requested windows",
+  "empty_windows": [
+    {
+      "start": 99.64900000000002,
+      "end": 100.64900000000002
+    }
+  ],
+  "windows": [
+    {
+      "start": 99.64900000000002,
+      "end": 100.64900000000002,
+      "events": []
+    }
+  ],
+  "cps": 0.375
+}

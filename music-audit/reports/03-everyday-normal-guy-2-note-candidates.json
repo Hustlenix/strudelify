@@ -1,0 +1,149 @@
+{
+  "id": "03-everyday-normal-guy-2",
+  "source_sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+  "interval_s": [
+    5,
+    21
+  ],
+  "method": "Basic Pitch 0.4.0 ONNX CPU, onset .6 frame .4 min140ms, no melodia trick",
+  "status": "MACHINE_CANDIDATES_NOT_LISTENING_REVIEWED",
+  "limitations": [
+    "Full mix, not isolated instruments. False positives, octave errors and omissions possible.",
+    "No machine note is accepted as a correct lead solely because it was detected."
+  ],
+  "notes": [
+    {
+      "start_s": 5.8707,
+      "end_s": 6.1726,
+      "midi": 55,
+      "note": "G3",
+      "activation": 0.5156
+    },
+    {
+      "start_s": 8.2869,
+      "end_s": 8.4378,
+      "midi": 59,
+      "note": "B3",
+      "activation": 0.5019
+    },
+    {
+      "start_s": 8.8326,
+      "end_s": 9.008,
+      "midi": 64,
+      "note": "E4",
+      "activation": 0.4345
+    },
+    {
+      "start_s": 9.2286,
+      "end_s": 9.3795,
+      "midi": 55,
+      "note": "G3",
+      "activation": 0.4449
+    },
+    {
+      "start_s": 9.6233,
+      "end_s": 9.8091,
+      "midi": 55,
+      "note": "G3",
+      "activation": 0.4779
+    },
+    {
+      "start_s": 12.9102,
+      "end_s": 13.1205,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.4793
+    },
+    {
+      "start_s": 13.2947,
+      "end_s": 13.4572,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.695
+    },
+    {
+      "start_s": 14.5601,
+      "end_s": 15.1884,
+      "midi": 74,
+      "note": "D5",
+      "activation": 0.6244
+    },
+    {
+      "start_s": 14.9201,
+      "end_s": 15.6412,
+      "midi": 69,
+      "note": "A4",
+      "activation": 0.6022
+    },
+    {
+      "start_s": 15.8966,
+      "end_s": 16.7673,
+      "midi": 74,
+      "note": "D5",
+      "activation": 0.5741
+    },
+    {
+      "start_s": 16.2333,
+      "end_s": 16.5583,
+      "midi": 70,
+      "note": "A#4",
+      "activation": 0.7193
+    },
+    {
+      "start_s": 16.6396,
+      "end_s": 16.8834,
+      "midi": 70,
+      "note": "A#4",
+      "activation": 0.6416
+    },
+    {
+      "start_s": 16.895,
+      "end_s": 17.0356,
+      "midi": 74,
+      "note": "D5",
+      "activation": 0.5712
+    },
+    {
+      "start_s": 17.2214,
+      "end_s": 18.1038,
+      "midi": 74,
+      "note": "D5",
+      "activation": 0.6209
+    },
+    {
+      "start_s": 17.5813,
+      "end_s": 18.2082,
+      "midi": 70,
+      "note": "A#4",
+      "activation": 0.5834
+    },
+    {
+      "start_s": 18.5565,
+      "end_s": 19.1964,
+      "midi": 73,
+      "note": "C#5",
+      "activation": 0.6955
+    },
+    {
+      "start_s": 18.9048,
+      "end_s": 19.1964,
+      "midi": 69,
+      "note": "A4",
+      "activation": 0.7003
+    },
+    {
+      "start_s": 19.5563,
+      "end_s": 19.893,
+      "midi": 61,
+      "note": "C#4",
+      "activation": 0.4956
+    },
+    {
+      "start_s": 20.2993,
+      "end_s": 20.4967,
+      "midi": 69,
+      "note": "A4",
+      "activation": 0.5544
+    }
+  ]
+}

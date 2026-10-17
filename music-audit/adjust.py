@@ -7,7 +7,7 @@ import json,re,sys,hashlib
 ROOT=Path(__file__).resolve().parent
 COVERS=ROOT.parent/'tracks/covers'
 PITCH={'02-without-me':2,'04-sailor-song':5,'05-cant-tell-me-nothing':-1,'06-love-me-not':4,'07-i-thought-i-saw-your-face-today':5,'08-lonely':-1}
-TEMPO={'01-babydoll':84.05,'06-love-me-not':114,'07-i-thought-i-saw-your-face-today':78}
+TEMPO={'01-babydoll':84.05,'04-sailor-song':94.85,'06-love-me-not':114,'07-i-thought-i-saw-your-face-today':78}
 NAMES=['c','c#','d','d#','e','f','f#','g','g#','a','a#','b']
 BASE={'c':0,'d':2,'e':4,'f':5,'g':7,'a':9,'b':11}
 def transpose(text,shift):
