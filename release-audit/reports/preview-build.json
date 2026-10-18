@@ -1,6 +1,6 @@
 {
-  "created_at": "2026-10-18T10:14:45.129360+00:00",
-  "commit": "0b6e42ce2fc1f236df8f673470724a564a1d1c5f",
+  "created_at": "2026-10-18T10:22:59.202099+00:00",
+  "commit": "735d55ebcc9cb05e2c643e863195f59d38a05bc3",
   "dirty": true,
   "publication": "local preview only; approval required",
   "track_count": 6,
@@ -17,7 +17,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "358653a3a73111297617e6a82545db59d68f999282144ae7bbee4722e64d5f84"
+      "sha256": "13f651e57c2944ba8cd1d915b13889f17499a752e10d8fa1cc51a108e3ed08fd"
     },
     {
       "path": "THIRD_PARTY_ASSETS.md",
@@ -25,7 +25,7 @@
     },
     {
       "path": "app.js",
-      "sha256": "4052bca9beeb16fc44d76eb1215cc0594a2536f142a3748ad0c687a03a075336"
+      "sha256": "a93d8e12ac155e217cae14b9151514e593d6aef5df44dfd0213cc81f62c34554"
     },
     {
       "path": "assets/covers/afterglow.svg",
@@ -57,7 +57,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "6cfbb0c2431484ffb255b35f5406e8714671308743d9b7404efc9c8c18c4f308"
+      "sha256": "bd5a2502debec59cdfc908d8827f3724c3cafe1a22dd28f5c54dd3da77e71955"
     },
     {
       "path": "licenses/Strudel-AGPL-3.0.txt",

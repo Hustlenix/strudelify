@@ -33,6 +33,8 @@ The build must be regenerated from the committed implementation before final rev
 4. The public artifact is explicitly allowlisted. Eight commercial-song study scores, lyric
    transcripts, reference audio, stems, models, private comparisons and audit folders are excluded.
    All study sources and strongest previous versions remain in the preserved music worktree/history.
+   The eight lyric JSON files are removed from this review branch's tip after exact private
+   preservation; earlier public Git history and deployed copies are unchanged.
 5. Explicit listener feedback links open a GitHub issue draft with track, position, browser,
    viewport and build context. Submission requires the visitor's GitHub sign-in and action;
    nothing is sent automatically. A reusable issue form is included. No analytics added.

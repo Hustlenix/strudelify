@@ -35,9 +35,17 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source, target)
         manifest.append({'path': name, 'sha256': hashlib.sha256(target.read_bytes()).hexdigest()})
-    revision = subprocess.check_output(['rtk', 'proxy', 'git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
-    dirty = bool(subprocess.check_output(['rtk', 'proxy', 'git', 'status', '--porcelain'], cwd=ROOT, text=True).strip())
+    git = ['rtk', 'proxy', 'git'] if shutil.which('rtk') else ['git']
+    revision = subprocess.check_output(git + ['rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    worktree_dirty = bool(subprocess.check_output(git + ['status', '--porcelain'], cwd=ROOT, text=True).strip())
+    changed_payload = []
+    for name in sorted(set(files)):
+        committed = subprocess.check_output(git + ['show', 'HEAD:' + name], cwd=ROOT)
+        if committed.replace(b'\r\n', b'\n') != (ROOT / name).read_bytes().replace(b'\r\n', b'\n'):
+            changed_payload.append(name)
+    dirty = bool(changed_payload)
     report = {'created_at': datetime.now(timezone.utc).isoformat(), 'commit': revision, 'dirty': dirty,
+              'worktree_dirty_including_audit_reports':worktree_dirty, 'uncommitted_payload_paths':changed_payload,
               'publication': 'local preview only; approval required', 'track_count': len(catalog),
               'excluded': ['commercial cover source payloads', 'all lyrics', 'reference audio', 'audit/private files'],
               'files': manifest}

@@ -11,6 +11,12 @@ def main():
     rows = []
     for entry in baseline['files']:
         path = ROOT.parent / entry['repository'] / entry['path']
+        withheld = ROOT / 'release-audit/private/withheld-lyrics' / path.name
+        if entry['repository'] == ROOT.name and entry['path'].startswith('tracks/covers/lyrics/') and not path.exists():
+            digest = hashlib.sha256(withheld.read_bytes()).hexdigest()
+            rows.append({'path':str(path), 'current_release':'removed from proposed public branch; original preserved privately and in prior Git/music history',
+                         'preserved_sha256':digest, 'matches_baseline':digest == entry['sha256']})
+            continue
         rows.append({'path':str(path), 'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
                      'matches_baseline':hashlib.sha256(path.read_bytes()).hexdigest() == entry['sha256']})
     originals = []

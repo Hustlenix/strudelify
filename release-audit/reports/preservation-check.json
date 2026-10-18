@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-18T10:19:03.440132+00:00",
+  "checked_at": "2026-10-18T10:25:07.523169+00:00",
   "preserved_files": [
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\afterglow.strudel",
@@ -93,42 +93,50 @@
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\01-babydoll.json",
-      "sha256": "cf1e016af7aa8cf2ccdacee560f9c385c37a76a8f6f1cbcb36623909d70879f1",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "cf1e016af7aa8cf2ccdacee560f9c385c37a76a8f6f1cbcb36623909d70879f1",
       "matches_baseline": true
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\02-without-me.json",
-      "sha256": "34c6ad4854df1ebaf731809247dbceef1899b927f20871265b833b051b672669",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "34c6ad4854df1ebaf731809247dbceef1899b927f20871265b833b051b672669",
       "matches_baseline": true
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\03-everyday-normal-guy-2.json",
-      "sha256": "de4484caac24638d283d8eaee6dc9b96cd9372787640a6d0abe72715296310c0",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "de4484caac24638d283d8eaee6dc9b96cd9372787640a6d0abe72715296310c0",
       "matches_baseline": true
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\04-sailor-song.json",
-      "sha256": "0c5b18acdb1782631b17899d3590467df4a34ba04a4e3587b3e0b1f77d83bdf9",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "0c5b18acdb1782631b17899d3590467df4a34ba04a4e3587b3e0b1f77d83bdf9",
       "matches_baseline": true
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\05-cant-tell-me-nothing.json",
-      "sha256": "85e1ba06d7aa0b95cdad3a85d0b49da4154f370ce5caf4f0872b1f30377b5a39",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "85e1ba06d7aa0b95cdad3a85d0b49da4154f370ce5caf4f0872b1f30377b5a39",
       "matches_baseline": true
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\06-love-me-not.json",
-      "sha256": "de93febe01976b9fcc1085682a337da3fe3143dc9f2041f62a9d2e9eb49e273b",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "de93febe01976b9fcc1085682a337da3fe3143dc9f2041f62a9d2e9eb49e273b",
       "matches_baseline": true
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\07-i-thought-i-saw-your-face-today.json",
-      "sha256": "ea0d58bc822a6e6243ce4d464038fa8373fbf4d894dbdc8893bd252360d2d566",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "ea0d58bc822a6e6243ce4d464038fa8373fbf4d894dbdc8893bd252360d2d566",
       "matches_baseline": true
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\covers\\lyrics\\08-lonely.json",
-      "sha256": "f518e4c8963e288d02484299755cd41756aa166fe73ae3c01d38dc0e886af0af",
+      "current_release": "removed from proposed public branch; original preserved privately and in prior Git/music history",
+      "preserved_sha256": "f518e4c8963e288d02484299755cd41756aa166fe73ae3c01d38dc0e886af0af",
       "matches_baseline": true
     },
     {
