@@ -31,6 +31,14 @@ View Code; portrait/touch controls; volume; browser background and return; conne
 while requesting an uncached score, then restored connectivity and Retry. Include model/browser,
 date, observed result and any problem. Desktop viewport emulation is not a physical phone test.
 
+The original-only HTTPS review has a deliberate **Send review to this project** button.
+Submitted declarations are saved in the ignored `release-audit/private/received-original-reviews/`
+folder. Select the expected receipt from the authorized owner review; do not accept an ambiguous
+sender as the owner or count synthetic schema fixtures as listeners. Use `assess_listener_review.py`
+with the selected receipt and exact review/release artifacts to list any incomplete music or
+phone checks. It verifies source hashes and never grants publication approval itself. The
+physical laptop main-flow observations are already recorded in `reports/physical-laptop-smoke.json`.
+
 ## Publish exact approved bytes
 
 After approval and merge, dispatch **Approved Pages beta release** from `main` with:

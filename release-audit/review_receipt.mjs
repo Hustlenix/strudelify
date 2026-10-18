@@ -1,4 +1,5 @@
 // Receipts record submitted claims; they do not prove who listened or approve publication.
+export const TASK_NAMES=['First Play','Pause and Resume','Stop','Switch tracks','Search','View Code','Portrait and touch controls','Background and return','Device volume','Connectivity loss and retry'];
 export function validateReview(data,manifest){
   if(data.kind!=='actual manually submitted original listening feedback'||data.publication_approval!==false||data.personally_performed!==true)
     throw Error('A manually declared review is required; this endpoint never approves publication.');
@@ -9,6 +10,6 @@ export function validateReview(data,manifest){
     if(allowed.get(row.id)!==row.score_sha256||!['unanswered','yes','needs-correction','unsure'].includes(row.decision)||typeof row.listened_complete!=='boolean'||typeof row.observations!=='string')throw Error('Invalid or stale track response.');
   }
   if(!['phone','laptop','desktop','emulated'].includes(data.device_type)||!['yes','no',''].includes(data.physical_device))throw Error('Select the device type.');
-  if(!Array.isArray(data.tasks)||data.tasks.length!==10||data.tasks.some(row=>typeof row.name!=='string'||!['passed','failed','not-tested'].includes(row.result)))throw Error('Invalid device-check responses.');
+  if(!Array.isArray(data.tasks)||data.tasks.length!==TASK_NAMES.length||new Set(data.tasks.map(row=>row.name)).size!==TASK_NAMES.length||data.tasks.some(row=>!TASK_NAMES.includes(row.name)||!['passed','failed','not-tested'].includes(row.result)))throw Error('Invalid device-check responses.');
   return {recorded_claims:data,publication_approved:false,verification_basis:'Manually submitted listener declaration; not independent identity verification.'};
 }
