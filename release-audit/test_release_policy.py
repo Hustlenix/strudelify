@@ -83,6 +83,39 @@ class ReleasePolicyTests(unittest.TestCase):
         self.approval['branding']['upstream_permission_evidence']=None
         with self.assertRaises(ValueError): validate_approval(self.approval,self.manifest,self.folder)
 
+    def delegated_fixture(self):
+        self.approval['review_policy']='owner-delegated-beta'
+        self.approval['delegation']={'owner_instruction':'SYNTHETIC: ship a technical beta without this form',
+            'instruction_evidence':'UNIT TEST ONLY; NOT OWNER AUTHORIZATION',
+            'waived_checks':['complete-human-listening','physical-phone'],
+            'human_listening_performed':False,'physical_phone_tested':False}
+        for row in self.approval['tracks']:
+            row.update(listened_complete=False,review_basis='technical-beta')
+        self.approval['devices']['phone'].update(physical_device=False,passed=False)
+
+    def test_explicit_delegated_technical_beta(self):
+        self.delegated_fixture()
+        self.assertTrue(validate_approval(self.approval,self.manifest,self.folder))
+
+    def test_delegation_without_owner_instruction_rejected(self):
+        self.delegated_fixture()
+        del self.approval['delegation']['owner_instruction']
+        with self.assertRaises(ValueError): validate_approval(self.approval,self.manifest,self.folder)
+
+    def test_delegated_fake_listening_rejected(self):
+        self.delegated_fixture()
+        self.approval['tracks'][0]['listened_complete']=True
+        with self.assertRaises(ValueError): validate_approval(self.approval,self.manifest,self.folder)
+
+    def test_delegated_fake_phone_pass_rejected(self):
+        self.delegated_fixture()
+        self.approval['devices']['phone']['passed']=True
+        with self.assertRaises(ValueError): validate_approval(self.approval,self.manifest,self.folder)
+
+    def test_unknown_review_policy_rejected(self):
+        self.approval['review_policy']='skip-everything'
+        with self.assertRaises(ValueError): validate_approval(self.approval,self.manifest,self.folder)
+
 
 if __name__=='__main__':
     result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ReleasePolicyTests))

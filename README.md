@@ -25,17 +25,18 @@ This is opensourced, so you can add a music that you like, to expand this websit
 The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their *should not copy* rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)
 
 The project-authored source retains its MIT notice. Strudel is an AGPL-3.0-or-later dependency;
-the proposed combined distribution uses AGPL-3.0-or-later, while MIT grants for project portions remain.
-The public UI now uses Hustlenix Music; final publication approval is pending; see [LICENSING.md](LICENSING.md).
+the combined distribution uses AGPL-3.0-or-later, while MIT grants for project portions remain.
+The public UI uses Hustlenix Music; see [LICENSING.md](LICENSING.md).
 See [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md). Demo compositions in `tracks/` are original examples for this project.
 
-## MVP review candidate
+## v0.1 instrumental beta
 
-The `codex/mvp-recovery` branch preserves the current static app and all prior music work.
-Its proposed public artifact includes the six original instrumental patterns, clearly labeled
-as drafts. Each now has finite sections, a fading ending and measured level balance; full human listening approval is pending. Commercial-song study scores and automatic lyrics are withheld from this artifact
-pending permission and human music review. The public site is unchanged until a reviewed
-merge/deployment is explicitly approved.
+The public beta contains six original instrumentals. Each has finite sections, a fading ending
+and measured level balance. All six have complete technical audio captures; subjective listening
+acceptance and a physical phone test have not been recorded. The owner delegated shipping the
+technical beta without requiring the review form. Catalog review metadata retains those limits.
+Commercial-song study scores, lyric transcripts and supplied recordings are excluded from the
+public artifact. All prior music work remains preserved in the repository's separate review work.
 
 The player has separate Play/Pause/Resume and Stop behavior, mobile transport controls,
 complete actual View code, and links to draft a public GitHub listener report. GitHub sign-in
@@ -43,8 +44,8 @@ is required to submit; no report or personal data is sent automatically.
 
 For a local review build, install the locked development tools in `release-audit/`, run
 `python release-audit/build_preview.py`, then serve `release-preview/` over localhost.
-Read [release-audit/RELEASE_CANDIDATE.md](release-audit/RELEASE_CANDIDATE.md) and
-[release-audit/RESOURCE_DECISIONS.md](release-audit/RESOURCE_DECISIONS.md) for evidence and remaining gates.
+Read the repository's [release audit](https://github.com/Hustlenix/strudelify/tree/main/release-audit)
+for release evidence, known limitations and the deployment runbook.
 
 ## Licence
 Combined application: AGPL-3.0-or-later. Original MIT grants for project portions are retained.

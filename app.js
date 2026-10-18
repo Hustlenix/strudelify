@@ -459,7 +459,7 @@ async function openTrack(id, push = true) {
     note.className = 'empty-state';
     note.textContent = track.cover
       ? 'Instrumental study · human recognition review pending. Not an approved faithful cover.'
-      : 'Original instrumental pattern · listener review pending. Generated live from its Strudel code.';
+      : 'Original instrumental · generated live from its Strudel code. Explore the sound or make it your own.';
     $('.detail-hero').after(note);
   }
   const reportLink = document.createElement('a');
@@ -724,7 +724,7 @@ async function loadCoverCatalog() {
   }
   tracks.splice(0, tracks.length, ...covers);
   $('#catalogStatus')?.classList.add('hidden');
-  if ($('#catalogIntro')) $('#catalogIntro').textContent = `${covers.length} original instrumental patterns. Drafts for listening and feedback; commercial-song studies remain in private review.`;
+  if ($('#catalogIntro')) $('#catalogIntro').textContent = `${covers.length} original instrumentals. Press play, explore the code, and find your sound.`;
   renderAllLists();
   renderPlayer();
   showSuggestions();

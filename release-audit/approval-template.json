@@ -1,6 +1,7 @@
 {
   "approved_commit": null,
   "publication_approved": false,
+  "review_policy": "human-reviewed",
   "owner": null,
   "approved_at": null,
   "integrated_license": "AGPL-3.0-or-later",
@@ -74,6 +75,6 @@
       "observations": null
     }
   ],
-  "note": "Current release remains gated on actual music and phone results. The owner instruction is to complete remaining release work; do not substitute synthetic tests for human observations.",
+  "note": "Template for the human-reviewed route. The current owner-delegated-beta release uses an explicit delegation record; unperformed listening and phone checks stay false. Never substitute test fixtures for human observations.",
   "provenance_evidence": "Project README and retained MIT grant identify the six original examples. No external sound bank, commercial melody transcription or lyrics in the allowlisted artifact; earlier scores preserved in Git and music worktree."
 }

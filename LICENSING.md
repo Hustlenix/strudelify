@@ -1,6 +1,7 @@
-# License and source decision for the proposed beta
+# License and source decision for the instrumental beta
 
-Decision prepared: 18 October 2026. Public release approval is still pending.
+Decision recorded: 18 October 2026. The owner delegated release of the technical beta in
+the project chat; the exact clean commit is recorded at publication.
 
 The integrated application is to be distributed under **AGPL-3.0-or-later**.
 The project-authored MIT grant in `LICENSE` is retained for those portions;
@@ -47,8 +48,11 @@ are retained for continuity. The maintainer naming request is met by this public
 no upstream endorsement or permission is claimed. This implementation choice follows the
 owner instruction to complete the remaining release work.
 
-## Required review before publication
+## Publication decision
 
-The release approval must confirm this license/source policy, project-original track
-provenance, branding, the selected track IDs and exact score hashes, an owner listening
-decision, and actual phone/laptop results. No automated test manufactures those decisions.
+The release record confirms this license/source policy, project-original track provenance,
+branding and the selected track IDs and exact score hashes. The owner selected a delegated
+technical beta without completing the review form. Complete human listening acceptance
+and a physical phone result remain unverified; neither is represented as a pass.
+Full audio captures, real browser checks and the recorded laptop main flow support the
+technical release. A future human-reviewed release can record actual listening/device results.

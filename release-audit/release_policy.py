@@ -61,7 +61,7 @@ def validate_artifact(folder):
 
 
 def validate_approval(approval, manifest, folder):
-    """Only record human facts after they actually occur; template deliberately fails."""
+    """Require owner authorization; never turn waived checks into human evidence."""
     folder=Path(folder)
     if manifest.get('dirty') or approval.get('approved_commit')!=manifest['commit']:
         raise ValueError('Approval must name the exact clean artifact commit')
@@ -76,17 +76,48 @@ def validate_approval(approval, manifest, folder):
         raise ValueError('Current branding requires recorded upstream naming permission')
     if branding['public_name'] not in (folder/'index.html').read_text(encoding='utf-8'):
         raise ValueError('Approved public name differs from the built site')
+    policy=approval.get('review_policy','human-reviewed')
+    if policy not in ('human-reviewed','owner-delegated-beta'):
+        raise ValueError('Unknown review policy')
+    delegated=policy=='owner-delegated-beta'
+    if delegated:
+        delegation=approval.get('delegation',{})
+        if not delegation.get('owner_instruction') or not delegation.get('instruction_evidence'):
+            raise ValueError('Missing explicit owner delegation')
+        if set(delegation.get('waived_checks',[]))!={'complete-human-listening','physical-phone'}:
+            raise ValueError('Delegation must identify exactly the unperformed reviews')
+        if delegation.get('human_listening_performed') is not False or delegation.get('physical_phone_tested') is not False:
+            raise ValueError('Delegation must preserve unverified human/device facts')
+        quality=json.loads((Path(__file__).parent/'reports/original-balanced-quality.json').read_text(encoding='utf-8'))
+        if quality.get('human_listening') is not False:
+            raise ValueError('Expected technical capture evidence, not invented listener approval')
+        captures={row['id']:row for row in quality['tracks']}
     catalog=json.loads((folder/'tracks/catalog.json').read_text())
     approved=approval.get('tracks',[])
     if {r['id'] for r in approved}!={r['id'] for r in catalog} or len(approved)!=len(catalog):
-        raise ValueError('Every published original needs its own listening decision')
+        raise ValueError('Every published original needs its own release decision')
     for row in approved:
-        if row.get('listened_complete') is not True or row.get('accepted_for_beta') is not True or not row.get('reviewer') or not row.get('observations'):
-            raise ValueError('Missing actual complete listening decision: '+row['id'])
-        if row.get('score_sha256')!=digest((folder/'tracks'/f"{row['id']}.strudel").read_bytes()):
+        score_hash=digest((folder/'tracks'/f"{row['id']}.strudel").read_bytes())
+        if row.get('score_sha256')!=score_hash:
             raise ValueError('Approval names an earlier score: '+row['id'])
+        if row.get('accepted_for_beta') is not True or not row.get('reviewer') or not row.get('observations'):
+            raise ValueError('Missing beta release decision: '+row['id'])
+        if delegated:
+            if row.get('listened_complete') is not False or row.get('review_basis')!='technical-beta':
+                raise ValueError('Delegated release must not assert human listening: '+row['id'])
+            capture=captures.get(row['id'],{})
+            if (capture.get('status')!='PASSED' or capture.get('current_score_sha256',capture.get('score_sha256'))!=score_hash
+                or capture.get('clipped_samples')!=0 or capture.get('nonfinite_samples')!=0
+                or capture.get('errors')!=[] or capture.get('transport',{}).get('context')!='suspended'):
+                raise ValueError('Missing matching complete technical capture: '+row['id'])
+        elif row.get('listened_complete') is not True:
+            raise ValueError('Missing actual complete listening decision: '+row['id'])
     for device in ('phone','laptop'):
         row=approval.get('devices',{}).get(device,{})
+        if delegated and device=='phone':
+            if row.get('physical_device') is not False or row.get('passed') is not False or not row.get('observations'):
+                raise ValueError('Unperformed phone test must remain explicitly unverified')
+            continue
         if row.get('physical_device') is not True or row.get('passed') is not True or not row.get('model_browser') or not row.get('observations'):
             raise ValueError('Missing actual '+device+' smoke test')
     return True

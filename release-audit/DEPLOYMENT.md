@@ -1,7 +1,7 @@
 # Controlled beta publication and rollback
 
-Prepared 18 October 2026. Workflows are implemented and locally linted; no cloud deployment
-or rollback has been performed. PR #6 stays a draft while owner/device/branding approval is pending.
+Prepared 18 October 2026. The owner has delegated shipping the technical beta without the
+review form; see OWNER_DELEGATION.md. Actual deployment results are recorded separately.
 
 ## Before merging
 
@@ -14,7 +14,19 @@ in Settings → Pages before merging. Record the previous configuration and veri
 is `workflow`. Then merge the reviewed PR. Neither this preparation nor pushing the review branch
 changes the live Pages setting. No destructive history rewrite is part of this release.
 
-## Actual human gate
+## Release decision
+
+Two explicit policies are supported. `human-reviewed` requires the actual complete listening
+decisions and physical device results below. `owner-delegated-beta` records the owner's direct
+instruction to ship without the form, matching full technical captures, exact score hashes,
+the completed laptop main flow and fresh browser checks. It must record listening and physical
+phone checks as unperformed; it cannot manufacture a pass. Owner identity, clean revision,
+license, branding, provenance and the public allowlist are enforced for both policies.
+
+The current owner selected the delegated technical beta in the project chat. The review form
+is optional feedback, not a remaining launch requirement. No repeated owner confirmation is needed.
+
+### Optional human-reviewed route
 
 Use `approval-template.json` to record actual owner decisions. Every included score needs its
 exact SHA-256, complete listening confirmation and acceptance for beta. A deliberately smaller
