@@ -34,8 +34,21 @@ const state = {
   toastTimer: 0,
 };
 let enginePromise;
-let playbackEndTimer;
+let playbackDuration = 0;
+let playbackRevision = 0;
+let evaluationQueue = Promise.resolve();
+let playbackStartedAt = 0;
+let previewing = false;
+let playbackError = '';
+let playbackAbort;
+const playbackChannel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('strudelify-playback') : null;
+if (playbackChannel) playbackChannel.onmessage = event => { if (event.data === 'claim') stopTrack(); };
 const codeCache = new Map();
+const lyricsCache = new Map();
+let lyricsRevision = 0;
+let lyricsCues = [];
+let highlightedLyric = -1;
+let detailRevision = 0;
 const coverNames = ['afterglow', 'greenline', 'paper-moon', 'soft-focus', 'tiny-hours', 'wide-awake'];
 function icon(name) {
   const filled = ['play', 'pause', 'stop', 'previous', 'next'].includes(name);
@@ -58,8 +71,8 @@ function saveStorage(key, value) {
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]);
 }
-function allTracks() { return [...state.custom, ...tracks]; }
-function getTrack(id) { return allTracks().find(track => track.id === id); }
+function allTracks() { return [...tracks.filter(track=>track.cover), ...state.custom, ...tracks.filter(track=>!track.cover)]; }
+function getTrack(id) { return allTracks().find(track => track.id === id) || (state.current?.id === id ? state.current : null); }
 function artStyle(track) { return `background:${palettes[((track.palette || 1) - 1) % palettes.length]}`; }
 function artMarkup(track, className = 'row-art') {
   return `<span class="${className}" style="${artStyle(track)}" aria-hidden="true">${coverImage(track)}</span>`;
@@ -81,7 +94,7 @@ function setStatus(message, playing = state.playing) {
 function getCode(track) {
   if (track.code) return Promise.resolve(track.code);
   if (codeCache.has(track.id)) return codeCache.get(track.id);
-  const request = fetch(track.codeUrl, {cache: 'no-cache'}).then(response => {
+  const request = fetch(track.codeUrl, {cache: 'no-cache',signal:AbortSignal.timeout(15000)}).then(response => {
     if (!response.ok) throw new Error(`Could not load ${track.codeUrl} (${response.status}).`);
     return response.text();
   }).catch(error => { codeCache.delete(track.id); throw error; });
@@ -91,57 +104,131 @@ function getCode(track) {
 function ensureEngine() {
   if (typeof window.initStrudel !== 'function') throw new Error('The Strudel runtime did not load. Check your connection and refresh.');
   if (!enginePromise) enginePromise = Promise.resolve(window.initStrudel({
-    prebake: () => window.samples('https://raw.githubusercontent.com/felixroos/dough-samples/main/tidal-drum-machines.json'),
+    prebake: async () => {
+      const url='https://raw.githubusercontent.com/felixroos/dough-samples/main/tidal-drum-machines.json';
+      const response=await fetch(url,{signal:AbortSignal.timeout(15000)});
+      if (!response.ok) throw new Error('The instrument library could not be loaded. Try again.');
+      const map=await response.json();
+      await window.samples(map,map._base || new URL('./',url).href);
+    },
+    defaultOutput: (hap, deadline, duration, cps, time) => {
+      if (!state.playing || hap.value?._strudelifySession !== playbackRevision) return;
+      return window.webaudioOutput(hap, deadline, duration, cps, time);
+    },
   })).catch(error => { enginePromise = null; throw error; });
   return enginePromise;
 }
 function getEvalError(repl) { return repl?.state?.evalError || null; }
 async function runCode(code) {
-  clearTimeout(playbackEndTimer);
-  const repl = await ensureEngine();
-  if (typeof window.evaluate !== 'function') throw new Error('Strudel could not start. Refresh the page and try again.');
-  await window.hush();
-  await window.evaluate(code, true);
-  const error = getEvalError(repl);
-  if (error) throw error;
+  return playTrack({id:'editor-preview', title:'Editor preview', artist:'Unsaved pattern', code, preview:true, palette:5}, true);
 }
-async function playTrack(track) {
-  if (!track || state.loading) return;
-  if (state.playing && state.current?.id === track.id) { await stopTrack(); return; }
+function silenceEngine() {
+  // hush stops future scheduling; resetGlobalEffects disconnects already sounding voices/tails.
+  if (window.hush) window.hush();
+  if (window.resetGlobalEffects) window.resetGlobalEffects();
+  const context=window.getAudioContext?.();
+  // Suspending the actual output also silences in-flight sample/effect work during cancellation.
+  return context && context.state!=='closed' ? context.suspend() : Promise.resolve();
+}
+function cancellable(promise, signal) {
+  if (signal.aborted) return Promise.reject(signal.reason || new DOMException('Playback canceled','AbortError'));
+  return new Promise((resolve,reject)=>{
+    const abort=()=>reject(signal.reason || new DOMException('Playback canceled','AbortError'));
+    signal.addEventListener('abort',abort,{once:true});
+    Promise.resolve(promise).then(value=>{signal.removeEventListener('abort',abort);resolve(value);},error=>{signal.removeEventListener('abort',abort);reject(error);});
+  });
+}
+async function prepareInstruments(pattern, repl, code) {
+  const duration=Number(code.match(/const (?:endSeconds|sourceDuration)\s*=\s*([\d.]+)/)?.[1]);
+  const cycles=duration>0 ? Math.min(128,duration*repl.scheduler.cps+1) : 16;
+  const urls=new Set();
+  for (const hap of pattern.queryArc(0,cycles)) {
+    const value=hap.value;
+    if (!value.s) continue;
+    if (typeof value.s!=='string' || (value.bank!=null && typeof value.bank!=='string')) throw new Error('This pattern has an unresolved instrument name.');
+    const name=((value.bank?value.bank+'_':'')+value.s).toLowerCase();
+    const sound=window.soundMap.get()[name];
+    if (!sound) throw new Error(`Instrument unavailable: ${name}`);
+    const samples=sound.data?.samples;
+    if (samples) for (const url of (Array.isArray(samples)?samples:Object.values(samples)).flat()) urls.add(url);
+  }
+  await cancellable(Promise.all([...urls].map(url=>window.loadBuffer(url,window.getAudioContext()))),AbortSignal.timeout(15000));
+}
+async function playTrack(track, isPreview = false) {
+  if (!track) return;
+  if (!isPreview && (state.playing || state.loading) && state.current?.id === track.id) { await stopTrack(); return; }
+  const revision = ++playbackRevision;
+  playbackAbort?.abort();
+  const abort = playbackAbort = new AbortController();
+  playbackChannel?.postMessage('claim');
+  previewing = isPreview;
+  playbackError = '';
+  state.playing = false;
   state.loading = true;
-  clearTimeout(playbackEndTimer);
+  playbackDuration = 0;
+  const muted=silenceEngine();
   state.current = track;
+  loadLyrics(track);
   renderPlayer();
+  renderAllLists();
   setStatus('Waking the synth…', false);
   try {
-    // Initialize on the click gesture so the browser can unlock Web Audio.
-    const repl = await ensureEngine();
-    const code = await getCode(track);
-    await window.hush();
-    await window.evaluate(code, true);
-    const error = getEvalError(repl);
-    if (error) throw error;
-    state.playing = true;
+    // Initialize during the gesture, then serialize real REPL evaluations.
+    const [repl, code] = await cancellable(Promise.all([ensureEngine(), getCode(track),muted]),abort.signal);
+    if (revision !== playbackRevision) return;
+    const start = evaluationQueue.then(async () => {
+      if (revision !== playbackRevision) return false;
+      const pattern = await repl.evaluate(code, false);
+      const error = getEvalError(repl);
+      if (error) throw error;
+      if (revision !== playbackRevision) return false;
+      if (!pattern?.queryArc) throw new Error('This code did not produce a playable pattern.');
+      await cancellable(prepareInstruments(pattern,repl,code),abort.signal);
+      if (revision !== playbackRevision) return false;
+      const sessionPattern = pattern.withValue(value => ({...value, _strudelifySession:revision}));
+      await repl.setPattern(sessionPattern, false);
+      if (revision !== playbackRevision) return false;
+      await silenceEngine();
+      await window.getAudioContext().resume();
+      if (revision !== playbackRevision) return false;
+      state.playing = true;
+      await repl.start();
+      if (revision !== playbackRevision) { await silenceEngine(); return false; }
+      playbackStartedAt = window.getAudioContext().currentTime;
+      return true;
+    });
+    evaluationQueue = start.catch(() => {});
+    if (!await start || revision !== playbackRevision) return;
     // A finite source-timed score ends rather than leaving a silent "playing" state.
-    const duration = Number(code.match(/const endSeconds\s*=\s*([\d.]+)/)?.[1]);
-    if (duration > 0) playbackEndTimer = setTimeout(() => stopTrack(), (duration + 1) * 1000);
-    state.recent = [track.id, ...state.recent.filter(id => id !== track.id)].slice(0, 6);
-    saveStorage('strudelify-recent', state.recent);
+    const duration = Number(code.match(/const (?:endSeconds|sourceDuration)\s*=\s*([\d.]+)/)?.[1]);
+    playbackDuration = duration > 0 ? duration : 0;
+    if (!isPreview) {
+      state.recent = [track.id, ...state.recent.filter(id => id !== track.id)].slice(0, 6);
+      saveStorage('strudelify-recent', state.recent);
+    }
     setStatus('Playing live pattern', true);
     renderPlayer();
     renderAllLists();
   } catch (error) {
+    if (revision !== playbackRevision) return;
     state.playing = false;
-    setStatus('Could not play this pattern', false);
+    await silenceEngine();
+    playbackError = error?.name==='TimeoutError' ? 'Loading the song or instruments timed out. Try again or refresh.' : error?.message || 'Strudel could not play this track.';
     renderPlayer();
-    showToast(error?.message || 'Strudel could not play this track.');
-  } finally { state.loading = false; renderPlayer(); }
+    showToast(playbackError);
+    if (isPreview) throw error;
+  } finally { if (revision === playbackRevision) { state.loading = false; renderPlayer(); } }
 }
 async function stopTrack() {
-  clearTimeout(playbackEndTimer);
-  try { if (window.hush) await window.hush(); }
-  catch { /* The interface can still return to its stopped state. */ }
+  ++playbackRevision;
+  playbackAbort?.abort();
+  playbackDuration = 0;
   state.playing = false;
+  state.loading = false;
+  previewing = false;
+  playbackError = '';
+  try { await silenceEngine(); }
+  catch { /* The interface can still return to its stopped state. */ }
   setStatus(state.current ? 'Pattern stopped' : 'Ready when you are', false);
   renderPlayer();
   renderAllLists();
@@ -151,13 +238,17 @@ function renderPlayer() {
   $('#nowTitle').textContent = track?.title || 'Choose a track';
   $('#nowArtist').textContent = track?.artist || 'Your next loop is waiting';
   $('#playerArt').innerHTML = coverImage(track || tracks[0]);
-  $('#likeButton').disabled = !track;
+  $('#likeButton').disabled = !track || !!track.preview;
   $('#likeButton').classList.toggle('liked', !!track && state.liked.includes(track.id));
   $('#likeButton').innerHTML = icon('heart');
   $('#codeButton').disabled = !track;
   renderQueue();
-  $('#mainPlayButton').disabled = !track || state.loading;
-  setStatus(state.loading ? 'Waking the synth…' : state.playing ? 'Playing live pattern' : track ? 'Pattern stopped' : 'Ready when you are', state.playing);
+  $('#mainPlayButton').disabled = !track;
+  setStatus(playbackError ? 'Could not play this pattern' : state.loading ? 'Loading · press Play to cancel' : state.playing ? (previewing ? 'Previewing editor code' : 'Playing live pattern') : track ? 'Pattern stopped' : 'Ready when you are', state.playing);
+  if (state.loading) {
+    $('#mainPlayButton').innerHTML = icon('stop');
+    $('#mainPlayButton').setAttribute('aria-label', 'Cancel loading');
+  }
 }
 function renderPlaylistNav() {
   const items = [{ name: 'All patterns', filter: '', palette: 1 }, ...groups.map(g => ({...g, filter:g.name})), {name:'Liked tracks', liked:true, palette:3}];
@@ -201,6 +292,60 @@ function renderHome() {
 function renderQueue() {
   $('#queueList').innerHTML = allTracks().map(track => `<button class="queue-track" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${artMarkup(track)}<span style="${state.current?.id === track.id ? 'color:var(--accent)' : ''}">${escapeHtml(track.title)}<small>${escapeHtml(track.artist)}</small></span></button>`).join('');
 }
+async function loadLyrics(track) {
+  if (!$('#lyricsLines')) return; // A cached older page can still load the new transport safely.
+  const revision = ++lyricsRevision;
+  lyricsCues = [];
+  highlightedLyric = -1;
+  $('#lyricsTitle').textContent = track.title;
+  $('#lyricsArtist').textContent = track.artist;
+  $('#lyricsLines').replaceChildren();
+  $('#retryLyrics').classList.add('hidden');
+  $('#lyricsNotice').textContent = track.cover ? 'Loading lyrics…' : 'This is an instrumental pattern. No lyrics are attached.';
+  if (!track.cover) return;
+  try {
+    if (!lyricsCache.has(track.id)) lyricsCache.set(track.id,
+      fetch(`tracks/covers/lyrics/${encodeURIComponent(track.id)}.json`, {cache:'no-cache'}).then(async response => {
+        if (!response.ok) throw new Error('Lyrics could not be loaded.');
+        const data = await response.json();
+        if (data.id !== track.id || !Array.isArray(data.cues) || data.cues.some(cue =>
+          typeof cue.text !== 'string' || !Number.isFinite(cue.start) || !Number.isFinite(cue.end) || cue.start < 0 || cue.end < cue.start))
+          throw new Error('Lyrics data is invalid.');
+        return data;
+      }).catch(error => {lyricsCache.delete(track.id);throw error;}));
+    const data = await lyricsCache.get(track.id);
+    if (revision !== lyricsRevision) return;
+    lyricsCues = data.cues;
+    $('#lyricsNotice').textContent = data.notice || 'Lyrics draft · timing and words may contain errors.';
+    if (!lyricsCues.length) $('#lyricsNotice').textContent = 'No reliable lyric transcript is available for this recording yet.';
+    $('#lyricsLines').replaceChildren(...lyricsCues.map(cue => {
+      const line = document.createElement('p');
+      line.textContent = cue.text;
+      return line;
+    }));
+  } catch (error) {
+    if (revision !== lyricsRevision) return;
+    $('#lyricsNotice').textContent = error.message;
+    $('#retryLyrics').classList.remove('hidden');
+  }
+}
+function updateLyricsPosition() {
+  const seconds = state.playing && window.getAudioContext ? Math.max(0,window.getAudioContext().currentTime-playbackStartedAt) : -1;
+  if (playbackDuration > 0 && seconds >= playbackDuration + 1) { stopTrack(); return; }
+  const index = lyricsCues.findIndex(cue => seconds >= cue.start && seconds < cue.end);
+  if (index === highlightedLyric) return;
+  highlightedLyric = index;
+  [...$('#lyricsLines').children].forEach((line,i) => {
+    line.classList.toggle('current-lyric', i === index);
+    if (i === index) line.setAttribute('aria-current','true'); else line.removeAttribute('aria-current');
+  });
+  const line = $('#lyricsLines').children[index];
+  if (line && $('#appShell').classList.contains('lyrics-open')) {
+    const scroller=$('#lyricsLines');
+    scroller.scrollTo({top:Math.max(0,line.offsetTop-scroller.clientHeight*.32),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+  }
+}
+setInterval(updateLyricsPosition,200);
 function searchResults(query = '', group = '') {
   const normalized = query.trim().toLowerCase();
   return allTracks().filter(track => {
@@ -243,11 +388,14 @@ function setView(name, push = true) {
   if (name === 'library') renderLibrary();
   $('#mainArea').scrollTo({ top: 0, behavior: 'smooth' });
 }
-async function openTrack(id) {
+async function openTrack(id, push = true) {
   const track = getTrack(id);
   if (!track) return;
+  const revision = ++detailRevision;
   setView('track', false);
-  history.replaceState({view:'track', trackId:id}, '', `#track/${encodeURIComponent(id)}`);
+  const href=`#track/${encodeURIComponent(id)}`;
+  if (push && location.hash !== href) history.pushState({view:'track',trackId:id},'',href);
+  else history.replaceState({view:'track',trackId:id},'',href);
   $('#trackDetail').innerHTML = `<div class="detail-hero">${artMarkup(track,'detail-art')}<div class="detail-copy"><div class="eyebrow">Live-coded pattern</div><h1>${escapeHtml(track.title)}</h1><p><strong>${escapeHtml(track.artist)}</strong> · ${escapeHtml(track.mood || 'Your pattern')} · ${escapeHtml(track.loop || 'Infinite loop')}</p></div></div>
   <div class="detail-actions"><button class="detail-play" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button><button class="icon-button${state.liked.includes(track.id) ? ' liked' : ''}" data-action="like" data-track-id="${escapeHtml(track.id)}" aria-label="Like ${escapeHtml(track.title)}">${icon('heart')}</button><button class="button button-quiet" data-show-code>View code</button><div style="position:relative"><button class="icon-button" data-track-menu aria-label="More options" aria-expanded="false">${icon('more')}</button><div class="detail-menu hidden" role="menu"><button role="menuitem" data-action="copy" data-track-id="${escapeHtml(track.id)}">Copy Strudel code</button></div></div></div>
   <details class="code-details" id="patternCode"><summary>Inside the pattern</summary><div class="code-panel"><div class="code-panel-heading"><span>${escapeHtml(track.id)}.strudel</span><span>LIVE PATTERN</span></div><pre id="detailCode">Loading pattern…</pre></div></details>
@@ -260,8 +408,8 @@ async function openTrack(id) {
       : 'Instrumental Strudel cover · In review. Melody, sound, and musical fidelity are still being improved.';
     $('.detail-hero').after(note);
   }
-  try { $('#detailCode').textContent = await getCode(track); }
-  catch (error) { $('#detailCode').textContent = error.message; }
+  try { const code=await getCode(track); if (revision===detailRevision) $('#detailCode').textContent=code; }
+  catch (error) { if (revision===detailRevision) $('#detailCode').textContent=error.message; }
 }
 function likeTrack(track) {
   if (!track) return;
@@ -382,7 +530,7 @@ $$('[data-library-filter]').forEach(button => button.addEventListener('click', (
 $('#editorPreviewButton').addEventListener('click', async () => {
   const button = $('#editorPreviewButton');
   button.disabled = true; $('#editorError').classList.add('hidden');
-  try { await runCode($('#editorCode').value); showToast('Previewing your pattern'); }
+  try { await runCode($('#editorCode').value); if (previewing && state.playing && $('#editorDialog').open) showToast('Previewing your pattern'); }
   catch (error) { $('#editorError').textContent = error?.message || 'This pattern could not be played.'; $('#editorError').classList.remove('hidden'); }
   finally { button.disabled = false; }
 });
@@ -395,32 +543,43 @@ $('#editorForm').addEventListener('submit', event => {
   const track = { id: `custom-${Date.now()}`, title, artist, mood: 'Your pattern', loop: '∞ loop', code, created: true, palette: 5 };
   state.custom = [track, ...state.custom];
   if (saveStorage('strudelify-custom', state.custom)) {
+    if (previewing) stopTrack();
     $('#editorDialog').close('save'); renderPlaylistNav(); renderAllLists();
     showToast('Saved to your local library');
     openTrack(track.id);
   }
 });
 $('#editorDialog').addEventListener('close', () => {
-  if ($('#editorDialog').returnValue !== 'save' && !state.playing && window.hush) window.hush();
+  if (previewing) stopTrack();
 });
+$('#editorDialog').addEventListener('cancel', () => { if (previewing) stopTrack(); });
+window.addEventListener('pagehide', () => stopTrack());
 function routeFromLocation() {
   if (location.hash.startsWith('#track/')) {
-    try { openTrack(decodeURIComponent(location.hash.slice(7))); }
+    try { openTrack(decodeURIComponent(location.hash.slice(7)), false); }
     catch { setView('home', false); }
   }
-  else if (location.hash === '#track' && history.state?.trackId) openTrack(history.state.trackId);
+  else if (location.hash === '#track' && history.state?.trackId) openTrack(history.state.trackId, false);
   else setView(location.hash.slice(1) || 'home', false);
 }
 window.addEventListener('popstate', routeFromLocation);
 
 document.querySelector('a[href="#mainArea"]').addEventListener('click', event => { event.preventDefault(); $('#mainArea').focus(); });
 document.addEventListener('keydown', event => { if(event.key==='Escape'){hideSuggestions();$$('.detail-menu').forEach(menu=>menu.classList.add('hidden'));$$('[data-track-menu]').forEach(button=>button.setAttribute('aria-expanded','false'));} });
-document.querySelector('[data-close-editor]').addEventListener('click', () => $('#editorDialog').close('cancel'));
+document.querySelector('[data-close-editor]').addEventListener('click', () => { if (previewing) stopTrack(); $('#editorDialog').close('cancel'); });
 $('#createHeaderButton').addEventListener('click', () => openEditor());
 $('#librarySearchButton').addEventListener('click', () => { setView('search'); $('#searchInput').focus(); });
 $('#clearSearchButton').addEventListener('click', () => { $('#searchInput').value=''; $('#searchPageInput').value=''; renderSearch(); hideSuggestions(); $('#clearSearchButton').classList.add('hidden'); $('#searchInput').focus(); });
 $$('[data-home-filter]').forEach(button => button.addEventListener('click', () => { homeFilter=button.dataset.homeFilter; $$('[data-home-filter]').forEach(b=>{b.classList.toggle('selected',b===button); b.setAttribute('aria-pressed',String(b===button));}); renderHome(); }));
-$$('[data-toggle-queue]').forEach(button=>button.addEventListener('click',()=>{ const open=$('#appShell').classList.toggle('queue-open'); $$('[data-toggle-queue]').forEach(b=>b.setAttribute('aria-expanded',String(open))); }));
+function setRightPanel(panel) {
+  $('#appShell').classList.toggle('queue-open',panel==='queue');
+  $('#appShell').classList.toggle('lyrics-open',panel==='lyrics');
+  $$('[data-toggle-queue]').forEach(button=>button.setAttribute('aria-expanded',String(panel==='queue')));
+  $$('[data-toggle-lyrics]').forEach(button=>button.setAttribute('aria-expanded',String(panel==='lyrics')));
+}
+$$('[data-toggle-queue]').forEach(button=>button.addEventListener('click',()=>setRightPanel($('#appShell').classList.contains('queue-open')?'':'queue')));
+$$('[data-toggle-lyrics]').forEach(button=>button.addEventListener('click',()=>setRightPanel($('#appShell').classList.contains('lyrics-open')?'':'lyrics')));
+$('#retryLyrics')?.addEventListener('click',()=>{if(state.current)loadLyrics(state.current);});
 $('#collapseSidebarButton').addEventListener('click',()=>{ const collapsed=$('#appShell').classList.toggle('library-collapsed'); $('#appShell').style.removeProperty('--library-width'); const label=collapsed?'Expand your library':'Collapse your library'; $('#collapseSidebarButton').setAttribute('aria-expanded',String(!collapsed)); $('#collapseSidebarButton').setAttribute('aria-label',label); $('#collapseSidebarButton').title=label; });
 let libraryWidth = 280;
 const resizer=$('#libraryResizer');
@@ -452,6 +611,7 @@ document.addEventListener('click',e=>{
 renderPlaylistNav();
 renderHome();
 renderPlayer();
+setRightPanel($('#lyricsLines') && matchMedia('(min-width:1101px)').matches ? 'lyrics' : '');
 if (!location.hash) history.replaceState({ view: 'home' }, '', '#home');
 
 async function loadCoverCatalog() {
@@ -474,14 +634,35 @@ async function loadCoverCatalog() {
     return {...entry, codeUrl: codeUrl.href, cover: true, mood: entry.genre,
       loop: `${entry.bpm} BPM`, group: 'Requested covers', palette: index % palettes.length + 1};
   });
+  // Preserve older saved copies under distinct IDs so they cannot shadow a deployed cover.
+  const canonical = new Set(covers.map(track=>track.id));
+  const used = new Set([...canonical,...tracks.map(track=>track.id),...state.custom.map(track=>track.id)]);
+  let migrated = false;
+  state.custom = state.custom.map((track,index)=>{
+    if (!canonical.has(track.id)) return track;
+    let suffix=index,id=`saved-${track.id}-${suffix}`;
+    while (used.has(id)) id=`saved-${track.id}-${++suffix}`;
+    used.add(id);
+    codeCache.delete(track.id);
+    const saved={...track,id,title:`${track.title} (saved version)`};
+    if (state.liked.includes(track.id) && !state.liked.includes(id)) state.liked.push(id);
+    if (state.current===track) state.current=saved;
+    migrated=true;
+    return saved;
+  });
+  if (migrated) {
+    saveStorage('strudelify-custom',state.custom);
+    saveStorage('strudelify-liked',state.liked);
+  }
   tracks.unshift(...covers);
-  $('#catalogStatus').classList.add('hidden');
-  $('#catalogIntro').textContent = `${covers.length} instrumental covers in review. Six original patterns to explore.`;
+  $('#catalogStatus')?.classList.add('hidden');
+  if ($('#catalogIntro')) $('#catalogIntro').textContent = `${covers.length} instrumental covers in review. Six original patterns to explore.`;
   renderAllLists();
   renderPlayer();
   showSuggestions();
 }
 loadCoverCatalog().catch(error => {
-  $('#catalogStatus').textContent = `${error.message} Reload to try again. Original patterns are still available.`;
-  $('#catalogStatus').setAttribute('role', 'alert');
+  const status=$('#catalogStatus');
+  if (status) {status.textContent = `${error.message} Reload to try again. Original patterns are still available.`;status.setAttribute('role', 'alert');}
+  else showToast(error.message);
 }).finally(routeFromLocation);
