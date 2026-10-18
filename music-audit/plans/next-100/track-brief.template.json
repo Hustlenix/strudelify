@@ -1,0 +1,45 @@
+{
+  "song_id": null,
+  "title": null,
+  "artist": null,
+  "original_album": null,
+  "recording_version": null,
+  "official_recording_url": null,
+  "release_date": null,
+  "selection_evidence": [],
+  "reference": {
+    "private_audio_path": null,
+    "sha256": null,
+    "duration_s": null
+  },
+  "musical_analysis": {
+    "bpm": null,
+    "bpm_confidence": null,
+    "meter": null,
+    "downbeat_offset_s": null,
+    "key": null,
+    "key_confidence": null,
+    "hook_intervals": [],
+    "bass_transcription": [],
+    "chord_events": [],
+    "melody_events": [],
+    "sections": [],
+    "transitions": []
+  },
+  "arrangement": {
+    "code_path": null,
+    "runtime_version": null,
+    "source_code_sha256": null,
+    "render_duration_s": null
+  },
+  "quality": {
+    "runtime_report": null,
+    "full_audio_metrics": null,
+    "critical_listening": [],
+    "blind_recognition_review": [],
+    "major_open_issues": [],
+    "fidelity_score": null,
+    "catalog_status": "draft"
+  },
+  "public_release_clearance": null
+}
