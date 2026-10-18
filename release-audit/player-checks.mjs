@@ -26,9 +26,10 @@ try {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const url = `http://127.0.0.1:${server.address().port}/`;
   let executablePath;
-  if (process.platform === 'win32') executablePath = browserName === 'firefox'
-    ? path.join(process.env.LOCALAPPDATA, 'ms-playwright/firefox-1538/firefox/firefox.exe')
-    : 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+  if (process.platform === 'win32' && browserName === 'chromium')
+    executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+  // Firefox must match this lockfile's patched Playwright revision; arbitrary newer installed
+  // Firefox builds can hang its input protocol even when a control is visible and enabled.
   browser = await (browserName === 'firefox' ? firefox : chromium).launch({headless:true, executablePath,
     args: browserName === 'chromium' ? ['--mute-audio'] : []});
   report.browser_version = browser.version();

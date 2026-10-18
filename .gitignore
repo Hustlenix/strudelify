@@ -1,5 +1,6 @@
 release-audit/node_modules/
 release-audit/artifacts/
 release-audit/private/
+release-audit/experiments/
 release-audit/__pycache__/
 release-preview/

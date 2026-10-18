@@ -18,7 +18,7 @@ item/version before adoption. Deferred resources have no installed version or fi
 | [Lucide](https://lucide.dev/icons/) | ADOPT LATER | Free, ISC | No owned files changed now | Player icons, volume, playlists, forks, controls No assets/components needed by the confirmed failures; keep current UI and native synths. |
 | [Next.js Supabase Starter](https://vercel.com/templates/authentication/supabase) | ADOPT LATER | Free template, external service limits | No owned files changed now | Only deferred auth-starter reference selected; cookie/session and RLS patterns later. No cloning, account, service or migration now. |
 | [Vercel Git integration](https://vercel.com/docs/git/vercel-for-github) | ADOPT LATER | Platform usage / Hobby restrictions | No owned files changed now | Preview builds, production deployment on reviewed branch |
-| [Playwright](https://playwright.dev/docs/intro) | ADOPT NOW | Apache-2.0 verified from installed 1.56.1 LICENSE | release-audit/ only | Browser tests for audio loading, UI, previews |
+| [Playwright](https://playwright.dev/docs/intro) | ADOPT NOW | Apache-2.0 verified from installed 1.62.1 LICENSE | release-audit/ only | Browser tests for audio loading, UI, previews |
 | [GitHub Actions](https://docs.github.com/en/actions) | KEEP | Free quotas depend on repo/plan | Application and release-audit/ | CI gates on engine, catalog and app changes |
 | [Tonal.js](https://github.com/tonaljs/tonal) | ADOPT LATER | MIT | No owned files changed now | Scales, notes, keys, chords, transpose and harmonic helpers |
 | [music-metadata](https://github.com/Borewit/music-metadata) | ADOPT LATER | MIT | No owned files changed now | Audio metadata, duration, tags for *local* MP3 analysis |
@@ -64,8 +64,13 @@ item/version before adoption. Deferred resources have no installed version or fi
 
 ## Staged zero-cost bootstrap
 
+Local Firefox verification uses the patched browser revision belonging to the locked
+Playwright package (`npx playwright install firefox`), rather than an arbitrary Firefox
+binary installed by another project. The mismatched earlier run is preserved as diagnostic
+evidence. Chrome is the installed stable channel; exact versions are recorded per test run.
+
 1. `cd release-audit`; `rtk proxy npm ci --ignore-scripts --no-audit --no-fund`.
-   This installs exactly locked Playwright 1.56.1 development tooling. Runtime stays pinned at 1.2.6.
+   This installs exactly locked Playwright 1.62.1 development tooling. Runtime stays pinned at 1.2.6.
 2. Use installed Chrome and Firefox with the audit script; CI may install Playwright's matching
    open-source browsers using `rtk proxy npx playwright install --with-deps chromium firefox`.
 3. Build an explicit allowlisted local artifact with `rtk proxy python -X utf8 release-audit/build_preview.py`.

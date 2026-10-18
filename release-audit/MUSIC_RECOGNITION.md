@@ -16,6 +16,25 @@ is treated as a listening review. No automatic fidelity scores are assigned.
 | I Thought I Saw Your Face Today — She & Him | Source-timed melody/accompaniment; percussion classification remains uncertain. | Unreviewed instrumental study. |
 | Lonely — Akon | Source-derived pitch material; voice octave errors and sparse accompaniment possible. | Unreviewed instrumental study. |
 
+## Owner's new excerpt review
+
+The owner returned actual feedback for all eight anonymous cases. The title choices matched
+Babydoll, She & Him, Everyday Normal Guy 2 and Love Me Not, but the owner still described the
+sound as off or not good. Sailor Song, Lonely, Without Me and Can't Tell Me Nothing were
+“Unsure / none.” This is qualitative feedback, not a fidelity score. Whether the references
+were revealed before choosing is unknown, so do not claim a controlled blind-test result.
+
+The owner specifically said only the reviewed Everyday Normal Guy 2 passage (12.05–27.05s)
+was correct. Preserve it; do not generalize that observation to the full arrangement. All eight
+full songs remain unapproved. Verbatim comments and exact hidden-case mapping are recorded in
+`reports/music-review.json`. Do not ask the owner for numeric ratings of unrecognizable clips.
+
+Babydoll's first bounded follow-up is a private lead-phrasing experiment. It uses the existing
+recording's F0 and vocal RMS curves within previously corroborated pitch regions, preserving
+source slides/envelopes instead of retriggering every short fragment. Accompaniment, bass,
+drum timing, form and ending remain unchanged. It is kept separately under `experiments/`,
+with runtime/capture evidence and no claim that it sounds better until listening supports that.
+
 All eight have earlier matching full-duration WebAudio captures with no clipped/nonfinite
 samples. Those are runtime/signal checks, not recognition. Their exact source hashes,
 durations and measurements remain in the preserved music audit.
@@ -33,16 +52,15 @@ Excerpts are anonymously shuffled. Play synthesized audio first, select a likely
 normalized only on the excerpt copies. The answer mapping and recordings stay private.
 The page exports the listener's own JSON; it does not submit anything or invent responses.
 
-No score was changed during this release stabilization: there is no new listening observation
-that justifies overriding the current strongest preserved version. Start with Babydoll after
-the listener identifies a specific wrong phrase. Correct one melody/rhythm/harmony/timbre fault,
+The catalog scores remain unchanged. The new owner review now supports a separate Babydoll
+phrasing experiment; the strongest prior version stays preserved. Correct one melody/rhythm/harmony/timbre fault,
 render and compare, keep the better version, and record no more than three failed attempts.
 Then check the full form, variation, transitions and ending. Do not convert detector events
 into unsupported claims about song structure.
 
 ## Human review still required
 
-- Fresh Babydoll assessment after its intonation revision.
+- Listening comparison of Babydoll's separate phrasing experiment before adoption.
 - Principal-phrase identification and actionable A/B feedback for all eight.
 - Independent title-blind identification where feasible; record whether the reference/title was revealed.
 - Full-form listening for sections, transitions, repetition and intentional ending.

@@ -54,6 +54,11 @@ Desktop 1280×900 and mobile 390×844 screenshots are local `artifacts/` files. 
 inspection and browser click checks are separate evidence. Headless desktop viewport testing
 does not establish real iOS/Android hardware success or five to ten actual listener sessions.
 
+An intermittent Firefox input timeout was recorded when using another project's Firefox 153
+binary with Playwright 1.56.1. That run is retained under `reports/failures/`; the older-browser installation stalled and was stopped. Final Firefox verification uses
+Playwright 1.62.1 and its already installed matching Firefox 153 revision, with the lockfile and
+PR-check setup updated together. This changes development tooling only.
+
 The Stop probe excludes OfflineAudioContext reverb impulse generation and allows queued
 pre-suspension probe buffers to drain before measuring silence. This avoids confusing offline
 impulse construction or stale observer callbacks with ongoing hardware output.
@@ -69,6 +74,12 @@ Eight local 15-second A/B pairs and a title-blind feedback page are ready in ign
 `private/listening/`. All source MP3 copies and preserved score/art/lyric files are hash-checked.
 There is no evidence yet of five to ten independent real listeners. Their responses are an
 outstanding release gate, not an automated task marked complete.
+
+The owner has since supplied eight real excerpt responses: four title selections, four
+“Unsure / none,” with continued negative quality observations. Only Everyday Normal Guy 2's
+12.05–27.05s excerpt received a positive passage-specific comment. No full song is approved.
+These comments now drive a separate, preserved Babydoll phrasing experiment rather than
+another generic whole-score replacement. See MUSIC_RECOGNITION.md and the actual feedback JSON.
 
 ## Publication decisions
 

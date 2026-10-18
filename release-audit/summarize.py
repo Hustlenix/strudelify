@@ -23,6 +23,7 @@ def main():
     live = json.loads((REPORTS / 'live-baseline.json').read_text())
     live_player = json.loads((REPORTS / 'baseline-playback-live.json').read_text())
     preservation = json.loads((REPORTS / 'preservation-check.json').read_text())
+    music_review = json.loads((REPORTS / 'music-review.json').read_text())
     assert live['passed'] and live_player['status'] == 'PASSED' and preservation['passed']
     result = {'generated_at':datetime.now(timezone.utc).isoformat(), 'tested_commit':build['commit'],
         'candidate_tests':[{key:report[key] for key in ['browser','browser_version','status','started_at','finished_at']}
@@ -30,7 +31,10 @@ def main():
         'runtime_payload':payload, 'public_baseline_commit':live['commit'], 'public_baseline_resources':len(live['resources']),
         'public_baseline_checks':len(live_player['checks']), 'candidate_deployed':False,
         'musical_approval':'None of the eight commercial-song studies is approved; new listening review pending.',
-        'human_listener_responses_recorded':0, 'reference_recordings_unchanged':len(preservation['original_recordings']),
+        'owner_review_sessions':music_review.get('owner_review_sessions',0),
+        'human_excerpt_responses_recorded':len(music_review.get('listener_feedback',[])),
+        'independent_listener_count':music_review.get('independent_listener_count',0),
+        'reference_recordings_unchanged':len(preservation['original_recordings']),
         'local_preview':'http://127.0.0.1:4189/', 'private_blind_review':'http://127.0.0.1:4188/',
         'gates':['Owner review and explicit merge/deploy approval', 'Integrated-app license and naming decision',
                  'Music/lyric publication permission before public commercial studies', 'Independent human music review and 5–10 real listener sessions'],

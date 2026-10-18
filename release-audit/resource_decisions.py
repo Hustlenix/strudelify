@@ -22,7 +22,7 @@ def main():
         if name in ['Existing Strudelify', 'Official Strudel integration', 'Strudel sample docs', 'Strudel FAQ', 'GitHub Actions']:
             decision, owner = 'KEEP', 'Application and release-audit/'
         if name == 'Playwright':
-            decision, owner, license_note = 'ADOPT NOW', 'release-audit/ only', 'Apache-2.0 verified from installed 1.56.1 LICENSE'
+            decision, owner, license_note = 'ADOPT NOW', 'release-audit/ only', 'Apache-2.0 verified from installed 1.62.1 LICENSE'
         if name == 'Official Strudel integration':
             license_note = 'AGPL-3.0-or-later verified from installed 1.2.6 metadata/LICENSE'
         if name in ['Tone.js', 'Vercel Next.js SaaS Starter', 'Better Auth', 'Neon', 'Official shadcn registry', 'Cover Art Archive', 'Pixabay terms']:
@@ -74,7 +74,7 @@ item/version before adoption. Deferred resources have no installed version or fi
 ## Staged zero-cost bootstrap
 
 1. `cd release-audit`; `rtk proxy npm ci --ignore-scripts --no-audit --no-fund`.
-   This installs exactly locked Playwright 1.56.1 development tooling. Runtime stays pinned at 1.2.6.
+   This installs exactly locked Playwright 1.62.1 development tooling. Runtime stays pinned at 1.2.6.
 2. Use installed Chrome and Firefox with the audit script; CI may install Playwright's matching
    open-source browsers using `rtk proxy npx playwright install --with-deps chromium firefox`.
 3. Build an explicit allowlisted local artifact with `rtk proxy python -X utf8 release-audit/build_preview.py`.

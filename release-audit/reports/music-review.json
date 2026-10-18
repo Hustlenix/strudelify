@@ -16,10 +16,20 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-02",
+        "id": "01-babydoll",
+        "expected_title": "Babydoll",
+        "owner_choice": "Babydoll",
+        "owner_observation_verbatim": "Idk man, it just feels off. like a random instrumens/notes playing sontinously,but it somehow feels like everything came together and formed a song",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     },
     {
       "id": "02-without-me",
@@ -35,10 +45,20 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-06",
+        "id": "02-without-me",
+        "expected_title": "Without Me",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "I feel like i know this, but IDK. this part is only the beats, so..........",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     },
     {
       "id": "03-everyday-normal-guy-2",
@@ -54,10 +74,20 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-04",
+        "id": "03-everyday-normal-guy-2",
+        "expected_title": "Everyday Normal Guy 2",
+        "owner_choice": "Everyday Normal Guy 2",
+        "owner_observation_verbatim": "Only this 15 sec is correctly dont in this",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     },
     {
       "id": "04-sailor-song",
@@ -73,10 +103,20 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-01",
+        "id": "04-sailor-song",
+        "expected_title": "Sailor Song",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "I dont even know what is playing, how am i suppoded to rate it?",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     },
     {
       "id": "05-cant-tell-me-nothing",
@@ -92,10 +132,20 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-08",
+        "id": "05-cant-tell-me-nothing",
+        "expected_title": "Can't Tell Me Nothing",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "WTF IS THIS?",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     },
     {
       "id": "06-love-me-not",
@@ -111,10 +161,20 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-07",
+        "id": "06-love-me-not",
+        "expected_title": "Love Me Not",
+        "owner_choice": "Love Me Not",
+        "owner_observation_verbatim": "Not good",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     },
     {
       "id": "07-i-thought-i-saw-your-face-today",
@@ -130,10 +190,20 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-03",
+        "id": "07-i-thought-i-saw-your-face-today",
+        "expected_title": "I Thought I Saw Your Face Today",
+        "owner_choice": "I Thought I Saw Your Face Today",
+        "owner_observation_verbatim": "I am not sure whats wrong, but somethings wrong",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     },
     {
       "id": "08-lonely",
@@ -149,13 +219,115 @@
       ],
       "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
       "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
-      "human_review": null,
+      "human_review": {
+        "case": "case-05",
+        "id": "08-lonely",
+        "expected_title": "Lonely",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "WTF?",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
       "blind_identification": null,
       "fidelity_score": null,
-      "status": "inspired instrumental study; recognition unestablished; withheld from proposed public artifact"
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
     }
   ],
-  "real_listener_count": 0,
-  "listener_feedback": [],
-  "decision": "No composition changed without a listening observation; preserve the strongest candidates and review Babydoll first."
+  "real_listener_count": 1,
+  "listener_feedback": [
+    {
+      "case": "case-01",
+      "id": "04-sailor-song",
+      "expected_title": "Sailor Song",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "I dont even know what is playing, how am i suppoded to rate it?",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-02",
+      "id": "01-babydoll",
+      "expected_title": "Babydoll",
+      "owner_choice": "Babydoll",
+      "owner_observation_verbatim": "Idk man, it just feels off. like a random instrumens/notes playing sontinously,but it somehow feels like everything came together and formed a song",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-03",
+      "id": "07-i-thought-i-saw-your-face-today",
+      "expected_title": "I Thought I Saw Your Face Today",
+      "owner_choice": "I Thought I Saw Your Face Today",
+      "owner_observation_verbatim": "I am not sure whats wrong, but somethings wrong",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-04",
+      "id": "03-everyday-normal-guy-2",
+      "expected_title": "Everyday Normal Guy 2",
+      "owner_choice": "Everyday Normal Guy 2",
+      "owner_observation_verbatim": "Only this 15 sec is correctly dont in this",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-05",
+      "id": "08-lonely",
+      "expected_title": "Lonely",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "WTF?",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-06",
+      "id": "02-without-me",
+      "expected_title": "Without Me",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "I feel like i know this, but IDK. this part is only the beats, so..........",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-07",
+      "id": "06-love-me-not",
+      "expected_title": "Love Me Not",
+      "owner_choice": "Love Me Not",
+      "owner_observation_verbatim": "Not good",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-08",
+      "id": "05-cant-tell-me-nothing",
+      "expected_title": "Can't Tell Me Nothing",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "WTF IS THIS?",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    }
+  ],
+  "decision": "Do not ask for numeric ratings of unrecognizable audio. Preserve Everyday Normal Guy 2 interval 12.05\u201327.05 seconds; repair Babydoll phrasing first; no full song approved.",
+  "owner_review_sessions": 1,
+  "independent_listener_count": 0,
+  "feedback_recorded_at": "2026-10-18T10:34:06.546683+00:00"
 }

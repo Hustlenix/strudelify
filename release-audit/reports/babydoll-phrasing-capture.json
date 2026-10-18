@@ -1,0 +1,17 @@
+{
+  "source": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\release-audit\\experiments\\01-babydoll-phrasing.strudel",
+  "seconds": 101,
+  "actual_audio": true,
+  "samples": 9707520,
+  "peak": 0.8255208730697632,
+  "clipped": 0,
+  "errors": [],
+  "first_audio_chunk": 0.21333333333333335,
+  "runtime": {
+    "context": "running",
+    "sampleRate": 48000,
+    "sourceOrigin": 0.11,
+    "patternEvents": 942
+  },
+  "status": "PASSED"
+}

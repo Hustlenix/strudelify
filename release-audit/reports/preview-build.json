@@ -1,7 +1,9 @@
 {
-  "created_at": "2026-10-18T10:22:59.202099+00:00",
-  "commit": "735d55ebcc9cb05e2c643e863195f59d38a05bc3",
-  "dirty": true,
+  "created_at": "2026-10-18T10:26:05.384743+00:00",
+  "commit": "d030f75b7ab5865b1037bca39864476737ef7034",
+  "dirty": false,
+  "worktree_dirty_including_audit_reports": false,
+  "uncommitted_payload_paths": [],
   "publication": "local preview only; approval required",
   "track_count": 6,
   "excluded": [
@@ -21,7 +23,7 @@
     },
     {
       "path": "THIRD_PARTY_ASSETS.md",
-      "sha256": "098f2c9311469f00b890b43694d59ea7b0cf30ad47de35429f7e57978abd6c2c"
+      "sha256": "2318c2ed754f15a09aede8754ba5a70f929daf1ad6cf7e3faec73d5c2404c109"
     },
     {
       "path": "app.js",
