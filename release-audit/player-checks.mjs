@@ -97,7 +97,7 @@ try {
   assert(Math.abs(report.pause_observation.time - frozen) < .05, 'Pause advanced the audio clock: ' + JSON.stringify({frozen, ...report.pause_observation}));
   await page.locator('#mainPlayButton').click();
   await page.waitForFunction(() => state.playing && !state.paused);
-  await page.waitForTimeout(650);
+  await page.waitForFunction(time => getAudioContext().state === 'running' && getAudioContext().currentTime > time + .3, frozen, {timeout:15000});
   const resumed = await page.evaluate(() => ({time:getAudioContext().currentTime, revision:playbackRevision}));
   assert(resumed.revision === before.revision && resumed.time > frozen + .3, 'Resume restarted or failed to advance');
   check('Trusted click audio and true pause/resume preserve scheduler/session', {before, frozen, resumed});

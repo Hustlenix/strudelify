@@ -253,15 +253,26 @@ async function togglePlayback() {
     state.paused = true;
   } else {
     playbackChannel?.postMessage('claim');
-    state.playing = true;
-    state.paused = false;
-    await context.resume();
+    state.loading = true;
+    renderPlayer();
+    try { await context.resume(); }
+    catch (error) {
+      if (revision === playbackRevision) {
+        state.loading = false;
+        playbackError = error.message || 'Audio could not resume. Press Play to retry.';
+        renderPlayer();
+      }
+      return;
+    }
     if (revision !== playbackRevision) {
       // A completed old resume must not hush a newer selection. If Stop is still the
       // latest intent, suspend its output; a newer load/start owns its own cleanup.
       if (!state.playing && !state.loading) await context.suspend();
       return;
     }
+    state.loading = false;
+    state.playing = true;
+    state.paused = false;
   }
   renderPlayer();
   renderAllLists();
