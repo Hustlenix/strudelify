@@ -16,6 +16,7 @@ const palettes = [
   'linear-gradient(140deg,#a4a15f,#626638 54%,#2b321f)',
 ];
 const groups = [
+  { name: 'Requested covers', symbol: '♫', note: 'Eight instrumental Strudel arrangements, in review.', palette: 1 },
   { name: 'Slow burn', symbol: '◌', note: 'Take the long way home.', palette: 3 },
   { name: 'Night motion', symbol: '↗', note: 'A little light after dark.', palette: 2 },
   { name: 'Soft focus', symbol: '✳', note: 'Let the edges blur.', palette: 4 },
@@ -33,13 +34,14 @@ const state = {
   toastTimer: 0,
 };
 let enginePromise;
+let playbackEndTimer;
 const codeCache = new Map();
 const coverNames = ['afterglow', 'greenline', 'paper-moon', 'soft-focus', 'tiny-hours', 'wide-awake'];
 function icon(name) {
   const filled = ['play', 'pause', 'stop', 'previous', 'next'].includes(name);
   return `<svg class="icon${filled ? ' fill' : ''}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 }
-function coverUrl(track) { return `assets/covers/${coverNames[((track.palette || 1) - 1) % coverNames.length]}.svg`; }
+function coverUrl(track) { return track.cover ? `tracks/covers/art/${encodeURIComponent(track.id)}.svg` : `assets/covers/${coverNames[((track.palette || 1) - 1) % coverNames.length]}.svg`; }
 function coverImage(track) { return `<img src="${coverUrl(track)}" alt="" loading="lazy" decoding="async">`; }
 
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -79,20 +81,23 @@ function setStatus(message, playing = state.playing) {
 function getCode(track) {
   if (track.code) return Promise.resolve(track.code);
   if (codeCache.has(track.id)) return codeCache.get(track.id);
-  const request = fetch(track.codeUrl).then(response => {
+  const request = fetch(track.codeUrl, {cache: 'no-cache'}).then(response => {
     if (!response.ok) throw new Error(`Could not load ${track.codeUrl} (${response.status}).`);
     return response.text();
-  });
+  }).catch(error => { codeCache.delete(track.id); throw error; });
   codeCache.set(track.id, request);
   return request;
 }
 function ensureEngine() {
   if (typeof window.initStrudel !== 'function') throw new Error('The Strudel runtime did not load. Check your connection and refresh.');
-  if (!enginePromise) enginePromise = Promise.resolve(window.initStrudel());
+  if (!enginePromise) enginePromise = Promise.resolve(window.initStrudel({
+    prebake: () => window.samples('https://raw.githubusercontent.com/felixroos/dough-samples/main/tidal-drum-machines.json'),
+  })).catch(error => { enginePromise = null; throw error; });
   return enginePromise;
 }
 function getEvalError(repl) { return repl?.state?.evalError || null; }
 async function runCode(code) {
+  clearTimeout(playbackEndTimer);
   const repl = await ensureEngine();
   if (typeof window.evaluate !== 'function') throw new Error('Strudel could not start. Refresh the page and try again.');
   await window.hush();
@@ -104,6 +109,7 @@ async function playTrack(track) {
   if (!track || state.loading) return;
   if (state.playing && state.current?.id === track.id) { await stopTrack(); return; }
   state.loading = true;
+  clearTimeout(playbackEndTimer);
   state.current = track;
   renderPlayer();
   setStatus('Waking the synth…', false);
@@ -116,6 +122,9 @@ async function playTrack(track) {
     const error = getEvalError(repl);
     if (error) throw error;
     state.playing = true;
+    // A finite source-timed score ends rather than leaving a silent "playing" state.
+    const duration = Number(code.match(/const endSeconds\s*=\s*([\d.]+)/)?.[1]);
+    if (duration > 0) playbackEndTimer = setTimeout(() => stopTrack(), (duration + 1) * 1000);
     state.recent = [track.id, ...state.recent.filter(id => id !== track.id)].slice(0, 6);
     saveStorage('strudelify-recent', state.recent);
     setStatus('Playing live pattern', true);
@@ -129,6 +138,7 @@ async function playTrack(track) {
   } finally { state.loading = false; renderPlayer(); }
 }
 async function stopTrack() {
+  clearTimeout(playbackEndTimer);
   try { if (window.hush) await window.hush(); }
   catch { /* The interface can still return to its stopped state. */ }
   state.playing = false;
@@ -173,7 +183,7 @@ function cardMarkup(track) {
     <button class="card-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${icon('heart')}</button>
     <div data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}">${artMarkup(track, 'track-card-art')}</div>
     <button class="card-play" data-action="play" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button>
-    <div class="track-card-copy" data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.mood || track.artist)}</span></div>
+    <div class="track-card-copy" data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.cover ? track.artist : track.mood || track.artist)}</span></div>
   </article>`;
 }
 let homeFilter = 'all';
@@ -236,12 +246,20 @@ function setView(name, push = true) {
 async function openTrack(id) {
   const track = getTrack(id);
   if (!track) return;
-  setView('track');
-  history.replaceState({view:'track', trackId:id}, '', '#track');
+  setView('track', false);
+  history.replaceState({view:'track', trackId:id}, '', `#track/${encodeURIComponent(id)}`);
   $('#trackDetail').innerHTML = `<div class="detail-hero">${artMarkup(track,'detail-art')}<div class="detail-copy"><div class="eyebrow">Live-coded pattern</div><h1>${escapeHtml(track.title)}</h1><p><strong>${escapeHtml(track.artist)}</strong> · ${escapeHtml(track.mood || 'Your pattern')} · ${escapeHtml(track.loop || 'Infinite loop')}</p></div></div>
   <div class="detail-actions"><button class="detail-play" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button><button class="icon-button${state.liked.includes(track.id) ? ' liked' : ''}" data-action="like" data-track-id="${escapeHtml(track.id)}" aria-label="Like ${escapeHtml(track.title)}">${icon('heart')}</button><button class="button button-quiet" data-show-code>View code</button><div style="position:relative"><button class="icon-button" data-track-menu aria-label="More options" aria-expanded="false">${icon('more')}</button><div class="detail-menu hidden" role="menu"><button role="menuitem" data-action="copy" data-track-id="${escapeHtml(track.id)}">Copy Strudel code</button></div></div></div>
   <details class="code-details" id="patternCode"><summary>Inside the pattern</summary><div class="code-panel"><div class="code-panel-heading"><span>${escapeHtml(track.id)}.strudel</span><span>LIVE PATTERN</span></div><pre id="detailCode">Loading pattern…</pre></div></details>
   <section class="section-block"><div class="section-heading"><h2>More to discover</h2></div><div class="shelf-grid">${allTracks().filter(t=>t.id!==track.id).map(cardMarkup).join('')}</div></section>`;
+  if (track.cover) {
+    const note = document.createElement('p');
+    note.className = 'empty-state';
+    note.textContent = track.status === 'approved'
+      ? 'Instrumental Strudel cover. Synthesized live from code.'
+      : 'Instrumental Strudel cover · In review. Melody, sound, and musical fidelity are still being improved.';
+    $('.detail-hero').after(note);
+  }
   try { $('#detailCode').textContent = await getCode(track); }
   catch (error) { $('#detailCode').textContent = error.message; }
 }
@@ -385,7 +403,15 @@ $('#editorForm').addEventListener('submit', event => {
 $('#editorDialog').addEventListener('close', () => {
   if ($('#editorDialog').returnValue !== 'save' && !state.playing && window.hush) window.hush();
 });
-window.addEventListener('popstate', event => { if(event.state?.view === 'track' && event.state.trackId) openTrack(event.state.trackId); else setView(event.state?.view || location.hash.slice(1) || 'home', false); });
+function routeFromLocation() {
+  if (location.hash.startsWith('#track/')) {
+    try { openTrack(decodeURIComponent(location.hash.slice(7))); }
+    catch { setView('home', false); }
+  }
+  else if (location.hash === '#track' && history.state?.trackId) openTrack(history.state.trackId);
+  else setView(location.hash.slice(1) || 'home', false);
+}
+window.addEventListener('popstate', routeFromLocation);
 
 document.querySelector('a[href="#mainArea"]').addEventListener('click', event => { event.preventDefault(); $('#mainArea').focus(); });
 document.addEventListener('keydown', event => { if(event.key==='Escape'){hideSuggestions();$$('.detail-menu').forEach(menu=>menu.classList.add('hidden'));$$('[data-track-menu]').forEach(button=>button.setAttribute('aria-expanded','false'));} });
@@ -427,5 +453,35 @@ renderPlaylistNav();
 renderHome();
 renderPlayer();
 if (!location.hash) history.replaceState({ view: 'home' }, '', '#home');
-else if (location.hash === '#track' && history.state?.trackId) openTrack(history.state.trackId);
-else setView(location.hash.slice(1), false);
+
+async function loadCoverCatalog() {
+  const catalogUrl = new URL('tracks/covers/catalog.json', document.baseURI);
+  const response = await fetch(catalogUrl, {cache: 'no-cache'});
+  if (!response.ok) throw new Error(`Music catalog unavailable (${response.status}).`);
+  const catalog = await response.json();
+  const statuses = ['draft', 'runtime-verified', 'listening-reviewed', 'approved'];
+  if (!Array.isArray(catalog) || !catalog.length) throw new Error('Music catalog is empty.');
+  const ids = new Set(tracks.map(track => track.id));
+  const covers = catalog.map((entry, index) => {
+    if (!entry.id || ids.has(entry.id) || !entry.title || !entry.artist || !entry.genre ||
+        !Number.isFinite(entry.bpm) || entry.bpm <= 0 || !statuses.includes(entry.status))
+      throw new Error('Music catalog contains an invalid entry.');
+    ids.add(entry.id);
+    const codeUrl = new URL(entry.codeUrl, catalogUrl);
+    if (!entry.codeUrl || codeUrl.origin !== catalogUrl.origin ||
+        !codeUrl.pathname.startsWith(new URL('./', catalogUrl).pathname) ||
+        !codeUrl.pathname.endsWith('.strudel')) throw new Error('Invalid cover code path.');
+    return {...entry, codeUrl: codeUrl.href, cover: true, mood: entry.genre,
+      loop: `${entry.bpm} BPM`, group: 'Requested covers', palette: index % palettes.length + 1};
+  });
+  tracks.unshift(...covers);
+  $('#catalogStatus').classList.add('hidden');
+  $('#catalogIntro').textContent = `${covers.length} instrumental covers in review. Six original patterns to explore.`;
+  renderAllLists();
+  renderPlayer();
+  showSuggestions();
+}
+loadCoverCatalog().catch(error => {
+  $('#catalogStatus').textContent = `${error.message} Reload to try again. Original patterns are still available.`;
+  $('#catalogStatus').setAttribute('role', 'alert');
+}).finally(routeFromLocation);

@@ -1,0 +1,46 @@
+// title: Lonely
+// artist: Akon
+// audio: 08-lonely.mp3
+// Music audit: -1 semitone tonal correction; see music-audit/reports/adjustments.json
+// Instrumental rendition — no lyrics, just the sad whistle.
+
+setcps(90/60/4)
+
+// lead — mournful
+$: cat(
+  note("c5@4 g#4@4 f4@8"),
+  note("~@4 f4@2 g4@2 g#4@8"),
+  note("a#4@4 g#4@4 g4@4 f4@4"),
+  note("f4@8 ~@8")
+).s("sine").gain(.34).attack(.05).release(.5).room(.5).delay(.3)
+
+// pad — baseline voicing sequence retained; harmonic changes still require review.
+$: note("<[f3,g#3,c4] [c#3,f3,g#3] [a#2,c#3,f3] [c3,e3,g3]>")
+  .s("triangle").attack(.15).release(.6).gain(.14).room(.5)
+
+// bass
+$: note("<f2*2 c#2*2 a#1*2 c2*2>").s("sawtooth").lpf(360).legato(.9).gain(.5)
+
+// drums — slow and soft
+$: s("<[bd ~ ~ ~ ~ ~ ~ ~] [bd ~ ~ ~ ~ ~ ~ ~] [bd ~ ~ ~ ~ ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~]>").bank("RolandTR909").gain(.6)
+
+$: s("<[~ ~ ~ ~ ~ ~ sd ~] [~ ~ ~ ~ ~ ~ sd ~] [~ ~ ~ ~ ~ ~ sd ~] [~ ~ ~ ~ ~ ~ sd sd]>").bank("RolandTR909").gain(.3).room(.4)
+
+$: s("hh*8").bank("RolandTR909").gain(.1)
+
+// Measured mix headroom: baseline peak -1.01 dBFS; retain layer balance.
+all(p => p.withValue(v => ({...v, gain: (v.gain ?? 1) * 0.77})))
+
+// Measured macro-dynamics from the supplied recording; no inferred verse/chorus labels.
+// One-second RMS, three-second smoothing, square-root dynamic compression, gain <=1.
+// This follows source energy and ends the arrangement; it does not certify section orchestration.
+const sourceDynamics = [0.7973,0.9161,0.9278,0.9824,0.9623,1.0,1.0,1.0,1.0,1.0,0.9742,0.7958,0.6748,0.646,0.6168,0.6267,0.617,0.6374,0.628,0.6108,0.607,0.5884,0.587,0.6148,0.6095,0.6259,0.7231,0.8317,0.9485,0.9148,0.9447,0.9129,0.9397,0.9658,0.9555,1.0,0.9421,0.9246,0.7754,0.7522,0.6961,0.7202,0.7057,0.7067,0.7427,0.7573,0.7792,0.7396,0.7408,0.757,0.7587,0.7542,0.7661,0.7845,0.7786,0.7391,0.7576,0.7854,0.8064,0.7523,0.7224,0.7179,0.7451,0.6921,0.7097,0.7577,0.8656,0.8647,0.8475,0.8286,0.8292,0.8341,0.8314,0.8609,0.8766,0.8845,0.8905,0.8831,0.8717,0.8661,0.8588,0.8547,0.8599,0.85,0.8946,0.8803,0.9237,0.8757,0.9032,0.8579,0.8987,0.8549,0.9038,0.9244,0.9658,0.933,0.9142,0.8956,0.9162,0.8618,0.864,0.8588,0.897,0.9248,0.9473,0.9609,0.948,0.9319,0.9253,0.937,0.9172,0.8665,0.8386,0.8095,0.8879,0.8119,0.8535,0.829,0.9199,0.9121,0.9167,0.8821,0.8714,0.829,0.8371,0.8415,0.8612,0.8533,0.8817,0.9111,0.9469,0.9017,0.8805,0.8659,0.8911,0.9118,0.9317,0.948,0.9444,0.9308,0.9006,0.9018,0.8752,0.8777,0.8674,0.9006,0.958,0.9721,0.9724,0.9504,0.935,0.9131,0.8979,0.8875,0.8698,0.8327,0.8349,0.845,0.87,0.8473,0.8772,0.9156,0.9605,0.9188,0.8714,0.8549,0.8756,0.8626,0.8439,0.837,0.8239,0.8866,0.9225,0.9998,0.9859,0.9454,0.9437,0.9419,1.0,1.0,1.0,0.9775,0.9733,0.9259,0.9519,0.9117,0.9509,0.9123,0.9574,0.9852,1.0,0.9877,0.9819,0.95,0.9595,0.8851,0.8692,0.8539,0.8809,0.8626,0.8889,0.8771,0.8718,0.8741,0.9031,0.8764,0.8869,0.8209,0.8839,0.857,0.9144,0.8802,0.8653,0.8557,0.9292,0.9284,0.9897,0.9125,0.9388,0.9331,0.9615,0.9814,1.0,0.9984,1.0,0.9834,0.9898,0.9726,0.929,0.9433,0.961,0.9786,1.0,0.9832,1.0,0.9886,0.9417,0.9202,0.873,0.843,0.8583,0.8203,0.8814,0.8193,0.8168,0.837,0.9009,0.9021,0.908,0.8235,0.8654,0.8653,0.8657,0.9004,0.8402,0.7569,0.6123,0.4064,0.3508,0.0553,0.05,0.05,0.05,0.05]
+const sourceDuration = 263.064
+const musicCps = 0.375
+const sourceLevelAt = seconds => {
+  const i = Math.max(0, Math.min(sourceDynamics.length - 1, Math.floor(seconds)))
+  const a = sourceDynamics[i], b = sourceDynamics[Math.min(i + 1, sourceDynamics.length - 1)]
+  return a + (b - a) * Math.max(0, Math.min(1, seconds - i))
+}
+all(p => p.filterHaps(h => Number(h.whole.begin) < sourceDuration * musicCps)
+  .withHap(h => h.withValue(v => ({...v, gain: (v.gain ?? 1) * sourceLevelAt(Number(h.whole.begin) / musicCps)}))))

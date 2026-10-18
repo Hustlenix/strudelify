@@ -1,0 +1,74 @@
+[
+  {
+    "id": "01-babydoll",
+    "title": "Babydoll",
+    "artist": "Dominic Fike",
+    "codeUrl": "./01-babydoll.strudel",
+    "bpm": 84.05,
+    "genre": "Indie pop",
+    "status": "runtime-verified"
+  },
+  {
+    "id": "02-without-me",
+    "title": "Without Me",
+    "artist": "Eminem",
+    "codeUrl": "./02-without-me.strudel",
+    "bpm": 112.0,
+    "genre": "Hip hop",
+    "status": "runtime-verified"
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "title": "Everyday Normal Guy 2",
+    "artist": "Jon Lajoie",
+    "codeUrl": "./03-everyday-normal-guy-2.strudel",
+    "bpm": 90.0,
+    "genre": "Comedy hip hop",
+    "status": "runtime-verified"
+  },
+  {
+    "id": "04-sailor-song",
+    "title": "Sailor Song",
+    "artist": "Gigi Perez",
+    "codeUrl": "./04-sailor-song.strudel",
+    "bpm": 94.85,
+    "genre": "Indie folk",
+    "status": "runtime-verified"
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "title": "Can't Tell Me Nothing",
+    "artist": "Kanye West",
+    "codeUrl": "./05-cant-tell-me-nothing.strudel",
+    "bpm": 80.0,
+    "genre": "Hip hop",
+    "status": "runtime-verified"
+  },
+  {
+    "id": "06-love-me-not",
+    "title": "Love Me Not",
+    "artist": "Ravyn Lenae",
+    "codeUrl": "./06-love-me-not.strudel",
+    "bpm": 114.0,
+    "genre": "Alternative R&B",
+    "status": "runtime-verified"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "title": "I Thought I Saw Your Face Today",
+    "artist": "She & Him",
+    "codeUrl": "./07-i-thought-i-saw-your-face-today.strudel",
+    "bpm": 78.0,
+    "genre": "Indie pop",
+    "status": "runtime-verified"
+  },
+  {
+    "id": "08-lonely",
+    "title": "Lonely",
+    "artist": "Akon",
+    "codeUrl": "./08-lonely.strudel",
+    "bpm": 90.0,
+    "genre": "R&B",
+    "status": "runtime-verified"
+  }
+]
