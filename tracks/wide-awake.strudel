@@ -1,11 +1,38 @@
 // Bright notes over a low, steady floor.
 setcps(96/60/4)
 
-$: note("<f3 a3 c4 e4> <d3 f3 a3 c4>")
-  .s("triangle").lpf(1700).gain(.17).room(.55)
+// Arrangement revision: 18 October 2026. Original pitches and sound design retained.
+// Bars 0-40: staggered entry, reduced texture, return, four-bar fade; 8s effect tail.
+// Constant master gain 1.9055, based on complete v1 render toward -23 LUFS.
+// Draft: full human listening approval is still required.
+const endSeconds = 108.0
+const totalBars = 40
+const arranged = (pattern, windows) => pattern
+  .filterHaps(h => h.whole && windows.some(([a,b]) => +h.whole.begin >= a && +h.whole.begin < b))
+  .withHap(h => {
+    const t = +h.whole.begin
+    const section = windows.find(([a,b]) => t >= a && t < b)
+    const fade = Math.min(1, Math.max(0, (totalBars-t)/4))
+    return h.withValue(v => ({...v, gain:v.gain*section[2]*fade*1.9055}))
+  })
 
-$: note("f2 ~ f2 c2 ~ d2 ~ a1")
-  .s("sine").lpf(300).gain(.32)
+// Voice 1: [entry bar, exit bar, level].
+$: arranged(
+  note("<f3 a3 c4 e4> <d3 f3 a3 c4>")
+  .s("triangle").lpf(1700).gain(.17).room(.55),
+  [[0,40,1]]
+)
 
-$: note("c5 a4 ~ f4 ~ a4 g4 ~")
-  .s("sawtooth").lpf(2100).gain(.06).room(.3)
+// Voice 2: [entry bar, exit bar, level].
+$: arranged(
+  note("f2 ~ f2 c2 ~ d2 ~ a1")
+  .s("sine").lpf(300).gain(.32),
+  [[4,20,1],[24,38,0.85]]
+)
+
+// Voice 3: [entry bar, exit bar, level].
+$: arranged(
+  note("c5 a4 ~ f4 ~ a4 g4 ~")
+  .s("sawtooth").lpf(2100).gain(.06).room(.3),
+  [[8,20,1],[28,36,0.9]]
+)

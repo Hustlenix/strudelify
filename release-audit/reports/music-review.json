@@ -1,0 +1,333 @@
+{
+  "created_at": "2026-10-18T10:16:34.965188+00:00",
+  "reference_identity": "Exact locally supplied album/audio MP3 copies; recording editions are not independently authenticated studio masters",
+  "tracks": [
+    {
+      "id": "01-babydoll",
+      "title": "Babydoll",
+      "artist": "Dominic Fike",
+      "source_code_sha256": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\01-babydoll-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\01-babydoll.mp3",
+      "reference_original_sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+      "interval_seconds": [
+        10.33,
+        25.33
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-02",
+        "id": "01-babydoll",
+        "expected_title": "Babydoll",
+        "owner_choice": "Babydoll",
+        "owner_observation_verbatim": "Idk man, it just feels off. like a random instrumens/notes playing sontinously,but it somehow feels like everything came together and formed a song",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    },
+    {
+      "id": "02-without-me",
+      "title": "Without Me",
+      "artist": "Eminem",
+      "source_code_sha256": "4fa757716aebb6fb16be59ad7b0cb06cad08b30973508d4f9907691d2ad276ae",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\02-without-me-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\02-without-me.mp3",
+      "reference_original_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+      "interval_seconds": [
+        0.49,
+        15.49
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-06",
+        "id": "02-without-me",
+        "expected_title": "Without Me",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "I feel like i know this, but IDK. this part is only the beats, so..........",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "title": "Everyday Normal Guy 2",
+      "artist": "Jon Lajoie",
+      "source_code_sha256": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\03-everyday-normal-guy-2-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\03-everyday-normal-guy-2.mp3",
+      "reference_original_sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+      "interval_seconds": [
+        12.05,
+        27.05
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-04",
+        "id": "03-everyday-normal-guy-2",
+        "expected_title": "Everyday Normal Guy 2",
+        "owner_choice": "Everyday Normal Guy 2",
+        "owner_observation_verbatim": "Only this 15 sec is correctly dont in this",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    },
+    {
+      "id": "04-sailor-song",
+      "title": "Sailor Song",
+      "artist": "Gigi Perez",
+      "source_code_sha256": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\04-sailor-song-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\04-sailor-song.mp3",
+      "reference_original_sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+      "interval_seconds": [
+        7.75,
+        22.75
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-01",
+        "id": "04-sailor-song",
+        "expected_title": "Sailor Song",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "I dont even know what is playing, how am i suppoded to rate it?",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    },
+    {
+      "id": "05-cant-tell-me-nothing",
+      "title": "Can't Tell Me Nothing",
+      "artist": "Kanye West",
+      "source_code_sha256": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\05-cant-tell-me-nothing-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\05-cant-tell-me-nothing.mp3",
+      "reference_original_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+      "interval_seconds": [
+        0.78,
+        15.78
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-08",
+        "id": "05-cant-tell-me-nothing",
+        "expected_title": "Can't Tell Me Nothing",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "WTF IS THIS?",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    },
+    {
+      "id": "06-love-me-not",
+      "title": "Love Me Not",
+      "artist": "Ravyn Lenae",
+      "source_code_sha256": "c9494f00ce007b73330495b49dbf7cc91c4c6ca8ccd2c6603a78e285c85d0916",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\06-love-me-not-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\06-love-me-not.mp3",
+      "reference_original_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+      "interval_seconds": [
+        16.83,
+        31.83
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-07",
+        "id": "06-love-me-not",
+        "expected_title": "Love Me Not",
+        "owner_choice": "Love Me Not",
+        "owner_observation_verbatim": "Not good",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    },
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "title": "I Thought I Saw Your Face Today",
+      "artist": "She & Him",
+      "source_code_sha256": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\07-i-thought-i-saw-your-face-today-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\07-i-thought-i-saw-your-face-today.mp3",
+      "reference_original_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+      "interval_seconds": [
+        0.05,
+        15.05
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-03",
+        "id": "07-i-thought-i-saw-your-face-today",
+        "expected_title": "I Thought I Saw Your Face Today",
+        "owner_choice": "I Thought I Saw Your Face Today",
+        "owner_observation_verbatim": "I am not sure whats wrong, but somethings wrong",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    },
+    {
+      "id": "08-lonely",
+      "title": "Lonely",
+      "artist": "Akon",
+      "source_code_sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+      "reference_file": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\08-lonely-reference.wav",
+      "original_mp3": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\08-lonely.mp3",
+      "reference_original_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+      "interval_seconds": [
+        2.17,
+        17.17
+      ],
+      "selection_basis": "Candidate interval from first detected lead onset; principal recognizable hook still requires human selection.",
+      "signal_preparation": "15 seconds, mono 22050 Hz, loudnorm -23 LUFS / -3 dBTP; timing unchanged; originals untouched.",
+      "human_review": {
+        "case": "case-05",
+        "id": "08-lonely",
+        "expected_title": "Lonely",
+        "owner_choice": "Unsure / none",
+        "owner_observation_verbatim": "WTF?",
+        "reference_revealed": null,
+        "blindness": "Not independently verified; owner pasted form content",
+        "full_song_approved": false,
+        "fidelity_score": null
+      },
+      "blind_identification": null,
+      "fidelity_score": null,
+      "status": "owner-reviewed excerpt; musical correction still required; not approved"
+    }
+  ],
+  "real_listener_count": 1,
+  "listener_feedback": [
+    {
+      "case": "case-01",
+      "id": "04-sailor-song",
+      "expected_title": "Sailor Song",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "I dont even know what is playing, how am i suppoded to rate it?",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-02",
+      "id": "01-babydoll",
+      "expected_title": "Babydoll",
+      "owner_choice": "Babydoll",
+      "owner_observation_verbatim": "Idk man, it just feels off. like a random instrumens/notes playing sontinously,but it somehow feels like everything came together and formed a song",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-03",
+      "id": "07-i-thought-i-saw-your-face-today",
+      "expected_title": "I Thought I Saw Your Face Today",
+      "owner_choice": "I Thought I Saw Your Face Today",
+      "owner_observation_verbatim": "I am not sure whats wrong, but somethings wrong",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-04",
+      "id": "03-everyday-normal-guy-2",
+      "expected_title": "Everyday Normal Guy 2",
+      "owner_choice": "Everyday Normal Guy 2",
+      "owner_observation_verbatim": "Only this 15 sec is correctly dont in this",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-05",
+      "id": "08-lonely",
+      "expected_title": "Lonely",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "WTF?",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-06",
+      "id": "02-without-me",
+      "expected_title": "Without Me",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "I feel like i know this, but IDK. this part is only the beats, so..........",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-07",
+      "id": "06-love-me-not",
+      "expected_title": "Love Me Not",
+      "owner_choice": "Love Me Not",
+      "owner_observation_verbatim": "Not good",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    },
+    {
+      "case": "case-08",
+      "id": "05-cant-tell-me-nothing",
+      "expected_title": "Can't Tell Me Nothing",
+      "owner_choice": "Unsure / none",
+      "owner_observation_verbatim": "WTF IS THIS?",
+      "reference_revealed": null,
+      "blindness": "Not independently verified; owner pasted form content",
+      "full_song_approved": false,
+      "fidelity_score": null
+    }
+  ],
+  "decision": "Do not ask for numeric ratings of unrecognizable audio. Preserve Everyday Normal Guy 2 interval 12.05\u201327.05 seconds; repair Babydoll phrasing first; no full song approved.",
+  "owner_review_sessions": 1,
+  "independent_listener_count": 0,
+  "feedback_recorded_at": "2026-10-18T10:34:06.546683+00:00"
+}

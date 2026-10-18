@@ -1,0 +1,80 @@
+{
+  "approved_commit": null,
+  "publication_approved": false,
+  "review_policy": "human-reviewed",
+  "owner": null,
+  "approved_at": null,
+  "integrated_license": "AGPL-3.0-or-later",
+  "original_provenance_confirmed": true,
+  "branding": {
+    "public_name": "Hustlenix Music",
+    "decision_evidence": "Public UI changed following owner instruction to complete remaining release work, 18 October 2026; Git commit records the changes.",
+    "upstream_permission_evidence": null
+  },
+  "devices": {
+    "phone": {
+      "physical_device": false,
+      "passed": false,
+      "model_browser": null,
+      "observations": null
+    },
+    "laptop": {
+      "physical_device": true,
+      "passed": true,
+      "model_browser": "LENOVO 82XM, Windows, Chrome 155",
+      "observations": "Agent-driven native UI main-flow smoke: first Play with Chrome Audio playing indicator; Pause/Resume; Next/Previous; Stop; search and actual source. See physical-laptop-smoke.json for limits. No subjective listening approval inferred."
+    }
+  },
+  "tracks": [
+    {
+      "id": "afterglow",
+      "score_sha256": "a1183c8f9087b830a7835ec07b3e49c4351502992aeea83de1d387de9d2fd6aa",
+      "listened_complete": false,
+      "accepted_for_beta": false,
+      "reviewer": null,
+      "observations": null
+    },
+    {
+      "id": "greenline",
+      "score_sha256": "28cde8f6cd19c90082a81c5f7e1b6d931ef2ddb66689e9f91e30131bc7c06dd5",
+      "listened_complete": false,
+      "accepted_for_beta": false,
+      "reviewer": null,
+      "observations": null
+    },
+    {
+      "id": "paper-moon",
+      "score_sha256": "cc110558e9fc54fb81de34f7d1618690f975063155fa9f025dade49bba2a53ad",
+      "listened_complete": false,
+      "accepted_for_beta": false,
+      "reviewer": null,
+      "observations": null
+    },
+    {
+      "id": "soft-focus",
+      "score_sha256": "854873d03a6d56f065ddd2b084c09ed7f708077c53b60672b13aae76693e0eea",
+      "listened_complete": false,
+      "accepted_for_beta": false,
+      "reviewer": null,
+      "observations": null
+    },
+    {
+      "id": "tiny-hours",
+      "score_sha256": "08b31498b1692c89192f4a05b0c63f2566f1c5a8546f44401b97d33f91e705af",
+      "listened_complete": false,
+      "accepted_for_beta": false,
+      "reviewer": null,
+      "observations": null
+    },
+    {
+      "id": "wide-awake",
+      "score_sha256": "b24a71dc17e643c12528b42bf5a83da52a561f9770ed93ffde4f6d4eb2d73b26",
+      "listened_complete": false,
+      "accepted_for_beta": false,
+      "reviewer": null,
+      "observations": null
+    }
+  ],
+  "note": "Template for the human-reviewed route. The current owner-delegated-beta release uses an explicit delegation record; unperformed listening and phone checks stay false. Never substitute test fixtures for human observations.",
+  "provenance_evidence": "Project README and retained MIT grant identify the six original examples. No external sound bank, commercial melody transcription or lyrics in the allowlisted artifact; earlier scores preserved in Git and music worktree."
+}

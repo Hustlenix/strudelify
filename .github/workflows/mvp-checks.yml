@@ -1,0 +1,62 @@
+name: MVP review checks
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'tracks/**'
+      - 'release-audit/**'
+      - '.github/workflows/**'
+      - 'LICENSE'
+      - 'COPYING'
+      - 'NOTICE.md'
+      - 'LICENSING.md'
+      - 'THIRD_PARTY_ASSETS.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: release-audit/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: release-audit
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+        working-directory: release-audit
+      - name: Start virtual audio device for real WebAudio in Linux Firefox
+        if: matrix.browser == 'firefox'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pulseaudio
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=strudelify_ci
+          pactl set-default-sink strudelify_ci
+      - run: python release-audit/build_preview.py
+      - run: python release-audit/test_release_policy.py release-preview
+      - run: node release-audit/review-receipt-checks.mjs release-preview
+      - run: python release-audit/listener-assessment-checks.py release-preview
+      - run: node release-audit/player-checks.mjs release-preview ${{ matrix.browser }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mvp-${{ matrix.browser }}-evidence
+          path: |
+            release-audit/reports/player-*.json
+            release-audit/artifacts/*.png
+            release-audit/reports/preview-build.json
+          retention-days: 14
+# This workflow tests a local allowlisted artifact. It never publishes or deploys.

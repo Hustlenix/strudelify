@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-10-18T13:59:54.271812+00:00",
+  "review_commit": "92c3353a04be925e0d6cffa52860fb1af5351fe4",
+  "checked_release_commit": "45ccd59c52ac18bab46a456a1648f4df14e7d51f",
+  "preview_url": "https://disabled-stereo-trips-clocks.trycloudflare.com/",
+  "player_url": "https://disabled-stereo-trips-clocks.trycloudflare.com/player/",
+  "preview_kind": "Temporary unlisted original-only HTTPS review. Anyone with URL may access; requires local server/tunnel to keep running.",
+  "branding": {
+    "status": "implemented",
+    "public_name": "Hustlenix Music",
+    "repository_url_retained": true
+  },
+  "licensing": {
+    "status": "combined AGPL-3.0-or-later distribution/source policy implemented; prior MIT grants retained",
+    "document": "LICENSING.md",
+    "provenance": "Existing project declaration of original authorship and MIT grant; no commercial melody/sample/lyric payload in release"
+  },
+  "ci": {
+    "run_id": 39133507380,
+    "head_sha": "45ccd59c52ac18bab46a456a1648f4df14e7d51f",
+    "conclusion": "success",
+    "browsers": [
+      {
+        "browser": "chromium",
+        "status": "PASSED",
+        "checks": 18,
+        "version": "151.0.7922.34",
+        "merge_snapshot": "355b2c0405b634f4a5728bd05879719333a981c9"
+      },
+      {
+        "browser": "firefox",
+        "status": "PASSED",
+        "checks": 18,
+        "version": "153.0",
+        "merge_snapshot": "355b2c0405b634f4a5728bd05879719333a981c9"
+      }
+    ],
+    "release_policy_tests": 12,
+    "review_receipt_schema_tests": 9
+  },
+  "https_browser_checks": 18,
+  "https_artifact_checks": 45,
+  "physical_laptop_main_flow": "passed native Chrome UI check on Lenovo 82XM; no subjective musical listening approval inferred",
+  "physical_phone_result": "pending; no connected phone and no submitted phone review",
+  "listening_approved_originals": 0,
+  "received_listener_reviews": 0,
+  "production_deployed": false,
+  "temporary_https_preview_published": true,
+  "production_pages_settings_changed": false,
+  "independent_listener_count": 0,
+  "remaining": [
+    "Actual complete-track music acceptance",
+    "Actual phone playback/touch/background/connectivity review",
+    "Publish and verify the exact release after those required results are recorded"
+  ],
+  "owner_instruction": "Complete them; no additional feature expansion or fabricated review results",
+  "expansion_started": false,
+  "original_recording_copies_unchanged": 16
+}

@@ -1,0 +1,59 @@
+{
+  "tracks": [
+    {
+      "id": "greenline",
+      "measured_lufs_before": -28.9,
+      "constant_gain": 1.9724,
+      "target_lufs": -23,
+      "source_capture": "originals-v1",
+      "new_score_sha256": "3f2aaa224df60cc99562cb1216c805a69256eb238bbd2d17d3f52bacb8e74011",
+      "musical_changes": "None; all notes, rhythm, sections, envelopes and instruments retained"
+    },
+    {
+      "id": "afterglow",
+      "measured_lufs_before": -28.3,
+      "constant_gain": 1.8408,
+      "target_lufs": -23,
+      "source_capture": "originals-v1",
+      "new_score_sha256": "b122aa3d295e4bc06c28996acb0e7d1e7b87b3e24e77bb873a605646cec8a080",
+      "musical_changes": "None; all notes, rhythm, sections, envelopes and instruments retained"
+    },
+    {
+      "id": "paper-moon",
+      "measured_lufs_before": -26.7,
+      "constant_gain": 1.5311,
+      "target_lufs": -23,
+      "source_capture": "originals-v1",
+      "new_score_sha256": "741d1a3f8cc0c468a9035aa5f51d4eec98544372c0b44736d1756e4b14d40e50",
+      "musical_changes": "None; all notes, rhythm, sections, envelopes and instruments retained"
+    },
+    {
+      "id": "soft-focus",
+      "measured_lufs_before": -28.1,
+      "constant_gain": 1.7989,
+      "target_lufs": -23,
+      "source_capture": "originals-v1",
+      "new_score_sha256": "c641547c550a30b835982b3c33b24d7441eadb5710c0e135ba432921796e1560",
+      "musical_changes": "None; all notes, rhythm, sections, envelopes and instruments retained"
+    },
+    {
+      "id": "tiny-hours",
+      "measured_lufs_before": -35.2,
+      "constant_gain": 4.0738,
+      "target_lufs": -23,
+      "source_capture": "originals-v1",
+      "new_score_sha256": "973aab2974c1ef46f598cc952c66ed7142cb884de562319c77588e3423cd60a3",
+      "musical_changes": "None; all notes, rhythm, sections, envelopes and instruments retained"
+    },
+    {
+      "id": "wide-awake",
+      "measured_lufs_before": -28.6,
+      "constant_gain": 1.9055,
+      "target_lufs": -23,
+      "source_capture": "originals-v1",
+      "new_score_sha256": "4c2fc39dfcadf8f3a23ed26bd6f6af23d23060979c6a86dfb92a69ba5c3d193c",
+      "musical_changes": "None; all notes, rhythm, sections, envelopes and instruments retained"
+    }
+  ],
+  "human_approval": false
+}

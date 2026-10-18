@@ -1,0 +1,167 @@
+{
+  "created_at": "2026-10-18T11:19:27.192Z",
+  "kind": "complete actual application WebAudio captures",
+  "human_listening": false,
+  "tracks": [
+    {
+      "id": "greenline",
+      "duration_seconds": 100.307692,
+      "peak": 0.13650961220264435,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 9732096,
+      "errors": [],
+      "score_sha256": "75320f76b321a863d666f3dc1246ad90c19a6972ba744bc446da28f86d8bb934",
+      "sample_rate": 48000,
+      "event_count": 344,
+      "last_event_cycle": 39.875,
+      "event_count_after_end": 0,
+      "source_origin": 0.1527,
+      "voices": [
+        "sine",
+        "triangle",
+        "square"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "afterglow",
+      "duration_seconds": 106.461538,
+      "peak": 0.17281615734100342,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 10330112,
+      "errors": [],
+      "score_sha256": "beab323af7387b23dd7b77bd12d6a40d4cfa98f8057cc7c567fee67a3311f37f",
+      "sample_rate": 48000,
+      "event_count": 107,
+      "last_event_cycle": 32,
+      "event_count_after_end": 0,
+      "source_origin": 0.1313,
+      "voices": [
+        "triangle",
+        "sine"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "paper-moon",
+      "duration_seconds": 108.465116,
+      "peak": 0.2287781536579132,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 10534912,
+      "errors": [],
+      "score_sha256": "d7b70deb4fba341d96119d0bb770f427a149b39f6901d32063e08c2d0f547314",
+      "sample_rate": 48000,
+      "event_count": 280,
+      "last_event_cycle": 36,
+      "event_count_after_end": 0,
+      "source_origin": 0.1313,
+      "voices": [
+        "triangle",
+        "sine"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "soft-focus",
+      "duration_seconds": 120.941176,
+      "peak": 0.13896222412586212,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 11722752,
+      "errors": [],
+      "score_sha256": "9e28f55a25f74766faa41abd284cfc0f8a1a5f7477ff07a542ca58af2b443d22",
+      "sample_rate": 48000,
+      "event_count": 188,
+      "last_event_cycle": 32,
+      "event_count_after_end": 0,
+      "source_origin": 0.1313,
+      "voices": [
+        "sine",
+        "triangle"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "tiny-hours",
+      "duration_seconds": 93.714286,
+      "peak": 0.07728775590658188,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 9101312,
+      "errors": [],
+      "score_sha256": "2a02cb011c844f389a7a232ef36e15939ce01faa9079e47523ac33e14a038229",
+      "sample_rate": 48000,
+      "event_count": 288,
+      "last_event_cycle": 39.75,
+      "event_count_after_end": 0,
+      "source_origin": 0.1527,
+      "voices": [
+        "sawtooth",
+        "square",
+        "triangle"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED"
+    },
+    {
+      "id": "wide-awake",
+      "duration_seconds": 108,
+      "peak": 0.1670006662607193,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 10469376,
+      "errors": [],
+      "score_sha256": "5403f2c4c53bd5428111ea65309c23d376530dd615207725a13eac2a09640d7c",
+      "sample_rate": 48000,
+      "event_count": 330,
+      "last_event_cycle": 40,
+      "event_count_after_end": 0,
+      "source_origin": 0.1527,
+      "voices": [
+        "triangle",
+        "sine",
+        "sawtooth"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED"
+    }
+  ],
+  "status": "PASSED"
+}

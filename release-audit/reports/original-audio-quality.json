@@ -1,0 +1,204 @@
+{
+  "created_at": "2026-10-18T11:19:27.192Z",
+  "kind": "complete actual application WebAudio captures",
+  "human_listening": false,
+  "tracks": [
+    {
+      "id": "greenline",
+      "duration_seconds": 100.307692,
+      "peak": 0.13650961220264435,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 9732096,
+      "errors": [],
+      "score_sha256": "75320f76b321a863d666f3dc1246ad90c19a6972ba744bc446da28f86d8bb934",
+      "sample_rate": 48000,
+      "event_count": 344,
+      "last_event_cycle": 39.875,
+      "event_count_after_end": 0,
+      "source_origin": 0.1527,
+      "voices": [
+        "sine",
+        "triangle",
+        "square"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED",
+      "capture_seconds": 101.376,
+      "integrated_lufs": -28.9,
+      "true_peak_dbtp": -17.3,
+      "final_second_peak": 4.110231611716229e-15,
+      "loudness_summary": "Summary:\n\n  Integrated loudness:\n    I:         -28.9 LUFS\n    Threshold: -39.1 LUFS\n\n  Loudness range:\n    LRA:         1.8 LU\n    Threshold: -49.1 LUFS\n    LRA low:   -29.9 LUFS\n    LRA high:  -28.2 LUFS\n\n  True peak:\n    Peak:      -17.3 dBFS\n[out#0/null @ 0000017c220d1c40] video:0KiB audio:19008KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:01:41.37 bitrate=N/A speed= 113x elapsed=0:00:00.89    \n",
+      "human_listening_status": "pending; technical measurements only"
+    },
+    {
+      "id": "afterglow",
+      "duration_seconds": 106.461538,
+      "peak": 0.17281615734100342,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 10330112,
+      "errors": [],
+      "score_sha256": "beab323af7387b23dd7b77bd12d6a40d4cfa98f8057cc7c567fee67a3311f37f",
+      "sample_rate": 48000,
+      "event_count": 107,
+      "last_event_cycle": 32,
+      "event_count_after_end": 0,
+      "source_origin": 0.1313,
+      "voices": [
+        "triangle",
+        "sine"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED",
+      "capture_seconds": 107.60533333333333,
+      "integrated_lufs": -28.3,
+      "true_peak_dbtp": -15.2,
+      "final_second_peak": 3.4157269027113024e-13,
+      "loudness_summary": "Summary:\n\n  Integrated loudness:\n    I:         -28.3 LUFS\n    Threshold: -38.4 LUFS\n\n  Loudness range:\n    LRA:         6.6 LU\n    Threshold: -48.4 LUFS\n    LRA low:   -32.3 LUFS\n    LRA high:  -25.7 LUFS\n\n  True peak:\n    Peak:      -15.2 dBFS\n[out#0/null @ 000002dbf4130f00] video:0KiB audio:20176KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:01:47.60 bitrate=N/A speed= 116x elapsed=0:00:00.92    \n",
+      "human_listening_status": "pending; technical measurements only"
+    },
+    {
+      "id": "paper-moon",
+      "duration_seconds": 108.465116,
+      "peak": 0.2287781536579132,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 10534912,
+      "errors": [],
+      "score_sha256": "d7b70deb4fba341d96119d0bb770f427a149b39f6901d32063e08c2d0f547314",
+      "sample_rate": 48000,
+      "event_count": 280,
+      "last_event_cycle": 36,
+      "event_count_after_end": 0,
+      "source_origin": 0.1313,
+      "voices": [
+        "triangle",
+        "sine"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED",
+      "capture_seconds": 109.73866666666666,
+      "integrated_lufs": -26.7,
+      "true_peak_dbtp": -12.8,
+      "final_second_peak": 7.757129763833956e-14,
+      "loudness_summary": "Summary:\n\n  Integrated loudness:\n    I:         -26.7 LUFS\n    Threshold: -36.9 LUFS\n\n  Loudness range:\n    LRA:         4.0 LU\n    Threshold: -46.9 LUFS\n    LRA low:   -29.5 LUFS\n    LRA high:  -25.5 LUFS\n\n  True peak:\n    Peak:      -12.8 dBFS\n[out#0/null @ 000001a61b3729c0] video:0KiB audio:20576KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:01:49.73 bitrate=N/A speed= 115x elapsed=0:00:00.95    \n",
+      "human_listening_status": "pending; technical measurements only"
+    },
+    {
+      "id": "soft-focus",
+      "duration_seconds": 120.941176,
+      "peak": 0.13896222412586212,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 11722752,
+      "errors": [],
+      "score_sha256": "9e28f55a25f74766faa41abd284cfc0f8a1a5f7477ff07a542ca58af2b443d22",
+      "sample_rate": 48000,
+      "event_count": 188,
+      "last_event_cycle": 32,
+      "event_count_after_end": 0,
+      "source_origin": 0.1313,
+      "voices": [
+        "sine",
+        "triangle"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED",
+      "capture_seconds": 122.112,
+      "integrated_lufs": -28.1,
+      "true_peak_dbtp": -17.1,
+      "final_second_peak": 5.246292766533656e-13,
+      "loudness_summary": "Summary:\n\n  Integrated loudness:\n    I:         -28.1 LUFS\n    Threshold: -38.3 LUFS\n\n  Loudness range:\n    LRA:         8.8 LU\n    Threshold: -48.3 LUFS\n    LRA low:   -34.9 LUFS\n    LRA high:  -26.1 LUFS\n\n  True peak:\n    Peak:      -17.1 dBFS\n[out#0/null @ 0000028666c7ee80] video:0KiB audio:22896KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:02:02.11 bitrate=N/A speed= 124x elapsed=0:00:00.98    \n",
+      "human_listening_status": "pending; technical measurements only"
+    },
+    {
+      "id": "tiny-hours",
+      "duration_seconds": 93.714286,
+      "peak": 0.07728775590658188,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 9101312,
+      "errors": [],
+      "score_sha256": "2a02cb011c844f389a7a232ef36e15939ce01faa9079e47523ac33e14a038229",
+      "sample_rate": 48000,
+      "event_count": 288,
+      "last_event_cycle": 39.75,
+      "event_count_after_end": 0,
+      "source_origin": 0.1527,
+      "voices": [
+        "sawtooth",
+        "square",
+        "triangle"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED",
+      "capture_seconds": 94.80533333333334,
+      "integrated_lufs": -35.2,
+      "true_peak_dbtp": -22.2,
+      "final_second_peak": 1.0004259553208442e-15,
+      "loudness_summary": "Summary:\n\n  Integrated loudness:\n    I:         -35.2 LUFS\n    Threshold: -45.5 LUFS\n\n  Loudness range:\n    LRA:         4.7 LU\n    Threshold: -55.6 LUFS\n    LRA low:   -38.5 LUFS\n    LRA high:  -33.8 LUFS\n\n  True peak:\n    Peak:      -22.2 dBFS\n[out#0/null @ 00000214992c6200] video:0KiB audio:17776KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:01:34.80 bitrate=N/A speed= 120x elapsed=0:00:00.78    \n",
+      "human_listening_status": "pending; technical measurements only"
+    },
+    {
+      "id": "wide-awake",
+      "duration_seconds": 108,
+      "peak": 0.1670006662607193,
+      "clipped_samples": 0,
+      "nonfinite_samples": 0,
+      "samples": 10469376,
+      "errors": [],
+      "score_sha256": "5403f2c4c53bd5428111ea65309c23d376530dd615207725a13eac2a09640d7c",
+      "sample_rate": 48000,
+      "event_count": 330,
+      "last_event_cycle": 40,
+      "event_count_after_end": 0,
+      "source_origin": 0.1527,
+      "voices": [
+        "triangle",
+        "sine",
+        "sawtooth"
+      ],
+      "transport": {
+        "playing": false,
+        "paused": false,
+        "loading": false,
+        "context": "suspended"
+      },
+      "status": "PASSED",
+      "capture_seconds": 109.056,
+      "integrated_lufs": -28.6,
+      "true_peak_dbtp": -15.5,
+      "final_second_peak": 0.0,
+      "loudness_summary": "Summary:\n\n  Integrated loudness:\n    I:         -28.6 LUFS\n    Threshold: -38.8 LUFS\n\n  Loudness range:\n    LRA:         6.3 LU\n    Threshold: -48.8 LUFS\n    LRA low:   -33.4 LUFS\n    LRA high:  -27.1 LUFS\n\n  True peak:\n    Peak:      -15.5 dBFS\n[out#0/null @ 0000012849215ac0] video:0KiB audio:20448KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:01:49.05 bitrate=N/A speed= 121x elapsed=0:00:00.90    \n",
+      "human_listening_status": "pending; technical measurements only"
+    }
+  ],
+  "status": "PASSED",
+  "human_listeners": 0
+}

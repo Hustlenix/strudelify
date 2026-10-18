@@ -1,0 +1,88 @@
+name: Approved Pages rollback
+on:
+  workflow_dispatch:
+    inputs:
+      release_run_id:
+        description: Previous successful Approved Pages beta release run (artifact retained 90 days)
+        required: true
+        type: string
+      approval_json:
+        description: Renewed owner publication approval for that exact artifact and its music/device review
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: pages-publish
+  cancel-in-progress: false
+jobs:
+  validate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify previous release provenance
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_RUN_ID: ${{ inputs.release_run_id }}
+        run: python release-audit/check_rollback_origin.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: approved-site
+          path: rollback-site
+          run-id: ${{ inputs.release_run_id }}
+          github-token: ${{ github.token }}
+      - name: Check exact prior bytes and renewed owner approval
+        env:
+          RELEASE_APPROVAL_JSON: ${{ inputs.approval_json }}
+        run: python release-audit/validate_release.py rollback-site --require-approval
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: rollback-site/
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: approved-site
+          path: rollback-site
+          run-id: ${{ inputs.release_run_id }}
+          github-token: ${{ github.token }}
+      - run: python release-audit/verify_public_release.py rollback-site https://hustlenix.github.io/strudelify/
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: release-audit
+      - run: npx playwright install --with-deps chromium
+        working-directory: release-audit
+      - run: node release-audit/player-checks.mjs rollback-site chromium https://hustlenix.github.io/strudelify/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rollback-verification
+          path: |
+            release-audit/reports/public-release.json
+            release-audit/reports/public-player-chromium.json

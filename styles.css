@@ -9,6 +9,8 @@
   font-family:Arial,"Helvetica Neue",sans-serif;
   font-synthesis:none
 }
+.release-links { display:flex; flex-wrap:wrap; gap:12px 20px; font-size:13px; }
+.detail-actions { flex-wrap:wrap; }
 * {
   box-sizing:border-box
 }
@@ -1585,6 +1587,14 @@ h2 {
   .transport-buttons .shuffle-button,.transport-buttons .skip-button,.transport-buttons .stop-button,.live-status,.player-tools {
     display:none
   }
+  .transport-buttons {gap:0}
+  .transport-buttons .skip-button,.transport-buttons .stop-button {
+    display:grid;
+    place-items:center;
+    width:40px;
+    height:44px
+  }
+  .transport-buttons .main-play-button {width:44px;height:44px}
   .main-play-button {
     background:none;
     color:#fff;

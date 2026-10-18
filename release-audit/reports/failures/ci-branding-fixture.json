@@ -1,0 +1,8 @@
+{
+  "run_id": 39133197534,
+  "head_sha": "92c3353a04be925e0d6cffa52860fb1af5351fe4",
+  "failure": "Synthetic complete approval fixture still named Strudelify; built UI correctly named Hustlenix Music.",
+  "cause": "Fixture update passed locally but was omitted from the preceding commit.",
+  "correction": "Commit the fixture public-name update and retain the explicit old-name permission rejection case.",
+  "assertions_removed": false
+}

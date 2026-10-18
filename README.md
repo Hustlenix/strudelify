@@ -1,4 +1,6 @@
-# Strudelify
+# Hustlenix Music
+
+Previously branded Strudelify. The repository URL is retained.
 <img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/0fe97c3c-edde-46a8-ae17-3c1ac30accae" />
 
 **WHOLE SPOTIFY IN STRUDEL, CAUSE WHY NOTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT?** 
@@ -22,7 +24,30 @@ This is opensourced, so you can add a music that you like, to expand this websit
 
 The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their *should not copy* rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)
 
-The app itself is released under the repository's MIT license. Demo compositions in `tracks/` are original examples for this project.
+The project-authored source retains its MIT notice. Strudel is an AGPL-3.0-or-later dependency;
+the combined distribution uses AGPL-3.0-or-later, while MIT grants for project portions remain.
+The public UI uses Hustlenix Music; see [LICENSING.md](LICENSING.md).
+See [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md). Demo compositions in `tracks/` are original examples for this project.
+
+## v0.1 instrumental beta
+
+The public beta contains six original instrumentals. Each has finite sections, a fading ending
+and measured level balance. All six have complete technical audio captures; subjective listening
+acceptance and a physical phone test have not been recorded. The owner delegated shipping the
+technical beta without requiring the review form. Catalog review metadata retains those limits.
+Commercial-song study scores, lyric transcripts and supplied recordings are excluded from the
+public artifact. All prior music work remains preserved in the repository's separate review work.
+
+The player has separate Play/Pause/Resume and Stop behavior, mobile transport controls,
+complete actual View code, and links to draft a public GitHub listener report. GitHub sign-in
+is required to submit; no report or personal data is sent automatically.
+
+For a local review build, install the locked development tools in `release-audit/`, run
+`python release-audit/build_preview.py`, then serve `release-preview/` over localhost.
+Read the repository's [release audit](https://github.com/Hustlenix/strudelify/tree/main/release-audit)
+for release evidence, known limitations and the deployment runbook.
 
 ## Licence
-MIT
+Combined application: AGPL-3.0-or-later. Original MIT grants for project portions are retained.
+See [LICENSE](LICENSE), [COPYING](COPYING), [NOTICE.md](NOTICE.md) and [LICENSING.md](LICENSING.md).
+Every allowlisted build includes SOURCE.html and an application source archive.

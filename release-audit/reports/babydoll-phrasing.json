@@ -1,0 +1,32 @@
+{
+  "id": "01-babydoll",
+  "attempt": 1,
+  "scope": "Private lead-phrasing experiment only; accompaniment, bass, kit, source form and end time unchanged",
+  "source_code_sha256": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
+  "candidate_sha256": "ed3d5476a6a112af1981c88c8124d28d5f0f7ccf7768c1a3de1da35ec768d99e",
+  "owner_reason": "Recognized Babydoll but described random instruments/notes playing continuously and an off musical feel.",
+  "before_lead_events": 192,
+  "continuous_voiced_phrases": 102,
+  "source": "Existing supplied-recording CREPE F0/confidence/RMS frames, constrained to independently corroborated lead regions",
+  "source_interpolation_limits": "At most 50ms confidence gaps; pitch endpoints less than two semitones apart. No scale/chord guessing.",
+  "runtime_status": "passed actual Strudel 1.2.6 and complete stereo WebAudio capture",
+  "listening_status": "New candidate unreviewed; earlier candidate was criticized by owner",
+  "adopted_as_best": false,
+  "fidelity_score": null,
+  "capture_seconds": 101.12,
+  "source_code_sha256_current": "ed3d5476a6a112af1981c88c8124d28d5f0f7ccf7768c1a3de1da35ec768d99e",
+  "peak_linear": 0.8255208730697632,
+  "clipped_samples": 0,
+  "nonfinite_samples": 0,
+  "intro_alignment_shift_seconds": -0.098625,
+  "comparison_source_interval_seconds": [
+    10.33,
+    25.33
+  ],
+  "excerpt_capture_interval_seconds": [
+    10.231375,
+    25.231375
+  ],
+  "alignment_method": "Cross-correlation of the unchanged synthesized instrumental intro only; no perceptual/fidelity rating",
+  "loudness_summary": "Summary:\n\n  Integrated loudness:\n    I:         -18.7 LUFS\n    Threshold: -28.8 LUFS\n\n  Loudness range:\n    LRA:         5.9 LU\n    Threshold: -38.8 LUFS\n    LRA low:   -23.0 LUFS\n    LRA high:  -17.1 LUFS\n\n  True peak:\n    Peak:       -1.6 dBFS\n[out#0/null @ 000001cb97bb1740] video:0KiB audio:18960KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:01:41.12 bitrate=N/A speed= 124x elapsed=0:00:00.81    \n"
+}

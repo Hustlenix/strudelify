@@ -1,0 +1,116 @@
+[
+  {
+    "id": "afterglow",
+    "title": "Afterglow",
+    "artist": "Hustlenix Music",
+    "codeUrl": "./afterglow.strudel",
+    "bpm": 78,
+    "genre": "Warm ambient",
+    "group": "Soft focus",
+    "palette": 1,
+    "kind": "original",
+    "status": "draft",
+    "reviewStatus": "unreviewed",
+    "rights": {
+      "status": "project-original",
+      "license": "MIT",
+      "evidence": "../README.md#interface-and-features"
+    },
+    "durationSeconds": 106.461538
+  },
+  {
+    "id": "greenline",
+    "title": "Greenline",
+    "artist": "Hustlenix Music",
+    "codeUrl": "./greenline.strudel",
+    "bpm": 104,
+    "genre": "Night motion",
+    "group": "Night motion",
+    "palette": 2,
+    "kind": "original",
+    "status": "draft",
+    "reviewStatus": "unreviewed",
+    "rights": {
+      "status": "project-original",
+      "license": "MIT",
+      "evidence": "../README.md#interface-and-features"
+    },
+    "durationSeconds": 100.307692
+  },
+  {
+    "id": "paper-moon",
+    "title": "Paper Moon",
+    "artist": "Hustlenix Music",
+    "codeUrl": "./paper-moon.strudel",
+    "bpm": 86,
+    "genre": "Dusty keys",
+    "group": "Slow burn",
+    "palette": 3,
+    "kind": "original",
+    "status": "draft",
+    "reviewStatus": "unreviewed",
+    "rights": {
+      "status": "project-original",
+      "license": "MIT",
+      "evidence": "../README.md#interface-and-features"
+    },
+    "durationSeconds": 108.465116
+  },
+  {
+    "id": "soft-focus",
+    "title": "Soft Focus",
+    "artist": "Hustlenix Music",
+    "codeUrl": "./soft-focus.strudel",
+    "bpm": 68,
+    "genre": "Dreamy drift",
+    "group": "Soft focus",
+    "palette": 4,
+    "kind": "original",
+    "status": "draft",
+    "reviewStatus": "unreviewed",
+    "rights": {
+      "status": "project-original",
+      "license": "MIT",
+      "evidence": "../README.md#interface-and-features"
+    },
+    "durationSeconds": 120.941176
+  },
+  {
+    "id": "tiny-hours",
+    "title": "Tiny Hours",
+    "artist": "Hustlenix Music",
+    "codeUrl": "./tiny-hours.strudel",
+    "bpm": 112,
+    "genre": "Offbeat synth",
+    "group": "Night motion",
+    "palette": 5,
+    "kind": "original",
+    "status": "draft",
+    "reviewStatus": "unreviewed",
+    "rights": {
+      "status": "project-original",
+      "license": "MIT",
+      "evidence": "../README.md#interface-and-features"
+    },
+    "durationSeconds": 93.714286
+  },
+  {
+    "id": "wide-awake",
+    "title": "Wide Awake",
+    "artist": "Hustlenix Music",
+    "codeUrl": "./wide-awake.strudel",
+    "bpm": 96,
+    "genre": "Bright pulse",
+    "group": "Slow burn",
+    "palette": 6,
+    "kind": "original",
+    "status": "draft",
+    "reviewStatus": "unreviewed",
+    "rights": {
+      "status": "project-original",
+      "license": "MIT",
+      "evidence": "../README.md#interface-and-features"
+    },
+    "durationSeconds": 108.0
+  }
+]

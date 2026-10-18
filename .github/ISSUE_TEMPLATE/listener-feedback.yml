@@ -1,0 +1,50 @@
+name: Listener feedback
+description: Report playback, navigation or musical problems
+title: "[Listener feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: This report is public. Do not attach commercial recordings, lyrics, passwords or personal information.
+  - type: input
+    id: track
+    attributes:
+      label: Track title or ID
+      placeholder: Afterglow, or player in general
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Page URL and build SHA, if known
+  - type: input
+    id: device
+    attributes:
+      label: Browser, device and screen size
+    validations:
+      required: true
+  - type: input
+    id: position
+    attributes:
+      label: Playback timestamp (optional)
+      placeholder: "0:15"
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened, and what did you expect?
+      description: For musical feedback, identify the passage and describe melody, timing, sound or structure.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: dropdown
+    id: type
+    attributes:
+      label: Feedback type
+      options:
+        - Playback or loading
+        - Navigation or mobile controls
+        - Music quality
+        - Code view or editor
+        - Other

@@ -1,0 +1,174 @@
+{
+  "started_at": "2026-10-18T10:50:00.632Z",
+  "browser": "firefox",
+  "checks": [
+    {
+      "name": "Original catalog loads without commercial scores, lyrics or sample banks",
+      "status": "PASSED",
+      "ids": [
+        "afterglow",
+        "greenline",
+        "paper-moon",
+        "soft-focus",
+        "tiny-hours",
+        "wide-awake"
+      ]
+    },
+    {
+      "name": "Back/Forward and complete actual View code",
+      "status": "PASSED"
+    }
+  ],
+  "errors": [
+    "Error: Resume restarted or failed to advance\n    at assert (file:///home/runner/work/strudelify/strudelify/release-audit/player-checks.mjs:11:56)\n    at file:///home/runner/work/strudelify/strudelify/release-audit/player-checks.mjs:102:3"
+  ],
+  "requests": [
+    "http://127.0.0.1:40187/",
+    "http://127.0.0.1:40187/styles.css?v=mvp-review-20261018",
+    "https://unpkg.com/@strudel/web@1.2.6",
+    "http://127.0.0.1:40187/app.js?v=mvp-review-20261018",
+    "http://127.0.0.1:40187/assets/covers/greenline.svg",
+    "http://127.0.0.1:40187/assets/covers/paper-moon.svg",
+    "http://127.0.0.1:40187/assets/covers/afterglow.svg",
+    "https://unpkg.com/@strudel/web@1.2.6/dist/index.js",
+    "http://127.0.0.1:40187/tracks/catalog.json",
+    "http://127.0.0.1:40187/release.json",
+    "http://127.0.0.1:40187/assets/icon.svg",
+    "http://127.0.0.1:40187/assets/covers/soft-focus.svg",
+    "http://127.0.0.1:40187/assets/covers/tiny-hours.svg",
+    "http://127.0.0.1:40187/assets/covers/wide-awake.svg",
+    "http://127.0.0.1:40187/tracks/afterglow.strudel"
+  ],
+  "build": {
+    "created_at": "2026-10-18T10:50:00.136507+00:00",
+    "commit": "de2df06c6e5461c53758d24006379050e154f07a",
+    "dirty": false,
+    "worktree_dirty_including_audit_reports": false,
+    "uncommitted_payload_paths": [],
+    "publication": "local preview only; approval required",
+    "track_count": 6,
+    "excluded": [
+      "commercial cover source payloads",
+      "all lyrics",
+      "reference audio",
+      "audit/private files"
+    ],
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "bc45603a7d1b28fb98d46e19b4ea68f05bd29296abbd8b872648db22578ff671"
+      },
+      {
+        "path": "README.md",
+        "sha256": "780bbc2f7b4dbd05375124fc820281dba71e9f119ce8917448e4790d7ddb4c8c"
+      },
+      {
+        "path": "THIRD_PARTY_ASSETS.md",
+        "sha256": "65a8ef65a1b6567b8cbb909a622207c45376a96397ad7a0031587fb674e54061"
+      },
+      {
+        "path": "app.js",
+        "sha256": "b5ca15224e3298bf02de82ba59434cecd1a6dcc563888b4181c25d8429b390a5"
+      },
+      {
+        "path": "assets/covers/afterglow.svg",
+        "sha256": "c56f06c5454ca2c3774bbc5d0c72955cbaa3780e7f6c03a883718ef63ba40777"
+      },
+      {
+        "path": "assets/covers/greenline.svg",
+        "sha256": "2b495216ee214276900d06742d8c4de203a670099f996fbcd44bea6e17da7d40"
+      },
+      {
+        "path": "assets/covers/paper-moon.svg",
+        "sha256": "b3375d928e74b33f87da71b87c1e8eb2265fc23b88d2209e916c2e6c1547155c"
+      },
+      {
+        "path": "assets/covers/soft-focus.svg",
+        "sha256": "4fa13d3e6887f9614a38d3036522eaa7d09957ae9d1c4c3e2db35cbbaf0eefde"
+      },
+      {
+        "path": "assets/covers/tiny-hours.svg",
+        "sha256": "725fd724d6ab53b6604444ec770fae875382f02e95b15715b3dddfc6811bb1b9"
+      },
+      {
+        "path": "assets/covers/wide-awake.svg",
+        "sha256": "d96404d4e3cbad0283e2973e4bfa366e8d73aae5297d9171e0a83c7d2a0f7e2b"
+      },
+      {
+        "path": "assets/icon.svg",
+        "sha256": "748da207789fae63ac2db26052f626cfe07054330d44f4460b4394c0b37daf88"
+      },
+      {
+        "path": "index.html",
+        "sha256": "bd5a2502debec59cdfc908d8827f3724c3cafe1a22dd28f5c54dd3da77e71955"
+      },
+      {
+        "path": "licenses/Strudel-AGPL-3.0.txt",
+        "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+      },
+      {
+        "path": "styles.css",
+        "sha256": "76e56cfd9170a82bbf61bc372ffcd9ecddb6d0f1863e55af5791baaca4a04edd"
+      },
+      {
+        "path": "tracks/afterglow.strudel",
+        "sha256": "2fe62f3b8358c5b3e0f82864f54de08cc02cfc721e1b0267d4fac9ca2726939b"
+      },
+      {
+        "path": "tracks/catalog.json",
+        "sha256": "4af5200cb5e0e034b2813c974583ae041d347a113baa304b123f8f43f6739034"
+      },
+      {
+        "path": "tracks/greenline.strudel",
+        "sha256": "70b3d7a968f4b5d71cea143c2fcbf5f4c7b647e137a1163e8e43cdbf16ada1b8"
+      },
+      {
+        "path": "tracks/paper-moon.strudel",
+        "sha256": "d927041172c1ff0d832d5ee82ed6e49f32a10c2ceed374b084080e4497acee28"
+      },
+      {
+        "path": "tracks/soft-focus.strudel",
+        "sha256": "6e5b992f57b4b9da319e7dcb012ef0615e1e1d6a01152648c48ba5f710081491"
+      },
+      {
+        "path": "tracks/tiny-hours.strudel",
+        "sha256": "2f1ff0d241369cdff99a1736e5f33c0bdecde2214edeeb417b297f19105c1958"
+      },
+      {
+        "path": "tracks/wide-awake.strudel",
+        "sha256": "68bf3bbed56c83071ffe46d5b2f5b6dd2e3a4c7f612df5dbe27aef87098edcbb"
+      }
+    ]
+  },
+  "browser_version": "153.0",
+  "console_diagnostics": [],
+  "pause_observation": {
+    "time": 0.9229931972789116,
+    "context": "suspended",
+    "paused": true,
+    "playing": false,
+    "revision": 1,
+    "resumes": [
+      {
+        "time": 0,
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nF1@https://unpkg.com/@strudel/web@1.2.6:6:11836\nn@https://unpkg.com/@strudel/web@1.2.6:6:12220\nEventListener.handleEvent*E1/w1<@https://unpkg.com/@strudel/web@1.2.6:6:12130\nE1@https://unpkg.com/@strudel/web@1.2.6:6:12105\nfA@https://unpkg.com/@strudel/web@1.2.6:78:77383\nensureEngine@http://127.0.0.1:40187/app.js?v=mvp-review-20261018:106:62\npromise callback*@http://127.0.0.1:40187/app.js?v=mvp-review-20261018:122:19\n"
+      },
+      {
+        "time": 0,
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nplayTrack/start<@http://127.0.0.1:40187/app.js?v=mvp-review-20261018:195:38\nasync*playTrack@http://127.0.0.1:40187/app.js?v=mvp-review-20261018:182:35\nasync*handleAction@http://127.0.0.1:40187/app.js?v=mvp-review-20261018:497:83\n@http://127.0.0.1:40187/app.js?v=mvp-review-20261018:523:15\nEventListener.handleEvent*@http://127.0.0.1:40187/app.js?v=mvp-review-20261018:510:10\n"
+      }
+    ]
+  },
+  "status": "FAILED",
+  "failure_state": {
+    "playing": true,
+    "loading": false,
+    "error": "",
+    "audio_context": "suspended",
+    "activation": {
+      "active": true,
+      "previous": true
+    }
+  },
+  "finished_at": "2026-10-18T10:50:08.888Z"
+}

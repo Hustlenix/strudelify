@@ -1,11 +1,38 @@
 // A slow, warm loop built for the last light of the day.
 setcps(78/60/4)
 
-$: note("<c3 e3 g3 a3>").slow(2)
-  .s("triangle").lpf(1600).gain(.2).room(.65)
+// Arrangement revision: 18 October 2026. Original pitches and sound design retained.
+// Bars 0-32: staggered entry, reduced texture, return, four-bar fade; 8s effect tail.
+// Constant master gain 1.8408, based on complete v1 render toward -23 LUFS.
+// Draft: full human listening approval is still required.
+const endSeconds = 106.461538
+const totalBars = 32
+const arranged = (pattern, windows) => pattern
+  .filterHaps(h => h.whole && windows.some(([a,b]) => +h.whole.begin >= a && +h.whole.begin < b))
+  .withHap(h => {
+    const t = +h.whole.begin
+    const section = windows.find(([a,b]) => t >= a && t < b)
+    const fade = Math.min(1, Math.max(0, (totalBars-t)/4))
+    return h.withValue(v => ({...v, gain:v.gain*section[2]*fade*1.8408}))
+  })
 
-$: note("<c2 ~ g2 ~ a2 ~ f2 ~>")
-  .s("sine").lpf(430).gain(.3)
+// Voice 1: [entry bar, exit bar, level].
+$: arranged(
+  note("<c3 e3 g3 a3>").slow(2)
+  .s("triangle").lpf(1600).gain(.2).room(.65),
+  [[0,32,1]]
+)
 
-$: note("~ c4 ~ e4 ~ g4 ~ e4")
-  .s("sine").gain(.14).delay(.25).room(.4)
+// Voice 2: [entry bar, exit bar, level].
+$: arranged(
+  note("<c2 ~ g2 ~ a2 ~ f2 ~>")
+  .s("sine").lpf(430).gain(.3),
+  [[4,16,1],[20,30,0.9]]
+)
+
+// Voice 3: [entry bar, exit bar, level].
+$: arranged(
+  note("~ c4 ~ e4 ~ g4 ~ e4")
+  .s("sine").gain(.14).delay(.25).room(.4),
+  [[8,16,1],[20,28,0.85]]
+)
