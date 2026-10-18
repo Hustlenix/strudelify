@@ -1,0 +1,250 @@
+{
+  "started_at": "2026-10-18T10:14:47.868Z",
+  "browser": "firefox",
+  "checks": [
+    {
+      "name": "Original catalog loads without commercial scores, lyrics or sample banks",
+      "status": "PASSED",
+      "ids": [
+        "afterglow",
+        "greenline",
+        "paper-moon",
+        "soft-focus",
+        "tiny-hours",
+        "wide-awake"
+      ]
+    },
+    {
+      "name": "Back/Forward and complete actual View code",
+      "status": "PASSED"
+    },
+    {
+      "name": "Trusted click audio and true pause/resume preserve scheduler/session",
+      "status": "PASSED",
+      "before": {
+        "time": 1.76,
+        "revision": 1,
+        "peak": 0.12637992203235626
+      },
+      "frozen": 1.9093333333333333,
+      "resumed": {
+        "time": 2.517333333333333,
+        "revision": 1
+      }
+    },
+    {
+      "name": "Stop cancels a delayed real source request",
+      "status": "PASSED"
+    },
+    {
+      "name": "Rapid switching, Next and Previous retain a single current session",
+      "status": "PASSED"
+    },
+    {
+      "name": "afterglow real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.048043154180049896,
+      "frames": 3072000,
+      "current": "afterglow",
+      "error": ""
+    },
+    {
+      "name": "greenline real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.13862255215644836,
+      "frames": 3690496,
+      "current": "greenline",
+      "error": ""
+    },
+    {
+      "name": "paper-moon real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.18256869912147522,
+      "frames": 4321280,
+      "current": "paper-moon",
+      "error": ""
+    },
+    {
+      "name": "soft-focus real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.10938149690628052,
+      "frames": 4939776,
+      "current": "soft-focus",
+      "error": ""
+    },
+    {
+      "name": "tiny-hours real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.07791221886873245,
+      "frames": 5537792,
+      "current": "tiny-hours",
+      "error": ""
+    },
+    {
+      "name": "wide-awake real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.14912977814674377,
+      "frames": 6242304,
+      "current": "wide-awake",
+      "error": ""
+    },
+    {
+      "name": "Syntax recovery, finite-ending fixture and editor-close cleanup",
+      "status": "PASSED"
+    },
+    {
+      "name": "Search and explicit public GitHub feedback link",
+      "status": "PASSED"
+    },
+    {
+      "name": "Desktop 1280px and fresh mobile 390px Play/Pause/Stop/Next/Previous and code controls",
+      "status": "PASSED"
+    },
+    {
+      "name": "Cooperating browser tabs hand off playback ownership",
+      "status": "PASSED"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:64643/",
+    "http://127.0.0.1:64643/styles.css?v=mvp-review-20261018",
+    "https://unpkg.com/@strudel/web@1.2.6",
+    "http://127.0.0.1:64643/app.js?v=mvp-review-20261018",
+    "http://127.0.0.1:64643/assets/covers/greenline.svg",
+    "http://127.0.0.1:64643/assets/covers/paper-moon.svg",
+    "http://127.0.0.1:64643/assets/covers/afterglow.svg",
+    "https://unpkg.com/@strudel/web@1.2.6/dist/index.js",
+    "http://127.0.0.1:64643/tracks/catalog.json",
+    "http://127.0.0.1:64643/release.json",
+    "http://127.0.0.1:64643/assets/icon.svg",
+    "http://127.0.0.1:64643/assets/covers/soft-focus.svg",
+    "http://127.0.0.1:64643/assets/covers/tiny-hours.svg",
+    "http://127.0.0.1:64643/assets/covers/wide-awake.svg",
+    "http://127.0.0.1:64643/tracks/afterglow.strudel",
+    "http://127.0.0.1:64643/tracks/greenline.strudel",
+    "http://127.0.0.1:64643/tracks/paper-moon.strudel",
+    "http://127.0.0.1:64643/tracks/tiny-hours.strudel",
+    "http://127.0.0.1:64643/tracks/wide-awake.strudel",
+    "http://127.0.0.1:64643/tracks/soft-focus.strudel"
+  ],
+  "build": {
+    "created_at": "2026-10-18T10:14:45.129360+00:00",
+    "commit": "0b6e42ce2fc1f236df8f673470724a564a1d1c5f",
+    "dirty": true,
+    "publication": "local preview only; approval required",
+    "track_count": 6,
+    "excluded": [
+      "commercial cover source payloads",
+      "all lyrics",
+      "reference audio",
+      "audit/private files"
+    ],
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "32520f6cedf8d61e773fec32445ddc7a09825c308afd38f22b995ad282612f73"
+      },
+      {
+        "path": "README.md",
+        "sha256": "358653a3a73111297617e6a82545db59d68f999282144ae7bbee4722e64d5f84"
+      },
+      {
+        "path": "THIRD_PARTY_ASSETS.md",
+        "sha256": "098f2c9311469f00b890b43694d59ea7b0cf30ad47de35429f7e57978abd6c2c"
+      },
+      {
+        "path": "app.js",
+        "sha256": "4052bca9beeb16fc44d76eb1215cc0594a2536f142a3748ad0c687a03a075336"
+      },
+      {
+        "path": "assets/covers/afterglow.svg",
+        "sha256": "c56f06c5454ca2c3774bbc5d0c72955cbaa3780e7f6c03a883718ef63ba40777"
+      },
+      {
+        "path": "assets/covers/greenline.svg",
+        "sha256": "2b495216ee214276900d06742d8c4de203a670099f996fbcd44bea6e17da7d40"
+      },
+      {
+        "path": "assets/covers/paper-moon.svg",
+        "sha256": "b3375d928e74b33f87da71b87c1e8eb2265fc23b88d2209e916c2e6c1547155c"
+      },
+      {
+        "path": "assets/covers/soft-focus.svg",
+        "sha256": "4fa13d3e6887f9614a38d3036522eaa7d09957ae9d1c4c3e2db35cbbaf0eefde"
+      },
+      {
+        "path": "assets/covers/tiny-hours.svg",
+        "sha256": "725fd724d6ab53b6604444ec770fae875382f02e95b15715b3dddfc6811bb1b9"
+      },
+      {
+        "path": "assets/covers/wide-awake.svg",
+        "sha256": "d96404d4e3cbad0283e2973e4bfa366e8d73aae5297d9171e0a83c7d2a0f7e2b"
+      },
+      {
+        "path": "assets/icon.svg",
+        "sha256": "748da207789fae63ac2db26052f626cfe07054330d44f4460b4394c0b37daf88"
+      },
+      {
+        "path": "index.html",
+        "sha256": "6cfbb0c2431484ffb255b35f5406e8714671308743d9b7404efc9c8c18c4f308"
+      },
+      {
+        "path": "licenses/Strudel-AGPL-3.0.txt",
+        "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+      },
+      {
+        "path": "styles.css",
+        "sha256": "c683a0c986a03f7ae4e1163412dadb5d046385b0cfa9bbcbf3a6b043b6974928"
+      },
+      {
+        "path": "tracks/afterglow.strudel",
+        "sha256": "65758e39434253ca2344afb548754d8554aeda6f232bda39988731269c9cae4b"
+      },
+      {
+        "path": "tracks/catalog.json",
+        "sha256": "4af5200cb5e0e034b2813c974583ae041d347a113baa304b123f8f43f6739034"
+      },
+      {
+        "path": "tracks/greenline.strudel",
+        "sha256": "0e7c35680b10bf087e550e8583c635f9bfe01f6ceca8ceea53ebdf976306819a"
+      },
+      {
+        "path": "tracks/paper-moon.strudel",
+        "sha256": "26b78c1c0b79792e8636fabeb0abce45e962341213901378f7119233e0e36385"
+      },
+      {
+        "path": "tracks/soft-focus.strudel",
+        "sha256": "10186c9bb4cb796df1fe3617572d3353153a15c116b315d3cb910f46fe02682c"
+      },
+      {
+        "path": "tracks/tiny-hours.strudel",
+        "sha256": "588593beb05aaa222e7156493e0a059b63b9ae75f4f3f377a9b985ba8e6459e2"
+      },
+      {
+        "path": "tracks/wide-awake.strudel",
+        "sha256": "e1cdfdd7d2f640dc51aefa6cbf84fcd99b202c01687c2986378fc59d20017ba2"
+      }
+    ]
+  },
+  "browser_version": "153.0",
+  "pause_observation": {
+    "time": 1.9093333333333333,
+    "context": "suspended",
+    "paused": true,
+    "playing": false,
+    "revision": 1,
+    "resumes": [
+      {
+        "time": 0,
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nF1@https://unpkg.com/@strudel/web@1.2.6:6:11836\nn@https://unpkg.com/@strudel/web@1.2.6:6:12220\nEventListener.handleEvent*E1/w1<@https://unpkg.com/@strudel/web@1.2.6:6:12130\nE1@https://unpkg.com/@strudel/web@1.2.6:6:12105\nfA@https://unpkg.com/@strudel/web@1.2.6:78:77383\nensureEngine@http://127.0.0.1:64643/app.js?v=mvp-review-20261018:106:62\npromise callback*@http://127.0.0.1:64643/app.js?v=mvp-review-20261018:122:19\n"
+      },
+      {
+        "time": 0.042666666666666665,
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nplayTrack/start<@http://127.0.0.1:64643/app.js?v=mvp-review-20261018:195:38\nasync*playTrack@http://127.0.0.1:64643/app.js?v=mvp-review-20261018:182:35\nasync*handleAction@http://127.0.0.1:64643/app.js?v=mvp-review-20261018:488:83\n@http://127.0.0.1:64643/app.js?v=mvp-review-20261018:514:15\nEventListener.handleEvent*@http://127.0.0.1:64643/app.js?v=mvp-review-20261018:501:10\n"
+      }
+    ]
+  },
+  "status": "PASSED",
+  "finished_at": "2026-10-18T10:15:34.265Z"
+}

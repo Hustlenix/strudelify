@@ -1,0 +1,19 @@
+{
+  "source": "C:\\Users\\LalithReddy.b\\Downloads\\strudelify_codex_resources\\strudelify_resource_kit",
+  "files": [
+    {
+      "file": "ASSET_REGISTER_TEMPLATE.md",
+      "sha256": "bb24e26ec8a3f9979e7f75792a865a4b2376be5224c0fe6034d38f30abc0a6d4"
+    },
+    {
+      "file": "CODEX_HANDOFF.md",
+      "sha256": "2bca13b9566c6fcc9925f6d41aa0140275b2d0ac9cf9462cc7ecb1ffa4aa2047"
+    },
+    {
+      "file": "RESOURCE_GUIDE.md",
+      "sha256": "d06027cd86357226a44efc91e32279a1af0ee057629185002bba73a23b2f012c"
+    }
+  ],
+  "resource_rows": 40,
+  "new_production_dependencies": 0
+}

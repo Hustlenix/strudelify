@@ -16,7 +16,6 @@ const palettes = [
   'linear-gradient(140deg,#a4a15f,#626638 54%,#2b321f)',
 ];
 const groups = [
-  { name: 'Requested covers', symbol: '♫', note: 'Eight instrumental Strudel arrangements, in review.', palette: 1 },
   { name: 'Slow burn', symbol: '◌', note: 'Take the long way home.', palette: 3 },
   { name: 'Night motion', symbol: '↗', note: 'A little light after dark.', palette: 2 },
   { name: 'Soft focus', symbol: '✳', note: 'Let the edges blur.', palette: 4 },
@@ -25,6 +24,7 @@ const groups = [
 const state = {
   current: null,
   playing: false,
+  paused: false,
   loading: false,
   liked: readStorage('strudelify-liked', []),
   custom: readStorage('strudelify-custom', []),
@@ -88,8 +88,8 @@ function setStatus(message, playing = state.playing) {
   $('#playerStatus').textContent = message;
   $('#playerBar').classList.toggle('is-playing', playing);
   $('#mainPlayButton').innerHTML = icon(playing ? 'pause' : 'play');
-  $('#mainPlayButton').setAttribute('aria-label', playing ? 'Stop current pattern' : 'Play current pattern');
-  $('#mainPlayButton').title = playing ? 'Stop current pattern' : 'Play current pattern';
+  $('#mainPlayButton').setAttribute('aria-label', playing ? 'Pause current pattern' : state.paused ? 'Resume current pattern' : 'Play current pattern');
+  $('#mainPlayButton').title = playing ? 'Pause current pattern' : state.paused ? 'Resume current pattern' : 'Play current pattern';
 }
 function getCode(track) {
   if (track.code) return Promise.resolve(track.code);
@@ -104,20 +104,22 @@ function getCode(track) {
 function ensureEngine() {
   if (typeof window.initStrudel !== 'function') throw new Error('The Strudel runtime did not load. Check your connection and refresh.');
   if (!enginePromise) enginePromise = Promise.resolve(window.initStrudel({
-    prebake: async () => {
-      const url='https://raw.githubusercontent.com/felixroos/dough-samples/main/tidal-drum-machines.json';
-      const response=await fetch(url,{signal:AbortSignal.timeout(15000)});
-      if (!response.ok) throw new Error('The instrument library could not be loaded. Try again.');
-      const map=await response.json();
-      await window.samples(map,map._base || new URL('./',url).href);
-    },
+    // The release catalog uses native synths. No unverified third-party sample bank is loaded.
     defaultOutput: (hap, deadline, duration, cps, time) => {
       if (!state.playing || hap.value?._strudelifySession !== playbackRevision) return;
       return window.webaudioOutput(hap, deadline, duration, cps, time);
     },
-  })).catch(error => { enginePromise = null; throw error; });
+  })).then(async repl => {
+    // defaultPrebake exposes this API. Wait for the registered first gesture's audio/worklets
+    // before starting a score, so initialization cannot resume a later paused context.
+    await window.initAudioOnFirstClick();
+    await silenceEngine();
+    return repl;
+  }).catch(error => { enginePromise = null; throw error; });
   return enginePromise;
 }
+// Install Strudel's one-time gesture listener before the first delegated app click.
+Promise.resolve().then(ensureEngine).catch(() => {});
 function getEvalError(repl) { return repl?.state?.evalError || null; }
 async function runCode(code) {
   return playTrack({id:'editor-preview', title:'Editor preview', artist:'Unsaved pattern', code, preview:true, palette:5}, true);
@@ -164,6 +166,7 @@ async function playTrack(track, isPreview = false) {
   previewing = isPreview;
   playbackError = '';
   state.playing = false;
+  state.paused = false;
   state.loading = true;
   playbackDuration = 0;
   const muted=silenceEngine();
@@ -212,6 +215,7 @@ async function playTrack(track, isPreview = false) {
   } catch (error) {
     if (revision !== playbackRevision) return;
     state.playing = false;
+    state.paused = false;
     await silenceEngine();
     playbackError = error?.name==='TimeoutError' ? 'Loading the song or instruments timed out. Try again or refresh.' : error?.message || 'Strudel could not play this track.';
     renderPlayer();
@@ -224,12 +228,36 @@ async function stopTrack() {
   playbackAbort?.abort();
   playbackDuration = 0;
   state.playing = false;
+  state.paused = false;
   state.loading = false;
   previewing = false;
   playbackError = '';
   try { await silenceEngine(); }
   catch { /* The interface can still return to its stopped state. */ }
   setStatus(state.current ? 'Pattern stopped' : 'Ready when you are', false);
+  renderPlayer();
+  renderAllLists();
+}
+async function togglePlayback() {
+  if (state.loading) return stopTrack();
+  if (!state.current) return playRandom();
+  if (!state.playing && !state.paused) return playTrack(state.current);
+  const revision = playbackRevision;
+  const context = window.getAudioContext();
+  if (state.playing) {
+    // Keep the scheduler and scheduled voices intact. Its clock reads AudioContext.currentTime,
+    // so suspending native audio preserves phase, envelopes and the finite ending position.
+    await context.suspend();
+    if (revision !== playbackRevision) return;
+    state.playing = false;
+    state.paused = true;
+  } else {
+    playbackChannel?.postMessage('claim');
+    state.playing = true;
+    state.paused = false;
+    await context.resume();
+    if (revision !== playbackRevision) { await silenceEngine(); return; }
+  }
   renderPlayer();
   renderAllLists();
 }
@@ -244,7 +272,7 @@ function renderPlayer() {
   $('#codeButton').disabled = !track;
   renderQueue();
   $('#mainPlayButton').disabled = !track;
-  setStatus(playbackError ? 'Could not play this pattern' : state.loading ? 'Loading · press Play to cancel' : state.playing ? (previewing ? 'Previewing editor code' : 'Playing live pattern') : track ? 'Pattern stopped' : 'Ready when you are', state.playing);
+  setStatus(playbackError ? 'Could not play · press Play to retry' : state.loading ? 'Loading · press Play to cancel' : state.paused ? 'Paused · resume where you left off' : state.playing ? (previewing ? 'Previewing editor code' : 'Playing live pattern') : track ? 'Pattern stopped' : 'Ready when you are', state.playing);
   if (state.loading) {
     $('#mainPlayButton').innerHTML = icon('stop');
     $('#mainPlayButton').setAttribute('aria-label', 'Cancel loading');
@@ -301,11 +329,11 @@ async function loadLyrics(track) {
   $('#lyricsArtist').textContent = track.artist;
   $('#lyricsLines').replaceChildren();
   $('#retryLyrics').classList.add('hidden');
-  $('#lyricsNotice').textContent = track.cover ? 'Loading lyrics…' : 'This is an instrumental pattern. No lyrics are attached.';
-  if (!track.cover) return;
+  $('#lyricsNotice').textContent = track.cover ? 'Instrumental study. No licensed lyrics are attached.' : 'Original instrumental pattern. No lyrics are attached.';
+  if (!track.lyricsUrl || track.lyricsRights !== 'cleared') return;
   try {
     if (!lyricsCache.has(track.id)) lyricsCache.set(track.id,
-      fetch(`tracks/covers/lyrics/${encodeURIComponent(track.id)}.json`, {cache:'no-cache'}).then(async response => {
+      fetch(track.lyricsUrl, {cache:'no-cache'}).then(async response => {
         if (!response.ok) throw new Error('Lyrics could not be loaded.');
         const data = await response.json();
         if (data.id !== track.id || !Array.isArray(data.cues) || data.cues.some(cue =>
@@ -330,7 +358,7 @@ async function loadLyrics(track) {
   }
 }
 function updateLyricsPosition() {
-  const seconds = state.playing && window.getAudioContext ? Math.max(0,window.getAudioContext().currentTime-playbackStartedAt) : -1;
+  const seconds = (state.playing || state.paused) && window.getAudioContext ? Math.max(0,window.getAudioContext().currentTime-playbackStartedAt) : -1;
   if (playbackDuration > 0 && seconds >= playbackDuration + 1) { stopTrack(); return; }
   const index = lyricsCues.findIndex(cue => seconds >= cue.start && seconds < cue.end);
   if (index === highlightedLyric) return;
@@ -390,7 +418,11 @@ function setView(name, push = true) {
 }
 async function openTrack(id, push = true) {
   const track = getTrack(id);
-  if (!track) return;
+  if (!track) {
+    setView('home', false);
+    showToast('This track is not in the current release. Explore the available original patterns.');
+    return;
+  }
   const revision = ++detailRevision;
   setView('track', false);
   const href=`#track/${encodeURIComponent(id)}`;
@@ -400,14 +432,23 @@ async function openTrack(id, push = true) {
   <div class="detail-actions"><button class="detail-play" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button><button class="icon-button${state.liked.includes(track.id) ? ' liked' : ''}" data-action="like" data-track-id="${escapeHtml(track.id)}" aria-label="Like ${escapeHtml(track.title)}">${icon('heart')}</button><button class="button button-quiet" data-show-code>View code</button><div style="position:relative"><button class="icon-button" data-track-menu aria-label="More options" aria-expanded="false">${icon('more')}</button><div class="detail-menu hidden" role="menu"><button role="menuitem" data-action="copy" data-track-id="${escapeHtml(track.id)}">Copy Strudel code</button></div></div></div>
   <details class="code-details" id="patternCode"><summary>Inside the pattern</summary><div class="code-panel"><div class="code-panel-heading"><span>${escapeHtml(track.id)}.strudel</span><span>LIVE PATTERN</span></div><pre id="detailCode">Loading pattern…</pre></div></details>
   <section class="section-block"><div class="section-heading"><h2>More to discover</h2></div><div class="shelf-grid">${allTracks().filter(t=>t.id!==track.id).map(cardMarkup).join('')}</div></section>`;
-  if (track.cover) {
+  {
     const note = document.createElement('p');
     note.className = 'empty-state';
-    note.textContent = track.status === 'approved'
-      ? 'Instrumental Strudel cover. Synthesized live from code.'
-      : 'Instrumental Strudel cover · In review. Melody, sound, and musical fidelity are still being improved.';
+    note.textContent = track.cover
+      ? 'Instrumental study · human recognition review pending. Not an approved faithful cover.'
+      : 'Original instrumental pattern · listener review pending. Generated live from its Strudel code.';
     $('.detail-hero').after(note);
   }
+  const reportLink = document.createElement('a');
+  reportLink.className = 'button button-quiet';
+  reportLink.textContent = 'Report a problem';
+  reportLink.dataset.feedback = track.id;
+  reportLink.href = feedbackUrl(track);
+  reportLink.target = '_blank';
+  reportLink.rel = 'noreferrer';
+  reportLink.title = 'Opens a public GitHub report; sign-in required to submit';
+  $('.detail-actions').append(reportLink);
   try { const code=await getCode(track); if (revision===detailRevision) $('#detailCode').textContent=code; }
   catch (error) { if (revision===detailRevision) $('#detailCode').textContent=error.message; }
 }
@@ -487,7 +528,7 @@ document.addEventListener('keydown', event => {
     event.preventDefault(); setView('search'); $('#searchInput').focus();
   }
   if (event.code === 'Space' && !/input|textarea|button/i.test(document.activeElement.tagName) && !$('#editorDialog').open) {
-    event.preventDefault(); if (state.playing) stopTrack(); else if (state.current) playTrack(state.current); else playRandom();
+    event.preventDefault(); togglePlayback();
   }
 });
 
@@ -503,7 +544,7 @@ $('#newTrackButton').addEventListener('click', () => openEditor());
 $('#libraryCreateButton').addEventListener('click', () => openEditor());
 $('#heroPlayButton').addEventListener('click', () => playRandom());
 $('#starterPlayButton').addEventListener('click', () => playRandom());
-$('#mainPlayButton').addEventListener('click', () => state.playing ? stopTrack() : state.current ? playTrack(state.current) : playRandom());
+$('#mainPlayButton').addEventListener('click', togglePlayback);
 $('#stopButton').addEventListener('click', stopTrack);
 $('#previousButton').addEventListener('click', () => {
   const list = allTracks(); const index = list.findIndex(track => track.id === state.current?.id);
@@ -615,13 +656,13 @@ setRightPanel($('#lyricsLines') && matchMedia('(min-width:1101px)').matches ? 'l
 if (!location.hash) history.replaceState({ view: 'home' }, '', '#home');
 
 async function loadCoverCatalog() {
-  const catalogUrl = new URL('tracks/covers/catalog.json', document.baseURI);
+  const catalogUrl = new URL('tracks/catalog.json', document.baseURI);
   const response = await fetch(catalogUrl, {cache: 'no-cache'});
   if (!response.ok) throw new Error(`Music catalog unavailable (${response.status}).`);
   const catalog = await response.json();
   const statuses = ['draft', 'runtime-verified', 'listening-reviewed', 'approved'];
   if (!Array.isArray(catalog) || !catalog.length) throw new Error('Music catalog is empty.');
-  const ids = new Set(tracks.map(track => track.id));
+  const ids = new Set();
   const covers = catalog.map((entry, index) => {
     if (!entry.id || ids.has(entry.id) || !entry.title || !entry.artist || !entry.genre ||
         !Number.isFinite(entry.bpm) || entry.bpm <= 0 || !statuses.includes(entry.status))
@@ -630,9 +671,14 @@ async function loadCoverCatalog() {
     const codeUrl = new URL(entry.codeUrl, catalogUrl);
     if (!entry.codeUrl || codeUrl.origin !== catalogUrl.origin ||
         !codeUrl.pathname.startsWith(new URL('./', catalogUrl).pathname) ||
-        !codeUrl.pathname.endsWith('.strudel')) throw new Error('Invalid cover code path.');
-    return {...entry, codeUrl: codeUrl.href, cover: true, mood: entry.genre,
-      loop: `${entry.bpm} BPM`, group: 'Requested covers', palette: index % palettes.length + 1};
+        !codeUrl.pathname.endsWith('.strudel')) throw new Error('Invalid track code path.');
+    if (!['project-original', 'cleared'].includes(entry.rights?.status) ||
+        !entry.rights.evidence || !entry.rights.license ||
+        (entry.kind !== 'original' && (entry.status !== 'approved' || !entry.humanReview)))
+      throw new Error('A track has not passed the public release gate.');
+    if (entry.lyricsUrl) throw new Error('Lyrics are not enabled in this release.');
+    return {...entry, codeUrl: codeUrl.href, cover: entry.kind !== 'original', mood: entry.genre,
+      loop: `${entry.bpm} BPM`, group: entry.group || 'Original patterns', palette: entry.palette || index % palettes.length + 1};
   });
   // Preserve older saved copies under distinct IDs so they cannot shadow a deployed cover.
   const canonical = new Set(covers.map(track=>track.id));
@@ -654,9 +700,9 @@ async function loadCoverCatalog() {
     saveStorage('strudelify-custom',state.custom);
     saveStorage('strudelify-liked',state.liked);
   }
-  tracks.unshift(...covers);
+  tracks.splice(0, tracks.length, ...covers);
   $('#catalogStatus')?.classList.add('hidden');
-  if ($('#catalogIntro')) $('#catalogIntro').textContent = `${covers.length} instrumental covers in review. Six original patterns to explore.`;
+  if ($('#catalogIntro')) $('#catalogIntro').textContent = `${covers.length} original instrumental patterns. Drafts for listening and feedback; commercial-song studies remain in private review.`;
   renderAllLists();
   renderPlayer();
   showSuggestions();
@@ -666,3 +712,23 @@ loadCoverCatalog().catch(error => {
   if (status) {status.textContent = `${error.message} Reload to try again. Original patterns are still available.`;status.setAttribute('role', 'alert');}
   else showToast(error.message);
 }).finally(routeFromLocation);
+
+function feedbackUrl(track = state.current) {
+  const seconds = window.getAudioContext && (state.playing || state.paused)
+    ? Math.max(0, window.getAudioContext().currentTime - playbackStartedAt).toFixed(1) : 'not playing';
+  const body = `Track: ${track?.title || 'General feedback'} (${track?.id || 'none'})\n` +
+    `Playback position: ${seconds}\nBuild: ${window.releaseVersion || 'review candidate'}\n` +
+    `Browser: ${navigator.userAgent}\nViewport: ${innerWidth} x ${innerHeight}\n\n` +
+    'What happened?\n\nWhat did you expect?\n\nSteps to reproduce:\n1. \n\n' +
+    'Music feedback (optional): describe timing, melody, sound, or the passage that needs work.\n\n' +
+    'This report is public. Remove anything personal before submitting. No report is sent automatically.';
+  return 'https://github.com/Hustlenix/strudelify/issues/new?' + new URLSearchParams({
+    title: `[Listener feedback] ${track?.title || 'Player'}`, body,
+  });
+}
+document.addEventListener('click', event => {
+  const link = event.target.closest('[data-feedback]');
+  if (link) link.href = feedbackUrl(getTrack(link.dataset.feedback) || state.current);
+});
+fetch('release.json', {cache:'no-cache'}).then(response => response.ok ? response.json() : null)
+  .then(data => { if (data) window.releaseVersion = data.commit + (data.dirty ? ' (working copy)' : ''); }).catch(() => {});

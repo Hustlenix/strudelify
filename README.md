@@ -22,7 +22,26 @@ This is opensourced, so you can add a music that you like, to expand this websit
 
 The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their *should not copy* rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)
 
-The app itself is released under the repository's MIT license. Demo compositions in `tracks/` are original examples for this project.
+The project-authored source retains its MIT notice. Strudel is an AGPL-3.0-or-later dependency;
+the integrated application license and project naming need review before the proposed release.
+See [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md). Demo compositions in `tracks/` are original examples for this project.
+
+## MVP review candidate
+
+The `codex/mvp-recovery` branch preserves the current static app and all prior music work.
+Its proposed public artifact includes the six original instrumental patterns, clearly labeled
+as drafts. Commercial-song study scores and automatic lyrics are withheld from this artifact
+pending permission and human music review. The public site is unchanged until a reviewed
+merge/deployment is explicitly approved.
+
+The player has separate Play/Pause/Resume and Stop behavior, mobile transport controls,
+complete actual View code, and links to draft a public GitHub listener report. GitHub sign-in
+is required to submit; no report or personal data is sent automatically.
+
+For a local review build, install the locked development tools in `release-audit/`, run
+`python release-audit/build_preview.py`, then serve `release-preview/` over localhost.
+Read [release-audit/RELEASE_CANDIDATE.md](release-audit/RELEASE_CANDIDATE.md) and
+[release-audit/RESOURCE_DECISIONS.md](release-audit/RESOURCE_DECISIONS.md) for evidence and remaining gates.
 
 ## Licence
 MIT

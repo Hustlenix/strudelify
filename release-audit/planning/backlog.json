@@ -1,0 +1,1020 @@
+{
+  "created_on": "2026-10-18",
+  "composition_started": false,
+  "existing_eight_excluded_from_count": true,
+  "selection_policy": "Lock and refresh ten titles at a time; slots are not playable tracks",
+  "slots": [
+    {
+      "slot_id": "next-001",
+      "ordinal": 1,
+      "batch": 1,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-002",
+      "ordinal": 2,
+      "batch": 1,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-003",
+      "ordinal": 3,
+      "batch": 1,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-004",
+      "ordinal": 4,
+      "batch": 1,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-005",
+      "ordinal": 5,
+      "batch": 1,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-006",
+      "ordinal": 6,
+      "batch": 1,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-007",
+      "ordinal": 7,
+      "batch": 1,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-008",
+      "ordinal": 8,
+      "batch": 1,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-009",
+      "ordinal": 9,
+      "batch": 1,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-010",
+      "ordinal": 10,
+      "batch": 1,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-011",
+      "ordinal": 11,
+      "batch": 2,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-012",
+      "ordinal": 12,
+      "batch": 2,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-013",
+      "ordinal": 13,
+      "batch": 2,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-014",
+      "ordinal": 14,
+      "batch": 2,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-015",
+      "ordinal": 15,
+      "batch": 2,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-016",
+      "ordinal": 16,
+      "batch": 2,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-017",
+      "ordinal": 17,
+      "batch": 2,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-018",
+      "ordinal": 18,
+      "batch": 2,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-019",
+      "ordinal": 19,
+      "batch": 2,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-020",
+      "ordinal": 20,
+      "batch": 2,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-021",
+      "ordinal": 21,
+      "batch": 3,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-022",
+      "ordinal": 22,
+      "batch": 3,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-023",
+      "ordinal": 23,
+      "batch": 3,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-024",
+      "ordinal": 24,
+      "batch": 3,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-025",
+      "ordinal": 25,
+      "batch": 3,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-026",
+      "ordinal": 26,
+      "batch": 3,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-027",
+      "ordinal": 27,
+      "batch": 3,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-028",
+      "ordinal": 28,
+      "batch": 3,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-029",
+      "ordinal": 29,
+      "batch": 3,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-030",
+      "ordinal": 30,
+      "batch": 3,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-031",
+      "ordinal": 31,
+      "batch": 4,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-032",
+      "ordinal": 32,
+      "batch": 4,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-033",
+      "ordinal": 33,
+      "batch": 4,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-034",
+      "ordinal": 34,
+      "batch": 4,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-035",
+      "ordinal": 35,
+      "batch": 4,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-036",
+      "ordinal": 36,
+      "batch": 4,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-037",
+      "ordinal": 37,
+      "batch": 4,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-038",
+      "ordinal": 38,
+      "batch": 4,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-039",
+      "ordinal": 39,
+      "batch": 4,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-040",
+      "ordinal": 40,
+      "batch": 4,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-041",
+      "ordinal": 41,
+      "batch": 5,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-042",
+      "ordinal": 42,
+      "batch": 5,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-043",
+      "ordinal": 43,
+      "batch": 5,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-044",
+      "ordinal": 44,
+      "batch": 5,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-045",
+      "ordinal": 45,
+      "batch": 5,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-046",
+      "ordinal": 46,
+      "batch": 5,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-047",
+      "ordinal": 47,
+      "batch": 5,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-048",
+      "ordinal": 48,
+      "batch": 5,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-049",
+      "ordinal": 49,
+      "batch": 5,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-050",
+      "ordinal": 50,
+      "batch": 5,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-051",
+      "ordinal": 51,
+      "batch": 6,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-052",
+      "ordinal": 52,
+      "batch": 6,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-053",
+      "ordinal": 53,
+      "batch": 6,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-054",
+      "ordinal": 54,
+      "batch": 6,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-055",
+      "ordinal": 55,
+      "batch": 6,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-056",
+      "ordinal": 56,
+      "batch": 6,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-057",
+      "ordinal": 57,
+      "batch": 6,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-058",
+      "ordinal": 58,
+      "batch": 6,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-059",
+      "ordinal": 59,
+      "batch": 6,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-060",
+      "ordinal": 60,
+      "batch": 6,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-061",
+      "ordinal": 61,
+      "batch": 7,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-062",
+      "ordinal": 62,
+      "batch": 7,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-063",
+      "ordinal": 63,
+      "batch": 7,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-064",
+      "ordinal": 64,
+      "batch": 7,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-065",
+      "ordinal": 65,
+      "batch": 7,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-066",
+      "ordinal": 66,
+      "batch": 7,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-067",
+      "ordinal": 67,
+      "batch": 7,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-068",
+      "ordinal": 68,
+      "batch": 7,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-069",
+      "ordinal": 69,
+      "batch": 7,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-070",
+      "ordinal": 70,
+      "batch": 7,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-071",
+      "ordinal": 71,
+      "batch": 8,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-072",
+      "ordinal": 72,
+      "batch": 8,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-073",
+      "ordinal": 73,
+      "batch": 8,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-074",
+      "ordinal": 74,
+      "batch": 8,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-075",
+      "ordinal": 75,
+      "batch": 8,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-076",
+      "ordinal": 76,
+      "batch": 8,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-077",
+      "ordinal": 77,
+      "batch": 8,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-078",
+      "ordinal": 78,
+      "batch": 8,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-079",
+      "ordinal": 79,
+      "batch": 8,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-080",
+      "ordinal": 80,
+      "batch": 8,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-081",
+      "ordinal": 81,
+      "batch": 9,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-082",
+      "ordinal": 82,
+      "batch": 9,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-083",
+      "ordinal": 83,
+      "batch": 9,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-084",
+      "ordinal": 84,
+      "batch": 9,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-085",
+      "ordinal": 85,
+      "batch": 9,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-086",
+      "ordinal": 86,
+      "batch": 9,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-087",
+      "ordinal": 87,
+      "batch": 9,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-088",
+      "ordinal": 88,
+      "batch": 9,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-089",
+      "ordinal": 89,
+      "batch": 9,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-090",
+      "ordinal": 90,
+      "batch": 9,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-091",
+      "ordinal": 91,
+      "batch": 10,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-092",
+      "ordinal": 92,
+      "batch": 10,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-093",
+      "ordinal": 93,
+      "batch": 10,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-094",
+      "ordinal": 94,
+      "batch": 10,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-095",
+      "ordinal": 95,
+      "batch": 10,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-096",
+      "ordinal": 96,
+      "batch": 10,
+      "selection_lane": "global-english-mainstream",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-097",
+      "ordinal": 97,
+      "batch": 10,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-098",
+      "ordinal": 98,
+      "batch": 10,
+      "selection_lane": "global-english-alternative",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-099",
+      "ordinal": 99,
+      "batch": 10,
+      "selection_lane": "global-electronic-dance",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    },
+    {
+      "slot_id": "next-100",
+      "ordinal": 100,
+      "batch": 10,
+      "selection_lane": "global-english-breakout",
+      "candidate_id": null,
+      "selection_state": "unfilled",
+      "arrangement_file": null,
+      "catalog_status": null
+    }
+  ],
+  "scope": "100 individual additional songs",
+  "scope_confirmed": true,
+  "catalog_focus": "Global / English focus",
+  "focus_confirmed": true,
+  "production_gate": "MVP player, publication permission, human recognition and feedback review; three pilots individually before scaling",
+  "recovery_report": "../RELEASE_CANDIDATE.md",
+  "distribution": {
+    "pop_rnb_singer_songwriter_country": 60,
+    "indie_alternative_rock": 20,
+    "electronic_dance": 10,
+    "emerging": 10
+  }
+}
