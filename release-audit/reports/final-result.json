@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-10-18T10:45:15.460080+00:00",
-  "tested_commit": "d030f75b7ab5865b1037bca39864476737ef7034",
+  "generated_at": "2026-10-18T10:55:26.937547+00:00",
+  "tested_commit": "84cb9525db54b583926e3d00a305ca2d3f6a8523",
   "candidate_tests": [
     {
       "browser": "chromium",
       "browser_version": "155.0.8059.82",
       "status": "PASSED",
-      "started_at": "2026-10-18T10:43:37.387Z",
-      "finished_at": "2026-10-18T10:44:15.352Z",
+      "started_at": "2026-10-18T10:52:52.900Z",
+      "finished_at": "2026-10-18T10:53:32.410Z",
       "checks": 18
     },
     {
       "browser": "firefox",
       "browser_version": "153.0",
       "status": "PASSED",
-      "started_at": "2026-10-18T10:42:05.118Z",
-      "finished_at": "2026-10-18T10:42:50.534Z",
+      "started_at": "2026-10-18T10:52:52.899Z",
+      "finished_at": "2026-10-18T10:53:38.940Z",
       "checks": 18
     }
   ],
   "runtime_payload": [
     {
       "path": "app.js",
-      "sha256": "a93d8e12ac155e217cae14b9151514e593d6aef5df44dfd0213cc81f62c34554"
+      "sha256": "ed670cd43092397f29d259c256088199f0a8977f1c9532a2e48cf9b7d79150ed"
     },
     {
       "path": "index.html",
@@ -78,5 +78,27 @@
     "Music/lyric publication permission before public commercial studies",
     "Independent human music review and 5\u201310 real listener sessions"
   ],
-  "expansion_started": false
+  "expansion_started": false,
+  "ci": {
+    "run_id": 39120991230,
+    "source_commit": "84cb9525db54b583926e3d00a305ca2d3f6a8523",
+    "results": [
+      {
+        "browser": "chromium",
+        "status": "PASSED",
+        "browser_version": "151.0.7922.34",
+        "checks": 18,
+        "ci_merge_commit": "a0603e7cb049cf7b0f5c5b1d46779376821b289f"
+      },
+      {
+        "browser": "firefox",
+        "status": "PASSED",
+        "browser_version": "153.0",
+        "checks": 18,
+        "ci_merge_commit": "a0603e7cb049cf7b0f5c5b1d46779376821b289f"
+      }
+    ],
+    "url": "https://github.com/Hustlenix/strudelify/actions/runs/39120991230",
+    "firefox_audio_endpoint": "PulseAudio null sink; actual WebAudio, not physical-device or listening proof"
+  }
 }

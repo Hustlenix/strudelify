@@ -20,7 +20,7 @@ The public main baseline remains `0b6e42ce2fc1f236df8f673470724a564a1d1c5f`.
 
 ### Evidence
 
-Exact tested source: `d030f75b7ab5865b1037bca39864476737ef7034`. See
+Exact tested source: `84cb9525db54b583926e3d00a305ca2d3f6a8523`. See
 `release-audit/reports/final-result.json` and `FINAL_RESULT.md` for source/resource hashes.
 Final report-only commits retain the same runtime payload.
 
@@ -56,3 +56,5 @@ These are loopback review URLs, not public deployments.
 
 The 100-song composition loop remains stopped. Read `release-audit/RELEASE_CANDIDATE.md`,
 `MUSIC_RECOGNITION.md`, `RESOURCE_DECISIONS.md` and `THIRD_PARTY_ASSETS.md` before release approval.
+
+Linux CI run 39120991230 passed all 18 checks in Chromium and Firefox on the corrected transport. See reports/ci-verified.json.

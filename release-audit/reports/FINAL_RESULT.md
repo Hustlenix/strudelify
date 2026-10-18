@@ -1,6 +1,6 @@
 # Review checkpoint
 
-Exact tested source commit: `d030f75b7ab5865b1037bca39864476737ef7034`. Later report-only commits can carry this evidence;
+Exact tested source commit: `84cb9525db54b583926e3d00a305ca2d3f6a8523`. Later report-only commits can carry this evidence;
 the ten runtime payload hashes in final-result.json must still match the tested artifact.
 
 - Chromium 155.0.8059.82: 18/18 passed.
@@ -23,3 +23,11 @@ the ten runtime payload hashes in final-result.json must still match the tested 
 Read RELEASE_CANDIDATE.md, MUSIC_RECOGNITION.md, RESOURCE_DECISIONS.md and THIRD_PARTY_ASSETS.md
 for scope, remaining faults and decisions. This checkpoint is review-ready; it is not a claim
 that all eight songs are recognizable or that the proposed artifact has been publicly released.
+
+## Linux CI confirmation
+
+[CI run 39120991230](https://github.com/Hustlenix/strudelify/actions/runs/39120991230) passed 18 checks each in Chromium 151 and Firefox 153. The tested PR merge snapshot is `a0603e7cb049cf7b0f5c5b1d46779376821b289f`, based on source branch commit `84cb9525db54b583926e3d00a305ca2d3f6a8523`. Firefox uses a PulseAudio virtual sink; this is real WebAudio validation, not physical-device or musical listening proof.
+
+## Music follow-up
+
+The owner supplied eight real excerpt comments, with no full-song approval. Everyday Normal Guy 2 interval 12.05–27.05 seconds remains preserved. Babydoll has one separate private lead-phrasing trial, captured for 101.12 seconds at -18.7 LUFS / -1.6 dBTP with zero clipped or nonfinite samples. It is unreviewed and unadopted. Compare the old/new/reference at http://127.0.0.1:4188/babydoll.html. The experiment score and audio are not uploaded.

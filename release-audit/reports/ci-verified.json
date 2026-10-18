@@ -1,0 +1,22 @@
+{
+  "run_id": 39120991230,
+  "source_commit": "84cb9525db54b583926e3d00a305ca2d3f6a8523",
+  "results": [
+    {
+      "browser": "chromium",
+      "status": "PASSED",
+      "browser_version": "151.0.7922.34",
+      "checks": 18,
+      "ci_merge_commit": "a0603e7cb049cf7b0f5c5b1d46779376821b289f"
+    },
+    {
+      "browser": "firefox",
+      "status": "PASSED",
+      "browser_version": "153.0",
+      "checks": 18,
+      "ci_merge_commit": "a0603e7cb049cf7b0f5c5b1d46779376821b289f"
+    }
+  ],
+  "url": "https://github.com/Hustlenix/strudelify/actions/runs/39120991230",
+  "firefox_audio_endpoint": "PulseAudio null sink; actual WebAudio, not physical-device or listening proof"
+}

@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-18T10:42:05.118Z",
+  "started_at": "2026-10-18T10:52:52.899Z",
   "browser": "firefox",
   "checks": [
     {
@@ -22,13 +22,13 @@
       "name": "Trusted click audio and true pause/resume preserve scheduler/session",
       "status": "PASSED",
       "before": {
-        "time": 0.872,
+        "time": 0.9066666666666666,
         "revision": 1,
-        "peak": 0.12639299035072327
+        "peak": 0.12132316082715988
       },
-      "frozen": 0.9466666666666667,
+      "frozen": 1.1093333333333333,
       "resumed": {
-        "time": 1.4773333333333334,
+        "time": 1.4186666666666667,
         "revision": 1
       }
     },
@@ -51,48 +51,48 @@
     {
       "name": "afterglow real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.044907476752996445,
-      "frames": 4694016,
+      "peak": 0.04774915799498558,
+      "frames": 4718592,
       "current": "afterglow",
       "error": ""
     },
     {
       "name": "greenline real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.1366940587759018,
-      "frames": 5332992,
+      "peak": 0.1390535980463028,
+      "frames": 5398528,
       "current": "greenline",
       "error": ""
     },
     {
       "name": "paper-moon real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.18052765727043152,
-      "frames": 6008832,
+      "peak": 0.19076326489448547,
+      "frames": 5996544,
       "current": "paper-moon",
       "error": ""
     },
     {
       "name": "soft-focus real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.07566098868846893,
-      "frames": 6643712,
+      "peak": 0.07592027634382248,
+      "frames": 6676480,
       "current": "soft-focus",
       "error": ""
     },
     {
       "name": "tiny-hours real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.07676023244857788,
-      "frames": 7282688,
+      "peak": 0.07696422934532166,
+      "frames": 7364608,
       "current": "tiny-hours",
       "error": ""
     },
     {
       "name": "wide-awake real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.13398094475269318,
-      "frames": 7921664,
+      "peak": 0.13151481747627258,
+      "frames": 8130560,
       "current": "wide-awake",
       "error": ""
     },
@@ -119,32 +119,32 @@
   ],
   "errors": [],
   "requests": [
-    "http://127.0.0.1:63965/",
-    "http://127.0.0.1:63965/styles.css?v=mvp-review-20261018",
+    "http://127.0.0.1:50857/",
+    "http://127.0.0.1:50857/styles.css?v=mvp-review-20261018",
     "https://unpkg.com/@strudel/web@1.2.6",
-    "http://127.0.0.1:63965/app.js?v=mvp-review-20261018",
-    "http://127.0.0.1:63965/assets/covers/greenline.svg",
-    "http://127.0.0.1:63965/assets/covers/paper-moon.svg",
-    "http://127.0.0.1:63965/assets/covers/afterglow.svg",
+    "http://127.0.0.1:50857/app.js?v=mvp-review-20261018",
+    "http://127.0.0.1:50857/assets/covers/greenline.svg",
+    "http://127.0.0.1:50857/assets/covers/paper-moon.svg",
+    "http://127.0.0.1:50857/assets/covers/afterglow.svg",
     "https://unpkg.com/@strudel/web@1.2.6/dist/index.js",
-    "http://127.0.0.1:63965/tracks/catalog.json",
-    "http://127.0.0.1:63965/release.json",
-    "http://127.0.0.1:63965/assets/icon.svg",
-    "http://127.0.0.1:63965/assets/covers/soft-focus.svg",
-    "http://127.0.0.1:63965/assets/covers/tiny-hours.svg",
-    "http://127.0.0.1:63965/assets/covers/wide-awake.svg",
-    "http://127.0.0.1:63965/tracks/afterglow.strudel",
-    "http://127.0.0.1:63965/tracks/greenline.strudel",
-    "http://127.0.0.1:63965/tracks/greenline.strudel",
-    "http://127.0.0.1:63965/tracks/greenline.strudel",
-    "http://127.0.0.1:63965/tracks/paper-moon.strudel",
-    "http://127.0.0.1:63965/tracks/tiny-hours.strudel",
-    "http://127.0.0.1:63965/tracks/wide-awake.strudel",
-    "http://127.0.0.1:63965/tracks/soft-focus.strudel"
+    "http://127.0.0.1:50857/tracks/catalog.json",
+    "http://127.0.0.1:50857/release.json",
+    "http://127.0.0.1:50857/assets/icon.svg",
+    "http://127.0.0.1:50857/assets/covers/soft-focus.svg",
+    "http://127.0.0.1:50857/assets/covers/tiny-hours.svg",
+    "http://127.0.0.1:50857/assets/covers/wide-awake.svg",
+    "http://127.0.0.1:50857/tracks/afterglow.strudel",
+    "http://127.0.0.1:50857/tracks/greenline.strudel",
+    "http://127.0.0.1:50857/tracks/greenline.strudel",
+    "http://127.0.0.1:50857/tracks/greenline.strudel",
+    "http://127.0.0.1:50857/tracks/paper-moon.strudel",
+    "http://127.0.0.1:50857/tracks/tiny-hours.strudel",
+    "http://127.0.0.1:50857/tracks/wide-awake.strudel",
+    "http://127.0.0.1:50857/tracks/soft-focus.strudel"
   ],
   "build": {
-    "created_at": "2026-10-18T10:26:05.384743+00:00",
-    "commit": "d030f75b7ab5865b1037bca39864476737ef7034",
+    "created_at": "2026-10-18T10:52:50.878125+00:00",
+    "commit": "84cb9525db54b583926e3d00a305ca2d3f6a8523",
     "dirty": false,
     "worktree_dirty_including_audit_reports": false,
     "uncommitted_payload_paths": [],
@@ -167,11 +167,11 @@
       },
       {
         "path": "THIRD_PARTY_ASSETS.md",
-        "sha256": "2318c2ed754f15a09aede8754ba5a70f929daf1ad6cf7e3faec73d5c2404c109"
+        "sha256": "65a8ef65a1b6567b8cbb909a622207c45376a96397ad7a0031587fb674e54061"
       },
       {
         "path": "app.js",
-        "sha256": "a93d8e12ac155e217cae14b9151514e593d6aef5df44dfd0213cc81f62c34554"
+        "sha256": "ed670cd43092397f29d259c256088199f0a8977f1c9532a2e48cf9b7d79150ed"
       },
       {
         "path": "assets/covers/afterglow.svg",
@@ -244,8 +244,11 @@
     ]
   },
   "browser_version": "153.0",
+  "console_diagnostics": [
+    "Error"
+  ],
   "pause_observation": {
-    "time": 0.9466666666666667,
+    "time": 1.1093333333333333,
     "context": "suspended",
     "paused": true,
     "playing": false,
@@ -253,14 +256,14 @@
     "resumes": [
       {
         "time": 0,
-        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nF1@https://unpkg.com/@strudel/web@1.2.6:6:11836\nn@https://unpkg.com/@strudel/web@1.2.6:6:12220\nEventListener.handleEvent*E1/w1<@https://unpkg.com/@strudel/web@1.2.6:6:12130\nE1@https://unpkg.com/@strudel/web@1.2.6:6:12105\nfA@https://unpkg.com/@strudel/web@1.2.6:78:77383\nensureEngine@http://127.0.0.1:63965/app.js?v=mvp-review-20261018:106:62\npromise callback*@http://127.0.0.1:63965/app.js?v=mvp-review-20261018:122:19\n"
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nF1@https://unpkg.com/@strudel/web@1.2.6:6:11836\nn@https://unpkg.com/@strudel/web@1.2.6:6:12220\nEventListener.handleEvent*E1/w1<@https://unpkg.com/@strudel/web@1.2.6:6:12130\nE1@https://unpkg.com/@strudel/web@1.2.6:6:12105\nfA@https://unpkg.com/@strudel/web@1.2.6:78:77383\nensureEngine@http://127.0.0.1:50857/app.js?v=mvp-review-20261018:106:62\npromise callback*@http://127.0.0.1:50857/app.js?v=mvp-review-20261018:122:19\n"
       },
       {
-        "time": 0,
-        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nplayTrack/start<@http://127.0.0.1:63965/app.js?v=mvp-review-20261018:195:38\nasync*playTrack@http://127.0.0.1:63965/app.js?v=mvp-review-20261018:182:35\nasync*handleAction@http://127.0.0.1:63965/app.js?v=mvp-review-20261018:497:83\n@http://127.0.0.1:63965/app.js?v=mvp-review-20261018:523:15\nEventListener.handleEvent*@http://127.0.0.1:63965/app.js?v=mvp-review-20261018:510:10\n"
+        "time": 0.032,
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nplayTrack/start<@http://127.0.0.1:50857/app.js?v=mvp-review-20261018:195:38\nasync*playTrack@http://127.0.0.1:50857/app.js?v=mvp-review-20261018:182:35\nasync*handleAction@http://127.0.0.1:50857/app.js?v=mvp-review-20261018:508:83\n@http://127.0.0.1:50857/app.js?v=mvp-review-20261018:534:15\nEventListener.handleEvent*@http://127.0.0.1:50857/app.js?v=mvp-review-20261018:521:10\n"
       }
     ]
   },
   "status": "PASSED",
-  "finished_at": "2026-10-18T10:42:50.534Z"
+  "finished_at": "2026-10-18T10:53:38.940Z"
 }
