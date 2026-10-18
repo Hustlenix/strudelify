@@ -1,0 +1,196 @@
+{
+  "id": "01-babydoll",
+  "language": "en",
+  "reviewStatus": "draft",
+  "method": "Whisper small.en via faster-whisper 1.2.1; local vocal residual",
+  "source_sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+  "duration": 98.112,
+  "notice": "Automatic transcript from the supplied recording; words and timing may contain errors. Uncertain segments are omitted.",
+  "cues": [
+    {
+      "start": 9.78,
+      "end": 12.06,
+      "text": "I can't move on,"
+    },
+    {
+      "start": 12.76,
+      "end": 13.48,
+      "text": "Babydoll."
+    },
+    {
+      "start": 13.94,
+      "end": 15.02,
+      "text": "Waiting on calls,"
+    },
+    {
+      "start": 15.34,
+      "end": 16.4,
+      "text": "flipping through stations."
+    },
+    {
+      "start": 16.82,
+      "end": 19.02,
+      "text": "I'm outclassed and it's outrageous."
+    },
+    {
+      "start": 21.06,
+      "end": 23.52,
+      "text": "I'll take it all,"
+    },
+    {
+      "start": 23.52,
+      "end": 24.08,
+      "text": "baby,"
+    },
+    {
+      "start": 24.34,
+      "end": 28.7,
+      "text": "dawg Whatever's been waitin' you down"
+    },
+    {
+      "start": 34.3,
+      "end": 37.84,
+      "text": "Find me on Miami concrete Lookin' for somebody"
+    },
+    {
+      "start": 37.84,
+      "end": 39.62,
+      "text": "different cause my daddy was a pill"
+    },
+    {
+      "start": 39.62,
+      "end": 42.22,
+      "text": "My mama had issues but I miss any"
+    },
+    {
+      "start": 42.22,
+      "end": 42.64,
+      "text": "way,"
+    },
+    {
+      "start": 42.64,
+      "end": 43.6,
+      "text": "oh baby,"
+    },
+    {
+      "start": 43.9,
+      "end": 45.02,
+      "text": "dawg"
+    },
+    {
+      "start": 45.84,
+      "end": 48.54,
+      "text": "Please don't call me for the wrong reason"
+    },
+    {
+      "start": 48.54,
+      "end": 51.4,
+      "text": "We both know exactly what I'm thinking"
+    },
+    {
+      "start": 51.8,
+      "end": 54.02,
+      "text": "Weeks pass and I never grow tired"
+    },
+    {
+      "start": 54.02,
+      "end": 56.14,
+      "text": "Cause I never said never and I barely"
+    },
+    {
+      "start": 56.14,
+      "end": 56.82,
+      "text": "ever lie"
+    },
+    {
+      "start": 56.82,
+      "end": 59.02,
+      "text": "I'm on the road to an original place"
+    },
+    {
+      "start": 59.02,
+      "end": 60.44,
+      "text": "And not a space"
+    },
+    {
+      "start": 60.44,
+      "end": 62.52,
+      "text": "I didn't make it up but you can't"
+    },
+    {
+      "start": 62.52,
+      "end": 63.46,
+      "text": "find it on the phone"
+    },
+    {
+      "start": 63.96,
+      "end": 64.74,
+      "text": "Or globe"
+    },
+    {
+      "start": 64.74,
+      "end": 66.44,
+      "text": "And I can take you with me if"
+    },
+    {
+      "start": 66.44,
+      "end": 68.0,
+      "text": "you really wanna go"
+    },
+    {
+      "start": 68.64,
+      "end": 69.24,
+      "text": "Baby,"
+    },
+    {
+      "start": 70.0,
+      "end": 70.58,
+      "text": "no"
+    },
+    {
+      "start": 70.58,
+      "end": 72.72,
+      "text": "I can't move"
+    },
+    {
+      "start": 72.72,
+      "end": 74.88,
+      "text": "I can't move on,"
+    },
+    {
+      "start": 75.46,
+      "end": 76.32,
+      "text": "baby doll,"
+    },
+    {
+      "start": 76.64,
+      "end": 77.88,
+      "text": "waiting on calls,"
+    },
+    {
+      "start": 78.2,
+      "end": 79.24,
+      "text": "flipping through stations,"
+    },
+    {
+      "start": 79.64,
+      "end": 81.98,
+      "text": "I'm outclassed and it's outrageous"
+    },
+    {
+      "start": 84.24,
+      "end": 86.38,
+      "text": "I'll take it all,"
+    },
+    {
+      "start": 86.64,
+      "end": 87.62,
+      "text": "baby doll,"
+    },
+    {
+      "start": 88.0,
+      "end": 91.1,
+      "text": "whatever's been waiting you down"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "id": "08-lonely",
+  "language": "en",
+  "reviewStatus": "draft",
+  "method": "Whisper base.en via faster-whisper 1.2.1 on supplied local recording",
+  "source_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+  "duration": 263.064,
+  "notice": "Automatic transcript from the supplied recording; words and timing may contain errors. Uncertain segments are omitted.",
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "text": "Last Angeles! Give it up! One more time! Four! Eight o'clock!"
+    },
+    {
+      "start": 13.0,
+      "end": 26.0,
+      "text": "Blow me, I'm still lonely. I had nobody. For my own, I'm still lonely."
+    },
+    {
+      "start": 26.0,
+      "end": 33.2,
+      "text": "Your a car what up, dude? You coming to what man? No, I got a lot of my mind. I'm gonna let y'all go ahead man. All right"
+    },
+    {
+      "start": 48.32,
+      "end": 50.32,
+      "text": "Yo"
+    },
+    {
+      "start": 56.0,
+      "end": 60.0,
+      "text": "I got that one good girl daughter's always been in me like"
+    },
+    {
+      "start": 60.0,
+      "end": 62.0,
+      "text": "Took all the bullshit"
+    },
+    {
+      "start": 62.0,
+      "end": 66.0,
+      "text": "Then one day she can't take it no more inside to leave"
+    },
+    {
+      "start": 66.0,
+      "end": 69.0,
+      "text": "Yeah, I woke up in the middle of the night"
+    },
+    {
+      "start": 69.0,
+      "end": 72.0,
+      "text": "And I noticed my girl wasn't on my side"
+    },
+    {
+      "start": 72.0,
+      "end": 75.0,
+      "text": "Could've sworn I was dreaming for her I was painting"
+    },
+    {
+      "start": 75.0,
+      "end": 77.0,
+      "text": "So I had to take a little ride"
+    },
+    {
+      "start": 77.0,
+      "end": 80.0,
+      "text": "Backtracking on these few years trying to figure out"
+    },
+    {
+      "start": 80.0,
+      "end": 82.0,
+      "text": "But I do to make it go bad"
+    },
+    {
+      "start": 82.0,
+      "end": 85.0,
+      "text": "Cause ever since my girl left me"
+    },
+    {
+      "start": 168.0,
+      "end": 170.56,
+      "text": "Didn't a girl of my dreams that made me be"
+    },
+    {
+      "start": 170.56,
+      "end": 173.6,
+      "text": "So happy, but now so lonely"
+    },
+    {
+      "start": 173.6,
+      "end": 175.76,
+      "text": "So lonely"
+    },
+    {
+      "start": 175.76,
+      "end": 178.64,
+      "text": "Mr lonely"
+    },
+    {
+      "start": 178.64,
+      "end": 181.6,
+      "text": "I have no body"
+    },
+    {
+      "start": 181.6,
+      "end": 184.56,
+      "text": "No my own girl"
+    },
+    {
+      "start": 184.56,
+      "end": 186.96,
+      "text": "So lonely"
+    },
+    {
+      "start": 186.96,
+      "end": 189.36,
+      "text": "Mr lonely"
+    },
+    {
+      "start": 189.36,
+      "end": 192.32,
+      "text": "I have no body"
+    },
+    {
+      "start": 192.32,
+      "end": 194.64,
+      "text": "No my own girl"
+    },
+    {
+      "start": 194.64,
+      "end": 196.96,
+      "text": "Never thought that I'd be alone"
+    },
+    {
+      "start": 196.96,
+      "end": 199.96,
+      "text": "I tellin' when you be gone this long"
+    },
+    {
+      "start": 199.96,
+      "end": 202.46,
+      "text": "I just want you to call my phone"
+    },
+    {
+      "start": 202.46,
+      "end": 204.96,
+      "text": "So stop playin' girl and come on home"
+    },
+    {
+      "start": 204.96,
+      "end": 207.96,
+      "text": "Baby girl, I didn't mean to shout"
+    },
+    {
+      "start": 207.96,
+      "end": 209.96,
+      "text": "I want me and you to work it out"
+    },
+    {
+      "start": 209.96,
+      "end": 212.96,
+      "text": "I never wish to ever hurt my baby"
+    },
+    {
+      "start": 212.96,
+      "end": 215.96,
+      "text": "I'm just havin' me crazy cause I'm so"
+    },
+    {
+      "start": 215.96,
+      "end": 217.96,
+      "text": "So lonely"
+    },
+    {
+      "start": 217.96,
+      "end": 220.96,
+      "text": "Mr. Lonely"
+    },
+    {
+      "start": 220.96,
+      "end": 225.96,
+      "text": "I'm nobody out of my own need"
+    },
+    {
+      "start": 255.96,
+      "end": 257.96,
+      "text": "Mr. Lonely"
+    }
+  ]
+}

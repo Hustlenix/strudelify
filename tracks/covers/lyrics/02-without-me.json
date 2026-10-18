@@ -1,0 +1,466 @@
+{
+  "id": "02-without-me",
+  "language": "en",
+  "reviewStatus": "draft",
+  "method": "Whisper small.en via faster-whisper 1.2.1; local vocal residual",
+  "source_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+  "duration": 297.624,
+  "notice": "Automatic transcript from the supplied recording; words and timing may contain errors. Uncertain segments are omitted.",
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 1.28,
+      "text": "In five."
+    },
+    {
+      "start": 1.88,
+      "end": 2.36,
+      "text": "Four."
+    },
+    {
+      "start": 2.88,
+      "end": 3.36,
+      "text": "Three."
+    },
+    {
+      "start": 3.96,
+      "end": 4.38,
+      "text": "Two."
+    },
+    {
+      "start": 5.0,
+      "end": 5.48,
+      "text": "One."
+    },
+    {
+      "start": 5.68,
+      "end": 5.82,
+      "text": "Whoa."
+    },
+    {
+      "start": 5.94,
+      "end": 6.56,
+      "text": "Let me try."
+    },
+    {
+      "start": 6.88,
+      "end": 7.6,
+      "text": "Real name."
+    },
+    {
+      "start": 7.92,
+      "end": 8.56,
+      "text": "No gimmicks."
+    },
+    {
+      "start": 13.94,
+      "end": 15.58,
+      "text": "Suit for the park girls."
+    },
+    {
+      "start": 15.78,
+      "end": 16.72,
+      "text": "Go round the outside."
+    },
+    {
+      "start": 17.06,
+      "end": 17.82,
+      "text": "Round the outside."
+    },
+    {
+      "start": 18.14,
+      "end": 18.68,
+      "text": "Round the outside."
+    },
+    {
+      "start": 19.44,
+      "end": 20.18,
+      "text": "We've got a bogey."
+    },
+    {
+      "start": 21.34,
+      "end": 21.82,
+      "text": "I'm on the way."
+    },
+    {
+      "start": 23.08,
+      "end": 24.16,
+      "text": "Suit for the park girls."
+    },
+    {
+      "start": 24.3,
+      "end": 25.28,
+      "text": "Go round the outside."
+    },
+    {
+      "start": 25.56,
+      "end": 26.36,
+      "text": "Round the outside."
+    },
+    {
+      "start": 26.58,
+      "end": 27.48,
+      "text": "Round the outside."
+    },
+    {
+      "start": 141.02,
+      "end": 142.9,
+      "text": "Fixin' and turnin' and turnin' and then I'm"
+    },
+    {
+      "start": 142.9,
+      "end": 144.38,
+      "text": "gonna enter in and up under your skin"
+    },
+    {
+      "start": 144.38,
+      "end": 145.02,
+      "text": "like a splinter"
+    },
+    {
+      "start": 145.02,
+      "end": 145.98,
+      "text": "The center of attention,"
+    },
+    {
+      "start": 146.2,
+      "end": 146.94,
+      "text": "back for the winner,"
+    },
+    {
+      "start": 147.1,
+      "end": 147.72,
+      "text": "I'm in arresting"
+    },
+    {
+      "start": 147.72,
+      "end": 149.12,
+      "text": "The best thing's investing,"
+    },
+    {
+      "start": 149.4,
+      "end": 150.56,
+      "text": "investing in your kids,"
+    },
+    {
+      "start": 150.62,
+      "end": 151.5,
+      "text": "here's the nesting"
+    },
+    {
+      "start": 152.0,
+      "end": 152.48,
+      "text": "Resting,"
+    },
+    {
+      "start": 152.66,
+      "end": 153.48,
+      "text": "attention please"
+    },
+    {
+      "start": 153.48,
+      "end": 155.56,
+      "text": "Feel the tensions when someone mentions me"
+    },
+    {
+      "start": 155.56,
+      "end": 156.42,
+      "text": "Here's my ten cents,"
+    },
+    {
+      "start": 156.62,
+      "end": 157.68,
+      "text": "my two cents is free"
+    },
+    {
+      "start": 157.68,
+      "end": 158.26,
+      "text": "And new cents,"
+    },
+    {
+      "start": 158.42,
+      "end": 158.8,
+      "text": "who spent?"
+    },
+    {
+      "start": 159.0,
+      "end": 159.82,
+      "text": "You sent for me?"
+    },
+    {
+      "start": 159.98,
+      "end": 161.92,
+      "text": "Now this looks like a job for me"
+    },
+    {
+      "start": 161.92,
+      "end": 162.66,
+      "text": "So everybody,"
+    },
+    {
+      "start": 163.08,
+      "end": 164.04,
+      "text": "just follow me"
+    },
+    {
+      "start": 164.04,
+      "end": 165.88,
+      "text": "Cause we need a little controversy"
+    },
+    {
+      "start": 165.88,
+      "end": 168.28,
+      "text": "Cause it feels so empty without me"
+    },
+    {
+      "start": 168.28,
+      "end": 170.2,
+      "text": "I said this looks like a job for"
+    },
+    {
+      "start": 170.2,
+      "end": 170.46,
+      "text": "me"
+    },
+    {
+      "start": 170.46,
+      "end": 171.24,
+      "text": "So everybody,"
+    },
+    {
+      "start": 171.54,
+      "end": 172.58,
+      "text": "just follow me"
+    },
+    {
+      "start": 172.58,
+      "end": 174.4,
+      "text": "Cause we need a little controversy"
+    },
+    {
+      "start": 174.4,
+      "end": 176.92,
+      "text": "Cause it feels so empty without me"
+    },
+    {
+      "start": 176.92,
+      "end": 178.14,
+      "text": "A ciska that's askin',"
+    },
+    {
+      "start": 178.14,
+      "end": 179.26,
+      "text": "I will tip the tat with"
+    },
+    {
+      "start": 179.26,
+      "end": 181.38,
+      "text": "Anybody who's talkin' this and that shit"
+    },
+    {
+      "start": 181.38,
+      "end": 182.26,
+      "text": "Chris Kirkpatrick,"
+    },
+    {
+      "start": 182.46,
+      "end": 183.58,
+      "text": "you can get your ass kicked"
+    },
+    {
+      "start": 183.58,
+      "end": 185.62,
+      "text": "Worse than the middle end biscuit masters"
+    },
+    {
+      "start": 185.62,
+      "end": 186.32,
+      "text": "And Moby,"
+    },
+    {
+      "start": 186.42,
+      "end": 187.78,
+      "text": "you can get stomped by Obie"
+    },
+    {
+      "start": 187.78,
+      "end": 189.86,
+      "text": "You 36 year old boy that's stayin' in"
+    },
+    {
+      "start": 189.86,
+      "end": 190.04,
+      "text": "the crew"
+    },
+    {
+      "start": 190.04,
+      "end": 191.1,
+      "text": "You don't know me,"
+    },
+    {
+      "start": 191.18,
+      "end": 191.62,
+      "text": "you're too old,"
+    },
+    {
+      "start": 191.68,
+      "end": 192.08,
+      "text": "let go,"
+    },
+    {
+      "start": 192.22,
+      "end": 192.64,
+      "text": "it's over"
+    },
+    {
+      "start": 192.64,
+      "end": 194.04,
+      "text": "Nobody listen to techno,"
+    },
+    {
+      "start": 194.34,
+      "end": 194.94,
+      "text": "no let's go"
+    },
+    {
+      "start": 194.94,
+      "end": 196.22,
+      "text": "Just give me the signal,"
+    },
+    {
+      "start": 196.44,
+      "end": 197.56,
+      "text": "I'll be there with a whole list"
+    },
+    {
+      "start": 197.56,
+      "end": 199.26,
+      "text": "full in the wind salts I've been don't"
+    },
+    {
+      "start": 199.26,
+      "end": 201.56,
+      "text": "suspenseful with a pencil ever since Prince turned"
+    },
+    {
+      "start": 201.56,
+      "end": 201.86,
+      "text": "himself"
+    },
+    {
+      "start": 201.86,
+      "end": 204.34,
+      "text": "into a symbol but sometimes man it just"
+    },
+    {
+      "start": 204.34,
+      "end": 207.26,
+      "text": "seems everybody only wants to discuss me so"
+    },
+    {
+      "start": 207.26,
+      "end": 207.48,
+      "text": "this"
+    },
+    {
+      "start": 207.48,
+      "end": 210.14,
+      "text": "must mean I'm disgusting but it's just me"
+    },
+    {
+      "start": 210.14,
+      "end": 212.14,
+      "text": "I'm just obscene though I'm not the first"
+    },
+    {
+      "start": 212.14,
+      "end": 214.58,
+      "text": "king of controversy I am the worst thing"
+    },
+    {
+      "start": 214.58,
+      "end": 217.02,
+      "text": "since Elvis Presley to do black music so"
+    },
+    {
+      "start": 217.02,
+      "end": 217.76,
+      "text": "selfishly"
+    },
+    {
+      "start": 217.76,
+      "end": 220.44,
+      "text": "and use it to get myself wealthy hey"
+    },
+    {
+      "start": 220.44,
+      "end": 222.72,
+      "text": "here's a concept that works 20 million other"
+    },
+    {
+      "start": 222.72,
+      "end": 223.0,
+      "text": "white"
+    },
+    {
+      "start": 223.0,
+      "end": 224.08,
+      "text": "Rappers immerse,"
+    },
+    {
+      "start": 224.1,
+      "end": 225.82,
+      "text": "but no matter how many fish in the"
+    },
+    {
+      "start": 225.82,
+      "end": 228.18,
+      "text": "sea it'll be so empty without me"
+    },
+    {
+      "start": 228.18,
+      "end": 230.32,
+      "text": "Now this looks like a job for me"
+    },
+    {
+      "start": 230.32,
+      "end": 233.06,
+      "text": "So everybody just follow me cuz we need"
+    },
+    {
+      "start": 233.06,
+      "end": 235.94,
+      "text": "a little controversy cuz it feels so empty"
+    },
+    {
+      "start": 235.94,
+      "end": 236.7,
+      "text": "without me"
+    },
+    {
+      "start": 236.7,
+      "end": 238.64,
+      "text": "I said this looks like a job for"
+    },
+    {
+      "start": 238.64,
+      "end": 238.86,
+      "text": "me"
+    },
+    {
+      "start": 238.86,
+      "end": 241.62,
+      "text": "So everybody just follow me cuz we need"
+    },
+    {
+      "start": 241.62,
+      "end": 244.52,
+      "text": "a little controversy cuz it feels so empty"
+    },
+    {
+      "start": 244.52,
+      "end": 245.34,
+      "text": "without me"
+    }
+  ]
+}

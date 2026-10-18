@@ -1,0 +1,91 @@
+{
+  "id": "07-i-thought-i-saw-your-face-today",
+  "language": "en",
+  "reviewStatus": "draft",
+  "method": "Whisper base.en via faster-whisper 1.2.1 on supplied local recording",
+  "source_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+  "duration": 170.4,
+  "notice": "Automatic transcript from the supplied recording; words and timing may contain errors. Uncertain segments are omitted.",
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "text": "I thought I saw your face today But I just turned my head away your face against the trees"
+    },
+    {
+      "start": 10.0,
+      "end": 19.0,
+      "text": "But I just see the memories as they come As they come"
+    },
+    {
+      "start": 19.0,
+      "end": 25.0,
+      "text": "And I couldn't help but fall in love again"
+    },
+    {
+      "start": 25.0,
+      "end": 30.0,
+      "text": "No, I couldn't help but fall in love again"
+    },
+    {
+      "start": 32.0,
+      "end": 37.0,
+      "text": "I saw it greater as I grew and loved it while"
+    },
+    {
+      "start": 37.0,
+      "end": 41.0,
+      "text": "I never knew I'd thought this place was heaven sent"
+    },
+    {
+      "start": 41.0,
+      "end": 46.0,
+      "text": "But now it's just a monument in my mind"
+    },
+    {
+      "start": 47.0,
+      "end": 49.0,
+      "text": "In my mind"
+    },
+    {
+      "start": 50.0,
+      "end": 54.0,
+      "text": "And I couldn't help but fall in love again"
+    },
+    {
+      "start": 55.0,
+      "end": 62.0,
+      "text": "Know I couldn't help but fall in love again"
+    },
+    {
+      "start": 62.0,
+      "end": 68.0,
+      "text": "The cars and freeways implore me to stay away out of this place"
+    },
+    {
+      "start": 68.0,
+      "end": 77.0,
+      "text": "My mother said just keep your head and play as it plays"
+    },
+    {
+      "start": 85.0,
+      "end": 114.0,
+      "text": "The cards are free ways and blow me to stay away out of this place"
+    },
+    {
+      "start": 114.0,
+      "end": 123.0,
+      "text": "My mother said, just keep your hand black, and is it like?"
+    },
+    {
+      "start": 123.0,
+      "end": 129.0,
+      "text": "I somehow see what's beautiful, and things that are a fan room."
+    },
+    {
+      "start": 129.0,
+      "end": 140.0,
+      "text": "I'm my only friend, and my love is just a piece of time in the world, in the world."
+    }
+  ]
+}

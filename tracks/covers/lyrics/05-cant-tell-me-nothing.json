@@ -1,0 +1,581 @@
+{
+  "id": "05-cant-tell-me-nothing",
+  "language": "en",
+  "reviewStatus": "draft",
+  "method": "Whisper small.en via faster-whisper 1.2.1; local vocal residual",
+  "source_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+  "duration": 271.704,
+  "notice": "Automatic transcript from the supplied recording; words and timing may contain errors. Uncertain segments are omitted.",
+  "cues": [
+    {
+      "start": 1.62,
+      "end": 3.52,
+      "text": "La la la,"
+    },
+    {
+      "start": 3.78,
+      "end": 7.96,
+      "text": "wait till I give my money right I"
+    },
+    {
+      "start": 7.96,
+      "end": 9.7,
+      "text": "had a dream I could buy my way"
+    },
+    {
+      "start": 9.7,
+      "end": 10.16,
+      "text": "to heaven"
+    },
+    {
+      "start": 10.16,
+      "end": 12.14,
+      "text": "When I awoke I smit that on a"
+    },
+    {
+      "start": 12.14,
+      "end": 15.66,
+      "text": "necklace I told God I'd be back in"
+    },
+    {
+      "start": 15.66,
+      "end": 16.24,
+      "text": "a second"
+    },
+    {
+      "start": 16.24,
+      "end": 18.88,
+      "text": "Man it's so hard not to act reckless"
+    },
+    {
+      "start": 18.88,
+      "end": 20.98,
+      "text": "Eat the whole much is given,"
+    },
+    {
+      "start": 21.3,
+      "end": 22.0,
+      "text": "much is tested"
+    },
+    {
+      "start": 22.0,
+      "end": 22.86,
+      "text": "Get arrested,"
+    },
+    {
+      "start": 23.1,
+      "end": 25.5,
+      "text": "guess until he get the message I feel"
+    },
+    {
+      "start": 25.5,
+      "end": 27.54,
+      "text": "the pressure under more scrutiny"
+    },
+    {
+      "start": 27.54,
+      "end": 30.94,
+      "text": "me and what I do act more stupidly"
+    },
+    {
+      "start": 30.94,
+      "end": 35.32,
+      "text": "bought more jewelry more Louis V my mama"
+    },
+    {
+      "start": 35.32,
+      "end": 39.02,
+      "text": "couldn't get through to me the drama people"
+    },
+    {
+      "start": 39.02,
+      "end": 41.56,
+      "text": "suing me I'm on TV talking like"
+    },
+    {
+      "start": 41.56,
+      "end": 44.68,
+      "text": "it's just you and me I'm just saying"
+    },
+    {
+      "start": 44.68,
+      "end": 46.62,
+      "text": "how I feel man I ain't one of"
+    },
+    {
+      "start": 46.62,
+      "end": 47.58,
+      "text": "the Cosby's I"
+    },
+    {
+      "start": 47.58,
+      "end": 50.36,
+      "text": "ain't go to hell man I guess the"
+    },
+    {
+      "start": 50.36,
+      "end": 52.8,
+      "text": "money should have changed them I guess I"
+    },
+    {
+      "start": 52.8,
+      "end": 54.9,
+      "text": "I should've forget where I came from"
+    },
+    {
+      "start": 54.9,
+      "end": 57.76,
+      "text": "La la la la,"
+    },
+    {
+      "start": 57.84,
+      "end": 60.6,
+      "text": "would you like to get my money right?"
+    },
+    {
+      "start": 61.28,
+      "end": 63.54,
+      "text": "La la la la,"
+    },
+    {
+      "start": 63.86,
+      "end": 65.86,
+      "text": "then you can't tell me nothing,"
+    },
+    {
+      "start": 65.86,
+      "end": 66.76,
+      "text": "right?"
+    },
+    {
+      "start": 66.96,
+      "end": 68.02,
+      "text": "Excuse me,"
+    },
+    {
+      "start": 68.2,
+      "end": 69.96,
+      "text": "cause you saying something?"
+    },
+    {
+      "start": 70.3,
+      "end": 70.7,
+      "text": "Uh-uh,"
+    },
+    {
+      "start": 71.0,
+      "end": 72.74,
+      "text": "you can't tell me nothing"
+    },
+    {
+      "start": 72.74,
+      "end": 75.9,
+      "text": "You can't tell me nothing"
+    },
+    {
+      "start": 75.9,
+      "end": 76.68,
+      "text": "Uh-uh,"
+    },
+    {
+      "start": 76.86,
+      "end": 78.74,
+      "text": "you can't tell me nothing"
+    },
+    {
+      "start": 78.74,
+      "end": 81.6,
+      "text": "Let up the suicide doors,"
+    },
+    {
+      "start": 81.74,
+      "end": 83.36,
+      "text": "this is my life homie,"
+    },
+    {
+      "start": 83.4,
+      "end": 84.6,
+      "text": "you decide yours"
+    },
+    {
+      "start": 85.34,
+      "end": 88.0,
+      "text": "I know that Jesus died for us,"
+    },
+    {
+      "start": 88.12,
+      "end": 90.08,
+      "text": "but I couldn't tell you who the side"
+    },
+    {
+      "start": 90.08,
+      "end": 90.42,
+      "text": "was"
+    },
+    {
+      "start": 90.42,
+      "end": 91.62,
+      "text": "So I paralleled,"
+    },
+    {
+      "start": 91.7,
+      "end": 93.76,
+      "text": "double parked that motherf*** sideways"
+    },
+    {
+      "start": 93.76,
+      "end": 96.9,
+      "text": "Old folks talking bout back in my day"
+    },
+    {
+      "start": 97.72,
+      "end": 99.76,
+      "text": "But homie this is my day,"
+    },
+    {
+      "start": 99.78,
+      "end": 101.66,
+      "text": "class started two hours ago"
+    },
+    {
+      "start": 101.66,
+      "end": 102.82,
+      "text": "Oh am I late?"
+    },
+    {
+      "start": 103.32,
+      "end": 105.1,
+      "text": "No I already graduated"
+    },
+    {
+      "start": 105.1,
+      "end": 107.86,
+      "text": "And you can live through anything if magic"
+    },
+    {
+      "start": 107.86,
+      "end": 108.86,
+      "text": "made it"
+    },
+    {
+      "start": 108.86,
+      "end": 111.82,
+      "text": "They say I talk with so much emphasis"
+    },
+    {
+      "start": 112.84,
+      "end": 113.48,
+      "text": "Ooh,"
+    },
+    {
+      "start": 113.48,
+      "end": 114.78,
+      "text": "they so sensitive"
+    },
+    {
+      "start": 114.78,
+      "end": 117.94,
+      "text": "Don't ever fix your lips like collagen to"
+    },
+    {
+      "start": 117.94,
+      "end": 119.98,
+      "text": "say something where you gonna end up"
+    },
+    {
+      "start": 119.98,
+      "end": 120.68,
+      "text": "Apology"
+    },
+    {
+      "start": 121.54,
+      "end": 123.44,
+      "text": "Let me know if it's a problem,"
+    },
+    {
+      "start": 123.44,
+      "end": 123.96,
+      "text": "man"
+    },
+    {
+      "start": 124.92,
+      "end": 125.68,
+      "text": "All right,"
+    },
+    {
+      "start": 125.88,
+      "end": 126.0,
+      "text": "man,"
+    },
+    {
+      "start": 126.36,
+      "end": 126.9,
+      "text": "holla then"
+    },
+    {
+      "start": 129.34,
+      "end": 131.86,
+      "text": "Would you like get my money,"
+    },
+    {
+      "start": 131.98,
+      "end": 132.62,
+      "text": "right?"
+    },
+    {
+      "start": 135.46,
+      "end": 137.84,
+      "text": "And you can't tell me nothing,"
+    },
+    {
+      "start": 137.84,
+      "end": 138.74,
+      "text": "right?"
+    },
+    {
+      "start": 139.3,
+      "end": 140.02,
+      "text": "Excuse me,"
+    },
+    {
+      "start": 140.22,
+      "end": 142.28,
+      "text": "but you sayin' somethin'?"
+    },
+    {
+      "start": 142.28,
+      "end": 142.7,
+      "text": "Uh-uh,"
+    },
+    {
+      "start": 143.0,
+      "end": 144.82,
+      "text": "you can't tell me nothin'"
+    },
+    {
+      "start": 145.38,
+      "end": 147.86,
+      "text": "You can't tell me nothin'"
+    },
+    {
+      "start": 148.28,
+      "end": 148.68,
+      "text": "Uh-uh,"
+    },
+    {
+      "start": 148.92,
+      "end": 150.8,
+      "text": "you can't tell me nothin'"
+    },
+    {
+      "start": 152.02,
+      "end": 153.4,
+      "text": "Let the champagne splash,"
+    },
+    {
+      "start": 153.56,
+      "end": 154.98,
+      "text": "let that man get cashed"
+    },
+    {
+      "start": 154.98,
+      "end": 156.66,
+      "text": "Let that man get past"
+    },
+    {
+      "start": 157.28,
+      "end": 159.4,
+      "text": "He don't even stop to get gas"
+    },
+    {
+      "start": 159.4,
+      "end": 160.86,
+      "text": "If he can move through the rumors,"
+    },
+    {
+      "start": 161.12,
+      "end": 162.48,
+      "text": "he can drive off of fumes"
+    },
+    {
+      "start": 162.48,
+      "end": 164.98,
+      "text": "Cause I ain't move in a room full"
+    },
+    {
+      "start": 164.98,
+      "end": 165.74,
+      "text": "of no's"
+    },
+    {
+      "start": 165.74,
+      "end": 168.48,
+      "text": "I stay faithful in a room full of"
+    },
+    {
+      "start": 168.48,
+      "end": 170.94,
+      "text": "Must be the pharaohs in your tune with"
+    },
+    {
+      "start": 170.94,
+      "end": 171.56,
+      "text": "his soul"
+    },
+    {
+      "start": 171.56,
+      "end": 173.94,
+      "text": "So when he buried in a tomb full"
+    },
+    {
+      "start": 173.94,
+      "end": 174.66,
+      "text": "of gold"
+    },
+    {
+      "start": 175.5,
+      "end": 176.1,
+      "text": "Treasure,"
+    },
+    {
+      "start": 176.62,
+      "end": 177.58,
+      "text": "what's your pleasure?"
+    },
+    {
+      "start": 178.0,
+      "end": 180.4,
+      "text": "Life is a depending on how you dress"
+    },
+    {
+      "start": 180.4,
+      "end": 180.78,
+      "text": "her"
+    },
+    {
+      "start": 180.78,
+      "end": 183.44,
+      "text": "So if the devil wear Prada Adam Eve"
+    },
+    {
+      "start": 183.44,
+      "end": 186.0,
+      "text": "Wear Nada I'm in between but way more"
+    },
+    {
+      "start": 186.0,
+      "end": 186.76,
+      "text": "fresher"
+    },
+    {
+      "start": 187.76,
+      "end": 189.56,
+      "text": "But way less effort"
+    },
+    {
+      "start": 189.56,
+      "end": 191.4,
+      "text": "Cause when you try hard,"
+    },
+    {
+      "start": 191.68,
+      "end": 192.96,
+      "text": "that's when you die hard"
+    },
+    {
+      "start": 193.56,
+      "end": 195.76,
+      "text": "Your homies lookin' like why God,"
+    },
+    {
+      "start": 195.96,
+      "end": 197.62,
+      "text": "when they reminisce over you,"
+    },
+    {
+      "start": 197.76,
+      "end": 198.72,
+      "text": "my God"
+    },
+    {
+      "start": 198.72,
+      "end": 201.74,
+      "text": "La la la la,"
+    },
+    {
+      "start": 201.88,
+      "end": 202.52,
+      "text": "what you like,"
+    },
+    {
+      "start": 202.74,
+      "end": 204.54,
+      "text": "give my money right"
+    },
+    {
+      "start": 204.54,
+      "end": 207.66,
+      "text": "La la la la,"
+    },
+    {
+      "start": 207.88,
+      "end": 210.76,
+      "text": "then you can't tell me nothin' right"
+    },
+    {
+      "start": 210.76,
+      "end": 212.02,
+      "text": "Excuse me,"
+    },
+    {
+      "start": 212.24,
+      "end": 213.76,
+      "text": "cause you sayin' somethin'"
+    },
+    {
+      "start": 214.28,
+      "end": 214.7,
+      "text": "Uh uh,"
+    },
+    {
+      "start": 215.02,
+      "end": 216.8,
+      "text": "you can't tell me nothin'"
+    },
+    {
+      "start": 216.8,
+      "end": 219.52,
+      "text": "You can't tell me nothing,"
+    },
+    {
+      "start": 220.24,
+      "end": 220.78,
+      "text": "uh uh,"
+    },
+    {
+      "start": 220.98,
+      "end": 222.7,
+      "text": "you can't tell me nothing"
+    },
+    {
+      "start": 222.7,
+      "end": 225.7,
+      "text": "La la la la,"
+    },
+    {
+      "start": 225.9,
+      "end": 228.58,
+      "text": "wait till I give my money right"
+    },
+    {
+      "start": 228.58,
+      "end": 231.5,
+      "text": "La la la la,"
+    },
+    {
+      "start": 231.86,
+      "end": 234.8,
+      "text": "then you can't tell me nothing right"
+    }
+  ]
+}
