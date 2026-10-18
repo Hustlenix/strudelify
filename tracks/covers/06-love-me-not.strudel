@@ -1,0 +1,43 @@
+// title: Love Me Not
+// artist: Ravyn Lenae
+// audio: 06-love-me-not.mp3
+// Music audit: +4 semitone tonal correction; see music-audit/reports/adjustments.json
+// Instrumental rendition — no lyrics, just the dreamy drift.
+
+setcps(114/60/4)
+
+// melody — airy
+$: cat(
+  note("~@4 e5@2 g5@2 e5@4 c5@4"),
+  note("~@2 d5@2 e5@2 g5@2 ~@8"),
+  note("f5@4 e5@2 d5@2 c5@8"),
+  note("~@4 g5@2 e5@2 d5@2 c5@2 ~@4")
+).s("sine").gain(.32).attack(.03).release(.5).room(.6).delay(.2)
+
+// chords — baseline voicing sequence retained; harmonic changes still require review.
+$: note("<[c4,e4,g4] [a3,c4,e4] [f3,a3,c4] [g3,b3,d4]>")
+  .s("triangle").attack(.06).release(.5).gain(.16).room(.7).delay(.15)
+
+// bass
+$: note("<c2*2 a2*2 f2*2 g2*2>").s("sine").lpf(180).legato(.9).gain(.6)
+
+// drums — soft
+$: s("<[bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ ~] [bd ~ ~ ~ bd ~ ~ bd]>").bank("RolandTR808").gain(.6)
+
+$: s("~ ~ sd ~ ~ ~ sd ~").bank("RolandTR808").gain(.35).room(.35)
+
+$: s("hh*8").bank("RolandTR808").gain(.13)
+
+// Measured macro-dynamics from the supplied recording; no inferred verse/chorus labels.
+// One-second RMS, three-second smoothing, square-root dynamic compression, gain <=1.
+// This follows source energy and ends the arrangement; it does not certify section orchestration.
+const sourceDynamics = [0.2496,0.2505,0.2542,0.2762,0.2557,0.2485,0.2513,0.275,0.2635,0.2442,0.2484,0.2656,0.2721,0.2455,0.2514,0.3442,0.6189,0.7787,0.9146,0.8822,0.9178,0.8732,0.9331,0.8748,0.9324,0.8614,0.9377,0.8525,0.9183,0.8403,0.9162,0.8793,0.9223,0.9069,0.9148,0.9129,0.8816,0.9095,0.8843,0.9411,0.8408,0.8812,0.8288,0.9386,0.8912,0.9781,0.9351,1.0,0.9455,0.9815,0.9101,0.936,0.9199,0.9552,0.9758,0.9807,0.9879,0.9614,0.9718,0.9221,0.9561,0.962,1.0,0.9905,1.0,0.9889,1.0,0.9303,0.939,0.8846,0.966,0.9449,0.9835,0.9631,0.9677,0.9073,0.7946,0.6388,0.5302,0.5343,0.5565,0.5399,0.5363,0.5887,0.6694,0.7969,0.8132,0.8958,0.8552,0.9202,0.8851,0.9217,0.8881,0.9112,0.8993,0.8893,0.9036,0.8972,0.948,0.894,0.9307,0.8987,0.961,0.907,0.9568,0.8838,0.9603,0.8656,0.9394,0.8779,0.9513,0.9073,0.9447,0.898,0.8663,0.7814,0.6621,0.7223,0.7696,0.9232,0.9239,0.985,0.9524,0.9985,0.9584,1.0,0.905,0.9402,0.8864,0.9806,0.9624,1.0,0.9737,0.9719,0.9508,0.931,0.9497,0.9572,1.0,0.9831,1.0,0.9852,0.992,0.9161,0.9269,0.8823,0.9823,0.9267,0.9939,0.936,0.9816,0.8557,0.7402,0.5517,0.5375,0.5525,0.5721,0.559,0.554,0.5672,0.5822,0.5564,0.538,0.5297,0.5519,0.542,0.5473,0.5377,0.5482,0.5619,0.5756,0.5892,0.5753,0.5827,0.5907,0.5971,0.5861,0.58,0.595,0.6102,0.6222,0.6095,0.6404,0.6409,0.7402,0.7797,0.9279,0.93,1.0,0.9746,1.0,0.9941,1.0,0.9784,0.9442,0.9518,0.9495,0.9927,0.9596,0.9798,0.9611,0.9215,0.7443,0.5314,0.3155,0.3148,0.3338,0.345,0.3478,0.3227,0.2689,0.1889,0.0759,0.05]
+const sourceDuration = 213.067
+const musicCps = 0.475
+const sourceLevelAt = seconds => {
+  const i = Math.max(0, Math.min(sourceDynamics.length - 1, Math.floor(seconds)))
+  const a = sourceDynamics[i], b = sourceDynamics[Math.min(i + 1, sourceDynamics.length - 1)]
+  return a + (b - a) * Math.max(0, Math.min(1, seconds - i))
+}
+all(p => p.filterHaps(h => Number(h.whole.begin) < sourceDuration * musicCps)
+  .withHap(h => h.withValue(v => ({...v, gain: (v.gain ?? 1) * sourceLevelAt(Number(h.whole.begin) / musicCps)}))))

@@ -1,0 +1,47 @@
+// title: Can't Tell Me Nothing
+// artist: Kanye West
+// audio: 05-cant-tell-me-nothing.mp3
+// Music audit: -1 semitone tonal correction; see music-audit/reports/adjustments.json
+// Instrumental rendition — no lyrics, just the stadium stomp.
+
+setcps(80/60/4)
+
+// pad — baseline voicing sequence retained; harmonic changes still require review.
+$: note("<[f3,g#3,c4]*2 [c#3,f3,g#3]*2 [g#3,c4,d#4]*2 [d#3,g3,a#3]*2>")
+  .s("supersaw").lpf(1500).attack(.15).release(.7).gain(.2).room(.5)
+
+// lead — sparse and triumphant
+$: cat(
+  note("f4@4 g#4@4 c5@4 a#4@4"),
+  note("g#4@8 ~@8"),
+  note("f4@4 g#4@4 c5@4 d#5@4"),
+  note("c5@8 ~@4 a#4@4")
+).s("sawtooth").lpf(2200).gain(.26).attack(.02).release(.3).delay(.2)
+
+// 808 bass
+$: note("<[f1 ~ ~ f1 ~ ~ f1 ~] [c#1 ~ ~ c#1 ~ ~ c#1 ~] [g#1 ~ ~ g#1 ~ ~ g#1 ~] [d#1 ~ ~ d#1 ~ ~ d#1 ~]>")
+  .s("sine").lpf(160).legato(.9).gain(.8)
+
+// stomp
+$: s("<[bd ~ bd ~] [bd ~ bd ~] [bd ~ bd ~] [bd ~ bd bd]>").bank("RolandTR909").gain(.85)
+
+$: s("~ cp ~ cp").bank("RolandTR909").gain(.4).room(.25)
+
+$: s("hh*4").bank("RolandTR909").gain(.18)
+
+// Measured mix headroom: baseline peak 1.84 dBFS; retain layer balance.
+all(p => p.withValue(v => ({...v, gain: (v.gain ?? 1) * 0.55})))
+
+// Measured macro-dynamics from the supplied recording; no inferred verse/chorus labels.
+// One-second RMS, three-second smoothing, square-root dynamic compression, gain <=1.
+// This follows source energy and ends the arrangement; it does not certify section orchestration.
+const sourceDynamics = [0.2549,0.3163,0.3625,0.3591,0.3495,0.5045,0.6996,0.8655,0.9709,0.9418,0.9216,0.9243,0.962,0.9815,0.9823,0.9505,0.9497,0.9487,0.9562,0.9619,0.953,0.9463,0.9202,0.9391,0.9837,1.0,1.0,0.9922,0.9777,0.9719,0.9817,1.0,0.9912,0.9861,0.9655,0.9686,0.9771,0.9959,1.0,0.9908,0.9734,0.9749,0.9405,0.9336,0.9245,0.9554,0.9695,0.9655,0.9874,0.972,0.8964,0.8655,0.8499,0.8989,0.9305,0.9722,1.0,0.9807,0.9699,0.9715,0.9925,0.9979,0.9834,0.9623,0.9424,0.9358,0.9255,0.9169,0.9191,0.9302,0.9667,0.9832,1.0,0.9978,0.9837,0.9693,0.9532,0.9585,0.9828,0.9906,0.9715,0.946,0.9367,0.9529,0.9706,0.9839,0.9848,0.9659,0.947,0.9509,0.9581,0.9735,0.973,0.9609,0.9563,0.9625,0.9912,0.9931,0.9773,0.9574,0.9521,0.9633,0.9941,0.9995,0.9949,0.9559,0.946,0.9538,0.9866,0.9758,0.8832,0.831,0.8128,0.8415,0.871,0.91,0.9585,0.9449,0.9346,0.9537,0.9814,0.9989,0.9865,0.9557,0.939,0.9573,0.9796,0.9891,0.9881,0.9737,0.9597,0.9551,0.9747,0.9911,0.9836,0.9664,0.9509,0.9465,0.9552,0.9541,0.9428,0.9288,0.9429,0.9567,0.9795,0.9894,0.999,0.9843,0.9731,0.9656,0.9837,0.9857,0.9814,0.9533,0.9351,0.9415,0.9774,0.996,0.995,0.9734,0.9563,0.9473,0.95,0.9724,0.979,0.9619,0.9511,0.9602,1.0,1.0,1.0,1.0,0.9831,0.9862,1.0,1.0,0.9959,0.9734,0.9709,0.9751,1.0,0.999,0.92,0.8681,0.8253,0.8602,0.861,0.9023,0.9317,0.9505,0.9672,0.9939,1.0,1.0,0.9998,0.9786,0.9564,0.9602,0.973,0.9921,0.9929,0.9754,0.9577,0.9594,0.9789,0.9969,0.9934,0.9715,0.9516,0.941,0.9398,0.9385,0.9393,0.9372,0.9303,0.934,0.962,0.9946,0.9953,0.9744,0.9528,0.9475,0.9643,0.9498,0.8921,0.8735,0.8517,0.8463,0.8686,0.8927,0.8955,0.8728,0.8494,0.8324,0.8135,0.8135,0.8037,0.8058,0.7849,0.7973,0.8416,0.8764,0.8774,0.8446,0.8149,0.8447,0.879,0.9172,0.9174,0.8582,0.849,0.9051,0.9606,0.9636,0.9129,0.8542,0.8369,0.8618,0.8758,0.8621,0.8018,0.8217,0.8333,0.8364,0.8642,0.8728,0.8688,0.8243,0.7377,0.5607,0.3313,0.05]
+const sourceDuration = 271.704
+const musicCps = 0.3333333333333333
+const sourceLevelAt = seconds => {
+  const i = Math.max(0, Math.min(sourceDynamics.length - 1, Math.floor(seconds)))
+  const a = sourceDynamics[i], b = sourceDynamics[Math.min(i + 1, sourceDynamics.length - 1)]
+  return a + (b - a) * Math.max(0, Math.min(1, seconds - i))
+}
+all(p => p.filterHaps(h => Number(h.whole.begin) < sourceDuration * musicCps)
+  .withHap(h => h.withValue(v => ({...v, gain: (v.gain ?? 1) * sourceLevelAt(Number(h.whole.begin) / musicCps)}))))
