@@ -111,3 +111,10 @@ Serve only the selected preview directory on loopback for owner review. Never se
 repository root as the proposed public release. Preserve failed attempts instead of destructive
 cleanup. After review, the owner can approve a concrete merge/deployment; this candidate stops
 at that gate.
+
+## Linux CI audio endpoint
+
+The first Linux Firefox CI run timed out on audio startup, while local Firefox passed. Its report
+is preserved in reports/failures/firefox-linux-audio-first-run.json. CI now starts a PulseAudio
+null sink for the actual browser AudioContext and collects console/failure-state diagnostics.
+This is a virtual audio device for a headless runner, not a substitute audio engine or a listening review.

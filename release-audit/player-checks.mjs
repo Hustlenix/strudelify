@@ -19,6 +19,7 @@ const server = createServer((req, res) => {
   } catch { res.writeHead(404).end(); }
 });
 let browser;
+let diagnosticPage;
 let expectedError = false;
 try {
   report.build = JSON.parse(fs.readFileSync(path.join(root, 'release.json')));
@@ -61,6 +62,9 @@ try {
     };
   });
   const page = await context.newPage();
+  diagnosticPage = page;
+  report.console_diagnostics = [];
+  page.on('console', message => {if(['error','warning'].includes(message.type())) report.console_diagnostics.push(message.text().slice(0,1500));});
   page.on('pageerror', error => { if (!expectedError) report.errors.push(error.message); });
   page.on('request', request => report.requests.push(request.url()));
   await page.goto(url, {waitUntil:'networkidle', timeout:90000});
@@ -80,7 +84,7 @@ try {
   check('Back/Forward and complete actual View code');
 
   await page.locator('.detail-play').click();
-  await page.waitForFunction(() => state.playing && !state.loading, {timeout:60000});
+  await page.waitForFunction(() => state.playing && !state.loading, null, {timeout:60000});
   await page.waitForFunction(() => audioProbe.peak > .00001, {timeout:20000});
   await page.waitForTimeout(700);
   const before = await page.evaluate(() => ({time:getAudioContext().currentTime, revision:playbackRevision, peak:audioProbe.peak}));
@@ -222,6 +226,13 @@ try {
   report.status = 'PASSED';
 } catch (error) {
   report.status = 'FAILED'; report.errors.push(error.stack);
+  if (diagnosticPage) report.failure_state = await diagnosticPage.evaluate(() => ({
+    playing:typeof state !== 'undefined' && state.playing,
+    loading:typeof state !== 'undefined' && state.loading,
+    error:typeof playbackError !== 'undefined' ? playbackError : '',
+    audio_context:window.getAudioContext?.().state,
+    activation:navigator.userActivation ? {active:navigator.userActivation.isActive,previous:navigator.userActivation.hasBeenActive} : null,
+  })).catch(error => ({diagnostic_error:error.message}));
 } finally {
   await browser?.close();
   await new Promise(resolve => server.close(resolve));

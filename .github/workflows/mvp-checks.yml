@@ -32,6 +32,14 @@ jobs:
         working-directory: release-audit
       - run: npx playwright install --with-deps ${{ matrix.browser }}
         working-directory: release-audit
+      - name: Start virtual audio device for real WebAudio in Linux Firefox
+        if: matrix.browser == 'firefox'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pulseaudio
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=strudelify_ci
+          pactl set-default-sink strudelify_ci
       - run: python release-audit/build_preview.py
       - run: node release-audit/player-checks.mjs release-preview ${{ matrix.browser }}
       - uses: actions/upload-artifact@v4
