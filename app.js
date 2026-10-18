@@ -40,6 +40,7 @@ let evaluationQueue = Promise.resolve();
 let playbackStartedAt = 0;
 let previewing = false;
 let playbackError = '';
+let playbackAbort;
 const playbackChannel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('strudelify-playback') : null;
 if (playbackChannel) playbackChannel.onmessage = event => { if (event.data === 'claim') stopTrack(); };
 const codeCache = new Map();
@@ -93,7 +94,7 @@ function setStatus(message, playing = state.playing) {
 function getCode(track) {
   if (track.code) return Promise.resolve(track.code);
   if (codeCache.has(track.id)) return codeCache.get(track.id);
-  const request = fetch(track.codeUrl, {cache: 'no-cache'}).then(response => {
+  const request = fetch(track.codeUrl, {cache: 'no-cache',signal:AbortSignal.timeout(15000)}).then(response => {
     if (!response.ok) throw new Error(`Could not load ${track.codeUrl} (${response.status}).`);
     return response.text();
   }).catch(error => { codeCache.delete(track.id); throw error; });
@@ -103,7 +104,13 @@ function getCode(track) {
 function ensureEngine() {
   if (typeof window.initStrudel !== 'function') throw new Error('The Strudel runtime did not load. Check your connection and refresh.');
   if (!enginePromise) enginePromise = Promise.resolve(window.initStrudel({
-    prebake: () => window.samples('https://raw.githubusercontent.com/felixroos/dough-samples/main/tidal-drum-machines.json'),
+    prebake: async () => {
+      const url='https://raw.githubusercontent.com/felixroos/dough-samples/main/tidal-drum-machines.json';
+      const response=await fetch(url,{signal:AbortSignal.timeout(15000)});
+      if (!response.ok) throw new Error('The instrument library could not be loaded. Try again.');
+      const map=await response.json();
+      await window.samples(map,map._base || new URL('./',url).href);
+    },
     defaultOutput: (hap, deadline, duration, cps, time) => {
       if (!state.playing || hap.value?._strudelifySession !== playbackRevision) return;
       return window.webaudioOutput(hap, deadline, duration, cps, time);
@@ -119,6 +126,17 @@ function silenceEngine() {
   // hush stops future scheduling; resetGlobalEffects disconnects already sounding voices/tails.
   if (window.hush) window.hush();
   if (window.resetGlobalEffects) window.resetGlobalEffects();
+  const context=window.getAudioContext?.();
+  // Suspending the actual output also silences in-flight sample/effect work during cancellation.
+  return context && context.state!=='closed' ? context.suspend() : Promise.resolve();
+}
+function cancellable(promise, signal) {
+  if (signal.aborted) return Promise.reject(signal.reason || new DOMException('Playback canceled','AbortError'));
+  return new Promise((resolve,reject)=>{
+    const abort=()=>reject(signal.reason || new DOMException('Playback canceled','AbortError'));
+    signal.addEventListener('abort',abort,{once:true});
+    Promise.resolve(promise).then(value=>{signal.removeEventListener('abort',abort);resolve(value);},error=>{signal.removeEventListener('abort',abort);reject(error);});
+  });
 }
 async function prepareInstruments(pattern, repl, code) {
   const duration=Number(code.match(/const (?:endSeconds|sourceDuration)\s*=\s*([\d.]+)/)?.[1]);
@@ -134,19 +152,21 @@ async function prepareInstruments(pattern, repl, code) {
     const samples=sound.data?.samples;
     if (samples) for (const url of (Array.isArray(samples)?samples:Object.values(samples)).flat()) urls.add(url);
   }
-  await Promise.all([...urls].map(url=>window.loadBuffer(url,window.getAudioContext())));
+  await cancellable(Promise.all([...urls].map(url=>window.loadBuffer(url,window.getAudioContext()))),AbortSignal.timeout(15000));
 }
 async function playTrack(track, isPreview = false) {
   if (!track) return;
   if (!isPreview && (state.playing || state.loading) && state.current?.id === track.id) { await stopTrack(); return; }
   const revision = ++playbackRevision;
+  playbackAbort?.abort();
+  const abort = playbackAbort = new AbortController();
   playbackChannel?.postMessage('claim');
   previewing = isPreview;
   playbackError = '';
   state.playing = false;
   state.loading = true;
   playbackDuration = 0;
-  silenceEngine();
+  const muted=silenceEngine();
   state.current = track;
   loadLyrics(track);
   renderPlayer();
@@ -154,7 +174,7 @@ async function playTrack(track, isPreview = false) {
   setStatus('Waking the synth…', false);
   try {
     // Initialize during the gesture, then serialize real REPL evaluations.
-    const [repl, code] = await Promise.all([ensureEngine(), getCode(track)]);
+    const [repl, code] = await cancellable(Promise.all([ensureEngine(), getCode(track),muted]),abort.signal);
     if (revision !== playbackRevision) return;
     const start = evaluationQueue.then(async () => {
       if (revision !== playbackRevision) return false;
@@ -163,17 +183,17 @@ async function playTrack(track, isPreview = false) {
       if (error) throw error;
       if (revision !== playbackRevision) return false;
       if (!pattern?.queryArc) throw new Error('This code did not produce a playable pattern.');
-      await prepareInstruments(pattern,repl,code);
+      await cancellable(prepareInstruments(pattern,repl,code),abort.signal);
       if (revision !== playbackRevision) return false;
       const sessionPattern = pattern.withValue(value => ({...value, _strudelifySession:revision}));
       await repl.setPattern(sessionPattern, false);
       if (revision !== playbackRevision) return false;
-      silenceEngine();
+      await silenceEngine();
       await window.getAudioContext().resume();
       if (revision !== playbackRevision) return false;
       state.playing = true;
       await repl.start();
-      if (revision !== playbackRevision) { silenceEngine(); return false; }
+      if (revision !== playbackRevision) { await silenceEngine(); return false; }
       playbackStartedAt = window.getAudioContext().currentTime;
       return true;
     });
@@ -192,8 +212,8 @@ async function playTrack(track, isPreview = false) {
   } catch (error) {
     if (revision !== playbackRevision) return;
     state.playing = false;
-    silenceEngine();
-    playbackError = error?.message || 'Strudel could not play this track.';
+    await silenceEngine();
+    playbackError = error?.name==='TimeoutError' ? 'Loading the song or instruments timed out. Try again or refresh.' : error?.message || 'Strudel could not play this track.';
     renderPlayer();
     showToast(playbackError);
     if (isPreview) throw error;
@@ -201,12 +221,13 @@ async function playTrack(track, isPreview = false) {
 }
 async function stopTrack() {
   ++playbackRevision;
+  playbackAbort?.abort();
   playbackDuration = 0;
   state.playing = false;
   state.loading = false;
   previewing = false;
   playbackError = '';
-  try { silenceEngine(); }
+  try { await silenceEngine(); }
   catch { /* The interface can still return to its stopped state. */ }
   setStatus(state.current ? 'Pattern stopped' : 'Ready when you are', false);
   renderPlayer();
@@ -522,6 +543,7 @@ $('#editorForm').addEventListener('submit', event => {
   const track = { id: `custom-${Date.now()}`, title, artist, mood: 'Your pattern', loop: '∞ loop', code, created: true, palette: 5 };
   state.custom = [track, ...state.custom];
   if (saveStorage('strudelify-custom', state.custom)) {
+    if (previewing) stopTrack();
     $('#editorDialog').close('save'); renderPlaylistNav(); renderAllLists();
     showToast('Saved to your local library');
     openTrack(track.id);
@@ -530,6 +552,7 @@ $('#editorForm').addEventListener('submit', event => {
 $('#editorDialog').addEventListener('close', () => {
   if (previewing) stopTrack();
 });
+$('#editorDialog').addEventListener('cancel', () => { if (previewing) stopTrack(); });
 window.addEventListener('pagehide', () => stopTrack());
 function routeFromLocation() {
   if (location.hash.startsWith('#track/')) {
@@ -543,7 +566,7 @@ window.addEventListener('popstate', routeFromLocation);
 
 document.querySelector('a[href="#mainArea"]').addEventListener('click', event => { event.preventDefault(); $('#mainArea').focus(); });
 document.addEventListener('keydown', event => { if(event.key==='Escape'){hideSuggestions();$$('.detail-menu').forEach(menu=>menu.classList.add('hidden'));$$('[data-track-menu]').forEach(button=>button.setAttribute('aria-expanded','false'));} });
-document.querySelector('[data-close-editor]').addEventListener('click', () => $('#editorDialog').close('cancel'));
+document.querySelector('[data-close-editor]').addEventListener('click', () => { if (previewing) stopTrack(); $('#editorDialog').close('cancel'); });
 $('#createHeaderButton').addEventListener('click', () => openEditor());
 $('#librarySearchButton').addEventListener('click', () => { setView('search'); $('#searchInput').focus(); });
 $('#clearSearchButton').addEventListener('click', () => { $('#searchInput').value=''; $('#searchPageInput').value=''; renderSearch(); hideSuggestions(); $('#clearSearchButton').classList.add('hidden'); $('#searchInput').focus(); });

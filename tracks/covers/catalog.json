@@ -6,7 +6,7 @@
     "codeUrl": "./01-babydoll.strudel",
     "bpm": 84.05,
     "genre": "Indie pop",
-    "status": "listening-reviewed"
+    "status": "runtime-verified"
   },
   {
     "id": "02-without-me",
@@ -60,7 +60,7 @@
     "codeUrl": "./07-i-thought-i-saw-your-face-today.strudel",
     "bpm": 78.0,
     "genre": "Indie pop",
-    "status": "draft"
+    "status": "runtime-verified"
   },
   {
     "id": "08-lonely",
