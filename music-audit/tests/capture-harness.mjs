@@ -2,7 +2,7 @@
 const connect=AudioNode.prototype.connect,taps=[];
 AudioNode.prototype.connect=function(dest,...args){
  const result=connect.call(this,dest,...args);
- if(dest===this.context.destination&&!taps.some(t=>t.source===this)){
+ if(this.context instanceof AudioContext&&dest===this.context.destination&&!taps.some(t=>t.source===this)){
   const capture=this.context.createScriptProcessor(4096,2,2),tap={source:this,capture,chunks:[],enabled:false};
   capture.onaudioprocess=e=>{if(tap.enabled)tap.chunks.push([e.inputBuffer.getChannelData(0).slice(),e.inputBuffer.getChannelData(1).slice()]);};
   connect.call(this,capture);connect.call(capture,dest);taps.push(tap);
@@ -32,6 +32,6 @@ window.runAudit=async(code,seconds=24,preload=true)=>{
  }
  const bytes=new Uint8Array(interleaved.buffer);let binary='';
  for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
- return {status:peak>1e-5&&!unknown.length?'PASSED':'FAILED',sounds,unknown_sounds:unknown,assets,peak,rms:Math.sqrt(sum/(frames*2)),samples_at_or_above_0dbfs:over,frames,sample_rate:web.getAudioContext().sampleRate,channels:2,pcm:btoa(binary),scheduler_error:repl.state.schedulerError?.message||null,coverage:seconds+' seconds of stereo floating-point WebAudio; no perceptual similarity claim'};
+ return {status:peak>1e-5&&!unknown.length?'PASSED':'FAILED',capture_context_type:tap.source.context.constructor.name,sounds,unknown_sounds:unknown,assets,peak,rms:Math.sqrt(sum/(frames*2)),samples_at_or_above_0dbfs:over,frames,sample_rate:web.getAudioContext().sampleRate,channels:2,pcm:btoa(binary),scheduler_error:repl.state.schedulerError?.message||null,coverage:seconds+' seconds of stereo floating-point WebAudio; no perceptual similarity claim'};
 };
 window.auditReady=true;

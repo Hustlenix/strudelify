@@ -1,0 +1,285 @@
+{
+  "generated_at": "2026-10-18T09:30:34.840Z",
+  "base": "local integration",
+  "checks": [
+    {
+      "name": "Back/forward routes work; stale code fetch cannot replace newer song details",
+      "status": "PASSED"
+    },
+    {
+      "name": "Stop cancels pending initialization and code load",
+      "status": "PASSED"
+    },
+    {
+      "name": "Trusted first click starts audible WebAudio under normal autoplay policy",
+      "status": "PASSED"
+    },
+    {
+      "name": "Rapid switching keeps newest song; Stop silences the output",
+      "status": "PASSED",
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "running",
+          "same": true,
+          "time": 0.5973333333333334
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "01-babydoll playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "01-babydoll",
+      "playing": true,
+      "error": "",
+      "session": 9,
+      "lyric_title": "Babydoll",
+      "lyric_count": 37,
+      "before_stop_peak": 0.34967681765556335,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "running",
+          "same": true,
+          "time": 4.256
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "02-without-me playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "02-without-me",
+      "playing": true,
+      "error": "",
+      "session": 11,
+      "lyric_title": "Without Me",
+      "lyric_count": 91,
+      "before_stop_peak": 0.38133201003074646,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "suspended",
+          "same": true,
+          "time": 7.925333333333334
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "03-everyday-normal-guy-2 playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "03-everyday-normal-guy-2",
+      "playing": true,
+      "error": "",
+      "session": 13,
+      "lyric_title": "Everyday Normal Guy 2",
+      "lyric_count": 131,
+      "before_stop_peak": 0.12361803650856018,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "suspended",
+          "same": true,
+          "time": 11.637333333333334
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "04-sailor-song playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "04-sailor-song",
+      "playing": true,
+      "error": "",
+      "session": 15,
+      "lyric_title": "Sailor Song",
+      "lyric_count": 52,
+      "before_stop_peak": 0.62544184923172,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "suspended",
+          "same": true,
+          "time": 15.402666666666667
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "05-cant-tell-me-nothing playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "05-cant-tell-me-nothing",
+      "playing": true,
+      "error": "",
+      "session": 17,
+      "lyric_title": "Can't Tell Me Nothing",
+      "lyric_count": 114,
+      "before_stop_peak": 0.5736535787582397,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "suspended",
+          "same": true,
+          "time": 19.082666666666668
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "06-love-me-not playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "06-love-me-not",
+      "playing": true,
+      "error": "",
+      "session": 19,
+      "lyric_title": "Love Me Not",
+      "lyric_count": 42,
+      "before_stop_peak": 0.46392080187797546,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "running",
+          "same": true,
+          "time": 22.698666666666668
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "07-i-thought-i-saw-your-face-today playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "07-i-thought-i-saw-your-face-today",
+      "playing": true,
+      "error": "",
+      "session": 21,
+      "lyric_title": "I Thought I Saw Your Face Today",
+      "lyric_count": 45,
+      "before_stop_peak": 0.3417258858680725,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "suspended",
+          "same": true,
+          "time": 26.485333333333333
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "08-lonely playback, matching lyrics and hard Stop",
+      "status": "PASSED",
+      "id": "08-lonely",
+      "playing": true,
+      "error": "",
+      "session": 23,
+      "lyric_title": "Lonely",
+      "lyric_count": 84,
+      "before_stop_peak": 0.1876080185174942,
+      "all_current": true,
+      "after_stop": {
+        "peak": 0,
+        "frames": 0,
+        "last_nonzero_context": {
+          "type": "AudioContext",
+          "state": "suspended",
+          "same": true,
+          "time": 30.176
+        },
+        "playing": false,
+        "loading": false,
+        "context_state": "suspended"
+      }
+    },
+    {
+      "name": "Editor preview uses the single transport and stops on close",
+      "status": "PASSED"
+    },
+    {
+      "name": "Playback recovers after syntax error; another app tab takes audio ownership",
+      "status": "PASSED"
+    },
+    {
+      "name": "Fresh mobile route leaves controls accessible; lyrics open and close",
+      "status": "PASSED"
+    },
+    {
+      "name": "Older saved cover is preserved without shadowing the current catalog",
+      "status": "PASSED",
+      "canonical": true,
+      "preserved": true,
+      "unique": true
+    },
+    {
+      "name": "Deep link, right-side lyrics and complete View code",
+      "status": "PASSED"
+    }
+  ],
+  "errors": [],
+  "probe_scope": "Real AudioContext output only; OfflineAudioContext impulse generation is excluded. Native context suspension is asserted after Stop.",
+  "local_source_sha256": {
+    "app.js": "561784e4469f307b67551f07c1a212fbbd02abb28dd3b5684c4328a0263c0b2f",
+    "index.html": "45673609430f3b3eeb7554cc8cbaa50b830781c441049355f151c20ae8c2537c",
+    "styles.css": "40ad83ea6a88d0c7ff27fdd6013ea520ec1aa6d053bc8aa730f9b58d0c201355"
+  },
+  "detail_after_concurrent": {
+    "title": "Lonely",
+    "code": "// title: Lonely\n// artist: Akon\n// Source-derived instrumental score; no original audio or lyrics e",
+    "hash": "#track/08-lonely"
+  },
+  "last_stop": {
+    "id": "08-lonely",
+    "peak": 0,
+    "frames": 0,
+    "last_nonzero_context": {
+      "type": "AudioContext",
+      "state": "suspended",
+      "same": true,
+      "time": 30.176
+    },
+    "playing": false,
+    "loading": false,
+    "context_state": "suspended"
+  },
+  "status": "PASSED"
+}

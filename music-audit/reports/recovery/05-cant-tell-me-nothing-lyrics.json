@@ -1,0 +1,18 @@
+{
+  "id": "05-cant-tell-me-nothing",
+  "source_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+  "cues": 114,
+  "omitted": [
+    {
+      "start": 238.82,
+      "end": 264.78,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 264.78,
+      "end": 271.52,
+      "reason": "low confidence or repetitive ASR"
+    }
+  ],
+  "status": "ASR_DRAFT_NOT_LISTENING_APPROVED"
+}

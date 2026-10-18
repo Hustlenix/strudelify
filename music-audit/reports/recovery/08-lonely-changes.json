@@ -1,0 +1,45 @@
+[
+  {
+    "phase": "replace-unverified-pitch-and-rhythm-score",
+    "attempt": 1,
+    "reason": "Owner rejected every public song; current cover lead/harmony/groove were unverified and source evidence contradicts the old repeated notes. Preserve instrumentation roles but replace pitch/timing content with independently corroborated source events across the full reference.",
+    "before_sha256": "b93ed42c57b6eee17373d01a1b0d2bca18a7d86964fe52d974876c0232d347f1",
+    "after_sha256": "3d59781eeb011b6111985672806c4105a1e6272353acf939089d36e566d1b720",
+    "profile": "sung",
+    "counts": {
+      "lead": 538,
+      "accompaniment": 78,
+      "bass": 71,
+      "drums": 904
+    },
+    "duration_s": 263.064,
+    "decision": "candidate, requires real runtime/full capture; no listening approval"
+  },
+  {
+    "phase": "measured-uniform-mix-gain",
+    "attempt": 1,
+    "factor": 2.116,
+    "before_metrics": {
+      "id": "08-lonely",
+      "source_code_sha256": "3d59781eeb011b6111985672806c4105a1e6272353acf939089d36e566d1b720",
+      "original_audio_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+      "capture_code_sha256": "3d59781eeb011b6111985672806c4105a1e6272353acf939089d36e566d1b720",
+      "capture_matches_current_code": true,
+      "capture_status": "PASSED",
+      "capture_duration_s": 266.1546666666667,
+      "reference_duration_s": 263.064,
+      "complete_duration_captured": true,
+      "integrated_lufs": -28.38,
+      "true_peak_dbtp": -9.51,
+      "loudness_range_lu": 5.7,
+      "nonfinite_samples": 0,
+      "full_scale_samples": 0,
+      "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\08-lonely-render.wav",
+      "critical_listening": "PENDING; this script measures signals only"
+    },
+    "before_sha256": "3d59781eeb011b6111985672806c4105a1e6272353acf939089d36e566d1b720",
+    "after_sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+    "reason": "First full capture is quiet with unused peak headroom. Keep notes/timings unchanged; recapture before restoring runtime status.",
+    "decision": "requires new full capture; does not certify musical fidelity"
+  }
+]

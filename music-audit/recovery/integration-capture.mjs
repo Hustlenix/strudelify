@@ -21,7 +21,7 @@ const server=createServer((req,res)=>{
 let browser;
 try{
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
- browser=await chromium.launch({executablePath:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',headless:true,args:['--autoplay-policy=no-user-gesture-required','--mute-audio']});
+ browser=await chromium.launch({executablePath:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',headless:true,args:['--mute-audio']});
  const page=await browser.newPage({viewport:{width:1440,height:1000}});
  const url=base || `http://127.0.0.1:${server.address().port}/`;
  page.on('pageerror',e=>report.errors.push(e.message));
@@ -32,7 +32,7 @@ try{
   window.musicCapture={peak:0,frames:0,clipped:0,nonfinite:0};
   AudioNode.prototype.connect=function(dest,...args){
    const result=connect.call(this,dest,...args);
-   if(dest===this.context.destination&&!this.__musicTap){
+   if(this.context instanceof AudioContext&&dest===this.context.destination&&!this.__musicTap){
     this.__musicTap=true;
     const tap=this.context.createScriptProcessor(4096,2,2);
     tap.onaudioprocess=e=>{const m=window.musicCapture;for(let c=0;c<2;c++){const a=e.inputBuffer.getChannelData(c);m.frames+=a.length;for(const v of a){if(!Number.isFinite(v))m.nonfinite++;m.peak=Math.max(m.peak,Math.abs(v));if(Math.abs(v)>=1)m.clipped++;}}};

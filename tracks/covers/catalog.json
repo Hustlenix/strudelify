@@ -24,7 +24,7 @@
     "codeUrl": "./03-everyday-normal-guy-2.strudel",
     "bpm": 90.0,
     "genre": "Comedy hip hop",
-    "status": "draft"
+    "status": "runtime-verified"
   },
   {
     "id": "04-sailor-song",
@@ -33,7 +33,7 @@
     "codeUrl": "./04-sailor-song.strudel",
     "bpm": 94.85,
     "genre": "Indie folk",
-    "status": "draft"
+    "status": "runtime-verified"
   },
   {
     "id": "05-cant-tell-me-nothing",

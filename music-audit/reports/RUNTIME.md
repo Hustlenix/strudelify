@@ -1,20 +1,25 @@
-# Music runtime evaluation
+# Runtime evaluation — current music recovery
 
-All eight current file hashes pass real Strudel 1.2.6 evaluation, full-duration cycle queries, finite-ending checks, valid gain checks, named sample-bank lookup and stereo WebAudio capture. Catalog order, URLs, BPM and source hashes pass. Original MP3s are unchanged.
+Eight current score files pass actual Strudel 1.2.6 parsing, REPL evaluation, bounded event queries,
+named instrument checks and real full-duration stereo WebAudio captures. Negative controls verify that
+missing banks and silence are rejected. Original-source hashes match all 16 preserved album/playlist files.
 
-| Track | Events | Captured seconds | Baseline peak dBFS | Candidate peak dBFS | Samples >= 0 dBFS |
-|---|---:|---:|---:|---:|---:|
-| Babydoll | 816 | 32 | -0.415 | -2.802 | 0 |
-| Without Me | 3961 | 32 | 0.897 | -3.536 | 0 |
-| Everyday Normal Guy 2 | 1888 | 32.085 | -5.286 | -5.544 | 0 |
-| Sailor Song | 1811 | 32.085 | -1.549 | -3.73 | 0 |
-| Can't Tell Me Nothing | 1816 | 32 | 1.837 | -3.575 | 0 |
-| Love Me Not | 2129 | 32 | -5.73 | -6.124 | 0 |
-| I Thought I Saw Your Face Today | 1230 | 32.085 | 0.488 | -4.555 | 0 |
-| Lonely | 1803 | 32.085 | -1.009 | -3.751 | 0 |
+`recovery/current-status.json` is the current hash/measurement index. Each track has `-runtime.json`,
+`-capture.json` and `-metrics.json`. Raw PCM, WAV renders, source excerpts, stems and models stay ignored.
+Only code, metadata, transcripts and reports are committed. Audio proof establishes signal generation,
+duration and measured headroom; it does not establish musical recognition or approval.
 
-Node controls: valid pattern, invalid method, invalid syntax and silence behaved as expected. Browser controls: positive sine, missing qualified bank and silence behaved as expected.
+| Song | Capture seconds | LUFS | True peak dBTP | Full-scale samples |
+|---|---:|---:|---:|---:|
+| Babydoll | 101.12 | -18.33 | -1.21 | 0 |
+| Without Me | 300.03 | -19.72 | -2.47 | 0 |
+| Everyday Normal Guy 2 | 224.09 | -21.60 | -2.55 | 0 |
+| Sailor Song | 212.05 | -21.07 | -2.75 | 0 |
+| Can't Tell Me Nothing | 274.09 | -21.18 | -3.76 | 0 |
+| Love Me Not | 216.06 | -21.62 | -3.01 | 0 |
+| I Thought I Saw Your Face Today | 173.06 | -20.51 | -6.40 | 0 |
+| Lonely | 266.07 | -22.02 | -3.09 | 0 |
 
-These results establish technical behavior for the recorded hashes. Audio captures cover the first 32 seconds, not every musical section. Floating-point PCM was measured before file conversion. DAC clipping and full-track true-peak/LUFS mastering were not assessed. Sample resource URLs are recorded in final-browser.json.
+Application transport/lyrics checks are recorded separately in `playback-regressions.json`.
 
-Reproduce with the commands in ../README.md. Historical/pre-form capture failures are preserved separately; the HMR/network suspension was corrected by disabling file watching and repeating the capture.
+Additional hardware-only recheck: 18 seconds per current score, actual AudioContext identified explicitly, all eight pass with zero full-scale samples; all three negative/positive controls pass. See hardware-recheck-browser.json. Offline impulse generation is excluded.

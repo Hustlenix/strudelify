@@ -1,0 +1,28 @@
+{
+  "id": "04-sailor-song",
+  "source_sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+  "cues": 52,
+  "omitted": [
+    {
+      "start": 133.5,
+      "end": 145.44,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 146.5,
+      "end": 150.9,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 151.5,
+      "end": 156.02,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 156.58,
+      "end": 161.06,
+      "reason": "low confidence or repetitive ASR"
+    }
+  ],
+  "status": "ASR_DRAFT_NOT_LISTENING_APPROVED"
+}

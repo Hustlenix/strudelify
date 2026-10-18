@@ -1,0 +1,11 @@
+[
+  {
+    "phase": "corroborated-bass-only",
+    "attempt": 1,
+    "before_sha256": "47b6ec60d0a429023ea9d65589f247c3f1dae16fc2aa3b0700c9e0e16fb39273",
+    "after_sha256": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+    "source_events": 206,
+    "reason": "Instrumental transcription is predominantly bass and insufficient for the signature hook. Preserve the earlier upper layers rather than replacing the song with drums/bass alone. Correct only independently corroborated low notes/timing.",
+    "limits": "Hook, upper harmony and vocal-derived sample motif remain unresolved. Not a completed faithful cover."
+  }
+]

@@ -1,0 +1,188 @@
+{
+  "id": "06-love-me-not",
+  "source_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+  "cues": 42,
+  "omitted": [
+    {
+      "start": 26.800000000000004,
+      "end": 29.6,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 30.0,
+      "end": 37.1,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 37.1,
+      "end": 44.08,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 44.08,
+      "end": 49.42,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 49.42,
+      "end": 56.46,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 117.38000000000001,
+      "end": 121.94,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 121.94,
+      "end": 125.9,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 125.9,
+      "end": 130.22,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 130.22,
+      "end": 134.4,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 134.4,
+      "end": 138.84,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 138.84,
+      "end": 142.86,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 142.86,
+      "end": 147.32,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 147.32,
+      "end": 151.3,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 151.3,
+      "end": 153.56,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 153.56,
+      "end": 155.92,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 155.92,
+      "end": 157.78,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 157.78,
+      "end": 160.12,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 160.12,
+      "end": 162.02,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 162.02,
+      "end": 164.34,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 164.34,
+      "end": 166.2,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 166.2,
+      "end": 168.68,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 168.68,
+      "end": 171.26,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 171.26,
+      "end": 173.42,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 173.42,
+      "end": 175.56,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 175.56,
+      "end": 177.26,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 177.26,
+      "end": 179.26,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 179.92,
+      "end": 181.26,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 181.96,
+      "end": 184.08,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 184.08,
+      "end": 185.2,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 185.2,
+      "end": 187.3,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 187.3,
+      "end": 189.26,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 189.26,
+      "end": 191.5,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 191.5,
+      "end": 193.32,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 193.32,
+      "end": 195.46,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 195.46,
+      "end": 197.82,
+      "reason": "low confidence or repetitive ASR"
+    },
+    {
+      "start": 197.82,
+      "end": 199.9,
+      "reason": "low confidence or repetitive ASR"
+    }
+  ],
+  "status": "ASR_DRAFT_NOT_LISTENING_APPROVED"
+}

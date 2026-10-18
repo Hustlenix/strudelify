@@ -1,0 +1,14 @@
+[
+  {
+    "id": "03-everyday-normal-guy-2",
+    "before_sha256": "e9dc670929ed8c589066ef20948353c258a00d47029cd70069fd39b25434e0e7",
+    "after_sha256": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+    "reason": "Canonicalize accidental CR-CR-LF from Windows text writing; no note, timing or gain change. Fresh full capture follows."
+  },
+  {
+    "id": "04-sailor-song",
+    "before_sha256": "285feeb7231d540b683dfaf3ce56a3b22ee85f68c08556caaf931ff882929dd8",
+    "after_sha256": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+    "reason": "Canonicalize accidental CR-CR-LF from Windows text writing; no note, timing or gain change. Fresh full capture follows."
+  }
+]

@@ -25,6 +25,8 @@ bpm=metadata['bpm']
 lead=[[n['start_s'],n['end_s'],n['midi'],round(.70+.25*n['mean_periodicity'],3)] for n in score['lead']]
 if phase == 'instrumental': lead=[]  # Spoken rap F0 is not a sung melody.
 harmony=[[n['start_s'],n['end_s'],n['midi'],round(.65+.3*min(n['activation'],1),3)] for n in score['accompaniment']]
+if phase == 'instrumental' and sum(n[2]>=60 for n in harmony)<32:
+    raise SystemExit('Sparse instrumental melody evidence: preserve the earlier score; a bass-only correction needs separate review. Do not replace a song with detected bass/drums.')
 bass=[[n['start_s'],n['end_s'],n['midi'],.8] for n in rhythm['bass']]
 drums=[[n['start_s'],n['end_s'],n['sound'],round(min(n['relative_energy'],1),3)] for n in rhythm['drums']]
 
@@ -81,6 +83,10 @@ const kit = new Pattern(state => drums.flatMap(([a,b,sound,level]) => {
 }))
 $: kit.withValue(v => ({...v,gain:v.gain*.14}))
 '''
+if ident == '07-i-thought-i-saw-your-face-today':
+    # Conservative mix choice: the source is led by pitched material; kit identification
+    # from broad-band transient candidates is uncertain. Do not let a synthetic kick dominate.
+    code=code.replace('gain:v.gain*.14','gain:v.gain*.045')
 # Preserve a literal per-stage diff/checkpoint; do not silently regenerate an edited score.
 logfile=reports/(ident+'-changes.json')
 log=json.loads(logfile.read_text()) if logfile.exists() else []
@@ -88,7 +94,7 @@ if log and hashlib.sha256(code.encode()).hexdigest()==digest:
     raise SystemExit('Score already matches this evidence; no repeated rewrite')
 if log:
     raise SystemExit('Existing repair checkpoint; use a targeted edit, not an automatic rewrite')
-target.write_text(code,encoding='utf-8')
+target.write_text(code,encoding='utf-8',newline='\n')
 log.append({'phase':'replace-unverified-pitch-and-rhythm-score','attempt':1,
             'reason':'Owner rejected every public song; current cover lead/harmony/groove were unverified and source evidence contradicts the old repeated notes. Preserve instrumentation roles but replace pitch/timing content with independently corroborated source events across the full reference.',
             'before_sha256':digest,'after_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),

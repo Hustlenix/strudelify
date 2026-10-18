@@ -1,0 +1,45 @@
+{
+  "mode": "hardware-recheck",
+  "tracks": [
+    {
+      "id": "01-babydoll",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\01-babydoll.strudel",
+      "sha256": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79"
+    },
+    {
+      "id": "02-without-me",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\02-without-me.strudel",
+      "sha256": "4fa757716aebb6fb16be59ad7b0cb06cad08b30973508d4f9907691d2ad276ae"
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\03-everyday-normal-guy-2.strudel",
+      "sha256": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa"
+    },
+    {
+      "id": "04-sailor-song",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\04-sailor-song.strudel",
+      "sha256": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603"
+    },
+    {
+      "id": "05-cant-tell-me-nothing",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\05-cant-tell-me-nothing.strudel",
+      "sha256": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec"
+    },
+    {
+      "id": "06-love-me-not",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\06-love-me-not.strudel",
+      "sha256": "c9494f00ce007b73330495b49dbf7cc91c4c6ca8ccd2c6603a78e285c85d0916"
+    },
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\07-i-thought-i-saw-your-face-today.strudel",
+      "sha256": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589"
+    },
+    {
+      "id": "08-lonely",
+      "file": "C:\\Users\\LalithReddy.b\\strudelify-music\\tracks\\covers\\08-lonely.strudel",
+      "sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296"
+    }
+  ]
+}

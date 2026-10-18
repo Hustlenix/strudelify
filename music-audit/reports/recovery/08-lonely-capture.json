@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-10-18T09:17:30.501Z",
+  "mode": "recovery08",
+  "seconds": 266,
+  "runtime_version": "@strudel/web 1.2.6",
+  "tracks": [
+    {
+      "id": "08-lonely",
+      "sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+      "status": "PASSED",
+      "sounds": [
+        "triangle",
+        "sine"
+      ],
+      "unknown_sounds": [],
+      "assets": [
+        {
+          "sound": "triangle",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "sine",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        }
+      ],
+      "peak": 0.6949747800827026,
+      "rms": 0.056798364915720316,
+      "samples_at_or_above_0dbfs": 0,
+      "frames": 12771328,
+      "sample_rate": 48000,
+      "channels": 2,
+      "scheduler_error": null,
+      "coverage": "266 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+      "pcm_file": "artifacts/recovery08-08-lonely.f32",
+      "console_errors": [],
+      "failed_requests": [],
+      "capture_duration_s": 266.06933333333336,
+      "capture_duration_valid": true
+    }
+  ],
+  "controls": [
+    {
+      "id": "control-sine",
+      "status": "PASSED",
+      "expected": "PASSED",
+      "observed": {
+        "status": "PASSED",
+        "sounds": [
+          "sine"
+        ],
+        "unknown_sounds": [],
+        "assets": [
+          {
+            "sound": "sine",
+            "data": {
+              "type": "synth",
+              "prebake": true
+            }
+          }
+        ],
+        "peak": 0.06476251780986786,
+        "rms": 0.026641311980323112,
+        "samples_at_or_above_0dbfs": 0,
+        "frames": 143360,
+        "sample_rate": 48000,
+        "channels": 2,
+        "scheduler_error": null,
+        "coverage": "3 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+        "pcm_file": "artifacts/recovery08-control-sine.f32",
+        "console_errors": [],
+        "failed_requests": [],
+        "capture_duration_s": 2.986666666666667,
+        "capture_duration_valid": true
+      }
+    },
+    {
+      "id": "control-missing-bank",
+      "status": "PASSED",
+      "expected": "FAILED",
+      "observed": {
+        "status": "FAILED",
+        "sounds": [
+          "audit_missing_bank_bd"
+        ],
+        "unknown_sounds": [
+          "audit_missing_bank_bd"
+        ],
+        "reason": "Fully qualified bank/sample absent from registry",
+        "console_errors": [],
+        "failed_requests": [],
+        "capture_duration_s": 0,
+        "capture_duration_valid": true
+      }
+    },
+    {
+      "id": "control-silence",
+      "status": "PASSED",
+      "expected": "FAILED",
+      "observed": {
+        "status": "FAILED",
+        "reason": "No PCM tap",
+        "console_errors": [],
+        "failed_requests": [],
+        "capture_duration_s": 0,
+        "capture_duration_valid": true
+      }
+    }
+  ],
+  "scope": "Isolated music harness only; no player/application files touched."
+}

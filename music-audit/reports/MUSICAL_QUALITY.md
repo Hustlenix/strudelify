@@ -1,44 +1,81 @@
-# Musical quality review
+# Musical quality review — 18 October 2026
 
-**Review candidates; no song is approved. No human critical listening has been performed. All fidelity scores are null.**
+These are instrumental review candidates. **No song is approved and all fidelity scores remain null.**
+The owner listened to the earlier Babydoll render and described it as partly recognizable, not fully
+correct. Measured vocal intonation was corrected afterward. The latest revision has fresh runtime/audio
+evidence and retains `runtime-verified` until fresh listening. Other tracks still need comparative listening.
 
-## Recovery update — 18 October 2026
+## Changes and remaining musical issues
 
-Babydoll now has a full 98.112-second source-timed score: 192 vocal contour events corroborated
-by CREPE/YIN, 210 accompaniment note events corroborated by instrumental spectral evidence,
-86 low-note candidates and 503 source transient candidates. The former G/D/Em/C loop and
-repeating guessed melody have been removed. This is a machine-assisted transcription draft,
-not an approved faithful rendition. Possible slide fragmentation, detector omissions, instrument
-identification and kit classification still require actual listening. The owner has been given
-a real 22-second render to review; no positive recognition response is recorded yet.
+### Babydoll
 
-A complete 100.0107-second real-time stereo WebAudio capture of its current code passes,
-with -18.37 LUFS integrated, -1.5 dBTP and zero clipped/non-finite samples. This replaces the
-earlier limited Babydoll capture evidence only. See `recovery/01-babydoll-metrics.json`,
-`recovery/01-babydoll-score.json` and `recovery/01-babydoll-changes.json`.
-The other seven rows below describe their previous drafts until explicitly updated.
+192 vocal-contour and 210 accompaniment events across 98.112 seconds replace the old guessed loop. After owner feedback of partial recognition, measured median cent offsets were restored to the 192 vocal notes. The revised pitch centers need fresh listening; guitar tone, missing notes and phrasing still need work.
 
-Kept the original eight arrangements and retained their instrumentation/relative motifs unless a bounded change had specific evidence. Six tonal transposes improve measured pitch-class fit, four tempos follow refined source periodicities, the Lonely kick grid is repaired, six mixes have measured headroom trims, and all eight follow source RMS macro-dynamics with finite endings. Babydoll has a 15-event source-derived opening repair over 0–4.37 s.
+### Without Me
 
-Pitch-class cosine is an engineering feature comparison, **not a fidelity score**. It ignores note order, musical function and instrument identity. Macro-dynamics are not a complete section arrangement. Most existing lead contours, basslines and harmonic sequences are still unverified; recognizability has not been certified.
+269 measured G1/D2 bass events replace the unsupported four-root bass loop. Signature riff and upper harmony remain unresolved; do not advertise this as a faithful cover.
 
-| Track | BPM | Status | Main review need |
-|---|---:|---|---|
-| Babydoll | 84.05 | runtime-verified | Full source-timed transcription candidate and full-duration capture now exist; review the rendered hook for recognition, missed notes, slide fragmentation, guitar timbre and transient classification before approval. |
-| Without Me | 112 | runtime-verified | The tonal transpose improves aggregate pitch-class fit, but does not establish the famous riff. The current G/Eb/F/D progression and eighth-note bass are unverified; measured source bass strongly favors G/D. The separated instrumental probe returned no robust f0 sequence, so no replacement riff was guessed. |
-| Everyday Normal Guy 2 | 90 | runtime-verified | Mixed-source key estimates conflict and the note probe is sparse. Original A-minor loop retained. Transcribe the recurring instrumental phrase and bass in isolation before changing harmony. Source dynamics/end are implemented; melody, groove and form orchestration are not approved. |
-| Sailor Song | 94.85 | runtime-verified | 94.85 BPM is the strongest refined periodicity in the selected window, with 63/126/190 alternatives. Meter/downbeat and the six-subdivision drum grid remain unresolved. B-centered transpose does not certify the B/E/G#m/F# harmonic sequence or guitar voicings. |
-| Can't Tell Me Nothing | 80 | runtime-verified | F-centered pitch repair and measured headroom are retained. The Fm/Db/Ab/Eb loop, sampled vocal motif and drum placement are unverified. Sparse full-mix note detections were not promoted to a melody. |
-| Love Me Not | 114 | runtime-verified | 114 BPM and C-centered pitch fit improve measured alignment. Borrowed harmony/relative-mode details and vocal lead remain unverified. The 16.67 s source energy rise is reflected by the continuous envelope; it is not labeled as a confirmed chorus boundary. |
-| I Thought I Saw Your Face Today | 78 | runtime-verified | 78 BPM is a fixed approximation; source periodicity varies. G-centered transpose is not a complete transcription of the piano, voice or bass. Opening full-mix detections mix registers/instruments and were not substituted as a lead. |
-| Lonely | 90 | runtime-verified | F-centered transpose and the eight-subdivision kick repair are retained. The sampled vocal motif, Fm/Db/Bbm/C progression, bass and snare placement need source listening. Source energy/end are followed; the repeating lead is still a draft contour. |
+### Everyday Normal Guy 2
 
-## Evidence and rejected changes
+601 corroborated instrumental note events replace the old repeating tune/harmony across 221.256 seconds. Spoken rap is omitted from the melodic layer.
 
-`adjustments.json` records each discrete adjustment, attempt number and before/after hashes. No entire song was rewritten. The low-margin Everyday Normal Guy 2 pitch suggestion was rejected and its notes retained. Full-mix Basic Pitch outputs are kept as candidates, not authoritative charts. MDX/pYIN probes for Babydoll and Without Me were too sparse for complete lead replacement (12 and 0 accepted short notes). Babydoll opening voicings have explicit event provenance; no missing pitches were filled in.
+### Sailor Song
 
-Use `../review.html` for local reference/baseline/candidate comparisons. They show the actual first windows with independent volume controls. Loop phase, voicing and source downbeats are not fully aligned. A same-window feature comparison cannot replace phrase-by-phrase listening.
+338 vocal-contour and 1116 accompaniment events follow the actual 209.533-second recording interval. Fixed six-subdivision replacement groove removed; meter metadata is still approximate.
 
-## Next approval pass
+### Can't Tell Me Nothing
 
-For each track, compare its principal motif and bass against the source anchor in preserved/INTEGRATION_GUIDE.md; resolve the listed meter/harmony questions; transcribe semantic sections and transitions from listening; then capture complete arrangements and measure loudness/true peak. Record source/render intervals and reviewer observations before raising status to listening-reviewed or approved. No additional 350-song catalog work has begun.
+206 corroborated low-note events replace the guessed bass progression. Sparse instrumental-hook evidence prevented a whole-score replacement. The sample motif and upper harmony remain unresolved.
+
+### Love Me Not
+
+394 vocal-contour and 631 accompaniment events span 213.067 seconds, with measured low notes and transient candidates. Timbre and missing/fragmented notes need listening.
+
+### I Thought I Saw Your Face Today
+
+258 vocal-contour and 558 accompaniment events span 170.4 seconds. Percussion is quiet because broad-band transients do not prove a drum instrument.
+
+### Lonely
+
+538 vocal-contour and 78 accompaniment events span 263.064 seconds, plus measured low notes/transients. Source C/E/F/G material replaces the guessed minor-key loop; sample-voice octave errors and sparse accompaniment need review.
+
+
+## Complete capture measurements
+
+Real Strudel 1.2.6/WebAudio captures cover each usable reference interval. The captured local score
+hashes match the current local files; see `recovery/current-status.json` and per-track metrics/captures.
+Line-ending normalization is disclosed separately. No original recording was altered.
+
+| Song | Capture seconds | LUFS | True peak dBTP | Full-scale samples |
+|---|---:|---:|---:|---:|
+| Babydoll | 101.12 | -18.33 | -1.21 | 0 |
+| Without Me | 300.03 | -19.72 | -2.47 | 0 |
+| Everyday Normal Guy 2 | 224.09 | -21.60 | -2.55 | 0 |
+| Sailor Song | 212.05 | -21.07 | -2.75 | 0 |
+| Can't Tell Me Nothing | 274.09 | -21.18 | -3.76 | 0 |
+| Love Me Not | 216.06 | -21.62 | -3.01 | 0 |
+| I Thought I Saw Your Face Today | 173.06 | -20.51 | -6.40 | 0 |
+| Lonely | 266.07 | -22.02 | -3.09 | 0 |
+
+All captures contain finite signal and zero full-scale/non-finite samples. Loudness varies and several
+tracks remain below the earlier -16±2 LUFS target. Conservative headroom is retained; this is not a
+claim of consistent mastering or perceptual similarity. Gain changes preserve note timing and balance.
+
+## Listening and transcription limits
+
+- CREPE/YIN agreement supports pitch observations. It does not identify the intended singer/instrument.
+- Basic Pitch/STFT agreement can retain overtones, miss voicing tones or fragment slides and sustained notes.
+- Percussion classification is inferred from broad-band transient evidence, not isolated drum stems.
+- Source event times preserve real rests and changes over the recording. No verse/chorus names were invented.
+- Rap speech was not turned into arbitrary sung notes. Without Me and Can't Tell Me Nothing keep earlier
+  upper parts while their hooks remain unresolved. Failed approaches are recorded, not repeatedly regenerated.
+- The private `review.html` pairs actual recordings, earlier drafts and current full renders for A/B review.
+- The 100-song expansion remains deferred until musical recognition improves.
+
+## Lyrics
+
+Timed lyric drafts are transcribed from the owner's supplied recordings with Whisper small.en, using
+local vocal residuals where available. Phrase boundaries use measured word timestamps. No web lyrics
+were scraped. Original MP3s, stems and model weights remain private/ignored. The panel identifies the
+transcripts as automatic drafts. Wrong words, omitted low-confidence segments and timing errors remain
+possible; no transcript has human approval. Timing follows the source, not an asserted exact vocal rendition.

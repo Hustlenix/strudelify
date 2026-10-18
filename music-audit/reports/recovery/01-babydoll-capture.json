@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-18T07:55:31.668Z",
-  "mode": "recovery",
-  "seconds": 100,
+  "generated_at": "2026-10-18T09:19:22.536Z",
+  "mode": "recovery01",
+  "seconds": 101,
   "runtime_version": "@strudel/web 1.2.6",
   "tracks": [
     {
       "id": "01-babydoll",
-      "sha256": "952a18347bd752fd79f0a3c71b7db4759deca1c4928e3e282ddc6b4ec75a110b",
+      "sha256": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
       "status": "PASSED",
       "sounds": [
         "triangle",
@@ -83,18 +83,18 @@
           }
         }
       ],
-      "peak": 0.8361418843269348,
-      "rms": 0.09578148261637401,
+      "peak": 0.8623759150505066,
+      "rms": 0.09544622411002102,
       "samples_at_or_above_0dbfs": 0,
-      "frames": 4800512,
+      "frames": 4853760,
       "sample_rate": 48000,
       "channels": 2,
       "scheduler_error": null,
-      "coverage": "100 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
-      "pcm_file": "artifacts/recovery-01-babydoll.f32",
+      "coverage": "101 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+      "pcm_file": "artifacts/recovery01-01-babydoll.f32",
       "console_errors": [],
       "failed_requests": [],
-      "capture_duration_s": 100.01066666666667,
+      "capture_duration_s": 101.12,
       "capture_duration_valid": true
     }
   ],
@@ -118,15 +118,15 @@
             }
           }
         ],
-        "peak": 0.0647619292140007,
-        "rms": 0.022251107586165417,
+        "peak": 0.06476520001888275,
+        "rms": 0.02732528391463076,
         "samples_at_or_above_0dbfs": 0,
         "frames": 143360,
         "sample_rate": 48000,
         "channels": 2,
         "scheduler_error": null,
         "coverage": "3 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
-        "pcm_file": "artifacts/recovery-control-sine.f32",
+        "pcm_file": "artifacts/recovery01-control-sine.f32",
         "console_errors": [],
         "failed_requests": [],
         "capture_duration_s": 2.986666666666667,

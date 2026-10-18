@@ -1,0 +1,49 @@
+{
+  "deployment_commit": "fb68de7948eb5290476fe11b6ac1dec40aa5c9a1",
+  "resources": [
+    {
+      "path": "index.html",
+      "matches_local": true
+    },
+    {
+      "path": "app.js",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/catalog.json",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/01-babydoll.strudel",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/02-without-me.strudel",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/03-everyday-normal-guy-2.strudel",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/04-sailor-song.strudel",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/05-cant-tell-me-nothing.strudel",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/06-love-me-not.strudel",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/07-i-thought-i-saw-your-face-today.strudel",
+      "matches_local": true
+    },
+    {
+      "path": "tracks/covers/08-lonely.strudel",
+      "matches_local": true
+    }
+  ]
+}

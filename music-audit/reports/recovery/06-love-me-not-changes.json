@@ -1,0 +1,45 @@
+[
+  {
+    "phase": "replace-unverified-pitch-and-rhythm-score",
+    "attempt": 1,
+    "reason": "Owner rejected every public song; current cover lead/harmony/groove were unverified and source evidence contradicts the old repeated notes. Preserve instrumentation roles but replace pitch/timing content with independently corroborated source events across the full reference.",
+    "before_sha256": "2e5012e1f7df2a2274b471f9118887eae2edfd9d095f57539c6086efe6115660",
+    "after_sha256": "689f9961042d87bdf74465f237b1f2ce0e549812d4f22b8a8b2e2306f064ce8a",
+    "profile": "sung",
+    "counts": {
+      "lead": 394,
+      "accompaniment": 631,
+      "bass": 177,
+      "drums": 940
+    },
+    "duration_s": 213.067,
+    "decision": "candidate, requires real runtime/full capture; no listening approval"
+  },
+  {
+    "phase": "measured-uniform-mix-gain",
+    "attempt": 1,
+    "factor": 1.816,
+    "before_metrics": {
+      "id": "06-love-me-not",
+      "source_code_sha256": "689f9961042d87bdf74465f237b1f2ce0e549812d4f22b8a8b2e2306f064ce8a",
+      "original_audio_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+      "capture_code_sha256": "689f9961042d87bdf74465f237b1f2ce0e549812d4f22b8a8b2e2306f064ce8a",
+      "capture_matches_current_code": true,
+      "capture_status": "PASSED",
+      "capture_duration_s": 216.064,
+      "reference_duration_s": 213.067,
+      "complete_duration_captured": true,
+      "integrated_lufs": -26.81,
+      "true_peak_dbtp": -8.18,
+      "loudness_range_lu": 7.3,
+      "nonfinite_samples": 0,
+      "full_scale_samples": 0,
+      "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\06-love-me-not-render.wav",
+      "critical_listening": "PENDING; this script measures signals only"
+    },
+    "before_sha256": "689f9961042d87bdf74465f237b1f2ce0e549812d4f22b8a8b2e2306f064ce8a",
+    "after_sha256": "c9494f00ce007b73330495b49dbf7cc91c4c6ca8ccd2c6603a78e285c85d0916",
+    "reason": "First full capture is quiet with unused peak headroom. Keep notes/timings unchanged; recapture before restoring runtime status.",
+    "decision": "requires new full capture; does not certify musical fidelity"
+  }
+]

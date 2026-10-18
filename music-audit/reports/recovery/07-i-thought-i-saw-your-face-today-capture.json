@@ -1,0 +1,170 @@
+{
+  "generated_at": "2026-10-18T09:01:44.370Z",
+  "mode": "recovery07",
+  "seconds": 173,
+  "runtime_version": "@strudel/web 1.2.6",
+  "tracks": [
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "sha256": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589",
+      "status": "PASSED",
+      "sounds": [
+        "triangle",
+        "sine",
+        "RolandTR909_bd",
+        "RolandTR909_sd",
+        "RolandTR909_hh"
+      ],
+      "unknown_sounds": [],
+      "assets": [
+        {
+          "sound": "triangle",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "sine",
+          "data": {
+            "type": "synth",
+            "prebake": true
+          }
+        },
+        {
+          "sound": "RolandTR909_bd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-bd/Bassdrum-04.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR909_sd",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/naredrum.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd04.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd05.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd06.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd07.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd08.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd09.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd10.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd11.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd12.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd13.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd14.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-sd/sd15.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        },
+        {
+          "sound": "RolandTR909_hh",
+          "data": {
+            "type": "sample",
+            "samples": [
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh01.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh02.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh03.wav",
+              "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/RolandTR909/rolandtr909-hh/hh04.wav"
+            ],
+            "baseUrl": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/main/machines/"
+          }
+        }
+      ],
+      "peak": 0.46972253918647766,
+      "rms": 0.07539805053950854,
+      "samples_at_or_above_0dbfs": 0,
+      "frames": 8306688,
+      "sample_rate": 48000,
+      "channels": 2,
+      "scheduler_error": null,
+      "coverage": "173 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+      "pcm_file": "artifacts/recovery07-07-i-thought-i-saw-your-face-today.f32",
+      "console_errors": [],
+      "failed_requests": [],
+      "capture_duration_s": 173.056,
+      "capture_duration_valid": true
+    }
+  ],
+  "controls": [
+    {
+      "id": "control-sine",
+      "status": "PASSED",
+      "expected": "PASSED",
+      "observed": {
+        "status": "PASSED",
+        "sounds": [
+          "sine"
+        ],
+        "unknown_sounds": [],
+        "assets": [
+          {
+            "sound": "sine",
+            "data": {
+              "type": "synth",
+              "prebake": true
+            }
+          }
+        ],
+        "peak": 0.06476520001888275,
+        "rms": 0.02732528391463076,
+        "samples_at_or_above_0dbfs": 0,
+        "frames": 143360,
+        "sample_rate": 48000,
+        "channels": 2,
+        "scheduler_error": null,
+        "coverage": "3 seconds of stereo floating-point WebAudio; no perceptual similarity claim",
+        "pcm_file": "artifacts/recovery07-control-sine.f32",
+        "console_errors": [],
+        "failed_requests": [],
+        "capture_duration_s": 2.986666666666667,
+        "capture_duration_valid": true
+      }
+    },
+    {
+      "id": "control-missing-bank",
+      "status": "PASSED",
+      "expected": "FAILED",
+      "observed": {
+        "status": "FAILED",
+        "sounds": [
+          "audit_missing_bank_bd"
+        ],
+        "unknown_sounds": [
+          "audit_missing_bank_bd"
+        ],
+        "reason": "Fully qualified bank/sample absent from registry",
+        "console_errors": [],
+        "failed_requests": [],
+        "capture_duration_s": 0,
+        "capture_duration_valid": true
+      }
+    },
+    {
+      "id": "control-silence",
+      "status": "PASSED",
+      "expected": "FAILED",
+      "observed": {
+        "status": "FAILED",
+        "reason": "No PCM tap",
+        "console_errors": [],
+        "failed_requests": [],
+        "capture_duration_s": 0,
+        "capture_duration_valid": true
+      }
+    }
+  ],
+  "scope": "Isolated music harness only; no player/application files touched."
+}

@@ -1,66 +1,45 @@
-# Known music issues and integration requirements
+# Known issues — current recovery
 
-## Public-site catalog mismatch — 18 October 2026
+## Babydoll
 
-The diagnostic initially found six Strudelify demo originals and none of the requested eight covers.
-The live covers catalog and all eight cover file URLs returned 404. See
-`RECOGNIZABILITY_RECOVERY.md` and `live-catalog.json` for reproduction and exact evidence.
-The owner rejected the public musical experience. The eight local drafts still need separate
-musical repair and listening review; integrating them alone will not establish fidelity.
-The owner subsequently authorized Codex integration/deployment. PR #3 connects the catalog,
-deep links and named sample banks from an isolated worktree. See catalog-integration.json;
-live deployment verification is recorded separately after Pages completes.
+192 vocal-contour and 210 accompaniment events across 98.112 seconds replace the old guessed loop. After owner feedback of partial recognition, measured median cent offsets were restored to the 192 vocal notes. The revised pitch centers need fresh listening; guitar tone, missing notes and phrasing still need work.
 
-## 1. Babydoll
+## Without Me
 
-Full source-timed score and 100-second capture now replace the old guessed loop. Check recognition, missing/fragmented notes, guitar timbre and drum classification through the actual review audio. Status remains runtime-verified; no listening approval is recorded. See recovery/01-babydoll-metrics.json.
+269 measured G1/D2 bass events replace the unsupported four-root bass loop. Signature riff and upper harmony remain unresolved; do not advertise this as a faithful cover.
 
-## 2. Without Me
+## Everyday Normal Guy 2
 
-The unsupported four-root bass loop is now replaced by 269 measured G1/D2 source events.
-A full 300-second real-time capture passed with zero clipped or non-finite samples.
-The signature riff and upper harmony remain unresolved. Three bounded source-led approaches
-did not establish the riff; the detected rap speech was not turned into a synth melody.
-This is a partial bass repair, not a completed faithful cover.
+601 corroborated instrumental note events replace the old repeating tune/harmony across 221.256 seconds. Spoken rap is omitted from the melodic layer.
 
-## 3. Everyday Normal Guy 2
+## Sailor Song
 
-The old repeated motif/harmony has been replaced by 601 independently corroborated instrumental
-note events across 221.256 seconds, plus measured low-note and transient candidates. Rap speech
-is omitted from the melodic layer. Runtime passes; full capture and recognition review are pending.
+338 vocal-contour and 1116 accompaniment events follow the actual 209.533-second recording interval. Fixed six-subdivision replacement groove removed; meter metadata is still approximate.
 
-## 4. Sailor Song
+## Can't Tell Me Nothing
 
-A finite source-timed score now replaces the repeated six-subdivision grid and guessed chord loop:
-338 vocal-contour and 1116 accompaniment candidates survived independent pitch/spectral checks.
-The event times follow the recording directly, avoiding an invented fixed meter. Timbre, missing
-notes, vocal slides and transient classification still need listening. Full capture is in progress.
+206 corroborated low-note events replace the guessed bass progression. Sparse instrumental-hook evidence prevented a whole-score replacement. The sample motif and upper harmony remain unresolved.
 
-## 5. Can't Tell Me Nothing
+## Love Me Not
 
-F-centered pitch repair and measured headroom are retained. The Fm/Db/Ab/Eb loop, sampled vocal motif and drum placement are unverified. Sparse full-mix note detections were not promoted to a melody.
+394 vocal-contour and 631 accompaniment events span 213.067 seconds, with measured low notes and transient candidates. Timbre and missing/fragmented notes need listening.
 
-## 6. Love Me Not
+## I Thought I Saw Your Face Today
 
-114 BPM and C-centered pitch fit improve measured alignment. Borrowed harmony/relative-mode details and vocal lead remain unverified. The 16.67 s source energy rise is reflected by the continuous envelope; it is not labeled as a confirmed chorus boundary.
+258 vocal-contour and 558 accompaniment events span 170.4 seconds. Percussion is quiet because broad-band transients do not prove a drum instrument.
 
-## 7. I Thought I Saw Your Face Today
+## Lonely
 
-78 BPM is a fixed approximation; source periodicity varies. G-centered transpose is not a complete transcription of the piano, voice or bass. Opening full-mix detections mix registers/instruments and were not substituted as a lead.
+538 vocal-contour and 78 accompaniment events span 263.064 seconds, plus measured low notes/transients. Source C/E/F/G material replaces the guessed minor-key loop; sample-voice octave errors and sparse accompaniment need review.
 
-## 8. Lonely
 
-F-centered transpose and the eight-subdivision kick repair are retained. The sampled vocal motif, Fm/Db/Bbm/C progression, bass and snare placement need source listening. Source energy/end are followed; the repeating lead is still a draft contour.
+## Application and review
 
-## Integration requirements for OpenCode
+The original deployed app exposed six demos and none of the requested covers. PR #3 fixed catalog
+integration. PR #4 contains the subsequently authorized player/lyrics work. The music-specific
+`playback-regressions.json` and its live counterpart record the exact app resource hashes and cases.
+Playback verification is separate from musical approval. Older already-open legacy tabs need to reload
+to participate in the new cross-tab transport ownership.
 
-- Resolve `codeUrl` against `tracks/covers/catalog.json`, then evaluate the complete script with Strudel 1.2.6. Preserve `all(...)` transforms and the Babydoll `Pattern`/`Hap`/`TimeSpan` declarations.
-- Preload the actual drum-machine sample map. Bare `bd/sd/hh` availability does not prove `RolandTR909_bd`, `RolandTR808_sd` or `LinnDrum_hh` availability. The harness uses `https://raw.githubusercontent.com/felixroos/dough-samples/main/tidal-drum-machines.json` and verifies requested resources. Missing-bank regression: `s("bd").bank("audit_missing_bank")` must fail.
-- The previous audit's unqualified sound lookup and six-second capture were insufficient: a fully loaded baseline produced samples above 0 dBFS in three tracks. Current composition trims resolve the measured windows. Do not remove them to loudness-match MP3 playback.
-- These tracks end after their usable reference durations. Playback needs a fresh scheduler start for a new song; seek semantics and application integration are OpenCode responsibilities and were not tested here.
-- Macro-dynamic automation and finite ends do not certify complete verse/chorus transcription. Keep the runtime-verified label visible in any music review workflow; do not call these approved faithful covers.
-- Never commit original MP3s, source excerpts, stems or model files. This branch contains no commercial audio assets. Local review audio remains ignored.
-
-The dated public catalog mismatch above is now reproduced by live HTTP/resource inspection.
-The other application requirements remain handoff requirements, not claims that application
-playback, scheduler behavior or browser-local tracks were tested in this diagnostic.
+Keep the complete score, named sample-map initialization, conservative gains and finite endings.
+Resolve `codeUrl` relative to `catalog.json`. No commercial recording or private stem may be committed.

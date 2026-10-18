@@ -1,0 +1,566 @@
+{
+  "id": "08-lonely",
+  "source_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+  "stem_sha256": "ff5e5184a12dc8897e357c3dc424142ac35e7da91f8b66c256f5175cabcc3197",
+  "method": "Basic Pitch 0.4.0 on MDX instrumental, onset .5/frame .3/min100ms; MIDI40-81, mean activation>=.43",
+  "status": "SOURCE_DERIVED_CANDIDATES_NOT_LISTENING_APPROVED",
+  "notes": [
+    {
+      "start_s": 14.5911,
+      "end_s": 15.4851,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4905
+    },
+    {
+      "start_s": 15.9392,
+      "end_s": 16.2991,
+      "midi": 52,
+      "note": "E3",
+      "activation": 0.4665
+    },
+    {
+      "start_s": 18.6107,
+      "end_s": 19.0403,
+      "midi": 53,
+      "note": "F3",
+      "activation": 0.5543
+    },
+    {
+      "start_s": 19.2725,
+      "end_s": 19.5047,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.4835
+    },
+    {
+      "start_s": 19.924,
+      "end_s": 20.5393,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4737
+    },
+    {
+      "start_s": 22.5607,
+      "end_s": 23.2225,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4531
+    },
+    {
+      "start_s": 23.4663,
+      "end_s": 23.6172,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.432
+    },
+    {
+      "start_s": 23.6869,
+      "end_s": 23.8855,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.6009
+    },
+    {
+      "start_s": 24.1177,
+      "end_s": 24.3383,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4753
+    },
+    {
+      "start_s": 25.1974,
+      "end_s": 26.174,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5002
+    },
+    {
+      "start_s": 26.5803,
+      "end_s": 26.917,
+      "midi": 52,
+      "note": "E3",
+      "activation": 0.4566
+    },
+    {
+      "start_s": 28.2418,
+      "end_s": 28.3579,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.4539
+    },
+    {
+      "start_s": 28.7991,
+      "end_s": 28.95,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.4488
+    },
+    {
+      "start_s": 29.1126,
+      "end_s": 29.2635,
+      "midi": 67,
+      "note": "G4",
+      "activation": 0.5302
+    },
+    {
+      "start_s": 31.2501,
+      "end_s": 31.3662,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5976
+    },
+    {
+      "start_s": 31.3662,
+      "end_s": 31.5171,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5685
+    },
+    {
+      "start_s": 39.8943,
+      "end_s": 40.1498,
+      "midi": 53,
+      "note": "F3",
+      "activation": 0.6901
+    },
+    {
+      "start_s": 40.1498,
+      "end_s": 40.3587,
+      "midi": 53,
+      "note": "F3",
+      "activation": 0.5857
+    },
+    {
+      "start_s": 40.5677,
+      "end_s": 40.7883,
+      "midi": 60,
+      "note": "C4",
+      "activation": 0.5348
+    },
+    {
+      "start_s": 41.2295,
+      "end_s": 41.7997,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5007
+    },
+    {
+      "start_s": 43.8327,
+      "end_s": 44.2855,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5192
+    },
+    {
+      "start_s": 66.3005,
+      "end_s": 66.4863,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5434
+    },
+    {
+      "start_s": 69.3204,
+      "end_s": 69.5178,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.4545
+    },
+    {
+      "start_s": 71.9816,
+      "end_s": 72.2022,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.4625
+    },
+    {
+      "start_s": 79.986,
+      "end_s": 80.2531,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.5431
+    },
+    {
+      "start_s": 82.5067,
+      "end_s": 82.9479,
+      "midi": 53,
+      "note": "F3",
+      "activation": 0.4315
+    },
+    {
+      "start_s": 87.6654,
+      "end_s": 87.7931,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5682
+    },
+    {
+      "start_s": 92.8344,
+      "end_s": 93.0898,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5912
+    },
+    {
+      "start_s": 97.8305,
+      "end_s": 98.0279,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5018
+    },
+    {
+      "start_s": 103.4768,
+      "end_s": 103.7206,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5681
+    },
+    {
+      "start_s": 106.5664,
+      "end_s": 106.7986,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4456
+    },
+    {
+      "start_s": 108.4833,
+      "end_s": 108.7039,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4442
+    },
+    {
+      "start_s": 108.7155,
+      "end_s": 108.9245,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.5232
+    },
+    {
+      "start_s": 108.9477,
+      "end_s": 109.1102,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5828
+    },
+    {
+      "start_s": 119.1361,
+      "end_s": 119.3812,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4758
+    },
+    {
+      "start_s": 122.61,
+      "end_s": 122.8422,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.499
+    },
+    {
+      "start_s": 123.9116,
+      "end_s": 124.2715,
+      "midi": 72,
+      "note": "C5",
+      "activation": 0.4592
+    },
+    {
+      "start_s": 130.2777,
+      "end_s": 130.4054,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5667
+    },
+    {
+      "start_s": 135.4945,
+      "end_s": 135.6918,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.6715
+    },
+    {
+      "start_s": 138.1312,
+      "end_s": 138.317,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.4924
+    },
+    {
+      "start_s": 140.4429,
+      "end_s": 140.6751,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4414
+    },
+    {
+      "start_s": 140.6867,
+      "end_s": 140.8957,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.5161
+    },
+    {
+      "start_s": 140.8492,
+      "end_s": 141.0466,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5292
+    },
+    {
+      "start_s": 146.0892,
+      "end_s": 146.3562,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.6218
+    },
+    {
+      "start_s": 146.5652,
+      "end_s": 146.7161,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.4693
+    },
+    {
+      "start_s": 148.7724,
+      "end_s": 148.9814,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.5746
+    },
+    {
+      "start_s": 150.5964,
+      "end_s": 151.0041,
+      "midi": 79,
+      "note": "G5",
+      "activation": 0.5985
+    },
+    {
+      "start_s": 151.0969,
+      "end_s": 151.3175,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4342
+    },
+    {
+      "start_s": 151.5265,
+      "end_s": 151.7007,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.4764
+    },
+    {
+      "start_s": 152.5366,
+      "end_s": 152.8036,
+      "midi": 67,
+      "note": "G4",
+      "activation": 0.566
+    },
+    {
+      "start_s": 154.6393,
+      "end_s": 154.8018,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.5025
+    },
+    {
+      "start_s": 162.0167,
+      "end_s": 162.1793,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.5332
+    },
+    {
+      "start_s": 167.8604,
+      "end_s": 168.1274,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.5227
+    },
+    {
+      "start_s": 172.4025,
+      "end_s": 172.6347,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5188
+    },
+    {
+      "start_s": 172.8914,
+      "end_s": 173.0191,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5749
+    },
+    {
+      "start_s": 188.7248,
+      "end_s": 188.9583,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.6305
+    },
+    {
+      "start_s": 193.7093,
+      "end_s": 193.9531,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.481
+    },
+    {
+      "start_s": 194.1505,
+      "end_s": 194.3246,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.4935
+    },
+    {
+      "start_s": 197.0672,
+      "end_s": 197.2761,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.4427
+    },
+    {
+      "start_s": 197.2761,
+      "end_s": 197.4619,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.5891
+    },
+    {
+      "start_s": 199.8316,
+      "end_s": 200.0522,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.5069
+    },
+    {
+      "start_s": 204.3853,
+      "end_s": 204.6175,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5442
+    },
+    {
+      "start_s": 204.5943,
+      "end_s": 204.8045,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.6626
+    },
+    {
+      "start_s": 204.7929,
+      "end_s": 204.9787,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.6222
+    },
+    {
+      "start_s": 207.8941,
+      "end_s": 208.0914,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.6117
+    },
+    {
+      "start_s": 220.6392,
+      "end_s": 220.9178,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4974
+    },
+    {
+      "start_s": 225.6689,
+      "end_s": 225.9243,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4803
+    },
+    {
+      "start_s": 226.1565,
+      "end_s": 226.2958,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5829
+    },
+    {
+      "start_s": 231.0133,
+      "end_s": 231.2804,
+      "midi": 64,
+      "note": "E4",
+      "activation": 0.5718
+    },
+    {
+      "start_s": 231.3268,
+      "end_s": 231.5822,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5651
+    },
+    {
+      "start_s": 234.0216,
+      "end_s": 234.2074,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.4749
+    },
+    {
+      "start_s": 235.834,
+      "end_s": 236.0314,
+      "midi": 79,
+      "note": "G5",
+      "activation": 0.727
+    },
+    {
+      "start_s": 236.5784,
+      "end_s": 236.7641,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.4703
+    },
+    {
+      "start_s": 236.8106,
+      "end_s": 236.9383,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5451
+    },
+    {
+      "start_s": 239.842,
+      "end_s": 240.0394,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.4802
+    },
+    {
+      "start_s": 242.4685,
+      "end_s": 242.7007,
+      "midi": 41,
+      "note": "F2",
+      "activation": 0.6001
+    },
+    {
+      "start_s": 247.2311,
+      "end_s": 247.3821,
+      "midi": 45,
+      "note": "A2",
+      "activation": 0.4857
+    },
+    {
+      "start_s": 247.4749,
+      "end_s": 247.6027,
+      "midi": 47,
+      "note": "B2",
+      "activation": 0.5318
+    },
+    {
+      "start_s": 250.4729,
+      "end_s": 250.6935,
+      "midi": 40,
+      "note": "E2",
+      "activation": 0.5005
+    }
+  ],
+  "limitations": [
+    "Possible omitted notes, octave errors, overtones and stem leakage.",
+    "These are timed note observations, not certified chord names or sections."
+  ]
+}

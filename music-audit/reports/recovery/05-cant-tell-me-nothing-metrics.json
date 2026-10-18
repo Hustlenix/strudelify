@@ -1,0 +1,18 @@
+{
+  "id": "05-cant-tell-me-nothing",
+  "source_code_sha256": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+  "original_audio_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+  "capture_code_sha256": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+  "capture_matches_current_code": true,
+  "capture_status": "PASSED",
+  "capture_duration_s": 274.09066666666666,
+  "reference_duration_s": 271.704,
+  "complete_duration_captured": true,
+  "integrated_lufs": -21.18,
+  "true_peak_dbtp": -3.76,
+  "loudness_range_lu": 2.3,
+  "nonfinite_samples": 0,
+  "full_scale_samples": 0,
+  "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\05-cant-tell-me-nothing-render.wav",
+  "critical_listening": "PENDING; this script measures signals only"
+}

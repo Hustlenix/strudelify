@@ -14,5 +14,32 @@
     },
     "duration_s": 221.256,
     "decision": "candidate, requires real runtime/full capture; no listening approval"
+  },
+  {
+    "phase": "measured-uniform-mix-gain",
+    "attempt": 1,
+    "factor": 2.2,
+    "before_metrics": {
+      "id": "03-everyday-normal-guy-2",
+      "source_code_sha256": "7ff6c2243b8950f4701c9819895a519ae80608c081b54dab844c038f5ec4d848",
+      "original_audio_sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+      "capture_code_sha256": "7ff6c2243b8950f4701c9819895a519ae80608c081b54dab844c038f5ec4d848",
+      "capture_matches_current_code": true,
+      "capture_status": "PASSED",
+      "capture_duration_s": 224.17066666666668,
+      "reference_duration_s": 221.256,
+      "complete_duration_captured": true,
+      "integrated_lufs": -28.45,
+      "true_peak_dbtp": -9.05,
+      "loudness_range_lu": 3.8,
+      "nonfinite_samples": 0,
+      "full_scale_samples": 0,
+      "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\03-everyday-normal-guy-2-render.wav",
+      "critical_listening": "PENDING; this script measures signals only"
+    },
+    "before_sha256": "7ff6c2243b8950f4701c9819895a519ae80608c081b54dab844c038f5ec4d848",
+    "after_sha256": "e9dc670929ed8c589066ef20948353c258a00d47029cd70069fd39b25434e0e7",
+    "reason": "First full capture is quiet with unused peak headroom. Keep notes/timings unchanged; recapture before restoring runtime status.",
+    "decision": "requires new full capture; does not certify musical fidelity"
   }
 ]

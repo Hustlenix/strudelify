@@ -1,0 +1,130 @@
+[
+  {
+    "id": "01-babydoll",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\01-babydoll.mp3",
+    "sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+    "matches_preserved_source": true,
+    "current_sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad"
+  },
+  {
+    "id": "01-babydoll",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\Dominic Fike - Babydoll (Lyrics) - 7clouds.mp3",
+    "sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+    "matches_preserved_source": true,
+    "current_sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad"
+  },
+  {
+    "id": "02-without-me",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\02-without-me.mp3",
+    "sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+    "matches_preserved_source": true,
+    "current_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c"
+  },
+  {
+    "id": "02-without-me",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\Eminem - Without Me (Official Music Video) - EminemVEVO.mp3",
+    "sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+    "matches_preserved_source": true,
+    "current_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c"
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\03-everyday-normal-guy-2.mp3",
+    "sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+    "matches_preserved_source": true,
+    "current_sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d"
+  },
+  {
+    "id": "03-everyday-normal-guy-2",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\Everyday Normal Guy 2 - Jon Lajoie _ Wolfie\u2019s Just Fine.mp3",
+    "sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+    "matches_preserved_source": true,
+    "current_sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d"
+  },
+  {
+    "id": "04-sailor-song",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\04-sailor-song.mp3",
+    "sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+    "matches_preserved_source": true,
+    "current_sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0"
+  },
+  {
+    "id": "04-sailor-song",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\Gigi Perez - Sailor Song (Lyrics) - Taggart Douds.mp3",
+    "sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+    "matches_preserved_source": true,
+    "current_sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0"
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\05-cant-tell-me-nothing.mp3",
+    "sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+    "matches_preserved_source": true,
+    "current_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0"
+  },
+  {
+    "id": "05-cant-tell-me-nothing",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\Kanye West - Can't Tell Me Nothing - KanyeWestVEVO.mp3",
+    "sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0",
+    "matches_preserved_source": true,
+    "current_sha256": "ec8308b6fe978b485d058ba7d22e2c83f1748fdea4a8bc3bfbff9d11e48238c0"
+  },
+  {
+    "id": "06-love-me-not",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\06-love-me-not.mp3",
+    "sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+    "matches_preserved_source": true,
+    "current_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d"
+  },
+  {
+    "id": "06-love-me-not",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\Ravyn Lenae - Love Me Not (Lyrics) - Vibely.mp3",
+    "sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+    "matches_preserved_source": true,
+    "current_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\07-i-thought-i-saw-your-face-today.mp3",
+    "sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+    "matches_preserved_source": true,
+    "current_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4"
+  },
+  {
+    "id": "07-i-thought-i-saw-your-face-today",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\She & Him - I Thought I Saw Your Face Today (Official Lyric Video) - SheandHimOfficial.mp3",
+    "sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+    "matches_preserved_source": true,
+    "current_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4"
+  },
+  {
+    "id": "08-lonely",
+    "kind": "album copy",
+    "path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\08-lonely.mp3",
+    "sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+    "matches_preserved_source": true,
+    "current_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0"
+  },
+  {
+    "id": "08-lonely",
+    "kind": "original playlist",
+    "path": "C:\\Users\\LalithReddy.b\\media\\playlists\\Akon - Lonely (Official Music Video) - AkonVEVO.mp3",
+    "sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+    "matches_preserved_source": true,
+    "current_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0"
+  }
+]

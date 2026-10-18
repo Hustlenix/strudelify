@@ -1,0 +1,18 @@
+{
+  "id": "08-lonely",
+  "source_code_sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+  "original_audio_sha256": "6f84d36dfa0130620d3846ab72d87a80f16dbfcbd22a3b172f81539ab0743fd0",
+  "capture_code_sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+  "capture_matches_current_code": true,
+  "capture_status": "PASSED",
+  "capture_duration_s": 266.06933333333336,
+  "reference_duration_s": 263.064,
+  "complete_duration_captured": true,
+  "integrated_lufs": -22.02,
+  "true_peak_dbtp": -3.09,
+  "loudness_range_lu": 6.2,
+  "nonfinite_samples": 0,
+  "full_scale_samples": 0,
+  "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\08-lonely-render.wav",
+  "critical_listening": "PENDING; this script measures signals only"
+}

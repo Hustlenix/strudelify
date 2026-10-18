@@ -1,0 +1,221 @@
+{
+  "id": "06-love-me-not",
+  "language": "en",
+  "reviewStatus": "draft",
+  "method": "Whisper small.en via faster-whisper 1.2.1; local vocal residual",
+  "source_sha256": "87075555d3cba0e310b0711c83aced762326c81912671fb20ead78d85b32f65d",
+  "duration": 213.067,
+  "notice": "Automatic transcript from the supplied recording; words and timing may contain errors. Uncertain segments are omitted.",
+  "cues": [
+    {
+      "start": 56.46,
+      "end": 57.8,
+      "text": "But I miss you,"
+    },
+    {
+      "start": 57.86,
+      "end": 58.48,
+      "text": "come here"
+    },
+    {
+      "start": 58.48,
+      "end": 59.56,
+      "text": "And oh,"
+    },
+    {
+      "start": 59.68,
+      "end": 60.96,
+      "text": "it's hard to see you"
+    },
+    {
+      "start": 60.96,
+      "end": 62.7,
+      "text": "But I miss you over here"
+    },
+    {
+      "start": 63.14,
+      "end": 63.7,
+      "text": "Oh,"
+    },
+    {
+      "start": 63.7,
+      "end": 65.16,
+      "text": "it's hard to leave you"
+    },
+    {
+      "start": 65.16,
+      "end": 66.54,
+      "text": "When I get you everywhere"
+    },
+    {
+      "start": 67.38,
+      "end": 67.94,
+      "text": "Oh,"
+    },
+    {
+      "start": 67.96,
+      "end": 69.16,
+      "text": "this time I'm thinking"
+    },
+    {
+      "start": 69.16,
+      "end": 71.52,
+      "text": "I'm strong enough to sink in"
+    },
+    {
+      "start": 71.52,
+      "end": 72.1,
+      "text": "Oh,"
+    },
+    {
+      "start": 72.12,
+      "end": 72.5,
+      "text": "no,"
+    },
+    {
+      "start": 72.64,
+      "end": 73.6,
+      "text": "I don't need you"
+    },
+    {
+      "start": 73.6,
+      "end": 74.68,
+      "text": "But I miss you,"
+    },
+    {
+      "start": 74.68,
+      "end": 75.58,
+      "text": "come here"
+    },
+    {
+      "start": 75.58,
+      "end": 76.9,
+      "text": "He love me now,"
+    },
+    {
+      "start": 77.1,
+      "end": 77.76,
+      "text": "he loves me"
+    },
+    {
+      "start": 77.76,
+      "end": 79.02,
+      "text": "He holds me tight,"
+    },
+    {
+      "start": 79.2,
+      "end": 80.12,
+      "text": "then lets me go"
+    },
+    {
+      "start": 80.12,
+      "end": 81.14,
+      "text": "He love me now,"
+    },
+    {
+      "start": 81.16,
+      "end": 82.0,
+      "text": "he loves me"
+    },
+    {
+      "start": 82.0,
+      "end": 83.26,
+      "text": "He holds me tight,"
+    },
+    {
+      "start": 83.26,
+      "end": 84.44,
+      "text": "then lets me go"
+    },
+    {
+      "start": 84.44,
+      "end": 86.3,
+      "text": "Soon as you leave me"
+    },
+    {
+      "start": 86.3,
+      "end": 88.52,
+      "text": "We always lose connection"
+    },
+    {
+      "start": 88.52,
+      "end": 90.38,
+      "text": "It's getting messy"
+    },
+    {
+      "start": 90.38,
+      "end": 92.66,
+      "text": "I feel that you're affection"
+    },
+    {
+      "start": 93.5,
+      "end": 95.22,
+      "text": "Don't loosen your grip"
+    },
+    {
+      "start": 95.22,
+      "end": 97.12,
+      "text": "Gotta hold on me"
+    },
+    {
+      "start": 97.12,
+      "end": 97.7,
+      "text": "Now,"
+    },
+    {
+      "start": 97.86,
+      "end": 98.66,
+      "text": "forever"
+    },
+    {
+      "start": 98.66,
+      "end": 101.7,
+      "text": "Let's get back together"
+    },
+    {
+      "start": 101.7,
+      "end": 102.68,
+      "text": "No,"
+    },
+    {
+      "start": 103.04,
+      "end": 103.76,
+      "text": "I take it"
+    },
+    {
+      "start": 103.76,
+      "end": 106.1,
+      "text": "So far away"
+    },
+    {
+      "start": 106.1,
+      "end": 108.04,
+      "text": "I break it"
+    },
+    {
+      "start": 108.04,
+      "end": 110.32,
+      "text": "But we don't break"
+    },
+    {
+      "start": 110.32,
+      "end": 112.14,
+      "text": "I want you"
+    },
+    {
+      "start": 112.14,
+      "end": 114.98,
+      "text": "To take me up and down"
+    },
+    {
+      "start": 199.9,
+      "end": 200.96,
+      "text": "But I miss you,"
+    },
+    {
+      "start": 200.98,
+      "end": 201.88,
+      "text": "come here"
+    }
+  ]
+}

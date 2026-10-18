@@ -27,5 +27,15 @@
     "change": "Apply gain factor 2.6 after the first 100-second WebAudio capture measured -26.6 LUFS and -9.5 dBTP. Second full capture measures -18.37 LUFS, -1.5 dBTP, zero clipped/nonfinite samples. Preserve transcribed note content.",
     "after_sha256": "952a18347bd752fd79f0a3c71b7db4759deca1c4928e3e282ddc6b4ec75a110b",
     "decision": "runtime-verified; listening remains pending"
+  },
+  {
+    "phase": "measured-vocal-intonation",
+    "attempt": 1,
+    "before_sha256": "952a18347bd752fd79f0a3c71b7db4759deca1c4928e3e282ddc6b4ec75a110b",
+    "after_sha256": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
+    "notes": 192,
+    "change": "Preserve each corroborated source note's measured median cent deviation instead of forcing its pitch center to an integer MIDI note. No note onsets, durations, gain balance or accompaniment changes.",
+    "evidence": "01-babydoll-score.json cents_median from the original full CREPE observations and independent YIN corroboration.",
+    "limits": "A measured pitch-center correction, not proof of improved recognition. Does not solve missing notes, vocal slides or guitar timbre. Requires fresh capture/listening."
   }
 ]

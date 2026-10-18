@@ -1,0 +1,8 @@
+{
+  "reviewer": "owner",
+  "result": "partially recognizable",
+  "feedback": "Partially sounding like Babydoll but not completely. Wants closer musical transcription, lyrics on right, View code preserved, overlap and logic errors fixed.",
+  "approved": false,
+  "reviewed_code_sha256": "952a18347bd752fd79f0a3c71b7db4759deca1c4928e3e282ddc6b4ec75a110b",
+  "subsequent_revision": "Vocal median cent offsets restored; fresh owner listening pending"
+}

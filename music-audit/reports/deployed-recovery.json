@@ -1,0 +1,235 @@
+{
+  "generated_at": "2026-10-18T09:40:54.850493+00:00",
+  "base_url": "https://hustlenix.github.io/strudelify/",
+  "main_commit": "0b6e42ce2fc1f236df8f673470724a564a1d1c5f",
+  "pages_run_id": 39116032718,
+  "normalization": "CRLF to LF for Git text checkout comparison",
+  "resource_count": 28,
+  "resources": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 16396,
+      "local_sha256_lf": "45673609430f3b3eeb7554cc8cbaa50b830781c441049355f151c20ae8c2537c",
+      "public_sha256_lf": "45673609430f3b3eeb7554cc8cbaa50b830781c441049355f151c20ae8c2537c",
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "bytes": 42201,
+      "local_sha256_lf": "2c60747b3bfe8a9c71c2dbdfdd9243b9354ef3489afabcd2356bba79a3ca89cd",
+      "public_sha256_lf": "2c60747b3bfe8a9c71c2dbdfdd9243b9354ef3489afabcd2356bba79a3ca89cd",
+      "matches": true
+    },
+    {
+      "path": "styles.css",
+      "http_status": 200,
+      "bytes": 30757,
+      "local_sha256_lf": "a7e76810b6aebe3a4f7f1f604ce358862de41b5660dbe01cc0dcb3b5d5247b87",
+      "public_sha256_lf": "a7e76810b6aebe3a4f7f1f604ce358862de41b5660dbe01cc0dcb3b5d5247b87",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/catalog.json",
+      "http_status": 200,
+      "bytes": 1788,
+      "local_sha256_lf": "651781ebf56620972aacda870dcae0db8fecb8000d721cc688602a68b7984732",
+      "public_sha256_lf": "651781ebf56620972aacda870dcae0db8fecb8000d721cc688602a68b7984732",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/01-babydoll.strudel",
+      "http_status": 200,
+      "bytes": 31533,
+      "local_sha256_lf": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
+      "public_sha256_lf": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/01-babydoll.json",
+      "http_status": 200,
+      "bytes": 3852,
+      "local_sha256_lf": "cf1e016af7aa8cf2ccdacee560f9c385c37a76a8f6f1cbcb36623909d70879f1",
+      "public_sha256_lf": "cf1e016af7aa8cf2ccdacee560f9c385c37a76a8f6f1cbcb36623909d70879f1",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/01-babydoll.svg",
+      "http_status": 200,
+      "bytes": 17090,
+      "local_sha256_lf": "4994d965a2685be437e0f60c5aee7f11a91ee28b025c02e52587253845b15085",
+      "public_sha256_lf": "4994d965a2685be437e0f60c5aee7f11a91ee28b025c02e52587253845b15085",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/02-without-me.strudel",
+      "http_status": 200,
+      "bytes": 10231,
+      "local_sha256_lf": "ba8a0a0a58d2631a616bed83ef47838d4c47f1afd4b0e304f4bc25d816ab68f1",
+      "public_sha256_lf": "ba8a0a0a58d2631a616bed83ef47838d4c47f1afd4b0e304f4bc25d816ab68f1",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/02-without-me.json",
+      "http_status": 200,
+      "bytes": 9112,
+      "local_sha256_lf": "34c6ad4854df1ebaf731809247dbceef1899b927f20871265b833b051b672669",
+      "public_sha256_lf": "34c6ad4854df1ebaf731809247dbceef1899b927f20871265b833b051b672669",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/02-without-me.svg",
+      "http_status": 200,
+      "bytes": 17088,
+      "local_sha256_lf": "1956b7f7477fc90bc7e546c60819dc33aa524fcf3080ce109b71e2f38d4a80d8",
+      "public_sha256_lf": "1956b7f7477fc90bc7e546c60819dc33aa524fcf3080ce109b71e2f38d4a80d8",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/03-everyday-normal-guy-2.strudel",
+      "http_status": 200,
+      "bytes": 54911,
+      "local_sha256_lf": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+      "public_sha256_lf": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/03-everyday-normal-guy-2.json",
+      "http_status": 200,
+      "bytes": 12992,
+      "local_sha256_lf": "de4484caac24638d283d8eaee6dc9b96cd9372787640a6d0abe72715296310c0",
+      "public_sha256_lf": "de4484caac24638d283d8eaee6dc9b96cd9372787640a6d0abe72715296310c0",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/03-everyday-normal-guy-2.svg",
+      "http_status": 200,
+      "bytes": 17114,
+      "local_sha256_lf": "4ae2c0cabbdb74e86bcbc9f800a5e6abf046c1ee36504d5c2c7af7d9a45b1192",
+      "public_sha256_lf": "4ae2c0cabbdb74e86bcbc9f800a5e6abf046c1ee36504d5c2c7af7d9a45b1192",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/04-sailor-song.strudel",
+      "http_status": 200,
+      "bytes": 73553,
+      "local_sha256_lf": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+      "public_sha256_lf": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/04-sailor-song.json",
+      "http_status": 200,
+      "bytes": 5410,
+      "local_sha256_lf": "0c5b18acdb1782631b17899d3590467df4a34ba04a4e3587b3e0b1f77d83bdf9",
+      "public_sha256_lf": "0c5b18acdb1782631b17899d3590467df4a34ba04a4e3587b3e0b1f77d83bdf9",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/04-sailor-song.svg",
+      "http_status": 200,
+      "bytes": 17094,
+      "local_sha256_lf": "6a73fd100f595e9b9c649bedef9dfb3c21eb21d84410e1e9e5aed51ab094188e",
+      "public_sha256_lf": "6a73fd100f595e9b9c649bedef9dfb3c21eb21d84410e1e9e5aed51ab094188e",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/05-cant-tell-me-nothing.strudel",
+      "http_status": 200,
+      "bytes": 8513,
+      "local_sha256_lf": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+      "public_sha256_lf": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/05-cant-tell-me-nothing.json",
+      "http_status": 200,
+      "bytes": 11233,
+      "local_sha256_lf": "85e1ba06d7aa0b95cdad3a85d0b49da4154f370ce5caf4f0872b1f30377b5a39",
+      "public_sha256_lf": "85e1ba06d7aa0b95cdad3a85d0b49da4154f370ce5caf4f0872b1f30377b5a39",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/05-cant-tell-me-nothing.svg",
+      "http_status": 200,
+      "bytes": 17124,
+      "local_sha256_lf": "d834d143baf235effc0b3ac351128cae6de3fe33d783c69c95edc1d294ebe53d",
+      "public_sha256_lf": "d834d143baf235effc0b3ac351128cae6de3fe33d783c69c95edc1d294ebe53d",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/06-love-me-not.strudel",
+      "http_status": 200,
+      "bytes": 65340,
+      "local_sha256_lf": "c9494f00ce007b73330495b49dbf7cc91c4c6ca8ccd2c6603a78e285c85d0916",
+      "public_sha256_lf": "c9494f00ce007b73330495b49dbf7cc91c4c6ca8ccd2c6603a78e285c85d0916",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/06-love-me-not.json",
+      "http_status": 200,
+      "bytes": 4048,
+      "local_sha256_lf": "de93febe01976b9fcc1085682a337da3fe3143dc9f2041f62a9d2e9eb49e273b",
+      "public_sha256_lf": "de93febe01976b9fcc1085682a337da3fe3143dc9f2041f62a9d2e9eb49e273b",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/06-love-me-not.svg",
+      "http_status": 200,
+      "bytes": 17095,
+      "local_sha256_lf": "77a523416f2b5384f3ad816ce581d6793786285c538ea6955ac6be4034bef16a",
+      "public_sha256_lf": "77a523416f2b5384f3ad816ce581d6793786285c538ea6955ac6be4034bef16a",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/07-i-thought-i-saw-your-face-today.strudel",
+      "http_status": 200,
+      "bytes": 48749,
+      "local_sha256_lf": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589",
+      "public_sha256_lf": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/07-i-thought-i-saw-your-face-today.json",
+      "http_status": 200,
+      "bytes": 4699,
+      "local_sha256_lf": "ea0d58bc822a6e6243ce4d464038fa8373fbf4d894dbdc8893bd252360d2d566",
+      "public_sha256_lf": "ea0d58bc822a6e6243ce4d464038fa8373fbf4d894dbdc8893bd252360d2d566",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/07-i-thought-i-saw-your-face-today.svg",
+      "http_status": 200,
+      "bytes": 17137,
+      "local_sha256_lf": "5957a7d60aabe60aa011c8dd6fb23ce20d9173f26f1cce78e7ef78a22699c38f",
+      "public_sha256_lf": "5957a7d60aabe60aa011c8dd6fb23ce20d9173f26f1cce78e7ef78a22699c38f",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/08-lonely.strudel",
+      "http_status": 200,
+      "bytes": 49028,
+      "local_sha256_lf": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+      "public_sha256_lf": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/lyrics/08-lonely.json",
+      "http_status": 200,
+      "bytes": 8111,
+      "local_sha256_lf": "f518e4c8963e288d02484299755cd41756aa166fe73ae3c01d38dc0e886af0af",
+      "public_sha256_lf": "f518e4c8963e288d02484299755cd41756aa166fe73ae3c01d38dc0e886af0af",
+      "matches": true
+    },
+    {
+      "path": "tracks/covers/art/08-lonely.svg",
+      "http_status": 200,
+      "bytes": 17078,
+      "local_sha256_lf": "ddfd858be43456f3fa70b70f9e3fa7cf72d5946953eb9b53b24fec7042037c41",
+      "public_sha256_lf": "ddfd858be43456f3fa70b70f9e3fa7cf72d5946953eb9b53b24fec7042037c41",
+      "matches": true
+    }
+  ],
+  "passed": true
+}

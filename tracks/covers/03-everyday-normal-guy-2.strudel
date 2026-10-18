@@ -1811,3 +1811,6 @@ const kit = new Pattern(state => drums.flatMap(([a,b,sound,level]) => {
   return part ? [new Hap(whole, part, {s:sound,bank:'RolandTR909',gain:level})] : []
 }))
 $: kit.withValue(v => ({...v,gain:v.gain*.14}))
+
+// Measured uniform mix adjustment; preserves source notes, balance and timing.
+all(p => p.withValue(v => ({...v,gain:(v.gain ?? 1)*2.2})))

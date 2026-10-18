@@ -1,62 +1,39 @@
-# Music recognition recovery
+# Music and playback recovery
 
-These tools operate only in the music worktree and audit directory. Original recordings are
-read-only. Models, stems, reference excerpts and rendered audio remain ignored local files.
+All eight current scores have matching full real-time Strudel captures. See ../reports/recovery/current-status.json. No song is musically approved. The owner described an earlier Babydoll render as partly recognizable; its later measured intonation correction still needs listening.
 
-The source recordings are essential evidence. Detector output is a transcription candidate,
-not a substitute for comparative listening. Rap speech must not be promoted to a sung melody.
+Six scores use corroborated source note and timing events across their usable recording intervals. Without Me and Can't Tell Me Nothing have bounded bass corrections; their hooks and upper parts remain unresolved. Rap speech was not turned into a sung melody. The 100-song expansion remains deferred.
 
-## Completed candidate checkpoint
+## Ownership and data
 
-Babydoll has a full source-timed score, independent pitch/spectral corroboration, a real Strudel
-event check and a full real-time stereo capture. The original guessed melody and G/D/Em/C
-loop have been removed. Full capture: 100.0107 s, -18.37 LUFS, -1.5 dBTP, zero clipped or
-non-finite samples. These measurements establish playback/headroom, not musical approval.
-The 22-second local listening excerpt is:
+Music edits stay in tracks/covers/ and music-audit/ on agent/codex-music. The owner later authorized catalog integration/deployment, then player fixes and lyrics. Application changes use the separate strudelify-catalog worktree on codex/playback-reliability (PR #4). OpenCode's checkout is untouched.
 
-`artifacts/recovery/01-babydoll-hook-review.wav` (relative to `music-audit/`).
+Original MP3s are read-only. Stems, excerpts, renders, raw frames and model weights remain ignored local files. The private ../review.html pairs actual recordings with current full renders. Only code, metadata, transcript drafts and reports are committed.
 
-The owner has been asked to review recognition. No positive review is recorded yet.
+## Tools and reproduction
 
-Without Me has complete private stems and separate note/rhythm observations. Its detected rap
-speech is **not** accepted as a melodic lead. Basic Pitch did not recover the signature riff;
-the fold and five-note template experiments did not establish a reliable transcription. Those
-failed approaches are evidence of an unresolved issue, not completed melody repairs. Preserve
-the prior arrangement until a better supported phrase is ready. Work on the remaining songs
-continues separately; do not call the eight repaired based on the first candidate.
+Pitch tools use music-audit/.venv and torchcrepe 0.0.24. crepe_compat.py replaces only its optional file loader with SoundFile because no matching Torchaudio wheel exists for the installed Torch build; the network, weights and decoding are unchanged. Inference supplies tensors directly.
 
-## Reproduction
+The sequence is transcribe.py, accompaniment.py, corroborate.py and rhythm.py, followed by one supported initial compose.py candidate. Later changes are targeted scripts with before/after hashes. compose.py refuses automatic rewrites and rejects sparse instrumental melody evidence. The historical remaining.py stopped at that guard; it is not a regeneration command for current scores.
 
-Use the dedicated `music-audit/.venv` with dependencies listed in the earlier environment report,
-plus `torchcrepe==0.0.24`. The installed Torch build has no matching Torchaudio wheel; the
-`crepe_compat.py` helper replaces only torchcrepe's optional file reader with SoundFile, leaving
-the network, packaged weights, decoding and inference unchanged. `transcribe.py` supplies its
-own tensors, so it does not call that optional file loader.
+Run current audio QA from the music worktree:
+rtk proxy music-audit/.venv/Scripts/python.exe -X utf8 music-audit/recovery/qa.py 01-babydoll
 
-```powershell
-rtk proxy music-audit/.venv/Scripts/python.exe -X utf8 music-audit/recovery/crepe_compat.py
-rtk proxy music-audit/.venv/Scripts/python.exe -X utf8 music-audit/recovery/transcribe.py 01-babydoll 98.112 full
-rtk proxy music-audit/.venv/Scripts/python.exe -X utf8 music-audit/recovery/accompaniment.py 01-babydoll
-rtk proxy music-audit/.venv/Scripts/python.exe -X utf8 music-audit/recovery/corroborate.py 01-babydoll
-rtk proxy music-audit/.venv/Scripts/python.exe -X utf8 music-audit/recovery/rhythm.py 01-babydoll
-```
+qa.py permits at most one measured mix-gain correction followed by a full capture. status.py indexes matching hashes; final_reports.py refuses an incomplete full-capture handoff. review_page.py rebuilds the private A/B page.
 
-`compose.py` makes one initial event-score candidate from the evidence and refuses repeated
-rewrites. Later musical changes are targeted edits with recorded reasons and captures.
-The generated sound/bank data must use single-quoted strings: Strudel transforms double-quoted
-and backtick strings into Patterns. The runtime worker now rejects unresolved Pattern-valued
-sound/bank controls, a defect caught during this repair before its passing full capture.
+Lyrics use host Python, faster-whisper 1.2.1 and Whisper small.en:
+rtk proxy python -X utf8 music-audit/recovery/lyrics.py small.en
 
-The attempted offline graph render was abandoned: its context did not initially inherit
-Superdough's effect factories, and the next experiment did not complete. Its failure record is
-retained as `reports/recovery/01-babydoll-offline-attempt.json`. The candidate's passing evidence
-comes from the existing actual **real-time** Strudel/WebAudio capture harness, not that experiment.
+Word timestamps form phrase boundaries. These are automatic drafts from supplied recordings, not web lyrics or human-approved text. Uncertain segments are omitted.
 
-## Review limits
+Custom Hap sound/bank data use single-quoted literal strings. Strudel transforms double-quoted strings into Patterns; the runtime worker rejects unresolved instrument controls.
 
-- CREPE/YIN agreement supports pitch observations but does not identify the instrument or prove recognition.
-- Basic Pitch plus spectral evidence can still miss chord tones or retain overtones.
-- Low-note and noisy transient extraction can misclassify instruments; listen before acceptance.
-- Keep slides and short inflections under review. Do not force them into a guessed key or fill gaps.
-- Runtime status can be restored after checks; `listening-reviewed` and `approved` need real observations.
-- On 18 October the owner explicitly authorized Codex catalog integration and deployment. Application edits are isolated in the codex/catalog-integration worktree; the music worktree still owns music files only.
+## Application validation
+
+playback-regressions.mjs exercises the real app, pinned runtime, actual requests and WebAudio in isolated Chromium under normal autoplay policy. It checks cancellation, newest-song ownership, all covers, hardware suspension after Stop, previews, syntax errors, other app tabs, saved-cover migration, navigation, matching lyrics, mobile controls and complete View code. App resource hashes must remain unchanged during a run.
+
+The early aggregate probe also observed non-hardware OfflineAudioContext rendering used for reverb impulses. That produced false residual-audio readings. The corrected probe instruments only real AudioContext outputs and separately asserts native suspension. The diagnostic is preserved in ../reports/recovery/offline-context-probe-diagnostic.json; a hardware-only recheck is retained. Earlier full captures selected their first real master-output tap, not the later impulse-generation taps.
+
+The attempted offline whole-song renderer was abandoned and its failure is preserved in 01-babydoll-offline-attempt.json. Passing captures are real-time WebAudio.
+
+Detector agreement does not prove recognition or instrument identity. Missing notes, octave errors, slides, sparse harmony and percussion classification need listening. See ../reports/MUSICAL_QUALITY.md and ../reports/KNOWN_ISSUES.md.

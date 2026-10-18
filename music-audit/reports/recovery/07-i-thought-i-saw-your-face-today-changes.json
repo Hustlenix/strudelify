@@ -1,0 +1,45 @@
+[
+  {
+    "phase": "replace-unverified-pitch-and-rhythm-score",
+    "attempt": 1,
+    "reason": "Owner rejected every public song; current cover lead/harmony/groove were unverified and source evidence contradicts the old repeated notes. Preserve instrumentation roles but replace pitch/timing content with independently corroborated source events across the full reference.",
+    "before_sha256": "96810dbc3de0c55026528ee69de27e0a0bea755c37aa564ae0f7626cf16f9934",
+    "after_sha256": "fa5958dd17ab49846e72f805fb983649fd663d0ff9690ad38f966da91ca7bd3d",
+    "profile": "sung",
+    "counts": {
+      "lead": 258,
+      "accompaniment": 558,
+      "bass": 142,
+      "drums": 628
+    },
+    "duration_s": 170.4,
+    "decision": "candidate, requires real runtime/full capture; no listening approval"
+  },
+  {
+    "phase": "measured-uniform-mix-gain",
+    "attempt": 1,
+    "factor": 2.5,
+    "before_metrics": {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "source_code_sha256": "fa5958dd17ab49846e72f805fb983649fd663d0ff9690ad38f966da91ca7bd3d",
+      "original_audio_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+      "capture_code_sha256": "fa5958dd17ab49846e72f805fb983649fd663d0ff9690ad38f966da91ca7bd3d",
+      "capture_matches_current_code": true,
+      "capture_status": "PASSED",
+      "capture_duration_s": 173.14133333333334,
+      "reference_duration_s": 170.4,
+      "complete_duration_captured": true,
+      "integrated_lufs": -28.47,
+      "true_peak_dbtp": -14.27,
+      "loudness_range_lu": 6.9,
+      "nonfinite_samples": 0,
+      "full_scale_samples": 0,
+      "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\07-i-thought-i-saw-your-face-today-render.wav",
+      "critical_listening": "PENDING; this script measures signals only"
+    },
+    "before_sha256": "fa5958dd17ab49846e72f805fb983649fd663d0ff9690ad38f966da91ca7bd3d",
+    "after_sha256": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589",
+    "reason": "First full capture is quiet with unused peak headroom. Keep notes/timings unchanged; recapture before restoring runtime status.",
+    "decision": "requires new full capture; does not certify musical fidelity"
+  }
+]

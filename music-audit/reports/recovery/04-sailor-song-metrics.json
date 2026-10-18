@@ -1,0 +1,18 @@
+{
+  "id": "04-sailor-song",
+  "source_code_sha256": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+  "original_audio_sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+  "capture_code_sha256": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+  "capture_matches_current_code": true,
+  "capture_status": "PASSED",
+  "capture_duration_s": 212.05333333333334,
+  "reference_duration_s": 209.533,
+  "complete_duration_captured": true,
+  "integrated_lufs": -21.07,
+  "true_peak_dbtp": -2.75,
+  "loudness_range_lu": 3.6,
+  "nonfinite_samples": 0,
+  "full_scale_samples": 0,
+  "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\04-sailor-song-render.wav",
+  "critical_listening": "PENDING; this script measures signals only"
+}

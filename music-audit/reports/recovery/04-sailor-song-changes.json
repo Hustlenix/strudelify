@@ -14,5 +14,32 @@
     },
     "duration_s": 209.533,
     "decision": "candidate, requires real runtime/full capture; no listening approval"
+  },
+  {
+    "phase": "measured-uniform-mix-gain",
+    "attempt": 1,
+    "factor": 1.764,
+    "before_metrics": {
+      "id": "04-sailor-song",
+      "source_code_sha256": "4c7c252b091e41b722d20d9bfd6dda93598045ac106989409b084dff9d05319e",
+      "original_audio_sha256": "60856062b32316672b3119c09b2cb1fe869d31649603481e3e71d3ed0a0285a0",
+      "capture_code_sha256": "4c7c252b091e41b722d20d9bfd6dda93598045ac106989409b084dff9d05319e",
+      "capture_matches_current_code": true,
+      "capture_status": "PASSED",
+      "capture_duration_s": 212.13866666666667,
+      "reference_duration_s": 209.533,
+      "complete_duration_captured": true,
+      "integrated_lufs": -25.99,
+      "true_peak_dbtp": -7.93,
+      "loudness_range_lu": 3.4,
+      "nonfinite_samples": 0,
+      "full_scale_samples": 0,
+      "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\04-sailor-song-render.wav",
+      "critical_listening": "PENDING; this script measures signals only"
+    },
+    "before_sha256": "4c7c252b091e41b722d20d9bfd6dda93598045ac106989409b084dff9d05319e",
+    "after_sha256": "285feeb7231d540b683dfaf3ce56a3b22ee85f68c08556caaf931ff882929dd8",
+    "reason": "First full capture is quiet with unused peak headroom. Keep notes/timings unchanged; recapture before restoring runtime status.",
+    "decision": "requires new full capture; does not certify musical fidelity"
   }
 ]

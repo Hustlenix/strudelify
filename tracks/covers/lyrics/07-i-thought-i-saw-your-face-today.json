@@ -1,0 +1,236 @@
+{
+  "id": "07-i-thought-i-saw-your-face-today",
+  "language": "en",
+  "reviewStatus": "draft",
+  "method": "Whisper small.en via faster-whisper 1.2.1; local vocal residual",
+  "source_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+  "duration": 170.4,
+  "notice": "Automatic transcript from the supplied recording; words and timing may contain errors. Uncertain segments are omitted.",
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 3.2,
+      "text": "I thought I saw your face today,"
+    },
+    {
+      "start": 3.2,
+      "end": 6.6,
+      "text": "but I just turned my head away."
+    },
+    {
+      "start": 6.98,
+      "end": 9.16,
+      "text": "Your face against the trees,"
+    },
+    {
+      "start": 9.32,
+      "end": 13.76,
+      "text": "but I just see the memories as they"
+    },
+    {
+      "start": 13.76,
+      "end": 14.54,
+      "text": "come,"
+    },
+    {
+      "start": 15.38,
+      "end": 18.0,
+      "text": "as they come,"
+    },
+    {
+      "start": 18.96,
+      "end": 22.56,
+      "text": "and I couldn't help but fall in love"
+    },
+    {
+      "start": 22.56,
+      "end": 23.46,
+      "text": "again."
+    },
+    {
+      "start": 24.58,
+      "end": 25.46,
+      "text": "No,"
+    },
+    {
+      "start": 25.5,
+      "end": 29.5,
+      "text": "I couldn't help but fall in love again"
+    },
+    {
+      "start": 31.22,
+      "end": 35.26,
+      "text": "I saw it glitter as I grew and"
+    },
+    {
+      "start": 35.26,
+      "end": 36.08,
+      "text": "loved it"
+    },
+    {
+      "start": 36.08,
+      "end": 39.44,
+      "text": "Why I never knew I thought this place"
+    },
+    {
+      "start": 39.44,
+      "end": 40.94,
+      "text": "was heaven sent"
+    },
+    {
+      "start": 40.94,
+      "end": 45.0,
+      "text": "But now it's just a monument in my"
+    },
+    {
+      "start": 45.0,
+      "end": 46.06,
+      "text": "mind,"
+    },
+    {
+      "start": 46.06,
+      "end": 48.94,
+      "text": "in my mind"
+    },
+    {
+      "start": 48.94,
+      "end": 53.72,
+      "text": "And I couldn't help but fall in love"
+    },
+    {
+      "start": 53.72,
+      "end": 54.58,
+      "text": "again"
+    },
+    {
+      "start": 55.68,
+      "end": 56.6,
+      "text": "No,"
+    },
+    {
+      "start": 56.6,
+      "end": 60.8,
+      "text": "I couldn't help but fall in love again"
+    },
+    {
+      "start": 62.42,
+      "end": 66.18,
+      "text": "The cars and freeways implore me to stay"
+    },
+    {
+      "start": 66.18,
+      "end": 68.28,
+      "text": "away out of this place"
+    },
+    {
+      "start": 68.46,
+      "end": 72.36,
+      "text": "My mother said just keep your head and"
+    },
+    {
+      "start": 72.36,
+      "end": 75.88,
+      "text": "play it as it lays"
+    },
+    {
+      "start": 107.44,
+      "end": 111.24,
+      "text": "The cars and freeways implore me to stay"
+    },
+    {
+      "start": 111.24,
+      "end": 113.44,
+      "text": "away out of this place"
+    },
+    {
+      "start": 113.44,
+      "end": 117.38,
+      "text": "My mother said just keep your head and"
+    },
+    {
+      "start": 117.38,
+      "end": 121.24,
+      "text": "play it as it relates"
+    },
+    {
+      "start": 122.75,
+      "end": 126.98,
+      "text": "I somehow see what's beautiful and things that"
+    },
+    {
+      "start": 126.98,
+      "end": 128.92,
+      "text": "are ephemeral"
+    },
+    {
+      "start": 128.92,
+      "end": 132.24,
+      "text": "I'm my only friend of mine"
+    },
+    {
+      "start": 132.24,
+      "end": 134.98,
+      "text": "Love is just a piece of time in"
+    },
+    {
+      "start": 134.98,
+      "end": 136.18,
+      "text": "the world"
+    },
+    {
+      "start": 136.92,
+      "end": 139.12,
+      "text": "In the world"
+    },
+    {
+      "start": 140.12,
+      "end": 143.96,
+      "text": "And I couldn't help but fall in love"
+    },
+    {
+      "start": 143.96,
+      "end": 144.7,
+      "text": "again"
+    },
+    {
+      "start": 145.96,
+      "end": 146.84,
+      "text": "No,"
+    },
+    {
+      "start": 146.86,
+      "end": 150.74,
+      "text": "I couldn't help but fall in love again"
+    },
+    {
+      "start": 151.9,
+      "end": 152.78,
+      "text": "No,"
+    },
+    {
+      "start": 152.8,
+      "end": 156.58,
+      "text": "I couldn't help but fall in love again"
+    },
+    {
+      "start": 157.74,
+      "end": 158.6,
+      "text": "No,"
+    },
+    {
+      "start": 158.64,
+      "end": 162.44,
+      "text": "I couldn't help but fall in love again."
+    },
+    {
+      "start": 163.6,
+      "end": 164.46,
+      "text": "No,"
+    },
+    {
+      "start": 164.74,
+      "end": 166.06,
+      "text": "I couldn't help..."
+    }
+  ]
+}

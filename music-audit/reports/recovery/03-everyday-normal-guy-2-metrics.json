@@ -1,0 +1,18 @@
+{
+  "id": "03-everyday-normal-guy-2",
+  "source_code_sha256": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+  "original_audio_sha256": "3115c9da69333f7543470ee5cfd27f36b377057883a45b9863c0ea2a37e0344d",
+  "capture_code_sha256": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+  "capture_matches_current_code": true,
+  "capture_status": "PASSED",
+  "capture_duration_s": 224.08533333333332,
+  "reference_duration_s": 221.256,
+  "complete_duration_captured": true,
+  "integrated_lufs": -21.6,
+  "true_peak_dbtp": -2.55,
+  "loudness_range_lu": 3.9,
+  "nonfinite_samples": 0,
+  "full_scale_samples": 0,
+  "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\03-everyday-normal-guy-2-render.wav",
+  "critical_listening": "PENDING; this script measures signals only"
+}

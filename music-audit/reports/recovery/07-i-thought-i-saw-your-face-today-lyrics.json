@@ -1,0 +1,13 @@
+{
+  "id": "07-i-thought-i-saw-your-face-today",
+  "source_sha256": "1861af86641b0f7f0ae353a8fe40cf4e54c433e7c5e60cdda37eca68855af6a4",
+  "cues": 45,
+  "omitted": [
+    {
+      "start": 75.88,
+      "end": 77.24,
+      "reason": "low confidence or repetitive ASR"
+    }
+  ],
+  "status": "ASR_DRAFT_NOT_LISTENING_APPROVED"
+}
