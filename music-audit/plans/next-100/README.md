@@ -2,13 +2,13 @@
 
 Planning date: **18 October 2026, Asia/Calcutta**.
 
-## Scope and assumptions
+## Confirmed scope and focus
 
-Plan **100 additional individual songs**, delivered sequentially in **10 batches of 10**.
-These batches are release collections, not claims that the songs belong to a new artist album.
-If the owner means 100 complete albums, inventory each album's actual track list and re-estimate
-the scope before production. The optional regional preference is pending; the provisional mix
-is global hits plus Indian songs. This plan does not start 100 arrangements or a background job.
+The owner confirmed **100 additional individual songs** with a **Global / English focus**,
+delivered sequentially in **10 batches of 10**. These batches are release collections, not claims
+that the songs belong to a new artist album. English-language songs lead the selection; a
+non-English crossover can qualify when it has strong verified global demand. There are no
+reserved Indian-language quotas. This plan does not start 100 arrangements or a background job.
 
 The existing eight are separate from these 100. Their current catalog status is runtime-verified;
 full melody, bass, harmonic structure and critical listening remain incomplete. Their audit is
@@ -21,16 +21,14 @@ Reserve 100 slots now, but lock only the next **10 titles**. Recheck the candida
 immediately before each song starts. Later batches can use later viral releases instead of
 filling a frozen list with songs that stopped trending months earlier.
 
-Provisional allocations, with no duplicate counting between lanes:
+Proposed genre allocations within the confirmed focus, with no duplicate counting between lanes:
 
 | Lane | Per batch | Total |
 |---|---:|---:|
-| Global pop / R&B / other mainstream releases | 5 | 50 |
-| Hindi / Indian film or independent music | 1 | 10 |
-| Tamil music | 1 | 10 |
-| Other Indian languages / Punjabi | 1 | 10 |
-| Global dance / Latin / Afrobeats / K-pop | 1 | 10 |
-| Emerging breakout, any region | 1 | 10 |
+| Global / English pop, R&B, singer-songwriter and country | 6 | 60 |
+| English-language alternative, indie and rock | 2 | 20 |
+| Global electronic / dance | 1 | 10 |
+| Emerging Global / English breakout | 1 | 10 |
 | **Total** | **10** | **100** |
 
 Selection requirements:
@@ -62,15 +60,14 @@ Selection requirements:
 - [YouTube Charts](https://charts.youtube.com/charts/TopSongs/global/weekly): chart entries were not available through text extraction in this research pass; use a permitted visible session/export when selecting.
 - [TikTok trend discovery](https://ads.tiktok.com/business/creativecenter/inspiration/popular/music/pc/en): redirected to the current Creative Center; no dated song metrics were verified in this pass.
 
-Do not substitute stale search snippets for inaccessible live trend data. Indian slots remain
-unfilled until current regional evidence is verified. The ten named research candidates in
+Do not substitute stale search snippets for inaccessible live trend data. The ten named research candidates in
 `candidates-2026-10-18.json` are **chart-verified candidates, not certified viral selections**.
 Their references, release dates, arrangements and social-growth evidence are still pending.
 
 ### Initial research shortlist
 
-These are investigation candidates as of 18 October, not the locked first batch. The regional
-slots still need their own research. Positions refer to the dated sources linked above.
+These are investigation candidates as of 18 October, not the locked first batch. Check each
+recording against the confirmed focus and selection gates. Positions refer to the dated sources linked above.
 
 | Song | Artist as charted | Verified chart signal |
 |---|---|---|
@@ -172,7 +169,7 @@ recording must not be uploaded/committed merely to make comparisons convenient.
 | 3 | 021–030 | Review repetitive arrangements and correct missing section contrasts |
 | 4 | 031–040 | Confirm source/recording identity, tempo ambiguity and version handling |
 | 5 | 041–050 | Midpoint review of the complete catalog and unresolved major issues |
-| 6 | 051–060 | Refresh regional selections and keep arrangements musically distinct |
+| 6 | 051–060 | Refresh global demand and keep arrangements musically distinct |
 | 7 | 061–070 | Recheck melodic recognizability, bass detail and transition quality |
 | 8 | 071–080 | Review dense arrangements and delayed-entry sample resources |
 | 9 | 081–090 | Recheck freshness of the remaining shortlist and full-duration audio evidence |
@@ -221,7 +218,7 @@ Calendar completion also depends on full-reference availability and actual liste
 
 ## Immediate next work when composition is started
 
-1. Apply the owner's song-vs-album and regional choices to the reserved slots.
+1. Select within the confirmed 100-song Global / English scope and the proposed genre lanes.
 2. Verify current growth evidence and the exact full reference for the first candidate.
 3. Code and compare its principal phrase before committing to the complete arrangement.
 4. Finish its natural full form and full-duration validation before calling it finished.
