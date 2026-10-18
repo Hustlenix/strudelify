@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-18T13:23:37.422Z",
+  "started_at": "2026-10-18T13:28:52.546Z",
   "browser": "firefox",
   "checks": [
     {
@@ -22,13 +22,13 @@
       "name": "Trusted click audio and true pause/resume preserve scheduler/session",
       "status": "PASSED",
       "before": {
-        "time": 0.9493333333333334,
+        "time": 0.896,
         "revision": 1,
-        "peak": 0.10924575477838516
+        "peak": 0.10925279557704926
       },
-      "frozen": 1.0453333333333332,
+      "frozen": 0.9813333333333333,
       "resumed": {
-        "time": 1.3546666666666667,
+        "time": 1.312,
         "revision": 1
       }
     },
@@ -51,8 +51,8 @@
     {
       "name": "afterglow real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.10924790799617767,
-      "frames": 4833280,
+      "peak": 0.109249047935009,
+      "frames": 4878336,
       "current": "afterglow",
       "error": "",
       "scheduler_origin": 0
@@ -61,7 +61,7 @@
       "name": "greenline real audio and silent Stop",
       "status": "PASSED",
       "peak": 0.21909667551517487,
-      "frames": 5382144,
+      "frames": 5394432,
       "current": "greenline",
       "error": "",
       "scheduler_origin": 0
@@ -69,8 +69,8 @@
     {
       "name": "paper-moon real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.1939755529165268,
-      "frames": 6115328,
+      "peak": 0.1939806044101715,
+      "frames": 6090752,
       "current": "paper-moon",
       "error": "",
       "scheduler_origin": 0
@@ -78,8 +78,8 @@
     {
       "name": "soft-focus real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.1305963397026062,
-      "frames": 6856704,
+      "peak": 0.12385544180870056,
+      "frames": 6791168,
       "current": "soft-focus",
       "error": "",
       "scheduler_origin": 0
@@ -88,7 +88,7 @@
       "name": "tiny-hours real audio and silent Stop",
       "status": "PASSED",
       "peak": 0.2367142289876938,
-      "frames": 7299072,
+      "frames": 7348224,
       "current": "tiny-hours",
       "error": "",
       "scheduler_origin": 0
@@ -96,8 +96,8 @@
     {
       "name": "wide-awake real audio and silent Stop",
       "status": "PASSED",
-      "peak": 0.10893723368644714,
-      "frames": 8032256,
+      "peak": 0.18159370124340057,
+      "frames": 8257536,
       "current": "wide-awake",
       "error": "",
       "scheduler_origin": 0
@@ -125,53 +125,35 @@
   ],
   "errors": [],
   "requests": [
-    "http://127.0.0.1:54342/",
-    "http://127.0.0.1:54342/styles.css?v=beta-arranged-20261018",
+    "http://127.0.0.1:55162/",
+    "http://127.0.0.1:55162/styles.css?v=beta-arranged-20261018",
     "https://unpkg.com/@strudel/web@1.2.6",
-    "http://127.0.0.1:54342/app.js?v=beta-arranged-20261018",
-    "http://127.0.0.1:54342/assets/covers/greenline.svg",
-    "http://127.0.0.1:54342/assets/covers/paper-moon.svg",
-    "http://127.0.0.1:54342/assets/covers/afterglow.svg",
+    "http://127.0.0.1:55162/app.js?v=beta-arranged-20261018",
+    "http://127.0.0.1:55162/assets/covers/greenline.svg",
+    "http://127.0.0.1:55162/assets/covers/paper-moon.svg",
+    "http://127.0.0.1:55162/assets/covers/afterglow.svg",
     "https://unpkg.com/@strudel/web@1.2.6/dist/index.js",
-    "http://127.0.0.1:54342/tracks/catalog.json",
-    "http://127.0.0.1:54342/release.json",
-    "http://127.0.0.1:54342/assets/covers/soft-focus.svg",
-    "http://127.0.0.1:54342/assets/covers/tiny-hours.svg",
-    "http://127.0.0.1:54342/assets/covers/wide-awake.svg",
-    "http://127.0.0.1:54342/assets/icon.svg",
-    "http://127.0.0.1:54342/tracks/afterglow.strudel",
-    "http://127.0.0.1:54342/tracks/greenline.strudel",
-    "http://127.0.0.1:54342/tracks/greenline.strudel",
-    "http://127.0.0.1:54342/tracks/greenline.strudel",
-    "http://127.0.0.1:54342/tracks/paper-moon.strudel",
-    "http://127.0.0.1:54342/tracks/tiny-hours.strudel",
-    "http://127.0.0.1:54342/tracks/wide-awake.strudel",
-    "http://127.0.0.1:54342/tracks/soft-focus.strudel"
+    "http://127.0.0.1:55162/tracks/catalog.json",
+    "http://127.0.0.1:55162/release.json",
+    "http://127.0.0.1:55162/assets/icon.svg",
+    "http://127.0.0.1:55162/assets/covers/soft-focus.svg",
+    "http://127.0.0.1:55162/assets/covers/tiny-hours.svg",
+    "http://127.0.0.1:55162/assets/covers/wide-awake.svg",
+    "http://127.0.0.1:55162/tracks/afterglow.strudel",
+    "http://127.0.0.1:55162/tracks/greenline.strudel",
+    "http://127.0.0.1:55162/tracks/greenline.strudel",
+    "http://127.0.0.1:55162/tracks/greenline.strudel",
+    "http://127.0.0.1:55162/tracks/paper-moon.strudel",
+    "http://127.0.0.1:55162/tracks/tiny-hours.strudel",
+    "http://127.0.0.1:55162/tracks/wide-awake.strudel",
+    "http://127.0.0.1:55162/tracks/soft-focus.strudel"
   ],
   "build": {
-    "created_at": "2026-10-18T13:23:35.464343+00:00",
-    "commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
-    "dirty": true,
-    "worktree_dirty_including_audit_reports": true,
-    "uncommitted_payload_paths": [
-      "COPYING",
-      "LICENSING.md",
-      "NOTICE.md",
-      "README.md",
-      "THIRD_PARTY_ASSETS.md",
-      "app.js",
-      "index.html",
-      "tracks/afterglow.strudel",
-      "tracks/catalog.json",
-      "tracks/greenline.strudel",
-      "tracks/paper-moon.strudel",
-      "tracks/soft-focus.strudel",
-      "tracks/tiny-hours.strudel",
-      "tracks/wide-awake.strudel",
-      "release-audit/build_preview.py",
-      "release-audit/build_release.py",
-      "release-audit/release_policy.py"
-    ],
+    "created_at": "2026-10-18T13:28:40.091358+00:00",
+    "commit": "56a2f46ab434c6586d20a2b293661a2e86f4a2db",
+    "dirty": false,
+    "worktree_dirty_including_audit_reports": false,
+    "uncommitted_payload_paths": [],
     "publication": "review artifact; explicit approval required before deployment",
     "track_count": 6,
     "excluded": [
@@ -203,7 +185,7 @@
       },
       {
         "path": "SOURCE.html",
-        "sha256": "a7ce5329d8dcc6d95c3f442abd82f5d6f8bbd4a3ddab60100171e35a3178aee3"
+        "sha256": "3ecee24eaf2c3cc0c9fb777336bd18dfa4bc4b11ea0a8319e3449611eb51068f"
       },
       {
         "path": "THIRD_PARTY_ASSETS.md",
@@ -251,7 +233,7 @@
       },
       {
         "path": "source.zip",
-        "sha256": "8e10c73b4149a6b0ccc40f8e89f088af3bb8835676cb74d0ff4d97179f6478cc"
+        "sha256": "de7b3947c9ffd83b975497a15240bc6edd625e1f3efb6fa6c2d43607a992912f"
       },
       {
         "path": "styles.css",
@@ -259,7 +241,7 @@
       },
       {
         "path": "tracks/afterglow.strudel",
-        "sha256": "b122aa3d295e4bc06c28996acb0e7d1e7b87b3e24e77bb873a605646cec8a080"
+        "sha256": "a1183c8f9087b830a7835ec07b3e49c4351502992aeea83de1d387de9d2fd6aa"
       },
       {
         "path": "tracks/catalog.json",
@@ -267,33 +249,33 @@
       },
       {
         "path": "tracks/greenline.strudel",
-        "sha256": "3f2aaa224df60cc99562cb1216c805a69256eb238bbd2d17d3f52bacb8e74011"
+        "sha256": "28cde8f6cd19c90082a81c5f7e1b6d931ef2ddb66689e9f91e30131bc7c06dd5"
       },
       {
         "path": "tracks/paper-moon.strudel",
-        "sha256": "741d1a3f8cc0c468a9035aa5f51d4eec98544372c0b44736d1756e4b14d40e50"
+        "sha256": "cc110558e9fc54fb81de34f7d1618690f975063155fa9f025dade49bba2a53ad"
       },
       {
         "path": "tracks/soft-focus.strudel",
-        "sha256": "c641547c550a30b835982b3c33b24d7441eadb5710c0e135ba432921796e1560"
+        "sha256": "854873d03a6d56f065ddd2b084c09ed7f708077c53b60672b13aae76693e0eea"
       },
       {
         "path": "tracks/tiny-hours.strudel",
-        "sha256": "973aab2974c1ef46f598cc952c66ed7142cb884de562319c77588e3423cd60a3"
+        "sha256": "08b31498b1692c89192f4a05b0c63f2566f1c5a8546f44401b97d33f91e705af"
       },
       {
         "path": "tracks/wide-awake.strudel",
-        "sha256": "4c2fc39dfcadf8f3a23ed26bd6f6af23d23060979c6a86dfb92a69ba5c3d193c"
+        "sha256": "b24a71dc17e643c12528b42bf5a83da52a561f9770ed93ffde4f6d4eb2d73b26"
       }
     ]
   },
-  "tested_url": "http://127.0.0.1:54342/",
+  "tested_url": "http://127.0.0.1:55162/",
   "browser_version": "153.0",
   "console_diagnostics": [
     "Error"
   ],
   "pause_observation": {
-    "time": 1.0453333333333332,
+    "time": 0.9813333333333333,
     "context": "suspended",
     "paused": true,
     "playing": false,
@@ -301,14 +283,14 @@
     "resumes": [
       {
         "time": 0,
-        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nF1@https://unpkg.com/@strudel/web@1.2.6:6:11836\nn@https://unpkg.com/@strudel/web@1.2.6:6:12220\nEventListener.handleEvent*E1/w1<@https://unpkg.com/@strudel/web@1.2.6:6:12130\nE1@https://unpkg.com/@strudel/web@1.2.6:6:12105\nfA@https://unpkg.com/@strudel/web@1.2.6:78:77383\nensureEngine@http://127.0.0.1:54342/app.js?v=beta-arranged-20261018:107:62\npromise callback*@http://127.0.0.1:54342/app.js?v=beta-arranged-20261018:124:19\n"
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nF1@https://unpkg.com/@strudel/web@1.2.6:6:11836\nn@https://unpkg.com/@strudel/web@1.2.6:6:12220\nEventListener.handleEvent*E1/w1<@https://unpkg.com/@strudel/web@1.2.6:6:12130\nE1@https://unpkg.com/@strudel/web@1.2.6:6:12105\nfA@https://unpkg.com/@strudel/web@1.2.6:78:77383\nensureEngine@http://127.0.0.1:55162/app.js?v=beta-arranged-20261018:107:62\npromise callback*@http://127.0.0.1:55162/app.js?v=beta-arranged-20261018:124:19\n"
       },
       {
-        "time": 0.042666666666666665,
-        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nplayTrack/start<@http://127.0.0.1:54342/app.js?v=beta-arranged-20261018:201:38\nasync*playTrack@http://127.0.0.1:54342/app.js?v=beta-arranged-20261018:188:35\nasync*handleAction@http://127.0.0.1:54342/app.js?v=beta-arranged-20261018:514:83\n@http://127.0.0.1:54342/app.js?v=beta-arranged-20261018:540:15\nEventListener.handleEvent*@http://127.0.0.1:54342/app.js?v=beta-arranged-20261018:527:10\n"
+        "time": 0.032,
+        "stack": "AudioContext.prototype.resume@debugger eval code:7:61\nplayTrack/start<@http://127.0.0.1:55162/app.js?v=beta-arranged-20261018:201:38\nasync*playTrack@http://127.0.0.1:55162/app.js?v=beta-arranged-20261018:188:35\nasync*handleAction@http://127.0.0.1:55162/app.js?v=beta-arranged-20261018:514:83\n@http://127.0.0.1:55162/app.js?v=beta-arranged-20261018:540:15\nEventListener.handleEvent*@http://127.0.0.1:55162/app.js?v=beta-arranged-20261018:527:10\n"
       }
     ]
   },
   "status": "PASSED",
-  "finished_at": "2026-10-18T13:24:22.409Z"
+  "finished_at": "2026-10-18T13:29:38.894Z"
 }

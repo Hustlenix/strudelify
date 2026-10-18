@@ -1,33 +1,20 @@
-# Review checkpoint
+# Current beta continuation result
 
-Exact tested source commit: `84cb9525db54b583926e3d00a305ca2d3f6a8523`. Later report-only commits can carry this evidence;
-the ten runtime payload hashes in final-result.json must still match the tested artifact.
+Tested implementation: 56a2f46ab434c6586d20a2b293661a2e86f4a2db. Clean original-only artifact; 26 hashed resources plus release.json.
 
-- Chromium 155.0.8059.82: 18/18 passed.
-- Firefox 153.0: 18/18 passed.
-- Fresh existing public baseline: 17 checks passed and 28 resources match main `0b6e42ce2fc1f236df8f673470724a564a1d1c5f`.
-- Proposed candidate is local only: http://127.0.0.1:4189/.
-- Private title-blind music comparisons: http://127.0.0.1:4188/.
-- Six original synth patterns in the proposed public artifact; eight commercial studies preserved for review.
-- 16 original recording copies and 62 preserved music/art/lyric resources verified.
-- Public GitHub feedback draft/form added; real listener submissions are not fabricated.
-- Human music approval and publication/naming/license gates remain open. No new arrangements started.
+- 18 actual browser checks passed in Chromium and Firefox (36 total).
+- 12 publication policy tests passed. Three workflows passed actionlint; no cloud deploy/rollback performed.
+- Local deployment rehearsal passed 45 resource/exclusion checks. This is loopback evidence.
+- Six complete revised original captures: finite endings, no clipped/nonfinite samples, -24.5 to -22.6 LUFS.
+- Named full-track review: http://127.0.0.1:4190/ ; player: http://127.0.0.1:4190/player/
+- Six originals remain drafts. Zero full-track human approvals, physical device results or independent listener sessions.
 
-## Actual screenshots
+The combined source/license policy and exact source downloads are prepared. Public branding/provenance confirmation and owner review are pending.
+PR #6 remains a draft. No merge, deployment or live Pages configuration change occurred.
+Pages still needs to switch from legacy main-root publishing to Actions after approval and before merging.
+See ../CURRENT_STATUS.md and ../DEPLOYMENT.md for the concrete release sequence.
 
-![Chromium desktop](../evidence/chromium-desktop.png)
-![Chromium mobile](../evidence/chromium-mobile.png)
-![Firefox desktop](../evidence/firefox-desktop.png)
-![Firefox mobile](../evidence/firefox-mobile.png)
+Commercial studies/lyrics are excluded from the artifact; earlier public copies/history remain separate.
+The 100-song expansion, new platform features and full-stack migration have not started.
 
-Read RELEASE_CANDIDATE.md, MUSIC_RECOGNITION.md, RESOURCE_DECISIONS.md and THIRD_PARTY_ASSETS.md
-for scope, remaining faults and decisions. This checkpoint is review-ready; it is not a claim
-that all eight songs are recognizable or that the proposed artifact has been publicly released.
-
-## Linux CI confirmation
-
-[CI run 39120991230](https://github.com/Hustlenix/strudelify/actions/runs/39120991230) passed 18 checks each in Chromium 151 and Firefox 153. The tested PR merge snapshot is `a0603e7cb049cf7b0f5c5b1d46779376821b289f`, based on source branch commit `84cb9525db54b583926e3d00a305ca2d3f6a8523`. Firefox uses a PulseAudio virtual sink; this is real WebAudio validation, not physical-device or musical listening proof.
-
-## Music follow-up
-
-The owner supplied eight real excerpt comments, with no full-song approval. Everyday Normal Guy 2 interval 12.05–27.05 seconds remains preserved. Babydoll has one separate private lead-phrasing trial, captured for 101.12 seconds at -18.7 LUFS / -1.6 dBTP with zero clipped or nonfinite samples. It is unreviewed and unadopted. Compare the old/new/reference at http://127.0.0.1:4188/babydoll.html. The experiment score and audio are not uploaded.
+Detailed evidence: launch-continuation.json, original-balanced-quality.json, release-policy-tests.json and local-deployment-rehearsal.json.

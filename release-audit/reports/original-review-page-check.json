@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "audio": [
+    {
+      "url": "audio/afterglow.wav",
+      "seconds": 107.605333
+    },
+    {
+      "url": "audio/greenline.wav",
+      "seconds": 101.376
+    },
+    {
+      "url": "audio/paper-moon.wav",
+      "seconds": 109.568
+    },
+    {
+      "url": "audio/soft-focus.wav",
+      "seconds": 122.197333
+    },
+    {
+      "url": "audio/tiny-hours.wav",
+      "seconds": 94.890667
+    },
+    {
+      "url": "audio/wide-awake.wav",
+      "seconds": 109.141333
+    }
+  ],
+  "export_checked": true,
+  "human_review": false,
+  "fixture_only": true,
+  "errors": []
+}

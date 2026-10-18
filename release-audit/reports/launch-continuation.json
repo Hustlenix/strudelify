@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-10-18T13:31:34.488258+00:00",
+  "tested_commit": "56a2f46ab434c6586d20a2b293661a2e86f4a2db",
+  "artifact": "release-preview/launch-rc-20261018",
+  "artifact_dirty": false,
+  "public_resources": 26,
+  "candidate_tests": [
+    {
+      "browser": "chromium",
+      "version": "155.0.8059.82",
+      "checks": 18,
+      "status": "PASSED"
+    },
+    {
+      "browser": "firefox",
+      "version": "153.0",
+      "checks": 18,
+      "status": "PASSED"
+    }
+  ],
+  "original_tracks": [
+    {
+      "id": "greenline",
+      "duration_seconds": 100.307692,
+      "lufs": -23.0,
+      "true_peak_dbtp": -11.3,
+      "clipped_samples": 0,
+      "runtime_status": "PASSED",
+      "human_listening_approved": false
+    },
+    {
+      "id": "afterglow",
+      "duration_seconds": 106.461538,
+      "lufs": -23.1,
+      "true_peak_dbtp": -10.5,
+      "clipped_samples": 0,
+      "runtime_status": "PASSED",
+      "human_listening_approved": false
+    },
+    {
+      "id": "paper-moon",
+      "duration_seconds": 108.465116,
+      "lufs": -22.6,
+      "true_peak_dbtp": -8.6,
+      "clipped_samples": 0,
+      "runtime_status": "PASSED",
+      "human_listening_approved": false
+    },
+    {
+      "id": "soft-focus",
+      "duration_seconds": 120.941176,
+      "lufs": -24.5,
+      "true_peak_dbtp": -12.9,
+      "clipped_samples": 0,
+      "runtime_status": "PASSED",
+      "human_listening_approved": false
+    },
+    {
+      "id": "tiny-hours",
+      "duration_seconds": 93.714286,
+      "lufs": -23.0,
+      "true_peak_dbtp": -9.9,
+      "clipped_samples": 0,
+      "runtime_status": "PASSED",
+      "human_listening_approved": false
+    },
+    {
+      "id": "wide-awake",
+      "duration_seconds": 108,
+      "lufs": -22.8,
+      "true_peak_dbtp": -10.0,
+      "clipped_samples": 0,
+      "runtime_status": "PASSED",
+      "human_listening_approved": false
+    }
+  ],
+  "release_policy_tests": {
+    "tests_run": 12,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "human_evidence": false,
+    "fixture": "synthetic; never publication approval"
+  },
+  "workflow_lint": {
+    "tool": "actionlint 1.7.12",
+    "status": "passed",
+    "workflows": [
+      "mvp-checks.yml",
+      "pages-release.yml",
+      "pages-rollback.yml"
+    ],
+    "shellcheck": false,
+    "pyflakes": false,
+    "deployed": false
+  },
+  "local_deployment_rehearsal": {
+    "url": "http://127.0.0.1:4190/player/",
+    "checks": 45,
+    "passed": true,
+    "public_deployment": false
+  },
+  "listening_review_url": "http://127.0.0.1:4190/",
+  "player_url": "http://127.0.0.1:4190/player/",
+  "candidate_deployed": false,
+  "production_pages_source_changed": false,
+  "physical_device_results": 0,
+  "originals_human_approved": 0,
+  "commercial_studies_approved": 0,
+  "independent_listener_count": 0,
+  "expansion_started": false,
+  "pending": [
+    "Complete owner listening acceptance of included originals",
+    "Actual phone and laptop smoke tests",
+    "Public name decision and license/provenance confirmation",
+    "Explicit merge/deployment approval, switch Pages to Actions before merge, approved publication and live verification"
+  ],
+  "post_launch_goal": "5-10 actual independent listener sessions; no outreach or fabricated feedback",
+  "ci": {
+    "status": "pending push; earlier CI evidence does not cover this implementation"
+  },
+  "reference_recordings_unchanged": 16,
+  "prior_music_art_and_lyric_resources_preserved": 62
+}

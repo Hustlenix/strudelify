@@ -1,60 +1,31 @@
-## Review candidate for issue #5
+## Original-instrumental beta candidate for issue #5
 
-This PR prepares an incremental MVP review build. **Do not merge or deploy automatically.**
-The public main baseline remains `0b6e42ce2fc1f236df8f673470724a564a1d1c5f`.
+Finite originals now start reliably after switching and stop at intentional endings. This PR prepares a restricted public artifact and explicit owner-approved publication. **Keep draft; do not merge or deploy automatically.**
 
 ### Changes
 
-- Real Pause/Resume preserves audio position; Stop remains a hard reset. Fixed first-gesture
-  initialization and a reproduced stale-resume/new-selection race.
-- Accessible mobile Stop/Next/Previous, source-error retry, complete actual View code and
-  explicit GitHub listener-feedback drafts/form.
-- Original-only public catalog and allowlisted preview artifact; native synths only.
-  Eight commercial-song studies remain preserved for private review. Automatic commercial
-  lyric files are removed from this branch tip after exact private preservation.
-- Strudel source/license/copyright links, provenance ledger and decisions for all 40 supplied
-  kit resources. No backend, framework, UI-system or production dependency migration.
-- Locked Playwright tooling and a PR-check workflow that does not deploy.
-- Private title-blind A/B fixtures, honest recognition status and the preserved 100-slot plan
-  with ten researched candidates and three deferred research pilots.
+- Native Pause/Resume, hard Stop, cancellation/race fixes and mobile transport remain. New reproduced fix: Stop resets the active REPL clock; a finite score no longer inherits the preceding song cycle and misses its opening.
+- Six original note patterns and sounds retained with finite sections, fading outros and measured constant level balance. Earlier versions preserved in Git and the separate music worktree.
+- Original-only exact artifact allowlist, nested source archive inspection, SHA-256 manifest and complete source download with exact upstream runtime revision. Combined release licensing policy documented; prior MIT grants retained.
+- Manual Pages publication and rollback workflows, actual-approval guard, 90-day immutable artifact retention, and post-deploy file/exclusion/player verification. Switch Pages from legacy root publishing to Actions after approval and before merging.
+- Named complete-track local review with manual JSON export; contextual GitHub bug reports remain.
 
-### Evidence
+### Verification
 
-Exact tested source: `84cb9525db54b583926e3d00a305ca2d3f6a8523`. See
-`release-audit/reports/final-result.json` and `FINAL_RESULT.md` for source/resource hashes.
-Final report-only commits retain the same runtime payload.
+Tested source: 56a2f46ab434c6586d20a2b293661a2e86f4a2db. See release-audit/reports/launch-continuation.json.
 
-- 18 actual player/UI/audio checks per browser in Chromium and Firefox, including 1280px
-  desktop and fresh 390px mobile controls.
-- Existing public baseline rechecked: 17 browser checks passed and all 28 deployed text
-  resources match the expected main build.
-- All 16 source-recording copies unchanged. Existing scores and art preserved; lyric drafts
-  preserved privately and in prior music/Git history.
-- Actual desktop/mobile screenshots: `release-audit/evidence/`.
+- Chromium and Firefox: 18 real WebAudio/player checks each passed locally.
+- Six complete before/after captures: no clipping/nonfinite samples; final output -24.5 to -22.6 LUFS; all finite endings stop.
+- 12 policy tests passed; three workflows passed actionlint 1.7.12. No cloud deployment or rollback rehearsal is claimed.
+- Local file-serving rehearsal: 26 exact resources plus release.json and 19 withheld paths checked (45 recorded resource checks).
+- 16 original recording copies unchanged; prior music/art/lyric resources preserved. No recordings, private comparisons, models or commercial lyric files in the artifact.
 
-### Still open
+### Pending owner gates
 
-No commercial-song study is approved. The owner has now reviewed eight excerpts: four title
-selections with continued negative quality comments, and four “Unsure / none” responses.
-Only Everyday Normal Guy 2's 12.05–27.05s passage received a positive passage-specific comment;
-its full arrangement is not approved. Reference-reveal state is unknown, so no controlled
-blind-test result or fidelity score is claimed. Five to ten independent real listener sessions remain pending.
+Full listening acceptance of the included originals; physical phone/laptop smoke tests; public name choice or upstream naming permission; license/provenance confirmation; exact release approval. All six originals remain drafts. No commercial study is approved. Five to ten independent sessions are a post-launch feedback goal under the latest report.
 
-One separate private Babydoll lead-phrasing trial uses the measured F0/envelope curves within
-corroborated note regions. It has a real 101.12-second capture, -18.7 LUFS, -1.6 dBTP and no
-clipped/nonfinite samples. It remains unreviewed and unadopted. The experiment score and all
-audio/control-frame material stay ignored/private; only the method and audit evidence are in this PR.
+The currently public site remains the older release. This PR preparation does not remove earlier Git history or external caches.
 
-Integrated-app license/naming and commercial composition/lyric permission decisions remain
-open. The current public site still serves the older studies/lyrics until a reviewed replacement
-is approved; this branch cannot remove already published history by itself.
-
-Local owner preview: http://127.0.0.1:4189/
-Private listening page: http://127.0.0.1:4188/ (commercial reference audio stays local).
-Labeled Babydoll old/new/reference comparison: http://127.0.0.1:4188/babydoll.html.
-These are loopback review URLs, not public deployments.
-
-The 100-song composition loop remains stopped. Read `release-audit/RELEASE_CANDIDATE.md`,
-`MUSIC_RECOGNITION.md`, `RESOURCE_DECISIONS.md` and `THIRD_PARTY_ASSETS.md` before release approval.
-
-Linux CI run 39120991230 passed all 18 checks in Chromium and Firefox on the corrected transport. See reports/ci-verified.json.
+Owner review: http://127.0.0.1:4190/ ; actual candidate: http://127.0.0.1:4190/player/ .
+These are local URLs. Read release-audit/CURRENT_STATUS.md, release-audit/DEPLOYMENT.md and LICENSING.md.
+The 100-song composition loop and full-stack migration remain deferred.

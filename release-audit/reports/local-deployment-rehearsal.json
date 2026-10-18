@@ -1,0 +1,253 @@
+{
+  "checked_at": "2026-10-18T13:29:38.354382+00:00",
+  "url": "http://127.0.0.1:4190/player/",
+  "commit": "56a2f46ab434c6586d20a2b293661a2e86f4a2db",
+  "checks": [
+    {
+      "path": "COPYING",
+      "status": "PASSED",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "LICENSE",
+      "status": "PASSED",
+      "sha256": "bc45603a7d1b28fb98d46e19b4ea68f05bd29296abbd8b872648db22578ff671"
+    },
+    {
+      "path": "LICENSING.md",
+      "status": "PASSED",
+      "sha256": "f73964cca6885877b4628d9ff9278abc124e65caa832409bfae1c19ae8096583"
+    },
+    {
+      "path": "NOTICE.md",
+      "status": "PASSED",
+      "sha256": "9563aa321efa6856d4984f96e55e7ab61fc87f2cd461395b8bb86e89163ef36b"
+    },
+    {
+      "path": "README.md",
+      "status": "PASSED",
+      "sha256": "06b7876526c6e6513e6759b09d91442b9ca449ee591ec33da1c36b2c11635ef0"
+    },
+    {
+      "path": "SOURCE.html",
+      "status": "PASSED",
+      "sha256": "3ecee24eaf2c3cc0c9fb777336bd18dfa4bc4b11ea0a8319e3449611eb51068f"
+    },
+    {
+      "path": "THIRD_PARTY_ASSETS.md",
+      "status": "PASSED",
+      "sha256": "fa1305ca26b5f6c18f03944a021130acb0752c0eb83bc61052426e131e8ddedc"
+    },
+    {
+      "path": "app.js",
+      "status": "PASSED",
+      "sha256": "f540332424b4177b953065b4c76e905a7c49e7bc4d3039d02a43cbfbb8709441"
+    },
+    {
+      "path": "assets/covers/afterglow.svg",
+      "status": "PASSED",
+      "sha256": "c56f06c5454ca2c3774bbc5d0c72955cbaa3780e7f6c03a883718ef63ba40777"
+    },
+    {
+      "path": "assets/covers/greenline.svg",
+      "status": "PASSED",
+      "sha256": "2b495216ee214276900d06742d8c4de203a670099f996fbcd44bea6e17da7d40"
+    },
+    {
+      "path": "assets/covers/paper-moon.svg",
+      "status": "PASSED",
+      "sha256": "b3375d928e74b33f87da71b87c1e8eb2265fc23b88d2209e916c2e6c1547155c"
+    },
+    {
+      "path": "assets/covers/soft-focus.svg",
+      "status": "PASSED",
+      "sha256": "4fa13d3e6887f9614a38d3036522eaa7d09957ae9d1c4c3e2db35cbbaf0eefde"
+    },
+    {
+      "path": "assets/covers/tiny-hours.svg",
+      "status": "PASSED",
+      "sha256": "725fd724d6ab53b6604444ec770fae875382f02e95b15715b3dddfc6811bb1b9"
+    },
+    {
+      "path": "assets/covers/wide-awake.svg",
+      "status": "PASSED",
+      "sha256": "d96404d4e3cbad0283e2973e4bfa366e8d73aae5297d9171e0a83c7d2a0f7e2b"
+    },
+    {
+      "path": "assets/icon.svg",
+      "status": "PASSED",
+      "sha256": "748da207789fae63ac2db26052f626cfe07054330d44f4460b4394c0b37daf88"
+    },
+    {
+      "path": "index.html",
+      "status": "PASSED",
+      "sha256": "761ee74a8fdd1f5d10aad6dac275a486cb0349282077825c086d118ac56adfe8"
+    },
+    {
+      "path": "licenses/Strudel-AGPL-3.0.txt",
+      "status": "PASSED",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "source.zip",
+      "status": "PASSED",
+      "sha256": "de7b3947c9ffd83b975497a15240bc6edd625e1f3efb6fa6c2d43607a992912f"
+    },
+    {
+      "path": "styles.css",
+      "status": "PASSED",
+      "sha256": "76e56cfd9170a82bbf61bc372ffcd9ecddb6d0f1863e55af5791baaca4a04edd"
+    },
+    {
+      "path": "tracks/afterglow.strudel",
+      "status": "PASSED",
+      "sha256": "a1183c8f9087b830a7835ec07b3e49c4351502992aeea83de1d387de9d2fd6aa"
+    },
+    {
+      "path": "tracks/catalog.json",
+      "status": "PASSED",
+      "sha256": "e5df6fbb5d5ca8d9dd23da60741db9d450b628a086bd506fefbd448e417053fd"
+    },
+    {
+      "path": "tracks/greenline.strudel",
+      "status": "PASSED",
+      "sha256": "28cde8f6cd19c90082a81c5f7e1b6d931ef2ddb66689e9f91e30131bc7c06dd5"
+    },
+    {
+      "path": "tracks/paper-moon.strudel",
+      "status": "PASSED",
+      "sha256": "cc110558e9fc54fb81de34f7d1618690f975063155fa9f025dade49bba2a53ad"
+    },
+    {
+      "path": "tracks/soft-focus.strudel",
+      "status": "PASSED",
+      "sha256": "854873d03a6d56f065ddd2b084c09ed7f708077c53b60672b13aae76693e0eea"
+    },
+    {
+      "path": "tracks/tiny-hours.strudel",
+      "status": "PASSED",
+      "sha256": "08b31498b1692c89192f4a05b0c63f2566f1c5a8546f44401b97d33f91e705af"
+    },
+    {
+      "path": "tracks/wide-awake.strudel",
+      "status": "PASSED",
+      "sha256": "b24a71dc17e643c12528b42bf5a83da52a561f9770ed93ffde4f6d4eb2d73b26"
+    },
+    {
+      "path": "tracks/covers/01-babydoll.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/02-without-me.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/03-everyday-normal-guy-2.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/04-sailor-song.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/05-cant-tell-me-nothing.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/06-love-me-not.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/07-i-thought-i-saw-your-face-today.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/08-lonely.strudel",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/01-babydoll.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/02-without-me.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/03-everyday-normal-guy-2.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/04-sailor-song.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/05-cant-tell-me-nothing.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/06-love-me-not.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/07-i-thought-i-saw-your-face-today.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "tracks/covers/lyrics/08-lonely.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "release-audit/private/listening/answer-key.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": ".git/config",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    },
+    {
+      "path": "release-audit/reports/baseline.json",
+      "expected": 404,
+      "actual": 404,
+      "status": "PASSED"
+    }
+  ],
+  "passed": true,
+  "boundary": "Manifest resources and enumerated withheld URLs only; no claim about third-party copies or caches."
+}

@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-10-18T13:21:27.678917+00:00",
+  "checked_at": "2026-10-18T13:29:39.293928+00:00",
   "preserved_files": [
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\afterglow.strudel",
-      "sha256": "b122aa3d295e4bc06c28996acb0e7d1e7b87b3e24e77bb873a605646cec8a080",
+      "sha256": "a1183c8f9087b830a7835ec07b3e49c4351502992aeea83de1d387de9d2fd6aa",
       "matches_baseline": false,
       "intentional_revision": "finite form and measured gain; notes/instruments retained",
       "preserved_baseline_commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
@@ -144,7 +144,7 @@
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\greenline.strudel",
-      "sha256": "3f2aaa224df60cc99562cb1216c805a69256eb238bbd2d17d3f52bacb8e74011",
+      "sha256": "28cde8f6cd19c90082a81c5f7e1b6d931ef2ddb66689e9f91e30131bc7c06dd5",
       "matches_baseline": false,
       "intentional_revision": "finite form and measured gain; notes/instruments retained",
       "preserved_baseline_commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
@@ -152,7 +152,7 @@
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\paper-moon.strudel",
-      "sha256": "741d1a3f8cc0c468a9035aa5f51d4eec98544372c0b44736d1756e4b14d40e50",
+      "sha256": "cc110558e9fc54fb81de34f7d1618690f975063155fa9f025dade49bba2a53ad",
       "matches_baseline": false,
       "intentional_revision": "finite form and measured gain; notes/instruments retained",
       "preserved_baseline_commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
@@ -160,7 +160,7 @@
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\soft-focus.strudel",
-      "sha256": "c641547c550a30b835982b3c33b24d7441eadb5710c0e135ba432921796e1560",
+      "sha256": "854873d03a6d56f065ddd2b084c09ed7f708077c53b60672b13aae76693e0eea",
       "matches_baseline": false,
       "intentional_revision": "finite form and measured gain; notes/instruments retained",
       "preserved_baseline_commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
@@ -168,7 +168,7 @@
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\tiny-hours.strudel",
-      "sha256": "973aab2974c1ef46f598cc952c66ed7142cb884de562319c77588e3423cd60a3",
+      "sha256": "08b31498b1692c89192f4a05b0c63f2566f1c5a8546f44401b97d33f91e705af",
       "matches_baseline": false,
       "intentional_revision": "finite form and measured gain; notes/instruments retained",
       "preserved_baseline_commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
@@ -176,7 +176,7 @@
     },
     {
       "path": "C:\\Users\\LalithReddy.b\\strudelify-catalog\\tracks\\wide-awake.strudel",
-      "sha256": "4c2fc39dfcadf8f3a23ed26bd6f6af23d23060979c6a86dfb92a69ba5c3d193c",
+      "sha256": "b24a71dc17e643c12528b42bf5a83da52a561f9770ed93ffde4f6d4eb2d73b26",
       "matches_baseline": false,
       "intentional_revision": "finite form and measured gain; notes/instruments retained",
       "preserved_baseline_commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
