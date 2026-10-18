@@ -1,5 +1,13 @@
 # Known music issues and integration requirements
 
+## Public-site catalog mismatch — 18 October 2026
+
+The deployed application loads six Strudelify demo originals, not the requested eight covers.
+The live covers catalog and all eight cover file URLs returned 404. See
+`RECOGNIZABILITY_RECOVERY.md` and `live-catalog.json` for reproduction and exact evidence.
+The owner rejected the public musical experience. The eight local drafts still need separate
+musical repair and listening review; integrating them alone will not establish fidelity.
+
 ## 1. Babydoll
 
 Only the 0–4.37 s opening has a bounded note-event repair. Later lead contour, G/D/Em/C loop and bass remain unverified against the recording; the source contains different harmonic material. Complete the main vocal motif and harmonic rhythm before approval.
@@ -41,4 +49,6 @@ F-centered transpose and the eight-subdivision kick repair are retained. The sam
 - Macro-dynamic automation and finite ends do not certify complete verse/chorus transcription. Keep the runtime-verified label visible in any music review workflow; do not call these approved faithful covers.
 - Never commit original MP3s, source excerpts, stems or model files. This branch contains no commercial audio assets. Local review audio remains ignored.
 
-No application defect is claimed from an untested application. The reproduced defects are in the prior audit's resource checks and in the old composition mixes; application requirements above are handoff requirements, not assertions about OpenCode's current code.
+The dated public catalog mismatch above is now reproduced by live HTTP/resource inspection.
+The other application requirements remain handoff requirements, not claims that application
+playback, scheduler behavior or browser-local tracks were tested in this diagnostic.

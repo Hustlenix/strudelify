@@ -2,6 +2,12 @@
 
 Planning date: **18 October 2026, Asia/Calcutta**.
 
+**Production gate after owner feedback:** defer the 100 new arrangements until the existing
+eight have passed principal-phrase recognition and full-form comparative listening review.
+The public site currently serves six demo originals and no covers catalog; see
+`../../reports/RECOGNIZABILITY_RECOVERY.md`. Integrating unreviewed drafts alone does not
+resolve the musical complaint. The 100-song scope and Global / English focus remain confirmed.
+
 ## Confirmed scope and focus
 
 The owner confirmed **100 additional individual songs** with a **Global / English focus**,
@@ -132,7 +138,8 @@ and change the approach; do not churn through complete rewrites or mark the song
 
 ### Musical recognition
 
-The first three new songs are a workflow pilot. For each, a listener should be able to identify
+Repair the existing eight first; the first three new songs then form an expansion pilot.
+For each, a listener should be able to identify
 the intended song from its principal phrase without relying on the title. Record what was
 actually recognized and where. Do not claim a blind recognition test happened if no listener
 performed it. Unclear results require a targeted melody/harmony/groove repair.
@@ -218,10 +225,11 @@ Calendar completion also depends on full-reference availability and actual liste
 
 ## Immediate next work when composition is started
 
-1. Select within the confirmed 100-song Global / English scope and the proposed genre lanes.
-2. Verify current growth evidence and the exact full reference for the first candidate.
-3. Code and compare its principal phrase before committing to the complete arrangement.
-4. Finish its natural full form and full-duration validation before calling it finished.
+1. Resolve the existing eight-song recognition/full-form review gate and report the live catalog mismatch to OpenCode.
+2. Select within the confirmed 100-song Global / English scope and the proposed genre lanes.
+3. Verify current growth evidence and the exact full reference for the first candidate.
+4. Code and compare its principal phrase before committing to the complete arrangement.
+5. Finish its natural full form and full-duration validation before calling it finished.
 
 This change creates a plan and research backlog only. It does not add 100 fake `.strudel` files,
 alter existing music, change application code or imply that new songs are already playing on the website.

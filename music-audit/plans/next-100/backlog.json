@@ -1008,5 +1008,7 @@
   "scope": "100 individual additional songs",
   "scope_confirmed": true,
   "catalog_focus": "Global / English focus",
-  "focus_confirmed": true
+  "focus_confirmed": true,
+  "production_gate": "Existing eight must pass principal-phrase recognition and full-form comparative listening before new-song production",
+  "recovery_report": "../../reports/RECOGNIZABILITY_RECOVERY.md"
 }

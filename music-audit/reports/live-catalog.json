@@ -1,0 +1,129 @@
+{
+  "checked_at_utc": "2026-10-18T02:26:38.007338+00:00",
+  "base_url": "https://hustlenix.github.io/strudelify/",
+  "method": "Read live app.js catalog constants and perform HTTP GETs; no audio listening performed",
+  "app_js": {
+    "url": "https://hustlenix.github.io/strudelify/app.js",
+    "status": 200,
+    "sha256": "c77215616b2a0c8dca15e41c2349339de3df3b57315790f297a0baf96e7fd55f"
+  },
+  "bundled_tracks": [
+    {
+      "id": "afterglow",
+      "title": "Afterglow",
+      "artist": "Strudelify",
+      "codeUrl": "tracks/afterglow.strudel"
+    },
+    {
+      "id": "greenline",
+      "title": "Greenline",
+      "artist": "Strudelify",
+      "codeUrl": "tracks/greenline.strudel"
+    },
+    {
+      "id": "paper-moon",
+      "title": "Paper Moon",
+      "artist": "Strudelify",
+      "codeUrl": "tracks/paper-moon.strudel"
+    },
+    {
+      "id": "soft-focus",
+      "title": "Soft Focus",
+      "artist": "Strudelify",
+      "codeUrl": "tracks/soft-focus.strudel"
+    },
+    {
+      "id": "tiny-hours",
+      "title": "Tiny Hours",
+      "artist": "Strudelify",
+      "codeUrl": "tracks/tiny-hours.strudel"
+    },
+    {
+      "id": "wide-awake",
+      "title": "Wide Awake",
+      "artist": "Strudelify",
+      "codeUrl": "tracks/wide-awake.strudel"
+    }
+  ],
+  "references_music_catalog": false,
+  "local_cover_ids": [
+    "01-babydoll",
+    "02-without-me",
+    "03-everyday-normal-guy-2",
+    "04-sailor-song",
+    "05-cant-tell-me-nothing",
+    "06-love-me-not",
+    "07-i-thought-i-saw-your-face-today",
+    "08-lonely"
+  ],
+  "resources": [
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/afterglow.strudel",
+      "status": 200,
+      "sha256": "2fe62f3b8358c5b3e0f82864f54de08cc02cfc721e1b0267d4fac9ca2726939b"
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/greenline.strudel",
+      "status": 200,
+      "sha256": "70b3d7a968f4b5d71cea143c2fcbf5f4c7b647e137a1163e8e43cdbf16ada1b8"
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/paper-moon.strudel",
+      "status": 200,
+      "sha256": "d927041172c1ff0d832d5ee82ed6e49f32a10c2ceed374b084080e4497acee28"
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/soft-focus.strudel",
+      "status": 200,
+      "sha256": "6e5b992f57b4b9da319e7dcb012ef0615e1e1d6a01152648c48ba5f710081491"
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/tiny-hours.strudel",
+      "status": 200,
+      "sha256": "2f1ff0d241369cdff99a1736e5f33c0bdecde2214edeeb417b297f19105c1958"
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/wide-awake.strudel",
+      "status": 200,
+      "sha256": "68bf3bbed56c83071ffe46d5b2f5b6dd2e3a4c7f612df5dbe27aef87098edcbb"
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/catalog.json",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/01-babydoll.strudel",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/02-without-me.strudel",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/03-everyday-normal-guy-2.strudel",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/04-sailor-song.strudel",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/05-cant-tell-me-nothing.strudel",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/06-love-me-not.strudel",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/07-i-thought-i-saw-your-face-today.strudel",
+      "status": 404
+    },
+    {
+      "url": "https://hustlenix.github.io/strudelify/tracks/covers/08-lonely.strudel",
+      "status": 404
+    }
+  ],
+  "musical_fidelity": "NOT_ESTABLISHED: local covers remain runtime-verified drafts",
+  "user_feedback": "Owner reports that every song heard on the public site sounds like random beats"
+}
