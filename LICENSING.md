@@ -1,0 +1,53 @@
+# License and source decision for the proposed beta
+
+Decision prepared: 18 October 2026. Public release approval is still pending.
+
+The integrated application is to be distributed under **AGPL-3.0-or-later**.
+The project-authored MIT grant in `LICENSE` is retained for those portions;
+it does not replace the terms of the combined application. `COPYING` and
+`licenses/Strudel-AGPL-3.0.txt` contain the complete AGPL text.
+
+This follows Strudel's [integration guidance](https://strudel.cc/technical-manual/project-start/)
+and [FAQ](https://strudel.cc/learn/faq/), checked on 18 October 2026.
+This is a documented engineering release policy, not a claim of independent legal review.
+
+## Corresponding source
+
+Every built artifact includes an unminified application source archive, `source.zip`,
+and a generated `SOURCE.html` linking that archive, the exact application commit,
+the runtime package, and its exact upstream source revision. The footer links to it.
+The archive contains the complete site source, original scores, notices and build scripts.
+No binary application compilation is performed. Build instructions are included.
+
+The unmodified external dependency is `@strudel/web@1.2.6` (AGPL-3.0-or-later).
+Its upstream annotated tag resolves to commit
+`cbe7aaacfbf8a51f5f5cf39bf79319f273214e24`, verified with `git ls-remote`.
+The browser loads the pinned package from unpkg; its source is available from
+[the exact upstream revision](https://codeberg.org/uzu/strudel/src/commit/cbe7aaacfbf8a51f5f5cf39bf79319f273214e24).
+The project makes no runtime modifications. Preserve upstream copyright notices.
+
+## Track provenance and publication boundary
+
+The six originals were created as original examples for this project and distributed
+with the repository's MIT declaration before this recovery. Their note patterns and
+instruments remain the same; this branch adds finite form and measured level balance.
+There is no imported melody, artist recording, external sample bank or commercial lyric
+in this six-track artifact. This is the project's provenance declaration; owner confirmation
+is required in the release approval record.
+
+Eight commercial-song studies remain excluded. Existing repository history and the older
+public site are separate from the proposed artifact. Deploying an allowlisted replacement
+removes those paths from the current Pages artifact, but cannot erase other copies or caches.
+
+## Branding decision
+
+Strudel's maintainers ask independent projects to avoid "strudel" in their names.
+The owner has been asked to select `Hustlenix Music` or seek naming permission.
+The release gate requires the selected public name and its basis. A pending decision
+cannot pass publication approval. This branch does not claim permission was granted.
+
+## Required review before publication
+
+The release approval must confirm this license/source policy, project-original track
+provenance, branding, the selected track IDs and exact score hashes, an owner listening
+decision, and actual phone/laptop results. No automated test manufactures those decisions.

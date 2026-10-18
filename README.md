@@ -23,14 +23,15 @@ This is opensourced, so you can add a music that you like, to expand this websit
 The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their *should not copy* rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)
 
 The project-authored source retains its MIT notice. Strudel is an AGPL-3.0-or-later dependency;
-the integrated application license and project naming need review before the proposed release.
+the proposed combined distribution uses AGPL-3.0-or-later, while MIT grants for project portions remain.
+The public name and final publication approval are pending; see [LICENSING.md](LICENSING.md).
 See [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md). Demo compositions in `tracks/` are original examples for this project.
 
 ## MVP review candidate
 
 The `codex/mvp-recovery` branch preserves the current static app and all prior music work.
 Its proposed public artifact includes the six original instrumental patterns, clearly labeled
-as drafts. Commercial-song study scores and automatic lyrics are withheld from this artifact
+as drafts. Each now has finite sections, a fading ending and measured level balance; full human listening approval is pending. Commercial-song study scores and automatic lyrics are withheld from this artifact
 pending permission and human music review. The public site is unchanged until a reviewed
 merge/deployment is explicitly approved.
 
@@ -44,4 +45,6 @@ Read [release-audit/RELEASE_CANDIDATE.md](release-audit/RELEASE_CANDIDATE.md) an
 [release-audit/RESOURCE_DECISIONS.md](release-audit/RESOURCE_DECISIONS.md) for evidence and remaining gates.
 
 ## Licence
-MIT
+Combined application: AGPL-3.0-or-later. Original MIT grants for project portions are retained.
+See [LICENSE](LICENSE), [COPYING](COPYING), [NOTICE.md](NOTICE.md) and [LICENSING.md](LICENSING.md).
+Every allowlisted build includes SOURCE.html and an application source archive.

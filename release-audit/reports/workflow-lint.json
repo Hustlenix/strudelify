@@ -1,0 +1,12 @@
+{
+  "tool": "actionlint 1.7.12",
+  "status": "passed",
+  "workflows": [
+    "mvp-checks.yml",
+    "pages-release.yml",
+    "pages-rollback.yml"
+  ],
+  "shellcheck": false,
+  "pyflakes": false,
+  "deployed": false
+}

@@ -25,7 +25,8 @@ try {
   report.build = JSON.parse(fs.readFileSync(path.join(root, 'release.json')));
   for (const entry of report.build.files) assert(createHash('sha256').update(fs.readFileSync(path.join(root, entry.path))).digest('hex') === entry.sha256, 'Artifact changed: ' + entry.path);
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const url = `http://127.0.0.1:${server.address().port}/`;
+  const url = process.argv[4] ? new URL(process.argv[4]).href.replace(/\/?$/, '/') : `http://127.0.0.1:${server.address().port}/`;
+  report.tested_url = url;
   let executablePath;
   if (process.platform === 'win32' && browserName === 'chromium')
     executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
@@ -145,8 +146,18 @@ try {
     await page.evaluate(id => playTrack(getTrack(id)), id);
     await page.waitForFunction(() => state.playing && !state.loading);
     await page.waitForTimeout(2200);
-    const audio = await page.evaluate(() => ({...audioProbe, current:state.current.id, error:playbackError}));
+    const audio = await page.evaluate(async () => ({...audioProbe, current:state.current.id, error:playbackError,
+      scheduler_origin:(await ensureEngine()).scheduler.num_cycles_at_cps_change}));
+    if (!(audio.current === id && audio.peak > .00001 && audio.peak < 1 && !audio.error)) {
+      report.audio_failure = {id,...audio, detail:await page.evaluate(async()=>{
+        const repl=await ensureEngine();
+        return {scheduler:Object.fromEntries(Object.entries(repl.scheduler).filter(([key,value])=>typeof value==='number'||typeof value==='boolean')),
+          time:getAudioContext().currentTime,started:playbackStartedAt,
+          firstEvents:repl.scheduler.pattern.queryArc(0,4).map(h=>({begin:+h.whole.begin,value:h.value})).slice(0,12)};
+      })};
+    }
     assert(audio.current === id && audio.peak > .00001 && audio.peak < 1 && !audio.error, id + ' output failed');
+    assert(audio.scheduler_origin === 0, id + ' inherited the previous song cycle');
     await page.evaluate(async () => { await stopTrack(); });
     // Allow callbacks for buffers recorded before suspension to leave the probe queue.
     await page.waitForTimeout(250);
@@ -238,7 +249,7 @@ try {
   await new Promise(resolve => server.close(resolve));
   report.finished_at = new Date().toISOString();
   fs.mkdirSync('release-audit/reports', {recursive:true});
-  fs.writeFileSync(`release-audit/reports/player-${browserName}.json`, JSON.stringify(report, null, 2) + '\n');
+  fs.writeFileSync(`release-audit/reports/${process.argv[4]?'public-player':'player'}-${browserName}.json`, JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify({status:report.status, checks:report.checks.length, errors:report.errors, browser:browserName}));
 }
 process.exitCode = report.status === 'PASSED' ? 0 : 1;

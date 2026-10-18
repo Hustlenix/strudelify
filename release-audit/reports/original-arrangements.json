@@ -1,0 +1,265 @@
+{
+  "baseline_commit": "499cf03716104ff179b1c58906ed6e3f4d1a53f7",
+  "change": "Finite form and reduced sections; original note strings, instruments and effects retained",
+  "human_listening_approval": false,
+  "tracks": [
+    {
+      "id": "afterglow",
+      "bpm": 78,
+      "bars": 32,
+      "end_seconds": 106.461538,
+      "windows": [
+        [
+          [
+            0,
+            32,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            16,
+            1
+          ],
+          [
+            20,
+            30,
+            0.9
+          ]
+        ],
+        [
+          [
+            8,
+            16,
+            1
+          ],
+          [
+            20,
+            28,
+            0.85
+          ]
+        ]
+      ],
+      "baseline_sha256": "2fe62f3b8358c5b3e0f82864f54de08cc02cfc721e1b0267d4fac9ca2726939b",
+      "score_sha256": "beab323af7387b23dd7b77bd12d6a40d4cfa98f8057cc7c567fee67a3311f37f",
+      "reason": "All three source patterns repeated forever with no section changes or ending.",
+      "not_claimed": "No human listening decision or subjective quality score."
+    },
+    {
+      "id": "greenline",
+      "bpm": 104,
+      "bars": 40,
+      "end_seconds": 100.307692,
+      "windows": [
+        [
+          [
+            0,
+            40,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            20,
+            1
+          ],
+          [
+            24,
+            36,
+            0.9
+          ]
+        ],
+        [
+          [
+            8,
+            20,
+            1
+          ],
+          [
+            28,
+            36,
+            0.85
+          ]
+        ]
+      ],
+      "baseline_sha256": "70b3d7a968f4b5d71cea143c2fcbf5f4c7b647e137a1163e8e43cdbf16ada1b8",
+      "score_sha256": "75320f76b321a863d666f3dc1246ad90c19a6972ba744bc446da28f86d8bb934",
+      "reason": "All three source patterns repeated forever with no section changes or ending.",
+      "not_claimed": "No human listening decision or subjective quality score."
+    },
+    {
+      "id": "paper-moon",
+      "bpm": 86,
+      "bars": 36,
+      "end_seconds": 108.465116,
+      "windows": [
+        [
+          [
+            0,
+            36,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            20,
+            1
+          ],
+          [
+            24,
+            32,
+            0.9
+          ]
+        ],
+        [
+          [
+            8,
+            20,
+            1
+          ],
+          [
+            24,
+            32,
+            0.9
+          ]
+        ]
+      ],
+      "baseline_sha256": "d927041172c1ff0d832d5ee82ed6e49f32a10c2ceed374b084080e4497acee28",
+      "score_sha256": "d7b70deb4fba341d96119d0bb770f427a149b39f6901d32063e08c2d0f547314",
+      "reason": "All three source patterns repeated forever with no section changes or ending.",
+      "not_claimed": "No human listening decision or subjective quality score."
+    },
+    {
+      "id": "soft-focus",
+      "bpm": 68,
+      "bars": 32,
+      "end_seconds": 120.941176,
+      "windows": [
+        [
+          [
+            4,
+            16,
+            1
+          ],
+          [
+            20,
+            32,
+            0.85
+          ]
+        ],
+        [
+          [
+            0,
+            32,
+            1
+          ]
+        ],
+        [
+          [
+            8,
+            16,
+            1
+          ],
+          [
+            24,
+            28,
+            0.8
+          ]
+        ]
+      ],
+      "baseline_sha256": "6e5b992f57b4b9da319e7dcb012ef0615e1e1d6a01152648c48ba5f710081491",
+      "score_sha256": "9e28f55a25f74766faa41abd284cfc0f8a1a5f7477ff07a542ca58af2b443d22",
+      "reason": "All three source patterns repeated forever with no section changes or ending.",
+      "not_claimed": "No human listening decision or subjective quality score."
+    },
+    {
+      "id": "tiny-hours",
+      "bpm": 112,
+      "bars": 40,
+      "end_seconds": 93.714286,
+      "windows": [
+        [
+          [
+            0,
+            40,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            16,
+            1
+          ],
+          [
+            24,
+            36,
+            0.9
+          ]
+        ],
+        [
+          [
+            8,
+            16,
+            1
+          ],
+          [
+            20,
+            36,
+            0.85
+          ]
+        ]
+      ],
+      "baseline_sha256": "2f1ff0d241369cdff99a1736e5f33c0bdecde2214edeeb417b297f19105c1958",
+      "score_sha256": "2a02cb011c844f389a7a232ef36e15939ce01faa9079e47523ac33e14a038229",
+      "reason": "All three source patterns repeated forever with no section changes or ending.",
+      "not_claimed": "No human listening decision or subjective quality score."
+    },
+    {
+      "id": "wide-awake",
+      "bpm": 96,
+      "bars": 40,
+      "end_seconds": 108.0,
+      "windows": [
+        [
+          [
+            0,
+            40,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            20,
+            1
+          ],
+          [
+            24,
+            38,
+            0.85
+          ]
+        ],
+        [
+          [
+            8,
+            20,
+            1
+          ],
+          [
+            28,
+            36,
+            0.9
+          ]
+        ]
+      ],
+      "baseline_sha256": "68bf3bbed56c83071ffe46d5b2f5b6dd2e3a4c7f612df5dbe27aef87098edcbb",
+      "score_sha256": "5403f2c4c53bd5428111ea65309c23d376530dd615207725a13eac2a09640d7c",
+      "reason": "All three source patterns repeated forever with no section changes or ending.",
+      "not_claimed": "No human listening decision or subjective quality score."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+name: Approved Pages beta release
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_sha:
+        description: Exact 40-character reviewed application commit (already on main)
+        required: true
+        type: string
+      approval_json:
+        description: Actual owner approval JSON using release-audit/approval-template.json
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: pages-publish
+  cancel-in-progress: false
+jobs:
+  validate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          fetch-depth: 0
+      - name: Check exact approved revision is already on main
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          [[ "$CANDIDATE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$CANDIDATE_SHA"
+          git merge-base --is-ancestor "$CANDIDATE_SHA" origin/main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: release-audit/package-lock.json
+      - run: python release-audit/build_preview.py
+      - name: Check allowlist, hashes, source archive and actual owner approval
+        env:
+          RELEASE_APPROVAL_JSON: ${{ inputs.approval_json }}
+        run: python release-audit/validate_release.py release-preview --require-approval
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: release-audit
+      - run: npx playwright install --with-deps chromium firefox
+        working-directory: release-audit
+      - name: Start Firefox virtual audio endpoint
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pulseaudio
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=strudelify_ci
+          pactl set-default-sink strudelify_ci
+      - run: node release-audit/player-checks.mjs release-preview chromium
+      - run: node release-audit/player-checks.mjs release-preview firefox
+      - name: Preserve exact approved artifact for rollback
+        uses: actions/upload-artifact@v4
+        with:
+          name: approved-site
+          path: release-preview/
+          retention-days: 90
+          if-no-files-found: error
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: release-preview/
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: approved-site
+          path: approved-site
+      - run: python release-audit/verify_public_release.py approved-site https://hustlenix.github.io/strudelify/
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: release-audit
+      - run: npx playwright install --with-deps chromium
+        working-directory: release-audit
+      - run: node release-audit/player-checks.mjs approved-site chromium https://hustlenix.github.io/strudelify/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: published-beta-evidence
+          path: |
+            release-audit/reports/public-release.json
+            release-audit/reports/public-player-chromium.json

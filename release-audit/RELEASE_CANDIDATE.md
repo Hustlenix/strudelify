@@ -1,5 +1,13 @@
 # MVP recovery review candidate
 
+**Latest continuation:** see [CURRENT_STATUS.md](CURRENT_STATUS.md) and
+[DEPLOYMENT.md](DEPLOYMENT.md). The six original loops now have finite arrangements
+and measured level balance. A reproduced stale scheduler-position defect is fixed.
+Manual artifact-only publication/rollback workflows and exact source downloads are prepared.
+The historical baseline below is retained; its statement that originals are byte-for-byte
+unchanged is superseded by this documented revision. Full human listening/device and branding
+approval remain pending, and the proposed beta has not been deployed.
+
 Branch: `codex/mvp-recovery`, isolated checkout `C:\Users\LalithReddy.b\strudelify-catalog`.
 One Codex implementation agent. No OpenCode checkout edits, no music expansion, no automatic merge
 or deployment. Source commit and exact preview file hashes are recorded in `reports/preview-build.json`.

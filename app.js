@@ -34,6 +34,7 @@ const state = {
   toastTimer: 0,
 };
 let enginePromise;
+let activeRepl;
 let playbackDuration = 0;
 let playbackRevision = 0;
 let evaluationQueue = Promise.resolve();
@@ -110,6 +111,7 @@ function ensureEngine() {
       return window.webaudioOutput(hap, deadline, duration, cps, time);
     },
   })).then(async repl => {
+    activeRepl = repl;
     // defaultPrebake exposes this API. Wait for the registered first gesture's audio/worklets
     // before starting a score, so initialization cannot resume a later paused context.
     await window.initAudioOnFirstClick();
@@ -125,6 +127,10 @@ async function runCode(code) {
   return playTrack({id:'editor-preview', title:'Editor preview', artist:'Unsaved pattern', code, preview:true, palette:5}, true);
 }
 function silenceEngine() {
+  // hush alone can leave this REPL's clock at the preceding song's cycle. A hard
+  // Stop/new selection must reset that clock so a finite score starts at bar zero.
+  // Pause/Resume does not call this function and retains its scheduler position.
+  activeRepl?.stop();
   // hush stops future scheduling; resetGlobalEffects disconnects already sounding voices/tails.
   if (window.hush) window.hush();
   if (window.resetGlobalEffects) window.resetGlobalEffects();

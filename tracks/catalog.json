@@ -15,7 +15,8 @@
       "status": "project-original",
       "license": "MIT",
       "evidence": "../README.md#interface-and-features"
-    }
+    },
+    "durationSeconds": 106.461538
   },
   {
     "id": "greenline",
@@ -33,7 +34,8 @@
       "status": "project-original",
       "license": "MIT",
       "evidence": "../README.md#interface-and-features"
-    }
+    },
+    "durationSeconds": 100.307692
   },
   {
     "id": "paper-moon",
@@ -51,7 +53,8 @@
       "status": "project-original",
       "license": "MIT",
       "evidence": "../README.md#interface-and-features"
-    }
+    },
+    "durationSeconds": 108.465116
   },
   {
     "id": "soft-focus",
@@ -69,7 +72,8 @@
       "status": "project-original",
       "license": "MIT",
       "evidence": "../README.md#interface-and-features"
-    }
+    },
+    "durationSeconds": 120.941176
   },
   {
     "id": "tiny-hours",
@@ -87,7 +91,8 @@
       "status": "project-original",
       "license": "MIT",
       "evidence": "../README.md#interface-and-features"
-    }
+    },
+    "durationSeconds": 93.714286
   },
   {
     "id": "wide-awake",
@@ -105,6 +110,7 @@
       "status": "project-original",
       "license": "MIT",
       "evidence": "../README.md#interface-and-features"
-    }
+    },
+    "durationSeconds": 108.0
   }
 ]

@@ -7,7 +7,12 @@ on:
       - 'styles.css'
       - 'tracks/**'
       - 'release-audit/**'
-      - '.github/workflows/mvp-checks.yml'
+      - '.github/workflows/**'
+      - 'LICENSE'
+      - 'COPYING'
+      - 'NOTICE.md'
+      - 'LICENSING.md'
+      - 'THIRD_PARTY_ASSETS.md'
   workflow_dispatch:
 permissions:
   contents: read
@@ -41,6 +46,7 @@ jobs:
           pactl load-module module-null-sink sink_name=strudelify_ci
           pactl set-default-sink strudelify_ci
       - run: python release-audit/build_preview.py
+      - run: python release-audit/test_release_policy.py release-preview
       - run: node release-audit/player-checks.mjs release-preview ${{ matrix.browser }}
       - uses: actions/upload-artifact@v4
         if: always()

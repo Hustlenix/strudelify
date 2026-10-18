@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Original instrumentals — full listening review</title>
+<style>body{font:17px/1.6 system-ui;background:#141414;color:#eee;max-width:850px;margin:32px auto;padding:0 20px}a{color:#a9edc4}section{border:1px solid #555;border-radius:12px;padding:20px;margin:24px 0}label{display:block;margin:14px 0}input,select,textarea,button{font:inherit;color:inherit;background:#252525;border:1px solid #888;border-radius:6px;padding:10px;max-width:100%;box-sizing:border-box}textarea{display:block;width:100%;min-height:100px}audio{width:100%}button{cursor:pointer}small{color:#ccc}</style>
+<h1>Six original instrumentals</h1><p>Listen to each complete piece by its name. These are original synth compositions. Feedback is about what you hear: melody, rhythm, transitions, repetition, sound and ending.</p>
+<p><a href="/player/" target="_blank">Open the actual player</a>. First playback, pause/resume, Stop, switching, search and View Code should be clear. Physical phone testing needs an HTTPS preview or an approved public build; this loopback URL works on this computer.</p>
+<p>Responses stay in this browser. Download the JSON to share your review deliberately. No feedback is sent automatically; no personal details are needed.</p>
+<form id="review"><label>Anonymous reviewer label <input name="reviewer" value="Owner" maxlength="40"></label><div id="tracks"></div>
+<section><h2>Device check</h2><label>Device and browser <input name="device" placeholder="e.g. Android phone, Chrome"></label><label>Was this a real device you used? <select name="physical"><option value="">Unanswered</option><option value="yes">Yes</option><option value="no">No / emulation</option></select></label>
+<label>Player tasks and failures<textarea name="usability" placeholder="First Play; Pause/Resume; Stop; switch tracks; search; View Code; background/return; volume; connectivity loss/retry. Note what failed and when."></textarea></label></section>
+<button type="submit">Download my review JSON</button><p id="saved" role="status"></p></form>
+<script>
+const ids=['afterglow','greenline','paper-moon','soft-focus','tiny-hours','wide-awake'];
+const title=id=>id.split('-').map(word=>word[0].toUpperCase()+word.slice(1)).join(' ');
+tracks.innerHTML=ids.map(id=>`<section><h2>${title(id)}</h2><audio controls preload="metadata" src="audio/${id}.wav"></audio>
+<label><input type="checkbox" name="${id}-complete"> I listened to the complete track.</label>
+<label>Suitable for this beta? <select name="${id}-decision"><option value="unanswered">Unanswered</option><option value="yes">Yes</option><option value="needs-correction">Needs correction</option><option value="unsure">Unsure</option></select></label>
+<label>What works, and what needs correction?<textarea name="${id}-notes" placeholder="Describe a sound or a timestamp. You do not have to diagnose music theory."></textarea></label></section>`).join('');
+const key='original-instrumental-review-v1',form=document.querySelector('#review');
+try{const previous=JSON.parse(localStorage.getItem(key)||'{}');for(const element of form.elements)if(element.name&&previous[element.name]!==undefined){if(element.type==='checkbox')element.checked=previous[element.name];else element.value=previous[element.name]}}catch{}
+const values=()=>Object.fromEntries([...form.elements].filter(e=>e.name).map(e=>[e.name,e.type==='checkbox'?e.checked:e.value]));
+form.oninput=()=>{try{localStorage.setItem(key,JSON.stringify(values()));saved.textContent='Saved in this browser only.'}catch{saved.textContent='Browser storage unavailable. Download before closing.'}};
+form.onsubmit=async event=>{event.preventDefault();const v=values();let manifest=null;try{manifest=await(await fetch('/player/release.json')).json()}catch{}
+const result={kind:'actual manually submitted original listening feedback',created_at:new Date().toISOString(),reviewer:v.reviewer,
+build:manifest?.commit||null,dirty:manifest?.dirty??null,device:v.device,physical_device:v.physical,usability:v.usability,
+tracks:ids.map(id=>({id,listened_complete:v[id+'-complete'],decision:v[id+'-decision'],observations:v[id+'-notes'],score_sha256:manifest?.files.find(row=>row.path==='tracks/'+id+'.strudel')?.sha256||null})),
+publication_approval:false,note:'Listening feedback alone does not authorize publication.'};
+const url=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='original-listening-review.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);saved.textContent='Downloaded. Nothing was sent automatically.'};
+</script></html>

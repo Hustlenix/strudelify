@@ -1,11 +1,38 @@
 // A gentle repeating shape with room to breathe.
 setcps(68/60/4)
 
-$: note("<a3 c4 e4 g4>").slow(2)
-  .s("sine").lpf(1300).gain(.2).room(.8)
+// Arrangement revision: 18 October 2026. Original pitches and sound design retained.
+// Bars 0-32: staggered entry, reduced texture, return, four-bar fade; 8s effect tail.
+// Constant master gain 1.7989, based on complete v1 render toward -23 LUFS.
+// Draft: full human listening approval is still required.
+const endSeconds = 120.941176
+const totalBars = 32
+const arranged = (pattern, windows) => pattern
+  .filterHaps(h => h.whole && windows.some(([a,b]) => +h.whole.begin >= a && +h.whole.begin < b))
+  .withHap(h => {
+    const t = +h.whole.begin
+    const section = windows.find(([a,b]) => t >= a && t < b)
+    const fade = Math.min(1, Math.max(0, (totalBars-t)/4))
+    return h.withValue(v => ({...v, gain:v.gain*section[2]*fade*1.7989}))
+  })
 
-$: note("a2 ~ e3 ~ g2 ~ d3 ~")
-  .s("triangle").lpf(520).gain(.18).room(.6)
+// Voice 1: [entry bar, exit bar, level].
+$: arranged(
+  note("<a3 c4 e4 g4>").slow(2)
+  .s("sine").lpf(1300).gain(.2).room(.8),
+  [[4,16,1],[20,32,0.85]]
+)
 
-$: note("~ e5 ~ ~ c5 ~ b4 ~")
-  .s("triangle").gain(.1).delay(.35).room(.8)
+// Voice 2: [entry bar, exit bar, level].
+$: arranged(
+  note("a2 ~ e3 ~ g2 ~ d3 ~")
+  .s("triangle").lpf(520).gain(.18).room(.6),
+  [[0,32,1]]
+)
+
+// Voice 3: [entry bar, exit bar, level].
+$: arranged(
+  note("~ e5 ~ ~ c5 ~ b4 ~")
+  .s("triangle").gain(.1).delay(.35).room(.8),
+  [[8,16,1],[24,28,0.8]]
+)

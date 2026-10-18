@@ -1,11 +1,38 @@
 // Dusty keys and a melody that keeps moving.
 setcps(86/60/4)
 
-$: note("<[d3,f3,a3] [bb2,d3,f3] [g2,bb2,d3] [c3,e3,g3]>")
-  .s("triangle").lpf(1450).gain(.16).room(.55)
+// Arrangement revision: 18 October 2026. Original pitches and sound design retained.
+// Bars 0-36: staggered entry, reduced texture, return, four-bar fade; 8s effect tail.
+// Constant master gain 1.5311, based on complete v1 render toward -23 LUFS.
+// Draft: full human listening approval is still required.
+const endSeconds = 108.465116
+const totalBars = 36
+const arranged = (pattern, windows) => pattern
+  .filterHaps(h => h.whole && windows.some(([a,b]) => +h.whole.begin >= a && +h.whole.begin < b))
+  .withHap(h => {
+    const t = +h.whole.begin
+    const section = windows.find(([a,b]) => t >= a && t < b)
+    const fade = Math.min(1, Math.max(0, (totalBars-t)/4))
+    return h.withValue(v => ({...v, gain:v.gain*section[2]*fade*1.5311}))
+  })
 
-$: note("d2 ~ ~ a2 ~ ~ c2 ~")
-  .s("sine").lpf(330).gain(.29)
+// Voice 1: [entry bar, exit bar, level].
+$: arranged(
+  note("<[d3,f3,a3] [bb2,d3,f3] [g2,bb2,d3] [c3,e3,g3]>")
+  .s("triangle").lpf(1450).gain(.16).room(.55),
+  [[0,36,1]]
+)
 
-$: note("a4 ~ f4 ~ d4 f4 ~ c5")
-  .s("sine").gain(.13).room(.7).delay(.2)
+// Voice 2: [entry bar, exit bar, level].
+$: arranged(
+  note("d2 ~ ~ a2 ~ ~ c2 ~")
+  .s("sine").lpf(330).gain(.29),
+  [[4,20,1],[24,32,0.9]]
+)
+
+// Voice 3: [entry bar, exit bar, level].
+$: arranged(
+  note("a4 ~ f4 ~ d4 f4 ~ c5")
+  .s("sine").gain(.13).room(.7).delay(.2),
+  [[8,20,1],[24,32,0.9]]
+)
