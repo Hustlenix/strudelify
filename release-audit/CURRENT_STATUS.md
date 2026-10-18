@@ -29,14 +29,23 @@ The implementation commit and clean artifact hashes are recorded in the latest
 - A named, complete-track local listening page is prepared at http://127.0.0.1:4190/ with
   the actual candidate player at http://127.0.0.1:4190/player/. No review is sent automatically.
 
+## Continuation: branding and HTTPS device review
+
+Public UI naming is now Hustlenix Music and the AGPL/source release policy is documented.
+The physical Lenovo 82XM laptop main playback flow passed through native Chrome controls;
+see reports/physical-laptop-smoke.json for exact observations and limits.
+A temporary HTTPS original-only review and direct opt-in receipt endpoint are available.
+The URL and checked build are recorded in reports/https-review-artifact.json.
+No human listening acceptance or phone result has been fabricated.
+
 ## Still needed to launch
 
 1. Actual owner complete listening review and acceptance of all included originals, or an
    explicitly smaller accepted selection. Six originals remain drafts, with zero such approvals.
-2. Actual physical phone/laptop smoke-test results. Automated viewport/browser tests remain
+2. Actual phone smoke-test results and any laptop checks beyond the recorded main flow. Automated viewport/browser tests remain
    separate evidence. No phone or listener has been invented.
-3. Owner public-name selection (proposed Hustlenix Music) or recorded upstream naming permission,
-   and confirmation of the proposed licensing/source policy and original-track provenance.
+3. Public naming and combined distribution/source policy have been implemented.
+   Provenance remains the project's declared original authorship; commercial studies stay excluded.
 4. Explicit approval to merge and deploy the exact candidate. The earlier instruction against
    automatic publication is still in force. Pages is still on its old legacy main-root source;
    switch it to Actions after approval **before** merging. Follow DEPLOYMENT.md.

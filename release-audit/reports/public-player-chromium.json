@@ -1,0 +1,367 @@
+{
+  "started_at": "2026-10-18T13:45:58.228Z",
+  "browser": "chromium",
+  "checks": [
+    {
+      "name": "Original catalog loads without commercial scores, lyrics or sample banks",
+      "status": "PASSED",
+      "ids": [
+        "afterglow",
+        "greenline",
+        "paper-moon",
+        "soft-focus",
+        "tiny-hours",
+        "wide-awake"
+      ]
+    },
+    {
+      "name": "Back/Forward and complete actual View code",
+      "status": "PASSED"
+    },
+    {
+      "name": "Trusted click audio and true pause/resume preserve scheduler/session",
+      "status": "PASSED",
+      "before": {
+        "time": 0.864,
+        "revision": 1,
+        "peak": 0.10903289169073105
+      },
+      "frozen": 0.9173333333333333,
+      "resumed": {
+        "time": 1.2266666666666666,
+        "revision": 1
+      }
+    },
+    {
+      "name": "Stop cancels a delayed real source request",
+      "status": "PASSED"
+    },
+    {
+      "name": "Injected source failure clears its cache and retries successfully",
+      "status": "PASSED"
+    },
+    {
+      "name": "Rapid switching, Next and Previous retain a single current session",
+      "status": "PASSED"
+    },
+    {
+      "name": "Resume/Stop/new selection race leaves the latest track active",
+      "status": "PASSED"
+    },
+    {
+      "name": "afterglow real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.1090569868683815,
+      "frames": 4718592,
+      "current": "afterglow",
+      "error": "",
+      "scheduler_origin": 0
+    },
+    {
+      "name": "greenline real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.21909573674201965,
+      "frames": 5427200,
+      "current": "greenline",
+      "error": "",
+      "scheduler_origin": 0
+    },
+    {
+      "name": "paper-moon real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.19360597431659698,
+      "frames": 6082560,
+      "current": "paper-moon",
+      "error": "",
+      "scheduler_origin": 0
+    },
+    {
+      "name": "soft-focus real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.09992983937263489,
+      "frames": 6856704,
+      "current": "soft-focus",
+      "error": "",
+      "scheduler_origin": 0
+    },
+    {
+      "name": "tiny-hours real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.2360219657421112,
+      "frames": 7380992,
+      "current": "tiny-hours",
+      "error": "",
+      "scheduler_origin": 0
+    },
+    {
+      "name": "wide-awake real audio and silent Stop",
+      "status": "PASSED",
+      "peak": 0.09783627092838287,
+      "frames": 8114176,
+      "current": "wide-awake",
+      "error": "",
+      "scheduler_origin": 0
+    },
+    {
+      "name": "Syntax recovery, finite-ending fixture and editor-close cleanup",
+      "status": "PASSED"
+    },
+    {
+      "name": "Search and explicit public GitHub feedback link",
+      "status": "PASSED"
+    },
+    {
+      "name": "Desktop 1280px and fresh mobile 390px Play/Pause/Stop/Next/Previous and code controls",
+      "status": "PASSED"
+    },
+    {
+      "name": "Cooperating browser tabs hand off playback ownership",
+      "status": "PASSED"
+    },
+    {
+      "name": "Older withheld-track links return to the available catalog",
+      "status": "PASSED"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/styles.css?v=beta-arranged-20261018",
+    "https://unpkg.com/@strudel/web@1.2.6",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/app.js?v=beta-arranged-20261018",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/greenline.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/paper-moon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/afterglow.svg",
+    "https://unpkg.com/@strudel/web@1.2.6/dist/index.js",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/catalog.json",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/release.json",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/soft-focus.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/tiny-hours.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/wide-awake.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/afterglow.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/greenline.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/greenline.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/greenline.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/greenline.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/greenline.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/paper-moon.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/tiny-hours.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/tiny-hours.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/wide-awake.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/wide-awake.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/afterglow.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/paper-moon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/tracks/soft-focus.strudel",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/covers/soft-focus.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg",
+    "https://disabled-stereo-trips-clocks.trycloudflare.com/player/assets/icon.svg"
+  ],
+  "build": {
+    "created_at": "2026-10-18T13:44:58.594576+00:00",
+    "commit": "92c3353a04be925e0d6cffa52860fb1af5351fe4",
+    "dirty": false,
+    "worktree_dirty_including_audit_reports": true,
+    "uncommitted_payload_paths": [],
+    "publication": "review artifact; explicit approval required before deployment",
+    "track_count": 6,
+    "excluded": [
+      "commercial cover source payloads",
+      "all lyrics",
+      "reference audio",
+      "audit/private files"
+    ],
+    "files": [
+      {
+        "path": "COPYING",
+        "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bc45603a7d1b28fb98d46e19b4ea68f05bd29296abbd8b872648db22578ff671"
+      },
+      {
+        "path": "LICENSING.md",
+        "sha256": "c0bb6c4936ce53a1ef3f505fae6312826e60e5df20da63a74e0dacb99f59b9b0"
+      },
+      {
+        "path": "NOTICE.md",
+        "sha256": "9563aa321efa6856d4984f96e55e7ab61fc87f2cd461395b8bb86e89163ef36b"
+      },
+      {
+        "path": "README.md",
+        "sha256": "1308927a2241113c9e4de0a2e7a7bf47f82b345809b5b2ef6411416b880abcf2"
+      },
+      {
+        "path": "SOURCE.html",
+        "sha256": "f30dd1e537f8ff20adcabf17dcd74238ae8c1ced7cf5c84dfc0932cb39c1210b"
+      },
+      {
+        "path": "THIRD_PARTY_ASSETS.md",
+        "sha256": "cca14e43f1a663bd406cfe34ede2daee2e94f8f4c463822a0217aceff85b9ad0"
+      },
+      {
+        "path": "app.js",
+        "sha256": "592f0bb481a09e9dc1c95fc047ce1d315f7c7d65dbdbe72acaa29c0e9fe5e66b"
+      },
+      {
+        "path": "assets/covers/afterglow.svg",
+        "sha256": "c56f06c5454ca2c3774bbc5d0c72955cbaa3780e7f6c03a883718ef63ba40777"
+      },
+      {
+        "path": "assets/covers/greenline.svg",
+        "sha256": "2b495216ee214276900d06742d8c4de203a670099f996fbcd44bea6e17da7d40"
+      },
+      {
+        "path": "assets/covers/paper-moon.svg",
+        "sha256": "b3375d928e74b33f87da71b87c1e8eb2265fc23b88d2209e916c2e6c1547155c"
+      },
+      {
+        "path": "assets/covers/soft-focus.svg",
+        "sha256": "4fa13d3e6887f9614a38d3036522eaa7d09957ae9d1c4c3e2db35cbbaf0eefde"
+      },
+      {
+        "path": "assets/covers/tiny-hours.svg",
+        "sha256": "725fd724d6ab53b6604444ec770fae875382f02e95b15715b3dddfc6811bb1b9"
+      },
+      {
+        "path": "assets/covers/wide-awake.svg",
+        "sha256": "d96404d4e3cbad0283e2973e4bfa366e8d73aae5297d9171e0a83c7d2a0f7e2b"
+      },
+      {
+        "path": "assets/icon.svg",
+        "sha256": "748da207789fae63ac2db26052f626cfe07054330d44f4460b4394c0b37daf88"
+      },
+      {
+        "path": "index.html",
+        "sha256": "552ec82021cf7151e41247ec22f9a2ff1c9d1681eb52648bc0e527d6809e4897"
+      },
+      {
+        "path": "licenses/Strudel-AGPL-3.0.txt",
+        "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+      },
+      {
+        "path": "source.zip",
+        "sha256": "46149b3aab8baa0974b47a306b4b6e82f1beb8e07728a6305ec3ec4898848df4"
+      },
+      {
+        "path": "styles.css",
+        "sha256": "76e56cfd9170a82bbf61bc372ffcd9ecddb6d0f1863e55af5791baaca4a04edd"
+      },
+      {
+        "path": "tracks/afterglow.strudel",
+        "sha256": "a1183c8f9087b830a7835ec07b3e49c4351502992aeea83de1d387de9d2fd6aa"
+      },
+      {
+        "path": "tracks/catalog.json",
+        "sha256": "4a767d14dbb4b1d30e5f4d92c2a69d709079c49bee46d9317623637ddd5e5d71"
+      },
+      {
+        "path": "tracks/greenline.strudel",
+        "sha256": "28cde8f6cd19c90082a81c5f7e1b6d931ef2ddb66689e9f91e30131bc7c06dd5"
+      },
+      {
+        "path": "tracks/paper-moon.strudel",
+        "sha256": "cc110558e9fc54fb81de34f7d1618690f975063155fa9f025dade49bba2a53ad"
+      },
+      {
+        "path": "tracks/soft-focus.strudel",
+        "sha256": "854873d03a6d56f065ddd2b084c09ed7f708077c53b60672b13aae76693e0eea"
+      },
+      {
+        "path": "tracks/tiny-hours.strudel",
+        "sha256": "08b31498b1692c89192f4a05b0c63f2566f1c5a8546f44401b97d33f91e705af"
+      },
+      {
+        "path": "tracks/wide-awake.strudel",
+        "sha256": "b24a71dc17e643c12528b42bf5a83da52a561f9770ed93ffde4f6d4eb2d73b26"
+      }
+    ]
+  },
+  "tested_url": "https://disabled-stereo-trips-clocks.trycloudflare.com/player/",
+  "browser_version": "155.0.8059.82",
+  "console_diagnostics": [
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "SyntaxError: Unexpected token (1:6)\n    at new In (https://unpkg.com/@strudel/web@1.2.6:45:40329)\n    at xs.raise (https://unpkg.com/@strudel/web@1.2.6:57:8869)\n    at pt.unexpected (https://unpkg.com/@strudel/web@1.2.6:55:4225)\n    at le.parseIdentNode (https://unpkg.com/@strudel/web@1.2.6:57:7820)\n    at le.parseIdent (https://unpkg.com/@strudel/web@1.2.6:57:7338)\n    at Lt.parseBindingAtom (https://unpkg.com/@strudel/web@1.2.6:55:30904)\n    at te.parseVarId (https://unpkg.com/@strudel/web@1.2.6:55:16345)\n    at te.parseVar (https://unpkg.com/@strudel/web@1.2.6:55:15858)\n    at te.parseVarStatement (https://unpkg.com/@strudel/web@1.2.6:55:13298)\n    at te.parseStatement (https://unpkg.com/@strudel/web@1.2.6:55:7548)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)",
+    "The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)"
+  ],
+  "pause_observation": {
+    "time": 0.9173333333333333,
+    "context": "suspended",
+    "paused": true,
+    "playing": false,
+    "revision": 1,
+    "resumes": [
+      {
+        "time": 0,
+        "stack": "Error\n    at AudioContext.resume (<anonymous>:7:61)\n    at F1 (https://unpkg.com/@strudel/web@1.2.6:6:11836)\n    at HTMLDocument.n (https://unpkg.com/@strudel/web@1.2.6:6:12220)"
+      },
+      {
+        "time": 0,
+        "stack": "Error\n    at AudioContext.resume (<anonymous>:7:61)\n    at https://disabled-stereo-trips-clocks.trycloudflare.com/player/app.js?v=beta-arranged-20261018:201:38"
+      }
+    ]
+  },
+  "status": "PASSED",
+  "finished_at": "2026-10-18T13:46:39.416Z"
+}

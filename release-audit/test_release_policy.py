@@ -19,7 +19,7 @@ class ReleasePolicyTests(unittest.TestCase):
         self.approval={'approved_commit':self.manifest['commit'],'publication_approved':True,
             'owner':'SYNTHETIC-UNIT-FIXTURE','approved_at':'2026-10-18T00:00:00Z',
             'integrated_license':'AGPL-3.0-or-later','original_provenance_confirmed':True,
-            'branding':{'public_name':'Strudelify','decision_evidence':'SYNTHETIC',
+            'branding':{'public_name':'Hustlenix Music','decision_evidence':'SYNTHETIC',
                         'upstream_permission_evidence':'SYNTHETIC; NO ACTUAL PERMISSION'},
             'devices':{name:{'physical_device':True,'passed':True,'model_browser':'SYNTHETIC',
                        'observations':'UNIT TEST ONLY'} for name in ['phone','laptop']},'tracks':[]}
@@ -79,6 +79,7 @@ class ReleasePolicyTests(unittest.TestCase):
         with self.assertRaises(ValueError): validate_approval(self.approval,self.manifest,self.folder)
 
     def test_pending_naming_permission_rejected(self):
+        self.approval['branding']['public_name']='Strudelify'
         self.approval['branding']['upstream_permission_evidence']=None
         with self.assertRaises(ValueError): validate_approval(self.approval,self.manifest,self.folder)
 

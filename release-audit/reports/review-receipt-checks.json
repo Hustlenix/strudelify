@@ -1,0 +1,7 @@
+{
+  "status": "PASSED",
+  "checks": 9,
+  "human_review": false,
+  "endpoint_submissions": 0,
+  "kind": "synthetic schema tests only"
+}

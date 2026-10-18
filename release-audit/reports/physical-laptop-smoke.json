@@ -1,0 +1,57 @@
+{
+  "candidate_commit": "92c3353a04be925e0d6cffa52860fb1af5351fe4",
+  "url": "https://disabled-stereo-trips-clocks.trycloudflare.com/player/",
+  "host": {
+    "manufacturer": "LENOVO",
+    "model": "82XM",
+    "os": "Windows",
+    "browser": "Chrome 155"
+  },
+  "method": "Native Chrome window controlled with computer-use sky UI APIs on the physical host; no headless browser or device emulation for these observations.",
+  "main_flow_passed": true,
+  "observations": [
+    {
+      "action": "First Play Afterglow",
+      "observed": "Afterglow active, Pause control and Playing live pattern; Chrome Audio playing indicator"
+    },
+    {
+      "action": "Pause",
+      "observed": "Resume current pattern and Paused - resume where you left off"
+    },
+    {
+      "action": "Resume",
+      "observed": "Pause current pattern and Playing live pattern"
+    },
+    {
+      "action": "Next",
+      "observed": "Greenline active and Playing live pattern"
+    },
+    {
+      "action": "View active code",
+      "observed": "Greenline detail and complete finite source including setcps, endSeconds, all three voices"
+    },
+    {
+      "action": "Stop",
+      "observed": "Play current pattern and Pattern stopped"
+    },
+    {
+      "action": "Search Paper Moon",
+      "observed": "Results for Paper Moon and matching view/play controls"
+    },
+    {
+      "action": "Play search result",
+      "observed": "Paper Moon active and Playing live pattern"
+    },
+    {
+      "action": "Previous",
+      "observed": "Greenline active and Playing live pattern"
+    }
+  ],
+  "limits": [
+    "No subjective listening approval",
+    "Speaker loudness/tone not independently heard or rated",
+    "Phone touchscreen and background/connectivity behavior not established by this laptop flow"
+  ],
+  "human_listening_review": false,
+  "phone_test": false
+}
