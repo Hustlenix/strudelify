@@ -23,6 +23,9 @@ The build must be regenerated from the committed implementation before final rev
 1. Native Play/Pause/Resume preserves the audio clock and session. Stop remains a hard reset.
    A reproduced first-Pause failure led to explicit first-gesture/worklet initialization before
    playback. Existing cancellation, serialized evaluations and cross-tab ownership are retained.
+   A further Chromium Resume/Stop/new-selection race exposed an old resume calling global hush
+   after a newer selection. The revision guard now leaves cleanup to the latest transport intent;
+   the failing run is preserved under `reports/failures/` and the same race is retested.
 2. Mobile Stop, Next and Previous controls are now usable with 40–44px control areas. Complete
    actual View code remains available. Source-loading failure exposes retry and clears its cache.
 3. Six existing project-original synth patterns are included in `tracks/catalog.json` as drafts.

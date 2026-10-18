@@ -256,7 +256,12 @@ async function togglePlayback() {
     state.playing = true;
     state.paused = false;
     await context.resume();
-    if (revision !== playbackRevision) { await silenceEngine(); return; }
+    if (revision !== playbackRevision) {
+      // A completed old resume must not hush a newer selection. If Stop is still the
+      // latest intent, suspend its output; a newer load/start owns its own cleanup.
+      if (!state.playing && !state.loading) await context.suspend();
+      return;
+    }
   }
   renderPlayer();
   renderAllLists();

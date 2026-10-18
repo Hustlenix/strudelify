@@ -125,7 +125,13 @@ try {
   await page.locator('#mainPlayButton').click();
   await page.waitForFunction(() => state.paused);
   await page.evaluate(async () => { await Promise.all([togglePlayback(), stopTrack(), playTrack(getTrack('afterglow'))]); });
-  await page.waitForFunction(() => state.playing && !state.loading && state.current.id === 'afterglow' && getAudioContext().state === 'running');
+  try {
+    await page.waitForFunction(() => state.playing && !state.loading && state.current.id === 'afterglow' && getAudioContext().state === 'running');
+  } catch (error) {
+    report.resume_race_failure_state = await page.evaluate(() => ({playing:state.playing, paused:state.paused,
+      loading:state.loading, current:state.current?.id, context:getAudioContext().state, error:playbackError}));
+    throw error;
+  }
   await page.evaluate(() => stopTrack());
   check('Resume/Stop/new selection race leaves the latest track active');
 
