@@ -42,9 +42,10 @@ removes those paths from the current Pages artifact, but cannot erase other copi
 ## Branding decision
 
 Strudel's maintainers ask independent projects to avoid "strudel" in their names.
-The owner has been asked to select `Hustlenix Music` or seek naming permission.
-The release gate requires the selected public name and its basis. A pending decision
-cannot pass publication approval. This branch does not claim permission was granted.
+The public UI now uses Hustlenix Music. The existing repository URL and browser storage keys
+are retained for continuity. The maintainer naming request is met by this public branding;
+no upstream endorsement or permission is claimed. This implementation choice follows the
+owner instruction to complete the remaining release work.
 
 ## Required review before publication
 

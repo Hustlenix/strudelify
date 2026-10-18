@@ -6,8 +6,8 @@
   "integrated_license": "AGPL-3.0-or-later",
   "original_provenance_confirmed": false,
   "branding": {
-    "public_name": null,
-    "decision_evidence": null,
+    "public_name": "Hustlenix Music",
+    "decision_evidence": "Public UI changed following owner instruction to complete remaining release work, 18 October 2026; Git commit records the changes.",
     "upstream_permission_evidence": null
   },
   "devices": {

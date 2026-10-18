@@ -47,6 +47,7 @@ jobs:
           pactl set-default-sink strudelify_ci
       - run: python release-audit/build_preview.py
       - run: python release-audit/test_release_policy.py release-preview
+      - run: node release-audit/review-receipt-checks.mjs release-preview
       - run: node release-audit/player-checks.mjs release-preview ${{ matrix.browser }}
       - uses: actions/upload-artifact@v4
         if: always()

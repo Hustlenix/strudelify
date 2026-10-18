@@ -1,0 +1,48 @@
+{
+  "tracks": [
+    {
+      "id": "afterglow",
+      "source_sha256": "27fb4feef4c9f5b11b8213b9af9cc9342e39218f2ca2fb5e4e8f64b3083d2074",
+      "encoded_sha256": "9fd74bffdd24aa790d2bbffd373f1854bb70a2a5de16f0d5068361819372f394",
+      "bytes": 2583980,
+      "kind": "Project-original synthesized listening render, not commercial audio"
+    },
+    {
+      "id": "greenline",
+      "source_sha256": "5bb5b2ff7a7b5aa7b262f74da9045b98f953c89190aa627987a55c23bcecc91d",
+      "encoded_sha256": "104c90d51fe10d22953f992005de4b278b9b28c285c7578081fb57f38299102d",
+      "bytes": 2434220,
+      "kind": "Project-original synthesized listening render, not commercial audio"
+    },
+    {
+      "id": "paper-moon",
+      "source_sha256": "18aca006ea4b225a9021138353c711a2e50d4b31e35f6edfb09cae13183cf199",
+      "encoded_sha256": "ed05575d76213f531400908c5e445348b32920386237ef01efda65ec115ad231",
+      "bytes": 2631212,
+      "kind": "Project-original synthesized listening render, not commercial audio"
+    },
+    {
+      "id": "soft-focus",
+      "source_sha256": "66e46f8464509a729fb8e510d6a7ac85a1bcee426d8555808325b24ddeb0ebcc",
+      "encoded_sha256": "dadc4705c79f5cff6a56ad07ed4e9867d4ebd52c466c1f315c5216432131a22a",
+      "bytes": 2934188,
+      "kind": "Project-original synthesized listening render, not commercial audio"
+    },
+    {
+      "id": "tiny-hours",
+      "source_sha256": "b85304035bc9e9b44dee393bf0371b69e20b63ea8695136e9b93928a086446b1",
+      "encoded_sha256": "03f8c33d6c47b1dfd5a8c0eee49189da409e0883e3d4d5dd53d72394e5ca2099",
+      "bytes": 2278700,
+      "kind": "Project-original synthesized listening render, not commercial audio"
+    },
+    {
+      "id": "wide-awake",
+      "source_sha256": "11dfdb7266e8d68181f2ed0a3ee9a1eb6fc66e9a4315223a9c7046bdec25c601",
+      "encoded_sha256": "33eb13e57da06eb44bf03ea0c68b7b8c69078629328336638b0ecc23db1867c4",
+      "bytes": 2620844,
+      "kind": "Project-original synthesized listening render, not commercial audio"
+    }
+  ],
+  "publication": "temporary HTTPS review only; excluded from Pages artifact",
+  "commercial_reference_files_read": 0
+}

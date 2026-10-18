@@ -21,7 +21,9 @@ composition/lyric rights. No new sound, photo, font, icon pack or artist artwork
 Strudel's maintainers describe AGPL source-sharing obligations and ask independent projects to
 avoid using “strudel” in their names. The proposed combined distribution is AGPL-3.0-or-later,
 with MIT grants retained for project portions. Every artifact includes the application source.
-The public name still needs an owner choice or recorded upstream permission before publication.
+The public UI now uses Hustlenix Music, following the instruction to complete the remaining
+release work. The repository URL and historical attribution are retained. No upstream endorsement
+is claimed. Full listening/device review and final publication approval remain pending.
 See the primary guidance above; this ledger records engineering evidence and open decisions.
 
 Popularity, public availability, source-code licensing and permission to publish a musical

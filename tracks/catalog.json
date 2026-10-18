@@ -2,7 +2,7 @@
   {
     "id": "afterglow",
     "title": "Afterglow",
-    "artist": "Strudelify",
+    "artist": "Hustlenix Music",
     "codeUrl": "./afterglow.strudel",
     "bpm": 78,
     "genre": "Warm ambient",
@@ -21,7 +21,7 @@
   {
     "id": "greenline",
     "title": "Greenline",
-    "artist": "Strudelify",
+    "artist": "Hustlenix Music",
     "codeUrl": "./greenline.strudel",
     "bpm": 104,
     "genre": "Night motion",
@@ -40,7 +40,7 @@
   {
     "id": "paper-moon",
     "title": "Paper Moon",
-    "artist": "Strudelify",
+    "artist": "Hustlenix Music",
     "codeUrl": "./paper-moon.strudel",
     "bpm": 86,
     "genre": "Dusty keys",
@@ -59,7 +59,7 @@
   {
     "id": "soft-focus",
     "title": "Soft Focus",
-    "artist": "Strudelify",
+    "artist": "Hustlenix Music",
     "codeUrl": "./soft-focus.strudel",
     "bpm": 68,
     "genre": "Dreamy drift",
@@ -78,7 +78,7 @@
   {
     "id": "tiny-hours",
     "title": "Tiny Hours",
-    "artist": "Strudelify",
+    "artist": "Hustlenix Music",
     "codeUrl": "./tiny-hours.strudel",
     "bpm": 112,
     "genre": "Offbeat synth",
@@ -97,7 +97,7 @@
   {
     "id": "wide-awake",
     "title": "Wide Awake",
-    "artist": "Strudelify",
+    "artist": "Hustlenix Music",
     "codeUrl": "./wide-awake.strudel",
     "bpm": 96,
     "genre": "Bright pulse",

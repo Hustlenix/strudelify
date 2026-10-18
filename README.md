@@ -1,4 +1,6 @@
-# Strudelify
+# Hustlenix Music
+
+Previously branded Strudelify. The repository URL is retained.
 <img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/0fe97c3c-edde-46a8-ae17-3c1ac30accae" />
 
 **WHOLE SPOTIFY IN STRUDEL, CAUSE WHY NOTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT?** 
@@ -24,7 +26,7 @@ The interface follows the measured layout reference in [design.md](design.md): I
 
 The project-authored source retains its MIT notice. Strudel is an AGPL-3.0-or-later dependency;
 the proposed combined distribution uses AGPL-3.0-or-later, while MIT grants for project portions remain.
-The public name and final publication approval are pending; see [LICENSING.md](LICENSING.md).
+The public UI now uses Hustlenix Music; final publication approval is pending; see [LICENSING.md](LICENSING.md).
 See [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md). Demo compositions in `tracks/` are original examples for this project.
 
 ## MVP review candidate

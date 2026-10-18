@@ -1,10 +1,10 @@
 const tracks = [
-  { id: 'afterglow', title: 'Afterglow', artist: 'Strudelify', mood: 'Warm ambient', loop: '78 BPM', codeUrl: 'tracks/afterglow.strudel', group: 'Soft focus', palette: 1 },
-  { id: 'greenline', title: 'Greenline', artist: 'Strudelify', mood: 'Night motion', loop: '104 BPM', codeUrl: 'tracks/greenline.strudel', group: 'Night motion', palette: 2 },
-  { id: 'paper-moon', title: 'Paper Moon', artist: 'Strudelify', mood: 'Dusty keys', loop: '86 BPM', codeUrl: 'tracks/paper-moon.strudel', group: 'Slow burn', palette: 3 },
-  { id: 'soft-focus', title: 'Soft Focus', artist: 'Strudelify', mood: 'Dreamy drift', loop: '68 BPM', codeUrl: 'tracks/soft-focus.strudel', group: 'Soft focus', palette: 4 },
-  { id: 'tiny-hours', title: 'Tiny Hours', artist: 'Strudelify', mood: 'Offbeat synth', loop: '112 BPM', codeUrl: 'tracks/tiny-hours.strudel', group: 'Night motion', palette: 5 },
-  { id: 'wide-awake', title: 'Wide Awake', artist: 'Strudelify', mood: 'Bright pulse', loop: '96 BPM', codeUrl: 'tracks/wide-awake.strudel', group: 'Slow burn', palette: 6 },
+  { id: 'afterglow', title: 'Afterglow', artist: 'Hustlenix Music', mood: 'Warm ambient', loop: '78 BPM', codeUrl: 'tracks/afterglow.strudel', group: 'Soft focus', palette: 1 },
+  { id: 'greenline', title: 'Greenline', artist: 'Hustlenix Music', mood: 'Night motion', loop: '104 BPM', codeUrl: 'tracks/greenline.strudel', group: 'Night motion', palette: 2 },
+  { id: 'paper-moon', title: 'Paper Moon', artist: 'Hustlenix Music', mood: 'Dusty keys', loop: '86 BPM', codeUrl: 'tracks/paper-moon.strudel', group: 'Slow burn', palette: 3 },
+  { id: 'soft-focus', title: 'Soft Focus', artist: 'Hustlenix Music', mood: 'Dreamy drift', loop: '68 BPM', codeUrl: 'tracks/soft-focus.strudel', group: 'Soft focus', palette: 4 },
+  { id: 'tiny-hours', title: 'Tiny Hours', artist: 'Hustlenix Music', mood: 'Offbeat synth', loop: '112 BPM', codeUrl: 'tracks/tiny-hours.strudel', group: 'Night motion', palette: 5 },
+  { id: 'wide-awake', title: 'Wide Awake', artist: 'Hustlenix Music', mood: 'Bright pulse', loop: '96 BPM', codeUrl: 'tracks/wide-awake.strudel', group: 'Slow burn', palette: 6 },
 ];
 
 const palettes = [
@@ -302,7 +302,7 @@ function renderPlayer() {
 }
 function renderPlaylistNav() {
   const items = [{ name: 'All patterns', filter: '', palette: 1 }, ...groups.map(g => ({...g, filter:g.name})), {name:'Liked tracks', liked:true, palette:3}];
-  $('#playlistList').innerHTML = items.map(item => `<button class="playlist-link" data-group="${escapeHtml(item.filter || '')}" data-liked-nav="${!!item.liked}" title="${escapeHtml(item.name)}"><span class="playlist-art" style="background:#45337d">${item.liked ? icon('heart') : coverImage(item)}</span><span class="playlist-copy"><strong>${escapeHtml(item.name)}</strong><small>${item.liked ? 'Collection · Saved by you' : 'Collection · Strudelify'}</small></span></button>`).join('');
+  $('#playlistList').innerHTML = items.map(item => `<button class="playlist-link" data-group="${escapeHtml(item.filter || '')}" data-liked-nav="${!!item.liked}" title="${escapeHtml(item.name)}"><span class="playlist-art" style="background:#45337d">${item.liked ? icon('heart') : coverImage(item)}</span><span class="playlist-copy"><strong>${escapeHtml(item.name)}</strong><small>${item.liked ? 'Collection · Saved by you' : 'Collection · Hustlenix Music'}</small></span></button>`).join('');
 }
 function rowMarkup(track, index) {
   const active = state.current?.id === track.id;
