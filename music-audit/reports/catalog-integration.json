@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-10-18T08:18:07.014Z",
+  "root": "C:\\Users\\LalithReddy.b\\strudelify-catalog",
+  "base": "",
+  "checks": [
+    {
+      "name": "Eight covers in original order on Home",
+      "status": "PASSED"
+    },
+    {
+      "name": "Babydoll discoverable by search",
+      "status": "PASSED"
+    },
+    {
+      "name": "Babydoll deep link starts real WebAudio with named drum bank",
+      "status": "PASSED"
+    },
+    {
+      "name": "Stop playback",
+      "status": "PASSED"
+    }
+  ],
+  "errors": [],
+  "catalog": [
+    {
+      "id": "01-babydoll",
+      "title": "Babydoll",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/01-babydoll.strudel",
+      "status": "runtime-verified"
+    },
+    {
+      "id": "02-without-me",
+      "title": "Without Me",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/02-without-me.strudel",
+      "status": "draft"
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "title": "Everyday Normal Guy 2",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/03-everyday-normal-guy-2.strudel",
+      "status": "runtime-verified"
+    },
+    {
+      "id": "04-sailor-song",
+      "title": "Sailor Song",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/04-sailor-song.strudel",
+      "status": "runtime-verified"
+    },
+    {
+      "id": "05-cant-tell-me-nothing",
+      "title": "Can't Tell Me Nothing",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/05-cant-tell-me-nothing.strudel",
+      "status": "runtime-verified"
+    },
+    {
+      "id": "06-love-me-not",
+      "title": "Love Me Not",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/06-love-me-not.strudel",
+      "status": "runtime-verified"
+    },
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "title": "I Thought I Saw Your Face Today",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/07-i-thought-i-saw-your-face-today.strudel",
+      "status": "runtime-verified"
+    },
+    {
+      "id": "08-lonely",
+      "title": "Lonely",
+      "codeUrl": "http://127.0.0.1:61274/tracks/covers/08-lonely.strudel",
+      "status": "runtime-verified"
+    }
+  ],
+  "audio": {
+    "peak": 0.9286865592002869,
+    "frames": 1826816,
+    "clipped": 0,
+    "nonfinite": 0,
+    "sounds": [
+      {
+        "sound": "rolandtr909_bd",
+        "registered": true
+      },
+      {
+        "sound": "rolandtr909_sd",
+        "registered": true
+      },
+      {
+        "sound": "rolandtr909_hh",
+        "registered": true
+      }
+    ]
+  },
+  "status": "PASSED"
+}

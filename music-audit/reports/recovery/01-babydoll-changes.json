@@ -1,0 +1,31 @@
+[
+  {
+    "phase": "replace-unverified-pitch-and-rhythm-score",
+    "attempt": 1,
+    "reason": "Owner rejected every public song; current cover lead/harmony/groove were unverified and source evidence contradicts the old repeated notes. Preserve instrumentation roles but replace pitch/timing content with independently corroborated source events across the full reference.",
+    "before_sha256": "8c7bc8bba1364453509e47aab508a637b46764dfd02066b70530f8d79b07985d",
+    "after_sha256": "368e1741ffe07dd74328e7e7591d36c691e6b5b9b8d6b88993b0aa80c46f84e9",
+    "counts": {
+      "lead": 192,
+      "accompaniment": 210,
+      "bass": 86,
+      "drums": 503
+    },
+    "duration_s": 98.112,
+    "decision": "candidate, requires real runtime/full capture; no listening approval"
+  },
+  {
+    "phase": "resolved-sound-controls",
+    "attempt": 1,
+    "change": "Use single-quoted literal string data in custom Haps; double quotes and backticks are parsed as Patterns by Strudel transpiler. Strengthen music runtime worker to reject embedded Pattern objects in sound/bank controls. Timed musical events unchanged.",
+    "after_sha256": "1528fe24962cb403e6ca52456bb748d37d1ce4eeb7580ac0d4c1b030c93b8093",
+    "decision": "real Strudel evaluation passed; audio capture pending"
+  },
+  {
+    "phase": "measured-full-song-headroom",
+    "attempt": 1,
+    "change": "Apply gain factor 2.6 after the first 100-second WebAudio capture measured -26.6 LUFS and -9.5 dBTP. Second full capture measures -18.37 LUFS, -1.5 dBTP, zero clipped/nonfinite samples. Preserve transcribed note content.",
+    "after_sha256": "952a18347bd752fd79f0a3c71b7db4759deca1c4928e3e282ddc6b4ec75a110b",
+    "decision": "runtime-verified; listening remains pending"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "phase": "replace-unverified-pitch-and-rhythm-score",
+    "attempt": 1,
+    "reason": "Owner rejected every public song; current cover lead/harmony/groove were unverified and source evidence contradicts the old repeated notes. Preserve instrumentation roles but replace pitch/timing content with independently corroborated source events across the full reference.",
+    "before_sha256": "500d15292a7b68fd7e38d2b11194c8b8907b104a962a750015ff3fbc0c90cc22",
+    "after_sha256": "4c7c252b091e41b722d20d9bfd6dda93598045ac106989409b084dff9d05319e",
+    "profile": "sung",
+    "counts": {
+      "lead": 338,
+      "accompaniment": 1116,
+      "bass": 83,
+      "drums": 850
+    },
+    "duration_s": 209.533,
+    "decision": "candidate, requires real runtime/full capture; no listening approval"
+  }
+]

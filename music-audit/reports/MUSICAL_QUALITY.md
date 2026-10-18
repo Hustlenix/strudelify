@@ -2,13 +2,29 @@
 
 **Review candidates; no song is approved. No human critical listening has been performed. All fidelity scores are null.**
 
+## Recovery update — 18 October 2026
+
+Babydoll now has a full 98.112-second source-timed score: 192 vocal contour events corroborated
+by CREPE/YIN, 210 accompaniment note events corroborated by instrumental spectral evidence,
+86 low-note candidates and 503 source transient candidates. The former G/D/Em/C loop and
+repeating guessed melody have been removed. This is a machine-assisted transcription draft,
+not an approved faithful rendition. Possible slide fragmentation, detector omissions, instrument
+identification and kit classification still require actual listening. The owner has been given
+a real 22-second render to review; no positive recognition response is recorded yet.
+
+A complete 100.0107-second real-time stereo WebAudio capture of its current code passes,
+with -18.37 LUFS integrated, -1.5 dBTP and zero clipped/non-finite samples. This replaces the
+earlier limited Babydoll capture evidence only. See `recovery/01-babydoll-metrics.json`,
+`recovery/01-babydoll-score.json` and `recovery/01-babydoll-changes.json`.
+The other seven rows below describe their previous drafts until explicitly updated.
+
 Kept the original eight arrangements and retained their instrumentation/relative motifs unless a bounded change had specific evidence. Six tonal transposes improve measured pitch-class fit, four tempos follow refined source periodicities, the Lonely kick grid is repaired, six mixes have measured headroom trims, and all eight follow source RMS macro-dynamics with finite endings. Babydoll has a 15-event source-derived opening repair over 0–4.37 s.
 
 Pitch-class cosine is an engineering feature comparison, **not a fidelity score**. It ignores note order, musical function and instrument identity. Macro-dynamics are not a complete section arrangement. Most existing lead contours, basslines and harmonic sequences are still unverified; recognizability has not been certified.
 
 | Track | BPM | Status | Main review need |
 |---|---:|---|---|
-| Babydoll | 84.05 | runtime-verified | Only the 0–4.37 s opening has a bounded note-event repair. Later lead contour, G/D/Em/C loop and bass remain unverified against the recording; the source contains different harmonic material. Complete the main vocal motif and harmonic rhythm before approval. |
+| Babydoll | 84.05 | runtime-verified | Full source-timed transcription candidate and full-duration capture now exist; review the rendered hook for recognition, missed notes, slide fragmentation, guitar timbre and transient classification before approval. |
 | Without Me | 112 | runtime-verified | The tonal transpose improves aggregate pitch-class fit, but does not establish the famous riff. The current G/Eb/F/D progression and eighth-note bass are unverified; measured source bass strongly favors G/D. The separated instrumental probe returned no robust f0 sequence, so no replacement riff was guessed. |
 | Everyday Normal Guy 2 | 90 | runtime-verified | Mixed-source key estimates conflict and the note probe is sparse. Original A-minor loop retained. Transcribe the recurring instrumental phrase and bass in isolation before changing harmony. Source dynamics/end are implemented; melody, groove and form orchestration are not approved. |
 | Sailor Song | 94.85 | runtime-verified | 94.85 BPM is the strongest refined periodicity in the selected window, with 63/126/190 alternatives. Meter/downbeat and the six-subdivision drum grid remain unresolved. B-centered transpose does not certify the B/E/G#m/F# harmonic sequence or guitar voicings. |

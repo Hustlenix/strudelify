@@ -1,0 +1,1693 @@
+{
+  "id": "01-babydoll",
+  "source_path": "C:\\Users\\LalithReddy.b\\Let_It_Happen\\album\\audio\\01-babydoll.mp3",
+  "source_sha256": "f4f8c5c821cf3b03f96b78bae00a9314878a94c0519a561378a6369c468abbad",
+  "interval_s": [
+    0,
+    98.112
+  ],
+  "method": "MDX Inst HQ3 vocal residual + CREPE full 0.0.24, 10 ms hop; periodicity>=.42, <=45 cents, >=80 ms; measured silence mask",
+  "status": "SOURCE_DERIVED_DRAFT_NOT_LISTENING_APPROVED",
+  "notes": [
+    {
+      "start_s": 10.58,
+      "end_s": 10.82,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.797,
+      "cents_median": 21.22
+    },
+    {
+      "start_s": 10.88,
+      "end_s": 10.96,
+      "midi": 59,
+      "note": "B3",
+      "mean_periodicity": 0.87,
+      "cents_median": 18.45
+    },
+    {
+      "start_s": 10.97,
+      "end_s": 11.08,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.9289,
+      "cents_median": 0.43
+    },
+    {
+      "start_s": 11.08,
+      "end_s": 11.52,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9224,
+      "cents_median": 11.77
+    },
+    {
+      "start_s": 11.64,
+      "end_s": 12.23,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9346,
+      "cents_median": 12.67
+    },
+    {
+      "start_s": 12.41,
+      "end_s": 12.66,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9102,
+      "cents_median": 10.56
+    },
+    {
+      "start_s": 12.99,
+      "end_s": 13.32,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9564,
+      "cents_median": 16.62
+    },
+    {
+      "start_s": 13.32,
+      "end_s": 13.5,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.9222,
+      "cents_median": 1.38
+    },
+    {
+      "start_s": 13.81,
+      "end_s": 13.98,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8753,
+      "cents_median": -0.65
+    },
+    {
+      "start_s": 13.99,
+      "end_s": 14.13,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8747,
+      "cents_median": 5.07
+    },
+    {
+      "start_s": 14.17,
+      "end_s": 14.58,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9407,
+      "cents_median": 4.0
+    },
+    {
+      "start_s": 14.69,
+      "end_s": 15.02,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9036,
+      "cents_median": 16.7
+    },
+    {
+      "start_s": 15.23,
+      "end_s": 15.35,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.7225,
+      "cents_median": 7.88
+    },
+    {
+      "start_s": 15.43,
+      "end_s": 15.52,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.7456,
+      "cents_median": -10.2
+    },
+    {
+      "start_s": 15.62,
+      "end_s": 15.79,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8383,
+      "cents_median": 12.49
+    },
+    {
+      "start_s": 16.32,
+      "end_s": 16.52,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8909,
+      "cents_median": 8.81
+    },
+    {
+      "start_s": 16.7,
+      "end_s": 16.83,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9304,
+      "cents_median": 10.99
+    },
+    {
+      "start_s": 17.1,
+      "end_s": 17.32,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8541,
+      "cents_median": -2.83
+    },
+    {
+      "start_s": 17.51,
+      "end_s": 17.66,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9199,
+      "cents_median": 13.66
+    },
+    {
+      "start_s": 18.39,
+      "end_s": 18.5,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8578,
+      "cents_median": -12.53
+    },
+    {
+      "start_s": 18.79,
+      "end_s": 18.9,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.9179,
+      "cents_median": -8.6
+    },
+    {
+      "start_s": 19.01,
+      "end_s": 19.2,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.773,
+      "cents_median": -16.67
+    },
+    {
+      "start_s": 20.23,
+      "end_s": 20.34,
+      "midi": 65,
+      "note": "F4",
+      "mean_periodicity": 0.8923,
+      "cents_median": -18.42
+    },
+    {
+      "start_s": 20.34,
+      "end_s": 20.45,
+      "midi": 66,
+      "note": "F#4",
+      "mean_periodicity": 0.9154,
+      "cents_median": 18.97
+    },
+    {
+      "start_s": 20.45,
+      "end_s": 20.8,
+      "midi": 67,
+      "note": "G4",
+      "mean_periodicity": 0.9267,
+      "cents_median": 10.22
+    },
+    {
+      "start_s": 22.02,
+      "end_s": 22.13,
+      "midi": 59,
+      "note": "B3",
+      "mean_periodicity": 0.8943,
+      "cents_median": 29.72
+    },
+    {
+      "start_s": 22.41,
+      "end_s": 22.51,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.9419,
+      "cents_median": -0.37
+    },
+    {
+      "start_s": 22.53,
+      "end_s": 22.62,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.7886,
+      "cents_median": -22.71
+    },
+    {
+      "start_s": 22.69,
+      "end_s": 22.91,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9191,
+      "cents_median": 13.4
+    },
+    {
+      "start_s": 22.91,
+      "end_s": 22.99,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.8682,
+      "cents_median": 24.58
+    },
+    {
+      "start_s": 23.08,
+      "end_s": 23.5,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8943,
+      "cents_median": -6.55
+    },
+    {
+      "start_s": 23.85,
+      "end_s": 24.06,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9048,
+      "cents_median": 0.33
+    },
+    {
+      "start_s": 24.34,
+      "end_s": 24.78,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9314,
+      "cents_median": -6.84
+    },
+    {
+      "start_s": 24.78,
+      "end_s": 24.92,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8956,
+      "cents_median": -2.4
+    },
+    {
+      "start_s": 25.04,
+      "end_s": 25.12,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8977,
+      "cents_median": 21.97
+    },
+    {
+      "start_s": 25.2,
+      "end_s": 25.37,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8763,
+      "cents_median": 5.96
+    },
+    {
+      "start_s": 25.62,
+      "end_s": 25.88,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9558,
+      "cents_median": -5.48
+    },
+    {
+      "start_s": 26.71,
+      "end_s": 26.8,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9517,
+      "cents_median": -14.12
+    },
+    {
+      "start_s": 26.84,
+      "end_s": 27.03,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.895,
+      "cents_median": -22.16
+    },
+    {
+      "start_s": 27.15,
+      "end_s": 27.59,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9355,
+      "cents_median": 10.72
+    },
+    {
+      "start_s": 27.68,
+      "end_s": 27.79,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8953,
+      "cents_median": 5.5
+    },
+    {
+      "start_s": 27.8,
+      "end_s": 27.92,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9426,
+      "cents_median": -7.39
+    },
+    {
+      "start_s": 27.93,
+      "end_s": 28.45,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.9374,
+      "cents_median": 15.27
+    },
+    {
+      "start_s": 28.54,
+      "end_s": 28.63,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.596,
+      "cents_median": -27.43
+    },
+    {
+      "start_s": 33.83,
+      "end_s": 34.35,
+      "midi": 72,
+      "note": "C5",
+      "mean_periodicity": 0.9419,
+      "cents_median": 3.93
+    },
+    {
+      "start_s": 34.42,
+      "end_s": 34.5,
+      "midi": 70,
+      "note": "A#4",
+      "mean_periodicity": 0.8977,
+      "cents_median": 16.17
+    },
+    {
+      "start_s": 34.5,
+      "end_s": 34.66,
+      "midi": 69,
+      "note": "A4",
+      "mean_periodicity": 0.9419,
+      "cents_median": 23.51
+    },
+    {
+      "start_s": 34.71,
+      "end_s": 34.83,
+      "midi": 69,
+      "note": "A4",
+      "mean_periodicity": 0.8971,
+      "cents_median": 8.61
+    },
+    {
+      "start_s": 34.94,
+      "end_s": 35.1,
+      "midi": 65,
+      "note": "F4",
+      "mean_periodicity": 0.9539,
+      "cents_median": -29.53
+    },
+    {
+      "start_s": 35.11,
+      "end_s": 35.26,
+      "midi": 63,
+      "note": "D#4",
+      "mean_periodicity": 0.9232,
+      "cents_median": -5.8
+    },
+    {
+      "start_s": 35.61,
+      "end_s": 35.73,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8727,
+      "cents_median": -13.34
+    },
+    {
+      "start_s": 35.77,
+      "end_s": 35.89,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9432,
+      "cents_median": 27.54
+    },
+    {
+      "start_s": 35.89,
+      "end_s": 35.97,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9429,
+      "cents_median": -28.81
+    },
+    {
+      "start_s": 35.99,
+      "end_s": 36.12,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.917,
+      "cents_median": 3.41
+    },
+    {
+      "start_s": 36.32,
+      "end_s": 36.45,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9211,
+      "cents_median": -16.41
+    },
+    {
+      "start_s": 36.47,
+      "end_s": 36.56,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.5672,
+      "cents_median": -25.96
+    },
+    {
+      "start_s": 36.71,
+      "end_s": 36.82,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9076,
+      "cents_median": 2.06
+    },
+    {
+      "start_s": 37.33,
+      "end_s": 37.41,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.7981,
+      "cents_median": -18.87
+    },
+    {
+      "start_s": 37.55,
+      "end_s": 37.64,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.894,
+      "cents_median": -31.59
+    },
+    {
+      "start_s": 37.71,
+      "end_s": 37.88,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8505,
+      "cents_median": -6.83
+    },
+    {
+      "start_s": 37.94,
+      "end_s": 38.02,
+      "midi": 53,
+      "note": "F3",
+      "mean_periodicity": 0.8508,
+      "cents_median": 11.02
+    },
+    {
+      "start_s": 38.09,
+      "end_s": 38.26,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.6604,
+      "cents_median": -4.07
+    },
+    {
+      "start_s": 38.31,
+      "end_s": 38.39,
+      "midi": 54,
+      "note": "F#3",
+      "mean_periodicity": 0.6646,
+      "cents_median": -34.26
+    },
+    {
+      "start_s": 38.76,
+      "end_s": 38.98,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8666,
+      "cents_median": 2.87
+    },
+    {
+      "start_s": 38.98,
+      "end_s": 39.12,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9349,
+      "cents_median": 26.9
+    },
+    {
+      "start_s": 39.52,
+      "end_s": 39.6,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.7265,
+      "cents_median": 13.45
+    },
+    {
+      "start_s": 40.0,
+      "end_s": 40.12,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.7847,
+      "cents_median": 20.35
+    },
+    {
+      "start_s": 40.5,
+      "end_s": 40.68,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.7295,
+      "cents_median": 11.47
+    },
+    {
+      "start_s": 40.74,
+      "end_s": 41.0,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8793,
+      "cents_median": -23.66
+    },
+    {
+      "start_s": 41.28,
+      "end_s": 41.44,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8163,
+      "cents_median": -13.8
+    },
+    {
+      "start_s": 41.45,
+      "end_s": 41.6,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.8226,
+      "cents_median": 18.35
+    },
+    {
+      "start_s": 41.62,
+      "end_s": 41.71,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.905,
+      "cents_median": -16.63
+    },
+    {
+      "start_s": 41.83,
+      "end_s": 42.02,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9402,
+      "cents_median": 22.04
+    },
+    {
+      "start_s": 42.19,
+      "end_s": 42.3,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.8216,
+      "cents_median": 22.97
+    },
+    {
+      "start_s": 42.32,
+      "end_s": 42.56,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.935,
+      "cents_median": 6.52
+    },
+    {
+      "start_s": 42.59,
+      "end_s": 42.97,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9219,
+      "cents_median": 2.29
+    },
+    {
+      "start_s": 42.97,
+      "end_s": 43.08,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.5295,
+      "cents_median": 5.97
+    },
+    {
+      "start_s": 43.08,
+      "end_s": 43.5,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9294,
+      "cents_median": -12.06
+    },
+    {
+      "start_s": 43.71,
+      "end_s": 43.96,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9203,
+      "cents_median": -18.09
+    },
+    {
+      "start_s": 44.22,
+      "end_s": 44.75,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.9435,
+      "cents_median": 6.79
+    },
+    {
+      "start_s": 44.94,
+      "end_s": 45.02,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.5938,
+      "cents_median": 5.23
+    },
+    {
+      "start_s": 46.62,
+      "end_s": 46.82,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8986,
+      "cents_median": -3.97
+    },
+    {
+      "start_s": 46.87,
+      "end_s": 46.95,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.7656,
+      "cents_median": -26.38
+    },
+    {
+      "start_s": 47.33,
+      "end_s": 47.43,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8312,
+      "cents_median": 11.75
+    },
+    {
+      "start_s": 47.72,
+      "end_s": 47.91,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9461,
+      "cents_median": 19.62
+    },
+    {
+      "start_s": 48.05,
+      "end_s": 48.26,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9257,
+      "cents_median": 16.89
+    },
+    {
+      "start_s": 48.64,
+      "end_s": 48.76,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.7628,
+      "cents_median": -4.71
+    },
+    {
+      "start_s": 49.18,
+      "end_s": 49.31,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8836,
+      "cents_median": 0.72
+    },
+    {
+      "start_s": 49.37,
+      "end_s": 49.45,
+      "midi": 53,
+      "note": "F3",
+      "mean_periodicity": 0.9118,
+      "cents_median": -0.37
+    },
+    {
+      "start_s": 49.49,
+      "end_s": 49.68,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9018,
+      "cents_median": -14.15
+    },
+    {
+      "start_s": 49.85,
+      "end_s": 50.02,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9424,
+      "cents_median": 2.62
+    },
+    {
+      "start_s": 50.19,
+      "end_s": 50.4,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.7291,
+      "cents_median": -11.27
+    },
+    {
+      "start_s": 50.4,
+      "end_s": 50.57,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9415,
+      "cents_median": -7.68
+    },
+    {
+      "start_s": 50.57,
+      "end_s": 50.66,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9357,
+      "cents_median": -3.52
+    },
+    {
+      "start_s": 50.71,
+      "end_s": 50.84,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.6298,
+      "cents_median": -8.18
+    },
+    {
+      "start_s": 50.94,
+      "end_s": 51.08,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9234,
+      "cents_median": -1.79
+    },
+    {
+      "start_s": 51.08,
+      "end_s": 51.17,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.746,
+      "cents_median": 12.28
+    },
+    {
+      "start_s": 52.01,
+      "end_s": 52.11,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8313,
+      "cents_median": 34.42
+    },
+    {
+      "start_s": 52.42,
+      "end_s": 52.61,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8888,
+      "cents_median": -16.65
+    },
+    {
+      "start_s": 52.69,
+      "end_s": 52.79,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8542,
+      "cents_median": -0.4
+    },
+    {
+      "start_s": 52.79,
+      "end_s": 53.02,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9333,
+      "cents_median": 28.97
+    },
+    {
+      "start_s": 53.03,
+      "end_s": 53.12,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9146,
+      "cents_median": 16.85
+    },
+    {
+      "start_s": 53.45,
+      "end_s": 53.6,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8855,
+      "cents_median": -1.62
+    },
+    {
+      "start_s": 53.79,
+      "end_s": 54.11,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8922,
+      "cents_median": -13.21
+    },
+    {
+      "start_s": 54.31,
+      "end_s": 54.45,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9126,
+      "cents_median": 14.25
+    },
+    {
+      "start_s": 54.46,
+      "end_s": 54.58,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8949,
+      "cents_median": 15.95
+    },
+    {
+      "start_s": 54.82,
+      "end_s": 55.01,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8775,
+      "cents_median": -33.13
+    },
+    {
+      "start_s": 55.07,
+      "end_s": 55.16,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9287,
+      "cents_median": 3.1
+    },
+    {
+      "start_s": 55.18,
+      "end_s": 55.31,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9169,
+      "cents_median": 34.69
+    },
+    {
+      "start_s": 55.4,
+      "end_s": 55.48,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9485,
+      "cents_median": -27.88
+    },
+    {
+      "start_s": 55.53,
+      "end_s": 55.61,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.934,
+      "cents_median": -23.0
+    },
+    {
+      "start_s": 55.64,
+      "end_s": 55.76,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.8674,
+      "cents_median": 31.03
+    },
+    {
+      "start_s": 55.91,
+      "end_s": 56.08,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9294,
+      "cents_median": 4.23
+    },
+    {
+      "start_s": 56.09,
+      "end_s": 56.24,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9339,
+      "cents_median": 12.3
+    },
+    {
+      "start_s": 56.47,
+      "end_s": 56.59,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9463,
+      "cents_median": 22.7
+    },
+    {
+      "start_s": 56.63,
+      "end_s": 56.73,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.9095,
+      "cents_median": -22.97
+    },
+    {
+      "start_s": 56.8,
+      "end_s": 56.92,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8814,
+      "cents_median": -10.66
+    },
+    {
+      "start_s": 56.96,
+      "end_s": 57.04,
+      "midi": 63,
+      "note": "D#4",
+      "mean_periodicity": 0.8915,
+      "cents_median": -25.82
+    },
+    {
+      "start_s": 57.72,
+      "end_s": 57.8,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8091,
+      "cents_median": -12.69
+    },
+    {
+      "start_s": 57.88,
+      "end_s": 58.13,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.8929,
+      "cents_median": 8.28
+    },
+    {
+      "start_s": 58.33,
+      "end_s": 58.41,
+      "midi": 53,
+      "note": "F3",
+      "mean_periodicity": 0.7124,
+      "cents_median": -26.44
+    },
+    {
+      "start_s": 58.41,
+      "end_s": 58.6,
+      "midi": 54,
+      "note": "F#3",
+      "mean_periodicity": 0.8551,
+      "cents_median": 17.06
+    },
+    {
+      "start_s": 58.8,
+      "end_s": 59.03,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8001,
+      "cents_median": 11.26
+    },
+    {
+      "start_s": 59.73,
+      "end_s": 59.84,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.9035,
+      "cents_median": 0.96
+    },
+    {
+      "start_s": 59.89,
+      "end_s": 60.11,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.687,
+      "cents_median": 0.16
+    },
+    {
+      "start_s": 60.22,
+      "end_s": 60.53,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8056,
+      "cents_median": 0.73
+    },
+    {
+      "start_s": 60.92,
+      "end_s": 61.05,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.868,
+      "cents_median": 36.49
+    },
+    {
+      "start_s": 61.19,
+      "end_s": 61.29,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8744,
+      "cents_median": 20.92
+    },
+    {
+      "start_s": 61.29,
+      "end_s": 61.46,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.6518,
+      "cents_median": -3.63
+    },
+    {
+      "start_s": 61.46,
+      "end_s": 61.61,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8326,
+      "cents_median": 4.23
+    },
+    {
+      "start_s": 61.64,
+      "end_s": 61.72,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9147,
+      "cents_median": 8.72
+    },
+    {
+      "start_s": 62.34,
+      "end_s": 62.52,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8945,
+      "cents_median": -37.07
+    },
+    {
+      "start_s": 62.54,
+      "end_s": 62.68,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.8054,
+      "cents_median": 8.04
+    },
+    {
+      "start_s": 62.69,
+      "end_s": 62.79,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9442,
+      "cents_median": -3.0
+    },
+    {
+      "start_s": 63.03,
+      "end_s": 63.48,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9185,
+      "cents_median": -20.49
+    },
+    {
+      "start_s": 64.13,
+      "end_s": 64.28,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9297,
+      "cents_median": -25.07
+    },
+    {
+      "start_s": 64.47,
+      "end_s": 64.65,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9303,
+      "cents_median": 36.93
+    },
+    {
+      "start_s": 64.67,
+      "end_s": 64.84,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9464,
+      "cents_median": -39.25
+    },
+    {
+      "start_s": 65.09,
+      "end_s": 65.17,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.9222,
+      "cents_median": 24.7
+    },
+    {
+      "start_s": 65.21,
+      "end_s": 65.32,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9073,
+      "cents_median": -5.11
+    },
+    {
+      "start_s": 65.55,
+      "end_s": 65.67,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8535,
+      "cents_median": 15.46
+    },
+    {
+      "start_s": 65.75,
+      "end_s": 65.9,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9406,
+      "cents_median": -21.87
+    },
+    {
+      "start_s": 65.91,
+      "end_s": 66.01,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.895,
+      "cents_median": 37.91
+    },
+    {
+      "start_s": 66.01,
+      "end_s": 66.24,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.8894,
+      "cents_median": 10.04
+    },
+    {
+      "start_s": 66.27,
+      "end_s": 66.38,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.917,
+      "cents_median": -12.79
+    },
+    {
+      "start_s": 66.51,
+      "end_s": 66.66,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9489,
+      "cents_median": -6.21
+    },
+    {
+      "start_s": 66.67,
+      "end_s": 66.85,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9422,
+      "cents_median": 3.77
+    },
+    {
+      "start_s": 66.88,
+      "end_s": 67.02,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9362,
+      "cents_median": 1.52
+    },
+    {
+      "start_s": 67.03,
+      "end_s": 67.19,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9364,
+      "cents_median": -14.47
+    },
+    {
+      "start_s": 67.27,
+      "end_s": 67.37,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8749,
+      "cents_median": 33.72
+    },
+    {
+      "start_s": 67.53,
+      "end_s": 68.01,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.951,
+      "cents_median": 2.86
+    },
+    {
+      "start_s": 68.06,
+      "end_s": 68.14,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9106,
+      "cents_median": -18.53
+    },
+    {
+      "start_s": 68.19,
+      "end_s": 68.57,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9474,
+      "cents_median": 8.86
+    },
+    {
+      "start_s": 68.64,
+      "end_s": 68.75,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.6404,
+      "cents_median": -12.89
+    },
+    {
+      "start_s": 68.81,
+      "end_s": 69.23,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9487,
+      "cents_median": 15.1
+    },
+    {
+      "start_s": 69.27,
+      "end_s": 69.47,
+      "midi": 63,
+      "note": "D#4",
+      "mean_periodicity": 0.8637,
+      "cents_median": -16.09
+    },
+    {
+      "start_s": 70.37,
+      "end_s": 70.5,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.9133,
+      "cents_median": -35.89
+    },
+    {
+      "start_s": 70.99,
+      "end_s": 71.12,
+      "midi": 53,
+      "note": "F3",
+      "mean_periodicity": 0.926,
+      "cents_median": -17.64
+    },
+    {
+      "start_s": 71.72,
+      "end_s": 71.85,
+      "midi": 61,
+      "note": "C#4",
+      "mean_periodicity": 0.9324,
+      "cents_median": 8.71
+    },
+    {
+      "start_s": 71.86,
+      "end_s": 71.94,
+      "midi": 62,
+      "note": "D4",
+      "mean_periodicity": 0.9502,
+      "cents_median": -28.71
+    },
+    {
+      "start_s": 72.37,
+      "end_s": 72.56,
+      "midi": 59,
+      "note": "B3",
+      "mean_periodicity": 0.949,
+      "cents_median": 38.54
+    },
+    {
+      "start_s": 72.57,
+      "end_s": 72.7,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9527,
+      "cents_median": -32.11
+    },
+    {
+      "start_s": 73.14,
+      "end_s": 73.35,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.903,
+      "cents_median": -23.54
+    },
+    {
+      "start_s": 73.43,
+      "end_s": 73.67,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8007,
+      "cents_median": 17.1
+    },
+    {
+      "start_s": 73.73,
+      "end_s": 73.82,
+      "midi": 59,
+      "note": "B3",
+      "mean_periodicity": 0.8464,
+      "cents_median": 19.48
+    },
+    {
+      "start_s": 73.83,
+      "end_s": 73.93,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.9313,
+      "cents_median": 3.1
+    },
+    {
+      "start_s": 74.01,
+      "end_s": 74.38,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9296,
+      "cents_median": 12.23
+    },
+    {
+      "start_s": 74.5,
+      "end_s": 75.09,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9355,
+      "cents_median": 7.88
+    },
+    {
+      "start_s": 75.27,
+      "end_s": 75.51,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9154,
+      "cents_median": 8.73
+    },
+    {
+      "start_s": 75.77,
+      "end_s": 75.86,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.7454,
+      "cents_median": -26.29
+    },
+    {
+      "start_s": 75.91,
+      "end_s": 76.18,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9568,
+      "cents_median": 13.28
+    },
+    {
+      "start_s": 76.18,
+      "end_s": 76.45,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8892,
+      "cents_median": -3.6
+    },
+    {
+      "start_s": 76.67,
+      "end_s": 76.84,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8653,
+      "cents_median": -6.43
+    },
+    {
+      "start_s": 76.85,
+      "end_s": 76.99,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8772,
+      "cents_median": 11.15
+    },
+    {
+      "start_s": 77.03,
+      "end_s": 77.44,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9344,
+      "cents_median": 2.99
+    },
+    {
+      "start_s": 77.55,
+      "end_s": 77.88,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8963,
+      "cents_median": 10.64
+    },
+    {
+      "start_s": 78.1,
+      "end_s": 78.23,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.7544,
+      "cents_median": 18.35
+    },
+    {
+      "start_s": 78.28,
+      "end_s": 78.38,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.7515,
+      "cents_median": -16.11
+    },
+    {
+      "start_s": 78.48,
+      "end_s": 78.66,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8508,
+      "cents_median": 11.16
+    },
+    {
+      "start_s": 79.17,
+      "end_s": 79.38,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8784,
+      "cents_median": 12.0
+    },
+    {
+      "start_s": 79.56,
+      "end_s": 79.68,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9209,
+      "cents_median": 25.2
+    },
+    {
+      "start_s": 79.95,
+      "end_s": 80.18,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8459,
+      "cents_median": -5.6
+    },
+    {
+      "start_s": 80.36,
+      "end_s": 80.52,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9084,
+      "cents_median": 13.95
+    },
+    {
+      "start_s": 80.64,
+      "end_s": 80.72,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8355,
+      "cents_median": 33.65
+    },
+    {
+      "start_s": 81.25,
+      "end_s": 81.35,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8503,
+      "cents_median": -5.42
+    },
+    {
+      "start_s": 81.61,
+      "end_s": 81.77,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.8876,
+      "cents_median": 10.4
+    },
+    {
+      "start_s": 81.87,
+      "end_s": 82.05,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.7524,
+      "cents_median": -18.47
+    },
+    {
+      "start_s": 83.09,
+      "end_s": 83.18,
+      "midi": 65,
+      "note": "F4",
+      "mean_periodicity": 0.9192,
+      "cents_median": -31.59
+    },
+    {
+      "start_s": 83.2,
+      "end_s": 83.28,
+      "midi": 66,
+      "note": "F#4",
+      "mean_periodicity": 0.9241,
+      "cents_median": 23.44
+    },
+    {
+      "start_s": 83.3,
+      "end_s": 83.66,
+      "midi": 67,
+      "note": "G4",
+      "mean_periodicity": 0.9205,
+      "cents_median": 2.23
+    },
+    {
+      "start_s": 84.88,
+      "end_s": 84.98,
+      "midi": 59,
+      "note": "B3",
+      "mean_periodicity": 0.913,
+      "cents_median": 30.41
+    },
+    {
+      "start_s": 85.28,
+      "end_s": 85.38,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.9501,
+      "cents_median": -6.66
+    },
+    {
+      "start_s": 85.38,
+      "end_s": 85.47,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8252,
+      "cents_median": -32.53
+    },
+    {
+      "start_s": 85.55,
+      "end_s": 85.76,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9231,
+      "cents_median": 11.66
+    },
+    {
+      "start_s": 85.95,
+      "end_s": 86.44,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8826,
+      "cents_median": -7.21
+    },
+    {
+      "start_s": 86.49,
+      "end_s": 86.58,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.7884,
+      "cents_median": 21.08
+    },
+    {
+      "start_s": 86.62,
+      "end_s": 86.7,
+      "midi": 59,
+      "note": "B3",
+      "mean_periodicity": 0.7919,
+      "cents_median": -15.98
+    },
+    {
+      "start_s": 86.7,
+      "end_s": 86.92,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8979,
+      "cents_median": -3.81
+    },
+    {
+      "start_s": 87.18,
+      "end_s": 87.64,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.9128,
+      "cents_median": -11.35
+    },
+    {
+      "start_s": 87.65,
+      "end_s": 87.76,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8934,
+      "cents_median": 7.05
+    },
+    {
+      "start_s": 87.76,
+      "end_s": 87.84,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.887,
+      "cents_median": 30.53
+    },
+    {
+      "start_s": 87.89,
+      "end_s": 87.99,
+      "midi": 57,
+      "note": "A3",
+      "mean_periodicity": 0.8879,
+      "cents_median": 35.48
+    },
+    {
+      "start_s": 88.06,
+      "end_s": 88.23,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.8595,
+      "cents_median": 13.7
+    },
+    {
+      "start_s": 88.48,
+      "end_s": 88.73,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.957,
+      "cents_median": 0.02
+    },
+    {
+      "start_s": 89.56,
+      "end_s": 89.64,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9548,
+      "cents_median": -12.34
+    },
+    {
+      "start_s": 89.7,
+      "end_s": 89.89,
+      "midi": 58,
+      "note": "A#3",
+      "mean_periodicity": 0.8905,
+      "cents_median": -14.06
+    },
+    {
+      "start_s": 90.01,
+      "end_s": 90.34,
+      "midi": 60,
+      "note": "C4",
+      "mean_periodicity": 0.9466,
+      "cents_median": 7.65
+    },
+    {
+      "start_s": 90.66,
+      "end_s": 90.78,
+      "midi": 56,
+      "note": "G#3",
+      "mean_periodicity": 0.9397,
+      "cents_median": -3.59
+    },
+    {
+      "start_s": 90.78,
+      "end_s": 91.3,
+      "midi": 55,
+      "note": "G3",
+      "mean_periodicity": 0.9362,
+      "cents_median": 9.65
+    }
+  ],
+  "metrics": {
+    "frame_fraction_accepted": 0.5309,
+    "energy_floor": 0.018155347257852554
+  },
+  "limitations": [
+    "Stem leakage, octave errors and missing pitches remain possible.",
+    "Detector agreement and listening review are separate from detector confidence."
+  ]
+}

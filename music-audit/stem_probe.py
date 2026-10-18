@@ -32,6 +32,8 @@ def separate(file,start,duration):
         x=spectrum(padded[:,i:i+CHUNK]);x[:,:,:3,:]=0
         y=model.run(None,{'input':x})[0]
         instrumental.append(invert(y)[:,TRIM:-TRIM])
+        if (i//GEN+1)%5==0:
+            print('Separated reference seconds',round(min(n,i+GEN)/44100,1),'of',round(n/44100,1),flush=True)
     inst=np.concatenate(instrumental,axis=1)[:,:n]*1.022
     vocal=mix-inst
     return mix,inst,vocal

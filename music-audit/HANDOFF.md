@@ -1,4 +1,18 @@
+## Current integration authorization
+
+The owner explicitly authorized Codex to connect the catalog and deploy on 18 October 2026. PR #3 contains the isolated integration and the first two repairs. The historical no-application-change/deployment statements below describe the earlier audit only. OpenCode's worktree remains untouched.
+
 # OpenCode handoff — music review candidates
+
+## 18 October recovery in progress
+
+The owner rejected the public musical experience. The dated live catalog mismatch is documented
+in `reports/RECOGNIZABILITY_RECOVERY.md`. Babydoll now has a new full source-timed candidate and
+a complete real-time capture, documented in `reports/recovery/01-babydoll-metrics.json` and
+`reports/MUSICAL_QUALITY.md`. Without Me now has a measured G1/D2 bass correction and a full 300-second capture; its riff is unresolved. Everyday Normal Guy 2 and Sailor Song have source-event candidates undergoing full captures. Other tracks remain the earlier drafts until individually updated.
+The historical all-eight hash/capture summary below must not be used as evidence for newer
+revisions without their matching reports. No song is musically approved; production integration
+of drafts alone is not a solution. The 100-song expansion remains deferred behind recognition review.
 
 Branch: **`agent/codex-music`**
 

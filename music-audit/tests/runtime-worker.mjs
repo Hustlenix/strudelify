@@ -14,8 +14,13 @@ try {
   if(!p?.queryArc) throw Error('Evaluation did not return a pattern');
   const windows=input.windows||Array.from({length:16},(_,i)=>({start:i,end:i+1}));
   const events=windows.map(w=>({start:w.start,end:w.end,events:p.queryArc(w.start,w.end).map(h=>({begin:Number(h.part.begin),end:Number(h.part.end),value:h.value}))}));
+  for(const e of events.flatMap(w=>w.events)) {
+    if(e.value.s != null && typeof e.value.s !== 'string') throw Error('Sound control must be a resolved string, not an embedded Pattern');
+    if(e.value.bank != null && typeof e.value.bank !== 'string') throw Error('Bank control must be a resolved string, not an embedded Pattern');
+  }
   result={status:events.some(w=>w.events.length)?'PASSED':'FAILED',reason:events.some(w=>w.events.length)?'Real Strudel transpilation, REPL evaluation, and queryArc; audio is a separate check':'No events in requested windows',empty_windows:events.filter(w=>!w.events.length).map(w=>({start:w.start,end:w.end})),windows:events,cps:r.scheduler.cps};
 } catch(e) {result={status:'FAILED',reason:e.message,stack:e.stack};}
-fs.writeFileSync(process.argv[3],JSON.stringify(result,null,2));
+// Fraction-valued controls can contain BigInts; preserve their exact representation in reports.
+fs.writeFileSync(process.argv[3],JSON.stringify(result,(_key,value)=>typeof value==='bigint'?value.toString():value,2));
 r.stop();
 process.exit(result.status==='FAILED'?1:0);

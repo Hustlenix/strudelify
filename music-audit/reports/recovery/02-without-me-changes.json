@@ -1,0 +1,12 @@
+[
+  {
+    "id": "02-without-me",
+    "phase": "corroborated-bass-only",
+    "attempt": 1,
+    "before_sha256": "334d3bfb80acf927df2a45ede55325eba1f1fc9be0e00d6dca4e1212b0e9c02e",
+    "after_sha256": "4fa757716aebb6fb16be59ad7b0cb06cad08b30973508d4f9907691d2ad276ae",
+    "source_events": 269,
+    "change": "Replace four-chord eighth-note bass with actual G1/D2 note events across the recording; preserve existing lead, instrumentation and dynamics until a better supported riff is ready.",
+    "limits": "This correction does not solve the unverified signature riff or upper harmony. Do not call the song fixed or approved."
+  }
+]

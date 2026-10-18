@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "reason": "page.evaluate: TypeError: this.audioContext.createReverb is not a function\n    at wP.getReverb (http://127.0.0.1:5173/cache/vite/deps/@strudel_web.js?v=69a0b543:5623:76)\n    at Module.Ma (http://127.0.0.1:5173/cache/vite/deps/@strudel_web.js?v=69a0b543:6140:7)\n    at async window.renderMusic (http://127.0.0.1:5173/recovery/offline-harness.mjs:21:5)\n    at async <anonymous>:316:30\n    at C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\recovery\\render.mjs:26:25",
+  "source_sha256": "1528fe24962cb403e6ca52456bb748d37d1ce4eeb7580ac0d4c1b030c93b8093",
+  "errors": [],
+  "failed_requests": [],
+  "attempt_scope": "Abandoned offline rendering experiment; the real-time full capture is recorded separately"
+}

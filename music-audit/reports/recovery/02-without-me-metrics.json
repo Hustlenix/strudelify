@@ -1,0 +1,18 @@
+{
+  "id": "02-without-me",
+  "source_code_sha256": "4fa757716aebb6fb16be59ad7b0cb06cad08b30973508d4f9907691d2ad276ae",
+  "original_audio_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+  "capture_code_sha256": "4fa757716aebb6fb16be59ad7b0cb06cad08b30973508d4f9907691d2ad276ae",
+  "capture_matches_current_code": true,
+  "capture_status": "PASSED",
+  "capture_duration_s": 300.032,
+  "reference_duration_s": 297.624,
+  "complete_duration_captured": true,
+  "integrated_lufs": -19.72,
+  "true_peak_dbtp": -2.47,
+  "loudness_range_lu": 2.8,
+  "nonfinite_samples": 0,
+  "full_scale_samples": 0,
+  "wav_path": "C:\\Users\\LalithReddy.b\\strudelify-music\\music-audit\\artifacts\\recovery\\02-without-me-render.wav",
+  "critical_listening": "PENDING; this script measures signals only"
+}

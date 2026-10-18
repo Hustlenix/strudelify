@@ -1,0 +1,545 @@
+{
+  "id": "02-without-me",
+  "source_sha256": "049b1f8d488ef6577a647e40159b6eda8e38855aef39031cbe57ff703630c06c",
+  "stem_sha256": "67d1675de367f7788ed079ae08b6e941a59b43789d24a0a9abb5df6cbabeaa8f",
+  "method": "Basic Pitch 0.4.0 on MDX instrumental, onset .5/frame .3/min100ms; MIDI40-81, mean activation>=.43",
+  "status": "SOURCE_DERIVED_CANDIDATES_NOT_LISTENING_APPROVED",
+  "notes": [
+    {
+      "start_s": 1.0217,
+      "end_s": 1.2307,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5226
+    },
+    {
+      "start_s": 1.2307,
+      "end_s": 1.4512,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4521
+    },
+    {
+      "start_s": 1.4512,
+      "end_s": 1.5673,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5533
+    },
+    {
+      "start_s": 1.5673,
+      "end_s": 1.7879,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5422
+    },
+    {
+      "start_s": 1.7879,
+      "end_s": 1.9866,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5699
+    },
+    {
+      "start_s": 1.9866,
+      "end_s": 2.1027,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.6762
+    },
+    {
+      "start_s": 2.1027,
+      "end_s": 2.2188,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4601
+    },
+    {
+      "start_s": 2.2188,
+      "end_s": 2.4742,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.6761
+    },
+    {
+      "start_s": 2.4742,
+      "end_s": 2.6135,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5717
+    },
+    {
+      "start_s": 2.66,
+      "end_s": 2.8806,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5139
+    },
+    {
+      "start_s": 2.8806,
+      "end_s": 3.0779,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5909
+    },
+    {
+      "start_s": 3.0779,
+      "end_s": 3.2985,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.6172
+    },
+    {
+      "start_s": 3.2985,
+      "end_s": 3.4146,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.6919
+    },
+    {
+      "start_s": 3.4146,
+      "end_s": 3.6236,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4916
+    },
+    {
+      "start_s": 3.6236,
+      "end_s": 3.8442,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.7283
+    },
+    {
+      "start_s": 3.8442,
+      "end_s": 4.1589,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4571
+    },
+    {
+      "start_s": 4.1589,
+      "end_s": 4.3215,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4502
+    },
+    {
+      "start_s": 4.1589,
+      "end_s": 4.3679,
+      "midi": 53,
+      "note": "F3",
+      "activation": 0.486
+    },
+    {
+      "start_s": 4.4027,
+      "end_s": 4.6117,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5168
+    },
+    {
+      "start_s": 4.6117,
+      "end_s": 4.7278,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.7166
+    },
+    {
+      "start_s": 4.7278,
+      "end_s": 4.8439,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.5076
+    },
+    {
+      "start_s": 4.8439,
+      "end_s": 5.0529,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4303
+    },
+    {
+      "start_s": 5.2735,
+      "end_s": 5.3896,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4873
+    },
+    {
+      "start_s": 5.3896,
+      "end_s": 5.5986,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.6788
+    },
+    {
+      "start_s": 5.5986,
+      "end_s": 5.7263,
+      "midi": 48,
+      "note": "C3",
+      "activation": 0.4858
+    },
+    {
+      "start_s": 7.0743,
+      "end_s": 7.2253,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4646
+    },
+    {
+      "start_s": 24.7447,
+      "end_s": 24.9188,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4523
+    },
+    {
+      "start_s": 26.3713,
+      "end_s": 26.5223,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4782
+    },
+    {
+      "start_s": 49.3384,
+      "end_s": 49.4661,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4545
+    },
+    {
+      "start_s": 52.3828,
+      "end_s": 52.5105,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4366
+    },
+    {
+      "start_s": 53.9746,
+      "end_s": 54.2881,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5163
+    },
+    {
+      "start_s": 62.7221,
+      "end_s": 62.9078,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5089
+    },
+    {
+      "start_s": 64.8248,
+      "end_s": 65.0337,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4419
+    },
+    {
+      "start_s": 72.8524,
+      "end_s": 73.0265,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5138
+    },
+    {
+      "start_s": 73.4213,
+      "end_s": 73.5503,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5073
+    },
+    {
+      "start_s": 77.6628,
+      "end_s": 77.8485,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4345
+    },
+    {
+      "start_s": 79.8467,
+      "end_s": 79.986,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4988
+    },
+    {
+      "start_s": 81.4141,
+      "end_s": 81.5663,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.489
+    },
+    {
+      "start_s": 84.6558,
+      "end_s": 84.7719,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4329
+    },
+    {
+      "start_s": 86.2245,
+      "end_s": 86.3986,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4632
+    },
+    {
+      "start_s": 88.3388,
+      "end_s": 88.5129,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4671
+    },
+    {
+      "start_s": 96.9585,
+      "end_s": 97.1094,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5347
+    },
+    {
+      "start_s": 107.5429,
+      "end_s": 107.7867,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5151
+    },
+    {
+      "start_s": 122.5636,
+      "end_s": 122.7377,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4456
+    },
+    {
+      "start_s": 127.4088,
+      "end_s": 127.5249,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4381
+    },
+    {
+      "start_s": 128.9761,
+      "end_s": 129.1632,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4953
+    },
+    {
+      "start_s": 131.1149,
+      "end_s": 131.2891,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5572
+    },
+    {
+      "start_s": 137.5507,
+      "end_s": 137.7133,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5604
+    },
+    {
+      "start_s": 139.6534,
+      "end_s": 139.8392,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4392
+    },
+    {
+      "start_s": 141.8025,
+      "end_s": 141.9767,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4737
+    },
+    {
+      "start_s": 146.0776,
+      "end_s": 146.2517,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4835
+    },
+    {
+      "start_s": 148.2383,
+      "end_s": 148.4357,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4567
+    },
+    {
+      "start_s": 150.3526,
+      "end_s": 150.5384,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4463
+    },
+    {
+      "start_s": 156.7652,
+      "end_s": 156.9522,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5111
+    },
+    {
+      "start_s": 158.8911,
+      "end_s": 159.0665,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5285
+    },
+    {
+      "start_s": 167.3612,
+      "end_s": 167.6514,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5366
+    },
+    {
+      "start_s": 182.4399,
+      "end_s": 182.6141,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5189
+    },
+    {
+      "start_s": 188.8305,
+      "end_s": 189.0395,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4728
+    },
+    {
+      "start_s": 193.1172,
+      "end_s": 193.2449,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4359
+    },
+    {
+      "start_s": 199.553,
+      "end_s": 199.7039,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5228
+    },
+    {
+      "start_s": 201.6673,
+      "end_s": 201.8414,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4916
+    },
+    {
+      "start_s": 203.2475,
+      "end_s": 203.4797,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4332
+    },
+    {
+      "start_s": 205.9191,
+      "end_s": 206.1397,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.449
+    },
+    {
+      "start_s": 208.103,
+      "end_s": 208.254,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4906
+    },
+    {
+      "start_s": 210.7527,
+      "end_s": 210.9385,
+      "midi": 50,
+      "note": "D3",
+      "activation": 0.4432
+    },
+    {
+      "start_s": 216.6196,
+      "end_s": 216.8518,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4311
+    },
+    {
+      "start_s": 218.8035,
+      "end_s": 218.9545,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4781
+    },
+    {
+      "start_s": 244.4783,
+      "end_s": 245.1401,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.467
+    },
+    {
+      "start_s": 250.798,
+      "end_s": 251.0302,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4639
+    },
+    {
+      "start_s": 257.257,
+      "end_s": 257.4543,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4303
+    },
+    {
+      "start_s": 259.9169,
+      "end_s": 260.1027,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5482
+    },
+    {
+      "start_s": 267.9213,
+      "end_s": 268.1419,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4659
+    },
+    {
+      "start_s": 274.3584,
+      "end_s": 274.5442,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4317
+    },
+    {
+      "start_s": 276.4959,
+      "end_s": 276.7049,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.5015
+    },
+    {
+      "start_s": 285.0576,
+      "end_s": 285.2434,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.4831
+    },
+    {
+      "start_s": 293.6077,
+      "end_s": 293.8167,
+      "midi": 43,
+      "note": "G2",
+      "activation": 0.494
+    }
+  ],
+  "limitations": [
+    "Possible omitted notes, octave errors, overtones and stem leakage.",
+    "These are timed note observations, not certified chord names or sections."
+  ]
+}

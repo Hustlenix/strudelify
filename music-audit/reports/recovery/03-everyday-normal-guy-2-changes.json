@@ -1,0 +1,18 @@
+[
+  {
+    "phase": "replace-unverified-pitch-and-rhythm-score",
+    "attempt": 1,
+    "reason": "The old guessed short motif and repeated drum grid were not source transcriptions. Replace them with 601 independently corroborated instrumental note events and measured low-note/transient candidates across the actual 221.256-second source. Rap speech is deliberately omitted from the melodic lead. This is an instrumental candidate, not a faithful vocal performance.",
+    "before_sha256": "b09ac107f893054cef6170c3e21a87aa50ac8fa694670949ddf1774e5c6ea96e",
+    "after_sha256": "7ff6c2243b8950f4701c9819895a519ae80608c081b54dab844c038f5ec4d848",
+    "profile": "instrumental",
+    "counts": {
+      "lead": 0,
+      "accompaniment": 601,
+      "bass": 213,
+      "drums": 946
+    },
+    "duration_s": 221.256,
+    "decision": "candidate, requires real runtime/full capture; no listening approval"
+  }
+]

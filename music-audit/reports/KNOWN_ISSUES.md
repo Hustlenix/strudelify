@@ -2,27 +2,39 @@
 
 ## Public-site catalog mismatch — 18 October 2026
 
-The deployed application loads six Strudelify demo originals, not the requested eight covers.
+The diagnostic initially found six Strudelify demo originals and none of the requested eight covers.
 The live covers catalog and all eight cover file URLs returned 404. See
 `RECOGNIZABILITY_RECOVERY.md` and `live-catalog.json` for reproduction and exact evidence.
 The owner rejected the public musical experience. The eight local drafts still need separate
 musical repair and listening review; integrating them alone will not establish fidelity.
+The owner subsequently authorized Codex integration/deployment. PR #3 connects the catalog,
+deep links and named sample banks from an isolated worktree. See catalog-integration.json;
+live deployment verification is recorded separately after Pages completes.
 
 ## 1. Babydoll
 
-Only the 0–4.37 s opening has a bounded note-event repair. Later lead contour, G/D/Em/C loop and bass remain unverified against the recording; the source contains different harmonic material. Complete the main vocal motif and harmonic rhythm before approval.
+Full source-timed score and 100-second capture now replace the old guessed loop. Check recognition, missing/fragmented notes, guitar timbre and drum classification through the actual review audio. Status remains runtime-verified; no listening approval is recorded. See recovery/01-babydoll-metrics.json.
 
 ## 2. Without Me
 
-The tonal transpose improves aggregate pitch-class fit, but does not establish the famous riff. The current G/Eb/F/D progression and eighth-note bass are unverified; measured source bass strongly favors G/D. The separated instrumental probe returned no robust f0 sequence, so no replacement riff was guessed.
+The unsupported four-root bass loop is now replaced by 269 measured G1/D2 source events.
+A full 300-second real-time capture passed with zero clipped or non-finite samples.
+The signature riff and upper harmony remain unresolved. Three bounded source-led approaches
+did not establish the riff; the detected rap speech was not turned into a synth melody.
+This is a partial bass repair, not a completed faithful cover.
 
 ## 3. Everyday Normal Guy 2
 
-Mixed-source key estimates conflict and the note probe is sparse. Original A-minor loop retained. Transcribe the recurring instrumental phrase and bass in isolation before changing harmony. Source dynamics/end are implemented; melody, groove and form orchestration are not approved.
+The old repeated motif/harmony has been replaced by 601 independently corroborated instrumental
+note events across 221.256 seconds, plus measured low-note and transient candidates. Rap speech
+is omitted from the melodic layer. Runtime passes; full capture and recognition review are pending.
 
 ## 4. Sailor Song
 
-94.85 BPM is the strongest refined periodicity in the selected window, with 63/126/190 alternatives. Meter/downbeat and the six-subdivision drum grid remain unresolved. B-centered transpose does not certify the B/E/G#m/F# harmonic sequence or guitar voicings.
+A finite source-timed score now replaces the repeated six-subdivision grid and guessed chord loop:
+338 vocal-contour and 1116 accompaniment candidates survived independent pitch/spectral checks.
+The event times follow the recording directly, avoiding an invented fixed meter. Timbre, missing
+notes, vocal slides and transient classification still need listening. Full capture is in progress.
 
 ## 5. Can't Tell Me Nothing
 
