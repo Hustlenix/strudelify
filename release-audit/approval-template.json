@@ -4,7 +4,7 @@
   "owner": null,
   "approved_at": null,
   "integrated_license": "AGPL-3.0-or-later",
-  "original_provenance_confirmed": false,
+  "original_provenance_confirmed": true,
   "branding": {
     "public_name": "Hustlenix Music",
     "decision_evidence": "Public UI changed following owner instruction to complete remaining release work, 18 October 2026; Git commit records the changes.",
@@ -18,10 +18,10 @@
       "observations": null
     },
     "laptop": {
-      "physical_device": false,
-      "passed": false,
-      "model_browser": null,
-      "observations": null
+      "physical_device": true,
+      "passed": true,
+      "model_browser": "LENOVO 82XM, Windows, Chrome 155",
+      "observations": "Agent-driven native UI main-flow smoke: first Play with Chrome Audio playing indicator; Pause/Resume; Next/Previous; Stop; search and actual source. See physical-laptop-smoke.json for limits. No subjective listening approval inferred."
     }
   },
   "tracks": [
@@ -74,5 +74,6 @@
       "observations": null
     }
   ],
-  "note": "Unapproved template. Fill only from actual human review; approval must name the exact clean release commit."
+  "note": "Current release remains gated on actual music and phone results. The owner instruction is to complete remaining release work; do not substitute synthetic tests for human observations.",
+  "provenance_evidence": "Project README and retained MIT grant identify the six original examples. No external sound bank, commercial melody transcription or lyrics in the allowlisted artifact; earlier scores preserved in Git and music worktree."
 }

@@ -31,10 +31,11 @@ const server=createServer(async(req,res)=>{
     const name=decodeURIComponent(url.slice(8)||'index.html');
     if(names.has(name))file=path.join(artifact,name);
   }
-  if(ids.some(id=>url==='/audio/'+id+'.mp3'))file=path.join(root,url.split('/').at(-1));
+  // Retain the WAV URL used by already open local review pages while new pages use MP3.
+  if(ids.some(id=>url==='/audio/'+id+'.mp3'||url==='/audio/'+id+'.wav'))file=path.join(root,url.split('/').at(-1));
   if(!file){res.writeHead(404).end();return;}
   try{
-    const stat=fs.statSync(file),type=({'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.mp3':'audio/mpeg','.zip':'application/zip'})[path.extname(file)]||'text/plain';
+    const stat=fs.statSync(file),type=({'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.mp3':'audio/mpeg','.wav':'audio/wav','.zip':'application/zip'})[path.extname(file)]||'text/plain';
     res.setHeader('Content-Type',type);res.setHeader('Accept-Ranges','bytes');res.setHeader('Cache-Control','no-store');
     const range=req.headers.range?.match(/^bytes=(\d+)-(\d*)$/);
     if(range){const start=+range[1],end=range[2]?Math.min(+range[2],stat.size-1):stat.size-1;

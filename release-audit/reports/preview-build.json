@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-10-18T13:44:58.594576+00:00",
-  "commit": "92c3353a04be925e0d6cffa52860fb1af5351fe4",
+  "created_at": "2026-10-18T13:54:13.569862+00:00",
+  "commit": "45ccd59c52ac18bab46a456a1648f4df14e7d51f",
   "dirty": false,
-  "worktree_dirty_including_audit_reports": true,
+  "worktree_dirty_including_audit_reports": false,
   "uncommitted_payload_paths": [],
   "publication": "review artifact; explicit approval required before deployment",
   "track_count": 6,
@@ -35,7 +35,7 @@
     },
     {
       "path": "SOURCE.html",
-      "sha256": "f30dd1e537f8ff20adcabf17dcd74238ae8c1ced7cf5c84dfc0932cb39c1210b"
+      "sha256": "369231c4be59cbb2ae08d87e9ae74263d2d775e2ccb7997044eb7d8451401c6f"
     },
     {
       "path": "THIRD_PARTY_ASSETS.md",
@@ -83,7 +83,7 @@
     },
     {
       "path": "source.zip",
-      "sha256": "46149b3aab8baa0974b47a306b4b6e82f1beb8e07728a6305ec3ec4898848df4"
+      "sha256": "036209063f49039701f349a2a3b7dfea9cb438d20107b7c22a61d37f04e85a48"
     },
     {
       "path": "styles.css",

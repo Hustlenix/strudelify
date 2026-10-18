@@ -1,0 +1,23 @@
+{
+  "run_id": 39133507380,
+  "head_sha": "45ccd59c52ac18bab46a456a1648f4df14e7d51f",
+  "conclusion": "success",
+  "browsers": [
+    {
+      "browser": "chromium",
+      "status": "PASSED",
+      "checks": 18,
+      "version": "151.0.7922.34",
+      "merge_snapshot": "355b2c0405b634f4a5728bd05879719333a981c9"
+    },
+    {
+      "browser": "firefox",
+      "status": "PASSED",
+      "checks": 18,
+      "version": "153.0",
+      "merge_snapshot": "355b2c0405b634f4a5728bd05879719333a981c9"
+    }
+  ],
+  "release_policy_tests": 12,
+  "review_receipt_schema_tests": 9
+}

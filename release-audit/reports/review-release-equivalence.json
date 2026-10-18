@@ -1,0 +1,10 @@
+{
+  "review_commit": "92c3353a04be925e0d6cffa52860fb1af5351fe4",
+  "release_commit": "45ccd59c52ac18bab46a456a1648f4df14e7d51f",
+  "same_application_music_assets_and_notices": true,
+  "differences": [
+    "SOURCE.html",
+    "source.zip"
+  ],
+  "reason": "Generated source links identify the new test-fixture/report commit"
+}

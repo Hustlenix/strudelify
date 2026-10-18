@@ -1,124 +1,59 @@
 {
-  "generated_at": "2026-10-18T13:31:34.488258+00:00",
-  "tested_commit": "56a2f46ab434c6586d20a2b293661a2e86f4a2db",
-  "artifact": "release-preview/launch-rc-20261018",
-  "artifact_dirty": false,
-  "public_resources": 26,
-  "candidate_tests": [
-    {
-      "browser": "chromium",
-      "version": "155.0.8059.82",
-      "checks": 18,
-      "status": "PASSED"
-    },
-    {
-      "browser": "firefox",
-      "version": "153.0",
-      "checks": 18,
-      "status": "PASSED"
-    }
-  ],
-  "original_tracks": [
-    {
-      "id": "greenline",
-      "duration_seconds": 100.307692,
-      "lufs": -23.0,
-      "true_peak_dbtp": -11.3,
-      "clipped_samples": 0,
-      "runtime_status": "PASSED",
-      "human_listening_approved": false
-    },
-    {
-      "id": "afterglow",
-      "duration_seconds": 106.461538,
-      "lufs": -23.1,
-      "true_peak_dbtp": -10.5,
-      "clipped_samples": 0,
-      "runtime_status": "PASSED",
-      "human_listening_approved": false
-    },
-    {
-      "id": "paper-moon",
-      "duration_seconds": 108.465116,
-      "lufs": -22.6,
-      "true_peak_dbtp": -8.6,
-      "clipped_samples": 0,
-      "runtime_status": "PASSED",
-      "human_listening_approved": false
-    },
-    {
-      "id": "soft-focus",
-      "duration_seconds": 120.941176,
-      "lufs": -24.5,
-      "true_peak_dbtp": -12.9,
-      "clipped_samples": 0,
-      "runtime_status": "PASSED",
-      "human_listening_approved": false
-    },
-    {
-      "id": "tiny-hours",
-      "duration_seconds": 93.714286,
-      "lufs": -23.0,
-      "true_peak_dbtp": -9.9,
-      "clipped_samples": 0,
-      "runtime_status": "PASSED",
-      "human_listening_approved": false
-    },
-    {
-      "id": "wide-awake",
-      "duration_seconds": 108,
-      "lufs": -22.8,
-      "true_peak_dbtp": -10.0,
-      "clipped_samples": 0,
-      "runtime_status": "PASSED",
-      "human_listening_approved": false
-    }
-  ],
-  "release_policy_tests": {
-    "tests_run": 12,
-    "failures": 0,
-    "errors": 0,
-    "passed": true,
-    "human_evidence": false,
-    "fixture": "synthetic; never publication approval"
+  "generated_at": "2026-10-18T13:59:54.271812+00:00",
+  "review_commit": "92c3353a04be925e0d6cffa52860fb1af5351fe4",
+  "checked_release_commit": "45ccd59c52ac18bab46a456a1648f4df14e7d51f",
+  "preview_url": "https://disabled-stereo-trips-clocks.trycloudflare.com/",
+  "player_url": "https://disabled-stereo-trips-clocks.trycloudflare.com/player/",
+  "preview_kind": "Temporary unlisted original-only HTTPS review. Anyone with URL may access; requires local server/tunnel to keep running.",
+  "branding": {
+    "status": "implemented",
+    "public_name": "Hustlenix Music",
+    "repository_url_retained": true
   },
-  "workflow_lint": {
-    "tool": "actionlint 1.7.12",
-    "status": "passed",
-    "workflows": [
-      "mvp-checks.yml",
-      "pages-release.yml",
-      "pages-rollback.yml"
-    ],
-    "shellcheck": false,
-    "pyflakes": false,
-    "deployed": false
+  "licensing": {
+    "status": "combined AGPL-3.0-or-later distribution/source policy implemented; prior MIT grants retained",
+    "document": "LICENSING.md",
+    "provenance": "Existing project declaration of original authorship and MIT grant; no commercial melody/sample/lyric payload in release"
   },
-  "local_deployment_rehearsal": {
-    "url": "http://127.0.0.1:4190/player/",
-    "checks": 45,
-    "passed": true,
-    "public_deployment": false
-  },
-  "listening_review_url": "http://127.0.0.1:4190/",
-  "player_url": "http://127.0.0.1:4190/player/",
-  "candidate_deployed": false,
-  "production_pages_source_changed": false,
-  "physical_device_results": 0,
-  "originals_human_approved": 0,
-  "commercial_studies_approved": 0,
-  "independent_listener_count": 0,
-  "expansion_started": false,
-  "pending": [
-    "Complete owner listening acceptance of included originals",
-    "Actual phone and laptop smoke tests",
-    "Public name decision and license/provenance confirmation",
-    "Explicit merge/deployment approval, switch Pages to Actions before merge, approved publication and live verification"
-  ],
-  "post_launch_goal": "5-10 actual independent listener sessions; no outreach or fabricated feedback",
   "ci": {
-    "status": "pending push; earlier CI evidence does not cover this implementation"
+    "run_id": 39133507380,
+    "head_sha": "45ccd59c52ac18bab46a456a1648f4df14e7d51f",
+    "conclusion": "success",
+    "browsers": [
+      {
+        "browser": "chromium",
+        "status": "PASSED",
+        "checks": 18,
+        "version": "151.0.7922.34",
+        "merge_snapshot": "355b2c0405b634f4a5728bd05879719333a981c9"
+      },
+      {
+        "browser": "firefox",
+        "status": "PASSED",
+        "checks": 18,
+        "version": "153.0",
+        "merge_snapshot": "355b2c0405b634f4a5728bd05879719333a981c9"
+      }
+    ],
+    "release_policy_tests": 12,
+    "review_receipt_schema_tests": 9
   },
-  "reference_recordings_unchanged": 16,
-  "prior_music_art_and_lyric_resources_preserved": 62
+  "https_browser_checks": 18,
+  "https_artifact_checks": 45,
+  "physical_laptop_main_flow": "passed native Chrome UI check on Lenovo 82XM; no subjective musical listening approval inferred",
+  "physical_phone_result": "pending; no connected phone and no submitted phone review",
+  "listening_approved_originals": 0,
+  "received_listener_reviews": 0,
+  "production_deployed": false,
+  "temporary_https_preview_published": true,
+  "production_pages_settings_changed": false,
+  "independent_listener_count": 0,
+  "remaining": [
+    "Actual complete-track music acceptance",
+    "Actual phone playback/touch/background/connectivity review",
+    "Publish and verify the exact release after those required results are recorded"
+  ],
+  "owner_instruction": "Complete them; no additional feature expansion or fabricated review results",
+  "expansion_started": false,
+  "original_recording_copies_unchanged": 16
 }

@@ -20,7 +20,7 @@ The implementation commit and clean artifact hashes are recorded in the latest
   manifest hashes and source provenance. Complete application source is available in each
   artifact alongside exact upstream runtime links, notices, MIT grant and AGPL text.
 - Combined release licensing policy documented in LICENSING.md. Existing MIT grants retained.
-  Owner naming/provenance and publication decisions remain explicit pending fields.
+  Public naming is implemented and project-original provenance evidence is recorded. Actual listening/phone results still gate publication.
 - Manual Pages publication and rollback workflows prepared. Publication reruns both browser
   suites, uploads only the allowlisted artifact, retains a rollback artifact for 90 days, and
   checks public files plus known withheld paths and the actual public player afterwards.
@@ -46,8 +46,8 @@ No human listening acceptance or phone result has been fabricated.
    separate evidence. No phone or listener has been invented.
 3. Public naming and combined distribution/source policy have been implemented.
    Provenance remains the project's declared original authorship; commercial studies stay excluded.
-4. Explicit approval to merge and deploy the exact candidate. The earlier instruction against
-   automatic publication is still in force. Pages is still on its old legacy main-root source;
+4. Complete the required listening/phone results, then publish the exact reviewed candidate
+   under the owner's instruction to finish the release. Unapproved musical quality is not inferred. Pages is still on its old legacy main-root source;
    switch it to Actions after approval **before** merging. Follow DEPLOYMENT.md.
 5. Run approved deployment and verify the live site. Existing public commercial studies/lyrics
    remain served by the older deployment until the replacement is actually published.
