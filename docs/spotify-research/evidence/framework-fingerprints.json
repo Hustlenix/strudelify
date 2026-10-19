@@ -1,0 +1,65 @@
+{
+  "capturedAtUtc": "2026-10-19T05:32:28.794250+00:00",
+  "method": "Static first-party artifact fingerprints; no execution, imports, browser attachment, or source retention",
+  "limitations": [
+    "A marker may belong to unused or compatibility code",
+    "Source declarations do not prove the active browser runtime version",
+    "No current backend or full dependency graph was recovered"
+  ],
+  "artifacts": [
+    {
+      "url": "https://open.spotifycdn.com/cdn/build/web-player/encore~web-player.59a0f468.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "transferBytes": 561322,
+      "bytes": 561322,
+      "sha256": "ac8940a76231ceac0ba7c548d23928c8463da8dbcfb41a9535338e681d208eeb",
+      "markerOffsets": {
+        "react.element": -1,
+        "react-dom": 163,
+        "createRoot": -1,
+        "Redux": -1,
+        "zustand": -1
+      },
+      "rendererDeclarations": []
+    },
+    {
+      "url": "https://open.spotifycdn.com/cdn/build/web-player/vendor~web-player.842d320c.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "transferBytes": 1580456,
+      "bytes": 1580456,
+      "sha256": "cc500f75595558968eaa5484bdacfd7a0da95e444ca241c26fa3308791f7b803",
+      "markerOffsets": {
+        "react.element": 641007,
+        "react-dom": 827189,
+        "createRoot": 828505,
+        "Redux": 834393,
+        "zustand": -1
+      },
+      "rendererDeclarations": [
+        {
+          "version": "18.3.1",
+          "package": "react-dom"
+        }
+      ]
+    },
+    {
+      "url": "https://open.spotifycdn.com/cdn/build/web-player/web-player.0079e2e5.js",
+      "status": 200,
+      "contentType": "text/javascript",
+      "transferBytes": 4475202,
+      "bytes": 4475202,
+      "sha256": "1129f07952e06b00be6af909364b0a6285f80636164613019cf4fa5fefe64062",
+      "markerOffsets": {
+        "react.element": 553103,
+        "react-dom": -1,
+        "createRoot": -1,
+        "Redux": 600710,
+        "zustand": -1
+      },
+      "rendererDeclarations": []
+    }
+  ],
+  "failures": []
+}
