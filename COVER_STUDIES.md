@@ -36,7 +36,7 @@ No independent composition-rights clearance is recorded in this project.
 
 ## Drum-bank dependency
 
-The arrangements retain their existing RolandTR909 percussion. Only the three
+The arrangements retain their existing RolandTR909 percussion. Only the four
 required instrument mappings are included in `assets/samples/roland-tr909.json`.
 They load lazily when a cover needs them; original tracks keep their native synths.
 The sample URLs are pinned to upstream commit
