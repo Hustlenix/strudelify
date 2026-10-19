@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:05,000
+Hustlenix Music: six live Strudel instrumentals
+Agent-operated recording of the deployed beta
+
+2
+00:00:05,000 --> 00:00:13,000
+Switch, pause, resume and Stop
+Audio comes from this browser's live synthesis
+
+3
+00:00:13,000 --> 00:00:18,000
+Open the selected track's actual source
+
+4
+00:00:18,000 --> 00:00:23,000
+Copy the current score into the local editor
+
+5
+00:00:23,000 --> 00:00:26,000
+Change one musical parameter: tempo, 68 to 100 BPM
+
+6
+00:00:26,000 --> 00:00:34,000
+Preview the changed code live
+Actual scheduler tempo verified: 100 BPM
+
+7
+00:00:34,000 --> 00:00:35,000
+Closing the editor stops its preview
+
+8
+00:00:35,000 --> 00:00:45,000
+Responsive browser layout at 390px: emulation
+This is not a physical-phone test

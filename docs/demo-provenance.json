@@ -1,0 +1,115 @@
+{
+  "status": "VERIFIED",
+  "public_application_commit": "609f634fce2e883c5de329eb846504e070ad438c",
+  "source_url": "https://hustlenix.github.io/strudelify/",
+  "recorded_at": "2026-10-18T17:04:10.498Z",
+  "operator": "Codex-controlled isolated Chromium session; not an independent human review",
+  "physical_phone_tested": false,
+  "video": "hustlenix-music-walkthrough.mp4",
+  "duration_seconds": 45.0,
+  "width": 1280,
+  "height": 880,
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "sha256": "243df6dfdf7943832e0b1965db30b9acc85b9fbad37dc07640eec7e35dbeedfe",
+  "bytes": 1856377,
+  "audio_source": "Actual browser synthesis output; wall-clock placement preserves pauses and stops.",
+  "audio_sync_limit": "Callback wall clock, approximate within one 4096-frame processing block plus browser callback latency.",
+  "audible_segments": [
+    {
+      "name": "original",
+      "peak": 0.24855712056159973
+    },
+    {
+      "name": "switched",
+      "peak": 0.10338956862688065
+    },
+    {
+      "name": "resumed",
+      "peak": 0.12621060013771057
+    },
+    {
+      "name": "edited-preview",
+      "peak": 0.12098001688718796
+    },
+    {
+      "name": "mobile",
+      "peak": 0.23830878734588623
+    }
+  ],
+  "silence_checks": [
+    {
+      "name": "Pause",
+      "peak": 0.0
+    },
+    {
+      "name": "Stop",
+      "peak": 0.0
+    },
+    {
+      "name": "Final Stop",
+      "peak": 0.0
+    }
+  ],
+  "edit": {
+    "operation": "Change only tempo, 68 to 100 BPM",
+    "original_sha256": "854873d03a6d56f065ddd2b084c09ed7f708077c53b60672b13aae76693e0eea",
+    "modified_sha256": "7da20ebd006c79e66d9f4f2528e517a41d1e498c829af9b6978309a681fa9b05",
+    "saved_to_catalog": false,
+    "actual_scheduler_cps": 0.4166666666666667
+  },
+  "events": [
+    {
+      "seconds": 0.001,
+      "name": "Play Paper Moon"
+    },
+    {
+      "seconds": 5.005,
+      "name": "Switch to Soft Focus"
+    },
+    {
+      "seconds": 8.007,
+      "name": "Pause"
+    },
+    {
+      "seconds": 10.011,
+      "name": "Resume"
+    },
+    {
+      "seconds": 12.004,
+      "name": "Stop"
+    },
+    {
+      "seconds": 13.012,
+      "name": "View actual Soft Focus source"
+    },
+    {
+      "seconds": 18.014,
+      "name": "Open local composition editor"
+    },
+    {
+      "seconds": 23.013,
+      "name": "Change tempo from 68 to 100 BPM"
+    },
+    {
+      "seconds": 26.006,
+      "name": "Preview the changed code live"
+    },
+    {
+      "seconds": 34.002,
+      "name": "Close preview; its audio stops"
+    },
+    {
+      "seconds": 35.007,
+      "name": "Responsive layout \u2014 browser emulation, not physical phone"
+    },
+    {
+      "seconds": 42,
+      "name": "Mobile Stop"
+    }
+  ],
+  "decode_errors": [],
+  "artwork_notice": "Real screen capture depicts the existing Codex-generated SVG cover artwork."
+}

@@ -1,53 +1,103 @@
 # Hustlenix Music
 
-Previously branded Strudelify. The repository URL is retained.
-<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/0fe97c3c-edde-46a8-ae17-3c1ac30accae" />
+A browser music player where every track is an editable Strudel program, performed live.
 
-**WHOLE SPOTIFY IN STRUDEL, CAUSE WHY NOTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT?** 
-My project: Strudelify is a small static music player, so you can play this and sing yourself, kinda boring. both for me and you, because it was soo tuff analysing the beats and coding it😭
+![The desktop player with Soft Focus selected](https://raw.githubusercontent.com/Hustlenix/strudelify/main/docs/media/desktop-player.png)
 
-## Run it
-1. I have deployed it in github, do you can acess it in: [Try It Out](https://hustlenix.github.io/strudelify/) for free
-or
-2. To run this install the strudel plugin in VS code
+**[Listen now](https://hustlenix.github.io/strudelify/)** · **[Watch the 45-second walkthrough](https://github.com/Hustlenix/strudelify/raw/refs/heads/main/docs/media/hustlenix-music-walkthrough.mp4)**
 
-## Why?
-All this started when i was getting scoldings from my school music teacher because my voice so coarse, so because of my ego issues and my coding abilities, I have decided to write every song in Strudle!!!!!! FaaaI mean, strudle is made for music, but what makes this isntesting is that making a whole spotify out of this and some html and js. thats it! simple looking structure but complex code within, just like Spotify.
+The current public beta includes six original instrumentals. The project began as Strudelify;
+its repository URL is retained.
 
-## How?
-Used strudel for this also used website hooktheory and sheet music for recreating 
+## Try it in a minute
 
-## Help needed!
-This is opensourced, so you can add a music that you like, to expand this website. If you added a track, thanks!
+1. Open the demo, choose a track and press **Play**.
+2. Try **Next**, **Pause/Resume** and **Stop**.
+3. Open **View code** to inspect the actual composition.
+4. Copy its source into **Create a track**, change a tempo or note, then press **Preview pattern**.
+
+Saved tracks and likes stay in this browser. Internet access is required for the pinned Strudel runtime.
 
 ## Interface and features
 
-The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their *should not copy* rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)
+- Six original instrumentals with distinct tempos, finite sections and fading endings.
+- Play, Pause/Resume, hard Stop, Next/Previous and search.
+- Complete composition source, plus a local editor with live preview.
+- Browser-local likes, listening history and personal compositions.
+- Responsive listening controls and explicit playback error/retry states.
+- Downloadable application source, license notices and contextual GitHub feedback links.
 
-The project-authored source retains its MIT notice. Strudel is an AGPL-3.0-or-later dependency;
-the combined distribution uses AGPL-3.0-or-later, while MIT grants for project portions remain.
-The public UI uses Hustlenix Music; see [LICENSING.md](LICENSING.md).
-See [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md). Demo compositions in `tracks/` are original examples for this project.
+Demo compositions in `tracks/` are original examples for this project. The public beta's
+catalog contains these six originals; the earlier commercial-song studies and lyric drafts
+are excluded from its deployed artifact.
 
-## v0.1 instrumental beta
+## Run locally
 
-The public beta contains six original instrumentals. Each has finite sections, a fading ending
-and measured level balance. All six have complete technical audio captures; subjective listening
-acceptance and a physical phone test have not been recorded. The owner delegated shipping the
-technical beta without requiring the review form. Catalog review metadata retains those limits.
-Commercial-song study scores, lyric transcripts and supplied recordings are excluded from the
-public artifact. All prior music work remains preserved in the repository's separate review work.
+Requires Git, Python 3.10 or newer, and a browser with WebAudio support.
 
-The player has separate Play/Pause/Resume and Stop behavior, mobile transport controls,
-complete actual View code, and links to draft a public GitHub listener report. GitHub sign-in
-is required to submit; no report or personal data is sent automatically.
+```sh
+git clone https://github.com/Hustlenix/strudelify.git
+cd strudelify
+python release-audit/build_preview.py --output release-preview/local
+python -m http.server 8000 --directory release-preview/local
+```
 
-For a local review build, install the locked development tools in `release-audit/`, run
-`python release-audit/build_preview.py`, then serve `release-preview/` over localhost.
-Read the repository's [release audit](https://github.com/Hustlenix/strudelify/tree/main/release-audit)
-for release evidence, known limitations and the deployment runbook.
+Open **http://localhost:8000/** and press Play. Choose a fresh build directory if
+`release-preview/local` already exists. The build uses Python's standard library.
+No VS Code extension, API key, account or database is required.
 
-## Licence
-Combined application: AGPL-3.0-or-later. Original MIT grants for project portions are retained.
-See [LICENSE](LICENSE), [COPYING](COPYING), [NOTICE.md](NOTICE.md) and [LICENSING.md](LICENSING.md).
-Every allowlisted build includes SOURCE.html and an application source archive.
+Node.js 22 and the locked tools in `release-audit/package-lock.json` are used for development QA.
+
+## How it works
+
+The app uses HTML, CSS and JavaScript with the pinned `@strudel/web` runtime. It loads each
+composition's source and evaluates the pattern in the browser. Audio begins after a user gesture.
+
+Playback requests have session IDs and cancelable loading. Serialized evaluation and a session
+check prevent stale selections from starting after a newer action. Pause suspends the audio clock
+to preserve position; Stop resets the active scheduler and silences its voices and effect tails.
+Cooperating tabs hand off playback ownership through `BroadcastChannel`.
+
+The local editor previews the edited code through that same engine. Closing an editor preview stops it.
+There is no backend or cross-device library sync in this version.
+
+## Release evidence
+
+The [October 18 public deployment](https://github.com/Hustlenix/strudelify/actions/runs/39135771017)
+published application commit `609f634fce2e883c5de329eb846504e070ad438c` and verified its public resources.
+Live-player checks passed in Chromium and Firefox, 18 per browser. Public resource and exclusion
+checks passed for all 45 recorded cases.
+
+Full technical captures of the six originals checked their finite endings, clipping and sample validity.
+Physical-phone testing and independent listening feedback remain open. The mobile walkthrough is browser emulation.
+
+The [walkthrough and capture notes](https://github.com/Hustlenix/strudelify/blob/main/docs/demo.md)
+show a real tempo change reaching the live scheduler.
+
+## What's next
+
+- Improve compositions from real listener feedback.
+- Build an ordered, editable queue, saved playlists and complete shuffle/repeat behavior.
+- Expand the catalog with reviewed, publishable arrangements.
+
+## Feedback and contributions
+
+[Report a problem or suggest an improvement](https://github.com/Hustlenix/strudelify/issues/new).
+Include the track, browser and steps to reproduce. The in-app **Report a problem** link fills
+in playback context for you; submitting a GitHub issue requires signing in.
+
+Contributions should include source attribution and permission for any music or assets they introduce.
+
+## Credits and license
+
+- Project by **Hustlenix**.
+- Live music engine: [Strudel](https://strudel.cc/), copyright its contributors.
+- Substantial assistance from **Codex and OpenCode** in implementation, compositions, SVG artwork,
+  debugging, verification, documentation and deployment. No independent human-authorship percentage is claimed.
+- The walkthrough is an agent-operated recording of the actual app with captured synthesis audio.
+
+The combined application is distributed under **AGPL-3.0-or-later**. The original MIT grant for
+project portions is retained. See [LICENSE](LICENSE), [COPYING](COPYING), [NOTICE.md](NOTICE.md),
+[LICENSING.md](LICENSING.md) and [asset sources](THIRD_PARTY_ASSETS.md).
+
+The deployed site includes [complete application source and license downloads](https://hustlenix.github.io/strudelify/SOURCE.html).
