@@ -1,0 +1,40 @@
+{
+  "_base": "https://raw.githubusercontent.com/ritchse/tidal-drum-machines/15eac73c5e878550f91d864a4863e014799403f1/machines/",
+  "RolandTR909_bd": [
+    "RolandTR909/rolandtr909-bd/Bassdrum-01.wav",
+    "RolandTR909/rolandtr909-bd/Bassdrum-02.wav",
+    "RolandTR909/rolandtr909-bd/Bassdrum-03.wav",
+    "RolandTR909/rolandtr909-bd/Bassdrum-04.wav"
+  ],
+  "RolandTR909_sd": [
+    "RolandTR909/rolandtr909-sd/naredrum.wav",
+    "RolandTR909/rolandtr909-sd/sd01.wav",
+    "RolandTR909/rolandtr909-sd/sd02.wav",
+    "RolandTR909/rolandtr909-sd/sd03.wav",
+    "RolandTR909/rolandtr909-sd/sd04.wav",
+    "RolandTR909/rolandtr909-sd/sd05.wav",
+    "RolandTR909/rolandtr909-sd/sd06.wav",
+    "RolandTR909/rolandtr909-sd/sd07.wav",
+    "RolandTR909/rolandtr909-sd/sd08.wav",
+    "RolandTR909/rolandtr909-sd/sd09.wav",
+    "RolandTR909/rolandtr909-sd/sd10.wav",
+    "RolandTR909/rolandtr909-sd/sd11.wav",
+    "RolandTR909/rolandtr909-sd/sd12.wav",
+    "RolandTR909/rolandtr909-sd/sd13.wav",
+    "RolandTR909/rolandtr909-sd/sd14.wav",
+    "RolandTR909/rolandtr909-sd/sd15.wav"
+  ],
+  "RolandTR909_hh": [
+    "RolandTR909/rolandtr909-hh/hh01.wav",
+    "RolandTR909/rolandtr909-hh/hh02.wav",
+    "RolandTR909/rolandtr909-hh/hh03.wav",
+    "RolandTR909/rolandtr909-hh/hh04.wav"
+  ],
+  "RolandTR909_cp": [
+    "RolandTR909/rolandtr909-cp/Clap.wav",
+    "RolandTR909/rolandtr909-cp/cp01.wav",
+    "RolandTR909/rolandtr909-cp/cp02.wav",
+    "RolandTR909/rolandtr909-cp/cp03.wav",
+    "RolandTR909/rolandtr909-cp/cp04.wav"
+  ]
+}

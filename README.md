@@ -50,7 +50,13 @@ See [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md). Demo compositions in `tracks
 
 ## v0.1 instrumental beta
 
-The public beta contains six original instrumentals. Each has finite sections, a fading ending
+**19 October catalog restoration:** the owner's eight existing instrumental Strudel
+studies, including Babydoll, are available again alongside the six originals. Browse
+the Cover studies collection or search by title. Their musical review remains unfinished;
+they are synthesized renditions rather than the original recordings. See
+[COVER_STUDIES.md](COVER_STUDIES.md) for source, dependency and rights-status details.
+
+The original six-track beta contains six original instrumentals. Each has finite sections, a fading ending
 and measured level balance. All six have complete technical audio captures; subjective listening
 acceptance and a physical phone test have not been recorded. The owner delegated shipping the
 technical beta without requiring the review form. Catalog review metadata retains those limits.

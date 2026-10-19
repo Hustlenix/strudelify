@@ -36,9 +36,11 @@ There is no imported melody, artist recording, external sample bank or commercia
 in this six-track artifact. This is the project's provenance declaration; owner confirmation
 is required in the release approval record.
 
-Eight commercial-song studies remain excluded. Existing repository history and the older
-public site are separate from the proposed artifact. Deploying an allowlisted replacement
-removes those paths from the current Pages artifact, but cannot erase other copies or caches.
+On 19 October the owner explicitly requested restoring the eight existing synthesized
+cover studies. The expanded catalog records them as `owner-requested-study`, with
+underlying composition rights reserved and musical review unapproved. This is not a
+claim of rights-holder clearance or a project-original grant. See [COVER_STUDIES.md](COVER_STUDIES.md).
+Original commercial recordings, stems, artist artwork and all lyrics remain excluded.
 
 ## Branding decision
 

@@ -11,10 +11,10 @@ The resource update adds only the Lucide SVG selection recorded below.
 | Strudel browser runtime, core and superdough | Strudel contributors, [official source](https://codeberg.org/uzu/strudel) | Installed 1.2.6 package metadata and LICENSE: AGPL-3.0-or-later; [integration guidance](https://strudel.cc/technical-manual/project-start/), [FAQ](https://strudel.cc/learn/faq/) | Unmodified `@strudel/web@1.2.6` through unpkg | Exact upstream web@1.2.6 source revision cbe7aaacfbf8a51f5f5cf39bf79319f273214e24 verified. Source access, full license and UI attribution included. Branding and release approval remain pending. |
 | Existing abstract SVG art and brand mark | Existing project assets | Repository MIT declaration | `assets/covers/*.svg`, `assets/icon.svg`, inline brand mark | Kept. Existing control symbols replaced by the Lucide selection below. |
 | Playwright | Microsoft, [source](https://github.com/microsoft/playwright) | Installed LICENSE: Apache-2.0 | 1.62.1, development audit only | Exact version locked under `release-audit/`. No production dependency. |
-| Eight commercial-song study scores | Original songwriters/publishers remain relevant; synthesized arrangements in `tracks/covers/` | No publication permission recorded | Preserved in existing source history and music worktree | Excluded from the proposed public artifact. Do not count as approved covers. Existing public history is not erased by this change. |
+| Eight instrumental study scores | Original songwriters/publishers retain underlying rights; existing `tracks/covers/` arrangements | Owner explicitly requested deployment on 19 October; no rights-holder clearance claimed | Exact prior scores; `runtime-verified`, musical review unapproved | Restored to the named public allowlist; see COVER_STUDIES.md. No artist recordings or lyrics included. |
 | Commercial lyric transcripts | Original lyric rights holders; earlier automatic local transcriptions | No publication permission recorded | Exact private backup and earlier music branch/history preserve the drafts | Removed from this review branch tip and excluded from the preview artifact; loader will not request them. Earlier deployed copies/history remain until a reviewed replacement is approved. |
 | Reference MP3s, separated stems and captured comparisons | User-supplied reference material; original artists/rights holders | No redistribution clearance recorded | Private local review only | Never copied to the preview, staged or uploaded. |
-| RolandTR909 / dough-samples bank | [dough-samples](https://github.com/felixroos/dough-samples) | Individual sample provenance not established here | Used by private cover studies and earlier release | Public candidate no longer loads this bank. No sample bytes redistributed. |
+| RolandTR909 / dough-samples bank | [Registry](https://github.com/felixroos/dough-samples), [upstream files](https://github.com/ritchse/tidal-drum-machines) | Individual sample licensing not established; no CC0 claim | Four existing study instrument mappings (kick, snare, hat, clap); URLs pinned to 15eac73c5e878550f91d864a4863e014799403f1 | Loaded only when a study needs percussion; no sample bytes in the repository or archive. See COVER_STUDIES.md. |
 | Analysis models and tools | Existing local music audit dependencies | Existing audit lockfiles and receipts; model terms need their own review if redistributed | Offline only | Not added to the application or public artifact. |
 
 ## Release decisions still required
@@ -35,8 +35,8 @@ lyrics need separate recorded permission. No permission or human acceptance is i
 
 Record author, exact original URL, item-specific license and evidence URL, download date, local
 path, modifications and use before adding an asset. Kenney packs, shadcn, fonts and
-photography remain uninstalled. A catalog entry needs recorded rights evidence and human review
-before a commercial study can enter a future allowlisted public build.
+photography remain uninstalled. Additional studies need a separate provenance and publication
+decision; the current owner request applies only to the eight explicitly named existing scores.
 
 ## Adopted resource register — 19 October 2026
 

@@ -4,8 +4,8 @@ export function validateReview(data,manifest){
   if(data.kind!=='actual manually submitted original listening feedback'||data.publication_approval!==false||data.personally_performed!==true)
     throw Error('A manually declared review is required; this endpoint never approves publication.');
   if(data.build!==manifest.commit||data.dirty!==false)throw Error('Review names a different or uncommitted candidate. Reload the review page.');
-  const allowed=new Map(manifest.files.filter(row=>row.path.startsWith('tracks/')&&row.path.endsWith('.strudel')).map(row=>[row.path.slice(7,-8),row.sha256]));
-  if(!Array.isArray(data.tracks)||data.tracks.length!==allowed.size||new Set(data.tracks.map(row=>row.id)).size!==allowed.size)throw Error('Expected the six candidate track responses.');
+  const allowed=new Map(manifest.files.filter(row=>row.path.startsWith('tracks/')&&row.path.endsWith('.strudel')).map(row=>[row.path.split('/').pop().slice(0,-8),row.sha256]));
+  if(!Array.isArray(data.tracks)||data.tracks.length!==allowed.size||new Set(data.tracks.map(row=>row.id)).size!==allowed.size)throw Error('Expected every candidate track response.');
   for(const row of data.tracks){
     if(allowed.get(row.id)!==row.score_sha256||!['unanswered','yes','needs-correction','unsure'].includes(row.decision)||typeof row.listened_complete!=='boolean'||typeof row.observations!=='string')throw Error('Invalid or stale track response.');
   }

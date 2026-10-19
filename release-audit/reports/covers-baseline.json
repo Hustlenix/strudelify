@@ -1,0 +1,112 @@
+{
+  "captured_at": "2026-10-18T09:28:02.245072+00:00",
+  "source": "Existing music-audit/reports/recovery/current-status.json and unchanged source files",
+  "human_listening_approved": false,
+  "scope": "Prior full-duration technical captures; not new listening or fidelity evidence. Fresh current-player checks are separate.",
+  "tracks": [
+    {
+      "id": "01-babydoll",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 101.12,
+      "lufs": -18.33,
+      "true_peak_dbtp": -1.21,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
+      "capture_source_sha256": "4acae5e6ac49677ecd81148365cd5b3c42ad7b8f546de7cd00e1a7109175bb79",
+      "source_normalization": "CRLF to LF only"
+    },
+    {
+      "id": "02-without-me",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 300.032,
+      "lufs": -19.72,
+      "true_peak_dbtp": -2.47,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "ba8a0a0a58d2631a616bed83ef47838d4c47f1afd4b0e304f4bc25d816ab68f1",
+      "capture_source_sha256": "4fa757716aebb6fb16be59ad7b0cb06cad08b30973508d4f9907691d2ad276ae",
+      "source_normalization": "CRLF to LF only"
+    },
+    {
+      "id": "03-everyday-normal-guy-2",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 224.08533333333332,
+      "lufs": -21.6,
+      "true_peak_dbtp": -2.55,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+      "capture_source_sha256": "7040552e37a991656fe7eb25c4ba5835b63208bb916e7f31b23755b1d31124aa",
+      "source_normalization": "CRLF to LF only"
+    },
+    {
+      "id": "04-sailor-song",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 212.05333333333334,
+      "lufs": -21.07,
+      "true_peak_dbtp": -2.75,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+      "capture_source_sha256": "cac0c41fa9456ba89c39be1cca04dc97953582226f4140f1f8cc001825bf0603",
+      "source_normalization": "CRLF to LF only"
+    },
+    {
+      "id": "05-cant-tell-me-nothing",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 274.09066666666666,
+      "lufs": -21.18,
+      "true_peak_dbtp": -3.76,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+      "capture_source_sha256": "6088f987458fa7f62fd90acc52a830d237fe35871646133ea32f0ffdfafac5ec",
+      "source_normalization": "CRLF to LF only"
+    },
+    {
+      "id": "06-love-me-not",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 216.064,
+      "lufs": -21.62,
+      "true_peak_dbtp": -3.01,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "c9494f00ce007b73330495b49dbf7cc91c4c6ca8ccd2c6603a78e285c85d0916",
+      "capture_source_sha256": "c9494f00ce007b73330495b49dbf7cc91c4c6ca8ccd2c6603a78e285c85d0916",
+      "source_normalization": "CRLF to LF only"
+    },
+    {
+      "id": "07-i-thought-i-saw-your-face-today",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 173.056,
+      "lufs": -20.51,
+      "true_peak_dbtp": -6.4,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589",
+      "capture_source_sha256": "dbd83c251262d4664532402f42816699bb9a64a992e8221bef4bcf87876cc589",
+      "source_normalization": "CRLF to LF only"
+    },
+    {
+      "id": "08-lonely",
+      "status": "runtime-verified",
+      "current_complete_audio": true,
+      "duration_s": 266.06933333333336,
+      "lufs": -22.02,
+      "true_peak_dbtp": -3.09,
+      "clipped_samples": 0,
+      "musically_approved": false,
+      "score_sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+      "capture_source_sha256": "7a616bd90e162c6812ad3ea972471dcfdd02df32bb062746f173837adfd11296",
+      "source_normalization": "CRLF to LF only"
+    }
+  ]
+}

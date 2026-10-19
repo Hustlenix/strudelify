@@ -16,6 +16,7 @@ const palettes = [
   'linear-gradient(140deg,#a4a15f,#626638 54%,#2b321f)',
 ];
 const groups = [
+  { name: 'Cover studies', symbol: '♫', note: 'The original eight, played with Strudel.', palette: 1 },
   { name: 'Slow burn', symbol: '◌', note: 'Take the long way home.', palette: 3 },
   { name: 'Night motion', symbol: '↗', note: 'A little light after dark.', palette: 2 },
   { name: 'Soft focus', symbol: '✳', note: 'Let the edges blur.', palette: 4 },
@@ -39,6 +40,7 @@ let selectedPlaylist = null;
 let playlistDialogMode = null;
 let playlistDialogTrack = null;
 let enginePromise;
+let coverSamplesPromise;
 let activeRepl;
 let playbackDuration = 0;
 let playbackRevision = 0;
@@ -111,7 +113,7 @@ function getCode(track) {
 function ensureEngine() {
   if (typeof window.initStrudel !== 'function') throw new Error('The Strudel runtime did not load. Check your connection and refresh.');
   if (!enginePromise) enginePromise = Promise.resolve(window.initStrudel({
-    // The release catalog uses native synths. No unverified third-party sample bank is loaded.
+    // Original tracks use native synths; cover percussion is loaded on demand.
     defaultOutput: (hap, deadline, duration, cps, time) => {
       if (!state.playing || hap.value?._strudelifySession !== playbackRevision) return;
       return window.webaudioOutput(hap, deadline, duration, cps, time);
@@ -181,7 +183,14 @@ async function prepareInstruments(pattern, repl, code) {
     if (!value.s) continue;
     if (typeof value.s!=='string' || (value.bank!=null && typeof value.bank!=='string')) throw new Error('This pattern has an unresolved instrument name.');
     const name=((value.bank?value.bank+'_':'')+value.s).toLowerCase();
-    const sound=window.soundMap.get()[name];
+    let sound=window.soundMap.get()[name];
+    if (!sound && name.startsWith('rolandtr909_')) {
+      if (!coverSamplesPromise) coverSamplesPromise=cancellable(
+        window.samples(new URL('assets/samples/roland-tr909.json',document.baseURI).href),
+        AbortSignal.timeout(15000)).catch(error=>{coverSamplesPromise=null;throw error;});
+      await coverSamplesPromise;
+      sound=window.soundMap.get()[name];
+    }
     if (!sound) throw new Error(`Instrument unavailable: ${name}`);
     const samples=sound.data?.samples;
     if (samples) for (const url of (Array.isArray(samples)?samples:Object.values(samples)).flat()) urls.add(url);
@@ -897,9 +906,12 @@ async function loadCoverCatalog() {
     if (!entry.codeUrl || codeUrl.origin !== catalogUrl.origin ||
         !codeUrl.pathname.startsWith(new URL('./', catalogUrl).pathname) ||
         !codeUrl.pathname.endsWith('.strudel')) throw new Error('Invalid track code path.');
-    if (!['project-original', 'cleared'].includes(entry.rights?.status) ||
+    const study=entry.kind==='cover-study' && entry.rights?.status==='owner-requested-study'
+      && entry.status==='runtime-verified' && entry.reviewStatus==='unreviewed'
+      && /^0[1-8]-/.test(entry.id);
+    if (!['project-original', 'cleared', 'owner-requested-study'].includes(entry.rights?.status) ||
         !entry.rights.evidence || !entry.rights.license ||
-        (entry.kind !== 'original' && (entry.status !== 'approved' || !entry.humanReview)))
+        (entry.kind !== 'original' && !study && (entry.status !== 'approved' || !entry.humanReview)))
       throw new Error('A track has not passed the public release gate.');
     if (entry.lyricsUrl) throw new Error('Lyrics are not enabled in this release.');
     return {...entry, codeUrl: codeUrl.href, cover: entry.kind !== 'original', mood: entry.genre,
@@ -927,7 +939,7 @@ async function loadCoverCatalog() {
   }
   tracks.splice(0, tracks.length, ...covers);
   $('#catalogStatus')?.classList.add('hidden');
-  if ($('#catalogIntro')) $('#catalogIntro').textContent = `${covers.length} original instrumentals. Press play, explore the code, and find your sound.`;
+  if ($('#catalogIntro')) $('#catalogIntro').textContent = `${covers.filter(t=>t.cover).length} instrumental cover studies and ${covers.filter(t=>!t.cover).length} originals. Press play, explore the code, and find your sound.`;
   renderAllLists();
   renderPlayer();
   showSuggestions();

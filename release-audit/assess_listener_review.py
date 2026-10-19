@@ -39,7 +39,7 @@ def assess(receipt, review_manifest, release_manifest, release_folder, template)
     result['tracks']=[]
     for row in catalog:
         response=responses[row['id']]
-        expected=digest((release_folder/'tracks'/f"{row['id']}.strudel").read_bytes())
+        expected=digest((release_folder/'tracks'/row['codeUrl'].removeprefix('./')).read_bytes())
         if response.get('score_sha256')!=expected:
             raise ValueError('Reviewed score differs: '+row['id'])
         complete=response.get('listened_complete') is True

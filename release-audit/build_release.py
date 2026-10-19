@@ -36,6 +36,7 @@ def main():
     source_page=f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Application source and licenses</title><body><main><h1>Application source and licenses</h1>
 <p>Combined application: AGPL-3.0-or-later. Project-authored MIT notices are retained.</p>
+<p>Cover studies are synthesized instrumental renditions. Underlying composition rights are reserved; the application license does not grant rights in third-party songs. See the track provenance ledger.</p>
 <p><a href="source.zip">Download this build's complete application source and build scripts</a> (no charge).</p>
 <p>Application commit: <a href="https://github.com/Hustlenix/strudelify/tree/{revision}">{revision}</a>{' — local uncommitted changes' if changed else ''}.</p>
 <p>Powered by Strudel. Copyright Strudel contributors. Unmodified @strudel/web 1.2.6.</p>
@@ -50,7 +51,7 @@ def main():
     with zipfile.ZipFile(output/'source.zip','x',compression=zipfile.ZIP_DEFLATED) as archive:
         sources={name:(output/name).read_bytes() for name in files+['SOURCE.html']}
         sources.update({name:(ROOT/name).read_bytes().replace(b'\r\n',b'\n') for name in BUILD_SOURCES})
-        sources['BUILD.txt']=(f'Application revision: {revision}\nServe this directory with Python 3: python -m http.server 8000\nOpen http://localhost:8000/ and press Play. Internet access is required for the pinned Strudel runtime.\nNo application compilation is required. Source scores are loaded at runtime.\nFrom a full repository checkout, Python 3.10+ can run release-audit/build_preview.py --output a-new-folder\nArchive files exclude commercial studies, private data and unrelated repository history.\n').encode()
+        sources['BUILD.txt']=(f'Application revision: {revision}\nServe this directory with Python 3: python -m http.server 8000\nOpen http://localhost:8000/ and press Play. Internet access is required for the pinned Strudel runtime.\nNo application compilation is required. Source scores are loaded at runtime.\nFrom a full repository checkout, Python 3.10+ can run release-audit/build_preview.py --output a-new-folder\nArchive files exclude original commercial recordings, lyrics, private data and unrelated repository history.\n').encode()
         for name in sorted(sources):
             entry=zipfile.ZipInfo(name,date_time=(2026,10,18,0,0,0))
             entry.compress_type=zipfile.ZIP_DEFLATED
@@ -61,7 +62,7 @@ def main():
         'worktree_dirty_including_audit_reports':worktree_dirty,'uncommitted_payload_paths':changed,
         'publication':'review artifact; explicit approval required before deployment',
         'track_count':len(json.loads((output/'tracks/catalog.json').read_text())),
-        'excluded':['commercial cover source payloads','all lyrics','reference audio','audit/private files'],
+        'excluded':['all lyrics','reference audio','audit/private files'],
         'files':manifest}
     (output/'release.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     validate_artifact(output)

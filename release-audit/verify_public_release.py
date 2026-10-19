@@ -38,7 +38,9 @@ def main():
     served=json.loads(fetch('release.json'))
     if served!=manifest:
         raise ValueError('Served manifest differs from approved artifact')
-    excluded=[f'tracks/covers/{name}.strudel' for name in IDS]+[f'tracks/covers/lyrics/{name}.json' for name in IDS]
+    published={row['path'] for row in manifest['files']}
+    excluded=[f'tracks/covers/{name}.strudel' for name in IDS if f'tracks/covers/{name}.strudel' not in published]
+    excluded += [f'tracks/covers/lyrics/{name}.json' for name in IDS]
     excluded+=['release-audit/private/listening/answer-key.json','.git/config','release-audit/reports/baseline.json']
     for name in excluded:
         try:
