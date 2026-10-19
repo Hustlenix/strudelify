@@ -190,6 +190,14 @@ async function prepareInstruments(pattern, repl, code) {
 }
 async function playTrack(track, isPreview = false) {
   if (!track) return;
+  // Direct selections (including integrations) must establish the same queue
+  // position as a card click. Queue/playlist advances already selected their
+  // exact occurrence, so retain that snapshot and any duplicate entry IDs.
+  if (!isPreview && transport.current?.trackId !== track.id) {
+    const entries = allTracks().map(item=>MusicLibrary.entry(item.id));
+    const selected = entries.find(item=>item.trackId===track.id);
+    if (selected) transport.start(entries, selected.id, 'All patterns');
+  }
   const revision = ++playbackRevision;
   playbackAbort?.abort();
   const abort = playbackAbort = new AbortController();
