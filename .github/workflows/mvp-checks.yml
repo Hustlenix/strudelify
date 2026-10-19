@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'app.js'
+      - 'library.js'
       - 'index.html'
       - 'styles.css'
       - 'tracks/**'

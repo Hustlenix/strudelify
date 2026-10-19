@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib, json, re, zipfile
 
 IDS = ('afterglow','greenline','paper-moon','soft-focus','tiny-hours','wide-awake')
-BASE_FILES = ('index.html','app.js','styles.css','README.md','LICENSE','COPYING','NOTICE.md',
+BASE_FILES = ('index.html','app.js','library.js','styles.css','README.md','LICENSE','COPYING','NOTICE.md',
               'LICENSING.md','THIRD_PARTY_ASSETS.md','licenses/Strudel-AGPL-3.0.txt',
               'tracks/catalog.json','assets/icon.svg')
 GENERATED_FILES = ('SOURCE.html','source.zip')
