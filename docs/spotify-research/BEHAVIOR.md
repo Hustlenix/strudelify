@@ -2,6 +2,8 @@
 
 Evidence IDs resolve in [SOURCES.md](SOURCES.md). **I** paragraphs are Strudelify decisions, not assertions about Spotify internals. Existing rendered dimensions remain in [design.md](../../design.md). This document extends behavior coverage without claiming fresh rendered observations.
 
+**Native follow-up:** [N19](NATIVE-DESKTOP.md) subsequently supplied fresh Windows desktop observations for selected-track playback, queue groups and mutations, playlist creation/details, duplicate removal and deletion. Those specific observations supplement the documented contracts below; they do not establish fresh web/mobile measurements or verify the proposed queue resolver. Playlist creation in this client immediately persisted a default-named playlist before the separate details editor.
+
 ## 1. Information architecture
 
 ```text

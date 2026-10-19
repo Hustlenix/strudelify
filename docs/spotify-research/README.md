@@ -14,6 +14,7 @@ Keep Strudelify and upgrade its product behavior around the existing Strudel eng
 | [Feature matrix](feature-matrix.csv) | Feature-by-feature evidence, current support, dependencies and implementation order |
 | [Evidence ledger](SOURCES.md) | Primary sources, provenance and what each source proves |
 | [Capture and open questions](CAPTURE.md) | Reproduction commands, remaining observations and scope limits |
+| [Native desktop follow-up](NATIVE-DESKTOP.md) | Fresh player, queue, playlist, duplicate/removal and cleanup observations, with native capture limits |
 | [Geometry tokens](design-tokens.json) | Machine-readable values with their measurement date and evidence class |
 
 ## Findings that change the implementation
@@ -30,7 +31,8 @@ Keep Strudelify and upgrade its product behavior around the existing Strudel eng
 - **Preserved:** earlier rendered Home, Search, Album, Playlist, Artist, menu and empty-player measurements. They remain dated 16 October.
 - **Fresh:** four anonymous HTML responses, two CSS artifacts and selected desktop JavaScript artifact fingerprints. Resource hashes and limitations are retained; proprietary bundles are not vendored.
 - **Documented:** Spotify's official descriptions of queue, library, playlist editing, search, shuffle, repeat, settings and adjacent services.
-- **Not captured in this pass:** a fresh authenticated rendered session, complete active-player interactions, phone behavior or backend implementation. Browser Use was disabled; the owner chose to continue with available evidence. Native inspection did not yield a stable Spotify observation, so no new visual measurement is claimed.
+- **Native follow-up:** the owner subsequently authorized installed Spotify inspection and a disposable playlist scenario. Selected-track Play/Pause, manual queue add/remove/clear, playlist create/rename/add, duplicate occurrence removal and playlist deletion were observed. The temporary playlist and research manual queue entries were cleaned up. See [N19 observations](NATIVE-DESKTOP.md).
+- **Still open:** fresh web DOM/computed-style capture, dependable drag-reorder verification, full transport modes, real mobile behavior and backend implementation. Browser Use continued to report disabled after refresh; the native app supplied the follow-up evidence. Native screenshot coordinates are not CSS measurements, and AX state lagged visible changes.
 
 This is an evidence-backed first research package, not a claim that all of Spotify has been reconstructed or that any pixel comparison has passed. The next implementation can proceed from the specified Strudelify contracts while the listed visual unknowns remain open.
 

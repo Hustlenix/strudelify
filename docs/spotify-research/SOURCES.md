@@ -4,6 +4,7 @@ Accessed 19 October 2026. Claims use these classes:
 
 - **M16:** rendered measurement preserved from the 16 October audit in [design.md](../../design.md).
 - **P19:** newly inspected anonymous public resource; source facts, not rendered behavior.
+- **N19:** native Windows Spotify screenshot/accessibility observations; [record](NATIVE-DESKTOP.md) and [structured summary](evidence/native-observations.json). Image coordinates are not CSS measurements; AX lag is explicitly documented.
 - **D19:** documented by Spotify; platform, account and region qualifications still apply.
 - **H:** published historical architecture; not a current implementation guarantee.
 - **L:** read directly from our checked-out source at the stated base commit.

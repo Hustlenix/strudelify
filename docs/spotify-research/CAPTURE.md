@@ -59,4 +59,6 @@ Record route, date, platform, account tier/state, viewport, DPR, zoom, sidebar/r
 
 ## Completion boundary
 
-Complete for this pass: evidence ledger, current public static captures, dated visual baseline, screen/behavior reference, feature inventory, actual Strudelify gap audit and an independent architecture mapping. Open: the rendered scenarios above, a finished upgraded implementation and any proof of exact visual equivalence. No implementation or music quality approval is asserted.
+Complete for the original pass: evidence ledger, public static captures, dated visual baseline, screen/behavior reference, feature inventory, actual Strudelify gap audit and an independent architecture mapping.
+
+The subsequent [native follow-up](NATIVE-DESKTOP.md) observed Play/Pause, queue add/remove/clear and its confirmation, playlist create/rename/add, occurrence-specific duplicate removal, menus and approved deletion. Cleanup was visibly verified. Reorder gestures did not yield a verified order change, so those scenarios remain open. Native AX state/bounds lagged screenshots; final visible states were used to resolve that disagreement. No new browser CSS geometry, real phone result, implementation or music quality approval is asserted.

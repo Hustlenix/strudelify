@@ -429,3 +429,11 @@ The concrete first gaps are true queue/context state, persistent shuffle/repeat 
 ### Measurement boundary
 
 Fresh Browser Use inspection was unavailable. The owner selected continuation with available evidence. No new authenticated layout, active-player interaction, phone capture, proprietary backend reconstruction or pixel-equivalence result is claimed. The [capture queue](docs/spotify-research/CAPTURE.md#capture-queue) records exact unresolved scenarios. The existing rendered measurements remain usable with their original date and conditions.
+
+## 21. Native desktop follow-up — 19 October 2026
+
+The owner subsequently authorized installed Spotify use and a named disposable playlist scenario. [Native observations](docs/spotify-research/NATIVE-DESKTOP.md) now document selected-track transport, a progressing timeline, separate manual/context queue groups, queue add/remove/clear, playlist create/rename/add, duplicate occurrence removal, contextual menus and the completed cleanup. [Structured evidence](docs/spotify-research/evidence/native-observations.json) records the scope and limitations.
+
+The native frame was 1536 × 816 image pixels. Panel and dialog coordinates in that report are explicitly approximate image-space estimates, not fresh CSS rectangles. Playlist creation immediately saved a default-named playlist; naming occurred through a separate editor. A populated manual queue used Next in queue, while active collection playback later used Next from with the playlist name. Removing one duplicate occurrence retained the other. The named temporary playlist was deleted and research manual queue entries cleared.
+
+Native accessibility state/bounds lagged visible state changes, including after deletion. Two playlist drags and one queue drag produced no verified order change. Neither a Spotify reorder defect nor a successful reorder is claimed. The browser DOM/computed-style and mobile gaps remain open. Some floating effects in native frames had unestablished origin and are excluded from the design reference.

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "dateLocal": "2026-10-19",
+  "timezone": "Asia/Calcutta",
+  "evidenceClass": "N19",
+  "method": "Manual transcription of visible native screenshots and selected accessibility state through the computer-use skill",
+  "application": "Spotify desktop for Windows",
+  "installedPackage": "SpotifyAB.SpotifyMusic_1.305.3058.0_x64__zpdnekdrzrea0",
+  "windowLabel": "Spotify Free",
+  "screenshotSize": {"width": 1536, "height": 816, "units": "returned image pixels"},
+  "cssViewport": null,
+  "dpr": null,
+  "zoom": null,
+  "browserTool": "Still reported disabled after discovery and reset",
+  "observations": [
+    {"id": "N01", "state": "Selected finite track; paused; empty library; Now Playing open", "facts": {"elapsedText": "0:00", "durationText": "2:06", "volumeSliderValue": 1, "resizeSliderValues": [352, 350]}},
+    {"id": "N02", "action": "Open Queue", "result": "Right panel visibly displays Queue and Recently played tabs, close control, Now playing heading and current-track row; no upcoming entries", "mutation": "Panel selection only"},
+    {"id": "N03", "action": "Play selected track, then Pause", "result": "Play/Pause icon and accessible name changed; timeline advanced; paused position retained", "playingElapsedScreenshot": "0:15", "pausedElapsedScreenshot": "0:34", "pausedProgressAxValue": 35000, "atomicSampling": false, "finalPlaybackState": "paused"},
+    {"id": "N04", "action": "Open current-track row More, then Escape", "visibleMenuItems": ["Add to playlist", "Add to Liked Songs", "Add to queue", "Exclude from your taste profile", "Sleep timer", "Go to song radio", "Go to artist", "Go to album", "View credits", "Share"], "result": "Menu opened and dismissed; no item action invoked"},
+    {"id": "N05", "action": "Create approved temporary playlist and rename", "result": "Creation immediately persisted My Playlist #1; Edit details saved Strudelify UI research", "creationChoices": ["Playlist", "Blend", "Folder"], "detailsFields": ["Name", "Optional description", "Artwork", "Make private", "Save"], "privacyChanged": false, "artworkUploaded": false},
+    {"id": "N06", "action": "Add playlist occurrences and remove one duplicate", "observedOrderBefore": ["B", "C", "C"], "observedOrderAfter": ["B", "C"], "duplicateWarningObserved": false, "intendedDistinctAdditionSequenceVerified": false, "playlistDragAttempts": 2, "reorderVerified": false},
+    {"id": "N07", "action": "Add B and C to manual queue; remove C", "queueGroup": "Next in queue", "observedQueueBefore": ["B", "C"], "observedQueueAfter": ["B"], "playlistUnchanged": true, "currentTrackStayedPaused": true, "queueDragAttempts": 1, "reorderVerified": false, "submenuCollision": "Add to playlist opened left of right-edge context menu"},
+    {"id": "N08", "action": "Clear remaining research manual queue", "confirmationObserved": true, "confirmationTitle": "Clear this from your queue?", "result": "Later screenshot showed only Now playing, without upcoming entries or Clear queue", "latencyMeasured": false},
+    {"id": "N09", "action": "Resume after owner requested continuation; delete approved temporary playlist", "playbackAlreadyRunningOnResume": true, "contextGroup": "Next from: Strudelify UI research", "confirmationTitle": "Delete from Your Library?", "result": "Home and empty-library prompts returned; temporary playlist absent in screenshot; playback continued", "axTreeLaggedDeletion": true}
+  ],
+  "limitations": [
+    "No raw screenshots or account/personal recommendation details published",
+    "Native accessibility subtree lagged visible panel changes",
+    "Image-space estimates are not CSS or pixel-equivalence measurements",
+    "No audio capture, musical listening result, seek or queue advancement verified",
+    "Some native floating effects had unestablished origin and were excluded from the design reference",
+    "No fresh web computed-style or real mobile measurement was obtained"
+  ],
+  "blocker": null,
+  "interruptions": ["Low-battery dialog", "Unrelated native window", "Owner Escape stop followed by explicit continuation"],
+  "cleanup": {"temporaryPlaylistDeleted": true, "researchManualQueueCleared": true, "verification": "Visible Home/empty-library state and absence of manual queue group; native AX was stale", "resumedPlaybackManuallyStopped": false},
+  "details": "../NATIVE-DESKTOP.md"
+}
