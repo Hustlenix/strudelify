@@ -1,6 +1,8 @@
 # Spotify frontend reference audit for Strudelify
 
-Audit date: 2026-10-16. Target: the live Spotify Web Player rendered in Chromium on Windows. Deliverable: a measured design reference for independently implementing Strudelify's interface.
+Rendered audit date: 2026-10-16. Target: the Spotify Web Player rendered in Chromium on Windows on that date. Deliverable: a measured design reference for independently implementing Strudelify's interface.
+
+**Research extension, 2026-10-19:** [Spotify research index](docs/spotify-research/README.md), [behavior map](docs/spotify-research/BEHAVIOR.md), [framework and architecture](docs/spotify-research/ARCHITECTURE.md), [66-feature matrix](docs/spotify-research/feature-matrix.csv), [source ledger](docs/spotify-research/SOURCES.md), and [capture limits](docs/spotify-research/CAPTURE.md). Sections 1–19 retain the earlier capture context. Their comparisons to “current Strudelify” describe the 16 October implementation, not the newer application base. Section 20 distinguishes fresh public-source facts from these earlier rendered measurements.
 
 ## 1. Reading this specification
 
@@ -295,7 +297,7 @@ O: control order is shuffle, previous, central Play/Pause, next, repeat. The rig
 
 U: active-track artwork dimensions, elapsed-time updates, scrub thumb hover, actual volume interactions, repeat/shuffle enabled states, queue panel layout, and playback animation need another authorized playback capture.
 
-I: Strudel patterns are indefinite live compositions. Keep the familiar transport geometry, but represent that timing honestly. Do not draw a seek control that appears operational if there is no meaningful seek operation.
+I: Strudel patterns can be finite or indefinite compositions. Keep the familiar transport geometry and represent timing from actual score metadata and engine capabilities. Do not draw a seek control that appears operational if there is no meaningful seek operation. The current six-original catalog uses finite scores; adding a working timeline/seek adapter is separate from knowing a duration.
 
 ## 15. Responsive measurements
 
@@ -341,6 +343,8 @@ I: preserve keyboard focus visibility, accessible names for icon-only controls, 
 ## 18. Mapping the measurements onto Strudelify
 
 This section is implementation guidance, not a claim that Spotify uses Strudelify's architecture.
+
+**Historical comparison:** the differences below were recorded on 16 October. The global header, measured shell, SVG controls and several other changes are already in the newer app. Use the [19 October source audit](docs/spotify-research/ARCHITECTURE.md#2-current-source-audit) for remaining implementation gaps; do not rebuild completed work from this old table.
 
 | Current Strudelify difference | I: concrete next change |
 | --- | --- |
@@ -405,3 +409,31 @@ Outstanding measurements, in priority order:
 - Actual mobile rendering, zoom behavior, reduced motion, focus-visible outlines, and touch interactions.
 
 **Audit completion boundary:** the listed pages and measured states were inspected live. The complete Spotify site, every personalized experiment, every interaction state, and every breakpoint were not scraped. Unverified states remain explicitly identified above. No finished Strudelify pixel-difference comparison was performed as part of this documentation task.
+
+## 20. Research extension — 19 October 2026
+
+### Fresh source findings
+
+Four anonymous HTTP responses were inspected using desktop/mobile User-Agent headers for Home and Search. Desktop responses linked `web-player` assets; mobile responses linked `mobile-web-player` assets. Two CSS artifacts and three selected desktop JavaScript artifacts were inspected, with hashes and bounded facts retained in [public surface evidence](docs/spotify-research/evidence/public-surface.json) and [framework fingerprints](docs/spotify-research/evidence/framework-fingerprints.json). No downloaded application bundle is included in our source tree.
+
+Source declarations include a 1955px content maximum, a content-spacing alternative that interpolates from 16px to 24px, shared 16px/8px spacing tokens, a 4px base corner token and a 232 unitless left-sidebar fallback. These are source facts. The 232 fallback does not replace the earlier measured 280px sidebar state; an active computed cascade was not captured. Likewise, the stylesheet's media-condition inventory does not establish which component changes at each threshold.
+
+The inspected vendor artifact declares `react-dom` renderer version `18.3.1`; public bundles also contain React-family fingerprints. This establishes artifact contents, not which version was active in a specific signed-in browser. [Spotify's published 2021 architecture](https://engineering.atspotify.com/2021/04/building-the-future-of-our-desktop-apps) describes a React UI separated from platform playback/data APIs. Our proposed equivalent uses existing Strudel execution behind a playback facade and shared application state.
+
+### Functional scope beyond appearance
+
+The [behavior map](docs/spotify-research/BEHAVIOR.md) covers navigation, cards, search, saved library relationships, entity pages, playlists, menus, queue/context/history, shuffle/repeat/autoplay, timeline/volume, mobile views and capabilities requiring services. [The matrix](docs/spotify-research/feature-matrix.csv) records 66 features with an evidence class, actual Strudelify state, proposed work, phase and dependency.
+
+The concrete first gaps are true queue/context state, persistent shuffle/repeat and editable user playlists. Preserve the existing audio revision/abort/serialization/silencing protections, source viewing, creation flow and local user data. Do not replace arrangements or start a new frontend simply to imitate a dependency name.
+
+### Measurement boundary
+
+Fresh Browser Use inspection was unavailable. The owner selected continuation with available evidence. No new authenticated layout, active-player interaction, phone capture, proprietary backend reconstruction or pixel-equivalence result is claimed. The [capture queue](docs/spotify-research/CAPTURE.md#capture-queue) records exact unresolved scenarios. The existing rendered measurements remain usable with their original date and conditions.
+
+## 21. Native desktop follow-up — 19 October 2026
+
+The owner subsequently authorized installed Spotify use and a named disposable playlist scenario. [Native observations](docs/spotify-research/NATIVE-DESKTOP.md) now document selected-track transport, a progressing timeline, separate manual/context queue groups, queue add/remove/clear, playlist create/rename/add, duplicate occurrence removal, contextual menus and the completed cleanup. [Structured evidence](docs/spotify-research/evidence/native-observations.json) records the scope and limitations.
+
+The native frame was 1536 × 816 image pixels. Panel and dialog coordinates in that report are explicitly approximate image-space estimates, not fresh CSS rectangles. Playlist creation immediately saved a default-named playlist; naming occurred through a separate editor. A populated manual queue used Next in queue, while active collection playback later used Next from with the playlist name. Removing one duplicate occurrence retained the other. The named temporary playlist was deleted and research manual queue entries cleared.
+
+Native accessibility state/bounds lagged visible state changes, including after deletion. Two playlist drags and one queue drag produced no verified order change. Neither a Spotify reorder defect nor a successful reorder is claimed. The browser DOM/computed-style and mobile gaps remain open. Some floating effects in native frames had unestablished origin and are excluded from the design reference.

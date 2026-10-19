@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-10-19T05:29:39.189778+00:00",
+  "scope": "Anonymous ordinary HTTP GETs; HTML and linked first-party CSS only",
+  "browserUsed": false,
+  "renderedMeasurements": false,
+  "limitations": [
+    "HTTP User-Agent variation does not establish mobile device rendering",
+    "No account state, authenticated interactions, network session, or backend internals",
+    "CSS declarations can be inactive, overridden, experimental, or route-specific",
+    "No raw HTML, CSS, JavaScript bundles, source maps, fonts, artwork, or audio retained"
+  ],
+  "pages": [
+    {
+      "url": "https://open.spotify.com/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "transferBytes": 166359,
+      "bytes": 166359,
+      "sha256": "fdd00db271e4988a7e31e2f6d13de606005ec3e4554c1cc8ab4813900314e758",
+      "agentMode": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 5,
+        "title": 1,
+        "link": 28,
+        "style": 2,
+        "script": 11,
+        "body": 1,
+        "div": 3
+      },
+      "landmarkCounts": {},
+      "routeTypeCounts": {},
+      "stylesheets": [
+        "https://open.spotifycdn.com/cdn/build/web-player/web-player.2b56dc3b.css"
+      ],
+      "scriptUrls": [
+        "https://www.google.com/recaptcha/enterprise.js",
+        "https://open.spotifycdn.com/cdn/js/gtm.96d60fd6.js",
+        "https://open.spotifycdn.com/cdn/js/retargeting-pixels.02346b5d.js",
+        "https://open.spotifycdn.com/cdn/build/web-player/web-player.0079e2e5.js",
+        "https://open.spotifycdn.com/cdn/build/web-player/vendor~web-player.842d320c.js",
+        "https://open.spotifycdn.com/cdn/build/web-player/encore~web-player.59a0f468.js"
+      ]
+    },
+    {
+      "url": "https://open.spotify.com/search",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "transferBytes": 166445,
+      "bytes": 166445,
+      "sha256": "d777d681144d6452171ed1dc8c26c7e0103640a904066dbe43d3627071739f12",
+      "agentMode": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 5,
+        "title": 1,
+        "link": 28,
+        "style": 2,
+        "script": 11,
+        "body": 1,
+        "div": 3
+      },
+      "landmarkCounts": {},
+      "routeTypeCounts": {},
+      "stylesheets": [
+        "https://open.spotifycdn.com/cdn/build/web-player/web-player.2b56dc3b.css"
+      ],
+      "scriptUrls": [
+        "https://www.google.com/recaptcha/enterprise.js",
+        "https://open.spotifycdn.com/cdn/js/gtm.96d60fd6.js",
+        "https://open.spotifycdn.com/cdn/js/retargeting-pixels.02346b5d.js",
+        "https://open.spotifycdn.com/cdn/build/web-player/web-player.0079e2e5.js",
+        "https://open.spotifycdn.com/cdn/build/web-player/vendor~web-player.842d320c.js",
+        "https://open.spotifycdn.com/cdn/build/web-player/encore~web-player.59a0f468.js"
+      ]
+    },
+    {
+      "url": "https://open.spotify.com/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "transferBytes": 311228,
+      "bytes": 311228,
+      "sha256": "2d100e995faa213b5dca9edc063c9711d1e701f72edfc9942d80519b0a47bcab",
+      "agentMode": "mobile",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 24,
+        "title": 1,
+        "link": 43,
+        "style": 2,
+        "script": 9,
+        "body": 1,
+        "div": 451,
+        "h2": 5,
+        "a": 92,
+        "img": 83,
+        "span": 88,
+        "svg": 5,
+        "path": 6,
+        "button": 1,
+        "aside": 1
+      },
+      "landmarkCounts": {},
+      "routeTypeCounts": {
+        "other": 7,
+        "track": 20,
+        "artist": 20,
+        "album": 20,
+        "playlist": 24,
+        "search": 1
+      },
+      "stylesheets": [
+        "https://open.spotifycdn.com/cdn/build/mobile-web-player/mobile-web-player.3919ec1e.css"
+      ],
+      "scriptUrls": [
+        "https://open.spotifycdn.com/cdn/js/gtm.96d60fd6.js",
+        "https://open.spotifycdn.com/cdn/js/retargeting-pixels.02346b5d.js",
+        "https://open.spotifycdn.com/cdn/build/mobile-web-player/mobile-web-player.de4c0766.js",
+        "https://open.spotifycdn.com/cdn/build/mobile-web-player/vendor~mobile-web-player.b36befae.js"
+      ]
+    },
+    {
+      "url": "https://open.spotify.com/search",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "transferBytes": 190545,
+      "bytes": 190545,
+      "sha256": "01daf19b898e75c25a05be03f121413cd21cab4a318af58a07729b1718c5c7a5",
+      "agentMode": "mobile",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 13,
+        "title": 1,
+        "link": 42,
+        "style": 2,
+        "script": 9,
+        "body": 1,
+        "div": 11,
+        "a": 3,
+        "svg": 4,
+        "path": 5,
+        "span": 4,
+        "button": 1,
+        "aside": 1
+      },
+      "landmarkCounts": {},
+      "routeTypeCounts": {
+        "other": 2,
+        "search": 1
+      },
+      "stylesheets": [
+        "https://open.spotifycdn.com/cdn/build/mobile-web-player/mobile-web-player.3919ec1e.css"
+      ],
+      "scriptUrls": [
+        "https://open.spotifycdn.com/cdn/js/gtm.96d60fd6.js",
+        "https://open.spotifycdn.com/cdn/js/retargeting-pixels.02346b5d.js",
+        "https://open.spotifycdn.com/cdn/build/mobile-web-player/mobile-web-player.de4c0766.js",
+        "https://open.spotifycdn.com/cdn/build/mobile-web-player/vendor~mobile-web-player.b36befae.js"
+      ]
+    }
+  ],
+  "stylesheets": [
+    {
+      "url": "https://open.spotifycdn.com/cdn/build/web-player/web-player.2b56dc3b.css",
+      "status": 200,
+      "contentType": "text/css",
+      "transferBytes": 501390,
+      "bytes": 501390,
+      "sha256": "514a452eb206d00a83496b387e67687c080015d6be028b411c41137c97e59c95",
+      "method": "Selected source declarations; not computed styles or effective breakpoints",
+      "tokens": {
+        "--background-base": [
+          "#121212",
+          "#1ed760",
+          "#e91429",
+          "#590810",
+          "#ffa42b",
+          "#491e00",
+          "#073116",
+          "#0d72ea",
+          "#052a56",
+          "#000",
+          "#fff",
+          "#0000008a",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#f5f5f5"
+        ],
+        "--background-elevated-base": [
+          "#1f1f1f",
+          "#3be477",
+          "#d81326",
+          "#6b0a13",
+          "#ffb656",
+          "#582400",
+          "#093c1b",
+          "#0c69d8",
+          "#063368",
+          "#141414",
+          "#f0f0f0",
+          "#00000094",
+          "#fff",
+          "#ffe5e8",
+          "#ffeab8",
+          "#c5f7d7",
+          "#e0edfd",
+          "#1b1b1b",
+          "#f5f5f5"
+        ],
+        "--background-elevated-highlight": [
+          "#2a2a2a",
+          "#3be477",
+          "#d81326",
+          "#6b0a13",
+          "#ffb656",
+          "#582400",
+          "#093c1b",
+          "#0c69d8",
+          "#063368",
+          "#141414",
+          "#f0f0f0",
+          "#212121",
+          "#00000094",
+          "#f5f5f5",
+          "#ffe5e8",
+          "#ffeab8",
+          "#c5f7d7",
+          "#e0edfd",
+          "#232323",
+          "#e6e6e6"
+        ],
+        "--background-highlight": [
+          "#1f1f1f",
+          "#3be477",
+          "#d81326",
+          "#6b0a13",
+          "#ffb656",
+          "#582400",
+          "#093c1b",
+          "#0c69d8",
+          "#063368",
+          "#141414",
+          "#f0f0f0",
+          "#00000094",
+          "#f5f5f5",
+          "#ffe5e8",
+          "#ffeab8",
+          "#c5f7d7",
+          "#e0edfd",
+          "#1b1b1b",
+          "#e6e6e6"
+        ],
+        "--content-max-width": [
+          "1955px"
+        ],
+        "--content-spacing": [
+          "16px",
+          "clamp(16px, 16px + (var(--main-view-grid-width) - 600px) / 424 * 8, 24px)",
+          "24px"
+        ],
+        "--encore-corner-radius-base": [
+          "4px"
+        ],
+        "--encore-spacing-base": [
+          "16px"
+        ],
+        "--encore-spacing-tighter-2": [
+          "8px"
+        ],
+        "--encore-text-size-base": [
+          "1rem"
+        ],
+        "--essential-base": [
+          "#fff",
+          "#000",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56"
+        ],
+        "--essential-bright-accent": [
+          "#1ed760",
+          "#000",
+          "#fff",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#169f47",
+          "#159542",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56",
+          "#12833a"
+        ],
+        "--left-sidebar-width": [
+          "232"
+        ],
+        "--text-base": [
+          "#fff",
+          "#000",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56"
+        ],
+        "--text-bright-accent": [
+          "#1ed760",
+          "#000",
+          "#fff",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#127e38",
+          "#107434",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56",
+          "#0e642d"
+        ],
+        "--text-subdued": [
+          "#b3b3b3",
+          "#000",
+          "#fff",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#939393",
+          "#5a5a5a",
+          "#a9a9a9",
+          "#656565",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56",
+          "#a7a7a7",
+          "#444"
+        ]
+      },
+      "semanticRuleFacts": [
+        {
+          "categories": [
+            "main-container"
+          ],
+          "selectorSha256": "d40d056f18c6a7cb7c44f5c71d658dd08c3d582497b9595ce21da5decffe1247",
+          "declarations": {
+            "min-height": "0",
+            "position": "relative"
+          }
+        },
+        {
+          "categories": [
+            "main-container"
+          ],
+          "selectorSha256": "d7ab7f430a8dad57cd8e383f30348c49e3ebec3753da6973d9772611b3fd6f5a",
+          "declarations": {
+            "height": "100%"
+          }
+        },
+        {
+          "categories": [
+            "main-container"
+          ],
+          "selectorSha256": "b49db9d818fbe12fc731d7655fbb570c97fbc6062d1dee2863e5ff701d4076ae",
+          "declarations": {
+            "height": "100%"
+          }
+        },
+        {
+          "categories": [
+            "main-container"
+          ],
+          "selectorSha256": "633aacb00b09b0406fd271157ab170929a91f2755294b99a672839321bfeafc8",
+          "declarations": {
+            "padding-top": "40px"
+          }
+        },
+        {
+          "categories": [
+            "main-container"
+          ],
+          "selectorSha256": "abc3000a93c1826367638bd5aba528202bb0536cf56b67feb62629d7a509281d",
+          "declarations": {
+            "position": "absolute"
+          }
+        },
+        {
+          "categories": [
+            "resize"
+          ],
+          "selectorSha256": "034d0c0ae135b890ed23fbb9e98977be63e60cf6b535cf3a37013c2f1baa0bc3",
+          "declarations": {
+            "cursor": "col-resize",
+            "width": "var(--panel-gap)",
+            "touch-action": "none",
+            "height": "100%",
+            "display": "flex",
+            "position": "absolute"
+          }
+        },
+        {
+          "categories": [
+            "resize"
+          ],
+          "selectorSha256": "9a9df9e4522e0972b0ba35368e3f862048eaca521714b21af966928f6cdc17ab",
+          "declarations": {
+            "cursor": "col-resize"
+          }
+        },
+        {
+          "categories": [
+            "resize"
+          ],
+          "selectorSha256": "cf1366d0e3a6c92286d9e826fcde5de9d30355d157683a38512bcb7e20720af8",
+          "declarations": {
+            "display": "none"
+          }
+        }
+      ],
+      "mediaConditions": [
+        "(color<8)",
+        "(color<9)",
+        "(height>=1200px)",
+        "(hover:hover)",
+        "(hover:none)",
+        "(pointer:coarse)",
+        "(pointer:fine)",
+        "(prefers-contrast:more)",
+        "(prefers-reduced-motion:no-preference)",
+        "(prefers-reduced-motion:reduce)",
+        "(width<=1100px)",
+        "(width<=1279px)",
+        "(width<=479px)",
+        "(width<=767px)",
+        "(width<=992px)",
+        "(width>=1024px)",
+        "(width>=1199px)",
+        "(width>=1200px)",
+        "(width>=1280px)",
+        "(width>=480px)",
+        "(width>=480px) and (width<=767px)",
+        "(width>=767px)",
+        "(width>=768px)",
+        "(width>=768px) and (width<=991px)",
+        "(width>=992px)",
+        "not all and (resolution>=.001dpcm)",
+        "print",
+        "screen and (width<=767px)"
+      ]
+    },
+    {
+      "url": "https://open.spotifycdn.com/cdn/build/mobile-web-player/mobile-web-player.3919ec1e.css",
+      "status": 200,
+      "contentType": "text/css",
+      "transferBytes": 59753,
+      "bytes": 343663,
+      "sha256": "44883c561a1b7d532813c7a0e0ab818bd3869b0479a0b84f2c8b174bc34aa52d",
+      "method": "Selected source declarations; not computed styles or effective breakpoints",
+      "tokens": {
+        "--background-base": [
+          "#121212",
+          "#1ed760",
+          "#e91429",
+          "#590810",
+          "#ffa42b",
+          "#491e00",
+          "#073116",
+          "#0d72ea",
+          "#052a56",
+          "#000",
+          "#fff",
+          "#0000008a",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#f5f5f5"
+        ],
+        "--background-elevated-base": [
+          "#1f1f1f",
+          "#3be477",
+          "#d81326",
+          "#6b0a13",
+          "#ffb656",
+          "#582400",
+          "#093c1b",
+          "#0c69d8",
+          "#063368",
+          "#141414",
+          "#f0f0f0",
+          "#00000094",
+          "#fff",
+          "#ffe5e8",
+          "#ffeab8",
+          "#c5f7d7",
+          "#e0edfd",
+          "#1b1b1b",
+          "#f5f5f5"
+        ],
+        "--background-elevated-highlight": [
+          "#2a2a2a",
+          "#3be477",
+          "#d81326",
+          "#6b0a13",
+          "#ffb656",
+          "#582400",
+          "#093c1b",
+          "#0c69d8",
+          "#063368",
+          "#141414",
+          "#f0f0f0",
+          "#212121",
+          "#00000094",
+          "#f5f5f5",
+          "#ffe5e8",
+          "#ffeab8",
+          "#c5f7d7",
+          "#e0edfd",
+          "#232323",
+          "#e6e6e6"
+        ],
+        "--background-highlight": [
+          "#1f1f1f",
+          "#3be477",
+          "#d81326",
+          "#6b0a13",
+          "#ffb656",
+          "#582400",
+          "#093c1b",
+          "#0c69d8",
+          "#063368",
+          "#141414",
+          "#f0f0f0",
+          "#00000094",
+          "#f5f5f5",
+          "#ffe5e8",
+          "#ffeab8",
+          "#c5f7d7",
+          "#e0edfd",
+          "#1b1b1b",
+          "#e6e6e6"
+        ],
+        "--encore-corner-radius-base": [
+          "4px"
+        ],
+        "--encore-spacing-base": [
+          "16px"
+        ],
+        "--encore-spacing-tighter-2": [
+          "8px"
+        ],
+        "--encore-text-size-base": [
+          "1rem"
+        ],
+        "--essential-base": [
+          "#fff",
+          "#000",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56"
+        ],
+        "--essential-bright-accent": [
+          "#1ed760",
+          "#000",
+          "#fff",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#169f47",
+          "#159542",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56",
+          "#12833a"
+        ],
+        "--text-base": [
+          "#fff",
+          "#000",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56"
+        ],
+        "--text-bright-accent": [
+          "#1ed760",
+          "#000",
+          "#fff",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#127e38",
+          "#107434",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56",
+          "#0e642d"
+        ],
+        "--text-subdued": [
+          "#b3b3b3",
+          "#000",
+          "#fff",
+          "#ffd2d7",
+          "#ffd97e",
+          "#96f0b6",
+          "#c8e0fc",
+          "#939393",
+          "#5a5a5a",
+          "#a9a9a9",
+          "#656565",
+          "#590810",
+          "#491e00",
+          "#073116",
+          "#052a56",
+          "#a7a7a7",
+          "#444"
+        ]
+      },
+      "semanticRuleFacts": [],
+      "mediaConditions": [
+        "(max-height:700px)",
+        "(max-width:280px)",
+        "(max-width:479px)",
+        "(max-width:767px)",
+        "(min-width:1199px)",
+        "(min-width:1200px)",
+        "(min-width:480px)",
+        "(min-width:480px) and (max-width:767px)",
+        "(min-width:767px)",
+        "(min-width:768px)",
+        "(min-width:768px) and (max-width:991px)",
+        "(min-width:992px)",
+        "(pointer:fine)",
+        "(prefers-reduced-motion:no-preference)",
+        "not all and (-webkit-min-device-pixel-ratio:0),not all and (-webkit-min-device-pixel-ratio:.0000264583),not all and (min-resolution:.001dpcm)",
+        "screen and (max-width:767px)"
+      ]
+    }
+  ],
+  "failures": []
+}

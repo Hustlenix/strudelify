@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Reference geometry and independently proposed tokens; not imported application CSS",
+  "measurementsDate": "2026-10-16",
+  "refreshDate": "2026-10-19",
+  "units": "CSS px unless specified",
+  "renderedCaptureScope": "Desktop Chromium states documented in root design.md",
+  "reference": {
+    "canvas": "#000000",
+    "surface": "#121212",
+    "controlRest": "#1f1f1f",
+    "controlFocus": "#2a2a2a",
+    "menu": "#282828",
+    "textPrimary": "#ffffff",
+    "textSecondary": "#b3b3b3",
+    "playAccent": "#1ed760",
+    "gap": 8,
+    "globalHeaderHeight": 64,
+    "playerContentHeight": 72,
+    "libraryBaselineWidth": 280,
+    "panelRadius": 8,
+    "cardPadding": 12,
+    "artRadius": 6,
+    "cardPlaySize": 48,
+    "detailPlaySize": 56,
+    "trackRowHeight": 56,
+    "filterHeight": 32,
+    "menuItemHeight": 40,
+    "progressLineHeight": 4
+  },
+  "typeSamples": {
+    "body": {
+      "size": 16,
+      "weight": 400
+    },
+    "shelfHeading": {
+      "size": 24,
+      "weight": 700
+    },
+    "cardTitle": {
+      "size": 16,
+      "weight": 400
+    },
+    "metadata": {
+      "size": 14,
+      "weight": 400
+    },
+    "entityShortTitle": {
+      "size": 96,
+      "weight": 800,
+      "warning": "One title specimen; adaptive fitting required"
+    }
+  },
+  "sourceDeclarations20261019": {
+    "contentMaxWidth": "1955px",
+    "contentSpacingAlternatives": [
+      "16px",
+      "responsive clamp 16–24px",
+      "24px"
+    ],
+    "leftSidebarFallback": "232 (unitless source token)",
+    "sharedBaseSpacing": "16px",
+    "sharedTightSpacing": "8px",
+    "sharedBaseCorner": "4px",
+    "sharedBaseText": "1rem"
+  },
+  "limitations": [
+    "Reference values above are dated M16 rendered samples, not fresh current measurements.",
+    "Source declaration alternatives do not establish active computed values or effective breakpoints.",
+    "The 232 source fallback and 280 rendered sidebar sample describe different evidence; do not conflate them.",
+    "Use project-owned identity, SVG icons and a licensed/system font; proprietary font files are not included.",
+    "Mobile geometry, active player and zero-pixel equivalence remain unverified."
+  ],
+  "sources": [
+    "../../design.md",
+    "evidence/public-surface.json",
+    "SOURCES.md"
+  ]
+}
