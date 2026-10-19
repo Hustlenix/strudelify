@@ -6,6 +6,8 @@ Research date: **19 October 2026**. Branch: `codex/spotify-research`. Strudelify
 
 Keep Strudelify and upgrade its product behavior around the existing Strudel engine. This phase supplies an implementation reference. It changes documentation and research tools only; it contains no new arrangements or application changes.
 
+The companion [Strudelify implementation reconstruction](../strudelify-research/README.md) traces our own deployed application, with live asset hashes, actual control behavior, state/storage/audio flow and source-level gaps.
+
 | Read this | Purpose |
 | --- | --- |
 | [design.md](../../design.md) | Preserved rendered measurements from 16 October, with the dated extension and important corrections |

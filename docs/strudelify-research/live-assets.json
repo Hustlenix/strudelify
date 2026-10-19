@@ -1,0 +1,152 @@
+{
+  "capturedAtUtc": "2026-10-19T06:26:46.041284+00:00",
+  "baseUrl": "https://hustlenix.github.io/strudelify/",
+  "method": "Anonymous HTTP resource and source inspection; no runtime interaction",
+  "checkoutCommit": "1f6bac8abae541bec63a08e9a74c86abb3d24571",
+  "liveApplicationCommit": "609f634fce2e883c5de329eb846504e070ad438c",
+  "livePayloadDirty": false,
+  "manifestResourceCount": 26,
+  "liveCatalog": [
+    {
+      "id": "afterglow",
+      "title": "Afterglow",
+      "bpm": 78,
+      "genre": "Warm ambient",
+      "kind": "original",
+      "status": "draft",
+      "durationSeconds": 106.461538
+    },
+    {
+      "id": "greenline",
+      "title": "Greenline",
+      "bpm": 104,
+      "genre": "Night motion",
+      "kind": "original",
+      "status": "draft",
+      "durationSeconds": 100.307692
+    },
+    {
+      "id": "paper-moon",
+      "title": "Paper Moon",
+      "bpm": 86,
+      "genre": "Dusty keys",
+      "kind": "original",
+      "status": "draft",
+      "durationSeconds": 108.465116
+    },
+    {
+      "id": "soft-focus",
+      "title": "Soft Focus",
+      "bpm": 68,
+      "genre": "Dreamy drift",
+      "kind": "original",
+      "status": "draft",
+      "durationSeconds": 120.941176
+    },
+    {
+      "id": "tiny-hours",
+      "title": "Tiny Hours",
+      "bpm": 112,
+      "genre": "Offbeat synth",
+      "kind": "original",
+      "status": "draft",
+      "durationSeconds": 93.714286
+    },
+    {
+      "id": "wide-awake",
+      "title": "Wide Awake",
+      "bpm": 96,
+      "genre": "Bright pulse",
+      "kind": "original",
+      "status": "draft",
+      "durationSeconds": 108.0
+    }
+  ],
+  "assets": [
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "bytes": 16868,
+      "sha256": "9c2cdb646c7bd0f1f79a9c0d978c03a191d6d3acc55c3409809eda44204ce9eb",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "styles.css",
+      "httpStatus": 200,
+      "bytes": 31112,
+      "sha256": "76e56cfd9170a82bbf61bc372ffcd9ecddb6d0f1863e55af5791baaca4a04edd",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "app.js",
+      "httpStatus": 200,
+      "bytes": 46417,
+      "sha256": "fee277736a4008ca5edc88257a9c1eb0fb20553f43bd925d03aa625cdb27b95e",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "tracks/catalog.json",
+      "httpStatus": 200,
+      "bytes": 2844,
+      "sha256": "4a767d14dbb4b1d30e5f4d92c2a69d709079c49bee46d9317623637ddd5e5d71",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "tracks/afterglow.strudel",
+      "httpStatus": 200,
+      "bytes": 1281,
+      "sha256": "a1183c8f9087b830a7835ec07b3e49c4351502992aeea83de1d387de9d2fd6aa",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "tracks/greenline.strudel",
+      "httpStatus": 200,
+      "bytes": 1269,
+      "sha256": "28cde8f6cd19c90082a81c5f7e1b6d931ef2ddb66689e9f91e30131bc7c06dd5",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "tracks/paper-moon.strudel",
+      "httpStatus": 200,
+      "bytes": 1293,
+      "sha256": "cc110558e9fc54fb81de34f7d1618690f975063155fa9f025dade49bba2a53ad",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "tracks/soft-focus.strudel",
+      "httpStatus": 200,
+      "bytes": 1282,
+      "sha256": "854873d03a6d56f065ddd2b084c09ed7f708077c53b60672b13aae76693e0eea",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "tracks/tiny-hours.strudel",
+      "httpStatus": 200,
+      "bytes": 1268,
+      "sha256": "08b31498b1692c89192f4a05b0c63f2566f1c5a8546f44401b97d33f91e705af",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    },
+    {
+      "path": "tracks/wide-awake.strudel",
+      "httpStatus": 200,
+      "bytes": 1271,
+      "sha256": "b24a71dc17e643c12528b42bf5a83da52a561f9770ed93ffde4f6d4eb2d73b26",
+      "matchesManifest": true,
+      "matchesCheckoutAfterNewlineNormalization": true
+    }
+  ],
+  "limitations": [
+    "Resource equality is not browser execution or audible proof",
+    "Hash routes are resolved client-side; an HTTP 200 does not verify a rendered route",
+    "No live browser DOM, storage, network session or UI state was inspected"
+  ]
+}
