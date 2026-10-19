@@ -33,6 +33,11 @@ const state = {
   groupFilter: '',
   toastTimer: 0,
 };
+const transport = new MusicLibrary.Queue();
+let playlists = MusicLibrary.playlists();
+let selectedPlaylist = null;
+let playlistDialogMode = null;
+let playlistDialogTrack = null;
 let enginePromise;
 let activeRepl;
 let playbackDuration = 0;
@@ -40,6 +45,7 @@ let playbackRevision = 0;
 let evaluationQueue = Promise.resolve();
 let playbackStartedAt = 0;
 let previewing = false;
+let previewReturnTrack = null;
 let playbackError = '';
 let playbackAbort;
 const playbackChannel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('strudelify-playback') : null;
@@ -53,7 +59,7 @@ let detailRevision = 0;
 const coverNames = ['afterglow', 'greenline', 'paper-moon', 'soft-focus', 'tiny-hours', 'wide-awake'];
 function icon(name) {
   const filled = ['play', 'pause', 'stop', 'previous', 'next'].includes(name);
-  return `<svg class="icon${filled ? ' fill' : ''}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+  return `<svg class="icon${filled ? ' fill' : ''}" aria-hidden="true"><use href="assets/icons/lucide.svg#i-${name}"/></svg>`;
 }
 function coverUrl(track) { return track.cover ? `tracks/covers/art/${encodeURIComponent(track.id)}.svg` : `assets/covers/${coverNames[((track.palette || 1) - 1) % coverNames.length]}.svg`; }
 function coverImage(track) { return `<img src="${coverUrl(track)}" alt="" loading="lazy" decoding="async">`; }
@@ -124,7 +130,27 @@ function ensureEngine() {
 Promise.resolve().then(ensureEngine).catch(() => {});
 function getEvalError(repl) { return repl?.state?.evalError || null; }
 async function runCode(code) {
+  if (!state.current?.preview) previewReturnTrack = state.current;
   return playTrack({id:'editor-preview', title:'Editor preview', artist:'Unsaved pattern', code, preview:true, palette:5}, true);
+}
+async function endEditorPreview() {
+  if (!state.current?.preview) return;
+  const previous = previewReturnTrack;
+  const stopping = stopTrack();
+  const revision = playbackRevision;
+  await stopping;
+  if (revision !== playbackRevision || !state.current?.preview) return;
+  state.current = previous;
+  previewReturnTrack = null;
+  if (previous) loadLyrics(previous);
+  else {
+    ++lyricsRevision; lyricsCues=[];
+    $('#lyricsTitle').textContent='Choose a song';
+    $('#lyricsArtist').textContent='';
+    $('#lyricsNotice').textContent='Choose a pattern to see its playback notes.';
+    $('#lyricsLines').replaceChildren();
+  }
+  renderPlayer(); renderAllLists();
 }
 function silenceEngine() {
   // hush alone can leave this REPL's clock at the preceding song's cycle. A hard
@@ -164,7 +190,14 @@ async function prepareInstruments(pattern, repl, code) {
 }
 async function playTrack(track, isPreview = false) {
   if (!track) return;
-  if (!isPreview && (state.playing || state.loading) && state.current?.id === track.id) { await stopTrack(); return; }
+  // Direct selections (including integrations) must establish the same queue
+  // position as a card click. Queue/playlist advances already selected their
+  // exact occurrence, so retain that snapshot and any duplicate entry IDs.
+  if (!isPreview && transport.current?.trackId !== track.id) {
+    const entries = allTracks().map(item=>MusicLibrary.entry(item.id));
+    const selected = entries.find(item=>item.trackId===track.id);
+    if (selected) transport.start(entries, selected.id, 'All patterns');
+  }
   const revision = ++playbackRevision;
   playbackAbort?.abort();
   const abort = playbackAbort = new AbortController();
@@ -299,29 +332,41 @@ function renderPlayer() {
     $('#mainPlayButton').innerHTML = icon('stop');
     $('#mainPlayButton').setAttribute('aria-label', 'Cancel loading');
   }
+  $('#shuffleButton').classList.toggle('active', transport.shuffle);
+  $('#shuffleButton').setAttribute('aria-pressed', String(transport.shuffle));
+  $('#repeatButton').classList.toggle('active', transport.repeat !== 'off');
+  $('#repeatButton').setAttribute('aria-label', `Repeat: ${transport.repeat === 'context' ? 'collection' : transport.repeat}. Change repeat mode`);
+  $('#repeatButton').title = `Repeat: ${transport.repeat === 'context' ? 'collection' : transport.repeat}`;
+  $('#repeatOne').classList.toggle('hidden', transport.repeat !== 'one');
+  $('#queueShuffleButton').textContent = `Shuffle ${transport.shuffle?'on':'off'}`;
+  $('#queueShuffleButton').setAttribute('aria-pressed',String(transport.shuffle));
+  $('#queueRepeatButton').textContent = `Repeat ${transport.repeat==='context'?'collection':transport.repeat}`;
+  syncPlayButtons();
 }
 function renderPlaylistNav() {
   const items = [{ name: 'All patterns', filter: '', palette: 1 }, ...groups.map(g => ({...g, filter:g.name})), {name:'Liked tracks', liked:true, palette:3}];
   $('#playlistList').innerHTML = items.map(item => `<button class="playlist-link" data-group="${escapeHtml(item.filter || '')}" data-liked-nav="${!!item.liked}" title="${escapeHtml(item.name)}"><span class="playlist-art" style="background:#45337d">${item.liked ? icon('heart') : coverImage(item)}</span><span class="playlist-copy"><strong>${escapeHtml(item.name)}</strong><small>${item.liked ? 'Collection · Saved by you' : 'Collection · Hustlenix Music'}</small></span></button>`).join('');
+  $('#playlistList').insertAdjacentHTML('afterbegin', playlists.map(p=>`<button class="playlist-link" data-open-playlist="${escapeHtml(p.id)}" title="${escapeHtml(p.name)}"><span class="playlist-art playlist-placeholder">${icon('book')}</span><span class="playlist-copy"><strong>${escapeHtml(p.name)}</strong><small>Playlist · ${p.entries.length} tracks</small></span></button>`).join(''));
 }
 function rowMarkup(track, index) {
   const active = state.current?.id === track.id;
   const liked = state.liked.includes(track.id);
   return `<div class="track-row${active && state.playing ? ' playing' : ''}" data-track-id="${escapeHtml(track.id)}">
     <span class="row-number">${String(index + 1).padStart(2, '0')}</span>
-    <button class="row-play" data-action="play" aria-label="${active && state.playing ? 'Stop' : 'Play'} ${escapeHtml(track.title)}">${icon(active && state.playing ? 'pause' : 'play')}</button>
+    <button class="row-play" data-action="play" aria-label="${active && state.playing ? 'Pause' : 'Play'} ${escapeHtml(track.title)}">${icon(active && state.playing ? 'pause' : 'play')}</button>
     <div class="row-track" data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}">
       ${artMarkup(track)}<span class="row-title"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.artist)}</span></span>
     </div>
     <span class="row-mood">${escapeHtml(track.mood || (track.created ? 'Your pattern' : 'Live-coded'))}</span>
     <span class="row-loop">${escapeHtml(track.loop || '∞ loop')}</span>
-    <button class="row-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${icon('heart')}</button>
+    <span class="row-options"><button class="row-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${icon('heart')}</button><button class="icon-button" data-action="options" aria-label="Options for ${escapeHtml(track.title)}">${icon('more')}</button></span>
   </div>`;
 }
 function cardMarkup(track) {
   const liked = state.liked.includes(track.id);
   return `<article class="track-card" data-track-id="${escapeHtml(track.id)}">
     <button class="card-like${liked ? ' liked' : ''}" data-action="like" aria-label="${liked ? 'Unlike' : 'Like'} ${escapeHtml(track.title)}">${icon('heart')}</button>
+    <button class="card-options icon-button" data-action="options" aria-label="Options for ${escapeHtml(track.title)}">${icon('more')}</button>
     <div data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}">${artMarkup(track, 'track-card-art')}</div>
     <button class="card-play" data-action="play" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button>
     <div class="track-card-copy" data-action="open" role="button" tabindex="0" aria-label="View ${escapeHtml(track.title)}"><strong>${escapeHtml(track.title)}</strong><span>${escapeHtml(track.cover ? track.artist : track.mood || track.artist)}</span></div>
@@ -340,7 +385,11 @@ function renderHome() {
   $('#homeTrackList').innerHTML = allTracks().map(rowMarkup).join('');
 }
 function renderQueue() {
-  $('#queueList').innerHTML = allTracks().map(track => `<button class="queue-track" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${artMarkup(track)}<span style="${state.current?.id === track.id ? 'color:var(--accent)' : ''}">${escapeHtml(track.title)}<small>${escapeHtml(track.artist)}</small></span></button>`).join('');
+  const row = (entry, source, index) => {
+    const track = getTrack(entry.trackId); if (!track) return '';
+    return `<div class="queue-entry"><button class="queue-track" data-queue-play="${escapeHtml(entry.id)}" data-queue-source="${source}" aria-label="Play ${escapeHtml(track.title)} next">${artMarkup(track)}<span>${escapeHtml(track.title)}<small>${escapeHtml(track.artist)}</small></span></button>${source==='manual' ? `<div class="queue-entry-actions"><button class="icon-button" data-queue-move="${escapeHtml(entry.id)}" data-direction="-1" ${index===0?'disabled':''} aria-label="Move ${escapeHtml(track.title)} up">↑</button><button class="icon-button" data-queue-move="${escapeHtml(entry.id)}" data-direction="1" ${index===transport.manual.length-1?'disabled':''} aria-label="Move ${escapeHtml(track.title)} down">↓</button><button class="icon-button" data-queue-remove="${escapeHtml(entry.id)}" aria-label="Remove ${escapeHtml(track.title)} from queue">${icon('close')}</button></div>` : ''}</div>`;
+  };
+  $('#queueList').innerHTML = `<h3>Now playing</h3>${state.current ? `<button class="queue-track queue-current" data-action="open" data-track-id="${escapeHtml(state.current.id)}">${artMarkup(state.current)}<span>${escapeHtml(state.current.title)}<small>${state.loading?'Loading…':state.paused?'Paused':state.playing?'Playing':'Stopped'}</small></span></button>` : '<p>Choose a track to start listening.</p>'}<div class="queue-section-heading"><h3>Next in queue</h3><button class="text-button" id="clearQueueButton" ${transport.manual.length?'':'disabled'}>Clear</button></div>${transport.manual.map((e,i)=>row(e,'manual',i)).join('') || '<p>Add tracks from their options menu.</p>'}<h3>Next from: ${escapeHtml(transport.label)}</h3>${transport.upcoming().map((e,i)=>row(e,'context',i)).join('') || '<p>End of this collection.</p>'}`;
 }
 async function loadLyrics(track) {
   if (!$('#lyricsLines')) return; // A cached older page can still load the new transport safely.
@@ -381,7 +430,11 @@ async function loadLyrics(track) {
 }
 function updateLyricsPosition() {
   const seconds = (state.playing || state.paused) && window.getAudioContext ? Math.max(0,window.getAudioContext().currentTime-playbackStartedAt) : -1;
-  if (playbackDuration > 0 && seconds >= playbackDuration + 1) { stopTrack(); return; }
+  if (state.playing && playbackDuration > 0 && seconds >= playbackDuration + 1) {
+    playbackDuration = 0;
+    if (previewing) endEditorPreview(); else advancePlayback(true);
+    return;
+  }
   const index = lyricsCues.findIndex(cue => seconds >= cue.start && seconds < cue.end);
   if (index === highlightedLyric) return;
   highlightedLyric = index;
@@ -417,20 +470,20 @@ function renderLibrary() {
   if (state.libraryFilter === 'liked') result = result.filter(track => state.liked.includes(track.id));
   if (state.libraryFilter === 'created') result = result.filter(track => track.created);
   $('#libraryTrackList').innerHTML = result.map(cardMarkup).join('');
+  $('#libraryPlaylists').innerHTML = playlists.map(p=>`<button class="saved-playlist" data-open-playlist="${escapeHtml(p.id)}"><span class="playlist-placeholder">${icon('book')}</span><strong>${escapeHtml(p.name)}</strong><small>${p.entries.length} tracks · Saved on this device</small></button>`).join('');
   $('#emptyLibrary').classList.toggle('hidden', result.length > 0);
 }
 function renderAllLists() {
   renderHome();
   if (!$('#searchView').classList.contains('hidden')) renderSearch();
   if (!$('#libraryView').classList.contains('hidden')) renderLibrary();
-  const openTrack = $('[data-track-id].playing');
-  if (openTrack && state.current) openTrack.classList.toggle('playing', state.playing);
+  syncPlayButtons();
 }
 function setView(name, push = true) {
-  const views = ['home', 'search', 'library', 'track'];
+  const views = ['home', 'search', 'library', 'track', 'playlist'];
   if (!views.includes(name)) name = 'home';
   for (const view of views) $(`#${view}View`).classList.toggle('hidden', view !== name);
-  $$('.nav-link').forEach(button => button.classList.toggle('active', button.dataset.view === (name === 'track' ? 'library' : name)));
+  $$('.nav-link').forEach(button => button.classList.toggle('active', button.dataset.view === (['track','playlist'].includes(name) ? 'library' : name)));
   if (push && location.hash !== `#${name}`) history.pushState({ view: name }, '', `#${name}`);
   $('#homeFilters').classList.toggle('hidden', name !== 'home');
   hideSuggestions();
@@ -451,7 +504,7 @@ async function openTrack(id, push = true) {
   if (push && location.hash !== href) history.pushState({view:'track',trackId:id},'',href);
   else history.replaceState({view:'track',trackId:id},'',href);
   $('#trackDetail').innerHTML = `<div class="detail-hero">${artMarkup(track,'detail-art')}<div class="detail-copy"><div class="eyebrow">Live-coded pattern</div><h1>${escapeHtml(track.title)}</h1><p><strong>${escapeHtml(track.artist)}</strong> · ${escapeHtml(track.mood || 'Your pattern')} · ${escapeHtml(track.loop || 'Infinite loop')}</p></div></div>
-  <div class="detail-actions"><button class="detail-play" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button><button class="icon-button${state.liked.includes(track.id) ? ' liked' : ''}" data-action="like" data-track-id="${escapeHtml(track.id)}" aria-label="Like ${escapeHtml(track.title)}">${icon('heart')}</button><button class="button button-quiet" data-show-code>View code</button><div style="position:relative"><button class="icon-button" data-track-menu aria-label="More options" aria-expanded="false">${icon('more')}</button><div class="detail-menu hidden" role="menu"><button role="menuitem" data-action="copy" data-track-id="${escapeHtml(track.id)}">Copy Strudel code</button></div></div></div>
+  <div class="detail-actions"><button class="detail-play" data-action="play" data-track-id="${escapeHtml(track.id)}" aria-label="Play ${escapeHtml(track.title)}">${icon('play')}</button><button class="icon-button${state.liked.includes(track.id) ? ' liked' : ''}" data-action="like" data-track-id="${escapeHtml(track.id)}" aria-label="Like ${escapeHtml(track.title)}">${icon('heart')}</button><button class="button button-quiet" data-show-code>View code</button><div style="position:relative"><button class="icon-button" data-track-menu aria-label="More options" aria-expanded="false">${icon('more')}</button><div class="detail-menu hidden" role="menu"><button role="menuitem" data-add-queue="${escapeHtml(track.id)}">Add to queue</button><button role="menuitem" data-add-playlist-track="${escapeHtml(track.id)}">Add to playlist</button><button role="menuitem" data-action="copy" data-track-id="${escapeHtml(track.id)}">Copy Strudel code</button></div></div></div>
   <details class="code-details" id="patternCode"><summary>Inside the pattern</summary><div class="code-panel"><div class="code-panel-heading"><span>${escapeHtml(track.id)}.strudel</span><span>LIVE PATTERN</span></div><pre id="detailCode">Loading pattern…</pre></div></details>
   <section class="section-block"><div class="section-heading"><h2>More to discover</h2></div><div class="shelf-grid">${allTracks().filter(t=>t.id!==track.id).map(cardMarkup).join('')}</div></section>`;
   {
@@ -476,8 +529,9 @@ async function openTrack(id, push = true) {
 }
 function likeTrack(track) {
   if (!track) return;
-  state.liked = state.liked.includes(track.id) ? state.liked.filter(id => id !== track.id) : [...state.liked, track.id];
-  saveStorage('strudelify-liked', state.liked);
+  const liked = state.liked.includes(track.id) ? state.liked.filter(id => id !== track.id) : [...state.liked, track.id];
+  if (!saveStorage('strudelify-liked', liked)) return;
+  state.liked = liked;
   renderPlayer(); renderAllLists();
   showToast(state.liked.includes(track.id) ? 'Added to liked tracks' : 'Removed from liked tracks');
 }
@@ -495,7 +549,7 @@ function playRandom(group = '') {
   if (!candidates.length) { showToast('There are no tracks in this collection yet.'); return; }
   const other = candidates.filter(track => track.id !== state.current?.id);
   const choice = (other.length ? other : candidates)[Math.floor(Math.random() * (other.length || candidates.length))];
-  playTrack(choice);
+  startCollection(candidates.map(t=>MusicLibrary.entry(t.id)), choice.id, group || 'All patterns');
 }
 function openEditor(track = null) {
   $('#editorTitle').value = track?.title || '';
@@ -506,12 +560,145 @@ function openEditor(track = null) {
   $('#editorTitle').focus();
 }
 
+function syncPlayButtons() {
+  $$('[data-action="play"]').forEach(button => {
+    const id = button.dataset.trackId || button.closest('[data-track-id]')?.dataset.trackId;
+    const track = getTrack(id), active = id===state.current?.id;
+    button.innerHTML = icon(active && state.loading ? 'stop' : active && state.playing ? 'pause' : 'play');
+    button.setAttribute('aria-label', `${active && state.loading ? 'Cancel loading' : active && state.playing ? 'Pause' : active && state.paused ? 'Resume' : 'Play'} ${track?.title || 'track'}`);
+    button.closest('.track-row, .track-card')?.classList.toggle('playing', active && state.playing);
+  });
+}
+function visibleCollection(button) {
+  const container = button.closest('.track-table, .track-card-grid, .shelf-grid');
+  const ids = container ? [...new Set($$('[data-track-id]',container).map(el=>el.dataset.trackId))] : allTracks().map(t=>t.id);
+  return ids.filter(id=>getTrack(id)).map(MusicLibrary.entry);
+}
+function startCollection(entries, trackId, label, entryId=null) {
+  const selected = transport.start(entries, entryId || entries.find(e=>e.trackId===trackId)?.id, label);
+  if (selected) playTrack(getTrack(selected.trackId));
+}
+function selectTrack(track, button) {
+  if (!track) return;
+  if (state.current?.id===track.id && (state.playing || state.paused || state.loading)) return togglePlayback();
+  const entries = visibleCollection(button);
+  startCollection(entries, track.id, !$('#searchView').classList.contains('hidden') ? state.groupFilter || 'Search results' : !$('#libraryView').classList.contains('hidden') ? 'Your library' : 'All patterns');
+}
+async function advancePlayback(automatic=false) {
+  const next = transport.next(automatic);
+  if (next && getTrack(next.trackId)) return playTrack(getTrack(next.trackId));
+  await stopTrack();
+  if (!automatic) showToast('End of the queue. Choose another track or enable repeat.');
+}
+function persistPlaylists(next) {
+  if (!saveStorage('strudelify-playlists-v1', next)) return false;
+  playlists = next; renderPlaylistNav();
+  if (!$('#libraryView').classList.contains('hidden')) renderLibrary();
+  return true;
+}
+function openPlaylist(id, push=true) {
+  const playlist = playlists.find(p=>p.id===id);
+  if (!playlist) { setView('library',push); showToast('This playlist is no longer available.'); return; }
+  selectedPlaylist = id;
+  setView('playlist',false);
+  const href = `#playlist/${encodeURIComponent(id)}`;
+  if (push && location.hash!==href) history.pushState({view:'playlist',playlistId:id},'',href);
+  renderPlaylist();
+}
+function renderPlaylist() {
+  const p = playlists.find(p=>p.id===selectedPlaylist); if (!p) return;
+  $('#playlistDetail').innerHTML = `<div class="detail-hero playlist-hero"><div class="detail-art playlist-placeholder">${icon('book')}</div><div class="detail-copy"><div class="eyebrow">Your playlist · On this device</div><h1>${escapeHtml(p.name)}</h1><p>${escapeHtml(p.description)}</p><p>${p.entries.length} ${p.entries.length===1?'track':'tracks'}</p></div></div><div class="detail-actions"><button class="detail-play" data-play-playlist aria-label="Play ${escapeHtml(p.name)}" ${p.entries.some(e=>getTrack(e.trackId))?'':'disabled'}>${icon('play')}</button><button class="button button-quiet" data-edit-playlist>Edit details</button><button class="button button-quiet" data-view="search">Add tracks</button><button class="icon-button" data-delete-playlist aria-label="Delete playlist">${icon('close')}</button></div><div class="playlist-tracks">${p.entries.map((e,i)=>{
+    const track=getTrack(e.trackId);
+    return `<div class="playlist-entry" data-entry-id="${escapeHtml(e.id)}"><span class="entry-number">${i+1}</span><button class="playlist-entry-play" data-play-entry="${escapeHtml(e.id)}" ${track?'':'disabled'} aria-label="Play ${escapeHtml(track?.title || 'unavailable track')}">${track?artMarkup(track):''}<span><strong>${escapeHtml(track?.title || 'Unavailable track')}</strong><small>${escapeHtml(track?.artist || 'Not in this release')}</small></span></button><div class="entry-actions"><button class="icon-button" data-move-entry="${escapeHtml(e.id)}" data-direction="-1" ${i===0?'disabled':''} aria-label="Move track ${i+1} up">↑</button><button class="icon-button" data-move-entry="${escapeHtml(e.id)}" data-direction="1" ${i===p.entries.length-1?'disabled':''} aria-label="Move track ${i+1} down">↓</button>${track?`<button class="icon-button" data-action="options" data-track-id="${escapeHtml(track.id)}" aria-label="Track options">${icon('more')}</button>`:''}<button class="icon-button" data-remove-entry="${escapeHtml(e.id)}" aria-label="Remove track ${i+1} from playlist">${icon('close')}</button></div></div>`;
+  }).join('') || '<div class="playlist-empty"><h2>Let’s find something for your playlist</h2><p>Browse tracks and choose “Add to playlist” in a track’s options.</p><button class="button button-primary" data-view="search">Browse tracks</button></div>'}</div>`;
+}
+function openPlaylistDialog(mode, track=null) {
+  playlistDialogMode=mode; playlistDialogTrack=track;
+  const p=playlists.find(p=>p.id===selectedPlaylist);
+  $('#playlistDialogTitle').textContent=mode==='edit'?'Edit details':mode==='add'?'Add to playlist':'Create playlist';
+  $('#playlistName').value=mode==='edit'?p?.name || '':'';
+  $('#playlistDescription').value=mode==='edit'?p?.description || '':'';
+  $('#playlistExisting').classList.toggle('hidden',mode!=='add');
+  $('#playlistExisting').innerHTML=playlists.map(item=>`<button type="button" class="playlist-choice" data-add-to-playlist="${escapeHtml(item.id)}">${icon('book')}<span>${escapeHtml(item.name)}<small>${item.entries.length} tracks</small></span>${icon('plus')}</button>`).join('') || '<p>No playlists yet. Create your first below.</p>';
+  $('#playlistSaveButton').textContent=mode==='edit'?'Save':'Create playlist'+(mode==='add'?' and add track':'');
+  $('#playlistName').placeholder='My playlist';
+  $('#playlistDialog').showModal();
+  if (mode!=='add') $('#playlistName').focus();
+}
+function addToPlaylist(id,track) {
+  if (!track) return;
+  const next=playlists.map(p=>p.id===id?{...p,entries:[...p.entries,MusicLibrary.entry(track.id)]}:p);
+  if (persistPlaylists(next)) { $('#playlistDialog').close(); showToast('Added to playlist'); if (!$('#playlistView').classList.contains('hidden')) renderPlaylist(); }
+}
+let optionsTrigger;
+function openTrackOptions(track, trigger) {
+  optionsTrigger=trigger;
+  $('#trackOptionsTitle').textContent=track.title;
+  $('#trackOptionsBody').innerHTML=`<button class="playlist-choice" data-add-queue="${escapeHtml(track.id)}">${icon('queue')} Add to queue</button><button class="playlist-choice" data-add-playlist-track="${escapeHtml(track.id)}">${icon('plus')} Add to playlist</button><button class="playlist-choice" data-option-code="${escapeHtml(track.id)}">${icon('code')} View code</button>`;
+  $('#trackOptionsDialog').showModal();
+}
+
+$('#playlistForm').addEventListener('submit',event=>{
+  event.preventDefault();
+  const name=$('#playlistName').value.trim(); if (!name) return;
+  const description=$('#playlistDescription').value.trim();
+  const id=playlistDialogMode==='edit'?selectedPlaylist:MusicLibrary.uid();
+  const next=playlistDialogMode==='edit'?playlists.map(p=>p.id===id?{...p,name,description}:p):[{id,name,description,entries:playlistDialogTrack?[MusicLibrary.entry(playlistDialogTrack.id)]:[]},...playlists];
+  if (persistPlaylists(next)) { $('#playlistDialog').close(); openPlaylist(id); showToast(playlistDialogMode==='edit'?'Playlist updated':'Playlist created'); }
+});
+$('#trackOptionsDialog').addEventListener('close',()=>{if(optionsTrigger?.isConnected)optionsTrigger.focus();});
+document.addEventListener('click',event=>{
+  const button=event.target.closest('button'); if(!button)return;
+  const d=button.dataset;
+  if ('closeDialog' in d) button.closest('dialog').close();
+  if (d.openPlaylist) openPlaylist(d.openPlaylist);
+  if ('createPlaylist' in d) openPlaylistDialog('create');
+  if ('editPlaylist' in d) openPlaylistDialog('edit');
+  if (d.addToPlaylist) addToPlaylist(d.addToPlaylist,playlistDialogTrack);
+  if (d.addQueue) {
+    transport.manual.push(MusicLibrary.entry(d.addQueue)); renderQueue();
+    $('#trackOptionsDialog').close(); showToast('Added to queue');
+  }
+  if (d.addPlaylistTrack) { $('#trackOptionsDialog').close(); openPlaylistDialog('add',getTrack(d.addPlaylistTrack)); }
+  if (d.optionCode) { $('#trackOptionsDialog').close(); openTrack(d.optionCode).then(()=>$('#patternCode').open=true); }
+  const p=playlists.find(p=>p.id===selectedPlaylist);
+  if (p && ('playPlaylist' in d || d.playEntry)) {
+    const entries=p.entries.filter(e=>getTrack(e.trackId));
+    startCollection(entries,null,p.name,d.playEntry || entries[0]?.id);
+  }
+  if (p && d.removeEntry) {
+    if(persistPlaylists(playlists.map(item=>item.id===p.id?{...item,entries:item.entries.filter(e=>e.id!==d.removeEntry)}:item))) renderPlaylist();
+  }
+  if (p && d.moveEntry) {
+    const entries=[...p.entries], index=entries.findIndex(e=>e.id===d.moveEntry), next=index+Number(d.direction);
+    if(index>=0 && next>=0 && next<entries.length){[entries[index],entries[next]]=[entries[next],entries[index]];
+      if(persistPlaylists(playlists.map(item=>item.id===p.id?{...item,entries}:item))){ renderPlaylist(); $(`[data-move-entry="${d.moveEntry}"][data-direction="${d.direction}"]`)?.focus(); }
+    }
+  }
+  if(p && 'deletePlaylist' in d) { $('#deletePlaylistName').textContent=p.name; $('#deletePlaylistDialog').showModal(); }
+  if(p && 'confirmDeletePlaylist' in d && persistPlaylists(playlists.filter(item=>item.id!==p.id))) { $('#deletePlaylistDialog').close(); setView('library'); showToast('Playlist deleted'); }
+  if(d.queueRemove){transport.manual=transport.manual.filter(e=>e.id!==d.queueRemove);renderQueue();}
+  if(d.queueMove){
+    const i=transport.manual.findIndex(e=>e.id===d.queueMove),j=i+Number(d.direction);
+    if(i>=0&&j>=0&&j<transport.manual.length){[transport.manual[i],transport.manual[j]]=[transport.manual[j],transport.manual[i]];renderQueue();$(`[data-queue-move="${d.queueMove}"][data-direction="${d.direction}"]`)?.focus();}
+  }
+  if(button.id==='clearQueueButton')$('#clearQueueDialog').showModal();
+  if('confirmClearQueue' in d){transport.manual=[];renderQueue();$('#clearQueueDialog').close();showToast('Queued tracks cleared');}
+  if(d.queuePlay){
+    let entry;
+    if(d.queueSource==='manual'){const i=transport.manual.findIndex(e=>e.id===d.queuePlay);if(i>=0)entry=transport.manual.splice(i,1)[0];}
+    else {const i=transport.order.findIndex(e=>e.id===d.queuePlay);if(i>=0){transport.cursor=i;entry=transport.order[i];}}
+    if(entry){transport.select(entry);playTrack(getTrack(entry.trackId));}
+  }
+});
+
 function handleAction(event) {
   const actionTarget = event.target.closest('[data-action]');
   if (!actionTarget) return;
   const id = actionTarget.dataset.trackId || actionTarget.closest('[data-track-id]')?.dataset.trackId;
   const track = getTrack(id);
-  if (actionTarget.dataset.action === 'play') { event.stopPropagation(); playTrack(track); }
+  if (actionTarget.dataset.action === 'play') { event.stopPropagation(); selectTrack(track, actionTarget); }
+  else if (actionTarget.dataset.action === 'options' && track) openTrackOptions(track, actionTarget);
   else if (actionTarget.dataset.action === 'like') {
     event.stopPropagation(); likeTrack(track);
     if (track) {
@@ -546,10 +733,10 @@ document.addEventListener('keydown', event => {
     if (id) openTrack(id);
     return;
   }
-  if (event.key === '/' && !/input|textarea/i.test(document.activeElement.tagName) && !$('#editorDialog').open) {
+  if (event.key === '/' && !/input|textarea/i.test(document.activeElement.tagName) && !$('dialog[open]')) {
     event.preventDefault(); setView('search'); $('#searchInput').focus();
   }
-  if (event.code === 'Space' && !/input|textarea|button/i.test(document.activeElement.tagName) && !$('#editorDialog').open) {
+  if (event.code === 'Space' && !/input|textarea|button/i.test(document.activeElement.tagName) && !$('dialog[open]')) {
     event.preventDefault(); togglePlayback();
   }
 });
@@ -562,21 +749,33 @@ $('#searchInput').addEventListener('input', event => {
   showSuggestions();
 });
 $('#searchPageInput').addEventListener('input', () => { $('#searchInput').value = $('#searchPageInput').value; state.groupFilter = ''; renderSearch(); });
-$('#newTrackButton').addEventListener('click', () => openEditor());
-$('#libraryCreateButton').addEventListener('click', () => openEditor());
+$('#newTrackButton').addEventListener('click', () => openPlaylistDialog('create'));
+$('#libraryCreateButton').addEventListener('click', () => openPlaylistDialog('create'));
+$('#libraryTrackCreateButton').addEventListener('click', () => openEditor());
 $('#heroPlayButton').addEventListener('click', () => playRandom());
 $('#starterPlayButton').addEventListener('click', () => playRandom());
 $('#mainPlayButton').addEventListener('click', togglePlayback);
 $('#stopButton').addEventListener('click', stopTrack);
 $('#previousButton').addEventListener('click', () => {
-  const list = allTracks(); const index = list.findIndex(track => track.id === state.current?.id);
-  playTrack(index < 0 ? list[0] : list[(index - 1 + list.length) % list.length]);
+  const elapsed=(state.playing || state.paused) ? (window.getAudioContext?.().currentTime || 0)-playbackStartedAt : 0;
+  if(elapsed>3 && state.current && !previewing) return playTrack(state.current);
+  const previous=transport.previous();
+  if(previous) playTrack(getTrack(previous.trackId));
+  else if(state.current && !previewing) playTrack(state.current);
 });
-$('#nextButton').addEventListener('click', () => {
-  const list = allTracks(); const index = list.findIndex(track => track.id === state.current?.id);
-  playTrack(list[(index + 1 + list.length) % list.length]);
+$('#nextButton').addEventListener('click', () => advancePlayback());
+$('#shuffleButton').addEventListener('click', () => {
+  const enabled=!transport.shuffle;
+  if(!saveStorage('strudelify-shuffle',enabled))return;
+  transport.setShuffle(enabled);renderPlayer();showToast(`Shuffle ${enabled?'on':'off'}`);
 });
-$('#shuffleButton').addEventListener('click', () => { $('#shuffleButton').classList.toggle('active'); playRandom(); });
+$('#repeatButton').addEventListener('click',()=>{
+  const modes=['off','context','one'],next=modes[(modes.indexOf(transport.repeat)+1)%3];
+  if(!saveStorage('strudelify-repeat',next))return;
+  transport.repeat=next;renderPlayer();showToast(`Repeat ${next==='context'?'collection':next}`);
+});
+$('#queueShuffleButton').addEventListener('click',()=>$('#shuffleButton').click());
+$('#queueRepeatButton').addEventListener('click',()=>$('#repeatButton').click());
 $('#likeButton').addEventListener('click', () => likeTrack(state.current));
 $('#codeButton').addEventListener('click', async () => { if(state.current) { await openTrack(state.current.id); $('#patternCode').open=true; } });
 $('#trackBackButton').addEventListener('click', () => setView('search'));
@@ -604,21 +803,25 @@ $('#editorForm').addEventListener('submit', event => {
   const code = $('#editorCode').value.trim();
   if (!title || !code) return;
   const track = { id: `custom-${Date.now()}`, title, artist, mood: 'Your pattern', loop: '∞ loop', code, created: true, palette: 5 };
-  state.custom = [track, ...state.custom];
-  if (saveStorage('strudelify-custom', state.custom)) {
-    if (previewing) stopTrack();
+  const custom = [track, ...state.custom];
+  if (saveStorage('strudelify-custom', custom)) {
+    state.custom = custom;
+    if (state.current?.preview) endEditorPreview();
     $('#editorDialog').close('save'); renderPlaylistNav(); renderAllLists();
     showToast('Saved to your local library');
     openTrack(track.id);
   }
 });
 $('#editorDialog').addEventListener('close', () => {
-  if (previewing) stopTrack();
+  if (state.current?.preview) endEditorPreview();
 });
-$('#editorDialog').addEventListener('cancel', () => { if (previewing) stopTrack(); });
 window.addEventListener('pagehide', () => stopTrack());
 function routeFromLocation() {
-  if (location.hash.startsWith('#track/')) {
+  if (location.hash.startsWith('#playlist/')) {
+    try { openPlaylist(decodeURIComponent(location.hash.slice(10)),false); }
+    catch { setView('library',false); }
+  }
+  else if (location.hash.startsWith('#track/')) {
     try { openTrack(decodeURIComponent(location.hash.slice(7)), false); }
     catch { setView('home', false); }
   }
@@ -629,7 +832,7 @@ window.addEventListener('popstate', routeFromLocation);
 
 document.querySelector('a[href="#mainArea"]').addEventListener('click', event => { event.preventDefault(); $('#mainArea').focus(); });
 document.addEventListener('keydown', event => { if(event.key==='Escape'){hideSuggestions();$$('.detail-menu').forEach(menu=>menu.classList.add('hidden'));$$('[data-track-menu]').forEach(button=>button.setAttribute('aria-expanded','false'));} });
-document.querySelector('[data-close-editor]').addEventListener('click', () => { if (previewing) stopTrack(); $('#editorDialog').close('cancel'); });
+document.querySelector('[data-close-editor]').addEventListener('click', () => $('#editorDialog').close('cancel'));
 $('#createHeaderButton').addEventListener('click', () => openEditor());
 $('#librarySearchButton').addEventListener('click', () => { setView('search'); $('#searchInput').focus(); });
 $('#clearSearchButton').addEventListener('click', () => { $('#searchInput').value=''; $('#searchPageInput').value=''; renderSearch(); hideSuggestions(); $('#clearSearchButton').classList.add('hidden'); $('#searchInput').focus(); });

@@ -22,6 +22,25 @@ This is opensourced, so you can add a music that you like, to expand this websit
 
 ## Interface and features
 
+The resource-kit integration uses 21 pinned Lucide SVG icons without a new runtime
+JavaScript dependency. Full ISC/Feather MIT notices and an integrity receipt ship with
+the source archive. See the [resource decisions](https://github.com/Hustlenix/strudelify/blob/codex/spotify-upgrade/docs/resource-decisions.md)
+and [asset ledger](THIRD_PARTY_ASSETS.md) for the adoption plan and provenance.
+
+The collection upgrade adds saved local playlists with descriptions, duplicate entries,
+individual removal, and keyboard-accessible up/down ordering. Create a playlist in Your
+Library; use a track's options button to add it to a playlist or queue. Create a track
+still opens the Strudel editor.
+
+The play queue separates Now playing, manually added tracks, and the remaining collection.
+Manual tracks play first. Editing or deleting a playlist does not change the active
+collection snapshot. Shuffle and repeat preferences survive reload; the queue itself is
+session-only. Repeat cycles between off, collection, and one track. Finite scores advance
+automatically, while open-ended patterns continue until you choose Next or Stop.
+
+Playlists, likes, and custom patterns stay on this device; there is no account or cloud
+sync. The six public scores and the Strudel runtime remain unchanged by this upgrade.
+
 The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their *should not copy* rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)
 
 The project-authored source retains its MIT notice. Strudel is an AGPL-3.0-or-later dependency;

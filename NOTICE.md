@@ -13,3 +13,9 @@ included. Tracks remain listening drafts until actual approval is recorded.
 
 Modified application and arrangement revisions: 18 October 2026, documented in Git history
 and the release audit. No affiliation with Spotify or the Strudel project is claimed.
+
+Interface icon update: 19 October 2026. Selected icons from lucide-static 1.59.0,
+Copyright (c) 2026 Lucide Icons and Contributors, ISC License. Feather-derived
+icons retain Copyright (c) 2013-present Cole Bemis, MIT License. Full upstream
+notices are in licenses/Lucide-LICENSE.txt; exact package integrity and per-icon
+hashes are recorded in assets/icons/lucide-provenance.json.

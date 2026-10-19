@@ -1,0 +1,123 @@
+{
+  "package": "lucide-static",
+  "version": "1.59.0",
+  "source": "https://registry.npmjs.org/lucide-static/-/lucide-static-1.59.0.tgz",
+  "integrity": "sha512-MuHZYaXbHgzN2QO6D3OM19bj09A+8GJiFSdXIMlbnLLEGQQ9+NRH2KaCxuivevD3Y23vM74kV17XBifgtqhfEg==",
+  "retrieved_on": "2026-10-19",
+  "license": "ISC AND MIT (Feather-derived icons)",
+  "license_source": "package/LICENSE",
+  "license_sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+  "changes": "Selected static geometry, renamed symbol IDs, combined in one SVG sprite; styling inherited from host.",
+  "used_in": [
+    "index.html",
+    "app.js"
+  ],
+  "icons": [
+    {
+      "symbol": "i-home",
+      "source": "package/icons/house.svg",
+      "sha256": "9491b2ae53be57db9f8a6a1c21766da4b9f54aeeb1f3ceb09768b78ee0e3199b"
+    },
+    {
+      "symbol": "i-search",
+      "source": "package/icons/search.svg",
+      "sha256": "c151d66bb2d179451283dfbf8b88609b1789ef07699884d941eea07245ab7cd8"
+    },
+    {
+      "symbol": "i-book",
+      "source": "package/icons/library.svg",
+      "sha256": "60ef8ccbd654171336cc2e3fbcd5d93e5437963154136c9ff5b81b160976bf0a"
+    },
+    {
+      "symbol": "i-plus",
+      "source": "package/icons/plus.svg",
+      "sha256": "faf0bab01219d720cdd3047f6b5755c78c8e5a6743008a8fcd1c48fec4879519"
+    },
+    {
+      "symbol": "i-close",
+      "source": "package/icons/x.svg",
+      "sha256": "b22c83fd632ff4082021e34d64b1393591134e7ce2889a6dad5361eff2fcc716"
+    },
+    {
+      "symbol": "i-left",
+      "source": "package/icons/chevron-left.svg",
+      "sha256": "55855ba9ca6bd3f350d1f6e092f669518679d1c86a52607a1bd2640cbf5af31e"
+    },
+    {
+      "symbol": "i-right",
+      "source": "package/icons/chevron-right.svg",
+      "sha256": "b9e4521dff43288a385af1421b625da8fd40cf28c272a508c933217002090776"
+    },
+    {
+      "symbol": "i-grid",
+      "source": "package/icons/layout-grid.svg",
+      "sha256": "be81ab8e353446aed2dbf14047b53078c61c40d2ff8adcd5b9e2051bfd5e9fdf"
+    },
+    {
+      "symbol": "i-play",
+      "source": "package/icons/play.svg",
+      "sha256": "d899e50a8649cb0b066a73375b06888e08556959415151ae8fb5d668808429e2"
+    },
+    {
+      "symbol": "i-pause",
+      "source": "package/icons/pause.svg",
+      "sha256": "a1fe8487700ffe50777f5da27538a159a95e8644eed4b0a10f602df8b62f3402"
+    },
+    {
+      "symbol": "i-stop",
+      "source": "package/icons/square.svg",
+      "sha256": "7ecd4bbe99b5f2e6d8e23549e9c6385e48501c9f30566d68500565acf2fcf6ce"
+    },
+    {
+      "symbol": "i-shuffle",
+      "source": "package/icons/shuffle.svg",
+      "sha256": "f34d986de5f1a1e3055b2fdf1c8e0db9854a2adb8ca5082e587780045a13d0ae"
+    },
+    {
+      "symbol": "i-previous",
+      "source": "package/icons/skip-back.svg",
+      "sha256": "11d72a236dd88c0048a58c2c81890882c0a66dcbc91449831efd77b1932a1f15"
+    },
+    {
+      "symbol": "i-next",
+      "source": "package/icons/skip-forward.svg",
+      "sha256": "415ae1c8eaedbf99388849e4edc322515fcb845faa38726bdb6f7e049fb95db5"
+    },
+    {
+      "symbol": "i-heart",
+      "source": "package/icons/heart.svg",
+      "sha256": "60daf9fd4954f31b6e92b0570abd471fb6376d07f17a3b3b96fef578e1ffa461"
+    },
+    {
+      "symbol": "i-code",
+      "source": "package/icons/code.svg",
+      "sha256": "1b752e558b28994b7dba9cdc8d2d2c650877467b6bafecd924fa03369af10471"
+    },
+    {
+      "symbol": "i-volume",
+      "source": "package/icons/volume-2.svg",
+      "sha256": "90a4d5d6a217c81bb8b9c43f64b369a55d13c46d21f8101de6ab1c155ce606d0"
+    },
+    {
+      "symbol": "i-queue",
+      "source": "package/icons/list-music.svg",
+      "sha256": "79d8c4a47edb2f3e0148da4a1781b860b827ef63be36baabdb63f59c173f94ba"
+    },
+    {
+      "symbol": "i-more",
+      "source": "package/icons/ellipsis.svg",
+      "sha256": "5744c741cddfe830075373e32c455e3e3eb6266495a8524cee8d40e1bc15ca4f"
+    },
+    {
+      "symbol": "i-sort",
+      "source": "package/icons/list-filter.svg",
+      "sha256": "17ca9f0664eb003578fff7c48ece5b8bfb456edb7fa5e7cac4a28c88fb60f1ee"
+    },
+    {
+      "symbol": "i-repeat",
+      "source": "package/icons/repeat.svg",
+      "sha256": "868dc633036e34b7b95b8f08cc9d87a2be23823fa30e8840fcf1b35ab28cd084"
+    }
+  ],
+  "sprite_sha256": "7f74df0fa2d918f2af92b908bface23fd266d6cc22e772075f97d2d59618f608"
+}

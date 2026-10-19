@@ -3,11 +3,13 @@ from pathlib import Path
 import hashlib, json, re, zipfile
 
 IDS = ('afterglow','greenline','paper-moon','soft-focus','tiny-hours','wide-awake')
-BASE_FILES = ('index.html','app.js','styles.css','README.md','LICENSE','COPYING','NOTICE.md',
+BASE_FILES = ('index.html','app.js','library.js','styles.css','README.md','LICENSE','COPYING','NOTICE.md',
               'LICENSING.md','THIRD_PARTY_ASSETS.md','licenses/Strudel-AGPL-3.0.txt',
-              'tracks/catalog.json','assets/icon.svg')
+              'tracks/catalog.json','assets/icon.svg','assets/icons/lucide.svg',
+              'assets/icons/lucide-provenance.json','licenses/Lucide-LICENSE.txt')
 GENERATED_FILES = ('SOURCE.html','source.zip')
-BUILD_SOURCES = ('release-audit/build_preview.py','release-audit/build_release.py','release-audit/release_policy.py')
+BUILD_SOURCES = ('release-audit/build_preview.py','release-audit/build_release.py','release-audit/release_policy.py',
+                 'release-audit/vendor_icons.py')
 UPSTREAM = 'cbe7aaacfbf8a51f5f5cf39bf79319f273214e24'
 
 
