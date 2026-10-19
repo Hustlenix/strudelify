@@ -22,6 +22,11 @@ This is opensourced, so you can add a music that you like, to expand this websit
 
 ## Interface and features
 
+The resource-kit integration uses 21 pinned Lucide SVG icons without a new runtime
+JavaScript dependency. Full ISC/Feather MIT notices and an integrity receipt ship with
+the source archive. See the [resource decisions](https://github.com/Hustlenix/strudelify/blob/codex/spotify-upgrade/docs/resource-decisions.md)
+and [asset ledger](THIRD_PARTY_ASSETS.md) for the adoption plan and provenance.
+
 The collection upgrade adds saved local playlists with descriptions, duplicate entries,
 individual removal, and keyboard-accessible up/down ordering. Create a playlist in Your
 Library; use a track's options button to add it to a playlist or queue. Create a track

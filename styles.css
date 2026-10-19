@@ -65,7 +65,8 @@ h2 {
 }
 .icon.fill {
   fill:currentColor;
-  stroke:none
+  stroke:currentColor;
+  stroke-width:2
 }
 .sprite,.hidden,[hidden] {
   display:none!important

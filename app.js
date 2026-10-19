@@ -59,7 +59,7 @@ let detailRevision = 0;
 const coverNames = ['afterglow', 'greenline', 'paper-moon', 'soft-focus', 'tiny-hours', 'wide-awake'];
 function icon(name) {
   const filled = ['play', 'pause', 'stop', 'previous', 'next'].includes(name);
-  return `<svg class="icon${filled ? ' fill' : ''}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+  return `<svg class="icon${filled ? ' fill' : ''}" aria-hidden="true"><use href="assets/icons/lucide.svg#i-${name}"/></svg>`;
 }
 function coverUrl(track) { return track.cover ? `tracks/covers/art/${encodeURIComponent(track.id)}.svg` : `assets/covers/${coverNames[((track.palette || 1) - 1) % coverNames.length]}.svg`; }
 function coverImage(track) { return `<img src="${coverUrl(track)}" alt="" loading="lazy" decoding="async">`; }
