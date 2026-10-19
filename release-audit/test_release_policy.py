@@ -21,12 +21,13 @@ class ReleasePolicyTests(unittest.TestCase):
             'integrated_license':'AGPL-3.0-or-later','original_provenance_confirmed':True,
             'branding':{'public_name':'Hustlenix Music','decision_evidence':'SYNTHETIC',
                         'upstream_permission_evidence':'SYNTHETIC; NO ACTUAL PERMISSION'},
+            'study_publication_requested':True,'study_instruction_evidence':'SYNTHETIC; NOT OWNER AUTHORIZATION',
             'devices':{name:{'physical_device':True,'passed':True,'model_browser':'SYNTHETIC',
                        'observations':'UNIT TEST ONLY'} for name in ['phone','laptop']},'tracks':[]}
         for row in json.loads((self.folder/'tracks/catalog.json').read_text()):
             self.approval['tracks'].append({'id':row['id'],'listened_complete':True,
                 'accepted_for_beta':True,'reviewer':'SYNTHETIC','observations':'UNIT TEST ONLY',
-                'score_sha256':hashlib.sha256((self.folder/'tracks'/f"{row['id']}.strudel").read_bytes()).hexdigest()})
+                'score_sha256':hashlib.sha256((self.folder/'tracks'/row['codeUrl'].removeprefix('./')).read_bytes()).hexdigest()})
 
     def tearDown(self):
         assert self.folder.is_relative_to(TEMP_ROOT.resolve())

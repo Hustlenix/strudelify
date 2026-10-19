@@ -71,9 +71,9 @@ try {
   await page.goto(url, {waitUntil:'networkidle', timeout:90000});
   await page.waitForFunction(() => !!tracks[0]?.rights);
   const ids = await page.evaluate(() => tracks.map(track => track.id));
-  assert(ids.length === 6 && ids.includes('afterglow'), 'Original catalog did not load');
-  assert(!report.requests.some(item => /tracks\/covers\/|dough-samples|lyrics\/[^?]+\.json/.test(item)), 'Uncleared commercial payload or bank was requested');
-  check('Original catalog loads without commercial scores, lyrics or sample banks', {ids});
+  assert(ids.length === 14 && ids.includes('afterglow') && ids.includes('01-babydoll') && ids.includes('08-lonely'), 'Original and restored cover catalog did not load');
+  assert(!report.requests.some(item => /\.mp3(?:\?|$)|lyrics\/[^?]+\.json/.test(item)), 'Original recording or lyrics were requested');
+  check('Six originals and eight restored instrumental studies load without original recordings or lyrics', {ids});
 
   await page.evaluate(() => openTrack('afterglow'));
   await page.goBack(); assert(new URL(page.url()).hash === '#home', 'Back failed');
@@ -231,8 +231,8 @@ try {
   check('Cooperating browser tabs hand off playback ownership');
   await page.goto(url + '#track/01-babydoll', {waitUntil:'networkidle'});
   await page.waitForFunction(() => !!tracks[0]?.rights);
-  assert(await page.locator('#homeView').isVisible(), 'Withheld legacy track link leaves an empty detail page');
-  check('Older withheld-track links return to the available catalog');
+  assert(await page.locator('#trackView').isVisible() && await page.locator('.detail-play').count() === 1, 'Restored Babydoll link does not open its playable detail');
+  check('Restored Babydoll deep link opens the cover arrangement');
   assert(!report.errors.length, report.errors.join('\n'));
   report.status = 'PASSED';
 } catch (error) {

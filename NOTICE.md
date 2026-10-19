@@ -19,3 +19,8 @@ Copyright (c) 2026 Lucide Icons and Contributors, ISC License. Feather-derived
 icons retain Copyright (c) 2013-present Cole Bemis, MIT License. Full upstream
 notices are in licenses/Lucide-LICENSE.txt; exact package integrity and per-icon
 hashes are recorded in assets/icons/lucide-provenance.json.
+
+Eight existing instrumental cover studies restored at the owner's request on
+19 October 2026. Original song credits, review limits and reserved composition
+rights are recorded in COVER_STUDIES.md. They are synthesized arrangements, not
+the artist recordings; they are not represented as project-original compositions.

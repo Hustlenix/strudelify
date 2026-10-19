@@ -10,7 +10,7 @@ const fixture={kind:'actual manually submitted original listening feedback',publ
   personally_performed:true,build:manifest.commit,dirty:false,device_type:'emulated',physical_device:'no',
   reviewer:'AUTOMATED SCHEMA FIXTURE; NOT HUMAN FEEDBACK',device:'AUTOMATED',usability:'AUTOMATED',
   tasks:TASK_NAMES.map(name=>({name,result:'not-tested'})),
-  tracks:catalog.map(row=>({id:row.id,score_sha256:manifest.files.find(f=>f.path==='tracks/'+row.id+'.strudel').sha256,
+  tracks:catalog.map(row=>({id:row.id,score_sha256:manifest.files.find(f=>f.path==='tracks/'+row.codeUrl.replace(/^\.\//,'')).sha256,
     decision:'unanswered',listened_complete:false,observations:'AUTOMATED FIXTURE'}))};
 assert.equal(validateReview(fixture,manifest).publication_approved,false);
 for(const mutation of [

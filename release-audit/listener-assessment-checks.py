@@ -15,7 +15,7 @@ fixture={'receipt':'SYNTHETIC-TEST-ONLY','publication_approved':False,'recorded_
     'device_type':'phone','physical_device':'yes','device':'SYNTHETIC PHONE FIXTURE',
     'reviewer':'SYNTHETIC FIXTURE, NOT A LISTENER','usability':'SYNTHETIC',
     'tasks':[{'name':name,'result':'passed'} for name in TASK_NAMES],
-    'tracks':[{'id':row['id'],'score_sha256':next(f['sha256'] for f in manifest['files'] if f['path']=='tracks/'+row['id']+'.strudel'),
+    'tracks':[{'id':row['id'],'score_sha256':next(f['sha256'] for f in manifest['files'] if f['path']=='tracks/'+row['codeUrl'].removeprefix('./')),
         'listened_complete':True,'decision':'yes','observations':'SYNTHETIC; NOT HUMAN FEEDBACK'} for row in catalog]}}
 
 def check(value):
