@@ -32,6 +32,8 @@ const state = {
   recent: readStorage('strudelify-recent', []),
   libraryFilter: 'all',
   groupFilter: '',
+  catalogFilter: 'all',
+  catalogSort: 'recommended',
   toastTimer: 0,
 };
 const transport = new MusicLibrary.Queue();
@@ -39,6 +41,12 @@ let playlists = MusicLibrary.playlists();
 let selectedPlaylist = null;
 let playlistDialogMode = null;
 let playlistDialogTrack = null;
+let editorSession = null;
+let editorRevision = 0;
+let draftTimer = 0;
+let pendingImport = null;
+let importRevision = 0;
+const volatileDrafts = new Map();
 let enginePromise;
 let coverSamplesPromise;
 let activeRepl;
@@ -70,12 +78,12 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
 function readStorage(key, fallback) {
-  try { const value = JSON.parse(localStorage.getItem(key)); return Array.isArray(value) ? value : fallback; }
+  try { const value = WorkspaceStorage.read(key, fallback); return Array.isArray(value) ? value : fallback; }
   catch { return fallback; }
 }
 function saveStorage(key, value) {
-  try { localStorage.setItem(key, JSON.stringify(value)); return true; }
-  catch { showToast('Browser storage is full; this change could not be saved.'); return false; }
+  try { WorkspaceStorage.write(key, value); return true; }
+  catch { showToast('This browser could not save the change. Export a backup to keep your work.'); return false; }
 }
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]);
@@ -92,6 +100,19 @@ function showToast(message) {
   toast.classList.add('visible');
   clearTimeout(state.toastTimer);
   state.toastTimer = setTimeout(() => toast.classList.remove('visible'), 2600);
+}
+function formatTime(seconds) {
+  const time=Math.max(0,Math.floor(Number(seconds)||0));
+  return `${Math.floor(time/60)}:${String(time%60).padStart(2,'0')}`;
+}
+function renderProgress(seconds=null) {
+  const duration=playbackDuration || state.current?.durationSeconds || 0;
+  const position=seconds==null ? ((state.playing||state.paused) && window.getAudioContext ? Math.max(0,window.getAudioContext().currentTime-playbackStartedAt) : 0) : Math.max(0,seconds);
+  $('#elapsedTime').textContent=formatTime(position);
+  $('#totalTime').textContent=duration>0?formatTime(duration):state.current?'LIVE':'—';
+  $('#playbackProgress').max=duration>0?duration:1;
+  $('#playbackProgress').value=duration>0?Math.min(position,duration):0;
+  $('#playbackProgress').setAttribute('aria-valuetext',duration>0?`${formatTime(position)} of ${formatTime(duration)}`:'Open-ended live pattern');
 }
 function setStatus(message, playing = state.playing) {
   $('#playerStatus').textContent = message;
@@ -351,6 +372,7 @@ function renderPlayer() {
   $('#queueShuffleButton').setAttribute('aria-pressed',String(transport.shuffle));
   $('#queueRepeatButton').textContent = `Repeat ${transport.repeat==='context'?'collection':transport.repeat}`;
   syncPlayButtons();
+  renderProgress();
 }
 function renderPlaylistNav() {
   const items = [{ name: 'All patterns', filter: '', palette: 1 }, ...groups.map(g => ({...g, filter:g.name})), {name:'Liked tracks', liked:true, palette:3}];
@@ -439,6 +461,7 @@ async function loadLyrics(track) {
 }
 function updateLyricsPosition() {
   const seconds = (state.playing || state.paused) && window.getAudioContext ? Math.max(0,window.getAudioContext().currentTime-playbackStartedAt) : -1;
+  renderProgress(seconds);
   if (state.playing && playbackDuration > 0 && seconds >= playbackDuration + 1) {
     playbackDuration = 0;
     if (previewing) endEditorPreview(); else advancePlayback(true);
@@ -468,7 +491,13 @@ function searchResults(query = '', group = '') {
 }
 function renderSearch() {
   const query = $('#searchPageInput').value;
-  const result = searchResults(query, state.groupFilter);
+  let result = searchResults(query, state.groupFilter);
+  if(state.catalogFilter==='covers')result=result.filter(t=>t.cover);
+  if(state.catalogFilter==='originals')result=result.filter(t=>!t.cover&&!t.created);
+  if(state.catalogFilter==='created')result=result.filter(t=>t.created);
+  if(state.catalogSort==='title')result.sort((a,b)=>a.title.localeCompare(b.title));
+  if(state.catalogSort==='tempo')result.sort((a,b)=>(a.bpm||parseFloat(a.loop)||Infinity)-(b.bpm||parseFloat(b.loop)||Infinity));
+  if(state.catalogSort==='duration')result.sort((a,b)=>(a.durationSeconds||Infinity)-(b.durationSeconds||Infinity));
   $('#searchTrackList').innerHTML = result.map(cardMarkup).join('');
   $('#emptySearch').classList.toggle('hidden', result.length > 0);
   $('#resultCount').textContent = `${result.length} ${result.length === 1 ? 'pattern' : 'patterns'}`;
@@ -481,6 +510,7 @@ function renderLibrary() {
   $('#libraryTrackList').innerHTML = result.map(cardMarkup).join('');
   $('#libraryPlaylists').innerHTML = playlists.map(p=>`<button class="saved-playlist" data-open-playlist="${escapeHtml(p.id)}"><span class="playlist-placeholder">${icon('book')}</span><strong>${escapeHtml(p.name)}</strong><small>${p.entries.length} tracks · Saved on this device</small></button>`).join('');
   $('#emptyLibrary').classList.toggle('hidden', result.length > 0);
+  renderDraftBanner();
 }
 function renderAllLists() {
   renderHome();
@@ -533,6 +563,10 @@ async function openTrack(id, push = true) {
   reportLink.rel = 'noreferrer';
   reportLink.title = 'Opens a public GitHub report; sign-in required to submit';
   $('.detail-actions').append(reportLink);
+  const studioButton=document.createElement('button');
+  studioButton.className='button button-quiet';studioButton.dataset.action='studio';studioButton.dataset.trackId=track.id;
+  studioButton.textContent=track.created?'Edit in Studio':'Remix in Studio';
+  $('.detail-actions').append(studioButton);
   try { const code=await getCode(track); if (revision===detailRevision) $('#detailCode').textContent=code; }
   catch (error) { if (revision===detailRevision) $('#detailCode').textContent=error.message; }
 }
@@ -560,14 +594,168 @@ function playRandom(group = '') {
   const choice = (other.length ? other : candidates)[Math.floor(Math.random() * (other.length || candidates.length))];
   startCollection(candidates.map(t=>MusicLibrary.entry(t.id)), choice.id, group || 'All patterns');
 }
-function openEditor(track = null) {
-  $('#editorTitle').value = track?.title || '';
-  $('#editorArtist').value = track?.artist || '';
-  $('#editorCode').value = track?.code || 'setcps(0.5)\n\n$: note("c3 e3 g3 b3").s("triangle").slow(2).gain(.24).room(.4)';
-  $('#editorError').classList.add('hidden');
-  $('#editorDialog').showModal();
-  $('#editorTitle').focus();
+function studioDrafts() { return readStorage('strudelify-studio-drafts-v1',[]); }
+function availableDrafts() {
+  const drafts=new Map(studioDrafts().map(d=>[d.id,d]));
+  for(const [id,draft] of volatileDrafts)drafts.set(id,draft);
+  return [...drafts.values()].sort((a,b)=>String(a.modifiedAt).localeCompare(String(b.modifiedAt)));
 }
+function studioFields() { return {title:$('#editorTitle').value,artist:$('#editorArtist').value,code:$('#editorCode').value}; }
+function renderDraftBanner() {
+  const drafts=availableDrafts();
+  $('#draftBanner').classList.toggle('hidden',!drafts.length);
+  $('#draftBannerTitle').textContent=drafts.length?`${drafts.length} ${drafts.length===1?'draft':'drafts'} on this device · ${drafts.at(-1).title||'Untitled pattern'}`:'';
+  $('#studioDraftList').innerHTML=[...drafts].reverse().map(d=>`<button type="button" class="studio-version" data-open-draft="${escapeHtml(d.id)}" aria-current="${d.id===editorSession?.draftId}"><strong>${escapeHtml(d.title||'Untitled pattern')}</strong><span>${volatileDrafts.has(d.id)?'Not saved · keep this tab open':'Resume draft'}</span></button>`).join('')||'<p class="empty-history">No unfinished drafts.</p>';
+}
+function updateCodeMeta() {
+  const code=$('#editorCode').value;
+  $('#editorLineCount').textContent=`${code.split('\n').length} lines · ${code.length.toLocaleString()} characters`;
+}
+function persistStudioDraft() {
+  clearTimeout(draftTimer);
+  if(!editorSession || editorSession.loading)return;
+  const fields=studioFields(), base=editorSession.base;
+  const changed=!base || ['title','artist','code'].some(key=>fields[key]!==base[key]);
+  const drafts=studioDrafts().filter(d=>d.id!==editorSession.draftId);
+  const draft={id:editorSession.draftId,targetId:editorSession.targetId,sourceId:editorSession.sourceId,
+    ...fields,modifiedAt:new Date().toISOString()};
+  if(changed)drafts.push(draft);
+  try {
+    if(drafts.length>100)throw new Error('Draft limit reached. Save or export your drafts.');
+    WorkspaceStorage.write('strudelify-studio-drafts-v1',drafts);
+    volatileDrafts.delete(draft.id);
+    $('#studioDraftStatus').textContent=changed?'Draft saved on this device':'All changes saved';
+    $('#studioDraftStatus').classList.remove('save-failed');
+  } catch {
+    if(changed)volatileDrafts.set(draft.id,draft);
+    $('#studioDraftStatus').textContent='Could not save this draft. Download the pattern before leaving.';
+    $('#studioDraftStatus').classList.add('save-failed');
+  }
+  renderDraftBanner();
+}
+function renderStudioVersions() {
+  const versions=editorSession?.targetId?WorkspaceStorage.read('strudelify-track-versions-v1',{})[editorSession.targetId]||[]:[];
+  $('#studioVersionList').innerHTML=[...versions].reverse().map((v,i)=>{
+    const date=new Date(v.createdAt);
+    return `<button type="button" class="studio-version" data-load-version="${escapeHtml(v.id)}"><strong>${i===0?'Latest save':escapeHtml(v.title)}</strong><small>${Number.isNaN(date.getTime())?'Previous saved pattern':escapeHtml(date.toLocaleString())}</small><span>Open as draft</span></button>`;
+  }).join('') || '<p class="empty-history">Save this pattern to start its version history.</p>';
+}
+async function openEditor(track = null, resumedDraft = null) {
+  if($('#editorDialog').open)persistStudioDraft();
+  if(state.current?.preview)await endEditorPreview();
+  const revision=++editorRevision;
+  const target=track?.created?track:null;
+  const draftId=resumedDraft?.id || (target?'edit-'+target.id:track?'remix-'+track.id:'new');
+  const draft=resumedDraft || volatileDrafts.get(draftId) || studioDrafts().find(d=>d.id===draftId);
+  const sourceId=draft?.sourceId || (track&&!target?track.id:target?.forkedFrom)||null;
+  const targetId=draft?.targetId || target?.id || null;
+  const saved=state.custom.find(t=>t.id===targetId);
+  editorSession={draftId,targetId:saved?.id||null,sourceId,base:saved?{title:saved.title,artist:saved.artist,code:saved.code}:null,loading:true};
+  $('#studioHeading').textContent=saved?'Edit your pattern':sourceId?'Remix in Studio':'Create a pattern';
+  $('#studioSource').textContent=sourceId?`Based on ${getTrack(sourceId)?.title||sourceId} · Your copy stays local`:'Compose, preview and save your own Strudel pattern.';
+  $('#editorTitle').value=draft?.title ?? saved?.title ?? (track?`${track.title} (remix)`:'');
+  $('#editorArtist').value=draft?.artist ?? saved?.artist ?? (track?'You':'');
+  $('#editorCode').value=draft?.code ?? saved?.code ?? track?.code ?? (track?'Loading source…':'setcps(0.5)\n\n$: note("c3 e3 g3 b3").s("triangle").slow(2).gain(.24).room(.4)');
+  $('#editorError').classList.add('hidden');
+  if(!$('#editorDialog').open)$('#editorDialog').showModal();
+  $('#editorPreviewButton').disabled=!!(track&&!draft&&!track.code);
+  $('#saveTrackButton').disabled=$('#editorPreviewButton').disabled;
+  $('#editorCode').disabled=$('#editorPreviewButton').disabled;
+  $('#saveTrackButton').textContent=saved?'Save changes':'Save track';
+  renderStudioVersions();updateCodeMeta();
+  try {
+    if(track&&!draft&&!track.code){
+      const code=await getCode(track);
+      if(revision!==editorRevision||!$('#editorDialog').open)return;
+      $('#editorCode').value=code;
+    }
+    if(revision!==editorRevision)return;
+    editorSession.loading=false;
+    $('#editorPreviewButton').disabled=false;$('#saveTrackButton').disabled=false;$('#editorCode').disabled=false;
+    updateCodeMeta();persistStudioDraft();$('#editorTitle').focus();
+  } catch(error) {
+    if(revision!==editorRevision)return;
+    $('#editorError').textContent=error.message;$('#editorError').classList.remove('hidden');
+  }
+}
+function downloadText(name,text,type='text/plain') {
+  const url=URL.createObjectURL(new Blob([text],{type})), link=document.createElement('a');
+  link.href=url;link.download=name;document.body.append(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function openLibraryBackup() {
+  const drafts=studioDrafts();
+  $('#libraryBackupSummary').textContent=`${state.custom.length} patterns · ${playlists.length} playlists · ${state.liked.length} likes · ${drafts.length} drafts`;
+  $('#libraryImportFile').value='';pendingImport=null;++importRevision;
+  $('#importPreview').classList.add('hidden');$('#confirmImportButton').disabled=true;$('#backupStatus').textContent='';
+  $('#libraryBackupDialog').showModal();
+}
+
+for(const id of ['editorTitle','editorArtist','editorCode'])$('#'+id).addEventListener('input',()=>{
+  updateCodeMeta();$('#studioDraftStatus').textContent='Saving draft…';clearTimeout(draftTimer);draftTimer=setTimeout(persistStudioDraft,350);
+});
+$('#editorCode').addEventListener('keydown',event=>{
+  if(event.key==='Tab'&&!event.shiftKey){event.preventDefault();const el=event.target;el.setRangeText('  ',el.selectionStart,el.selectionEnd,'end');el.dispatchEvent(new Event('input'));}
+});
+$('#editorDialog').addEventListener('keydown',event=>{
+  if((event.ctrlKey||event.metaKey)&&event.key==='Enter'){event.preventDefault();$('#editorPreviewButton').click();}
+  if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='s'){event.preventDefault();if(!$('#saveTrackButton').disabled)$('#editorForm').requestSubmit();}
+});
+$('#editorStopButton').addEventListener('click',()=>{if(state.current?.preview)endEditorPreview();});
+$('#downloadPatternButton').addEventListener('click',()=>{
+  const name=$('#editorTitle').value.trim().replace(/[^a-zA-Z0-9_-]+/g,'-').slice(0,80)||'untitled-pattern';
+  downloadText(name+'.strudel',$('#editorCode').value);
+});
+$('#studioVersionList').addEventListener('click',event=>{
+  const button=event.target.closest('[data-load-version]');if(!button||!editorSession?.targetId)return;
+  const versions=WorkspaceStorage.read('strudelify-track-versions-v1',{})[editorSession.targetId]||[];
+  const version=versions.find(v=>v.id===button.dataset.loadVersion);if(!version)return;
+  if(state.current?.preview)endEditorPreview();
+  for(const [key,id] of [['title','editorTitle'],['artist','editorArtist'],['code','editorCode']])$('#'+id).value=version[key];
+  updateCodeMeta();persistStudioDraft();showToast('Version opened as a draft. Save to keep it.');
+});
+$('#resumeStudioDraftButton').addEventListener('click',()=>{
+  const draft=availableDrafts().at(-1);
+  if(draft)openEditor(null,draft);
+});
+$('#studioDraftList').addEventListener('click',event=>{
+  const button=event.target.closest('[data-open-draft]');if(!button)return;
+  if(button.dataset.openDraft===editorSession?.draftId){$('#editorCode').focus();return;}
+  const draft=availableDrafts().find(d=>d.id===button.dataset.openDraft);
+  if(draft)openEditor(null,draft);
+});
+$('#libraryBackupButton').addEventListener('click',openLibraryBackup);
+$('#exportLibraryButton').addEventListener('click',()=>{
+  try { downloadText('strudelify-library-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(WorkspaceStorage.backup(),null,2),'application/json');$('#backupStatus').textContent='Backup downloaded. Keep it somewhere safe.'; }
+  catch(error){$('#backupStatus').textContent=error.message||'The backup could not be created.';}
+});
+$('#libraryImportFile').addEventListener('change',async event=>{
+  const revision=++importRevision;pendingImport=null;$('#confirmImportButton').disabled=true;$('#importPreview').classList.add('hidden');
+  const file=event.target.files[0];if(!file)return;
+  try {
+    if(file.size>5*1024*1024)throw new Error('Choose a backup smaller than 5 MB.');
+    const data=JSON.parse(await file.text());
+    if(revision!==importRevision||!$('#libraryBackupDialog').open)return;
+    const {stats}=WorkspaceStorage.planImport(data,tracks.map(t=>t.id));
+    pendingImport=data;
+    $('#importSummary').textContent=`Add ${stats.tracks} patterns, ${stats.playlists} playlists, ${stats.likes} likes, ${stats.drafts} drafts and ${stats.versions} saved versions. ${stats.conflicts} conflicts kept as separate copies. ${stats.versionsSkipped?`${stats.versionsSkipped} older imported versions exceed the 20-version limit and will be skipped. `:''}Current playback and preferences stay as they are.`;
+    $('#importPreview').classList.remove('hidden');$('#confirmImportButton').disabled=false;$('#backupStatus').textContent='Nothing has changed yet.';
+  } catch(error){if(revision===importRevision)$('#backupStatus').textContent=error.message||'This backup could not be read.';}
+});
+$('#confirmImportButton').addEventListener('click',()=>{
+  if(!pendingImport)return;
+  try {
+    WorkspaceStorage.importBackup(pendingImport,tracks.map(t=>t.id));
+    state.custom=readStorage('strudelify-custom',[]);state.liked=readStorage('strudelify-liked',[]);playlists=MusicLibrary.playlists();
+    renderPlaylistNav();renderAllLists();renderPlayer();
+    pendingImport=null;$('#confirmImportButton').disabled=true;$('#backupStatus').textContent='Library merged. Imported patterns are ready to open in Studio.';
+    showToast('Library merged without replacing your saved patterns');
+  } catch(error){$('#backupStatus').textContent=error.message||'Storage is full. Your library was not changed.';}
+});
+window.addEventListener('beforeunload',event=>{
+  if($('#editorDialog').open)persistStudioDraft();
+  if(volatileDrafts.size){event.preventDefault();event.returnValue='';}
+});
 
 function syncPlayButtons() {
   $$('[data-action="play"]').forEach(button => {
@@ -643,7 +831,7 @@ let optionsTrigger;
 function openTrackOptions(track, trigger) {
   optionsTrigger=trigger;
   $('#trackOptionsTitle').textContent=track.title;
-  $('#trackOptionsBody').innerHTML=`<button class="playlist-choice" data-add-queue="${escapeHtml(track.id)}">${icon('queue')} Add to queue</button><button class="playlist-choice" data-add-playlist-track="${escapeHtml(track.id)}">${icon('plus')} Add to playlist</button><button class="playlist-choice" data-option-code="${escapeHtml(track.id)}">${icon('code')} View code</button>`;
+  $('#trackOptionsBody').innerHTML=`<button class="playlist-choice" data-add-queue="${escapeHtml(track.id)}">${icon('queue')} Add to queue</button><button class="playlist-choice" data-add-playlist-track="${escapeHtml(track.id)}">${icon('plus')} Add to playlist</button><button class="playlist-choice" data-option-studio="${escapeHtml(track.id)}">${icon('code')} ${track.created?'Edit':'Remix'} in Studio</button><button class="playlist-choice" data-option-code="${escapeHtml(track.id)}">${icon('code')} View code</button>`;
   $('#trackOptionsDialog').showModal();
 }
 
@@ -670,6 +858,7 @@ document.addEventListener('click',event=>{
   }
   if (d.addPlaylistTrack) { $('#trackOptionsDialog').close(); openPlaylistDialog('add',getTrack(d.addPlaylistTrack)); }
   if (d.optionCode) { $('#trackOptionsDialog').close(); openTrack(d.optionCode).then(()=>$('#patternCode').open=true); }
+  if (d.optionStudio) { $('#trackOptionsDialog').close(); openEditor(getTrack(d.optionStudio)); }
   const p=playlists.find(p=>p.id===selectedPlaylist);
   if (p && ('playPlaylist' in d || d.playEntry)) {
     const entries=p.entries.filter(e=>getTrack(e.trackId));
@@ -718,6 +907,7 @@ function handleAction(event) {
   }
   else if (actionTarget.dataset.action === 'open' && track) openTrack(track.id);
   else if (actionTarget.dataset.action === 'copy' && track) copyTrackCode(track);
+  else if (actionTarget.dataset.action === 'studio' && track) openEditor(track);
 }
 
 document.addEventListener('click', event => {
@@ -790,7 +980,7 @@ $('#codeButton').addEventListener('click', async () => { if(state.current) { awa
 $('#trackBackButton').addEventListener('click', () => setView('search'));
 $('#backButton').addEventListener('click', () => history.back());
 $('#forwardButton').addEventListener('click', () => history.forward());
-$('#profileButton').addEventListener('click', () => showToast('Your tracks and likes are saved only in this browser.'));
+$('#profileButton').addEventListener('click', openLibraryBackup);
 $('#volumeButton').addEventListener('click', () => showToast('Adjust the volume with your device controls.'));
 $$('[data-library-filter]').forEach(button => button.addEventListener('click', () => {
   state.libraryFilter = button.dataset.libraryFilter;
@@ -805,26 +995,60 @@ $('#editorPreviewButton').addEventListener('click', async () => {
   catch (error) { $('#editorError').textContent = error?.message || 'This pattern could not be played.'; $('#editorError').classList.remove('hidden'); }
   finally { button.disabled = false; }
 });
-$('#editorForm').addEventListener('submit', event => {
+$('#editorForm').addEventListener('submit', async event => {
   event.preventDefault();
   const title = $('#editorTitle').value.trim();
   const artist = $('#editorArtist').value.trim() || 'You';
   const code = $('#editorCode').value.trim();
   if (!title || !code) return;
-  const track = { id: `custom-${Date.now()}`, title, artist, mood: 'Your pattern', loop: '∞ loop', code, created: true, palette: 5 };
-  const custom = [track, ...state.custom];
-  if (saveStorage('strudelify-custom', custom)) {
+  if(!editorSession || editorSession.loading)return;
+  clearTimeout(draftTimer);
+  const existing=state.custom.find(t=>t.id===editorSession.targetId);
+  if(existing && existing.title===title && existing.artist===artist && existing.code===code){
+    persistStudioDraft();showToast('This version is already saved');return;
+  }
+  const track = { ...(existing||{}),id:existing?.id||`custom-${crypto.randomUUID()}`, title, artist, mood: 'Your pattern', loop: '∞ loop', code, created: true, cover:false,palette: 5,
+    ...(editorSession.sourceId?{forkedFrom:editorSession.sourceId}:{}) };
+  const declaredDuration=Number(code.match(/const (?:endSeconds|sourceDuration)\s*=\s*([\d.]+)/)?.[1]);
+  if(declaredDuration>0)track.durationSeconds=declaredDuration;else delete track.durationSeconds;
+  const custom = existing?state.custom.map(t=>t.id===track.id?track:t):[track,...state.custom];
+  const histories=WorkspaceStorage.read('strudelify-track-versions-v1',{});
+  const versions=histories[track.id]||[];
+  if(existing&&!versions.length)versions.push({id:crypto.randomUUID(),title:existing.title,artist:existing.artist,code:existing.code,createdAt:existing.createdAt||''});
+  versions.push({id:crypto.randomUUID(),title,artist,code,createdAt:new Date().toISOString()});
+  histories[track.id]=versions.slice(-20);
+  try {
+    if(custom.length>300)throw new Error('Pattern limit reached. Export your library before adding more.');
+    WorkspaceStorage.update({'strudelify-custom':custom,'strudelify-track-versions-v1':histories,
+      'strudelify-studio-drafts-v1':studioDrafts().filter(d=>d.id!==editorSession.draftId)});
     state.custom = custom;
-    if (state.current?.preview) endEditorPreview();
-    $('#editorDialog').close('save'); renderPlaylistNav(); renderAllLists();
-    showToast('Saved to your local library');
+    volatileDrafts.delete(editorSession.draftId);
+    editorSession={...editorSession,draftId:'edit-'+track.id,targetId:track.id,base:{title,artist,code}};
+    $('#editorTitle').value=title;$('#editorArtist').value=artist;$('#editorCode').value=code;
+    $('#studioHeading').textContent='Edit your pattern';$('#saveTrackButton').textContent='Save changes';
+    $('#studioDraftStatus').textContent='Saved a new version on this device';$('#studioDraftStatus').classList.remove('save-failed');
+    if (state.current?.preview) await endEditorPreview();
+    if(existing && state.current?.id===track.id){
+      if(existing.code!==code)await stopTrack();
+      if(state.current?.id===track.id)state.current=track;
+    }
+    codeCache.delete(track.id);renderPlaylistNav();renderAllLists();renderStudioVersions();renderPlayer();
+    showToast(existing?'Changes saved as a new version':'Saved to your local library');
     openTrack(track.id);
+  } catch(error) {
+    $('#editorError').textContent=error.message||'Could not save. Download the pattern to keep a copy.';$('#editorError').classList.remove('hidden');
   }
 });
 $('#editorDialog').addEventListener('close', () => {
+  persistStudioDraft();++editorRevision;
   if (state.current?.preview) endEditorPreview();
 });
-window.addEventListener('pagehide', () => stopTrack());
+window.addEventListener('pagehide', () => {if($('#editorDialog').open)persistStudioDraft();stopTrack();});
+$$('[data-catalog-filter]').forEach(button=>button.addEventListener('click',()=>{
+  state.catalogFilter=button.dataset.catalogFilter;
+  $$('[data-catalog-filter]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));});renderSearch();
+}));
+$('#catalogSort').addEventListener('change',event=>{state.catalogSort=event.target.value;renderSearch();});
 function routeFromLocation() {
   if (location.hash.startsWith('#playlist/')) {
     try { openPlaylist(decodeURIComponent(location.hash.slice(10)),false); }

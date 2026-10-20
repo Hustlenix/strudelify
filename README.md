@@ -29,8 +29,30 @@ and [asset ledger](THIRD_PARTY_ASSETS.md) for the adoption plan and provenance.
 
 The collection upgrade adds saved local playlists with descriptions, duplicate entries,
 individual removal, and keyboard-accessible up/down ordering. Create a playlist in Your
-Library; use a track's options button to add it to a playlist or queue. Create a track
-still opens the Strudel editor.
+Library; use a track's options button to add it to a playlist or queue.
+
+### Studio and portable library · 20 October
+
+Open **Studio** from Your library, or **Remix in Studio** on any track. Public scores
+open as local copies. Your own patterns can be edited in place, with the last 20 saved
+versions available to reopen as drafts. Drafts autosave on this device, including when
+switching between patterns. Download an individual `.strudel` file at any time.
+Ctrl/Command+Enter previews; Ctrl/Command+S saves. Preview and Stop remain explicit.
+
+**Library backup** downloads patterns, versions, drafts, playlists and likes as JSON.
+Import previews a merge before writing anything; conflicting items become separate
+copies, and repeat imports reuse matching conflict copies. No imported code runs during
+import. Inspect unfamiliar patterns before playing them. The current queue and playback
+preferences stay on the receiving device. There is no account or automatic cloud sync.
+Keep a downloaded backup: browser storage can be cleared or fill up.
+
+Search now filters cover studies, originals and your patterns, with title, tempo and
+duration sorting. Playback shows elapsed audio time and the declared duration of finite
+scores; open-ended patterns show LIVE. This is a position display, not a seek control.
+
+See the [upgrade roadmap and implementation record](docs/upgrade-roadmap.md) for the
+release scope, evidence and remaining work. This release does not change the compositions
+or claim that the cover studies are musically approved.
 
 The play queue separates Now playing, manually added tracks, and the remaining collection.
 Manual tracks play first. Editing or deleting a playlist does not change the active
@@ -39,7 +61,7 @@ session-only. Repeat cycles between off, collection, and one track. Finite score
 automatically, while open-ended patterns continue until you choose Next or Stop.
 
 Playlists, likes, and custom patterns stay on this device; there is no account or cloud
-sync. The six public scores and the Strudel runtime remain unchanged by this upgrade.
+sync. All fourteen public scores and the Strudel runtime remain unchanged by this upgrade.
 
 The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their *should not copy* rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)
 
@@ -60,8 +82,9 @@ The original six-track beta contains six original instrumentals. Each has finite
 and measured level balance. All six have complete technical audio captures; subjective listening
 acceptance and a physical phone test have not been recorded. The owner delegated shipping the
 technical beta without requiring the review form. Catalog review metadata retains those limits.
-Commercial-song study scores, lyric transcripts and supplied recordings are excluded from the
-public artifact. All prior music work remains preserved in the repository's separate review work.
+The subsequent catalog restoration includes eight synthesized study scores. Lyric transcripts
+and supplied recordings remain excluded from the public artifact. Prior music work remains
+preserved in the repository's separate review work.
 
 The player has separate Play/Pause/Resume and Stop behavior, mobile transport controls,
 complete actual View code, and links to draft a public GitHub listener report. GitHub sign-in
