@@ -2,6 +2,10 @@
 
 20 October 2026. Public branding remains Hustlenix Music.
 
+Repository layout: website source is in `web/`; design, provenance and licensing notes
+are in `docs/`; build/review tools remain in `release-audit/`. Release artifacts keep
+their flat public paths (`index.html`, `tracks/`, `assets/`) so existing URLs still work.
+
 ## Direction
 
 Make discovering a pattern, changing it, and keeping the result one coherent product.

@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib, json
 import numpy as np
 from scipy.ndimage import median_filter
+from release_policy import source_path
 
 ROOT = Path(__file__).resolve().parents[1]
 MUSIC = ROOT.parent / 'strudelify-music/music-audit'
@@ -14,7 +15,7 @@ def main():
     target = OUT / '01-babydoll-phrasing.strudel'
     if target.exists():
         raise SystemExit('Experiment already exists; preserve it before another bounded attempt')
-    source = ROOT / 'tracks/covers/01-babydoll.strudel'
+    source = source_path(ROOT,'tracks/covers/01-babydoll.strudel')
     original = source.read_text(encoding='utf-8')
     data = np.load(MUSIC / 'artifacts/recovery/01-babydoll-vocal-frames.npz')
     score = json.loads((MUSIC / 'reports/recovery/01-babydoll-score.json').read_text())

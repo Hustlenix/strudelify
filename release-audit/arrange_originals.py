@@ -5,6 +5,7 @@ and a fading ending. This is arrangement work, not a human listening approval.
 """
 from pathlib import Path
 import hashlib, json, re, subprocess
+from release_policy import source_path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '499cf03716104ff179b1c58906ed6e3f4d1a53f7'
@@ -21,10 +22,10 @@ FORMS = {
 def main():
     report = {'baseline_commit': BASE, 'change': 'Finite form and reduced sections; original note strings, instruments and effects retained',
               'human_listening_approval': False, 'tracks': []}
-    catalog = json.loads((ROOT/'tracks/catalog.json').read_text())
+    catalog = json.loads(source_path(ROOT,'tracks/catalog.json').read_text())
     for row in catalog:
         name = row['id']
-        path = ROOT/'tracks'/f'{name}.strudel'
+        path = source_path(ROOT,f'tracks/{name}.strudel')
         old = subprocess.check_output(['rtk','proxy','git','show',f'{BASE}:tracks/{name}.strudel'],cwd=ROOT).decode()
         if path.read_text().replace('\r\n','\n') != old.replace('\r\n','\n'):
             raise SystemExit(f'Preserve or review existing changes before arranging {name}')
@@ -61,7 +62,7 @@ const arranged = (pattern, windows) => pattern
             'score_sha256':hashlib.sha256(code.encode()).hexdigest(),
             'reason':'All three source patterns repeated forever with no section changes or ending.',
             'not_claimed':'No human listening decision or subjective quality score.'})
-    (ROOT/'tracks/catalog.json').write_text(json.dumps(catalog,indent=2)+'\n',encoding='utf-8',newline='\n')
+    source_path(ROOT,'tracks/catalog.json').write_text(json.dumps(catalog,indent=2)+'\n',encoding='utf-8',newline='\n')
     (ROOT/'release-audit/reports/original-arrangements.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(report,indent=2))
 

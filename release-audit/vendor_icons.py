@@ -11,6 +11,7 @@ import json
 import tarfile
 import urllib.request
 import xml.etree.ElementTree as ET
+from release_policy import source_path
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '1.59.0'
@@ -49,11 +50,11 @@ def main():
             geometry = ''.join(ET.tostring(child, encoding='unicode').replace(' xmlns="http://www.w3.org/2000/svg"', '') for child in svg)
             symbols.append(f'<symbol id="i-{target}" viewBox="0 0 24 24">{geometry}</symbol>')
             sources.append({'symbol':f'i-{target}', 'source':member, 'sha256':hashlib.sha256(original).hexdigest()})
-    folder = ROOT/'assets/icons'
+    folder = source_path(ROOT,'assets/icons')
     folder.mkdir(parents=True, exist_ok=True)
     sprite = '<svg xmlns="http://www.w3.org/2000/svg">\n' + '\n'.join(symbols) + '\n</svg>\n'
     (folder/'lucide.svg').write_text(sprite, encoding='utf-8', newline='\n')
-    (ROOT/'licenses/Lucide-LICENSE.txt').write_bytes(license_bytes)
+    source_path(ROOT,'licenses/Lucide-LICENSE.txt').write_bytes(license_bytes)
     receipt = {'package':'lucide-static', 'version':VERSION, 'source':URL, 'integrity':INTEGRITY,
         'retrieved_on':'2026-10-19', 'license':'ISC AND MIT (Feather-derived icons)',
         'license_source':'package/LICENSE', 'license_sha256':hashlib.sha256(license_bytes).hexdigest(),

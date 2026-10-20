@@ -2,13 +2,14 @@
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 import hashlib, json, subprocess
+from release_policy import source_path
 
 ROOT=Path(__file__).resolve().parents[1]
 FOLDER=ROOT/'release-audit/private/originals-v2'
 
 
 def main():
-    catalog=json.loads((ROOT/'tracks/catalog.json').read_text())
+    catalog=json.loads(source_path(ROOT,'tracks/catalog.json').read_text())
     def encode(row):
         source=FOLDER/(row['id']+'.wav')
         target=FOLDER/(row['id']+'.mp3')

@@ -18,7 +18,17 @@ Used strudel for this also used website hooktheory and sheet music for recreatin
 This is opensourced, so you can add a music that you like, to expand this website. If you added a track, thanks!
 ## Interface and features
 
-The interface follows the measured layout reference in [design.md](design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their should not copy rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)The app itself is released under the repository's MIT license. Demo compositions in tracks/ are original examples for this project.
+The interface follows the measured layout reference in [design.md](https://github.com/Hustlenix/strudelify/blob/main/docs/design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their should not copy rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)The app itself is released under the repository's MIT license. Demo compositions in web/tracks/ are original examples for this project.
+
+## Files
+
+- `web/` — the website, Strudel songs, artwork and dependency notices
+- `docs/` — design notes, music notes and licensing details
+- `release-audit/` — build, review and release tools
+- `.github/` — GitHub workflows
+
+For a local website build: `python release-audit/build_preview.py`, then
+`python -m http.server 8000 --directory release-preview`.
 
 ## Licence
 MIT

@@ -17,9 +17,21 @@ BUILD_SOURCES = ('release-audit/build_preview.py','release-audit/build_release.p
 UPSTREAM = 'cbe7aaacfbf8a51f5f5cf39bf79319f273214e24'
 
 
+def source_path(root, name):
+    """Map stable public URLs to the organized checkout; archives stay flat."""
+    root = Path(root)
+    if not (root/'web/index.html').is_file():
+        return root/name
+    if name in ('COVER_STUDIES.md','LICENSING.md','NOTICE.md','THIRD_PARTY_ASSETS.md','design.md'):
+        return root/'docs'/name
+    if name in ('README.md','LICENSE','COPYING') or name.startswith(('docs/','release-audit/')):
+        return root/name
+    return root/'web'/name
+
+
 def public_files(root):
     root = Path(root)
-    catalog = json.loads((root/'tracks/catalog.json').read_text(encoding='utf-8'))
+    catalog = json.loads(source_path(root,'tracks/catalog.json').read_text(encoding='utf-8'))
     if not isinstance(catalog,list) or not catalog or len(catalog)>len(IDS)+len(COVER_IDS):
         raise ValueError('Empty or oversized release catalog')
     seen=set()
@@ -42,7 +54,7 @@ def public_files(root):
             raise ValueError('Missing provenance declaration')
     # Older approved rollback artifacts predate Studio. A page loading the new module
     # must include both its implementation and the linked release documentation.
-    workspace = set(WORKSPACE_FILES) if re.search(r'<script\b[^>]*\bsrc=["\']workspace\.js(?:[?"\'])', (root/'index.html').read_text(encoding='utf-8')) else set()
+    workspace = set(WORKSPACE_FILES) if re.search(r'<script\b[^>]*\bsrc=["\']workspace\.js(?:[?"\'])', source_path(root,'index.html').read_text(encoding='utf-8')) else set()
     return sorted(set(BASE_FILES)|workspace|{'tracks/'+row['codeUrl'].removeprefix('./') for row in catalog}
                   |{'assets/covers/'+name+'.svg' for name in IDS}
                   |{'tracks/covers/art/'+row['id']+'.svg' for row in catalog if row['id'] in COVER_IDS}

@@ -2,21 +2,12 @@ name: MVP review checks
 on:
   pull_request:
     paths:
-      - 'app.js'
-      - 'library.js'
-      - 'workspace.js'
-      - 'index.html'
-      - 'styles.css'
-      - 'assets/icons/**'
-      - 'licenses/**'
-      - 'tracks/**'
+      - 'web/**'
+      - 'docs/**'
       - 'release-audit/**'
       - '.github/workflows/**'
       - 'LICENSE'
       - 'COPYING'
-      - 'NOTICE.md'
-      - 'LICENSING.md'
-      - 'THIRD_PARTY_ASSETS.md'
   workflow_dispatch:
 permissions:
   contents: read
