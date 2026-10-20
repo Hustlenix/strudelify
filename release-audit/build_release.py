@@ -2,7 +2,7 @@
 from datetime import datetime, timezone
 from pathlib import Path
 import argparse, json, shutil, subprocess, zipfile
-from release_policy import public_files, digest, validate_artifact, BUILD_SOURCES, UPSTREAM
+from release_policy import public_files, source_path, digest, validate_artifact, BUILD_SOURCES, UPSTREAM
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -20,14 +20,16 @@ def main():
     worktree_dirty=bool(subprocess.check_output(git+['status','--porcelain'],cwd=ROOT,text=True).strip())
     changed=[]
     for name in files+list(BUILD_SOURCES):
+        source=source_path(ROOT,name)
+        repository_name=source.relative_to(ROOT).as_posix()
         try:
-            committed=subprocess.check_output(git+['show','HEAD:'+name],cwd=ROOT,stderr=subprocess.DEVNULL)
+            committed=subprocess.check_output(git+['show','HEAD:'+repository_name],cwd=ROOT,stderr=subprocess.DEVNULL)
         except subprocess.CalledProcessError:
             committed=None
-        if committed is None or committed.replace(b'\r\n',b'\n')!=(ROOT/name).read_bytes().replace(b'\r\n',b'\n'):
+        if committed is None or committed.replace(b'\r\n',b'\n')!=source.read_bytes().replace(b'\r\n',b'\n'):
             changed.append(name)
     for name in files:
-        source=ROOT/name
+        source=source_path(ROOT,name)
         if source.is_symlink():
             raise ValueError('No linked sources: '+name)
         target=output/name

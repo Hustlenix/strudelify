@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib, json, subprocess
 from datetime import datetime, timezone
+from release_policy import source_path
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -11,6 +12,8 @@ def main():
     rows = []
     for entry in baseline['files']:
         path = ROOT.parent / entry['repository'] / entry['path']
+        if entry['repository']==ROOT.name:
+            path=source_path(ROOT,entry['path'])
         revised = entry['repository']==ROOT.name and entry['path'] in {f'tracks/{name}.strudel' for name in ('afterglow','greenline','paper-moon','soft-focus','tiny-hours','wide-awake')}
         if revised:
             old=subprocess.check_output(['rtk','proxy','git','show','499cf03716104ff179b1c58906ed6e3f4d1a53f7:'+entry['path']],cwd=ROOT)

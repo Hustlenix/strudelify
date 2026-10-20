@@ -1,6 +1,7 @@
 """Apply measured constant gains only; keep previous complete renders for comparison."""
 from pathlib import Path
 import hashlib, json
+from release_policy import source_path
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -9,7 +10,7 @@ def main():
     measured = json.loads((ROOT/'release-audit/reports/original-audio-quality.json').read_text())
     rows=[]
     for row in measured['tracks']:
-        path=ROOT/'tracks'/f"{row['id']}.strudel"
+        path=source_path(ROOT,f"tracks/{row['id']}.strudel")
         data=path.read_bytes()
         if hashlib.sha256(data).hexdigest()!=row['score_sha256']:
             raise SystemExit('Score changed since measurement: '+row['id'])

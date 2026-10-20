@@ -15,7 +15,7 @@ service, authentication, UI sound, font request or telemetry.
 The Lucide package is pinned at `lucide-static@1.59.0`. Its official npm metadata and
 the actual package LICENSE were inspected on the decision date. The full notice
 includes both ISC and the MIT notice for Feather-derived icons. Both are retained.
-See [the asset ledger](../THIRD_PARTY_ASSETS.md), the committed receipt and rebuild
+See [the asset ledger](THIRD_PARTY_ASSETS.md), the committed receipt and rebuild
 script. Integrity verification authenticates consistency with the pinned receipt;
 it is not a claim that package provenance signatures were independently verified.
 

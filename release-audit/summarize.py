@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib, json, subprocess
 from datetime import datetime, timezone
+from release_policy import source_path
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / 'release-audit/reports'
@@ -16,7 +17,7 @@ def main():
     # Documentation can be refined after a test; runtime payload cannot silently change.
     payload = []
     for name in ['app.js','index.html','styles.css','tracks/catalog.json'] + [f'tracks/{name}.strudel' for name in ['afterglow','greenline','paper-moon','soft-focus','tiny-hours','wide-awake']]:
-        digest = hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
+        digest = hashlib.sha256(source_path(ROOT,name).read_bytes()).hexdigest()
         expected = next(entry['sha256'] for entry in build['files'] if entry['path'] == name)
         assert digest == expected, f'Retest changed runtime payload: {name}'
         payload.append({'path':name, 'sha256':digest})
