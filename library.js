@@ -4,8 +4,7 @@ const MusicLibrary = (() => {
   const uid = () => crypto.randomUUID();
   const entry = trackId => ({id: uid(), trackId});
   function read(key, fallback) {
-    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
-    catch { return fallback; }
+    return WorkspaceStorage.read(key, fallback);
   }
   function playlists() {
     const saved = read('strudelify-playlists-v1', []);

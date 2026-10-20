@@ -4,6 +4,7 @@ on:
     paths:
       - 'app.js'
       - 'library.js'
+      - 'workspace.js'
       - 'index.html'
       - 'styles.css'
       - 'assets/icons/**'
