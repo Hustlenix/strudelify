@@ -7,6 +7,36 @@ from release_policy import public_files, source_path, digest, validate_artifact,
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def committed_blobs(git, revision, repository_names):
+    """Read framed Git blobs once; file bytes may contain arbitrary newlines/NULs."""
+    requests = [(revision + ':' + name).encode('utf-8') for name in repository_names]
+    if any(b'\n' in request or b'\r' in request for request in requests):
+        raise ValueError('Git batch paths must not contain line breaks')
+    result = subprocess.run(git + ['cat-file', '--batch'], cwd=ROOT,
+        input=b''.join(request + b'\n' for request in requests),
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    data, offset, blobs = result.stdout, 0, []
+    for request in requests:
+        end = data.find(b'\n', offset)
+        if end < 0:
+            raise ValueError('Truncated Git batch header')
+        header, offset = data[offset:end], end + 1
+        if header == request + b' missing':
+            blobs.append(None)
+            continue
+        parts = header.split(b' ')
+        if len(parts) != 3 or parts[1] != b'blob' or not parts[2].isdigit():
+            raise ValueError('Expected a Git blob in batch response')
+        end = offset + int(parts[2])
+        if end >= len(data) or data[end:end + 1] != b'\n':
+            raise ValueError('Truncated Git batch blob')
+        blobs.append(data[offset:end])
+        offset = end + 1
+    if offset != len(data):
+        raise ValueError('Unexpected trailing Git batch output')
+    return blobs
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--output',default='release-preview')
@@ -19,13 +49,11 @@ def main():
     revision=subprocess.check_output(git+['rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     worktree_dirty=bool(subprocess.check_output(git+['status','--porcelain'],cwd=ROOT,text=True).strip())
     changed=[]
-    for name in files+list(BUILD_SOURCES):
-        source=source_path(ROOT,name)
-        repository_name=source.relative_to(ROOT).as_posix()
-        try:
-            committed=subprocess.check_output(git+['show','HEAD:'+repository_name],cwd=ROOT,stderr=subprocess.DEVNULL)
-        except subprocess.CalledProcessError:
-            committed=None
+    names=files+list(BUILD_SOURCES)
+    sources=[source_path(ROOT,name) for name in names]
+    repository_names=[source.relative_to(ROOT).as_posix() for source in sources]
+    committed_sources=committed_blobs(git,revision,repository_names)
+    for name, source, committed in zip(names,sources,committed_sources):
         if committed is None or committed.replace(b'\r\n',b'\n')!=source.read_bytes().replace(b'\r\n',b'\n'):
             changed.append(name)
     for name in files:

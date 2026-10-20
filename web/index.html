@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Discover, collect, and play music made with Strudel. Every track is a living pattern."><title>Hustlenix Music — music, in code</title><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="styles.css?v=website-20261020"><link rel="stylesheet" href="site.css?v=website-20261020"><script defer src="https://unpkg.com/@strudel/web@1.2.6"></script><script defer src="workspace.js?v=website-20261020"></script><script defer src="library.js?v=website-20261020"></script><script defer src="app.js?v=website-20261020"></script><script defer src="site.js?v=website-20261020"></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Discover, collect, and play music made with Strudel. Every track is a living pattern."><title>Hustlenix Music — music, in code</title><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="styles.css?v=auditfix-20261020"><link rel="stylesheet" href="site.css?v=auditfix-20261020"><script defer src="https://unpkg.com/@strudel/web@1.2.6"></script><script defer src="workspace.js?v=auditfix-20261020"></script><script defer src="library.js?v=auditfix-20261020"></script><script defer src="app.js?v=auditfix-20261020"></script><script defer src="site.js?v=auditfix-20261020"></script></head>
 <body>
-<a class="sr-only" href="#mainArea">Skip to main content</a>
+<a class="skip-link" href="#mainArea">Skip to main content</a>
 <div class="app-shell" id="appShell">
   <header class="global-nav" aria-label="Global navigation">
     <a class="brand" href="#home" aria-label="Hustlenix Music home" title="Hustlenix Music"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="currentColor"/><path d="M8 16v3m4-9v13m4-17v20m4-16v13m4-9v5" stroke="#000" stroke-width="2.5" stroke-linecap="round"/></svg></a>
@@ -14,11 +14,11 @@
   <aside class="sidebar" aria-label="Your Library">
     <div class="library-heading"><button class="library-title" id="collapseSidebarButton" aria-label="Collapse your library" aria-expanded="true" title="Collapse your library"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-book"/></svg><span>Your Library</span></button><button id="newTrackButton" class="icon-button add-button" aria-label="Create playlist" title="Create playlist"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-plus"/></svg></button></div>
     <nav class="site-primary-nav" aria-label="Discover music">
-      <button class="site-nav-link" data-view="home"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-home"/></svg><span>Home</span></button>
-      <button class="site-nav-link" data-site-route="#explore"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-grid"/></svg><span>Explore</span></button>
-      <button class="site-nav-link" data-site-route="#artists"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 22v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><span>Artists</span></button>
-      <button class="site-nav-link" data-site-route="#liked"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-heart"/></svg><span>Liked tracks</span></button>
-      <button class="site-nav-link" data-site-route="#recent"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-previous"/></svg><span>Recently played</span></button>
+      <button class="site-nav-link" data-view="home" aria-label="Home"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-home"/></svg><span>Home</span></button>
+      <button class="site-nav-link" data-site-route="#explore" aria-label="Explore"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-grid"/></svg><span>Explore</span></button>
+      <button class="site-nav-link" data-site-route="#artists" aria-label="Artists"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 22v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><span>Artists</span></button>
+      <button class="site-nav-link" data-site-route="#liked" aria-label="Liked tracks"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-heart"/></svg><span>Liked tracks</span></button>
+      <button class="site-nav-link" data-site-route="#recent" aria-label="Recently played"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-previous"/></svg><span>Recently played</span></button>
     </nav>
     <div class="library-filters"><button class="filter-chip" data-view="library">Patterns</button><button class="filter-chip" data-liked-nav="true">Liked tracks</button></div>
     <div class="library-sort"><button class="icon-button" id="librarySearchButton" aria-label="Search your library"><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-search"/></svg></button><span>Collections</span><svg class="icon" aria-hidden="true"><use href="assets/icons/lucide.svg#i-sort"/></svg></div>
@@ -65,7 +65,7 @@
     </form>
   </dialog>
 
-<dialog id="playlistDialog" class="editor-dialog">
+<dialog id="playlistDialog" class="editor-dialog" aria-labelledby="playlistDialogTitle">
   <form id="playlistForm" class="dialog-shell">
     <div class="dialog-heading"><h2 id="playlistDialogTitle">Create playlist</h2><button type="button" class="icon-button" data-close-dialog aria-label="Close">×</button></div>
     <div id="playlistExisting" class="hidden playlist-choices"></div>
@@ -75,14 +75,14 @@
     <div class="dialog-actions"><button type="button" class="button button-quiet" data-close-dialog>Cancel</button><button type="submit" id="playlistSaveButton" class="button button-primary">Create playlist</button></div>
   </form>
 </dialog>
-<dialog id="trackOptionsDialog" class="editor-dialog options-dialog">
+<dialog id="trackOptionsDialog" class="editor-dialog options-dialog" aria-labelledby="trackOptionsTitle">
   <div class="dialog-shell"><div class="dialog-heading"><h2 id="trackOptionsTitle">Track options</h2><button class="icon-button" data-close-dialog aria-label="Close track options">×</button></div><div id="trackOptionsBody"></div></div>
 </dialog>
-<dialog id="deletePlaylistDialog" class="editor-dialog">
-  <div class="dialog-shell"><h2>Delete playlist?</h2><p class="confirm-copy">“<span id="deletePlaylistName"></span>” will be removed from this browser. Its tracks and current playback stay available.</p><div class="dialog-actions"><button class="button button-quiet" data-close-dialog>Cancel</button><button class="button button-primary" data-confirm-delete-playlist>Delete playlist</button></div></div>
+<dialog id="deletePlaylistDialog" class="editor-dialog" aria-labelledby="deletePlaylistHeading">
+  <div class="dialog-shell"><h2 id="deletePlaylistHeading">Delete playlist?</h2><p class="confirm-copy">“<span id="deletePlaylistName"></span>” will be removed from this browser. Its tracks and current playback stay available.</p><div class="dialog-actions"><button class="button button-quiet" data-close-dialog>Cancel</button><button class="button button-primary" data-confirm-delete-playlist>Delete playlist</button></div></div>
 </dialog>
-<dialog id="clearQueueDialog" class="editor-dialog">
-  <div class="dialog-shell"><h2>Clear queued tracks?</h2><p class="confirm-copy">Remove the tracks you added to Next in queue. Your current track and collection keep playing.</p><div class="dialog-actions"><button class="button button-quiet" data-close-dialog>Cancel</button><button class="button button-primary" data-confirm-clear-queue>Clear queue</button></div></div>
+<dialog id="clearQueueDialog" class="editor-dialog" aria-labelledby="clearQueueHeading">
+  <div class="dialog-shell"><h2 id="clearQueueHeading">Clear queued tracks?</h2><p class="confirm-copy">Remove the tracks you added to Next in queue. Your current track and collection keep playing.</p><div class="dialog-actions"><button class="button button-quiet" data-close-dialog>Cancel</button><button class="button button-primary" data-confirm-clear-queue>Clear queue</button></div></div>
 </dialog>
 
 

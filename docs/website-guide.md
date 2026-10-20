@@ -58,7 +58,7 @@ version makes a draft; choose Save to commit it. **Download .strudel** keeps a c
 | Shortcut | Action |
 | --- | --- |
 | `/` | Open search when you are not typing in a field. |
-| Space | Toggle playback when focus is outside form fields, buttons and dialogs. |
+| Space | Toggle playback when focus is outside interactive controls and dialogs. |
 | Ctrl/Command + Enter | Preview the current Studio draft. |
 | Ctrl/Command + S | Save the current Studio pattern. |
 | Tab in the code editor | Insert two spaces. Shift + Tab moves focus out. |

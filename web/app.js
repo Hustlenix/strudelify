@@ -999,16 +999,19 @@ document.addEventListener('click', event => {
   handleAction(event);
 });
 document.addEventListener('keydown', event => {
+  if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
   if (['Enter', ' '].includes(event.key) && event.target.matches('[data-action="open"]')) {
     event.preventDefault();
     const id = event.target.closest('[data-track-id]')?.dataset.trackId;
     if (id) openTrack(id);
     return;
   }
-  if (event.key === '/' && !/input|textarea/i.test(document.activeElement.tagName) && !$('dialog[open]')) {
+  const interactive = event.target.closest('input, textarea, select, button, a[href], summary, [contenteditable]:not([contenteditable="false"]), [role="textbox"], [role="combobox"], [role="listbox"], [role="slider"], [role="spinbutton"], [role="menuitem"], [role="checkbox"], [role="radio"], [role="switch"]');
+  if (interactive || $('dialog[open]')) return;
+  if (event.key === '/') {
     event.preventDefault(); setView('search'); $('#searchInput').focus();
   }
-  if (event.code === 'Space' && !/input|textarea|button/i.test(document.activeElement.tagName) && !$('dialog[open]')) {
+  if (event.code === 'Space' || event.key === ' ') {
     event.preventDefault(); togglePlayback();
   }
 });

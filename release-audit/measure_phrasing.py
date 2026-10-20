@@ -10,6 +10,27 @@ PRIVATE = ROOT / 'release-audit/private'
 MUSIC = ROOT.parent / 'strudelify-music/music-audit'
 
 
+def read_alignment_intro(path):
+    """Convert only the first eight seconds, keeping the historical scaling."""
+    try:
+        sr, data = wavfile.read(path, mmap=True)
+    except ValueError as exc:
+        # SciPy cannot map packed PCM encodings such as 24-bit WAV. Fall back to
+        # one normal decode only for that limitation; malformed WAVs still fail.
+        if 'mmap' not in str(exc).lower():
+            raise
+        sr, data = wavfile.read(path, mmap=False)
+    integer_pcm = np.issubdtype(data.dtype, np.integer)
+    intro = data[:sr*8].astype(float)
+    # Drop the complete mapped/decoded array before resampling the small copy.
+    del data
+    if integer_pcm:
+        intro /= 32768
+    if intro.ndim > 1:
+        intro = intro.mean(axis=1)
+    return sr, intro
+
+
 def main():
     raw = np.fromfile(PRIVATE / 'babydoll-phrasing.f32', dtype='<f4').reshape(-1,2)
     assert np.isfinite(raw).all() and np.max(np.abs(raw)) < 1
@@ -19,14 +40,9 @@ def main():
     if wav.exists():
         raise SystemExit('Preserve the measured render before repeating this measurement')
     wavfile.write(wav,48000,raw)
-    sr, old = wavfile.read(MUSIC / 'artifacts/recovery/01-babydoll-render.wav')
-    old = old.astype(float)
-    if np.issubdtype(wavfile.read(MUSIC / 'artifacts/recovery/01-babydoll-render.wav')[1].dtype,np.integer):
-        old /= 32768
-    if old.ndim > 1:
-        old = old.mean(axis=1)
+    sr, old = read_alignment_intro(MUSIC / 'artifacts/recovery/01-babydoll-render.wav')
     # No melody changed before 10.58 seconds. Align on the unchanged first eight seconds.
-    previous = resample_poly(old[:sr*8],8000,sr)
+    previous = resample_poly(old,8000,sr)
     new = resample_poly(raw[:48000*8].mean(axis=1),1,6)
     cc = correlate(new,previous,mode='full',method='fft')
     lags = correlation_lags(len(new),len(previous),mode='full')
