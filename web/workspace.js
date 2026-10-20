@@ -3,10 +3,11 @@
 const WorkspaceStorage = (() => {
   const KEY = 'strudelify-workspace-v1';
   const KEYS = ['strudelify-liked','strudelify-custom','strudelify-recent','strudelify-playlists-v1',
-    'strudelify-shuffle','strudelify-repeat','strudelify-studio-drafts-v1','strudelify-track-versions-v1'];
+    'strudelify-shuffle','strudelify-repeat','strudelify-studio-drafts-v1','strudelify-track-versions-v1','strudelify-site-v1'];
   const defaults = { 'strudelify-liked':[], 'strudelify-custom':[], 'strudelify-recent':[],
     'strudelify-playlists-v1':[], 'strudelify-shuffle':false, 'strudelify-repeat':'off',
-    'strudelify-studio-drafts-v1':[], 'strudelify-track-versions-v1':{} };
+    'strudelify-studio-drafts-v1':[], 'strudelify-track-versions-v1':{},
+    'strudelify-site-v1':{artists:[],collections:[],compact:false,reduceMotion:false} };
   const clone = value => JSON.parse(JSON.stringify(value));
   function snapshot() {
     const raw = localStorage.getItem(KEY);
@@ -76,12 +77,19 @@ const WorkspaceStorage = (() => {
     clean['strudelify-shuffle']=d['strudelify-shuffle']===true;
     if(d['strudelify-repeat']!=null&&!['off','context','one'].includes(d['strudelify-repeat']))fail('Invalid repeat preference.');
     clean['strudelify-repeat']=d['strudelify-repeat']||'off';
+    const site=d['strudelify-site-v1']??defaults['strudelify-site-v1'];
+    if(!object(site))fail('Invalid site preferences.');
+    if(['compact','reduceMotion'].some(key=>site[key]!=null&&typeof site[key]!=='boolean'))fail('Invalid appearance preference.');
+    clean['strudelify-site-v1']={
+      artists:[...new Set(array(site.artists??[],2000,'followed artists').map(value=>text(value,150,'artist name')))],
+      collections:[...new Set(array(site.collections??[],2000,'saved collections').map(value=>text(value,150,'collection name')))],
+      compact:site.compact===true,reduceMotion:site.reduceMotion===true};
     return clean;
   }
   function planImport(value, reserved=[]) {
     const incoming=validateBackup(value), current=snapshot().data, next=clone(current);
     const mapping=new Map(), addedTracks=[], used=new Set([...reserved,...current['strudelify-custom'].map(t=>t.id)]);
-    const stats={tracks:0,playlists:0,likes:0,drafts:0,versions:0,versionsSkipped:0,conflicts:0};
+    const stats={tracks:0,playlists:0,likes:0,drafts:0,versions:0,versionsSkipped:0,conflicts:0,artists:0,collections:0};
     const sameTrack=(a,b)=>a.title===b.title && a.artist===b.artist && a.code===b.code;
     for(const track of incoming['strudelify-custom']){
       const existing=next['strudelify-custom'].find(t=>t.id===track.id);
@@ -108,6 +116,14 @@ const WorkspaceStorage = (() => {
     const likes=new Set(current['strudelify-liked']);
     for(const id of incoming['strudelify-liked']){const mapped=remap(id);if(!likes.has(mapped)){likes.add(mapped);stats.likes++;}}
     next['strudelify-liked']=[...likes];
+    const site={...defaults['strudelify-site-v1'],...current['strudelify-site-v1']};
+    for(const key of ['artists','collections']){
+      const values=new Set(Array.isArray(site[key])?site[key]:[]);
+      for(const value of incoming['strudelify-site-v1'][key])if(!values.has(value)){values.add(value);stats[key]++;}
+      if(values.size>2000)throw new Error('This merge exceeds the saved artist or collection limit.');
+      site[key]=[...values];
+    }
+    next['strudelify-site-v1']=site;
     // Preserve this device's playback preferences and recents. Import never starts audio.
     for(const draft of incoming['strudelify-studio-drafts-v1']){
       const targetId=draft.targetId?remap(draft.targetId):null;

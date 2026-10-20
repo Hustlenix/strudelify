@@ -10,6 +10,11 @@ on:
         description: Actual owner approval JSON using release-audit/approval-template.json
         required: true
         type: string
+      skip_browser_checks:
+        description: Owner-requested publish without browser regression checks
+        required: false
+        default: false
+        type: boolean
 permissions:
   contents: read
 concurrency:
@@ -35,6 +40,7 @@ jobs:
         with:
           python-version: '3.13'
       - uses: actions/setup-node@v4
+        if: ${{ !inputs.skip_browser_checks }}
         with:
           node-version: '22'
           cache: npm
@@ -45,10 +51,13 @@ jobs:
           RELEASE_APPROVAL_JSON: ${{ inputs.approval_json }}
         run: python release-audit/validate_release.py release-preview --require-approval
       - run: npm ci --ignore-scripts --no-audit --no-fund
+        if: ${{ !inputs.skip_browser_checks }}
         working-directory: release-audit
       - run: npx playwright install --with-deps chromium firefox
+        if: ${{ !inputs.skip_browser_checks }}
         working-directory: release-audit
       - name: Start Firefox virtual audio endpoint
+        if: ${{ !inputs.skip_browser_checks }}
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y pulseaudio
@@ -56,10 +65,12 @@ jobs:
           pactl load-module module-null-sink sink_name=strudelify_ci
           pactl set-default-sink strudelify_ci
       - run: node release-audit/player-checks.mjs release-preview chromium
+        if: ${{ !inputs.skip_browser_checks }}
       - run: node release-audit/player-checks.mjs release-preview firefox
+        if: ${{ !inputs.skip_browser_checks }}
       - name: Preserve candidate player diagnostics, including failed checks
         uses: actions/upload-artifact@v4
-        if: always()
+        if: ${{ always() && !inputs.skip_browser_checks }}
         with:
           name: candidate-player-evidence
           path: |
@@ -101,6 +112,7 @@ jobs:
         with:
           python-version: '3.13'
       - uses: actions/setup-node@v4
+        if: ${{ !inputs.skip_browser_checks }}
         with:
           node-version: '22'
       - uses: actions/download-artifact@v4
@@ -109,14 +121,44 @@ jobs:
           path: approved-site
       - run: python release-audit/verify_public_release.py approved-site https://hustlenix.github.io/strudelify/
       - run: npm ci --ignore-scripts --no-audit --no-fund
+        if: ${{ !inputs.skip_browser_checks }}
         working-directory: release-audit
       - run: npx playwright install --with-deps chromium
+        if: ${{ !inputs.skip_browser_checks }}
         working-directory: release-audit
       - run: node release-audit/player-checks.mjs approved-site chromium https://hustlenix.github.io/strudelify/
-      - uses: actions/upload-artifact@v4
+        if: ${{ !inputs.skip_browser_checks }}
+      - name: Record publication review scope without asserting browser success
         if: always()
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          SKIP_BROWSER_CHECKS: ${{ inputs.skip_browser_checks }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          report = Path('release-audit/reports/public-check-scope.json')
+          report.parent.mkdir(parents=True, exist_ok=True)
+          report.write_text(json.dumps({
+              'candidate_sha': os.environ['CANDIDATE_SHA'],
+              'browser_checks': 'skipped-owner-request' if os.environ['SKIP_BROWSER_CHECKS'] == 'true' else 'executed',
+          }, indent=2) + '\n', encoding='utf-8')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && !inputs.skip_browser_checks }}
         with:
           name: published-beta-evidence
           path: |
             release-audit/reports/public-release.json
+            release-audit/reports/public-check-scope.json
             release-audit/reports/public-player-chromium.json
+      - name: Preserve publication evidence with browser checks explicitly skipped
+        uses: actions/upload-artifact@v4
+        if: ${{ always() && inputs.skip_browser_checks }}
+        with:
+          name: published-beta-evidence
+          path: |
+            release-audit/reports/public-release.json
+            release-audit/reports/public-check-scope.json

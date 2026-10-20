@@ -61,6 +61,8 @@ let playbackAbort;
 const playbackChannel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('strudelify-playback') : null;
 if (playbackChannel) playbackChannel.onmessage = event => { if (event.data === 'claim') stopTrack(); };
 const codeCache = new Map();
+let mediaTrackKey='';
+let mediaPositionKey='';
 const lyricsCache = new Map();
 let lyricsRevision = 0;
 let lyricsCues = [];
@@ -105,6 +107,53 @@ function formatTime(seconds) {
   const time=Math.max(0,Math.floor(Number(seconds)||0));
   return `${Math.floor(time/60)}:${String(time%60).padStart(2,'0')}`;
 }
+function updateMediaSession() {
+  if(!('mediaSession' in navigator))return;
+  const track=state.current;
+  const key=track?`${track.id}:${track.title}:${track.artist}`:'';
+  try {
+    if(key!==mediaTrackKey){
+      navigator.mediaSession.metadata=track&&typeof MediaMetadata==='function'?new MediaMetadata({
+        title:track.title,artist:track.artist||'Your pattern',album:track.created?'Your Studio':track.cover?'Instrumental cover studies':'Original patterns',
+        artwork:[{src:new URL(coverUrl(track),document.baseURI).href,type:'image/svg+xml'}]
+      }):null;
+      mediaTrackKey=key;
+    }
+    navigator.mediaSession.playbackState=state.playing?'playing':state.paused?'paused':'none';
+  } catch { /* Unsupported OS metadata must not interrupt playback. */ }
+}
+function updateMediaPosition(position,duration) {
+  if(!navigator.mediaSession?.setPositionState)return;
+  const key=`${playbackRevision}:${Math.floor(position)}:${state.playing}:${state.paused}:${duration}`;
+  if(key===mediaPositionKey)return;
+  mediaPositionKey=key;
+  try {
+    if(Number.isFinite(duration)&&duration>0&&(state.playing||state.paused))
+      navigator.mediaSession.setPositionState({duration,position:Math.min(duration,Math.max(0,position)),playbackRate:1});
+    else navigator.mediaSession.setPositionState();
+  } catch { /* Live and unsupported patterns do not expose a seekable timeline. */ }
+}
+function installMediaControls() {
+  if(!('mediaSession' in navigator))return;
+  const actions={play:()=>{if(!state.playing)togglePlayback();},pause:()=>{if(state.playing)togglePlayback();},
+    stop:stopTrack,previoustrack:()=>$('#previousButton').click(),nexttrack:()=>advancePlayback()};
+  for(const [name,handler] of Object.entries(actions))try{navigator.mediaSession.setActionHandler(name,handler);}catch{}
+}
+async function sharePublicUrl(hash,title='Music made with Strudel') {
+  if(typeof hash!=='string'||!/^#(?:track\/|artist\/|collection\/|home$|explore$|artists$|about$|help$)/.test(hash))return false;
+  const url=new URL(document.baseURI);url.search='';url.hash=hash;
+  if(navigator.share){
+    try{await navigator.share({title,url:url.href});return true;}
+    catch(error){if(error?.name==='AbortError')return false;}
+  }
+  try{await navigator.clipboard.writeText(url.href);showToast('Link copied');return true;}
+  catch{
+    $('#shareUrlInput').value=url.href;$('#shareHeading').textContent=`Share ${title}`;
+    $('#shareCopyStatus').textContent='Copy this link to share the public page.';
+    if(!$('#shareDialog').open)$('#shareDialog').showModal();
+    $('#shareUrlInput').focus();$('#shareUrlInput').select();return false;
+  }
+}
 function renderProgress(seconds=null) {
   const duration=playbackDuration || state.current?.durationSeconds || 0;
   const position=seconds==null ? ((state.playing||state.paused) && window.getAudioContext ? Math.max(0,window.getAudioContext().currentTime-playbackStartedAt) : 0) : Math.max(0,seconds);
@@ -113,6 +162,7 @@ function renderProgress(seconds=null) {
   $('#playbackProgress').max=duration>0?duration:1;
   $('#playbackProgress').value=duration>0?Math.min(position,duration):0;
   $('#playbackProgress').setAttribute('aria-valuetext',duration>0?`${formatTime(position)} of ${formatTime(duration)}`:'Open-ended live pattern');
+  updateMediaPosition(position,duration);
 }
 function setStatus(message, playing = state.playing) {
   $('#playerStatus').textContent = message;
@@ -373,6 +423,8 @@ function renderPlayer() {
   $('#queueRepeatButton').textContent = `Repeat ${transport.repeat==='context'?'collection':transport.repeat}`;
   syncPlayButtons();
   renderProgress();
+  updateMediaSession();
+  window.MusicSite?.syncPlayback?.();
 }
 function renderPlaylistNav() {
   const items = [{ name: 'All patterns', filter: '', palette: 1 }, ...groups.map(g => ({...g, filter:g.name})), {name:'Liked tracks', liked:true, palette:3}];
@@ -414,6 +466,7 @@ function renderHome() {
   $('#homeTop').classList.toggle('single-shelf', homeFilter !== 'all');
   $('#featureGrid').innerHTML = groups.map(group => `<button class="feature-card" data-group="${escapeHtml(group.name)}" aria-label="Browse ${escapeHtml(group.name)} collection"><span class="feature-art">${coverImage(group)}</span><span class="feature-info"><strong>${escapeHtml(group.name)}</strong><span>${escapeHtml(group.note)}</span></span><span class="feature-play" aria-hidden="true">${icon('play')}</span></button>`).join('');
   $('#homeTrackList').innerHTML = allTracks().map(rowMarkup).join('');
+  window.MusicSite?.refreshHome?.();
 }
 function renderQueue() {
   const row = (entry, source, index) => {
@@ -502,6 +555,7 @@ function renderSearch() {
   $('#emptySearch').classList.toggle('hidden', result.length > 0);
   $('#resultCount').textContent = `${result.length} ${result.length === 1 ? 'pattern' : 'patterns'}`;
   $('#resultTitle').textContent = state.groupFilter || (query ? `Results for “${query}”` : 'All tracks');
+  window.MusicSite?.decorateSearch?.();
 }
 function renderLibrary() {
   let result = allTracks();
@@ -511,23 +565,31 @@ function renderLibrary() {
   $('#libraryPlaylists').innerHTML = playlists.map(p=>`<button class="saved-playlist" data-open-playlist="${escapeHtml(p.id)}"><span class="playlist-placeholder">${icon('book')}</span><strong>${escapeHtml(p.name)}</strong><small>${p.entries.length} tracks · Saved on this device</small></button>`).join('');
   $('#emptyLibrary').classList.toggle('hidden', result.length > 0);
   renderDraftBanner();
+  window.MusicSite?.refreshLibrary?.();
 }
 function renderAllLists() {
   renderHome();
   if (!$('#searchView').classList.contains('hidden')) renderSearch();
   if (!$('#libraryView').classList.contains('hidden')) renderLibrary();
+  window.MusicSite?.refresh?.();
   syncPlayButtons();
 }
 function setView(name, push = true) {
-  const views = ['home', 'search', 'library', 'track', 'playlist'];
+  const views = ['home', 'search', 'library', 'track', 'playlist', 'site'];
   if (!views.includes(name)) name = 'home';
+  if(name!=='site')document.title=`${({home:'Home',search:'Search',library:'Your library',track:'Track',playlist:'Playlist'})[name]} · Hustlenix Music`;
   for (const view of views) $(`#${view}View`).classList.toggle('hidden', view !== name);
   $$('.nav-link').forEach(button => button.classList.toggle('active', button.dataset.view === (['track','playlist'].includes(name) ? 'library' : name)));
+  $$('.site-nav-link[data-view]').forEach(button=>{
+    const active=button.dataset.view===name;button.classList.toggle('selected',active);
+    if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
+  });
   if (push && location.hash !== `#${name}`) history.pushState({ view: name }, '', `#${name}`);
   $('#homeFilters').classList.toggle('hidden', name !== 'home');
   hideSuggestions();
   if (name === 'search') { renderSearch(); $('#searchInput').focus({preventScroll:true}); }
   if (name === 'library') renderLibrary();
+  window.MusicSite?.syncNavigation?.(name);
   $('#mainArea').scrollTo({ top: 0, behavior: 'smooth' });
 }
 async function openTrack(id, push = true) {
@@ -539,6 +601,7 @@ async function openTrack(id, push = true) {
   }
   const revision = ++detailRevision;
   setView('track', false);
+  document.title=`${track.title} · ${track.artist} | Hustlenix Music`;
   const href=`#track/${encodeURIComponent(id)}`;
   if (push && location.hash !== href) history.pushState({view:'track',trackId:id},'',href);
   else history.replaceState({view:'track',trackId:id},'',href);
@@ -567,6 +630,7 @@ async function openTrack(id, push = true) {
   studioButton.className='button button-quiet';studioButton.dataset.action='studio';studioButton.dataset.trackId=track.id;
   studioButton.textContent=track.created?'Edit in Studio':'Remix in Studio';
   $('.detail-actions').append(studioButton);
+  window.MusicSite?.decorateTrack?.(track);
   try { const code=await getCode(track); if (revision===detailRevision) $('#detailCode').textContent=code; }
   catch (error) { if (revision===detailRevision) $('#detailCode').textContent=error.message; }
 }
@@ -739,7 +803,7 @@ $('#libraryImportFile').addEventListener('change',async event=>{
     if(revision!==importRevision||!$('#libraryBackupDialog').open)return;
     const {stats}=WorkspaceStorage.planImport(data,tracks.map(t=>t.id));
     pendingImport=data;
-    $('#importSummary').textContent=`Add ${stats.tracks} patterns, ${stats.playlists} playlists, ${stats.likes} likes, ${stats.drafts} drafts and ${stats.versions} saved versions. ${stats.conflicts} conflicts kept as separate copies. ${stats.versionsSkipped?`${stats.versionsSkipped} older imported versions exceed the 20-version limit and will be skipped. `:''}Current playback and preferences stay as they are.`;
+    $('#importSummary').textContent=`Add ${stats.tracks} patterns, ${stats.playlists} playlists, ${stats.likes} likes, ${stats.drafts} drafts, ${stats.versions} saved versions, ${stats.artists} followed artists and ${stats.collections} saved collections. ${stats.conflicts} conflicts kept as separate copies. ${stats.versionsSkipped?`${stats.versionsSkipped} older imported versions exceed the 20-version limit and will be skipped. `:''}Current playback and preferences stay as they are.`;
     $('#importPreview').classList.remove('hidden');$('#confirmImportButton').disabled=false;$('#backupStatus').textContent='Nothing has changed yet.';
   } catch(error){if(revision===importRevision)$('#backupStatus').textContent=error.message||'This backup could not be read.';}
 });
@@ -792,6 +856,7 @@ function persistPlaylists(next) {
   if (!saveStorage('strudelify-playlists-v1', next)) return false;
   playlists = next; renderPlaylistNav();
   if (!$('#libraryView').classList.contains('hidden')) renderLibrary();
+  window.MusicSite?.refresh?.();
   return true;
 }
 function openPlaylist(id, push=true) {
@@ -799,6 +864,7 @@ function openPlaylist(id, push=true) {
   if (!playlist) { setView('library',push); showToast('This playlist is no longer available.'); return; }
   selectedPlaylist = id;
   setView('playlist',false);
+  document.title=`${playlist.name} · Your playlist | Hustlenix Music`;
   const href = `#playlist/${encodeURIComponent(id)}`;
   if (push && location.hash!==href) history.pushState({view:'playlist',playlistId:id},'',href);
   renderPlaylist();
@@ -912,12 +978,18 @@ function handleAction(event) {
 }
 
 document.addEventListener('click', event => {
+  if(event.target.closest('[data-site-route]'))return;
+  if(event.target.closest('[data-open-studio]')){openEditor();return;}
   const viewButton = event.target.closest('[data-view]');
   if (viewButton) { setView(viewButton.dataset.view); return; }
   const likedNavigation = event.target.closest('[data-liked-nav="true"]');
-  if (likedNavigation) { state.libraryFilter = 'liked'; $$('[data-library-filter]').forEach(item => { const active = item.dataset.libraryFilter === 'liked'; item.classList.toggle('selected', active); item.setAttribute('aria-selected', String(active)); }); setView('library'); return; }
+  if (likedNavigation) {
+    if(window.MusicSite){window.MusicSite.route('#liked',true);return;}
+    state.libraryFilter = 'liked'; $$('[data-library-filter]').forEach(item => { const active = item.dataset.libraryFilter === 'liked'; item.classList.toggle('selected', active); item.setAttribute('aria-selected', String(active)); }); setView('library'); return;
+  }
   const groupButton = event.target.closest('[data-group]');
   if (groupButton) {
+    if(groupButton.dataset.group&&window.MusicSite){window.MusicSite.route('#collection/'+encodeURIComponent(groupButton.dataset.group),true);return;}
     state.groupFilter = groupButton.dataset.group || '';
     $('#searchInput').value = '';
     $('#searchPageInput').value = '';
@@ -981,8 +1053,12 @@ $('#codeButton').addEventListener('click', async () => { if(state.current) { awa
 $('#trackBackButton').addEventListener('click', () => setView('search'));
 $('#backButton').addEventListener('click', () => history.back());
 $('#forwardButton').addEventListener('click', () => history.forward());
-$('#profileButton').addEventListener('click', openLibraryBackup);
+$('#profileButton').addEventListener('click', () => window.MusicSite ? window.MusicSite.route('#profile',true) : openLibraryBackup());
 $('#volumeButton').addEventListener('click', () => showToast('Adjust the volume with your device controls.'));
+$('#copyShareButton').addEventListener('click',async()=>{
+  try{await navigator.clipboard.writeText($('#shareUrlInput').value);$('#shareCopyStatus').textContent='Link copied.';}
+  catch{$('#shareUrlInput').focus();$('#shareUrlInput').select();$('#shareCopyStatus').textContent='Select the link and use your device’s Copy action.';}
+});
 $$('[data-library-filter]').forEach(button => button.addEventListener('click', () => {
   state.libraryFilter = button.dataset.libraryFilter;
   $$('[data-library-filter]').forEach(item => { item.classList.toggle('selected', item === button); item.setAttribute('aria-selected', String(item === button)); });
@@ -1051,6 +1127,7 @@ $$('[data-catalog-filter]').forEach(button=>button.addEventListener('click',()=>
 }));
 $('#catalogSort').addEventListener('change',event=>{state.catalogSort=event.target.value;renderSearch();});
 function routeFromLocation() {
+  if (window.MusicSite?.route(location.hash,false))return;
   if (location.hash.startsWith('#playlist/')) {
     try { openPlaylist(decodeURIComponent(location.hash.slice(10)),false); }
     catch { setView('library',false); }
@@ -1062,6 +1139,7 @@ function routeFromLocation() {
   else if (location.hash === '#track' && history.state?.trackId) openTrack(history.state.trackId, false);
   else setView(location.hash.slice(1) || 'home', false);
 }
+installMediaControls();
 window.addEventListener('popstate', routeFromLocation);
 
 document.querySelector('a[href="#mainArea"]').addEventListener('click', event => { event.preventDefault(); $('#mainArea').focus(); });

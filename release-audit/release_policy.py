@@ -10,6 +10,7 @@ BASE_FILES = ('index.html','app.js','library.js','styles.css','README.md','LICEN
               'tracks/catalog.json','assets/icon.svg','assets/icons/lucide.svg',
               'assets/icons/lucide-provenance.json','licenses/Lucide-LICENSE.txt')
 WORKSPACE_FILES = ('workspace.js','docs/upgrade-roadmap.md')
+SITE_FILES = ('site.js','site.css','docs/website-guide.md')
 STUDY_FILES = ('assets/samples/roland-tr909.json','COVER_STUDIES.md')
 GENERATED_FILES = ('SOURCE.html','source.zip')
 BUILD_SOURCES = ('release-audit/build_preview.py','release-audit/build_release.py','release-audit/release_policy.py',
@@ -55,7 +56,8 @@ def public_files(root):
     # Older approved rollback artifacts predate Studio. A page loading the new module
     # must include both its implementation and the linked release documentation.
     workspace = set(WORKSPACE_FILES) if re.search(r'<script\b[^>]*\bsrc=["\']workspace\.js(?:[?"\'])', source_path(root,'index.html').read_text(encoding='utf-8')) else set()
-    return sorted(set(BASE_FILES)|workspace|{'tracks/'+row['codeUrl'].removeprefix('./') for row in catalog}
+    site = set(SITE_FILES) if re.search(r'<script\b[^>]*\bsrc=["\']site\.js(?:[?"\'])', source_path(root,'index.html').read_text(encoding='utf-8')) else set()
+    return sorted(set(BASE_FILES)|workspace|site|{'tracks/'+row['codeUrl'].removeprefix('./') for row in catalog}
                   |{'assets/covers/'+name+'.svg' for name in IDS}
                   |{'tracks/covers/art/'+row['id']+'.svg' for row in catalog if row['id'] in COVER_IDS}
                   |(set(STUDY_FILES) if any(row['id'] in COVER_IDS for row in catalog) else set()))
