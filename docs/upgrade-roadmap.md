@@ -59,7 +59,8 @@ so this is not a sandbox for untrusted scripts.
 - In the in-app browser, created and saved a local pattern, saved a changed revision,
   opened the older revision as a draft, changed pages and observed the resumable draft.
   Opened Babydoll's full current score through Remix in Studio and observed its local-copy
-  credit and draft list. These are observed UI flows, not a new musical-listening result.
+  credit and draft list. Downloaded the versioned JSON backup through its visible control.
+  These are observed UI flows, not a new musical-listening result.
 - File-import behavior has been reviewed in code; a browser file upload was not performed
   during development. No fresh physical-phone result is claimed.
 - Existing automatic CI/release results belong to their exact commits. See this release's

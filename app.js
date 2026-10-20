@@ -685,7 +685,8 @@ function downloadText(name,text,type='text/plain') {
 }
 function openLibraryBackup() {
   const drafts=studioDrafts();
-  $('#libraryBackupSummary').textContent=`${state.custom.length} patterns · ${playlists.length} playlists · ${state.liked.length} likes · ${drafts.length} drafts`;
+  const count=(n,label)=>`${n} ${label}${n===1?'':'s'}`;
+  $('#libraryBackupSummary').textContent=[count(state.custom.length,'pattern'),count(playlists.length,'playlist'),count(state.liked.length,'like'),count(drafts.length,'draft')].join(' · ');
   $('#libraryImportFile').value='';pendingImport=null;++importRevision;
   $('#importPreview').classList.add('hidden');$('#confirmImportButton').disabled=true;$('#backupStatus').textContent='';
   $('#libraryBackupDialog').showModal();

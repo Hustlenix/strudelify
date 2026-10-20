@@ -80,7 +80,7 @@ const WorkspaceStorage = (() => {
   }
   function planImport(value, reserved=[]) {
     const incoming=validateBackup(value), current=snapshot().data, next=clone(current);
-    const mapping=new Map(), used=new Set([...reserved,...current['strudelify-custom'].map(t=>t.id)]);
+    const mapping=new Map(), addedTracks=[], used=new Set([...reserved,...current['strudelify-custom'].map(t=>t.id)]);
     const stats={tracks:0,playlists:0,likes:0,drafts:0,versions:0,versionsSkipped:0,conflicts:0};
     const sameTrack=(a,b)=>a.title===b.title && a.artist===b.artist && a.code===b.code;
     for(const track of incoming['strudelify-custom']){
@@ -91,9 +91,11 @@ const WorkspaceStorage = (() => {
       if(duplicate){mapping.set(track.id,duplicate.id);continue;}
       let target=track.id;
       if(used.has(target)){target='custom-'+crypto.randomUUID();stats.conflicts++;}
-      used.add(target);mapping.set(track.id,target);next['strudelify-custom'].push({...track,id:target});stats.tracks++;
+      used.add(target);mapping.set(track.id,target);
+      const copy={...track,id:target};next['strudelify-custom'].push(copy);addedTracks.push(copy);stats.tracks++;
     }
     const remap=id=>mapping.get(id)||id;
+    for(const track of addedTracks)if(track.forkedFrom)track.forkedFrom=remap(track.forkedFrom);
     for(const p of incoming['strudelify-playlists-v1']){
       const entries=p.entries.map(e=>({...e,trackId:remap(e.trackId)}));
       const existing=next['strudelify-playlists-v1'].find(x=>x.id===p.id);
@@ -120,10 +122,15 @@ const WorkspaceStorage = (() => {
     for(const [id,versions] of Object.entries(incoming['strudelify-track-versions-v1'])){
       const target=remap(id), list=histories[target]||[];
       // Existing local history stays intact; imported history fills remaining slots.
+      const candidates=[];
       for(const version of versions){
         const sameVersion=x=>x.title===version.title && x.artist===version.artist && x.code===version.code && x.createdAt===version.createdAt;
-        if(list.some(sameVersion))continue;
-        if(list.length===20){stats.versionsSkipped++;continue;}
+        if(!list.some(sameVersion) && !candidates.some(sameVersion))candidates.push(version);
+      }
+      const available=Math.max(0,20-list.length);
+      stats.versionsSkipped+=Math.max(0,candidates.length-available);
+      // If there is room for only part of a backup, keep its newest versions.
+      for(const version of available?candidates.slice(-available):[]){
         const conflict=list.some(x=>x.id===version.id);
         if(conflict)stats.conflicts++;
         list.push({...version,id:conflict?crypto.randomUUID():version.id});stats.versions++;
