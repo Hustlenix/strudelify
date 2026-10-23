@@ -1,34 +1,52 @@
-# Strudelify
-<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/0fe97c3c-edde-46a8-ae17-3c1ac30accae" />
+# Hustlenix Music 🎧
 
-*WHOLE SPOTIFY IN STRUDEL, CAUSE WHY NOTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT?* 
-My project: Strudelify is a small static music player, so you can play this and sing yourself, kinda boring. both for me and you, because it was soo tuff analysing the beats and coding it😭
+*A music player built with Strudel. Because apparently, making music wasn't enough.*
 
-## Run it
-1. I have deployed it in github, do you can acess it in: [Try It Out](https://hustlenix.github.io/strudelify/) for free
-or
-2. To run this install the strudel plugin in VS code
-## Why?
-All this started when i was getting scoldings from my school music teacher because my voice so coarse, so because of my ego issues and my coding abilities, I have decided to write every song in Strudle!!!!!! FaaaI mean, strudle is made for music, but what makes this isntesting is that making a whole spotify out of this and some html and js. thats it! simple looking structure but complex code within, just like Spotify.
+![Hustlenix Music](https://github.com/user-attachments/assets/0fe97c3c-edde-46a8-ae17-3c1ac30accae)
 
-## How?
-Used strudel for this also used website hooktheory and sheet music for recreating 
+I originally started this because my school music teacher wasn't exactly impressed with my voice. So I decided to make music another way: through code.
 
-## Help needed!
-This is opensourced, so you can add a music that you like, to expand this website. If you added a track, thanks!
-## Interface and features
+What started as experimenting with Strudel slowly turned into a whole music player. I wanted something that felt familiar to use, but where the music itself could be created and edited with code.
 
-The interface follows the measured layout reference in [design.md](https://github.com/Hustlenix/strudelify/blob/main/docs/design.md): I carefully analysed spotify's design and just recreated it, i neither copied them nor break their should not copy rule, i just used their UI/UX(THAT TOO, Only for the FRONT END)The app itself is released under the repository's MIT license. Demo compositions in web/tracks/ are original examples for this project.
+Welcome to Hustlenix Music.
 
-## Files
+## Try it out
 
-- `web/` — the website, Strudel songs, artwork and dependency notices
-- `docs/` — design notes, music notes and licensing details
-- `release-audit/` — build, review and release tools
-- `.github/` — GitHub workflows
+🎧 **[Listen to Hustlenix Music](https://hustlenix.github.io/strudelify/)**
 
-For a local website build: `python release-audit/build_preview.py`, then
-`python -m http.server 8000 --directory release-preview`.
+## What is this?
 
-## Licence
-MIT
+Hustlenix Music is a browser-based music player powered by [Strudel](https://strudel.cc/), a live coding environment for making music.
+
+The current v0.1 beta has six original instrumental compositions. You can listen to them, search the library, and experiment with the underlying music in the editor.
+
+This isn't trying to be another Spotify. The interesting part is being able to mess with the music itself instead of just pressing play and calling it a day.
+
+## Features
+
+- **Original compositions:** Six instrumental tracks made with Strudel.
+- **Playback controls:** Play, pause, resume, and stop your music.
+- **Search:** Find tracks in the library.
+- **Local library:** Browse the compositions available in the player.
+- **Live music editor:** Edit compositions and preview your changes.
+- **Browser-based:** Open the player and start experimenting.
+
+This is still a beta, so the project is a work in progress. Famous-song studies aren't included in this release.
+
+## How I built it
+
+The music is created using Strudel, while the player uses HTML, CSS, and JavaScript.
+
+I wanted the interface to feel like a music streaming app without simply copying one. The bigger challenge was bringing the music and the player together so that the compositions could actually be edited and played.
+
+A substantial part of the implementation was developed with Codex. I've included that information in the project so the use of AI is transparent.
+
+## Run it locally
+
+You'll need Python installed to build and preview the project.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Hustlenix/strudelify.git
+   cd strudelify
